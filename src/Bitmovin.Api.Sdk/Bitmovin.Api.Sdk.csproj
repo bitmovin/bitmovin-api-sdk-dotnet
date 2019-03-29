@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net461;netstandard2.0</TargetFrameworks>
+    <RestoreAdditionalProjectSources>
+      https://dotnet.myget.org/F/dotnet-core/api/v3/index.json
+    </RestoreAdditionalProjectSources>
+    <PackageVersion>1.12.0-alpha.0</PackageVersion>
+    <Title>Bitmovin C# API Client</Title>
+    <Authors>Bitmovin Inc</Authors>
+    <Description>C#-Client which enables you to seamlessly integrate the Bitmovin API into your projects. Using this API client requires an active account.</Description>
+    <PackageProjectUrl>https://github.com/bitmovin/bitmovin-dotnet</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/bitmovin/bitmovin-api-sdk-dotnet</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JsonSubTypes" Version="1.5.2" />
+    <PackageReference Include="Restease" Version="1.4.7" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net461' ">
+    <PackageReference Include="Microsoft.TargetingPack.NETFramework.v4.6.1" Version="1.0.1" ExcludeAssets="All" PrivateAssets="All" />
+  </ItemGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)'== 'net461'">
+    <FrameworkPathOverride>$(NuGetPackageRoot)microsoft.targetingpack.netframework.v4.6.1/1.0.1/lib/net461/</FrameworkPathOverride>
+  </PropertyGroup>
+
+</Project>
