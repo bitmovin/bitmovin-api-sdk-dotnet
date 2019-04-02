@@ -5,11 +5,11 @@
     <RestoreAdditionalProjectSources>
       https://dotnet.myget.org/F/dotnet-core/api/v3/index.json
     </RestoreAdditionalProjectSources>
-    <PackageVersion>1.12.0-alpha.0</PackageVersion>
+    <PackageVersion>1.12.0-alpha.1</PackageVersion>
     <Title>Bitmovin C# API Client</Title>
     <Authors>Bitmovin Inc</Authors>
     <Description>C#-Client which enables you to seamlessly integrate the Bitmovin API into your projects. Using this API client requires an active account.</Description>
-    <PackageProjectUrl>https://github.com/bitmovin/bitmovin-dotnet</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/bitmovin/bitmovin-api-sdk-dotnet</PackageProjectUrl>
     <RepositoryUrl>https://github.com/bitmovin/bitmovin-api-sdk-dotnet</RepositoryUrl>
   </PropertyGroup>
 

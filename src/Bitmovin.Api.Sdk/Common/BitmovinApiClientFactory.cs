@@ -74,7 +74,7 @@ namespace Bitmovin.Api.Sdk.Common
         protected virtual async Task CreateRequestModifier(HttpRequestMessage request, CancellationToken cancellationToken)
         {
             request.Headers.Add("X-Api-Client", "bitmovin-api-sdk-dotnet");
-            request.Headers.Add("X-Api-Client-Version", "1.12.0-alpha.0");
+            request.Headers.Add("X-Api-Client-Version", "1.12.0-alpha.1");
 
             if (!string.IsNullOrEmpty(ApiKey))
             {
