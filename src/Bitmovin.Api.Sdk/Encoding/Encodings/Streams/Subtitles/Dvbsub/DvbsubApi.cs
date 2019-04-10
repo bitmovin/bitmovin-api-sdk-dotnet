@@ -42,7 +42,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Subtitles.Dvbsub
         /// </summary>
         /// <param name="encodingId">Id of the encoding.</param>
         /// <param name="streamId">Id of the stream.</param>
-        /// <param name="subtitleId">TODO Add description</param>
+        /// <param name="subtitleId">Id of the subtitle.</param>
         public async Task<Models.BitmovinResponse> DeleteAsync(string encodingId, string streamId, string subtitleId)
         {
             return await _apiClient.DeleteAsync(encodingId, streamId, subtitleId);

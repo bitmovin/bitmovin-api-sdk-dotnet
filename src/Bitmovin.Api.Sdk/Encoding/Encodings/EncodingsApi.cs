@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using RestEase;
 using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Live;
+using Bitmovin.Api.Sdk.Encoding.Encodings.MachineLearning;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Customdata;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Streams;
 using Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams;
@@ -25,6 +26,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings
             _apiClient = apiClientFactory.CreateClient<IEncodingsApiClient>();
 
             Live = new LiveApi(apiClientFactory);
+            MachineLearning = new MachineLearningApi(apiClientFactory);
             Customdata = new CustomdataApi(apiClientFactory);
             Streams = new StreamsApi(apiClientFactory);
             InputStreams = new InputStreamsApi(apiClientFactory);
@@ -41,6 +43,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings
         public static BitmovinApiBuilder<EncodingsApi> Builder => new BitmovinApiBuilder<EncodingsApi>();
 
         public LiveApi Live { get; private set; }
+        public MachineLearningApi MachineLearning { get; private set; }
         public CustomdataApi Customdata { get; private set; }
         public StreamsApi Streams { get; private set; }
         public InputStreamsApi InputStreams { get; private set; }

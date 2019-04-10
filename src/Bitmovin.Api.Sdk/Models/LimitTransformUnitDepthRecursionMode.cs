@@ -11,18 +11,18 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// LimitTransferUnitDepthRecursionMode
+    /// LimitTransformUnitDepthRecursionMode
     /// </summary>
-    public enum LimitTransferUnitDepthRecursionMode
+    public enum LimitTransformUnitDepthRecursionMode
     {
         /// <summary>
-        /// Disable early exit from transfer unit dept recursion
+        /// Disable early exit from transform unit dept recursion
         /// </summary>
         [EnumMember(Value = "DISABLED")]
         DISABLED,
         
         /// <summary>
-        /// Decides to recurse to next higher depth based on cost comparison of full size transfer unit and split transfer unit.
+        /// Decides to recurse to next higher depth based on cost comparison of full size transform unit and split transform unit.
         /// </summary>
         [EnumMember(Value = "LEVEL_1")]
         LEVEL_1,

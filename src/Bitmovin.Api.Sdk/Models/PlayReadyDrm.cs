@@ -17,13 +17,13 @@ namespace Bitmovin.Api.Sdk.Models
     public class PlayReadyDrm : Drm
     {
         /// <summary>
-        /// 16 byte encryption key, 32 hexadecimal characters. Either key or keySeed is required.
+        /// 16 byte encryption key, 32 hexadecimal characters. Either key or keySeed is required
         /// </summary>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
         
         /// <summary>
-        /// Key seed to generate key. Either key or keySeed is required.
+        /// Key seed to generate key. Either key or keySeed is required
         /// </summary>
         [JsonProperty(PropertyName = "keySeed")]
         public string KeySeed { get; set; }
@@ -33,6 +33,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "laUrl")]
         public string LaUrl { get; set; }
+        
+        /// <summary>
+        /// Base64 encoded pssh payload
+        /// </summary>
+        [JsonProperty(PropertyName = "pssh")]
+        public string Pssh { get; set; }
         
         /// <summary>
         /// Method

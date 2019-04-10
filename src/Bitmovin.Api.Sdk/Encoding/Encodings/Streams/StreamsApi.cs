@@ -13,6 +13,7 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Streams.BurnInSubtitles;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Captions;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Thumbnails;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Sprites;
+using Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Qc;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams
 {
@@ -33,6 +34,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams
             Captions = new CaptionsApi(apiClientFactory);
             Thumbnails = new ThumbnailsApi(apiClientFactory);
             Sprites = new SpritesApi(apiClientFactory);
+            Qc = new QcApi(apiClientFactory);
         }
 
         /// <summary>
@@ -49,6 +51,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams
         public CaptionsApi Captions { get; private set; }
         public ThumbnailsApi Thumbnails { get; private set; }
         public SpritesApi Sprites { get; private set; }
+        public QcApi Qc { get; private set; }
         
         /// <summary>
         /// Add Stream

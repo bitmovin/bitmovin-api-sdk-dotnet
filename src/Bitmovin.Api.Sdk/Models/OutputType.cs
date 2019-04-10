@@ -67,7 +67,13 @@ namespace Bitmovin.Api.Sdk.Models
         /// SFTP
         /// </summary>
         [EnumMember(Value = "SFTP")]
-        SFTP
+        SFTP,
+        
+        /// <summary>
+        /// AKAMAIMSL
+        /// </summary>
+        [EnumMember(Value = "AKAMAI_MSL")]
+        AKAMAIMSL
         
     }
 

@@ -27,7 +27,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm.Clearkey.Customda
         /// ClearKey DRM Custom Data of fMP4
         /// </summary>
         /// <param name="encodingId">Id of the encoding.</param>
-        /// <param name="muxingId">Id of the fragmented mp4.</param>
+        /// <param name="muxingId">Id of the fMP4 muxing</param>
         /// <param name="drmId">Id of the ClearKey DRM configuration.</param>
         public async Task<Models.CustomData> GetCustomDataAsync(string encodingId, string muxingId, string drmId)
         {

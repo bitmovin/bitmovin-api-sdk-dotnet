@@ -401,10 +401,10 @@ namespace Bitmovin.Api.Sdk.Models
         public bool? RefineRateDistortionCost { get; set; }
         
         /// <summary>
-        /// Enables early exit from transfer unit depth recursion, for inter coded blocks. Default is DISABLED.
+        /// Enables early exit from transform unit depth recursion, for inter coded blocks. Default is DISABLED.
         /// </summary>
-        [JsonProperty(PropertyName = "limitTransferUnitDepthRecursion")]
-        public LimitTransferUnitDepthRecursionMode LimitTransferUnitDepthRecursion { get; set; }
+        [JsonProperty(PropertyName = "limitTransformUnitDepthRecursion")]
+        public LimitTransformUnitDepthRecursionMode LimitTransformUnitDepthRecursion { get; set; }
         
         /// <summary>
         /// An integer value, which denotes strength of noise reduction in intra CUs. Default 0.
@@ -419,16 +419,16 @@ namespace Bitmovin.Api.Sdk.Models
         public int? NoiseReductionInter { get; set; }
         
         /// <summary>
-        /// Penalty for 32x32 intra transfer units in non-I slices. Default DISABLED.
+        /// Penalty for 32x32 intra transform units in non-I slices. Default DISABLED.
         /// </summary>
         [JsonProperty(PropertyName = "rateDistortionPenalty")]
         public RateDistortionPenaltyMode RateDistortionPenalty { get; set; }
         
         /// <summary>
-        /// Penalty for 32x32 intra transfer units in non-I slices. Default DISABLED.
+        /// Penalty for 32x32 intra transform units in non-I slices. Default DISABLED.
         /// </summary>
-        [JsonProperty(PropertyName = "maximumTransferUnitSize")]
-        public MaxTransferUnitSize MaximumTransferUnitSize { get; set; }
+        [JsonProperty(PropertyName = "maximumTransformUnitSize")]
+        public MaxTransformUnitSize MaximumTransformUnitSize { get; set; }
         
         /// <summary>
         /// Increases the RD level at points where quality drops due to VBV rate control enforcement. Default 0.

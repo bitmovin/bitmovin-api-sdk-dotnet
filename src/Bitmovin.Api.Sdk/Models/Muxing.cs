@@ -15,6 +15,7 @@ namespace Bitmovin.Api.Sdk.Models
     /// </summary>
     [JsonConverter(typeof(JsonSubtypes), "type")]
     [JsonSubtypes.KnownSubType(typeof(Fmp4Muxing), "FMP4")]
+    [JsonSubtypes.KnownSubType(typeof(CmafMuxing), "CMAF")]
     [JsonSubtypes.KnownSubType(typeof(Mp4Muxing), "MP4")]
     [JsonSubtypes.KnownSubType(typeof(TsMuxing), "TS")]
     [JsonSubtypes.KnownSubType(typeof(WebmMuxing), "WEBM")]

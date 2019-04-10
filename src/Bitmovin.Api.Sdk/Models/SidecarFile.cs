@@ -33,6 +33,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "outputs")]
         public List<EncodingOutput> Outputs { get; set; }
+        
+        /// <summary>
+        /// ErrorMode
+        /// </summary>
+        [JsonProperty(PropertyName = "errorMode")]
+        public SidecarErrorMode ErrorMode { get; set; }
     }
 
 }

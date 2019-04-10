@@ -27,7 +27,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm.Playready.Customd
         /// PlayReady DRM Custom Data of fMP4
         /// </summary>
         /// <param name="encodingId">Id of the encoding.</param>
-        /// <param name="muxingId">Id of the fmp4 fragment.</param>
+        /// <param name="muxingId">Id of the fMP4 muxing</param>
         /// <param name="drmId">Id of the PlayReady DRM configuration.</param>
         public async Task<Models.CustomData> GetCustomDataAsync(string encodingId, string muxingId, string drmId)
         {

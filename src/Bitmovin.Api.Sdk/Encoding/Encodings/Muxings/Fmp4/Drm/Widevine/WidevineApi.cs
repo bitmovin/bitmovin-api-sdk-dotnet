@@ -63,7 +63,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm.Widevine
         /// List Widevine DRMs of fMP4
         /// </summary>
         /// <param name="encodingId">Id of the encoding.</param>
-        /// <param name="muxingId">Id of the fmp4 fragment.</param>
+        /// <param name="muxingId">Id of the fMP4 muxing</param>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>
         public async Task<Models.PaginationResponse<Models.WidevineDrm>> ListAsync(string encodingId, string muxingId, params Func<ListQueryParams, ListQueryParams>[] queryParams)
         {

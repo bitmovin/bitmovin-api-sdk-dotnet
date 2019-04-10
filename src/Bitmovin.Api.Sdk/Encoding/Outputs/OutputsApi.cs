@@ -13,6 +13,7 @@ using Bitmovin.Api.Sdk.Encoding.Outputs.Gcs;
 using Bitmovin.Api.Sdk.Encoding.Outputs.Azure;
 using Bitmovin.Api.Sdk.Encoding.Outputs.Ftp;
 using Bitmovin.Api.Sdk.Encoding.Outputs.Sftp;
+using Bitmovin.Api.Sdk.Encoding.Outputs.AkamaiMsl;
 using Bitmovin.Api.Sdk.Encoding.Outputs.AkamaiNetstorage;
 
 namespace Bitmovin.Api.Sdk.Encoding.Outputs
@@ -34,6 +35,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs
             Azure = new AzureApi(apiClientFactory);
             Ftp = new FtpApi(apiClientFactory);
             Sftp = new SftpApi(apiClientFactory);
+            AkamaiMsl = new AkamaiMslApi(apiClientFactory);
             AkamaiNetstorage = new AkamaiNetstorageApi(apiClientFactory);
         }
 
@@ -51,6 +53,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs
         public AzureApi Azure { get; private set; }
         public FtpApi Ftp { get; private set; }
         public SftpApi Sftp { get; private set; }
+        public AkamaiMslApi AkamaiMsl { get; private set; }
         public AkamaiNetstorageApi AkamaiNetstorage { get; private set; }
         
         /// <summary>

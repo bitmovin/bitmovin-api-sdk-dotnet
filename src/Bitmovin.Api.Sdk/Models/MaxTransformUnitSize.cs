@@ -11,9 +11,9 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// MaxTransferUnitSize
+    /// MaxTransformUnitSize
     /// </summary>
-    public enum MaxTransferUnitSize
+    public enum MaxTransformUnitSize
     {
         /// <summary>
         /// maximum 4x4 TU

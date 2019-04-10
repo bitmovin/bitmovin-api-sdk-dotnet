@@ -41,10 +41,10 @@ namespace Bitmovin.Api.Sdk.Models
         public PsnrPerStreamMode PsnrMode { get; set; }
         
         /// <summary>
-        /// Details about billable minutes for each resolution category
+        /// BillableMinutes
         /// </summary>
-        [JsonProperty(PropertyName = "billableMinutesDetails")]
-        public List<BillableEncodingMinutesDetails> BillableMinutesDetails { get; internal set; }
+        [JsonProperty(PropertyName = "billableMinutes")]
+        public BillableEncodingMinutesDetails BillableMinutes { get; set; }
     }
 
 }

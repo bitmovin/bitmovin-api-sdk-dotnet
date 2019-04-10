@@ -41,7 +41,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm.Primetime
         /// Delete PrimeTime DRM from fMP4
         /// </summary>
         /// <param name="encodingId">Id of the encoding.</param>
-        /// <param name="muxingId">Id of the fmp4 fragment.</param>
+        /// <param name="muxingId">Id of the fMP4 muxing</param>
         /// <param name="drmId">Id of the PrimeTime DRM configuration.</param>
         public async Task<Models.BitmovinResponse> DeleteAsync(string encodingId, string muxingId, string drmId)
         {
@@ -52,7 +52,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm.Primetime
         /// PrimeTime DRM Details of fMP4
         /// </summary>
         /// <param name="encodingId">Id of the encoding.</param>
-        /// <param name="muxingId">Id of the fmp4 fragment.</param>
+        /// <param name="muxingId">Id of the fMP4 muxing</param>
         /// <param name="drmId">Id of the PrimeTime DRM configuration.</param>
         public async Task<Models.PrimeTimeDrm> GetAsync(string encodingId, string muxingId, string drmId)
         {
@@ -63,7 +63,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm.Primetime
         /// List PrimeTime DRMs of fMP4
         /// </summary>
         /// <param name="encodingId">Id of the encoding.</param>
-        /// <param name="muxingId">Id of the fmp4 fragment.</param>
+        /// <param name="muxingId">Id of the fMP4 muxing</param>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>
         public async Task<Models.PaginationResponse<Models.PrimeTimeDrm>> ListAsync(string encodingId, string muxingId, params Func<ListQueryParams, ListQueryParams>[] queryParams)
         {
@@ -101,14 +101,14 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm.Primetime
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>
-            /// TODO Add description
+            /// Index of the first item to return, starting at 0. Default is 0
             /// </summary>
-            public ListQueryParams Offset(string Offset) => SetQueryParam("offset", Offset);
+            public ListQueryParams Offset(int? Offset) => SetQueryParam("offset", Offset);
 
             /// <summary>
-            /// TODO Add description
+            /// Maximum number of items to return. Default is 25, maximum is 100
             /// </summary>
-            public ListQueryParams Limit(string Limit) => SetQueryParam("limit", Limit);
+            public ListQueryParams Limit(int? Limit) => SetQueryParam("limit", Limit);
 
             private ListQueryParams SetQueryParam<T>(string key, T value)
             {

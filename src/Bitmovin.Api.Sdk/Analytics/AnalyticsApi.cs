@@ -2,6 +2,7 @@
 using Bitmovin.Api.Sdk.Analytics.Impressions;
 using Bitmovin.Api.Sdk.Analytics.Queries;
 using Bitmovin.Api.Sdk.Analytics.Licenses;
+using Bitmovin.Api.Sdk.Analytics.Outputs;
 
 namespace Bitmovin.Api.Sdk.Analytics
 {
@@ -12,6 +13,7 @@ namespace Bitmovin.Api.Sdk.Analytics
             Impressions = new ImpressionsApi(apiClientFactory);
             Queries = new QueriesApi(apiClientFactory);
             Licenses = new LicensesApi(apiClientFactory);
+            Outputs = new OutputsApi(apiClientFactory);
         }
 
         /// <summary>
@@ -22,6 +24,7 @@ namespace Bitmovin.Api.Sdk.Analytics
         public ImpressionsApi Impressions { get; private set; }
         public QueriesApi Queries { get; private set; }
         public LicensesApi Licenses { get; private set; }
+        public OutputsApi Outputs { get; private set; }
 
     }
 }

@@ -22,6 +22,12 @@ namespace Bitmovin.Api.Sdk.Models
         FMP4,
         
         /// <summary>
+        /// CMAF
+        /// </summary>
+        [EnumMember(Value = "CMAF")]
+        CMAF,
+        
+        /// <summary>
         /// MP4
         /// </summary>
         [EnumMember(Value = "MP4")]

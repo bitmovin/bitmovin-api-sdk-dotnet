@@ -30,7 +30,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm.Fairplay
         /// Add FairPlay DRM to fMP4
         /// </summary>
         /// <param name="encodingId">Id of the encoding.</param>
-        /// <param name="muxingId">Id of the fmp4 fragment.</param>
+        /// <param name="muxingId">Id of the fMP4 muxing</param>
         /// <param name="fairPlayDrm">The request payload</param>
         public async Task<Models.FairPlayDrm> CreateAsync(string encodingId, string muxingId, Models.FairPlayDrm fairPlayDrm)
         {
@@ -41,7 +41,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm.Fairplay
         /// Delete FairPlay DRM from fMP4
         /// </summary>
         /// <param name="encodingId">Id of the encoding.</param>
-        /// <param name="muxingId">Id of the fmp4 fragment.</param>
+        /// <param name="muxingId">Id of the fMP4 muxing</param>
         /// <param name="drmId">Id of the FairPlay DRM configuration.</param>
         public async Task<Models.BitmovinResponse> DeleteAsync(string encodingId, string muxingId, string drmId)
         {
@@ -52,7 +52,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm.Fairplay
         /// FairPlay DRM Details of fMP4
         /// </summary>
         /// <param name="encodingId">Id of the encoding.</param>
-        /// <param name="muxingId">Id of the fmp4 fragment.</param>
+        /// <param name="muxingId">Id of the fMP4 muxing</param>
         /// <param name="drmId">Id of the FairPlay DRM configuration.</param>
         public async Task<Models.FairPlayDrm> GetAsync(string encodingId, string muxingId, string drmId)
         {

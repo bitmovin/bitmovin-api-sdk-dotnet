@@ -101,14 +101,14 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Cenc
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>
-            /// TODO Add description
+            /// Index of the first item to return, starting at 0. Default is 0
             /// </summary>
-            public ListQueryParams Offset(string Offset) => SetQueryParam("offset", Offset);
+            public ListQueryParams Offset(int? Offset) => SetQueryParam("offset", Offset);
 
             /// <summary>
-            /// TODO Add description
+            /// Maximum number of items to return. Default is 25, maximum is 100
             /// </summary>
-            public ListQueryParams Limit(string Limit) => SetQueryParam("limit", Limit);
+            public ListQueryParams Limit(int? Limit) => SetQueryParam("limit", Limit);
 
             private ListQueryParams SetQueryParam<T>(string key, T value)
             {

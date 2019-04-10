@@ -18,13 +18,13 @@ Add this dependency to your project:
 
 Package Manager
 ```shell
-Install-Package Bitmovin.Api.Sdk -Version 1.12.0-alpha.1
+Install-Package Bitmovin.Api.Sdk -Version 1.13.0-alpha.0
 ```
 
 .NET CLI
 
 ```shell
-dotnet add package Bitmovin.Api.Sdk --version 1.12.0-alpha.1
+dotnet add package Bitmovin.Api.Sdk --version 1.13.0-alpha.0
 ```
 
 ## Initialization
