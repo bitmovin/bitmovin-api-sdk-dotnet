@@ -44,7 +44,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Interval
         /// </summary>
         [JsonProperty(PropertyName = "interval")]
-        public List<AnalyticsInterval> Interval { get; set; }
+        public AnalyticsInterval Interval { get; set; }
         
         /// <summary>
         /// GroupBy
@@ -53,7 +53,7 @@ namespace Bitmovin.Api.Sdk.Models
         public List<string> GroupBy { get; set; }
         
         /// <summary>
-        /// Maximum number of rows returned (max. 150)
+        /// Maximum number of rows returned (max. 200)
         /// </summary>
         [JsonProperty(PropertyName = "limit")]
         public long? Limit { get; set; }

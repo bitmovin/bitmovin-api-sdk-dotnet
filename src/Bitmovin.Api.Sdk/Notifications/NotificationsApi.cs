@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using RestEase;
 using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Notifications.Webhooks;
-using Bitmovin.Api.Sdk.Notifications.State;
+using Bitmovin.Api.Sdk.Notifications.States;
 using Bitmovin.Api.Sdk.Notifications.Emails;
 
 namespace Bitmovin.Api.Sdk.Notifications
@@ -19,7 +19,7 @@ namespace Bitmovin.Api.Sdk.Notifications
             _apiClient = apiClientFactory.CreateClient<INotificationsApiClient>();
 
             Webhooks = new WebhooksApi(apiClientFactory);
-            State = new StateApi(apiClientFactory);
+            States = new StatesApi(apiClientFactory);
             Emails = new EmailsApi(apiClientFactory);
         }
 
@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Notifications
         public static BitmovinApiBuilder<NotificationsApi> Builder => new BitmovinApiBuilder<NotificationsApi>();
 
         public WebhooksApi Webhooks { get; private set; }
-        public StateApi State { get; private set; }
+        public StatesApi States { get; private set; }
         public EmailsApi Emails { get; private set; }
         
         /// <summary>
@@ -116,7 +116,7 @@ namespace Bitmovin.Api.Sdk.Notifications
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.Notification>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
             
-            [Get("/notifications/{notification_id}/state")]
+            [Get("/notifications/{notification_id}/states")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.NotificationStateEntry>> ListByNotificationIdAsync([Path("notification_id")] string notificationId, [QueryMap] IDictionary<String, Object> queryParams);
             

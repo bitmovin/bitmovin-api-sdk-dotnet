@@ -47,6 +47,12 @@ namespace Bitmovin.Api.Sdk.Models
         public string InitSegmentNameTemplate { get; set; }
         
         /// <summary>
+        /// Writes the duration per sample into the sample entry in the Track Fragment Run Box. This could help to fix playback issues on legacy players. Enabling this flag increases the muxing overhead by 4 bytes per sample/frame.
+        /// </summary>
+        [JsonProperty(PropertyName = "writeDurationPerSample")]
+        public bool? WriteDurationPerSample { get; set; }
+        
+        /// <summary>
         /// Number of segments which have been encoded
         /// </summary>
         [JsonProperty(PropertyName = "segmentsMuxed")]

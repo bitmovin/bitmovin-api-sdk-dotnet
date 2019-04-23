@@ -1,4 +1,5 @@
 ﻿using Bitmovin.Api.Sdk.Common;
+using Bitmovin.Api.Sdk.Encoding.Encodings.Streams.BurnInSubtitles.Dvbsub;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Streams.BurnInSubtitles.Srt;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.BurnInSubtitles
@@ -7,6 +8,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.BurnInSubtitles
     {
         public BurnInSubtitlesApi(IBitmovinApiClientFactory apiClientFactory)
         {
+            Dvbsub = new DvbsubApi(apiClientFactory);
             Srt = new SrtApi(apiClientFactory);
         }
 
@@ -15,6 +17,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.BurnInSubtitles
         /// </summary>
         public static BitmovinApiBuilder<BurnInSubtitlesApi> Builder => new BitmovinApiBuilder<BurnInSubtitlesApi>();
 
+        public DvbsubApi Dvbsub { get; private set; }
         public SrtApi Srt { get; private set; }
 
     }

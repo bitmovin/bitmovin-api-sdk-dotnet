@@ -1,5 +1,5 @@
 ﻿using Bitmovin.Api.Sdk.Common;
-using Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media.CustomTag;
+using Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media.CustomTags;
 using Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media.Type;
 using Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media.Video;
 using Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media.Audio;
@@ -13,7 +13,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media
     {
         public MediaApi(IBitmovinApiClientFactory apiClientFactory)
         {
-            CustomTag = new CustomTagApi(apiClientFactory);
+            CustomTags = new CustomTagsApi(apiClientFactory);
             Type = new TypeApi(apiClientFactory);
             Video = new VideoApi(apiClientFactory);
             Audio = new AudioApi(apiClientFactory);
@@ -27,7 +27,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media
         /// </summary>
         public static BitmovinApiBuilder<MediaApi> Builder => new BitmovinApiBuilder<MediaApi>();
 
-        public CustomTagApi CustomTag { get; private set; }
+        public CustomTagsApi CustomTags { get; private set; }
         public TypeApi Type { get; private set; }
         public VideoApi Video { get; private set; }
         public AudioApi Audio { get; private set; }

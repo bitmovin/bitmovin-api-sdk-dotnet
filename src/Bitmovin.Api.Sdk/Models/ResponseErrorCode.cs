@@ -394,6 +394,30 @@ namespace Bitmovin.Api.Sdk.Models
         ANALYTICSINFRASTRUCTUREERROR,
         
         /// <summary>
+        /// ANALYTICSEXPORTBUCKETNOTFOUND
+        /// </summary>
+        [EnumMember(Value = "ANALYTICS_EXPORT_BUCKET_NOT_FOUND")]
+        ANALYTICSEXPORTBUCKETNOTFOUND,
+        
+        /// <summary>
+        /// ANALYTICSEXPORTINVALIDFILEPATH
+        /// </summary>
+        [EnumMember(Value = "ANALYTICS_EXPORT_INVALID_FILE_PATH")]
+        ANALYTICSEXPORTINVALIDFILEPATH,
+        
+        /// <summary>
+        /// ANALYTICSEXPORTUPLOADACCESSDENIED
+        /// </summary>
+        [EnumMember(Value = "ANALYTICS_EXPORT_UPLOAD_ACCESS_DENIED")]
+        ANALYTICSEXPORTUPLOADACCESSDENIED,
+        
+        /// <summary>
+        /// ANALYTICSEXPORTUPLOADFAILURE
+        /// </summary>
+        [EnumMember(Value = "ANALYTICS_EXPORT_UPLOAD_FAILURE")]
+        ANALYTICSEXPORTUPLOADFAILURE,
+        
+        /// <summary>
         /// ACCOUNTGENERALERROR
         /// </summary>
         [EnumMember(Value = "ACCOUNT_GENERAL_ERROR")]

@@ -347,18 +347,6 @@ namespace Bitmovin.Api.Sdk.Models
         public bool? WavefrontParallelProcessing { get; set; }
         
         /// <summary>
-        /// When enabled the encoder will distribute the analysis work of each CU (merge, inter, intra) across multiple worker threads. Default is disabled.
-        /// </summary>
-        [JsonProperty(PropertyName = "parallelModeDecision")]
-        public bool? ParallelModeDecision { get; set; }
-        
-        /// <summary>
-        /// When enabled the encoder will distribute motion estimation across multiple worker threads when more than two references require motion searches for a given CU. Default is disabled.
-        /// </summary>
-        [JsonProperty(PropertyName = "parallelMotionEstimation")]
-        public bool? ParallelMotionEstimation { get; set; }
-        
-        /// <summary>
         /// Encode each incoming frame as multiple parallel slices that may be decoded independently. Default is 1.
         /// </summary>
         [JsonProperty(PropertyName = "slices")]

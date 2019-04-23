@@ -27,6 +27,15 @@ namespace Bitmovin.Api.Sdk.Analytics.Licenses
         public DomainsApi Domains { get; private set; }
         
         /// <summary>
+        /// Create Analytics License
+        /// </summary>
+        /// <param name="analyticsLicense">The request payload</param>
+        public async Task<Models.AnalyticsLicense> CreateAsync(Models.AnalyticsLicense analyticsLicense)
+        {
+            return await _apiClient.CreateAsync(analyticsLicense);
+        }
+        
+        /// <summary>
         /// Get License
         /// </summary>
         /// <param name="licenseId">License id</param>
@@ -45,6 +54,10 @@ namespace Bitmovin.Api.Sdk.Analytics.Licenses
         
         internal interface ILicensesApiClient
         {
+            
+            [Post("/analytics/licenses")]
+            [AllowAnyStatusCode]
+            Task<Models.AnalyticsLicense> CreateAsync([Body] Models.AnalyticsLicense analyticsLicense);
             
             [Get("/analytics/licenses/{license_id}")]
             [AllowAnyStatusCode]

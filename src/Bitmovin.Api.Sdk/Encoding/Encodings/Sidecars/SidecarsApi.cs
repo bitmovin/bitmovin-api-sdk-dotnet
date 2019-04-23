@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using RestEase;
 using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Sidecars.Customdata;
+using Bitmovin.Api.Sdk.Encoding.Encodings.Sidecars.Webvtt;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Sidecars
 {
@@ -17,6 +18,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Sidecars
             _apiClient = apiClientFactory.CreateClient<ISidecarsApiClient>();
 
             Customdata = new CustomdataApi(apiClientFactory);
+            Webvtt = new WebvttApi(apiClientFactory);
         }
 
         /// <summary>
@@ -25,6 +27,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Sidecars
         public static BitmovinApiBuilder<SidecarsApi> Builder => new BitmovinApiBuilder<SidecarsApi>();
 
         public CustomdataApi Customdata { get; private set; }
+        public WebvttApi Webvtt { get; private set; }
         
         /// <summary>
         /// Add Sidecar

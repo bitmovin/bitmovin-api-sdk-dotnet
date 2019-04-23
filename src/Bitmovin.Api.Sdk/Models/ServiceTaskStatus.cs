@@ -47,31 +47,31 @@ namespace Bitmovin.Api.Sdk.Models
         public List<Message> Messages { get; set; }
         
         /// <summary>
-        /// Timestamp when the task was created, expressed in UTC: YYYY-MM-DDThh:mm:ssZ
+        /// Timestamp when the task was created, formatted in UTC: YYYY-MM-DDThh:mm:ssZ
         /// </summary>
         [JsonProperty(PropertyName = "createdAt")]
         public DateTime? CreatedAt { get; set; }
         
         /// <summary>
-        /// Timestamp when the task status changed to \&quot;QUEUED\&quot;, expressed in UTC: YYYY-MM-DDThh:mm:ssZ
+        /// Timestamp when the task status changed to \&quot;QUEUED\&quot;, formatted in UTC: YYYY-MM-DDThh:mm:ssZ
         /// </summary>
         [JsonProperty(PropertyName = "queuedAt")]
         public DateTime? QueuedAt { get; set; }
         
         /// <summary>
-        /// Timestamp when the task status changed to to \&quot;RUNNING\&quot;, expressed in UTC: YYYY-MM-DDThh:mm:ssZ
+        /// Timestamp when the task status changed to to \&quot;RUNNING\&quot;, formatted in UTC: YYYY-MM-DDThh:mm:ssZ
         /// </summary>
         [JsonProperty(PropertyName = "runningAt")]
         public DateTime? RunningAt { get; set; }
         
         /// <summary>
-        /// Timestamp when the task status changed to \&quot;FINISHED\&quot;, expressed in UTC: YYYY-MM-DDThh:mm:ssZ
+        /// Timestamp when the task status changed to \&quot;FINISHED\&quot;, formatted in UTC: YYYY-MM-DDThh:mm:ssZ
         /// </summary>
         [JsonProperty(PropertyName = "finishedAt")]
         public DateTime? FinishedAt { get; set; }
         
         /// <summary>
-        /// Timestamp when the task status changed to \&quot;ERROR\&quot;, expressed in UTC: YYYY-MM-DDThh:mm:ssZ
+        /// Timestamp when the task status changed to \&quot;ERROR\&quot;, formatted in UTC: YYYY-MM-DDThh:mm:ssZ
         /// </summary>
         [JsonProperty(PropertyName = "errorAt")]
         public DateTime? ErrorAt { get; set; }

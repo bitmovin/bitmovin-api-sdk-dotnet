@@ -14,8 +14,13 @@ namespace Bitmovin.Api.Sdk.Models
     /// DashCmafDrmRepresentation
     /// </summary>
 
-    public class DashCmafDrmRepresentation : DashFmp4DrmRepresentation
+    public class DashCmafDrmRepresentation : DashCmafRepresentation
     {
+        /// <summary>
+        /// DRM Id
+        /// </summary>
+        [JsonProperty(PropertyName = "drmId")]
+        public string DrmId { get; set; }
     }
 
 }

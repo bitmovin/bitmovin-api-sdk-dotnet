@@ -6,6 +6,7 @@ using RestEase;
 using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.LiveStatistics.Events;
 using Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.LiveStatistics.Streams;
+using Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.LiveStatistics.Srt;
 
 namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.LiveStatistics
 {
@@ -19,6 +20,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.LiveStatistics
 
             Events = new EventsApi(apiClientFactory);
             Streams = new StreamsApi(apiClientFactory);
+            Srt = new SrtApi(apiClientFactory);
         }
 
         /// <summary>
@@ -28,6 +30,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.LiveStatistics
 
         public EventsApi Events { get; private set; }
         public StreamsApi Streams { get; private set; }
+        public SrtApi Srt { get; private set; }
         
         /// <summary>
         /// List Live Statistics from an Encoding

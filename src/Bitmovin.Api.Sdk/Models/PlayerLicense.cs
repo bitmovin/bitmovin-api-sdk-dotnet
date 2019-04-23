@@ -20,10 +20,10 @@ namespace Bitmovin.Api.Sdk.Models
         /// Name of the resource
         /// </summary>
         [JsonProperty(PropertyName = "name")]
-        public string Name { get; internal set; }
+        public string Name { get; set; }
         
         /// <summary>
-        /// Creation timestamp expressed in UTC: YYYY-MM-DDThh:mm:ssZ
+        /// Creation timestamp formatted in UTC: YYYY-MM-DDThh:mm:ssZ
         /// </summary>
         [JsonProperty(PropertyName = "createdAt")]
         public DateTime? CreatedAt { get; internal set; }
@@ -57,6 +57,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "domains")]
         public List<Domain> Domains { get; internal set; }
+        
+        /// <summary>
+        /// Analytics License Key
+        /// </summary>
+        [JsonProperty(PropertyName = "analyticsKey")]
+        public string AnalyticsKey { get; internal set; }
     }
 
 }

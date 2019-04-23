@@ -10,7 +10,6 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Customdata;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Streams;
 using Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings;
-using Bitmovin.Api.Sdk.Encoding.Encodings.Subtitles;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Captions;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Sidecars;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Keyframes;
@@ -31,7 +30,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings
             Streams = new StreamsApi(apiClientFactory);
             InputStreams = new InputStreamsApi(apiClientFactory);
             Muxings = new MuxingsApi(apiClientFactory);
-            Subtitles = new SubtitlesApi(apiClientFactory);
             Captions = new CaptionsApi(apiClientFactory);
             Sidecars = new SidecarsApi(apiClientFactory);
             Keyframes = new KeyframesApi(apiClientFactory);
@@ -48,7 +46,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings
         public StreamsApi Streams { get; private set; }
         public InputStreamsApi InputStreams { get; private set; }
         public MuxingsApi Muxings { get; private set; }
-        public SubtitlesApi Subtitles { get; private set; }
         public CaptionsApi Captions { get; private set; }
         public SidecarsApi Sidecars { get; private set; }
         public KeyframesApi Keyframes { get; private set; }

@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using RestEase;
 using Bitmovin.Api.Sdk.Common;
-using Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media.Video.Iframe;
 
 namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media.Video
 {
@@ -16,7 +15,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media.Video
         {
             _apiClient = apiClientFactory.CreateClient<IVideoApiClient>();
 
-            Iframe = new IframeApi(apiClientFactory);
         }
 
         /// <summary>
@@ -24,7 +22,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media.Video
         /// </summary>
         public static BitmovinApiBuilder<VideoApi> Builder => new BitmovinApiBuilder<VideoApi>();
 
-        public IframeApi Iframe { get; private set; }
         
         /// <summary>
         /// Add Video Media

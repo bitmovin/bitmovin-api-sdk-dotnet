@@ -35,7 +35,7 @@ namespace Bitmovin.Api.Sdk.Models
         public string DownloadUrl { get; internal set; }
         
         /// <summary>
-        /// Creation timestamp expressed in UTC: YYYY-MM-DDThh:mm:ssZ
+        /// Creation timestamp formatted in UTC: YYYY-MM-DDThh:mm:ssZ
         /// </summary>
         [JsonProperty(PropertyName = "createdAt")]
         public DateTime? CreatedAt { get; internal set; }

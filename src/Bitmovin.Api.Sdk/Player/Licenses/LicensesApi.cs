@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using RestEase;
 using Bitmovin.Api.Sdk.Common;
+using Bitmovin.Api.Sdk.Player.Licenses.Analytics;
 using Bitmovin.Api.Sdk.Player.Licenses.Domains;
 using Bitmovin.Api.Sdk.Player.Licenses.ThirdPartyLicensing;
 
@@ -17,6 +18,7 @@ namespace Bitmovin.Api.Sdk.Player.Licenses
         {
             _apiClient = apiClientFactory.CreateClient<ILicensesApiClient>();
 
+            Analytics = new AnalyticsApi(apiClientFactory);
             Domains = new DomainsApi(apiClientFactory);
             ThirdPartyLicensing = new ThirdPartyLicensingApi(apiClientFactory);
         }
@@ -26,8 +28,18 @@ namespace Bitmovin.Api.Sdk.Player.Licenses
         /// </summary>
         public static BitmovinApiBuilder<LicensesApi> Builder => new BitmovinApiBuilder<LicensesApi>();
 
+        public AnalyticsApi Analytics { get; private set; }
         public DomainsApi Domains { get; private set; }
         public ThirdPartyLicensingApi ThirdPartyLicensing { get; private set; }
+        
+        /// <summary>
+        /// Create Player License
+        /// </summary>
+        /// <param name="playerLicense">The request payload</param>
+        public async Task<Models.PlayerLicense> CreateAsync(Models.PlayerLicense playerLicense)
+        {
+            return await _apiClient.CreateAsync(playerLicense);
+        }
         
         /// <summary>
         /// Get License
@@ -56,6 +68,10 @@ namespace Bitmovin.Api.Sdk.Player.Licenses
         
         internal interface ILicensesApiClient
         {
+            
+            [Post("/player/licenses")]
+            [AllowAnyStatusCode]
+            Task<Models.PlayerLicense> CreateAsync([Body] Models.PlayerLicense playerLicense);
             
             [Get("/player/licenses/{license_id}")]
             [AllowAnyStatusCode]

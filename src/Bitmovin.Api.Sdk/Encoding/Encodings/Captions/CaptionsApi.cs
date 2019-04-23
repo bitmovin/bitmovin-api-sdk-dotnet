@@ -1,7 +1,5 @@
 ﻿using Bitmovin.Api.Sdk.Common;
-using Bitmovin.Api.Sdk.Encoding.Encodings.Captions.Cea;
-using Bitmovin.Api.Sdk.Encoding.Encodings.Captions.Webvtt;
-using Bitmovin.Api.Sdk.Encoding.Encodings.Captions.Ttml;
+using Bitmovin.Api.Sdk.Encoding.Encodings.Captions.Extract;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Captions.Scc;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Captions
@@ -10,9 +8,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Captions
     {
         public CaptionsApi(IBitmovinApiClientFactory apiClientFactory)
         {
-            Cea = new CeaApi(apiClientFactory);
-            Webvtt = new WebvttApi(apiClientFactory);
-            Ttml = new TtmlApi(apiClientFactory);
+            Extract = new ExtractApi(apiClientFactory);
             Scc = new SccApi(apiClientFactory);
         }
 
@@ -21,9 +17,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Captions
         /// </summary>
         public static BitmovinApiBuilder<CaptionsApi> Builder => new BitmovinApiBuilder<CaptionsApi>();
 
-        public CeaApi Cea { get; private set; }
-        public WebvttApi Webvtt { get; private set; }
-        public TtmlApi Ttml { get; private set; }
+        public ExtractApi Extract { get; private set; }
         public SccApi Scc { get; private set; }
 
     }

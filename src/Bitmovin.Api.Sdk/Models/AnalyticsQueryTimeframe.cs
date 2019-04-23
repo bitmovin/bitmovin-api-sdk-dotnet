@@ -20,13 +20,13 @@ namespace Bitmovin.Api.Sdk.Models
         /// Start of timeframe which is queried
         /// </summary>
         [JsonProperty(PropertyName = "start")]
-        public DateTime? Start { get; set; }
+        public string Start { get; set; }
         
         /// <summary>
         /// End of timeframe which is queried
         /// </summary>
         [JsonProperty(PropertyName = "end")]
-        public DateTime? End { get; set; }
+        public string End { get; set; }
     }
 
 }

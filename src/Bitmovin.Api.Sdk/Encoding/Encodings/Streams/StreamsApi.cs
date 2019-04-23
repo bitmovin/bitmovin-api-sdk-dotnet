@@ -8,7 +8,6 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Customdata;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Input;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Inputs;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Filters;
-using Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Subtitles;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Streams.BurnInSubtitles;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Captions;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Thumbnails;
@@ -29,7 +28,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams
             Input = new InputApi(apiClientFactory);
             Inputs = new InputsApi(apiClientFactory);
             Filters = new FiltersApi(apiClientFactory);
-            Subtitles = new SubtitlesApi(apiClientFactory);
             BurnInSubtitles = new BurnInSubtitlesApi(apiClientFactory);
             Captions = new CaptionsApi(apiClientFactory);
             Thumbnails = new ThumbnailsApi(apiClientFactory);
@@ -46,7 +44,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams
         public InputApi Input { get; private set; }
         public InputsApi Inputs { get; private set; }
         public FiltersApi Filters { get; private set; }
-        public SubtitlesApi Subtitles { get; private set; }
         public BurnInSubtitlesApi BurnInSubtitles { get; private set; }
         public CaptionsApi Captions { get; private set; }
         public ThumbnailsApi Thumbnails { get; private set; }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using RestEase;
 using Bitmovin.Api.Sdk.Common;
-using Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Streams.CustomTag;
+using Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Streams.CustomTags;
 using Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Streams.Iframe;
 
 namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Streams
@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Streams
         {
             _apiClient = apiClientFactory.CreateClient<IStreamsApiClient>();
 
-            CustomTag = new CustomTagApi(apiClientFactory);
+            CustomTags = new CustomTagsApi(apiClientFactory);
             Iframe = new IframeApi(apiClientFactory);
         }
 
@@ -26,7 +26,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Streams
         /// </summary>
         public static BitmovinApiBuilder<StreamsApi> Builder => new BitmovinApiBuilder<StreamsApi>();
 
-        public CustomTagApi CustomTag { get; private set; }
+        public CustomTagsApi CustomTags { get; private set; }
         public IframeApi Iframe { get; private set; }
         
         /// <summary>
