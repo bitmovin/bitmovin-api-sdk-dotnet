@@ -37,7 +37,43 @@ namespace Bitmovin.Api.Sdk.Models
         /// VOD_HIGH_SPEED
         /// </summary>
         [EnumMember(Value = "VOD_HIGH_SPEED")]
-        VOD_HIGH_SPEED
+        VOD_HIGH_SPEED,
+        
+        /// <summary>
+        /// VOD_SPEED
+        /// </summary>
+        [EnumMember(Value = "VOD_SPEED")]
+        VOD_SPEED,
+        
+        /// <summary>
+        /// VOD_STANDARD
+        /// </summary>
+        [EnumMember(Value = "VOD_STANDARD")]
+        VOD_STANDARD,
+        
+        /// <summary>
+        /// VOD_EXTRAHIGH_SPEED
+        /// </summary>
+        [EnumMember(Value = "VOD_EXTRAHIGH_SPEED")]
+        VOD_EXTRAHIGH_SPEED,
+        
+        /// <summary>
+        /// VOD_VERYHIGH_SPEED
+        /// </summary>
+        [EnumMember(Value = "VOD_VERYHIGH_SPEED")]
+        VOD_VERYHIGH_SPEED,
+        
+        /// <summary>
+        /// VOD_SUPERHIGH_SPEED
+        /// </summary>
+        [EnumMember(Value = "VOD_SUPERHIGH_SPEED")]
+        VOD_SUPERHIGH_SPEED,
+        
+        /// <summary>
+        /// VOD_ULTRAHIGH_SPEED
+        /// </summary>
+        [EnumMember(Value = "VOD_ULTRAHIGH_SPEED")]
+        VOD_ULTRAHIGH_SPEED
         
     }
 

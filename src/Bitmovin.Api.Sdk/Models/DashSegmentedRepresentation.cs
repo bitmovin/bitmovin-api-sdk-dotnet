@@ -20,10 +20,16 @@ namespace Bitmovin.Api.Sdk.Models
         /// Type
         /// </summary>
         [JsonProperty(PropertyName = "type")]
-        public DashMuxingType Type { get; set; }
+        public DashRepresentationType Type { get; set; }
         
         /// <summary>
-        /// Path to segments
+        /// Mode
+        /// </summary>
+        [JsonProperty(PropertyName = "mode")]
+        public DashRepresentationTypeMode Mode { get; set; }
+        
+        /// <summary>
+        /// Path to segments. Will be used as the representation id if the type is set to TEMPLATE_ADAPTATION_SET
         /// </summary>
         [JsonProperty(PropertyName = "segmentPath")]
         public string SegmentPath { get; set; }

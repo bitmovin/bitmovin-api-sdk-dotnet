@@ -11,12 +11,12 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// DashMuxingType
+    /// DashRepresentationType
     /// </summary>
-    public enum DashMuxingType
+    public enum DashRepresentationType
     {
         /// <summary>
-        /// Generates a SegmentTemplate based representation
+        /// Generates a SegmentTemplate which will be positioned under the representation
         /// </summary>
         [EnumMember(Value = "TEMPLATE")]
         TEMPLATE,
