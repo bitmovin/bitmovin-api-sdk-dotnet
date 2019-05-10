@@ -13,38 +13,16 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// InputStream
     /// </summary>
+    [JsonConverter(typeof(JsonSubtypes), "type")]
+    [JsonSubtypes.KnownSubType(typeof(IngestInputStream), "INGEST")]
+    [JsonSubtypes.KnownSubType(typeof(ConcatenationInputStream), "CONCATENATION")]
+    [JsonSubtypes.KnownSubType(typeof(TimeBasedTrimmingInputStream), "TRIMMING_TIME_BASED")]
+    [JsonSubtypes.KnownSubType(typeof(TimecodeTrackTrimmingInputStream), "TRIMMING_TIME_CODE_TRACK")]
+    [JsonSubtypes.KnownSubType(typeof(H264PictureTimingTrimmingInputStream), "TRIMMING_H264_PICTURE_TIMING")]
+    [JsonSubtypes.KnownSubType(typeof(AudioMixInputStream), "AUDIO_MIX")]
 
-    public class InputStream
+    public class InputStream : BitmovinResource
     {
-        /// <summary>
-        /// Id of input
-        /// </summary>
-        [JsonProperty(PropertyName = "inputId")]
-        public string InputId { get; set; }
-        
-        /// <summary>
-        /// Path to media file
-        /// </summary>
-        [JsonProperty(PropertyName = "inputPath")]
-        public string InputPath { get; set; }
-        
-        /// <summary>
-        /// Specifies the algorithm how the stream in the input file will be selected
-        /// </summary>
-        [JsonProperty(PropertyName = "selectionMode")]
-        public StreamSelectionMode SelectionMode { get; set; }
-        
-        /// <summary>
-        /// Position of the stream
-        /// </summary>
-        [JsonProperty(PropertyName = "position")]
-        public int? Position { get; set; }
-        
-        /// <summary>
-        /// Set this property instead of all others to reference an ingest, trimming or concatenation input stream
-        /// </summary>
-        [JsonProperty(PropertyName = "inputStreamId")]
-        public string InputStreamId { get; set; }
     }
 
 }

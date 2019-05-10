@@ -44,7 +44,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Label identifier.
         /// </summary>
         [JsonProperty(PropertyName = "label")]
-        public DateTime? Label { get; set; }
+        public string Label { get; set; }
         
         /// <summary>
         /// Billable minutes for each encoding configuration.

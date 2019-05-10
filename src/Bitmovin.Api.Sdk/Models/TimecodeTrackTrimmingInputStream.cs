@@ -14,7 +14,7 @@ namespace Bitmovin.Api.Sdk.Models
     /// TimecodeTrackTrimmingInputStream
     /// </summary>
 
-    public class TimecodeTrackTrimmingInputStream : BasicInputStream
+    public class TimecodeTrackTrimmingInputStream : InputStream
     {
         /// <summary>
         /// The id of the ingest input stream that should be trimmed

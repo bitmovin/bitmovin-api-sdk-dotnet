@@ -20,13 +20,13 @@ namespace Bitmovin.Api.Sdk.Models
         /// Start of timeframe which is exported in UTC format
         /// </summary>
         [JsonProperty(PropertyName = "startTime")]
-        public string StartTime { get; set; }
+        public DateTime? StartTime { get; set; }
         
         /// <summary>
         /// End of timeframe which is exported in UTC format
         /// </summary>
         [JsonProperty(PropertyName = "endTime")]
-        public string EndTime { get; set; }
+        public DateTime? EndTime { get; set; }
         
         /// <summary>
         /// Name of the export task
@@ -51,6 +51,30 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "output")]
         public AnalyticsExportTaskOutputTarget Output { get; set; }
+        
+        /// <summary>
+        /// Progress of the export task
+        /// </summary>
+        [JsonProperty(PropertyName = "progress")]
+        public int? Progress { get; internal set; }
+        
+        /// <summary>
+        /// Status
+        /// </summary>
+        [JsonProperty(PropertyName = "status")]
+        public AnalyticsExportStatus Status { get; set; }
+        
+        /// <summary>
+        /// UTC timestamp when the export task started
+        /// </summary>
+        [JsonProperty(PropertyName = "startedAt")]
+        public DateTime? StartedAt { get; internal set; }
+        
+        /// <summary>
+        /// UTC timestamp when the export task finished
+        /// </summary>
+        [JsonProperty(PropertyName = "finishedAt")]
+        public DateTime? FinishedAt { get; internal set; }
     }
 
 }

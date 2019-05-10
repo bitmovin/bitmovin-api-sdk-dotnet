@@ -5,7 +5,6 @@ using System.Runtime.InteropServices;
 using System.Security;
 using RestEase;
 
-[assembly: AllowPartiallyTrustedCallers]
 [assembly: ComVisible(false)]
 [assembly: NeutralResourcesLanguage("en")]
 

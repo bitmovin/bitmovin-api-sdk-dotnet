@@ -6,7 +6,6 @@ using RestEase;
 using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Customdata;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm;
-using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Captions;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4
 {
@@ -20,7 +19,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4
 
             Customdata = new CustomdataApi(apiClientFactory);
             Drm = new DrmApi(apiClientFactory);
-            Captions = new CaptionsApi(apiClientFactory);
         }
 
         /// <summary>
@@ -30,7 +28,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4
 
         public CustomdataApi Customdata { get; private set; }
         public DrmApi Drm { get; private set; }
-        public CaptionsApi Captions { get; private set; }
         
         /// <summary>
         /// Add fMP4 Segment Muxing

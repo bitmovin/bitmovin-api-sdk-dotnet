@@ -11,10 +11,10 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// IngestInputStream
+    /// StreamInput
     /// </summary>
 
-    public class IngestInputStream : InputStream
+    public class StreamInput
     {
         /// <summary>
         /// Id of input
@@ -39,6 +39,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "position")]
         public int? Position { get; set; }
+        
+        /// <summary>
+        /// Set this property instead of all others to reference an ingest, trimming or concatenation input stream
+        /// </summary>
+        [JsonProperty(PropertyName = "inputStreamId")]
+        public string InputStreamId { get; set; }
     }
 
 }

@@ -20,7 +20,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// InputStreams
         /// </summary>
         [JsonProperty(PropertyName = "inputStreams")]
-        public List<InputStream> InputStreams { get; set; }
+        public List<StreamInput> InputStreams { get; set; }
         
         /// <summary>
         /// Outputs

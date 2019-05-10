@@ -20,7 +20,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Conditions
         /// </summary>
         [JsonProperty(PropertyName = "conditions")]
-        public List<StreamCondition> Conditions { get; set; }
+        public List<AbstractCondition> Conditions { get; set; }
     }
 
 }

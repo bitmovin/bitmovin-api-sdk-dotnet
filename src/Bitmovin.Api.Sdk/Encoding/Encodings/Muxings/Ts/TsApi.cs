@@ -6,7 +6,6 @@ using RestEase;
 using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Ts.Customdata;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Ts.Drm;
-using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Ts.Captions;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Ts
 {
@@ -20,7 +19,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Ts
 
             Customdata = new CustomdataApi(apiClientFactory);
             Drm = new DrmApi(apiClientFactory);
-            Captions = new CaptionsApi(apiClientFactory);
         }
 
         /// <summary>
@@ -30,7 +28,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Ts
 
         public CustomdataApi Customdata { get; private set; }
         public DrmApi Drm { get; private set; }
-        public CaptionsApi Captions { get; private set; }
         
         /// <summary>
         /// Add TS Segment Muxing

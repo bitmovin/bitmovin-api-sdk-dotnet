@@ -43,7 +43,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams
         /// </summary>
         /// <param name="encodingId">Id of the encoding.</param>
         /// <param name="inputStreamId">Id of the input stream.</param>
-        public async Task<Models.BasicInputStream> GetAsync(string encodingId, string inputStreamId)
+        public async Task<Models.InputStream> GetAsync(string encodingId, string inputStreamId)
         {
             return await _apiClient.GetAsync(encodingId, inputStreamId);
         }
@@ -53,7 +53,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams
         /// </summary>
         /// <param name="encodingId">Id of the encoding.</param>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>
-        public async Task<Models.PaginationResponse<Models.BasicInputStream>> ListAsync(string encodingId, params Func<ListQueryParams, ListQueryParams>[] queryParams)
+        public async Task<Models.PaginationResponse<Models.InputStream>> ListAsync(string encodingId, params Func<ListQueryParams, ListQueryParams>[] queryParams)
         {
             ListQueryParams q = new ListQueryParams();
 
@@ -70,11 +70,11 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams
             
             [Get("/encoding/encodings/{encoding_id}/input-streams/{input_stream_id}")]
             [AllowAnyStatusCode]
-            Task<Models.BasicInputStream> GetAsync([Path("encoding_id")] string encodingId, [Path("input_stream_id")] string inputStreamId);
+            Task<Models.InputStream> GetAsync([Path("encoding_id")] string encodingId, [Path("input_stream_id")] string inputStreamId);
             
             [Get("/encoding/encodings/{encoding_id}/input-streams")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.BasicInputStream>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.InputStream>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap] IDictionary<String, Object> queryParams);
             
         }
         

@@ -1,5 +1,4 @@
 ﻿using Bitmovin.Api.Sdk.Common;
-using Bitmovin.Api.Sdk.Encoding.Encodings.Captions.Extract;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Captions.Scc;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Captions
@@ -8,7 +7,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Captions
     {
         public CaptionsApi(IBitmovinApiClientFactory apiClientFactory)
         {
-            Extract = new ExtractApi(apiClientFactory);
             Scc = new SccApi(apiClientFactory);
         }
 
@@ -17,7 +15,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Captions
         /// </summary>
         public static BitmovinApiBuilder<CaptionsApi> Builder => new BitmovinApiBuilder<CaptionsApi>();
 
-        public ExtractApi Extract { get; private set; }
         public SccApi Scc { get; private set; }
 
     }

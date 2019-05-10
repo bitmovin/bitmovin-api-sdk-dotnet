@@ -14,7 +14,7 @@ namespace Bitmovin.Api.Sdk.Models
     /// ConcatenationInputStream
     /// </summary>
 
-    public class ConcatenationInputStream : BasicInputStream
+    public class ConcatenationInputStream : InputStream
     {
         /// <summary>
         /// Concatenation configuration for the output of this stream

@@ -14,7 +14,7 @@ namespace Bitmovin.Api.Sdk.Models
     /// AudioMixInputStream
     /// </summary>
 
-    public class AudioMixInputStream : BasicInputStream
+    public class AudioMixInputStream : InputStream
     {
         /// <summary>
         /// Channel layout of the audio mix input stream

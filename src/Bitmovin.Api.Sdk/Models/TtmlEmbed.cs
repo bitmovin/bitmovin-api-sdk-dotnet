@@ -20,7 +20,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// The input stream to extract the subtitle from
         /// </summary>
         [JsonProperty(PropertyName = "inputStream")]
-        public InputStream InputStream { get; set; }
+        public StreamInput InputStream { get; set; }
     }
 
 }

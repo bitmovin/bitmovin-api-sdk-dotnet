@@ -39,7 +39,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Local
         /// Delete Local Input
         /// </summary>
         /// <param name="inputId">Id of the input</param>
-        public async Task<Models.LocalInput> DeleteAsync(string inputId)
+        public async Task<Models.BitmovinResponse> DeleteAsync(string inputId)
         {
             return await _apiClient.DeleteAsync(inputId);
         }
@@ -78,7 +78,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Local
             
             [Delete("/encoding/inputs/local/{input_id}")]
             [AllowAnyStatusCode]
-            Task<Models.LocalInput> DeleteAsync([Path("input_id")] string inputId);
+            Task<Models.BitmovinResponse> DeleteAsync([Path("input_id")] string inputId);
             
             [Get("/encoding/inputs/local/{input_id}")]
             [AllowAnyStatusCode]

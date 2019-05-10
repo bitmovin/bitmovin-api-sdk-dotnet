@@ -14,7 +14,7 @@ namespace Bitmovin.Api.Sdk.Models
     /// H264PictureTimingTrimmingInputStream
     /// </summary>
 
-    public class H264PictureTimingTrimmingInputStream : BasicInputStream
+    public class H264PictureTimingTrimmingInputStream : InputStream
     {
         /// <summary>
         /// The id of the ingest input stream that should be trimmed

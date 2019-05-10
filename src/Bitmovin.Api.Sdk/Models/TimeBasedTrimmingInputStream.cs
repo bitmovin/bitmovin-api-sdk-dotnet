@@ -14,7 +14,7 @@ namespace Bitmovin.Api.Sdk.Models
     /// TimeBasedTrimmingInputStream
     /// </summary>
 
-    public class TimeBasedTrimmingInputStream : BasicInputStream
+    public class TimeBasedTrimmingInputStream : InputStream
     {
         /// <summary>
         /// The id of the ingest input stream that should be trimmed

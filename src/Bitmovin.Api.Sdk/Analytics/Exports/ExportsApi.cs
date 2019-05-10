@@ -27,7 +27,7 @@ namespace Bitmovin.Api.Sdk.Analytics.Exports
         /// Create Export Task
         /// </summary>
         /// <param name="analyticsExportTask">The request payload</param>
-        public async Task<Models.AnalyticsExportTaskDetails> CreateAsync(Models.AnalyticsExportTask analyticsExportTask)
+        public async Task<Models.AnalyticsExportTask> CreateAsync(Models.AnalyticsExportTask analyticsExportTask)
         {
             return await _apiClient.CreateAsync(analyticsExportTask);
         }
@@ -36,7 +36,7 @@ namespace Bitmovin.Api.Sdk.Analytics.Exports
         /// Get export task
         /// </summary>
         /// <param name="exportTaskId">Export task id</param>
-        public async Task<Models.AnalyticsExportTaskDetails> GetAsync(string exportTaskId)
+        public async Task<Models.AnalyticsExportTask> GetAsync(string exportTaskId)
         {
             return await _apiClient.GetAsync(exportTaskId);
         }
@@ -45,7 +45,7 @@ namespace Bitmovin.Api.Sdk.Analytics.Exports
         /// List Export Tasks
         /// </summary>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>
-        public async Task<Models.PaginationResponse<Models.AnalyticsExportTaskDetails>> ListAsync(params Func<ListQueryParams, ListQueryParams>[] queryParams)
+        public async Task<Models.PaginationResponse<Models.AnalyticsExportTask>> ListAsync(params Func<ListQueryParams, ListQueryParams>[] queryParams)
         {
             ListQueryParams q = new ListQueryParams();
 
@@ -62,15 +62,15 @@ namespace Bitmovin.Api.Sdk.Analytics.Exports
             
             [Post("/analytics/exports")]
             [AllowAnyStatusCode]
-            Task<Models.AnalyticsExportTaskDetails> CreateAsync([Body] Models.AnalyticsExportTask analyticsExportTask);
+            Task<Models.AnalyticsExportTask> CreateAsync([Body] Models.AnalyticsExportTask analyticsExportTask);
             
             [Get("/analytics/exports/{export_task_id}")]
             [AllowAnyStatusCode]
-            Task<Models.AnalyticsExportTaskDetails> GetAsync([Path("export_task_id")] string exportTaskId);
+            Task<Models.AnalyticsExportTask> GetAsync([Path("export_task_id")] string exportTaskId);
             
             [Get("/analytics/exports")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.AnalyticsExportTaskDetails>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.AnalyticsExportTask>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
             
         }
         

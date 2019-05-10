@@ -13,14 +13,13 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// AbstractCondition
     /// </summary>
+    [JsonConverter(typeof(JsonSubtypes), "type")]
+    [JsonSubtypes.KnownSubType(typeof(Condition), "CONDITION")]
+    [JsonSubtypes.KnownSubType(typeof(AndConjunction), "AND")]
+    [JsonSubtypes.KnownSubType(typeof(OrConjunction), "OR")]
 
     public class AbstractCondition
     {
-        /// <summary>
-        /// Type
-        /// </summary>
-        [JsonProperty(PropertyName = "type")]
-        public ConditionType Type { get; set; }
     }
 
 }

@@ -17,13 +17,13 @@ namespace Bitmovin.Api.Sdk.Models
     public class Condition : AbstractCondition
     {
         /// <summary>
-        /// Attribute
+        /// The attribute that should be used for the evaluation
         /// </summary>
         [JsonProperty(PropertyName = "attribute")]
-        public ConditionAttribute Attribute { get; set; }
+        public string Attribute { get; set; }
         
         /// <summary>
-        /// Operator
+        /// The operator that should be used for the evaluation
         /// </summary>
         [JsonProperty(PropertyName = "operator")]
         public ConditionOperator Operator { get; set; }
