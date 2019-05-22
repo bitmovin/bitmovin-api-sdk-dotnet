@@ -27,9 +27,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Kubernetes.Customdata
         /// Kubernetes Cluster Custom Data
         /// </summary>
         /// <param name="infrastructureId">Id of the Kubernetes cluster</param>
-        public async Task<Models.CustomData> GetCustomDataAsync(string infrastructureId)
+        public async Task<Models.CustomData> GetAsync(string infrastructureId)
         {
-            return await _apiClient.GetCustomDataAsync(infrastructureId);
+            return await _apiClient.GetAsync(infrastructureId);
         }
         
         internal interface ICustomdataApiClient
@@ -37,7 +37,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Kubernetes.Customdata
             
             [Get("/encoding/infrastructure/kubernetes/{infrastructure_id}/customData")]
             [AllowAnyStatusCode]
-            Task<Models.CustomData> GetCustomDataAsync([Path("infrastructure_id")] string infrastructureId);
+            Task<Models.CustomData> GetAsync([Path("infrastructure_id")] string infrastructureId);
             
         }
         

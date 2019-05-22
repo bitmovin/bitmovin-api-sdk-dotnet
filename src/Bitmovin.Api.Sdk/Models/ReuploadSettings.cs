@@ -17,19 +17,19 @@ namespace Bitmovin.Api.Sdk.Models
     public class ReuploadSettings
     {
         /// <summary>
-        /// Interval in seconds to reupload the DASH manifest (minimum value: 30)
+        /// Interval in seconds to reupload the DASH manifest. Valid values are either &#x60;null&#x60; to never reupload the dash manifest or at least &#x60;30&#x60;.
         /// </summary>
         [JsonProperty(PropertyName = "dashManifestInterval")]
         public double? DashManifestInterval { get; set; }
         
         /// <summary>
-        /// Interval in seconds to reupload the HLS master file. This is currently not used, as the master file will always be uploaded when one of the playlist files has changed (minimum value: 30)
+        /// Interval in seconds to reupload the HLS master file. Valid values are either &#x60;0&#x60; to never reupload the hls manifest or at least &#x60;30&#x60;. This is currently not used, as the master file will always be uploaded when one of the playlist files has changed.
         /// </summary>
         [JsonProperty(PropertyName = "hlsManifestInterval")]
         public double? HlsManifestInterval { get; set; }
         
         /// <summary>
-        /// The interval in seconds to reupload the init file for segmented muxings (e.g. fMP4, WebM) (minimum value: 30)
+        /// The interval in seconds to reupload the init file for segmented muxings, e.g. fMP4, WebM. Valid values are either &#x60;null&#x60; to never reupload the init file for segmented muxings or at least &#x60;30&#x60;.
         /// </summary>
         [JsonProperty(PropertyName = "muxingInitFileInterval")]
         public double? MuxingInitFileInterval { get; set; }

@@ -19,7 +19,19 @@ namespace Bitmovin.Api.Sdk.Models
         /// DASH
         /// </summary>
         [EnumMember(Value = "DASH")]
-        DASH
+        DASH,
+        
+        /// <summary>
+        /// HLS
+        /// </summary>
+        [EnumMember(Value = "HLS")]
+        HLS,
+        
+        /// <summary>
+        /// CMAF
+        /// </summary>
+        [EnumMember(Value = "CMAF")]
+        CMAF
         
     }
 

@@ -31,19 +31,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// uneven multi-hexagon search
         /// </summary>
         [EnumMember(Value = "UMH")]
-        UMH,
-        
-        /// <summary>
-        /// exhaustive search
-        /// </summary>
-        [EnumMember(Value = "ESA")]
-        ESA,
-        
-        /// <summary>
-        /// hadamard exhaustive search (slow)
-        /// </summary>
-        [EnumMember(Value = "TESA")]
-        TESA
+        UMH
         
     }
 

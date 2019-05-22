@@ -27,9 +27,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Crop.Customdata
         /// Crop Filter Custom Data
         /// </summary>
         /// <param name="filterId">Id of the Crop configuration.</param>
-        public async Task<Models.CustomData> GetCustomDataAsync(string filterId)
+        public async Task<Models.CustomData> GetAsync(string filterId)
         {
-            return await _apiClient.GetCustomDataAsync(filterId);
+            return await _apiClient.GetAsync(filterId);
         }
         
         internal interface ICustomdataApiClient
@@ -37,7 +37,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Crop.Customdata
             
             [Get("/encoding/filters/crop/{filter_id}/customData")]
             [AllowAnyStatusCode]
-            Task<Models.CustomData> GetCustomDataAsync([Path("filter_id")] string filterId);
+            Task<Models.CustomData> GetAsync([Path("filter_id")] string filterId);
             
         }
         

@@ -27,9 +27,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.HeAacV2.Customdata
         /// HE-AAC v2 Codec Configuration Custom Data
         /// </summary>
         /// <param name="configurationId">Id of the codec configuration</param>
-        public async Task<Models.CustomData> GetCustomDataAsync(string configurationId)
+        public async Task<Models.CustomData> GetAsync(string configurationId)
         {
-            return await _apiClient.GetCustomDataAsync(configurationId);
+            return await _apiClient.GetAsync(configurationId);
         }
         
         internal interface ICustomdataApiClient
@@ -37,7 +37,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.HeAacV2.Customdata
             
             [Get("/encoding/configurations/audio/he-aac-v2/{configuration_id}/customData")]
             [AllowAnyStatusCode]
-            Task<Models.CustomData> GetCustomDataAsync([Path("configuration_id")] string configurationId);
+            Task<Models.CustomData> GetAsync([Path("configuration_id")] string configurationId);
             
         }
         

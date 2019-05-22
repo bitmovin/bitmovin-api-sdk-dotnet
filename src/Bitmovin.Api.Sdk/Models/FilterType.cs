@@ -85,7 +85,13 @@ namespace Bitmovin.Api.Sdk.Models
         /// AUDIOVOLUME
         /// </summary>
         [EnumMember(Value = "AUDIO_VOLUME")]
-        AUDIOVOLUME
+        AUDIOVOLUME,
+        
+        /// <summary>
+        /// EBUR128SINGLEPASS
+        /// </summary>
+        [EnumMember(Value = "EBU_R128_SINGLE_PASS")]
+        EBUR128SINGLEPASS
         
     }
 

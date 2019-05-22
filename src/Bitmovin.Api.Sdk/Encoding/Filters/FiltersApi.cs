@@ -12,6 +12,7 @@ using Bitmovin.Api.Sdk.Encoding.Filters.Rotate;
 using Bitmovin.Api.Sdk.Encoding.Filters.Deinterlace;
 using Bitmovin.Api.Sdk.Encoding.Filters.AudioMix;
 using Bitmovin.Api.Sdk.Encoding.Filters.DenoiseHqdn3d;
+using Bitmovin.Api.Sdk.Encoding.Filters.EbuR128SinglePass;
 using Bitmovin.Api.Sdk.Encoding.Filters.Text;
 using Bitmovin.Api.Sdk.Encoding.Filters.Interlace;
 using Bitmovin.Api.Sdk.Encoding.Filters.Unsharp;
@@ -36,6 +37,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters
             Deinterlace = new DeinterlaceApi(apiClientFactory);
             AudioMix = new AudioMixApi(apiClientFactory);
             DenoiseHqdn3d = new DenoiseHqdn3dApi(apiClientFactory);
+            EbuR128SinglePass = new EbuR128SinglePassApi(apiClientFactory);
             Text = new TextApi(apiClientFactory);
             Interlace = new InterlaceApi(apiClientFactory);
             Unsharp = new UnsharpApi(apiClientFactory);
@@ -56,6 +58,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters
         public DeinterlaceApi Deinterlace { get; private set; }
         public AudioMixApi AudioMix { get; private set; }
         public DenoiseHqdn3dApi DenoiseHqdn3d { get; private set; }
+        public EbuR128SinglePassApi EbuR128SinglePass { get; private set; }
         public TextApi Text { get; private set; }
         public InterlaceApi Interlace { get; private set; }
         public UnsharpApi Unsharp { get; private set; }

@@ -27,9 +27,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Customdata
         /// Encoding Custom Data
         /// </summary>
         /// <param name="encodingId">Id of the encoding.</param>
-        public async Task<Models.CustomData> GetCustomDataAsync(string encodingId)
+        public async Task<Models.CustomData> GetAsync(string encodingId)
         {
-            return await _apiClient.GetCustomDataAsync(encodingId);
+            return await _apiClient.GetAsync(encodingId);
         }
         
         internal interface ICustomdataApiClient
@@ -37,7 +37,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Customdata
             
             [Get("/encoding/encodings/{encoding_id}/customData")]
             [AllowAnyStatusCode]
-            Task<Models.CustomData> GetCustomDataAsync([Path("encoding_id")] string encodingId);
+            Task<Models.CustomData> GetAsync([Path("encoding_id")] string encodingId);
             
         }
         

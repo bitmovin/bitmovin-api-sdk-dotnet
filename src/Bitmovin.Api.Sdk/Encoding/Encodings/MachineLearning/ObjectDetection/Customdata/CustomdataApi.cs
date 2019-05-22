@@ -28,9 +28,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.MachineLearning.ObjectDetection.Cu
         /// </summary>
         /// <param name="encodingId">Id of the encoding</param>
         /// <param name="objectDetectionId">Id of the object detection configuration</param>
-        public async Task<Models.CustomData> GetCustomDataAsync(string encodingId, string objectDetectionId)
+        public async Task<Models.CustomData> GetAsync(string encodingId, string objectDetectionId)
         {
-            return await _apiClient.GetCustomDataAsync(encodingId, objectDetectionId);
+            return await _apiClient.GetAsync(encodingId, objectDetectionId);
         }
         
         internal interface ICustomdataApiClient
@@ -38,7 +38,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.MachineLearning.ObjectDetection.Cu
             
             [Get("/encoding/encodings/{encoding_id}/machine-learning/object-detection/{object_detection_id}/customData")]
             [AllowAnyStatusCode]
-            Task<Models.CustomData> GetCustomDataAsync([Path("encoding_id")] string encodingId, [Path("object_detection_id")] string objectDetectionId);
+            Task<Models.CustomData> GetAsync([Path("encoding_id")] string encodingId, [Path("object_detection_id")] string objectDetectionId);
             
         }
         

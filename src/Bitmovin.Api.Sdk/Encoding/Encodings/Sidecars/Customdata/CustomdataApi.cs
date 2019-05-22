@@ -28,9 +28,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Sidecars.Customdata
         /// </summary>
         /// <param name="encodingId">Id of the encoding.</param>
         /// <param name="sidecarId">Id of the sidecar.</param>
-        public async Task<Models.CustomData> GetCustomDataAsync(string encodingId, string sidecarId)
+        public async Task<Models.CustomData> GetAsync(string encodingId, string sidecarId)
         {
-            return await _apiClient.GetCustomDataAsync(encodingId, sidecarId);
+            return await _apiClient.GetAsync(encodingId, sidecarId);
         }
         
         internal interface ICustomdataApiClient
@@ -38,7 +38,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Sidecars.Customdata
             
             [Get("/encoding/encodings/{encoding_id}/sidecars/{sidecar_id}/customData")]
             [AllowAnyStatusCode]
-            Task<Models.CustomData> GetCustomDataAsync([Path("encoding_id")] string encodingId, [Path("sidecar_id")] string sidecarId);
+            Task<Models.CustomData> GetAsync([Path("encoding_id")] string encodingId, [Path("sidecar_id")] string sidecarId);
             
         }
         

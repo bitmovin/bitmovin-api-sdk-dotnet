@@ -34,7 +34,7 @@ namespace Bitmovin.Api.Sdk.Models
         TWO_PASS,
         
         /// <summary>
-        /// Three pass encoding for best quality
+        /// Three pass encoding for best quality (this only works for VoD workflows)
         /// </summary>
         [EnumMember(Value = "THREE_PASS")]
         THREE_PASS

@@ -28,9 +28,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Customdata
         /// </summary>
         /// <param name="encodingId">Id of the encoding.</param>
         /// <param name="muxingId">Id of the fMP4 muxing</param>
-        public async Task<Models.CustomData> GetCustomDataAsync(string encodingId, string muxingId)
+        public async Task<Models.CustomData> GetAsync(string encodingId, string muxingId)
         {
-            return await _apiClient.GetCustomDataAsync(encodingId, muxingId);
+            return await _apiClient.GetAsync(encodingId, muxingId);
         }
         
         internal interface ICustomdataApiClient
@@ -38,7 +38,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Customdata
             
             [Get("/encoding/encodings/{encoding_id}/muxings/fmp4/{muxing_id}/customData")]
             [AllowAnyStatusCode]
-            Task<Models.CustomData> GetCustomDataAsync([Path("encoding_id")] string encodingId, [Path("muxing_id")] string muxingId);
+            Task<Models.CustomData> GetAsync([Path("encoding_id")] string encodingId, [Path("muxing_id")] string muxingId);
             
         }
         

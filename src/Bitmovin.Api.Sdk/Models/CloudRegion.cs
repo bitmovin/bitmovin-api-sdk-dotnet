@@ -16,76 +16,94 @@ namespace Bitmovin.Api.Sdk.Models
     public enum CloudRegion
     {
         /// <summary>
-        /// AWS_US_EAST_1
+        /// AWS US East (N. Virginia)
         /// </summary>
         [EnumMember(Value = "AWS_US_EAST_1")]
         AWS_US_EAST_1,
         
         /// <summary>
-        /// AWS_US_EAST_2
+        /// AWS US East (Ohio)
         /// </summary>
         [EnumMember(Value = "AWS_US_EAST_2")]
         AWS_US_EAST_2,
         
         /// <summary>
-        /// AWS_US_WEST_1
+        /// AWS US West (N. California)
         /// </summary>
         [EnumMember(Value = "AWS_US_WEST_1")]
         AWS_US_WEST_1,
         
         /// <summary>
-        /// AWS_US_WEST_2
+        /// AWS US West (Oregon)
         /// </summary>
         [EnumMember(Value = "AWS_US_WEST_2")]
         AWS_US_WEST_2,
         
         /// <summary>
-        /// AWS_EU_WEST_1
+        /// AWS EU (Ireland)
         /// </summary>
         [EnumMember(Value = "AWS_EU_WEST_1")]
         AWS_EU_WEST_1,
         
         /// <summary>
-        /// AWS_EU_CENTRAL_1
+        /// AWS EU (Frankfurt)
         /// </summary>
         [EnumMember(Value = "AWS_EU_CENTRAL_1")]
         AWS_EU_CENTRAL_1,
         
         /// <summary>
-        /// AWS_AP_SOUTHEAST_1
+        /// AWS Asia Pacific (Singapore)
         /// </summary>
         [EnumMember(Value = "AWS_AP_SOUTHEAST_1")]
         AWS_AP_SOUTHEAST_1,
         
         /// <summary>
-        /// AWS_AP_SOUTHEAST_2
+        /// AWS Asia Pacific (Sydney)
         /// </summary>
         [EnumMember(Value = "AWS_AP_SOUTHEAST_2")]
         AWS_AP_SOUTHEAST_2,
         
         /// <summary>
-        /// AWS_AP_NORTHEAST_1
+        /// AWS Asia Pacific (Tokyo)
         /// </summary>
         [EnumMember(Value = "AWS_AP_NORTHEAST_1")]
         AWS_AP_NORTHEAST_1,
         
         /// <summary>
-        /// AWS_AP_NORTHEAST_2
+        /// AWS Asia Pacific (Seoul)
         /// </summary>
         [EnumMember(Value = "AWS_AP_NORTHEAST_2")]
         AWS_AP_NORTHEAST_2,
         
         /// <summary>
-        /// AWS_AP_SOUTH_1
+        /// AWS Asia Pacific (Mumbai)
         /// </summary>
         [EnumMember(Value = "AWS_AP_SOUTH_1")]
         AWS_AP_SOUTH_1,
         
         /// <summary>
-        /// AWS_SA_EAST_1
+        /// AWS South America (São Paulo)
         /// </summary>
         [EnumMember(Value = "AWS_SA_EAST_1")]
         AWS_SA_EAST_1,
+        
+        /// <summary>
+        /// AWS EU (London)
+        /// </summary>
+        [EnumMember(Value = "AWS_EU_WEST_2")]
+        AWS_EU_WEST_2,
+        
+        /// <summary>
+        /// AWS EU (Paris)
+        /// </summary>
+        [EnumMember(Value = "AWS_EU_WEST_3")]
+        AWS_EU_WEST_3,
+        
+        /// <summary>
+        /// AWS Canada (Central)
+        /// </summary>
+        [EnumMember(Value = "AWS_CA_CENTRAL_1")]
+        AWS_CA_CENTRAL_1,
         
         /// <summary>
         /// Google Council Bluffs, Iowa, USA

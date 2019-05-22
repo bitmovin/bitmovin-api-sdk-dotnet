@@ -16,76 +16,94 @@ namespace Bitmovin.Api.Sdk.Models
     public enum AwsCloudRegion
     {
         /// <summary>
-        /// USEAST1
+        /// US East (N. Virginia)
         /// </summary>
         [EnumMember(Value = "US_EAST_1")]
-        USEAST1,
+        US_EAST_1,
         
         /// <summary>
-        /// USEAST2
+        /// US East (Ohio)
         /// </summary>
         [EnumMember(Value = "US_EAST_2")]
-        USEAST2,
+        US_EAST_2,
         
         /// <summary>
-        /// USWEST1
+        /// US West (N. California)
         /// </summary>
         [EnumMember(Value = "US_WEST_1")]
-        USWEST1,
+        US_WEST_1,
         
         /// <summary>
-        /// USWEST2
+        /// US West (Oregon)
         /// </summary>
         [EnumMember(Value = "US_WEST_2")]
-        USWEST2,
+        US_WEST_2,
         
         /// <summary>
-        /// EUWEST1
+        /// EU (Ireland)
         /// </summary>
         [EnumMember(Value = "EU_WEST_1")]
-        EUWEST1,
+        EU_WEST_1,
         
         /// <summary>
-        /// EUCENTRAL1
+        /// EU (Frankfurt)
         /// </summary>
         [EnumMember(Value = "EU_CENTRAL_1")]
-        EUCENTRAL1,
+        EU_CENTRAL_1,
         
         /// <summary>
-        /// APSOUTHEAST1
+        /// Asia Pacific (Singapore)
         /// </summary>
         [EnumMember(Value = "AP_SOUTHEAST_1")]
-        APSOUTHEAST1,
+        AP_SOUTHEAST_1,
         
         /// <summary>
-        /// APSOUTHEAST2
+        /// Asia Pacific (Sydney)
         /// </summary>
         [EnumMember(Value = "AP_SOUTHEAST_2")]
-        APSOUTHEAST2,
+        AP_SOUTHEAST_2,
         
         /// <summary>
-        /// APNORTHEAST1
+        /// Asia Pacific (Tokyo)
         /// </summary>
         [EnumMember(Value = "AP_NORTHEAST_1")]
-        APNORTHEAST1,
+        AP_NORTHEAST_1,
         
         /// <summary>
-        /// APNORTHEAST2
+        /// Asia Pacific (Seoul)
         /// </summary>
         [EnumMember(Value = "AP_NORTHEAST_2")]
-        APNORTHEAST2,
+        AP_NORTHEAST_2,
         
         /// <summary>
-        /// APSOUTH1
+        /// Asia Pacific (Mumbai)
         /// </summary>
         [EnumMember(Value = "AP_SOUTH_1")]
-        APSOUTH1,
+        AP_SOUTH_1,
         
         /// <summary>
-        /// SAEAST1
+        /// South America (São Paulo)
         /// </summary>
         [EnumMember(Value = "SA_EAST_1")]
-        SAEAST1
+        SA_EAST_1,
+        
+        /// <summary>
+        /// EU (London)
+        /// </summary>
+        [EnumMember(Value = "EU_WEST_2")]
+        EU_WEST_2,
+        
+        /// <summary>
+        /// EU (Paris)
+        /// </summary>
+        [EnumMember(Value = "EU_WEST_3")]
+        EU_WEST_3,
+        
+        /// <summary>
+        /// Canada (Central)
+        /// </summary>
+        [EnumMember(Value = "CA_CENTRAL_1")]
+        CA_CENTRAL_1
         
     }
 

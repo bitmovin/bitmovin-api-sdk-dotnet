@@ -29,9 +29,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Thumbnails.Customdata
         /// <param name="encodingId">Id of the encoding.</param>
         /// <param name="streamId">Id of the stream.</param>
         /// <param name="thumbnailId">Id of the thumbnail.</param>
-        public async Task<Models.CustomData> GetCustomDataAsync(string encodingId, string streamId, string thumbnailId)
+        public async Task<Models.CustomData> GetAsync(string encodingId, string streamId, string thumbnailId)
         {
-            return await _apiClient.GetCustomDataAsync(encodingId, streamId, thumbnailId);
+            return await _apiClient.GetAsync(encodingId, streamId, thumbnailId);
         }
         
         internal interface ICustomdataApiClient
@@ -39,7 +39,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Thumbnails.Customdata
             
             [Get("/encoding/encodings/{encoding_id}/streams/{stream_id}/thumbnails/{thumbnail_id}/customData")]
             [AllowAnyStatusCode]
-            Task<Models.CustomData> GetCustomDataAsync([Path("encoding_id")] string encodingId, [Path("stream_id")] string streamId, [Path("thumbnail_id")] string thumbnailId);
+            Task<Models.CustomData> GetAsync([Path("encoding_id")] string encodingId, [Path("stream_id")] string streamId, [Path("thumbnail_id")] string thumbnailId);
             
         }
         

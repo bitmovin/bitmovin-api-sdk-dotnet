@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using RestEase;
 using Bitmovin.Api.Sdk.Common;
 
-namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Cmaf.Customdata
+namespace Bitmovin.Api.Sdk.Encoding.Filters.EbuR128SinglePass.Customdata
 {
     public class CustomdataApi
     {
@@ -24,21 +24,20 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Cmaf.Customdata
 
         
         /// <summary>
-        /// CMAF muxing custom data
+        /// EBU R128 Single Pass Filter Custom Data
         /// </summary>
-        /// <param name="encodingId">Id of the encoding.</param>
-        /// <param name="muxingId">Id of the CMAF muxing</param>
-        public async Task<Models.CustomData> GetAsync(string encodingId, string muxingId)
+        /// <param name="filterId">Id of the EBU R128 Single Pass filter.</param>
+        public async Task<Models.CustomData> GetAsync(string filterId)
         {
-            return await _apiClient.GetAsync(encodingId, muxingId);
+            return await _apiClient.GetAsync(filterId);
         }
         
         internal interface ICustomdataApiClient
         {
             
-            [Get("/encoding/encodings/{encoding_id}/muxings/cmaf/{muxing_id}/customData")]
+            [Get("/encoding/filters/ebu-r128-single-pass/{filter_id}/customData")]
             [AllowAnyStatusCode]
-            Task<Models.CustomData> GetAsync([Path("encoding_id")] string encodingId, [Path("muxing_id")] string muxingId);
+            Task<Models.CustomData> GetAsync([Path("filter_id")] string filterId);
             
         }
         

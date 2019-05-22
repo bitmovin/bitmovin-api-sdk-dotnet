@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Models
         public string Host { get; set; }
         
         /// <summary>
-        /// The port to connect to or listen on. Has to be 2088 if using LISTENER mode.
+        /// The port to connect to or listen on. Has to be one of [2088, 2089, 2090, 2091] when using LISTENER mode.
         /// </summary>
         [JsonProperty(PropertyName = "port")]
         public int? Port { get; set; }
@@ -57,6 +57,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "keyLength")]
         public int? KeyLength { get; set; }
+        
+        /// <summary>
+        /// BackupSrtInputs
+        /// </summary>
+        [JsonProperty(PropertyName = "backupSrtInputs")]
+        public BackupSrtInputs BackupSrtInputs { get; set; }
     }
 
 }

@@ -51,6 +51,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "unit")]
         public PositionUnit Unit { get; set; }
+        
+        /// <summary>
+        /// Opacity to apply on the watermark image. Valid values are from 0.0 (completely transparent) to 1.0 (not transparent at all)
+        /// </summary>
+        [JsonProperty(PropertyName = "opacity")]
+        public double? Opacity { get; set; }
     }
 
 }

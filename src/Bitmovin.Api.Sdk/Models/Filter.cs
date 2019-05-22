@@ -26,6 +26,7 @@ namespace Bitmovin.Api.Sdk.Models
     [JsonSubtypes.KnownSubType(typeof(ScaleFilter), "SCALE")]
     [JsonSubtypes.KnownSubType(typeof(InterlaceFilter), "INTERLACE")]
     [JsonSubtypes.KnownSubType(typeof(AudioVolumeFilter), "AUDIO_VOLUME")]
+    [JsonSubtypes.KnownSubType(typeof(EbuR128SinglePassFilter), "EBU_R128_SINGLE_PASS")]
 
     public class Filter : BitmovinResource
     {

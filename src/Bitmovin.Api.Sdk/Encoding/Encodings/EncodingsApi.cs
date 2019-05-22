@@ -127,7 +127,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings
         /// </summary>
         /// <param name="encodingId">Id of the encoding</param>
         /// <param name="startEncodingRequest">The request payload</param>
-        public async Task<Models.StartEncodingRequest> StartAsync(string encodingId, Models.StartEncodingRequest startEncodingRequest = null)
+        public async Task<Models.BitmovinResponse> StartAsync(string encodingId, Models.StartEncodingRequest startEncodingRequest = null)
         {
             return await _apiClient.StartAsync(encodingId, startEncodingRequest);
         }
@@ -183,7 +183,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings
             
             [Post("/encoding/encodings/{encoding_id}/start")]
             [AllowAnyStatusCode]
-            Task<Models.StartEncodingRequest> StartAsync([Path("encoding_id")] string encodingId, [Body] Models.StartEncodingRequest startEncodingRequest);
+            Task<Models.BitmovinResponse> StartAsync([Path("encoding_id")] string encodingId, [Body] Models.StartEncodingRequest startEncodingRequest);
             
             [Get("/encoding/encodings/{encoding_id}/status")]
             [AllowAnyStatusCode]

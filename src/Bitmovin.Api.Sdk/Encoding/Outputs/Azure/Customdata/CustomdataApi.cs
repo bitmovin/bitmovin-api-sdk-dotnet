@@ -27,9 +27,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.Azure.Customdata
         /// Azure Output Custom Data
         /// </summary>
         /// <param name="outputId">Id of the output</param>
-        public async Task<Models.CustomData> GetCustomDataAsync(string outputId)
+        public async Task<Models.CustomData> GetAsync(string outputId)
         {
-            return await _apiClient.GetCustomDataAsync(outputId);
+            return await _apiClient.GetAsync(outputId);
         }
         
         internal interface ICustomdataApiClient
@@ -37,7 +37,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.Azure.Customdata
             
             [Get("/encoding/outputs/azure/{output_id}/customData")]
             [AllowAnyStatusCode]
-            Task<Models.CustomData> GetCustomDataAsync([Path("output_id")] string outputId);
+            Task<Models.CustomData> GetAsync([Path("output_id")] string outputId);
             
         }
         

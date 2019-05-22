@@ -35,6 +35,18 @@ namespace Bitmovin.Api.Sdk.Models
         public string EncodingId { get; set; }
         
         /// <summary>
+        /// UUID of the SRT input used to capture this statistics
+        /// </summary>
+        [JsonProperty(PropertyName = "srtInputId")]
+        public string SrtInputId { get; set; }
+        
+        /// <summary>
+        /// Whether the SRT input that generated this statistics was selected (i.e. actively used) at the time or not
+        /// </summary>
+        [JsonProperty(PropertyName = "srtInputSelected")]
+        public bool? SrtInputSelected { get; set; }
+        
+        /// <summary>
         /// UUID of the associated organization
         /// </summary>
         [JsonProperty(PropertyName = "orgId")]
