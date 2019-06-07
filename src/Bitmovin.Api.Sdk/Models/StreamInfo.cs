@@ -93,6 +93,18 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "endSegmentNumber")]
         public long? EndSegmentNumber { get; set; }
+        
+        /// <summary>
+        /// Force the addition of the frame rate attribute to all stream infos.
+        /// </summary>
+        [JsonProperty(PropertyName = "forceFrameRateAttribute")]
+        public bool? ForceFrameRateAttribute { get; set; }
+        
+        /// <summary>
+        /// Force the addition of the video-range attribute to all stream infos.
+        /// </summary>
+        [JsonProperty(PropertyName = "forceVideoRangeAttribute")]
+        public bool? ForceVideoRangeAttribute { get; set; }
     }
 
 }

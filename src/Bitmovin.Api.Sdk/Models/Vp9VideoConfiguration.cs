@@ -35,6 +35,12 @@ namespace Bitmovin.Api.Sdk.Models
         public int? LagInFrames { get; set; }
         
         /// <summary>
+        /// Enables error resiliency feature
+        /// </summary>
+        [JsonProperty(PropertyName = "errorResiliencyEnabled")]
+        public bool? ErrorResiliencyEnabled { get; set; }
+        
+        /// <summary>
         /// Number of tile columns to use, log2.
         /// </summary>
         [JsonProperty(PropertyName = "tileColumns")]
@@ -83,10 +89,52 @@ namespace Bitmovin.Api.Sdk.Models
         public int? RateOvershootPct { get; set; }
         
         /// <summary>
+        /// Client buffer size (ms)
+        /// </summary>
+        [JsonProperty(PropertyName = "clientBufferSize")]
+        public long? ClientBufferSize { get; set; }
+        
+        /// <summary>
+        /// Client initial buffer size (ms)
+        /// </summary>
+        [JsonProperty(PropertyName = "clientInitialBufferSize")]
+        public long? ClientInitialBufferSize { get; set; }
+        
+        /// <summary>
+        /// CBR/VBR bias (0&#x3D;CBR, 100&#x3D;VBR)
+        /// </summary>
+        [JsonProperty(PropertyName = "biasPct")]
+        public int? BiasPct { get; set; }
+        
+        /// <summary>
         /// Enable noise sensitivity on Y channel
         /// </summary>
         [JsonProperty(PropertyName = "noiseSensitivity")]
         public bool? NoiseSensitivity { get; set; }
+        
+        /// <summary>
+        /// Controls the tradeoff between compression efficiency and encoding speed. Higher values indicate a faster encoding.
+        /// </summary>
+        [JsonProperty(PropertyName = "cpuUsed")]
+        public int? CpuUsed { get; set; }
+        
+        /// <summary>
+        /// Enable automatic alternate reference frames (2pass only)
+        /// </summary>
+        [JsonProperty(PropertyName = "automaticAltRefFramesEnabled")]
+        public bool? AutomaticAltRefFramesEnabled { get; set; }
+        
+        /// <summary>
+        /// Target level (255: off, 0: only keep level stats; 10: level 1.0; 11: level 1.1; ... 62: level 6.2)
+        /// </summary>
+        [JsonProperty(PropertyName = "targetLevel")]
+        public int? TargetLevel { get; set; }
+        
+        /// <summary>
+        /// Enable row based non-deterministic multi-threading
+        /// </summary>
+        [JsonProperty(PropertyName = "rowMultiThreadingEnabled")]
+        public bool? RowMultiThreadingEnabled { get; set; }
         
         /// <summary>
         /// Loop filter sharpness.

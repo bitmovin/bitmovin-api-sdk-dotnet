@@ -2,6 +2,7 @@
 using Bitmovin.Api.Sdk.Account;
 using Bitmovin.Api.Sdk.Analytics;
 using Bitmovin.Api.Sdk.Encoding;
+using Bitmovin.Api.Sdk.General;
 using Bitmovin.Api.Sdk.Notifications;
 using Bitmovin.Api.Sdk.Player;
 
@@ -14,6 +15,7 @@ namespace Bitmovin.Api.Sdk
             Account = new AccountApi(apiClientFactory);
             Analytics = new AnalyticsApi(apiClientFactory);
             Encoding = new EncodingApi(apiClientFactory);
+            General = new GeneralApi(apiClientFactory);
             Notifications = new NotificationsApi(apiClientFactory);
             Player = new PlayerApi(apiClientFactory);
         }
@@ -26,6 +28,7 @@ namespace Bitmovin.Api.Sdk
         public AccountApi Account { get; private set; }
         public AnalyticsApi Analytics { get; private set; }
         public EncodingApi Encoding { get; private set; }
+        public GeneralApi General { get; private set; }
         public NotificationsApi Notifications { get; private set; }
         public PlayerApi Player { get; private set; }
 
