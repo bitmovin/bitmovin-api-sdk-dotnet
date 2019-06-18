@@ -50,7 +50,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Additional metadata saved in the input file
         /// </summary>
         [JsonProperty(PropertyName = "tags")]
-        public List<string> Tags { get; set; }
+        public Dictionary<string, Object> Tags { get; set; }
         
         /// <summary>
         /// Video streams in the input file

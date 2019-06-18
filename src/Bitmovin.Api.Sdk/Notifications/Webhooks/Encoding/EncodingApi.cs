@@ -1,5 +1,6 @@
 ﻿using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings;
+using Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Manifest;
 
 namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding
 {
@@ -8,6 +9,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding
         public EncodingApi(IBitmovinApiClientFactory apiClientFactory)
         {
             Encodings = new EncodingsApi(apiClientFactory);
+            Manifest = new ManifestApi(apiClientFactory);
         }
 
         /// <summary>
@@ -16,6 +18,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding
         public static BitmovinApiBuilder<EncodingApi> Builder => new BitmovinApiBuilder<EncodingApi>();
 
         public EncodingsApi Encodings { get; private set; }
+        public ManifestApi Manifest { get; private set; }
 
     }
 }

@@ -26,7 +26,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Bitrate in bps
         /// </summary>
         [JsonProperty(PropertyName = "bitrate")]
-        public long? Bitrate { get; set; }
+        public string Bitrate { get; set; }
         
         /// <summary>
         /// Bitrate in bps
