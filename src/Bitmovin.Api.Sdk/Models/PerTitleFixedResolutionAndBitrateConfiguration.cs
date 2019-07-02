@@ -32,7 +32,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Mode to calculate the bitrate of the next representation
         /// </summary>
         [JsonProperty(PropertyName = "forcedRenditionAboveHighestFixedRepresentationCalculationMode")]
-        public PerTitleFixedResolutionAndBitrateConfigurationMode ForcedRenditionAboveHighestFixedRepresentationCalculationMode { get; set; }
+        public PerTitleFixedResolutionAndBitrateConfigurationMode? ForcedRenditionAboveHighestFixedRepresentationCalculationMode { get; set; }
     }
 
 }

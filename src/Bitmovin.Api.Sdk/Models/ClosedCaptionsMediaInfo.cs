@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class ClosedCaptionsMediaInfo : SegmentsMediaInfo
     {
         /// <summary>
-        /// Specifies a Rendition within the segments in the Media Playlist. (See HLS spec 4.3.4.1. EXT-X-MEDIA INSTREAM-ID)
+        /// Specifies a Rendition within the segments in the Media Playlist. (See HLS spec 4.3.4.1. EXT-X-MEDIA INSTREAM-ID) (required)
         /// </summary>
         [JsonProperty(PropertyName = "instreamId")]
         public string InstreamId { get; set; }

@@ -8,7 +8,10 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Type;
 using Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.AudioMix;
 using Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Ingest;
 using Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Concatenation;
+using Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.File;
 using Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Trimming;
+using Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Subtitles;
+using Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Captions;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams
 {
@@ -24,7 +27,10 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams
             AudioMix = new AudioMixApi(apiClientFactory);
             Ingest = new IngestApi(apiClientFactory);
             Concatenation = new ConcatenationApi(apiClientFactory);
+            File = new FileApi(apiClientFactory);
             Trimming = new TrimmingApi(apiClientFactory);
+            Subtitles = new SubtitlesApi(apiClientFactory);
+            Captions = new CaptionsApi(apiClientFactory);
         }
 
         /// <summary>
@@ -36,7 +42,10 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams
         public AudioMixApi AudioMix { get; private set; }
         public IngestApi Ingest { get; private set; }
         public ConcatenationApi Concatenation { get; private set; }
+        public FileApi File { get; private set; }
         public TrimmingApi Trimming { get; private set; }
+        public SubtitlesApi Subtitles { get; private set; }
+        public CaptionsApi Captions { get; private set; }
         
         /// <summary>
         /// Input Stream Details

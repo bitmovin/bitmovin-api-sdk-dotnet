@@ -185,7 +185,7 @@ namespace Bitmovin.Api.Sdk.Models
         public string ExperimentName { get; set; }
         
         /// <summary>
-        /// Random UUID that is used to identify a sessions
+        /// Random UUID that is used to identify a sessions (required)
         /// </summary>
         [JsonProperty(PropertyName = "impressionId")]
         public string ImpressionId { get; set; }

@@ -20,7 +20,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Use a set of well defined configurations preset to support certain use cases. Can be overwritten with more specific values.
         /// </summary>
         [JsonProperty(PropertyName = "presetConfiguration")]
-        public PresetConfiguration PresetConfiguration { get; set; }
+        public PresetConfiguration? PresetConfiguration { get; set; }
         
         /// <summary>
         /// Sets the constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.
@@ -32,7 +32,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Profile
         /// </summary>
         [JsonProperty(PropertyName = "profile")]
-        public ProfileH264 Profile { get; set; }
+        public ProfileH264? Profile { get; set; }
         
         /// <summary>
         /// Sets the amount of b frames.
@@ -62,7 +62,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// MvPredictionMode
         /// </summary>
         [JsonProperty(PropertyName = "mvPredictionMode")]
-        public MvPredictionMode MvPredictionMode { get; set; }
+        public MvPredictionMode? MvPredictionMode { get; set; }
         
         /// <summary>
         /// Sets the maximum Motion-Vector-Search-Range
@@ -128,19 +128,19 @@ namespace Bitmovin.Api.Sdk.Models
         /// Level
         /// </summary>
         [JsonProperty(PropertyName = "level")]
-        public LevelH264 Level { get; set; }
+        public LevelH264? Level { get; set; }
         
         /// <summary>
         /// BAdaptiveStrategy
         /// </summary>
         [JsonProperty(PropertyName = "bAdaptiveStrategy")]
-        public BAdapt BAdaptiveStrategy { get; set; }
+        public BAdapt? BAdaptiveStrategy { get; set; }
         
         /// <summary>
         /// MotionEstimationMethod
         /// </summary>
         [JsonProperty(PropertyName = "motionEstimationMethod")]
-        public H264MotionEstimationMethod MotionEstimationMethod { get; set; }
+        public H264MotionEstimationMethod? MotionEstimationMethod { get; set; }
         
         /// <summary>
         /// Number of frames for frame-type decision lookahead
@@ -152,19 +152,19 @@ namespace Bitmovin.Api.Sdk.Models
         /// Subpixel motion estimation and mode decision
         /// </summary>
         [JsonProperty(PropertyName = "subMe")]
-        public H264SubMe SubMe { get; set; }
+        public H264SubMe? SubMe { get; set; }
         
         /// <summary>
         /// Enables or disables Trellis quantization. NOTE: This requires cabac
         /// </summary>
         [JsonProperty(PropertyName = "trellis")]
-        public H264Trellis Trellis { get; set; }
+        public H264Trellis? Trellis { get; set; }
         
         /// <summary>
         /// Partitions to consider. Analyzing more partition options improves quality at the cost of speed.
         /// </summary>
         [JsonProperty(PropertyName = "partitions")]
-        public List<H264Partition> Partitions { get; set; }
+        public List<H264Partition> Partitions { get; set; } = new List<H264Partition>();
         
         /// <summary>
         /// Number of slices per frame.
@@ -176,7 +176,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Using TOP_FIELD_FIRST or BOTTOM_FIELD_FIRST will output interlaced video
         /// </summary>
         [JsonProperty(PropertyName = "interlaceMode")]
-        public H264InterlaceMode InterlaceMode { get; set; }
+        public H264InterlaceMode? InterlaceMode { get; set; }
         
         /// <summary>
         /// Scene change sensitivity. The higher the value, the more likely an I-frame will be inserted. Set to 0 to disable it which is advised for scenarios where fixed GOP is required, e.g., adaptive streaming outputs like DASH, HLS and Smooth. Having this setting enabled can improve quality for progressive output with an increased internal chunk length (see &#x60;internalChunkLength&#x60; of muxings).
@@ -188,13 +188,13 @@ namespace Bitmovin.Api.Sdk.Models
         /// Signal hypothetical reference decoder (HRD) information (requires bufsize to be set)
         /// </summary>
         [JsonProperty(PropertyName = "nalHrd")]
-        public H264NalHrd NalHrd { get; set; }
+        public H264NalHrd? NalHrd { get; set; }
         
         /// <summary>
         /// Keep some B-frames as references
         /// </summary>
         [JsonProperty(PropertyName = "bPyramid")]
-        public H264BPyramid BPyramid { get; set; }
+        public H264BPyramid? BPyramid { get; set; }
         
         /// <summary>
         /// Defines whether CEA 608/708 subtitles are copied from the input video stream
@@ -218,7 +218,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Controls the adaptive quantization algorithm
         /// </summary>
         [JsonProperty(PropertyName = "adaptiveQuantizationMode")]
-        public AdaptiveQuantMode AdaptiveQuantizationMode { get; set; }
+        public AdaptiveQuantMode? AdaptiveQuantizationMode { get; set; }
         
         /// <summary>
         /// Values greater than 1 reduce blocking and blurring in flat and textured areas. Values less than 1 reduces ringing artifacts at the cost of more banding artifacts. Negative values are not allowed
@@ -254,7 +254,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Defines the mode for weighted prediction for P-frames
         /// </summary>
         [JsonProperty(PropertyName = "weightedPredictionPFrames")]
-        public WeightedPredictionPFrames WeightedPredictionPFrames { get; set; }
+        public WeightedPredictionPFrames? WeightedPredictionPFrames { get; set; }
         
         /// <summary>
         /// Enable macroblock tree ratecontrol. Macroblock tree rate control tracks how often blocks of the frame are used for prediciting future frames

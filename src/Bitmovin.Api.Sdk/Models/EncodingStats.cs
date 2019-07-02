@@ -23,7 +23,7 @@ namespace Bitmovin.Api.Sdk.Models
         public DateTime? Date { get; set; }
         
         /// <summary>
-        /// The id of the encoding
+        /// The id of the encoding (required)
         /// </summary>
         [JsonProperty(PropertyName = "encodingId")]
         public string EncodingId { get; set; }
@@ -56,10 +56,10 @@ namespace Bitmovin.Api.Sdk.Models
         /// Detailed statistics per stream
         /// </summary>
         [JsonProperty(PropertyName = "billableEncodingMinutes")]
-        public List<BillableEncodingMinutes> BillableEncodingMinutes { get; set; }
+        public List<BillableEncodingMinutes> BillableEncodingMinutes { get; set; } = new List<BillableEncodingMinutes>();
         
         /// <summary>
-        /// Billable transmuxing minutes
+        /// Billable transmuxing minutes (required)
         /// </summary>
         [JsonProperty(PropertyName = "billableTransmuxingMinutes")]
         public double? BillableTransmuxingMinutes { get; set; }
@@ -71,22 +71,22 @@ namespace Bitmovin.Api.Sdk.Models
         public double? BillableFeatureMinutes { get; set; }
         
         /// <summary>
-        /// Detailed statistics per stream
+        /// Detailed statistics per stream (required)
         /// </summary>
         [JsonProperty(PropertyName = "streams")]
-        public List<StatisticsPerStream> Streams { get; set; }
+        public List<StatisticsPerStream> Streams { get; set; } = new List<StatisticsPerStream>();
         
         /// <summary>
-        /// Detailed statistics per muxing
+        /// Detailed statistics per muxing (required)
         /// </summary>
         [JsonProperty(PropertyName = "muxings")]
-        public List<StatisticsPerMuxing> Muxings { get; set; }
+        public List<StatisticsPerMuxing> Muxings { get; set; } = new List<StatisticsPerMuxing>();
         
         /// <summary>
         /// Detailed statistics per feature
         /// </summary>
         [JsonProperty(PropertyName = "features")]
-        public List<BillableEncodingFeatureMinutes> Features { get; set; }
+        public List<BillableEncodingFeatureMinutes> Features { get; set; } = new List<BillableEncodingFeatureMinutes>();
     }
 
 }

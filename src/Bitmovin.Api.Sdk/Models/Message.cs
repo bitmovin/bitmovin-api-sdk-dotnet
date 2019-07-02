@@ -17,13 +17,13 @@ namespace Bitmovin.Api.Sdk.Models
     public class Message : BitmovinResponse
     {
         /// <summary>
-        /// Message type giving a hint on the importance of the message (log level)
+        /// Message type giving a hint on the importance of the message (log level) (required)
         /// </summary>
         [JsonProperty(PropertyName = "type")]
-        public MessageType Type { get; set; }
+        public MessageType? Type { get; set; }
         
         /// <summary>
-        /// Message text
+        /// Message text (required)
         /// </summary>
         [JsonProperty(PropertyName = "text")]
         public string Text { get; set; }
@@ -38,7 +38,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// collection of links to webpages containing further information on the topic
         /// </summary>
         [JsonProperty(PropertyName = "links")]
-        public List<Link> Links { get; set; }
+        public List<Link> Links { get; set; } = new List<Link>();
         
         /// <summary>
         /// Service-specific information

@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class TsMuxing : Muxing
     {
         /// <summary>
-        /// Length of the fragments in seconds
+        /// Length of the fragments in seconds (required)
         /// </summary>
         [JsonProperty(PropertyName = "segmentLength")]
         public double? SegmentLength { get; set; }
@@ -45,6 +45,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "segmentsMuxed")]
         public int? SegmentsMuxed { get; internal set; }
+        
+        /// <summary>
+        /// Advanced Configuration of the MPEG Transport Stream Parameters
+        /// </summary>
+        [JsonProperty(PropertyName = "configuration")]
+        public TsMuxingConfiguration Configuration { get; set; }
     }
 
 }

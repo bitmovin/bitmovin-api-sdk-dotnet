@@ -17,28 +17,28 @@ namespace Bitmovin.Api.Sdk.Models
     public class ErrorDetails
     {
         /// <summary>
-        /// Specific error code
+        /// Specific error code (required)
         /// </summary>
         [JsonProperty(PropertyName = "code")]
         public int? Code { get; set; }
         
         /// <summary>
-        /// Error group name
+        /// Error group name (required)
         /// </summary>
         [JsonProperty(PropertyName = "category")]
         public string Category { get; set; }
         
         /// <summary>
-        /// Detailed error message
+        /// Detailed error message (required)
         /// </summary>
         [JsonProperty(PropertyName = "text")]
         public string Text { get; set; }
         
         /// <summary>
-        /// Information if the encoding could potentially succeed when retrying.
+        /// Information if the encoding could potentially succeed when retrying. (required)
         /// </summary>
         [JsonProperty(PropertyName = "retryHint")]
-        public RetryHint RetryHint { get; set; }
+        public RetryHint? RetryHint { get; set; }
     }
 
 }

@@ -68,7 +68,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// NoiseSensitivity
         /// </summary>
         [JsonProperty(PropertyName = "noiseSensitivity")]
-        public Vp8NoiseSensitivity NoiseSensitivity { get; set; }
+        public Vp8NoiseSensitivity? NoiseSensitivity { get; set; }
         
         /// <summary>
         /// Loop filter sharpness.
@@ -104,7 +104,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Quality
         /// </summary>
         [JsonProperty(PropertyName = "quality")]
-        public Vp8Quality Quality { get; set; }
+        public Vp8Quality? Quality { get; set; }
         
         /// <summary>
         /// A change threshold on blocks below which they will be skipped by the encoder.
@@ -128,7 +128,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// ArnrType
         /// </summary>
         [JsonProperty(PropertyName = "arnrType")]
-        public Vp8ArnrType ArnrType { get; set; }
+        public Vp8ArnrType? ArnrType { get; set; }
     }
 
 }

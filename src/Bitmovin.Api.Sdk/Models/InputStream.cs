@@ -20,6 +20,7 @@ namespace Bitmovin.Api.Sdk.Models
     [JsonSubtypes.KnownSubType(typeof(TimecodeTrackTrimmingInputStream), "TRIMMING_TIME_CODE_TRACK")]
     [JsonSubtypes.KnownSubType(typeof(H264PictureTimingTrimmingInputStream), "TRIMMING_H264_PICTURE_TIMING")]
     [JsonSubtypes.KnownSubType(typeof(AudioMixInputStream), "AUDIO_MIX")]
+    [JsonSubtypes.KnownSubType(typeof(FileInputStream), "FILE")]
 
     public class InputStream : BitmovinResource
     {

@@ -41,25 +41,25 @@ namespace Bitmovin.Api.Sdk.Models
         public string Subtitles { get; set; }
         
         /// <summary>
-        /// If the value is not &#39;NONE&#39;, it MUST match the value of the GROUP-ID attribute of a Closed Captions EXT-X-MEDIA tag elsewhere in the Playlist
+        /// If the value is not &#39;NONE&#39;, it MUST match the value of the GROUP-ID attribute of a Closed Captions EXT-X-MEDIA tag elsewhere in the Playlist (required)
         /// </summary>
         [JsonProperty(PropertyName = "closedCaptions")]
         public string ClosedCaptions { get; set; }
         
         /// <summary>
-        /// Id of the encoding.
+        /// Id of the encoding. (required)
         /// </summary>
         [JsonProperty(PropertyName = "encodingId")]
         public string EncodingId { get; set; }
         
         /// <summary>
-        /// Id of the stream.
+        /// Id of the stream. (required)
         /// </summary>
         [JsonProperty(PropertyName = "streamId")]
         public string StreamId { get; set; }
         
         /// <summary>
-        /// Id of the muxing.
+        /// Id of the muxing. (required)
         /// </summary>
         [JsonProperty(PropertyName = "muxingId")]
         public string MuxingId { get; set; }
@@ -71,13 +71,13 @@ namespace Bitmovin.Api.Sdk.Models
         public string DrmId { get; set; }
         
         /// <summary>
-        /// Path to segments.
+        /// Path to segments. (required)
         /// </summary>
         [JsonProperty(PropertyName = "segmentPath")]
         public string SegmentPath { get; set; }
         
         /// <summary>
-        /// The URI of the playlist file.
+        /// The URI of the playlist file. (required)
         /// </summary>
         [JsonProperty(PropertyName = "uri")]
         public string Uri { get; set; }

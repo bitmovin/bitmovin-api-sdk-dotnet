@@ -1,12 +1,11 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
-using System.Threading;
-using System.Threading.Tasks;
+using Bitmovin.Api.Sdk.Common.Http;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Serialization;
 using RestEase;
-
 using Bitmovin.Api.Sdk.Common.Logging;
 
 namespace Bitmovin.Api.Sdk.Common
@@ -17,6 +16,7 @@ namespace Bitmovin.Api.Sdk.Common
         protected readonly string TenantOrgId;
         protected readonly RestClient RestClient;
         protected readonly IBitmovinApiLogger Logger;
+        protected readonly JsonSerializerSettings JsonSettings;
 
         protected internal BitmovinApiClientFactory(
             string apiKey,
@@ -31,67 +31,97 @@ namespace Bitmovin.Api.Sdk.Common
 
             ApiKey = apiKey;
             TenantOrgId = tenantOrgId;
-            Logger = logger ?? new NullLogger();
+            Logger = logger;
 
             if (string.IsNullOrEmpty(baseUrl))
             {
                 baseUrl = "https://api.bitmovin.com/v1";
             }
 
-            var jsonSettings = CreateJsonSettings();
-
-            RestClient = new RestClient(baseUrl, CreateRequestModifier)
-            {
-                RequestBodySerializer = CreateRequestBodySerializer(jsonSettings, logger),
-                ResponseDeserializer = CreateResponseDeserializer(jsonSettings, logger)
-            };
-        }
-
-        protected virtual JsonSerializerSettings CreateJsonSettings()
-        {
-            return new JsonSerializerSettings
-            {
-                ContractResolver = new CamelCasePropertyNamesContractResolver(),
-                Converters = {new StringEnumConverter()},
-                NullValueHandling = NullValueHandling.Ignore
-            };
-        }
-
-        protected virtual JsonRequestBodySerializer CreateRequestBodySerializer(
-            JsonSerializerSettings jsonSettings,
-            IBitmovinApiLogger logger)
-        {
-            return new JsonRequestBodySerializer {JsonSerializerSettings = jsonSettings};
-        }
-
-        protected virtual BitmovinResponseDeserializer CreateResponseDeserializer(
-            JsonSerializerSettings jsonSettings,
-            IBitmovinApiLogger logger)
-        {
-            return new BitmovinResponseDeserializer(jsonSettings, logger);
-        }
-
-        protected virtual async Task CreateRequestModifier(HttpRequestMessage request, CancellationToken cancellationToken)
-        {
-            request.Headers.Add("X-Api-Client", "bitmovin-api-sdk-dotnet");
-            request.Headers.Add("X-Api-Client-Version", "1.17.2-alpha.0");
-
-            if (!string.IsNullOrEmpty(ApiKey))
-            {
-                request.Headers.Add("X-Api-Key", ApiKey);
-            }
-
-            if (!string.IsNullOrEmpty(TenantOrgId))
-            {
-                request.Headers.Add("X-Tenant-Org-Id", TenantOrgId);
-            }
-
-            await Logger.LogRequest(request);
+            JsonSettings = CreateJsonSettings();
+            RestClient = CreateRestClient(baseUrl);
         }
 
         public virtual T CreateClient<T>()
         {
             return RestClient.For<T>();
+        }
+
+        protected virtual HttpClient CreateHttpClient(string baseUrl)
+        {
+            HttpMessageHandler nextHandler = new HttpClientHandler();
+
+            foreach (var handler in CreateHttpMessageHandlers().Reverse())
+            {
+                handler.InnerHandler = nextHandler;
+                nextHandler = handler;
+            }
+
+            return new HttpClient(nextHandler)
+            {
+                BaseAddress = new Uri(baseUrl),
+            };
+        }
+
+        protected virtual IEnumerable<DelegatingHandler> CreateHttpMessageHandlers()
+        {
+            yield return new HeadersHandler(GetHeaders());
+            yield return new ErrorHandler(JsonSettings);
+
+            if (Logger != null)
+            {
+                yield return new LoggingHandler(Logger);
+            }
+        }
+
+        protected virtual JsonRequestBodySerializer CreateRequestBodySerializer()
+        {
+            return new JsonRequestBodySerializer {JsonSerializerSettings = JsonSettings};
+        }
+
+        protected virtual BitmovinResponseDeserializer CreateResponseDeserializer()
+        {
+            return new BitmovinResponseDeserializer(JsonSettings);
+        }
+
+        protected virtual Dictionary<string, string> GetHeaders()
+        {
+            var headers = new Dictionary<string, string>
+            {
+                {"X-Api-Client", "bitmovin-api-sdk-dotnet"},
+                {"X-Api-Client-Version", "1.18.0-alpha.0"}
+            };
+
+            if (!string.IsNullOrEmpty(ApiKey))
+            {
+                headers.Add("X-Api-Key", ApiKey);
+            }
+
+            if (!string.IsNullOrEmpty(TenantOrgId))
+            {
+                headers.Add("X-Tenant-Org-Id", TenantOrgId);
+            }
+
+            return headers;
+        }
+
+        private JsonSerializerSettings CreateJsonSettings()
+        {
+            return new JsonSerializerSettings
+            {
+                ContractResolver = new EmptyCollectionContractResolver(),
+                Converters = {new StringEnumConverter()},
+                NullValueHandling = NullValueHandling.Ignore
+            };
+        }
+
+        private RestClient CreateRestClient(string baseUrl)
+        {
+            return new RestClient(CreateHttpClient(baseUrl))
+            {
+                RequestBodySerializer = CreateRequestBodySerializer(),
+                ResponseDeserializer = CreateResponseDeserializer()
+            };
         }
     }
 }

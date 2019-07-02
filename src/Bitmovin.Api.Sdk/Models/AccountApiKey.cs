@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class AccountApiKey : BitmovinResource
     {
         /// <summary>
-        /// Key value for authentication with the Bitmovin API
+        /// Key value for authentication with the Bitmovin API (required)
         /// </summary>
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }

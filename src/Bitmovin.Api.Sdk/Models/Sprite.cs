@@ -17,13 +17,13 @@ namespace Bitmovin.Api.Sdk.Models
     public class Sprite : BitmovinResource
     {
         /// <summary>
-        /// Height of one thumbnail
+        /// Height of one thumbnail (required)
         /// </summary>
         [JsonProperty(PropertyName = "height")]
         public int? Height { get; set; }
         
         /// <summary>
-        /// Width of one thumbnail
+        /// Width of one thumbnail (required)
         /// </summary>
         [JsonProperty(PropertyName = "width")]
         public int? Width { get; set; }
@@ -32,7 +32,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Unit
         /// </summary>
         [JsonProperty(PropertyName = "unit")]
-        public SpriteUnit Unit { get; set; }
+        public SpriteUnit? Unit { get; set; }
         
         /// <summary>
         /// Distance in the given unit between a screenshot
@@ -41,7 +41,7 @@ namespace Bitmovin.Api.Sdk.Models
         public double? Distance { get; set; }
         
         /// <summary>
-        /// Name of the sprite image. File extension \&quot;.jpg\&quot; or \&quot;.png\&quot; is required.
+        /// Name of the sprite image. File extension \&quot;.jpg\&quot; or \&quot;.png\&quot; is required. (required)
         /// </summary>
         [JsonProperty(PropertyName = "spriteName")]
         public string SpriteName { get; set; }
@@ -53,7 +53,7 @@ namespace Bitmovin.Api.Sdk.Models
         public string Filename { get; set; }
         
         /// <summary>
-        /// Filename of the vtt-file. The file-extension \&quot;.vtt\&quot; is required.
+        /// Filename of the vtt-file. The file-extension \&quot;.vtt\&quot; is required. (required)
         /// </summary>
         [JsonProperty(PropertyName = "vttName")]
         public string VttName { get; set; }
@@ -62,7 +62,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Outputs
         /// </summary>
         [JsonProperty(PropertyName = "outputs")]
-        public List<EncodingOutput> Outputs { get; set; }
+        public List<EncodingOutput> Outputs { get; set; } = new List<EncodingOutput>();
         
         /// <summary>
         /// Number of images per file. If more images are generated than specified in this value, multiple sprites will be created. You can use the placeholder &#39;%number%&#39; in the spriteName to specify the naming policy.

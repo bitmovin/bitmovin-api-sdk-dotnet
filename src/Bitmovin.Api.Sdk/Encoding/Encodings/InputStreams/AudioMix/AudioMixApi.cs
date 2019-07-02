@@ -47,7 +47,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.AudioMix
         /// Audio mix input stream details
         /// </summary>
         /// <param name="encodingId">Id of the encoding.</param>
-        /// <param name="inputStreamId">Id of the concatenation input stream.</param>
+        /// <param name="inputStreamId">Id of the audio mix input stream.</param>
         public async Task<Models.AudioMixInputStream> GetAsync(string encodingId, string inputStreamId)
         {
             return await _apiClient.GetAsync(encodingId, inputStreamId);

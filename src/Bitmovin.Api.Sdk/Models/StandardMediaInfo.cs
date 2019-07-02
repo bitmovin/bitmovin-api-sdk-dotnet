@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class StandardMediaInfo : SegmentsMediaInfo
     {
         /// <summary>
-        /// The URI of the Rendition
+        /// The URI of the Rendition (required)
         /// </summary>
         [JsonProperty(PropertyName = "uri")]
         public string Uri { get; set; }

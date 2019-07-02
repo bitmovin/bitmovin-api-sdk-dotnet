@@ -17,13 +17,13 @@ namespace Bitmovin.Api.Sdk.Models
     public class FrameIdId3Tag : Id3Tag
     {
         /// <summary>
-        /// Base64 Encoded Data
+        /// Base64 Encoded Data (required)
         /// </summary>
         [JsonProperty(PropertyName = "bytes")]
         public string Bytes { get; set; }
         
         /// <summary>
-        /// 4 character long Frame ID
+        /// 4 character long Frame ID (required)
         /// </summary>
         [JsonProperty(PropertyName = "frameId")]
         public string FrameId { get; set; }

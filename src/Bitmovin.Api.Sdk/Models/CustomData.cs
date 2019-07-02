@@ -20,7 +20,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// User-specific meta data. This can hold a custom JSON object.
         /// </summary>
         [JsonProperty(PropertyName = "customData")]
-        public Dictionary<string, Object> _CustomData { get; set; }
+        public Dictionary<string, Object> _CustomData { get; set; } = new Dictionary<string, Object>();
         
         /// <summary>
         /// Creation timestamp formatted in UTC: YYYY-MM-DDThh:mm:ssZ

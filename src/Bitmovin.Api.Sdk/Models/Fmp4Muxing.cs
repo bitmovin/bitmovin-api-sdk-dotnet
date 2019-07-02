@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class Fmp4Muxing : Muxing
     {
         /// <summary>
-        /// Length of the fragments in seconds
+        /// Length of the fragments in seconds (required)
         /// </summary>
         [JsonProperty(PropertyName = "segmentLength")]
         public double? SegmentLength { get; set; }

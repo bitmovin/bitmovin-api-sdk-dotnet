@@ -17,19 +17,19 @@ namespace Bitmovin.Api.Sdk.Models
     public class AkamaiNetStorageOutput : Output
     {
         /// <summary>
-        /// Host to use for Akamai NetStorage transfers
+        /// Host to use for Akamai NetStorage transfers (required)
         /// </summary>
         [JsonProperty(PropertyName = "host")]
         public string Host { get; set; }
         
         /// <summary>
-        /// Your Akamai NetStorage Username
+        /// Your Akamai NetStorage Username (required)
         /// </summary>
         [JsonProperty(PropertyName = "username")]
         public string Username { get; set; }
         
         /// <summary>
-        /// Your Akamai NetStorage password
+        /// Your Akamai NetStorage password (required)
         /// </summary>
         [JsonProperty(PropertyName = "password")]
         public string Password { get; set; }

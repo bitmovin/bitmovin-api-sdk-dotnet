@@ -50,31 +50,31 @@ namespace Bitmovin.Api.Sdk.Models
         /// Additional metadata saved in the input file
         /// </summary>
         [JsonProperty(PropertyName = "tags")]
-        public Dictionary<string, Object> Tags { get; set; }
+        public Dictionary<string, Object> Tags { get; set; } = new Dictionary<string, Object>();
         
         /// <summary>
         /// Video streams in the input file
         /// </summary>
         [JsonProperty(PropertyName = "videoStreams")]
-        public List<VideoStream> VideoStreams { get; internal set; }
+        public List<VideoStream> VideoStreams { get; internal set; } = new List<VideoStream>();
         
         /// <summary>
         /// Audio stream in the input file
         /// </summary>
         [JsonProperty(PropertyName = "audioStreams")]
-        public List<AudioStream> AudioStreams { get; internal set; }
+        public List<AudioStream> AudioStreams { get; internal set; } = new List<AudioStream>();
         
         /// <summary>
         /// Meta data streams in the input file
         /// </summary>
         [JsonProperty(PropertyName = "metaStreams")]
-        public List<MediaStream> MetaStreams { get; internal set; }
+        public List<MediaStream> MetaStreams { get; internal set; } = new List<MediaStream>();
         
         /// <summary>
         /// Subtitle streams in the input file
         /// </summary>
         [JsonProperty(PropertyName = "subtitleStreams")]
-        public List<SubtitleStream> SubtitleStreams { get; internal set; }
+        public List<SubtitleStream> SubtitleStreams { get; internal set; } = new List<SubtitleStream>();
     }
 
 }

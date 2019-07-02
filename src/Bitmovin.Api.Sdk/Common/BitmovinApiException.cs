@@ -6,17 +6,22 @@ namespace Bitmovin.Api.Sdk.Common
 {
     public class BitmovinApiException : Exception
     {
-        public BitmovinApiException(HttpStatusCode httpStatusCode, ResponseError responseError)
+        public BitmovinApiException(
+            string message,
+            HttpStatusCode httpStatusCode,
+            ResponseError responseError = null,
+            Exception innerException = null)
+            : base(message, innerException)
         {
             HttpStatusCode = httpStatusCode;
-            RequestId = responseError.RequestId;
-            Status = responseError.Status;
-            ErrorData = responseError.Data;
+            RequestId = responseError?.RequestId;
+            Status = responseError?.Status ?? ResponseStatus.ERROR;
+            ErrorData = responseError?.Data;
         }
-        
+
         public HttpStatusCode HttpStatusCode { get; }
         public string RequestId { get; }
-        public ResponseStatus Status { get; }
+        public ResponseStatus? Status { get; }
         public ResponseErrorData ErrorData { get; }
     }
 }

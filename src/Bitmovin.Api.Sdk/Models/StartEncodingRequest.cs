@@ -44,31 +44,31 @@ namespace Bitmovin.Api.Sdk.Models
         /// The pass mode of the encoding
         /// </summary>
         [JsonProperty(PropertyName = "encodingMode")]
-        public EncodingMode EncodingMode { get; set; }
+        public EncodingMode? EncodingMode { get; set; }
         
         /// <summary>
         /// List of preview DASH manifests to be created
         /// </summary>
         [JsonProperty(PropertyName = "previewDashManifests")]
-        public List<ManifestResource> PreviewDashManifests { get; set; }
+        public List<ManifestResource> PreviewDashManifests { get; set; } = new List<ManifestResource>();
         
         /// <summary>
         /// List of preview HLS manifests to be created
         /// </summary>
         [JsonProperty(PropertyName = "previewHlsManifests")]
-        public List<ManifestResource> PreviewHlsManifests { get; set; }
+        public List<ManifestResource> PreviewHlsManifests { get; set; } = new List<ManifestResource>();
         
         /// <summary>
         /// List of VoD DASH manifests to be created after encoding finished successfully
         /// </summary>
         [JsonProperty(PropertyName = "vodDashManifests")]
-        public List<ManifestResource> VodDashManifests { get; set; }
+        public List<ManifestResource> VodDashManifests { get; set; } = new List<ManifestResource>();
         
         /// <summary>
         /// List of VoD HLS manifests to be created after encoding finished successfully
         /// </summary>
         [JsonProperty(PropertyName = "vodHlsManifests")]
-        public List<ManifestResource> VodHlsManifests { get; set; }
+        public List<ManifestResource> VodHlsManifests { get; set; } = new List<ManifestResource>();
         
         /// <summary>
         /// Per-Title settings

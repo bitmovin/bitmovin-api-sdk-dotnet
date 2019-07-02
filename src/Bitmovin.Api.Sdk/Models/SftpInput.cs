@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class SftpInput : Input
     {
         /// <summary>
-        /// Host Url or IP of the SFTP server
+        /// Host Url or IP of the SFTP server (required)
         /// </summary>
         [JsonProperty(PropertyName = "host")]
         public string Host { get; set; }

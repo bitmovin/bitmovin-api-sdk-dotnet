@@ -17,13 +17,13 @@ namespace Bitmovin.Api.Sdk.Models
     public class KubernetesCluster : BitmovinResource
     {
         /// <summary>
-        /// Shows if the Bitmovin Agent is alive
+        /// Shows if the Bitmovin Agent is alive (required)
         /// </summary>
         [JsonProperty(PropertyName = "online")]
         public bool? Online { get; internal set; }
         
         /// <summary>
-        /// Shows if the Kubernetes cluster is accessible by the Bitmovin Agent
+        /// Shows if the Kubernetes cluster is accessible by the Bitmovin Agent (required)
         /// </summary>
         [JsonProperty(PropertyName = "connected")]
         public bool? Connected { get; internal set; }

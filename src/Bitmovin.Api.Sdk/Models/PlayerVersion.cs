@@ -17,25 +17,25 @@ namespace Bitmovin.Api.Sdk.Models
     public class PlayerVersion : BitmovinResponse
     {
         /// <summary>
-        /// Version of the Player
+        /// Version of the Player (required)
         /// </summary>
         [JsonProperty(PropertyName = "version")]
         public string Version { get; internal set; }
         
         /// <summary>
-        /// URL of the specified player
+        /// URL of the specified player (required)
         /// </summary>
         [JsonProperty(PropertyName = "cdnUrl")]
         public string CdnUrl { get; internal set; }
         
         /// <summary>
-        /// Download URL of the specified player package
+        /// Download URL of the specified player package (required)
         /// </summary>
         [JsonProperty(PropertyName = "downloadUrl")]
         public string DownloadUrl { get; internal set; }
         
         /// <summary>
-        /// Creation timestamp formatted in UTC: YYYY-MM-DDThh:mm:ssZ
+        /// Creation timestamp formatted in UTC: YYYY-MM-DDThh:mm:ssZ (required)
         /// </summary>
         [JsonProperty(PropertyName = "createdAt")]
         public DateTime? CreatedAt { get; internal set; }

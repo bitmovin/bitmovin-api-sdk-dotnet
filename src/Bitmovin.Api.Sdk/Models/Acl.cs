@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class Acl : BitmovinResource
     {
         /// <summary>
-        /// Resource to define the permission for.
+        /// Resource to define the permission for. (required)
         /// </summary>
         [JsonProperty(PropertyName = "resource")]
         public string Resource { get; set; }
@@ -26,13 +26,13 @@ namespace Bitmovin.Api.Sdk.Models
         /// Policy
         /// </summary>
         [JsonProperty(PropertyName = "policy")]
-        public Policy Policy { get; set; }
+        public Policy? Policy { get; set; }
         
         /// <summary>
-        /// Permissions to assign.
+        /// Permissions to assign. (required)
         /// </summary>
         [JsonProperty(PropertyName = "permissions")]
-        public List<Permission> Permissions { get; set; }
+        public List<Permission> Permissions { get; set; } = new List<Permission>();
     }
 
 }

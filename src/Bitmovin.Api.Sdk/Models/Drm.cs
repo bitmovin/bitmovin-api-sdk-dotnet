@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Outputs
         /// </summary>
         [JsonProperty(PropertyName = "outputs")]
-        public List<EncodingOutput> Outputs { get; set; }
+        public List<EncodingOutput> Outputs { get; set; } = new List<EncodingOutput>();
     }
 
 }

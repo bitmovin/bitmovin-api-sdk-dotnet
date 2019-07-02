@@ -26,7 +26,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// CloudRegion
         /// </summary>
         [JsonProperty(PropertyName = "cloudRegion")]
-        public CloudRegion CloudRegion { get; set; }
+        public CloudRegion? CloudRegion { get; set; }
     }
 
 }

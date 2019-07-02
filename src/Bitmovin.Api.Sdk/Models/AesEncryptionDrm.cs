@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class AesEncryptionDrm : Drm
     {
         /// <summary>
-        /// 16 byte Encryption key, 32 hexadecimal characters
+        /// 16 byte Encryption key, 32 hexadecimal characters (required)
         /// </summary>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
@@ -38,7 +38,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Method
         /// </summary>
         [JsonProperty(PropertyName = "method")]
-        public AesEncryptionMethod Method { get; set; }
+        public AesEncryptionMethod? Method { get; set; }
     }
 
 }

@@ -20,7 +20,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// EventName
         /// </summary>
         [JsonProperty(PropertyName = "eventName")]
-        public LiveEncodingEventName EventName { get; set; }
+        public LiveEncodingEventName? EventName { get; set; }
         
         /// <summary>
         /// The Audio/Video Drift in seconds. The drift was corrected by the RESYNCING event (occurs at event: RESYNCING)

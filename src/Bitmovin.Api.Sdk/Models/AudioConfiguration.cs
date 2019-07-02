@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class AudioConfiguration : CodecConfiguration
     {
         /// <summary>
-        /// Target bitrate for the encoded audio in bps
+        /// Target bitrate for the encoded audio in bps (required)
         /// </summary>
         [JsonProperty(PropertyName = "bitrate")]
         public long? Bitrate { get; set; }

@@ -26,7 +26,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// OutputChannelType
         /// </summary>
         [JsonProperty(PropertyName = "outputChannelType")]
-        public AudioMixChannelType OutputChannelType { get; set; }
+        public AudioMixChannelType? OutputChannelType { get; set; }
         
         /// <summary>
         /// Number of this output channel. If type is &#39;CHANNEL_NUMBER&#39;, this must be set.

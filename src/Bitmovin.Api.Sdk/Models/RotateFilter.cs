@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class RotateFilter : Filter
     {
         /// <summary>
-        /// Rotation of the video in degrees. A positive value will rotate the video clockwise and a negative one counter clockwise.
+        /// Rotation of the video in degrees. A positive value will rotate the video clockwise and a negative one counter clockwise. (required)
         /// </summary>
         [JsonProperty(PropertyName = "rotation")]
         public int? Rotation { get; set; }

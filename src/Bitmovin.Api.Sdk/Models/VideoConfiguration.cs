@@ -44,7 +44,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// PixelFormat
         /// </summary>
         [JsonProperty(PropertyName = "pixelFormat")]
-        public PixelFormat PixelFormat { get; set; }
+        public PixelFormat? PixelFormat { get; set; }
         
         /// <summary>
         /// ColorConfig
@@ -68,7 +68,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// The mode of the encoding
         /// </summary>
         [JsonProperty(PropertyName = "encodingMode")]
-        public EncodingMode EncodingMode { get; set; }
+        public EncodingMode? EncodingMode { get; set; }
     }
 
 }

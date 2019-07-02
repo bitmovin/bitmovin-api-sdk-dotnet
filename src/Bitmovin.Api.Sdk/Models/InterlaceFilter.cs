@@ -20,13 +20,13 @@ namespace Bitmovin.Api.Sdk.Models
         /// Mode
         /// </summary>
         [JsonProperty(PropertyName = "mode")]
-        public InterlaceMode Mode { get; set; }
+        public InterlaceMode? Mode { get; set; }
         
         /// <summary>
         /// VerticalLowPassFilteringMode
         /// </summary>
         [JsonProperty(PropertyName = "verticalLowPassFilteringMode")]
-        public VerticalLowPassFilteringMode VerticalLowPassFilteringMode { get; set; }
+        public VerticalLowPassFilteringMode? VerticalLowPassFilteringMode { get; set; }
     }
 
 }

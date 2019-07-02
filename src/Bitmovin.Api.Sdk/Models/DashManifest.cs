@@ -20,7 +20,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Profile
         /// </summary>
         [JsonProperty(PropertyName = "profile")]
-        public DashProfile Profile { get; set; }
+        public DashProfile? Profile { get; set; }
         
         /// <summary>
         /// The filename of your manifest
@@ -32,13 +32,13 @@ namespace Bitmovin.Api.Sdk.Models
         /// List of additional XML namespaces to add to the DASH Manifest
         /// </summary>
         [JsonProperty(PropertyName = "namespaces")]
-        public List<XmlNamespace> Namespaces { get; set; }
+        public List<XmlNamespace> Namespaces { get; set; } = new List<XmlNamespace>();
         
         /// <summary>
         /// List of UTC Timings to use for live streaming
         /// </summary>
         [JsonProperty(PropertyName = "utcTimings")]
-        public List<UtcTiming> UtcTimings { get; set; }
+        public List<UtcTiming> UtcTimings { get; set; } = new List<UtcTiming>();
     }
 
 }

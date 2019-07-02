@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class ManifestResource
     {
         /// <summary>
-        /// Id of the manifest resource
+        /// Id of the manifest resource (required)
         /// </summary>
         [JsonProperty(PropertyName = "manifestId")]
         public string ManifestId { get; set; }

@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class LiveDashManifest
     {
         /// <summary>
-        /// Dash manifest ids
+        /// Dash manifest ids (required)
         /// </summary>
         [JsonProperty(PropertyName = "manifestId")]
         public string ManifestId { get; set; }

@@ -20,7 +20,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// The type of the media-info
         /// </summary>
         [JsonProperty(PropertyName = "type")]
-        public MediaInfoType Type { get; set; }
+        public MediaInfoType? Type { get; set; }
     }
 
 }

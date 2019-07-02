@@ -17,19 +17,19 @@ namespace Bitmovin.Api.Sdk.Models
     public class SmoothStreamingRepresentation : BitmovinResource
     {
         /// <summary>
-        /// Id of the encoding
+        /// Id of the encoding (required)
         /// </summary>
         [JsonProperty(PropertyName = "encodingId")]
         public string EncodingId { get; set; }
         
         /// <summary>
-        /// Id of the muxing.
+        /// Id of the muxing. (required)
         /// </summary>
         [JsonProperty(PropertyName = "muxingId")]
         public string MuxingId { get; set; }
         
         /// <summary>
-        /// The Smooth Streaming ismv or isma file that will be referenced in the manifest.
+        /// The Smooth Streaming ismv or isma file that will be referenced in the manifest. (required)
         /// </summary>
         [JsonProperty(PropertyName = "mediaFile")]
         public string MediaFile { get; set; }

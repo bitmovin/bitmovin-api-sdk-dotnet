@@ -17,13 +17,13 @@ namespace Bitmovin.Api.Sdk.Models
     public class Statistics
     {
         /// <summary>
-        /// Bytes encoded total.
+        /// Bytes encoded total. (required)
         /// </summary>
         [JsonProperty(PropertyName = "bytesEncodedTotal")]
         public long? BytesEncodedTotal { get; set; }
         
         /// <summary>
-        /// Time in seconds encoded for all contained daily statistics.
+        /// Time in seconds encoded for all contained daily statistics. (required)
         /// </summary>
         [JsonProperty(PropertyName = "timeEncodedTotal")]
         public long? TimeEncodedTotal { get; set; }

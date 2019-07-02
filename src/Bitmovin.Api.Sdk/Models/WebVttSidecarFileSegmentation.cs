@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class WebVttSidecarFileSegmentation
     {
         /// <summary>
-        /// The length of the WebVTT fragments in seconds
+        /// The length of the WebVTT fragments in seconds (required)
         /// </summary>
         [JsonProperty(PropertyName = "segmentLength")]
         public double? SegmentLength { get; set; }

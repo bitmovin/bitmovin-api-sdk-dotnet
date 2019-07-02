@@ -5,8 +5,10 @@ using System.Threading.Tasks;
 using RestEase;
 using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4;
+using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ChunkedText;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Cmaf;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.SegmentedRaw;
+using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Text;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Ts;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Webm;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp3;
@@ -27,8 +29,10 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings
             _apiClient = apiClientFactory.CreateClient<IMuxingsApiClient>();
 
             Fmp4 = new Fmp4Api(apiClientFactory);
+            ChunkedText = new ChunkedTextApi(apiClientFactory);
             Cmaf = new CmafApi(apiClientFactory);
             SegmentedRaw = new SegmentedRawApi(apiClientFactory);
+            Text = new TextApi(apiClientFactory);
             Ts = new TsApi(apiClientFactory);
             Webm = new WebmApi(apiClientFactory);
             Mp3 = new Mp3Api(apiClientFactory);
@@ -45,8 +49,10 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings
         public static BitmovinApiBuilder<MuxingsApi> Builder => new BitmovinApiBuilder<MuxingsApi>();
 
         public Fmp4Api Fmp4 { get; private set; }
+        public ChunkedTextApi ChunkedText { get; private set; }
         public CmafApi Cmaf { get; private set; }
         public SegmentedRawApi SegmentedRaw { get; private set; }
+        public TextApi Text { get; private set; }
         public TsApi Ts { get; private set; }
         public WebmApi Webm { get; private set; }
         public Mp3Api Mp3 { get; private set; }

@@ -50,7 +50,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Items
         /// </summary>
         [JsonProperty(PropertyName = "items")]
-        public IEnumerable<T> Items { get; set; }
+        public List<T> Items { get; set; } = new List<T>();
     }
 
 }

@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class CustomWebPlayerBuildDomain : BitmovinResource
     {
         /// <summary>
-        /// Domain where the player is allowed to play
+        /// Domain where the player is allowed to play (required)
         /// </summary>
         [JsonProperty(PropertyName = "domain")]
         public string Domain { get; set; }

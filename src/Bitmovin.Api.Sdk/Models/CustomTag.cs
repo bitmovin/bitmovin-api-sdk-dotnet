@@ -17,10 +17,10 @@ namespace Bitmovin.Api.Sdk.Models
     public class CustomTag : BitmovinResource
     {
         /// <summary>
-        /// The positioning mode that should be used when inserting the placement opportunity
+        /// The positioning mode that should be used when inserting the placement opportunity (required)
         /// </summary>
         [JsonProperty(PropertyName = "positionMode")]
-        public PositionMode PositionMode { get; set; }
+        public PositionMode? PositionMode { get; set; }
         
         /// <summary>
         /// Id of keyframe where the custom tag should be inserted. Required, when KEYFRAME is selected as position mode.
@@ -41,7 +41,7 @@ namespace Bitmovin.Api.Sdk.Models
         public long? Segment { get; set; }
         
         /// <summary>
-        /// The data to be contained in the custom tag.
+        /// The data to be contained in the custom tag. (required)
         /// </summary>
         [JsonProperty(PropertyName = "data")]
         public string Data { get; set; }

@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class BitmovinResponse
     {
         /// <summary>
-        /// Id of the resource
+        /// Id of the resource (required)
         /// </summary>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; internal set; }

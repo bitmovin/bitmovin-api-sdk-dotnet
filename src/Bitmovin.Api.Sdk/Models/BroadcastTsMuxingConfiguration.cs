@@ -32,13 +32,13 @@ namespace Bitmovin.Api.Sdk.Models
         /// VideoStreams
         /// </summary>
         [JsonProperty(PropertyName = "videoStreams")]
-        public List<BroadcastTsVideoInputStreamConfiguration> VideoStreams { get; set; }
+        public List<BroadcastTsVideoInputStreamConfiguration> VideoStreams { get; set; } = new List<BroadcastTsVideoInputStreamConfiguration>();
         
         /// <summary>
         /// AudioStreams
         /// </summary>
         [JsonProperty(PropertyName = "audioStreams")]
-        public List<BroadcastTsAudioInputStreamConfiguration> AudioStreams { get; set; }
+        public List<BroadcastTsAudioInputStreamConfiguration> AudioStreams { get; set; } = new List<BroadcastTsAudioInputStreamConfiguration>();
     }
 
 }

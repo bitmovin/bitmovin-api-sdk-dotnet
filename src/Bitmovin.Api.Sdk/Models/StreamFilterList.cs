@@ -17,10 +17,10 @@ namespace Bitmovin.Api.Sdk.Models
     public class StreamFilterList
     {
         /// <summary>
-        /// List of stream filters
+        /// List of stream filters (required)
         /// </summary>
         [JsonProperty(PropertyName = "filters")]
-        public List<StreamFilter> Filters { get; set; }
+        public List<StreamFilter> Filters { get; set; } = new List<StreamFilter>();
     }
 
 }

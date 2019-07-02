@@ -49,7 +49,13 @@ namespace Bitmovin.Api.Sdk.Models
         /// AUDIOMIX
         /// </summary>
         [EnumMember(Value = "AUDIO_MIX")]
-        AUDIOMIX
+        AUDIOMIX,
+        
+        /// <summary>
+        /// FILE
+        /// </summary>
+        [EnumMember(Value = "FILE")]
+        FILE
         
     }
 

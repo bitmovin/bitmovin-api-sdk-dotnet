@@ -45,6 +45,24 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "pmtRepetitionRatePerSec")]
         public double? PmtRepetitionRatePerSec { get; set; }
+        
+        /// <summary>
+        /// When false, the output stream is created at a constant bit rate. When true, the output rate is allowed to vary from a maximum rate set by the muxrate parameter down to the minimum required to carry the stream. Default: false
+        /// </summary>
+        [JsonProperty(PropertyName = "variableMuxRate")]
+        public bool? VariableMuxRate { get; set; }
+        
+        /// <summary>
+        /// Sets the presentation time stamp value for the first video frame. The timestamp is specified in the timescale of 90000. Default: 0
+        /// </summary>
+        [JsonProperty(PropertyName = "initialPresentationTimeStamp")]
+        public double? InitialPresentationTimeStamp { get; set; }
+        
+        /// <summary>
+        /// Sets the Program Clock Reference value at the beginning of the first packet for the transport stream. The PCR is specified in the timescale of 90000. Default: 0
+        /// </summary>
+        [JsonProperty(PropertyName = "initialProgramClockReference")]
+        public double? InitialProgramClockReference { get; set; }
     }
 
 }

@@ -17,13 +17,13 @@ namespace Bitmovin.Api.Sdk.Models
     public class InputPath
     {
         /// <summary>
-        /// Id of input
+        /// Id of input (required)
         /// </summary>
         [JsonProperty(PropertyName = "inputId")]
         public string InputId { get; set; }
         
         /// <summary>
-        /// Path to media file
+        /// Path to media file (required)
         /// </summary>
         [JsonProperty(PropertyName = "inputPath")]
         public string _InputPath { get; set; }

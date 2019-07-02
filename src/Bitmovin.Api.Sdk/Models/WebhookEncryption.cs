@@ -17,13 +17,13 @@ namespace Bitmovin.Api.Sdk.Models
     public class WebhookEncryption
     {
         /// <summary>
-        /// The encryption algorithm used for the webhook
+        /// The encryption algorithm used for the webhook (required)
         /// </summary>
         [JsonProperty(PropertyName = "type")]
-        public EncryptionType Type { get; set; }
+        public EncryptionType? Type { get; set; }
         
         /// <summary>
-        /// The key of the encryption
+        /// The key of the encryption (required)
         /// </summary>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }

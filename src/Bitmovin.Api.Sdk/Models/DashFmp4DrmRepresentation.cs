@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class DashFmp4DrmRepresentation : DashFmp4Representation
     {
         /// <summary>
-        /// DRM Id
+        /// DRM Id (required)
         /// </summary>
         [JsonProperty(PropertyName = "drmId")]
         public string DrmId { get; set; }

@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class Mp3Muxing : Muxing
     {
         /// <summary>
-        /// Name of the new file
+        /// Name of the new file (required)
         /// </summary>
         [JsonProperty(PropertyName = "filename")]
         public string Filename { get; set; }

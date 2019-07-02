@@ -24,6 +24,8 @@ namespace Bitmovin.Api.Sdk.Models
     [JsonSubtypes.KnownSubType(typeof(ProgressiveMovMuxing), "PROGRESSIVE_MOV")]
     [JsonSubtypes.KnownSubType(typeof(ProgressiveTsMuxing), "PROGRESSIVE_TS")]
     [JsonSubtypes.KnownSubType(typeof(BroadcastTsMuxing), "BROADCAST_TS")]
+    [JsonSubtypes.KnownSubType(typeof(ChunkedTextMuxing), "CHUNKED_TEXT")]
+    [JsonSubtypes.KnownSubType(typeof(TextMuxing), "TEXT")]
 
     public class Muxing : BitmovinResource
     {
@@ -31,13 +33,13 @@ namespace Bitmovin.Api.Sdk.Models
         /// Streams
         /// </summary>
         [JsonProperty(PropertyName = "streams")]
-        public List<MuxingStream> Streams { get; set; }
+        public List<MuxingStream> Streams { get; set; } = new List<MuxingStream>();
         
         /// <summary>
         /// Outputs
         /// </summary>
         [JsonProperty(PropertyName = "outputs")]
-        public List<EncodingOutput> Outputs { get; set; }
+        public List<EncodingOutput> Outputs { get; set; } = new List<EncodingOutput>();
         
         /// <summary>
         /// Average bitrate. Available after encoding finishes.
@@ -61,13 +63,13 @@ namespace Bitmovin.Api.Sdk.Models
         /// If this is set and contains objects, then this muxing has been ignored during the encoding process
         /// </summary>
         [JsonProperty(PropertyName = "ignoredBy")]
-        public List<Ignoring> IgnoredBy { get; internal set; }
+        public List<Ignoring> IgnoredBy { get; internal set; } = new List<Ignoring>();
         
         /// <summary>
         /// Specifies how to handle streams that don&#39;t fulfill stream conditions
         /// </summary>
         [JsonProperty(PropertyName = "streamConditionsMode")]
-        public StreamConditionsMode StreamConditionsMode { get; set; }
+        public StreamConditionsMode? StreamConditionsMode { get; set; }
     }
 
 }

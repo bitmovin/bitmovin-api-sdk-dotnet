@@ -20,7 +20,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// The type of the input
         /// </summary>
         [JsonProperty(PropertyName = "type")]
-        public InputType Type { get; set; }
+        public InputType? Type { get; set; }
     }
 
 }

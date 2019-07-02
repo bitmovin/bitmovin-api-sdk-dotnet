@@ -23,7 +23,7 @@ namespace Bitmovin.Api.Sdk.Models
         public TimeSpan TimeSpan { get; set; }
         
         /// <summary>
-        /// Peak signal-to-noise ratio
+        /// Peak signal-to-noise ratio (required)
         /// </summary>
         [JsonProperty(PropertyName = "psnr")]
         public double? Psnr { get; set; }

@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class FtpOutput : Output
     {
         /// <summary>
-        /// Host URL or IP of the FTP server
+        /// Host URL or IP of the FTP server (required)
         /// </summary>
         [JsonProperty(PropertyName = "host")]
         public string Host { get; set; }
@@ -50,7 +50,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Controls which transfer version should be used
         /// </summary>
         [JsonProperty(PropertyName = "transferVersion")]
-        public TransferVersion TransferVersion { get; set; }
+        public TransferVersion? TransferVersion { get; set; }
         
         /// <summary>
         /// Restrict maximum concurrent connections. Requires at least version 1.1.0.

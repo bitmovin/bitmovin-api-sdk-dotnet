@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class DashVttRepresentation : BitmovinResource
     {
         /// <summary>
-        /// URL of the referenced VTT file
+        /// URL of the referenced VTT file (required)
         /// </summary>
         [JsonProperty(PropertyName = "vttUrl")]
         public string VttUrl { get; set; }

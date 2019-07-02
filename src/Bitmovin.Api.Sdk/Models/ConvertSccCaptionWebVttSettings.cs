@@ -20,7 +20,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// PositionMode
         /// </summary>
         [JsonProperty(PropertyName = "positionMode")]
-        public ConvertSccPositionMode PositionMode { get; set; }
+        public ConvertSccPositionMode? PositionMode { get; set; }
         
         /// <summary>
         /// Remove flash (blinking) information when converting SCC to WebVTT

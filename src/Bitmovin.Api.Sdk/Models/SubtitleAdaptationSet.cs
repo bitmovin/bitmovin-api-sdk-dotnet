@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class SubtitleAdaptationSet : AdaptationSet
     {
         /// <summary>
-        /// ISO 639-1 (Alpha-2) code identifying the language of the subtitle adaptation set
+        /// ISO 639-1 (Alpha-2) code identifying the language of the subtitle adaptation set (required)
         /// </summary>
         [JsonProperty(PropertyName = "lang")]
         public string Lang { get; set; }

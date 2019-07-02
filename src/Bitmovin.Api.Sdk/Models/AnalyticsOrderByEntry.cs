@@ -26,7 +26,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Order
         /// </summary>
         [JsonProperty(PropertyName = "order")]
-        public AnalyticsOrder Order { get; set; }
+        public AnalyticsOrder? Order { get; set; }
     }
 
 }

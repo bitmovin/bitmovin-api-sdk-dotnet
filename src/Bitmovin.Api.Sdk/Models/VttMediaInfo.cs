@@ -17,13 +17,13 @@ namespace Bitmovin.Api.Sdk.Models
     public class VttMediaInfo : BasicMediaInfo
     {
         /// <summary>
-        /// The URL of the referenced VTT file
+        /// The URL of the referenced VTT file (required)
         /// </summary>
         [JsonProperty(PropertyName = "vttUrl")]
         public string VttUrl { get; set; }
         
         /// <summary>
-        /// The URI of the Rendition
+        /// The URI of the Rendition (required)
         /// </summary>
         [JsonProperty(PropertyName = "uri")]
         public string Uri { get; set; }

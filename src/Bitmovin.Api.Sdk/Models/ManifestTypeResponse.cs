@@ -20,7 +20,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// The type of the manifest
         /// </summary>
         [JsonProperty(PropertyName = "type")]
-        public ManifestType Type { get; set; }
+        public ManifestType? Type { get; set; }
     }
 
 }

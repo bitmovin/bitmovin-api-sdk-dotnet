@@ -23,7 +23,7 @@ namespace Bitmovin.Api.Sdk.Models
         public string Name { get; set; }
         
         /// <summary>
-        /// License Key
+        /// License Key (required)
         /// </summary>
         [JsonProperty(PropertyName = "licenseKey")]
         public string LicenseKey { get; set; }

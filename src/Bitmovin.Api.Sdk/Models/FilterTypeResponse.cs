@@ -20,7 +20,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// The type of the filter
         /// </summary>
         [JsonProperty(PropertyName = "type")]
-        public FilterType Type { get; set; }
+        public FilterType? Type { get; set; }
     }
 
 }

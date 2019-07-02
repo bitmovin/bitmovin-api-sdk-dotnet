@@ -20,7 +20,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Byte ranges for the segments within the TS file
         /// </summary>
         [JsonProperty(PropertyName = "byteRanges")]
-        public List<ProgressiveTsMuxingInformationByteRanges> ByteRanges { get; internal set; }
+        public List<ProgressiveTsMuxingInformationByteRanges> ByteRanges { get; internal set; } = new List<ProgressiveTsMuxingInformationByteRanges>();
     }
 
 }

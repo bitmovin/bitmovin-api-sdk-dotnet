@@ -20,7 +20,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Array to perform the AND/OR evaluation on
         /// </summary>
         [JsonProperty(PropertyName = "conditions")]
-        public List<AbstractCondition> Conditions { get; set; }
+        public List<AbstractCondition> Conditions { get; set; } = new List<AbstractCondition>();
     }
 
 }

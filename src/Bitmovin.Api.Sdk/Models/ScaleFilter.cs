@@ -32,7 +32,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// ScalingAlgorithm
         /// </summary>
         [JsonProperty(PropertyName = "scalingAlgorithm")]
-        public ScalingAlgorithm ScalingAlgorithm { get; set; }
+        public ScalingAlgorithm? ScalingAlgorithm { get; set; }
         
         /// <summary>
         /// The numerator of the sample aspect ratio (also known as pixel aspect ratio). Must be set if sampleAspectRatioDenominator is set.

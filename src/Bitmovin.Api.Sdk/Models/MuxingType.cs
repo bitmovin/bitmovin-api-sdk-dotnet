@@ -73,7 +73,19 @@ namespace Bitmovin.Api.Sdk.Models
         /// BROADCASTTS
         /// </summary>
         [EnumMember(Value = "BROADCAST_TS")]
-        BROADCASTTS
+        BROADCASTTS,
+        
+        /// <summary>
+        /// CHUNKEDTEXT
+        /// </summary>
+        [EnumMember(Value = "CHUNKED_TEXT")]
+        CHUNKEDTEXT,
+        
+        /// <summary>
+        /// TEXT
+        /// </summary>
+        [EnumMember(Value = "TEXT")]
+        TEXT
         
     }
 

@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class FtpInput : Input
     {
         /// <summary>
-        /// Host URL or IP of the FTP server
+        /// Host URL or IP of the FTP server (required)
         /// </summary>
         [JsonProperty(PropertyName = "host")]
         public string Host { get; set; }

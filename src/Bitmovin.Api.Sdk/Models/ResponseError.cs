@@ -17,19 +17,19 @@ namespace Bitmovin.Api.Sdk.Models
     public class ResponseError
     {
         /// <summary>
-        /// Unique correlation id
+        /// Unique correlation id (required)
         /// </summary>
         [JsonProperty(PropertyName = "requestId")]
         public string RequestId { get; internal set; }
         
         /// <summary>
-        /// Response status information
+        /// Response status information (required)
         /// </summary>
         [JsonProperty(PropertyName = "status")]
-        public ResponseStatus Status { get; internal set; }
+        public ResponseStatus? Status { get; internal set; }
         
         /// <summary>
-        /// Response information
+        /// Response information (required)
         /// </summary>
         [JsonProperty(PropertyName = "data")]
         public ResponseErrorData Data { get; internal set; }

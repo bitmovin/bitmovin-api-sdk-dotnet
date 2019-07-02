@@ -17,37 +17,37 @@ namespace Bitmovin.Api.Sdk.Models
     public class StatisticsPerStream
     {
         /// <summary>
-        /// ID of the stream
+        /// ID of the stream (required)
         /// </summary>
         [JsonProperty(PropertyName = "streamId")]
         public string StreamId { get; set; }
         
         /// <summary>
-        /// ID of the condec configuration
+        /// ID of the condec configuration (required)
         /// </summary>
         [JsonProperty(PropertyName = "codecConfigId")]
         public string CodecConfigId { get; set; }
         
         /// <summary>
-        /// Multiplier for the encoded minutes. Depends on muxing type.
+        /// Multiplier for the encoded minutes. Depends on muxing type. (required)
         /// </summary>
         [JsonProperty(PropertyName = "multiplicator")]
         public double? Multiplicator { get; set; }
         
         /// <summary>
-        /// Encoded bytes.
+        /// Encoded bytes. (required)
         /// </summary>
         [JsonProperty(PropertyName = "encodedBytes")]
         public long? EncodedBytes { get; set; }
         
         /// <summary>
-        /// Length of the stream.
+        /// Length of the stream. (required)
         /// </summary>
         [JsonProperty(PropertyName = "encodedSeconds")]
         public double? EncodedSeconds { get; set; }
         
         /// <summary>
-        /// Minutes you will be charged for (billableMinutes &#x3D; encodedSeconds * multiplicator)
+        /// Minutes you will be charged for (billableMinutes &#x3D; encodedSeconds * multiplicator) (required)
         /// </summary>
         [JsonProperty(PropertyName = "billableMinutes")]
         public double? BillableMinutes { get; set; }
@@ -65,13 +65,13 @@ namespace Bitmovin.Api.Sdk.Models
         public long? Height { get; set; }
         
         /// <summary>
-        /// If it&#39; a video stream this value is the FPS, for audio it&#39;s the sample rate.
+        /// If it&#39; a video stream this value is the FPS, for audio it&#39;s the sample rate. (required)
         /// </summary>
         [JsonProperty(PropertyName = "rate")]
-        public long? Rate { get; set; }
+        public double? Rate { get; set; }
         
         /// <summary>
-        /// Bitrate of the stream
+        /// Bitrate of the stream (required)
         /// </summary>
         [JsonProperty(PropertyName = "bitrate")]
         public long? Bitrate { get; set; }
@@ -80,19 +80,19 @@ namespace Bitmovin.Api.Sdk.Models
         /// Codec
         /// </summary>
         [JsonProperty(PropertyName = "codec")]
-        public CodecConfigType Codec { get; set; }
+        public CodecConfigType? Codec { get; set; }
         
         /// <summary>
         /// Resolution
         /// </summary>
         [JsonProperty(PropertyName = "resolution")]
-        public StatisticsResolution Resolution { get; set; }
+        public StatisticsResolution? Resolution { get; set; }
         
         /// <summary>
         /// EncodingMode
         /// </summary>
         [JsonProperty(PropertyName = "encodingMode")]
-        public EncodingMode EncodingMode { get; set; }
+        public EncodingMode? EncodingMode { get; set; }
         
         /// <summary>
         /// The output minutes multiplicator for the given encodingMode
@@ -104,7 +104,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// PerTitleResultStream
         /// </summary>
         [JsonProperty(PropertyName = "perTitleResultStream")]
-        public StatisticsPerTitleStream PerTitleResultStream { get; set; }
+        public StatisticsPerTitleStream? PerTitleResultStream { get; set; }
         
         /// <summary>
         /// The output minutes multiplicator for per-title
@@ -116,7 +116,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// PsnrMode
         /// </summary>
         [JsonProperty(PropertyName = "psnrMode")]
-        public PsnrPerStreamMode PsnrMode { get; set; }
+        public PsnrPerStreamMode? PsnrMode { get; set; }
         
         /// <summary>
         /// The output minutes multiplicator for psnr streams

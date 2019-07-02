@@ -20,7 +20,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Defines special audio video sync handling
         /// </summary>
         [JsonProperty(PropertyName = "audioVideoSyncMode")]
-        public AudioVideoSyncMode AudioVideoSyncMode { get; set; }
+        public AudioVideoSyncMode? AudioVideoSyncMode { get; set; }
     }
 
 }

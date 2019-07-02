@@ -17,13 +17,13 @@ namespace Bitmovin.Api.Sdk.Models
     public class DashRepresentation : BitmovinResponse
     {
         /// <summary>
-        /// UUID of an encoding
+        /// UUID of an encoding (required)
         /// </summary>
         [JsonProperty(PropertyName = "encodingId")]
         public string EncodingId { get; set; }
         
         /// <summary>
-        /// UUID of a muxing
+        /// UUID of a muxing (required)
         /// </summary>
         [JsonProperty(PropertyName = "muxingId")]
         public string MuxingId { get; set; }

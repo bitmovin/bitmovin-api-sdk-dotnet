@@ -20,7 +20,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Concatenation configuration for the output of this stream
         /// </summary>
         [JsonProperty(PropertyName = "concatenation")]
-        public List<ConcatenationInputConfiguration> Concatenation { get; set; }
+        public List<ConcatenationInputConfiguration> Concatenation { get; set; } = new List<ConcatenationInputConfiguration>();
     }
 
 }

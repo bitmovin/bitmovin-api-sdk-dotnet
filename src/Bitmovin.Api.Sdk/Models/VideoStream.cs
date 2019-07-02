@@ -35,13 +35,13 @@ namespace Bitmovin.Api.Sdk.Models
         public long? Rate { get; set; }
         
         /// <summary>
-        /// Width of the video
+        /// Width of the video (required)
         /// </summary>
         [JsonProperty(PropertyName = "width")]
         public int? Width { get; set; }
         
         /// <summary>
-        /// Height of the video
+        /// Height of the video (required)
         /// </summary>
         [JsonProperty(PropertyName = "height")]
         public int? Height { get; set; }

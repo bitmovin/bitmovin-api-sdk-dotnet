@@ -20,7 +20,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Channel layout of the audio codec configuration
         /// </summary>
         [JsonProperty(PropertyName = "channelLayout")]
-        public ChannelLayout ChannelLayout { get; set; }
+        public ChannelLayout? ChannelLayout { get; set; }
     }
 
 }

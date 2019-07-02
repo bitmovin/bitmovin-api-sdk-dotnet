@@ -7,6 +7,7 @@ using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Encoding.Configurations.Type;
 using Bitmovin.Api.Sdk.Encoding.Configurations.Video;
 using Bitmovin.Api.Sdk.Encoding.Configurations.Audio;
+using Bitmovin.Api.Sdk.Encoding.Configurations.Subtitles;
 
 namespace Bitmovin.Api.Sdk.Encoding.Configurations
 {
@@ -21,6 +22,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations
             Type = new TypeApi(apiClientFactory);
             Video = new VideoApi(apiClientFactory);
             Audio = new AudioApi(apiClientFactory);
+            Subtitles = new SubtitlesApi(apiClientFactory);
         }
 
         /// <summary>
@@ -31,6 +33,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations
         public TypeApi Type { get; private set; }
         public VideoApi Video { get; private set; }
         public AudioApi Audio { get; private set; }
+        public SubtitlesApi Subtitles { get; private set; }
         
         /// <summary>
         /// List all Codec Configurations

@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class Thumbnail : BitmovinResource
     {
         /// <summary>
-        /// Height of the thumbnail.
+        /// Height of the thumbnail. (required)
         /// </summary>
         [JsonProperty(PropertyName = "height")]
         public int? Height { get; set; }
@@ -38,19 +38,19 @@ namespace Bitmovin.Api.Sdk.Models
         /// Position in the unit where the thumbnail should be created from. Mutually exclusive with interval.
         /// </summary>
         [JsonProperty(PropertyName = "positions")]
-        public List<double?> Positions { get; set; }
+        public List<double?> Positions { get; set; } = new List<double?>();
         
         /// <summary>
         /// Outputs
         /// </summary>
         [JsonProperty(PropertyName = "outputs")]
-        public List<EncodingOutput> Outputs { get; set; }
+        public List<EncodingOutput> Outputs { get; set; } = new List<EncodingOutput>();
         
         /// <summary>
         /// Unit of the values in the positions array.
         /// </summary>
         [JsonProperty(PropertyName = "unit")]
-        public ThumbnailUnit Unit { get; set; }
+        public ThumbnailUnit? Unit { get; set; }
     }
 
 }

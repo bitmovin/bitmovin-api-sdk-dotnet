@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class CencDrm : Drm
     {
         /// <summary>
-        /// 16 byte encryption key, 32 hexadecimal characters
+        /// 16 byte encryption key, 32 hexadecimal characters (required)
         /// </summary>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
@@ -29,16 +29,16 @@ namespace Bitmovin.Api.Sdk.Models
         public string Kid { get; set; }
         
         /// <summary>
-        /// The encryption method to use. Default is &#x60;CTR&#x60;
+        /// The encryption method to use. Default is &#x60;CTR&#x60; (required)
         /// </summary>
         [JsonProperty(PropertyName = "encryptionMode")]
-        public EncryptionMode EncryptionMode { get; set; }
+        public EncryptionMode? EncryptionMode { get; set; }
         
         /// <summary>
         /// Size of the initialization vector
         /// </summary>
         [JsonProperty(PropertyName = "ivSize")]
-        public IvSize IvSize { get; set; }
+        public IvSize? IvSize { get; set; }
         
         /// <summary>
         /// Enables compatibility with the Protected Interoperable File Format (PIFF) specification

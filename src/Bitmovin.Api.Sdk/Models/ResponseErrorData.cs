@@ -17,19 +17,19 @@ namespace Bitmovin.Api.Sdk.Models
     public class ResponseErrorData
     {
         /// <summary>
-        /// Contains an error code as defined in https://bitmovin.com/encoding-documentation/bitmovin-api/#/introduction/api-error-codes 
+        /// Contains an error code as defined in https://bitmovin.com/encoding-documentation/bitmovin-api/#/introduction/api-error-codes (required)
         /// </summary>
         [JsonProperty(PropertyName = "code")]
         public int? Code { get; set; }
         
         /// <summary>
-        /// General error message
+        /// General error message (required)
         /// </summary>
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }
         
         /// <summary>
-        /// More detailed message meant for developers
+        /// More detailed message meant for developers (required)
         /// </summary>
         [JsonProperty(PropertyName = "developerMessage")]
         public string DeveloperMessage { get; set; }
@@ -38,13 +38,13 @@ namespace Bitmovin.Api.Sdk.Models
         /// collection of links to webpages containing further information on the topic
         /// </summary>
         [JsonProperty(PropertyName = "links")]
-        public List<Link> Links { get; set; }
+        public List<Link> Links { get; set; } = new List<Link>();
         
         /// <summary>
         /// collection of messages containing more detailed information on the cause of the error
         /// </summary>
         [JsonProperty(PropertyName = "details")]
-        public List<Message> Details { get; set; }
+        public List<Message> Details { get; set; } = new List<Message>();
     }
 
 }

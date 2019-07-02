@@ -17,13 +17,13 @@ namespace Bitmovin.Api.Sdk.Models
     public class Login
     {
         /// <summary>
-        /// Email address of the account.
+        /// Email address of the account. (required)
         /// </summary>
         [JsonProperty(PropertyName = "eMail")]
         public string EMail { get; set; }
         
         /// <summary>
-        /// Password of the account.
+        /// Password of the account. (required)
         /// </summary>
         [JsonProperty(PropertyName = "password")]
         public string Password { get; set; }

@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class Webhook : BitmovinResource
     {
         /// <summary>
-        /// Webhook url
+        /// Webhook url (required)
         /// </summary>
         [JsonProperty(PropertyName = "url")]
         public string Url { get; set; }
@@ -26,7 +26,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// HTTP method used for the webhook
         /// </summary>
         [JsonProperty(PropertyName = "method")]
-        public WebhookHttpMethod Method { get; set; }
+        public WebhookHttpMethod? Method { get; set; }
         
         /// <summary>
         /// Whether to skip SSL certification verification or not

@@ -26,10 +26,10 @@ namespace Bitmovin.Api.Sdk.Models
         /// Operator
         /// </summary>
         [JsonProperty(PropertyName = "operator")]
-        public AnalyticsOperator Operator { get; set; }
+        public AnalyticsOperator? Operator { get; set; }
         
         /// <summary>
-        /// The value to compare to the property specified by the name
+        /// The value to compare to the property specified by the name (required)
         /// </summary>
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }

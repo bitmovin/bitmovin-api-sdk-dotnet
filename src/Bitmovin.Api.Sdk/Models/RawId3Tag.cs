@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class RawId3Tag : Id3Tag
     {
         /// <summary>
-        /// Base64 Encoded Data
+        /// Base64 Encoded Data (required)
         /// </summary>
         [JsonProperty(PropertyName = "bytes")]
         public string Bytes { get; set; }

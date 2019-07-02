@@ -17,13 +17,13 @@ namespace Bitmovin.Api.Sdk.Models
     public class XmlNamespace
     {
         /// <summary>
-        /// Name of the XML Namespace reference
+        /// Name of the XML Namespace reference (required)
         /// </summary>
         [JsonProperty(PropertyName = "prefix")]
         public string Prefix { get; set; }
         
         /// <summary>
-        /// Source of the XML Namespace reference
+        /// Source of the XML Namespace reference (required)
         /// </summary>
         [JsonProperty(PropertyName = "uri")]
         public string Uri { get; set; }

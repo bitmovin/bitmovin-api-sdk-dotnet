@@ -17,10 +17,10 @@ namespace Bitmovin.Api.Sdk.Models
     public class InternalChunkLength
     {
         /// <summary>
-        /// Defines how the internal chunk length for encoding will be determined
+        /// Defines how the internal chunk length for encoding will be determined (required)
         /// </summary>
         [JsonProperty(PropertyName = "mode")]
-        public ChunkLengthMode Mode { get; set; }
+        public ChunkLengthMode? Mode { get; set; }
         
         /// <summary>
         /// Defines a custom internal chunk length in seconds to be used for encoding if mode is set to &#x60;CUSTOM&#x60;. Valid range is from 1 to 180 seconds

@@ -20,25 +20,25 @@ namespace Bitmovin.Api.Sdk.Models
         /// EncodingMode
         /// </summary>
         [JsonProperty(PropertyName = "encodingMode")]
-        public EncodingMode EncodingMode { get; set; }
+        public EncodingMode? EncodingMode { get; set; }
         
         /// <summary>
         /// Codec
         /// </summary>
         [JsonProperty(PropertyName = "codec")]
-        public CodecConfigType Codec { get; set; }
+        public CodecConfigType? Codec { get; set; }
         
         /// <summary>
         /// PerTitleResultStream
         /// </summary>
         [JsonProperty(PropertyName = "perTitleResultStream")]
-        public StatisticsPerTitleStream PerTitleResultStream { get; set; }
+        public StatisticsPerTitleStream? PerTitleResultStream { get; set; }
         
         /// <summary>
         /// PsnrMode
         /// </summary>
         [JsonProperty(PropertyName = "psnrMode")]
-        public PsnrPerStreamMode PsnrMode { get; set; }
+        public PsnrPerStreamMode? PsnrMode { get; set; }
         
         /// <summary>
         /// BillableMinutes

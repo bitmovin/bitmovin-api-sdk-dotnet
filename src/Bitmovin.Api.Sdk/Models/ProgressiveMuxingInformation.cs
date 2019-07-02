@@ -50,13 +50,13 @@ namespace Bitmovin.Api.Sdk.Models
         /// Information about the video tracks in the container
         /// </summary>
         [JsonProperty(PropertyName = "videoTracks")]
-        public List<MuxingInformationVideoTrack> VideoTracks { get; internal set; }
+        public List<MuxingInformationVideoTrack> VideoTracks { get; internal set; } = new List<MuxingInformationVideoTrack>();
         
         /// <summary>
         /// Information about the audio tracks in the container
         /// </summary>
         [JsonProperty(PropertyName = "audioTracks")]
-        public List<MuxingInformationAudioTrack> AudioTracks { get; internal set; }
+        public List<MuxingInformationAudioTrack> AudioTracks { get; internal set; } = new List<MuxingInformationAudioTrack>();
     }
 
 }

@@ -17,13 +17,13 @@ namespace Bitmovin.Api.Sdk.Models
     public class RtmpIngestPoint
     {
         /// <summary>
-        /// The name of the application where the ingest is streamed to. This has to be unique for each ingest point
+        /// The name of the application where the ingest is streamed to. This has to be unique for each ingest point (required)
         /// </summary>
         [JsonProperty(PropertyName = "applicationName")]
         public string ApplicationName { get; set; }
         
         /// <summary>
-        /// The stream key for the backup input
+        /// The stream key for the backup input (required)
         /// </summary>
         [JsonProperty(PropertyName = "streamKey")]
         public string StreamKey { get; set; }

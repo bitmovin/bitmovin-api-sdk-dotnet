@@ -20,13 +20,13 @@ namespace Bitmovin.Api.Sdk.Models
         /// Type
         /// </summary>
         [JsonProperty(PropertyName = "type")]
-        public ManifestType Type { get; internal set; }
+        public ManifestType? Type { get; internal set; }
         
         /// <summary>
-        /// The outputs to store the manifest
+        /// The outputs to store the manifest (required)
         /// </summary>
         [JsonProperty(PropertyName = "outputs")]
-        public List<EncodingOutput> Outputs { get; set; }
+        public List<EncodingOutput> Outputs { get; set; } = new List<EncodingOutput>();
     }
 
 }

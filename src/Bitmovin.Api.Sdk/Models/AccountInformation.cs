@@ -17,16 +17,16 @@ namespace Bitmovin.Api.Sdk.Models
     public class AccountInformation : BitmovinResource
     {
         /// <summary>
-        /// Email address of the account.
+        /// Email address of the account. (required)
         /// </summary>
         [JsonProperty(PropertyName = "email")]
         public string Email { get; set; }
         
         /// <summary>
-        /// ApiKeys associated with the account
+        /// ApiKeys associated with the account (required)
         /// </summary>
         [JsonProperty(PropertyName = "apiKeys")]
-        public List<AccountApiKey> ApiKeys { get; set; }
+        public List<AccountApiKey> ApiKeys { get; set; } = new List<AccountApiKey>();
         
         /// <summary>
         /// First name of the tenant.

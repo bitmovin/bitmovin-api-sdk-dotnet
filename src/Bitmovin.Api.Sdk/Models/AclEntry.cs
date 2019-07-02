@@ -26,7 +26,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Permission
         /// </summary>
         [JsonProperty(PropertyName = "permission")]
-        public AclPermission Permission { get; set; }
+        public AclPermission? Permission { get; set; }
     }
 
 }

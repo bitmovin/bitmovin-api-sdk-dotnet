@@ -32,7 +32,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Bitrate selection mode
         /// </summary>
         [JsonProperty(PropertyName = "bitrateSelectionMode")]
-        public BitrateSelectionMode BitrateSelectionMode { get; set; }
+        public BitrateSelectionMode? BitrateSelectionMode { get; set; }
         
         /// <summary>
         /// Low complexity boundary for max bitrate

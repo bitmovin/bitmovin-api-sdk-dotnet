@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class CustomXmlElement : BitmovinResponse
     {
         /// <summary>
-        /// String representation of the XML element
+        /// String representation of the XML element (required)
         /// </summary>
         [JsonProperty(PropertyName = "data")]
         public string Data { get; set; }

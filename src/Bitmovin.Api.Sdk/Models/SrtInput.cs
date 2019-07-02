@@ -17,10 +17,10 @@ namespace Bitmovin.Api.Sdk.Models
     public class SrtInput : Input
     {
         /// <summary>
-        /// The SRT mode to use
+        /// The SRT mode to use (required)
         /// </summary>
         [JsonProperty(PropertyName = "mode")]
-        public SrtMode Mode { get; set; }
+        public SrtMode? Mode { get; set; }
         
         /// <summary>
         /// The name or IP of the host providing the SRT stream (only used in CALLER mode)
@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Models
         public string Host { get; set; }
         
         /// <summary>
-        /// The port to connect to or listen on. Has to be one of [2088, 2089, 2090, 2091] when using LISTENER mode.
+        /// The port to connect to or listen on. Has to be one of [2088, 2089, 2090, 2091] when using LISTENER mode. (required)
         /// </summary>
         [JsonProperty(PropertyName = "port")]
         public int? Port { get; set; }

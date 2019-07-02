@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class Tenant : BitmovinResource
     {
         /// <summary>
-        /// Email address of the tenant.
+        /// Email address of the tenant. (required)
         /// </summary>
         [JsonProperty(PropertyName = "eMail")]
         public string EMail { get; set; }

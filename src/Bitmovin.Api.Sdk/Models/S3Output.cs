@@ -17,19 +17,19 @@ namespace Bitmovin.Api.Sdk.Models
     public class S3Output : Output
     {
         /// <summary>
-        /// Amazon S3 bucket name
+        /// Amazon S3 bucket name (required)
         /// </summary>
         [JsonProperty(PropertyName = "bucketName")]
         public string BucketName { get; set; }
         
         /// <summary>
-        /// Amazon S3 access key
+        /// Amazon S3 access key (required)
         /// </summary>
         [JsonProperty(PropertyName = "accessKey")]
         public string AccessKey { get; set; }
         
         /// <summary>
-        /// Amazon S3 secret key
+        /// Amazon S3 secret key (required)
         /// </summary>
         [JsonProperty(PropertyName = "secretKey")]
         public string SecretKey { get; set; }
@@ -44,13 +44,13 @@ namespace Bitmovin.Api.Sdk.Models
         /// CloudRegion
         /// </summary>
         [JsonProperty(PropertyName = "cloudRegion")]
-        public AwsCloudRegion CloudRegion { get; set; }
+        public AwsCloudRegion? CloudRegion { get; set; }
         
         /// <summary>
         /// SignatureVersion
         /// </summary>
         [JsonProperty(PropertyName = "signatureVersion")]
-        public S3SignatureVersion SignatureVersion { get; set; }
+        public S3SignatureVersion? SignatureVersion { get; set; }
     }
 
 }

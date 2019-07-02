@@ -20,7 +20,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Use a set of well defined configurations preset to support certain use cases. Can be overwritten with more specific values.
         /// </summary>
         [JsonProperty(PropertyName = "presetConfiguration")]
-        public PresetConfiguration PresetConfiguration { get; set; }
+        public PresetConfiguration? PresetConfiguration { get; set; }
         
         /// <summary>
         /// Sets the constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.
@@ -32,7 +32,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Profile
         /// </summary>
         [JsonProperty(PropertyName = "profile")]
-        public ProfileH265 Profile { get; set; }
+        public ProfileH265? Profile { get; set; }
         
         /// <summary>
         /// Sets the amount of b frames
@@ -104,7 +104,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Level
         /// </summary>
         [JsonProperty(PropertyName = "level")]
-        public LevelH265 Level { get; set; }
+        public LevelH265? Level { get; set; }
         
         /// <summary>
         /// Number of frames for slice-type decision lookahead
@@ -116,31 +116,31 @@ namespace Bitmovin.Api.Sdk.Models
         /// Set the level of effort in determining B frame placement
         /// </summary>
         [JsonProperty(PropertyName = "bAdapt")]
-        public BAdapt BAdapt { get; set; }
+        public BAdapt? BAdapt { get; set; }
         
         /// <summary>
         /// MaxCTUSize
         /// </summary>
         [JsonProperty(PropertyName = "maxCTUSize")]
-        public MaxCtuSize MaxCTUSize { get; set; }
+        public MaxCtuSize? MaxCTUSize { get; set; }
         
         /// <summary>
         /// TuIntraDepth
         /// </summary>
         [JsonProperty(PropertyName = "tuIntraDepth")]
-        public TuIntraDepth TuIntraDepth { get; set; }
+        public TuIntraDepth? TuIntraDepth { get; set; }
         
         /// <summary>
         /// TuInterDepth
         /// </summary>
         [JsonProperty(PropertyName = "tuInterDepth")]
-        public TuInterDepth TuInterDepth { get; set; }
+        public TuInterDepth? TuInterDepth { get; set; }
         
         /// <summary>
         /// MotionSearch
         /// </summary>
         [JsonProperty(PropertyName = "motionSearch")]
-        public MotionSearch MotionSearch { get; set; }
+        public MotionSearch? MotionSearch { get; set; }
         
         /// <summary>
         /// Set the amount of subpel refinement to perform.
@@ -206,7 +206,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Controls the adaptive quantization algorithm
         /// </summary>
         [JsonProperty(PropertyName = "adaptiveQuantizationMode")]
-        public AdaptiveQuantMode AdaptiveQuantizationMode { get; set; }
+        public AdaptiveQuantMode? AdaptiveQuantizationMode { get; set; }
         
         /// <summary>
         /// By enabling this video stream will be signaled as HLG
@@ -218,7 +218,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Specifies the source format of the original analog video prior to digitizing and encoding
         /// </summary>
         [JsonProperty(PropertyName = "videoFormat")]
-        public VideoFormat VideoFormat { get; set; }
+        public VideoFormat? VideoFormat { get; set; }
         
         /// <summary>
         /// Psycho-visual rate-distortion retains fine details like film grain at the expense of more blocking artifacts. Higher values make the video appear sharper and more detailed but with a higher risk of blocking artifacts. Needs to have subMe with RD_IP, RD_ALL, RD_REF_IP, RD_REF_ALL, QPRD or FULL_RD
@@ -248,7 +248,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Minimum CU size (width and height). By using 16 or 32 the encoder will not analyze the cost of CUs below that minimum threshold, saving considerable amounts of compute with a predictable increase in bitrate. This setting has a large effect on performance on the faster presets.
         /// </summary>
         [JsonProperty(PropertyName = "minCodingUnitSize")]
-        public MinCodingUnitSize MinCodingUnitSize { get; set; }
+        public MinCodingUnitSize? MinCodingUnitSize { get; set; }
         
         /// <summary>
         /// Use multiple worker threads to measure the estimated cost of each frame within the lookahead. The higher this parameter, the less accurate the frame costs will be which will result in less accurate B-frame and scene-cut decisions. Valid range: 0 - 16
@@ -260,7 +260,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// If enabled, limit references per depth, CU or both.
         /// </summary>
         [JsonProperty(PropertyName = "limitReferences")]
-        public LimitReferences LimitReferences { get; set; }
+        public LimitReferences? LimitReferences { get; set; }
         
         /// <summary>
         /// Enable analysis of rectangular motion partitions Nx2N and 2NxN.
@@ -326,7 +326,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Specify the amount of rate-distortion analysis to use within quantization.
         /// </summary>
         [JsonProperty(PropertyName = "rateDistortionLevelForQuantization")]
-        public RateDistortionLevelForQuantization RateDistortionLevelForQuantization { get; set; }
+        public RateDistortionLevelForQuantization? RateDistortionLevelForQuantization { get; set; }
         
         /// <summary>
         /// Sets the minimum of quantization factor. Valid value range: 0 - 69
@@ -380,7 +380,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Enable evaluation of transform skip (bypass DCT but still use quantization) coding for 4x4 TU coded blocks. Default is NONE.
         /// </summary>
         [JsonProperty(PropertyName = "transformSkip")]
-        public TransformSkipMode TransformSkip { get; set; }
+        public TransformSkipMode? TransformSkip { get; set; }
         
         /// <summary>
         /// Enable QP based rate distortion refinement. Default is disabled.
@@ -392,7 +392,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Enables early exit from transform unit depth recursion, for inter coded blocks. Default is DISABLED.
         /// </summary>
         [JsonProperty(PropertyName = "limitTransformUnitDepthRecursion")]
-        public LimitTransformUnitDepthRecursionMode LimitTransformUnitDepthRecursion { get; set; }
+        public LimitTransformUnitDepthRecursionMode? LimitTransformUnitDepthRecursion { get; set; }
         
         /// <summary>
         /// An integer value, which denotes strength of noise reduction in intra CUs. Default 0.
@@ -410,13 +410,13 @@ namespace Bitmovin.Api.Sdk.Models
         /// Penalty for 32x32 intra transform units in non-I slices. Default DISABLED.
         /// </summary>
         [JsonProperty(PropertyName = "rateDistortionPenalty")]
-        public RateDistortionPenaltyMode RateDistortionPenalty { get; set; }
+        public RateDistortionPenaltyMode? RateDistortionPenalty { get; set; }
         
         /// <summary>
         /// Penalty for 32x32 intra transform units in non-I slices. Default DISABLED.
         /// </summary>
         [JsonProperty(PropertyName = "maximumTransformUnitSize")]
-        public MaxTransformUnitSize MaximumTransformUnitSize { get; set; }
+        public MaxTransformUnitSize? MaximumTransformUnitSize { get; set; }
         
         /// <summary>
         /// Increases the RD level at points where quality drops due to VBV rate control enforcement. Default 0.
@@ -482,7 +482,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Force the encoder to flush frames. Default is DISABLED.
         /// </summary>
         [JsonProperty(PropertyName = "forceFlush")]
-        public ForceFlushMode ForceFlush { get; set; }
+        public ForceFlushMode? ForceFlush { get; set; }
         
         /// <summary>
         /// Adjust the strength of the adaptive quantization offsets. Default 1.0.
@@ -500,7 +500,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Enable adaptive quantization for sub-CTUs. This parameter specifies the minimum CU size at which QP can be adjusted. Default is same as &#x60;maxCTUSize&#x60;.
         /// </summary>
         [JsonProperty(PropertyName = "quantizationGroupSize")]
-        public QuantizationGroupSize QuantizationGroupSize { get; set; }
+        public QuantizationGroupSize? QuantizationGroupSize { get; set; }
         
         /// <summary>
         /// Enables stricter conditions to control bitrate deviance from the target bitrate in ABR mode. Bit rate adherence is prioritised over quality. Default false.

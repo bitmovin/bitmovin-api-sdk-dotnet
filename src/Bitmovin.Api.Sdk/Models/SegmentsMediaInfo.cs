@@ -17,25 +17,25 @@ namespace Bitmovin.Api.Sdk.Models
     public class SegmentsMediaInfo : BasicMediaInfo
     {
         /// <summary>
-        /// Path to segments.
+        /// Path to segments. (required)
         /// </summary>
         [JsonProperty(PropertyName = "segmentPath")]
         public string SegmentPath { get; set; }
         
         /// <summary>
-        /// Id of the encoding.
+        /// Id of the encoding. (required)
         /// </summary>
         [JsonProperty(PropertyName = "encodingId")]
         public string EncodingId { get; set; }
         
         /// <summary>
-        /// Id of the stream.
+        /// Id of the stream. (required)
         /// </summary>
         [JsonProperty(PropertyName = "streamId")]
         public string StreamId { get; set; }
         
         /// <summary>
-        /// Id of the muxing.
+        /// Id of the muxing. (required)
         /// </summary>
         [JsonProperty(PropertyName = "muxingId")]
         public string MuxingId { get; set; }

@@ -44,7 +44,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Method
         /// </summary>
         [JsonProperty(PropertyName = "method")]
-        public PlayReadyEncryptionMethod Method { get; set; }
+        public PlayReadyEncryptionMethod? Method { get; set; }
         
         /// <summary>
         /// Key identifier

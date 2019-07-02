@@ -26,7 +26,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// IngestPoints
         /// </summary>
         [JsonProperty(PropertyName = "ingestPoints")]
-        public List<RtmpIngestPoint> IngestPoints { get; set; }
+        public List<RtmpIngestPoint> IngestPoints { get; set; } = new List<RtmpIngestPoint>();
     }
 
 }

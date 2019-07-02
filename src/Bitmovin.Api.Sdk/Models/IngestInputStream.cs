@@ -32,7 +32,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Specifies the algorithm how the stream in the input file will be selected
         /// </summary>
         [JsonProperty(PropertyName = "selectionMode")]
-        public StreamSelectionMode SelectionMode { get; set; }
+        public StreamSelectionMode? SelectionMode { get; set; }
         
         /// <summary>
         /// Position of the stream

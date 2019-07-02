@@ -17,25 +17,25 @@ namespace Bitmovin.Api.Sdk.Models
     public class GenericS3Output : Output
     {
         /// <summary>
-        /// Your generic S3 access key
+        /// Your generic S3 access key (required)
         /// </summary>
         [JsonProperty(PropertyName = "accessKey")]
         public string AccessKey { get; set; }
         
         /// <summary>
-        /// Your generic S3 secret key
+        /// Your generic S3 secret key (required)
         /// </summary>
         [JsonProperty(PropertyName = "secretKey")]
         public string SecretKey { get; set; }
         
         /// <summary>
-        /// Name of the bucket
+        /// Name of the bucket (required)
         /// </summary>
         [JsonProperty(PropertyName = "bucketName")]
         public string BucketName { get; set; }
         
         /// <summary>
-        /// The Generic S3 server hostname (or IP address)
+        /// The Generic S3 server hostname (or IP address) (required)
         /// </summary>
         [JsonProperty(PropertyName = "host")]
         public string Host { get; set; }
@@ -56,7 +56,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Specifies the method used for authentication
         /// </summary>
         [JsonProperty(PropertyName = "signatureVersion")]
-        public S3SignatureVersion SignatureVersion { get; set; }
+        public S3SignatureVersion? SignatureVersion { get; set; }
     }
 
 }

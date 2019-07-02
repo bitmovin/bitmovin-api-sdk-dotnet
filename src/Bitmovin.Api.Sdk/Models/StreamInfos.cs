@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class StreamInfos
     {
         /// <summary>
-        /// Timestamp of the event formatted in UTC: YYYY-MM-DDThh:mm:ssZ
+        /// Timestamp of the event formatted in UTC: YYYY-MM-DDThh:mm:ssZ (required)
         /// </summary>
         [JsonProperty(PropertyName = "time")]
         public DateTime? Time { get; set; }
@@ -26,7 +26,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Details about billable minutes for each resolution category
         /// </summary>
         [JsonProperty(PropertyName = "streamInfos")]
-        public List<StreamInfosDetails> _StreamInfos { get; set; }
+        public List<StreamInfosDetails> _StreamInfos { get; set; } = new List<StreamInfosDetails>();
     }
 
 }

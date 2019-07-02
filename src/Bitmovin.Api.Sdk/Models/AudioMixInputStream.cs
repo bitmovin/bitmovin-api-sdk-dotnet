@@ -20,13 +20,13 @@ namespace Bitmovin.Api.Sdk.Models
         /// Channel layout of the audio mix input stream
         /// </summary>
         [JsonProperty(PropertyName = "channelLayout")]
-        public AudioMixInputChannelLayout ChannelLayout { get; set; }
+        public AudioMixInputChannelLayout? ChannelLayout { get; set; }
         
         /// <summary>
         /// AudioMixChannels
         /// </summary>
         [JsonProperty(PropertyName = "audioMixChannels")]
-        public List<AudioMixInputStreamChannel> AudioMixChannels { get; set; }
+        public List<AudioMixInputStreamChannel> AudioMixChannels { get; set; } = new List<AudioMixInputStreamChannel>();
     }
 
 }

@@ -37,7 +37,13 @@ namespace Bitmovin.Api.Sdk.Models
         /// Use the stream specified by position but count only audio streams
         /// </summary>
         [EnumMember(Value = "AUDIO_RELATIVE")]
-        AUDIO_RELATIVE
+        AUDIO_RELATIVE,
+        
+        /// <summary>
+        /// Use the stream specified by position but count only subtitle streams
+        /// </summary>
+        [EnumMember(Value = "SUBTITLE_RELATIVE")]
+        SUBTITLE_RELATIVE
         
     }
 

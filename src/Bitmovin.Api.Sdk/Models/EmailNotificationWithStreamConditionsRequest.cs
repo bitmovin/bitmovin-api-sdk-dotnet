@@ -26,7 +26,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Emails
         /// </summary>
         [JsonProperty(PropertyName = "emails")]
-        public List<string> Emails { get; set; }
+        public List<string> Emails { get; set; } = new List<string>();
         
         /// <summary>
         /// Muted

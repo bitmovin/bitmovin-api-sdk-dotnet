@@ -26,7 +26,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// SrtInputs
         /// </summary>
         [JsonProperty(PropertyName = "srtInputs")]
-        public List<SrtInput> SrtInputs { get; set; }
+        public List<SrtInput> SrtInputs { get; set; } = new List<SrtInput>();
     }
 
 }

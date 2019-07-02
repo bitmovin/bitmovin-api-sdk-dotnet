@@ -26,7 +26,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// List of prewarmed Instance pools. If set, prewarmed instances from pools with these IDs will be used for the Encoding if available. The pool IDs will be tried in the order in which they are passed.
         /// </summary>
         [JsonProperty(PropertyName = "prewarmedInstancePoolIds")]
-        public List<string> PrewarmedInstancePoolIds { get; set; }
+        public List<string> PrewarmedInstancePoolIds { get; set; } = new List<string>();
     }
 
 }

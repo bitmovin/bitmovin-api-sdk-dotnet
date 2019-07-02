@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class HttpsInput : Input
     {
         /// <summary>
-        /// Host Url or IP of the HTTP server
+        /// Host Url or IP of the HTTP server (required)
         /// </summary>
         [JsonProperty(PropertyName = "host")]
         public string Host { get; set; }

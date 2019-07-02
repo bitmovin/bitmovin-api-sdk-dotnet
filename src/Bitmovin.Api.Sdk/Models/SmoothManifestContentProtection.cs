@@ -17,19 +17,19 @@ namespace Bitmovin.Api.Sdk.Models
     public class SmoothManifestContentProtection : BitmovinResource
     {
         /// <summary>
-        /// Id of the encoding.
+        /// Id of the encoding. (required)
         /// </summary>
         [JsonProperty(PropertyName = "encodingId")]
         public string EncodingId { get; set; }
         
         /// <summary>
-        /// Id of the muxing.
+        /// Id of the muxing. (required)
         /// </summary>
         [JsonProperty(PropertyName = "muxingId")]
         public string MuxingId { get; set; }
         
         /// <summary>
-        /// Id of the drm.
+        /// Id of the drm. (required)
         /// </summary>
         [JsonProperty(PropertyName = "drmId")]
         public string DrmId { get; set; }

@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class Keyframe : BitmovinResource
     {
         /// <summary>
-        /// Time in seconds where the keyframe should be inserted
+        /// Time in seconds where the keyframe should be inserted (required)
         /// </summary>
         [JsonProperty(PropertyName = "time")]
         public double? Time { get; set; }

@@ -17,13 +17,13 @@ namespace Bitmovin.Api.Sdk.Models
     public class FairPlayDrm : Drm
     {
         /// <summary>
-        /// 16 byte Encryption key, 32 hexadecimal characters
+        /// 16 byte Encryption key, 32 hexadecimal characters (required)
         /// </summary>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
         
         /// <summary>
-        /// 16 byte initialization vector
+        /// 16 byte initialization vector (required)
         /// </summary>
         [JsonProperty(PropertyName = "iv")]
         public string Iv { get; set; }

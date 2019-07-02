@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class Link
     {
         /// <summary>
-        /// webpage target URL
+        /// webpage target URL (required)
         /// </summary>
         [JsonProperty(PropertyName = "href")]
         public string Href { get; set; }

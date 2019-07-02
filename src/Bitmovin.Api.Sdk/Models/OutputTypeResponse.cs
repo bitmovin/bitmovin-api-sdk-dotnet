@@ -20,7 +20,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// The type of the output
         /// </summary>
         [JsonProperty(PropertyName = "type")]
-        public OutputType Type { get; set; }
+        public OutputType? Type { get; set; }
     }
 
 }

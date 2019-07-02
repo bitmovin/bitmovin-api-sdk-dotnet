@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class BasicMediaInfo : BitmovinResponse
     {
         /// <summary>
-        /// The value is a quoted-string which specifies the group to which the Rendition belongs.
+        /// The value is a quoted-string which specifies the group to which the Rendition belongs. (required)
         /// </summary>
         [JsonProperty(PropertyName = "groupId")]
         public string GroupId { get; set; }
@@ -35,7 +35,7 @@ namespace Bitmovin.Api.Sdk.Models
         public string AssocLanguage { get; set; }
         
         /// <summary>
-        /// Human readable description of the rendition.
+        /// Human readable description of the rendition. (required)
         /// </summary>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
@@ -56,7 +56,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Contains Uniform Type Identifiers
         /// </summary>
         [JsonProperty(PropertyName = "characteristics")]
-        public List<string> Characteristics { get; set; }
+        public List<string> Characteristics { get; set; } = new List<string>();
     }
 
 }

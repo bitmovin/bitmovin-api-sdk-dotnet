@@ -17,19 +17,19 @@ namespace Bitmovin.Api.Sdk.Models
     public class DailyStatistics
     {
         /// <summary>
-        /// Date for the shown data. Format: yyyy-MM-dd
+        /// Date for the shown data. Format: yyyy-MM-dd (required)
         /// </summary>
         [JsonProperty(PropertyName = "date")]
         public DateTime? Date { get; set; }
         
         /// <summary>
-        /// Bytes encoded.
+        /// Bytes encoded. (required)
         /// </summary>
         [JsonProperty(PropertyName = "bytesEncoded")]
         public long? BytesEncoded { get; set; }
         
         /// <summary>
-        /// Time in seconds encoded for this day.
+        /// Time in seconds encoded for this day. (required)
         /// </summary>
         [JsonProperty(PropertyName = "timeEncoded")]
         public long? TimeEncoded { get; set; }
@@ -50,7 +50,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Billable minutes for each encoding configuration.
         /// </summary>
         [JsonProperty(PropertyName = "billableEncodingMinutes")]
-        public List<BillableEncodingMinutes> BillableEncodingMinutes { get; internal set; }
+        public List<BillableEncodingMinutes> BillableEncodingMinutes { get; internal set; } = new List<BillableEncodingMinutes>();
         
         /// <summary>
         /// Billable minutes for muxings.
@@ -62,7 +62,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Billable minutes for features
         /// </summary>
         [JsonProperty(PropertyName = "billableFeatureMinutes")]
-        public List<BillableEncodingFeatureMinutes> BillableFeatureMinutes { get; internal set; }
+        public List<BillableEncodingFeatureMinutes> BillableFeatureMinutes { get; internal set; } = new List<BillableEncodingFeatureMinutes>();
     }
 
 }

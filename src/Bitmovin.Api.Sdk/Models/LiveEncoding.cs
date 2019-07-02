@@ -17,13 +17,13 @@ namespace Bitmovin.Api.Sdk.Models
     public class LiveEncoding
     {
         /// <summary>
-        /// Stream key of the live encoder
+        /// Stream key of the live encoder (required)
         /// </summary>
         [JsonProperty(PropertyName = "streamKey")]
         public string StreamKey { get; set; }
         
         /// <summary>
-        /// IP address of the live encoder
+        /// IP address of the live encoder (required)
         /// </summary>
         [JsonProperty(PropertyName = "encoderIp")]
         public string EncoderIp { get; set; }

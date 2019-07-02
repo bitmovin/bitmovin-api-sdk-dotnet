@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class CencWidevine
     {
         /// <summary>
-        /// Base64 encoded pssh payload
+        /// Base64 encoded pssh payload (required)
         /// </summary>
         [JsonProperty(PropertyName = "pssh")]
         public string Pssh { get; set; }

@@ -17,10 +17,10 @@ namespace Bitmovin.Api.Sdk.Models
     public class ServiceTaskStatus : BitmovinResponse
     {
         /// <summary>
-        /// Current status
+        /// Current status (required)
         /// </summary>
         [JsonProperty(PropertyName = "status")]
-        public Status Status { get; set; }
+        public Status? Status { get; set; }
         
         /// <summary>
         /// Estimated ETA in seconds
@@ -38,13 +38,13 @@ namespace Bitmovin.Api.Sdk.Models
         /// List of subtasks
         /// </summary>
         [JsonProperty(PropertyName = "subtasks")]
-        public List<Subtask> Subtasks { get; set; }
+        public List<Subtask> Subtasks { get; set; } = new List<Subtask>();
         
         /// <summary>
         /// Task specific messages
         /// </summary>
         [JsonProperty(PropertyName = "messages")]
-        public List<Message> Messages { get; set; }
+        public List<Message> Messages { get; set; } = new List<Message>();
         
         /// <summary>
         /// Timestamp when the task was created, formatted in UTC: YYYY-MM-DDThh:mm:ssZ

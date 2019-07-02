@@ -29,13 +29,13 @@ namespace Bitmovin.Api.Sdk.Models
         public int? Height { get; set; }
         
         /// <summary>
-        /// Target frame rate of the encoded video!
+        /// Target frame rate of the encoded video! (required)
         /// </summary>
         [JsonProperty(PropertyName = "rate")]
         public double? Rate { get; set; }
         
         /// <summary>
-        /// The quality scale parameter
+        /// The quality scale parameter (required)
         /// </summary>
         [JsonProperty(PropertyName = "qScale")]
         public int? QScale { get; set; }
@@ -44,7 +44,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// PixelFormat
         /// </summary>
         [JsonProperty(PropertyName = "pixelFormat")]
-        public PixelFormat PixelFormat { get; set; }
+        public PixelFormat? PixelFormat { get; set; }
     }
 
 }

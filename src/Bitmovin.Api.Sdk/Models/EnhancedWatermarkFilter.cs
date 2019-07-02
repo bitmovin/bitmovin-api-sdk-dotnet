@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class EnhancedWatermarkFilter : Filter
     {
         /// <summary>
-        /// URL of the file to be used as watermark image. Supported image formats: PNG, JPEG, BMP, GIF
+        /// URL of the file to be used as watermark image. Supported image formats: PNG, JPEG, BMP, GIF (required)
         /// </summary>
         [JsonProperty(PropertyName = "image")]
         public string Image { get; set; }
@@ -50,7 +50,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Unit
         /// </summary>
         [JsonProperty(PropertyName = "unit")]
-        public PositionUnit Unit { get; set; }
+        public PositionUnit? Unit { get; set; }
         
         /// <summary>
         /// Opacity to apply on the watermark image. Valid values are from 0.0 (completely transparent) to 1.0 (not transparent at all)

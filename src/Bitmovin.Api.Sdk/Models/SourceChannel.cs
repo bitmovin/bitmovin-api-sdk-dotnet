@@ -26,7 +26,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Type
         /// </summary>
         [JsonProperty(PropertyName = "type")]
-        public SourceChannelType Type { get; set; }
+        public SourceChannelType? Type { get; set; }
         
         /// <summary>
         /// Number of this source channel. If type is &#39;CHANNEL_NUMBER&#39;, this must be set.

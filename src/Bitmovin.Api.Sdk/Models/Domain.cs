@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class Domain : BitmovinResource
     {
         /// <summary>
-        /// Host where the player is allowed to play
+        /// Host where the player is allowed to play (required)
         /// </summary>
         [JsonProperty(PropertyName = "url")]
         public string Url { get; set; }

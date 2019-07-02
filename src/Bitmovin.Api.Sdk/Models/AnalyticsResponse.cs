@@ -20,7 +20,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Rows
         /// </summary>
         [JsonProperty(PropertyName = "rows")]
-        public List<Object> Rows { get; set; }
+        public List<Object> Rows { get; set; } = new List<Object>();
         
         /// <summary>
         /// Number of rows returned
@@ -32,7 +32,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// ColumnLabels
         /// </summary>
         [JsonProperty(PropertyName = "columnLabels")]
-        public List<AnalyticsColumnLabel> ColumnLabels { get; set; }
+        public List<AnalyticsColumnLabel> ColumnLabels { get; set; } = new List<AnalyticsColumnLabel>();
     }
 
 }

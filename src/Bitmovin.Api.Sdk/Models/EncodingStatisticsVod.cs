@@ -17,13 +17,13 @@ namespace Bitmovin.Api.Sdk.Models
     public class EncodingStatisticsVod : EncodingStatistics
     {
         /// <summary>
-        /// Time in seconds encoded for this encoding.
+        /// Time in seconds encoded for this encoding. (required)
         /// </summary>
         [JsonProperty(PropertyName = "timeEnqueued")]
         public long? TimeEnqueued { get; set; }
         
         /// <summary>
-        /// The realtime factor.
+        /// The realtime factor. (required)
         /// </summary>
         [JsonProperty(PropertyName = "realTimeFactor")]
         public double? RealTimeFactor { get; set; }

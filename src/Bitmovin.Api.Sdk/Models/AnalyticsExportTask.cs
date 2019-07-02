@@ -17,19 +17,19 @@ namespace Bitmovin.Api.Sdk.Models
     public class AnalyticsExportTask : BitmovinResponse
     {
         /// <summary>
-        /// Start of timeframe which is exported in UTC format
+        /// Start of timeframe which is exported in UTC format (required)
         /// </summary>
         [JsonProperty(PropertyName = "startTime")]
         public DateTime? StartTime { get; set; }
         
         /// <summary>
-        /// End of timeframe which is exported in UTC format
+        /// End of timeframe which is exported in UTC format (required)
         /// </summary>
         [JsonProperty(PropertyName = "endTime")]
         public DateTime? EndTime { get; set; }
         
         /// <summary>
-        /// Name of the export task
+        /// Name of the export task (required)
         /// </summary>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
@@ -41,7 +41,7 @@ namespace Bitmovin.Api.Sdk.Models
         public string Description { get; set; }
         
         /// <summary>
-        /// License key
+        /// License key (required)
         /// </summary>
         [JsonProperty(PropertyName = "licenseKey")]
         public string LicenseKey { get; set; }
@@ -62,7 +62,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Status
         /// </summary>
         [JsonProperty(PropertyName = "status")]
-        public AnalyticsExportStatus Status { get; set; }
+        public AnalyticsExportStatus? Status { get; set; }
         
         /// <summary>
         /// UTC timestamp when the export task started

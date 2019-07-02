@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using RestEase;
 using Bitmovin.Api.Sdk.Common;
+using Bitmovin.Api.Sdk.Encoding.Encodings.MachineLearning.ObjectDetection.Results.ByTimestamp;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.MachineLearning.ObjectDetection.Results
 {
@@ -15,6 +16,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.MachineLearning.ObjectDetection.Re
         {
             _apiClient = apiClientFactory.CreateClient<IResultsApiClient>();
 
+            ByTimestamp = new ByTimestampApi(apiClientFactory);
         }
 
         /// <summary>
@@ -22,6 +24,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.MachineLearning.ObjectDetection.Re
         /// </summary>
         public static BitmovinApiBuilder<ResultsApi> Builder => new BitmovinApiBuilder<ResultsApi>();
 
+        public ByTimestampApi ByTimestamp { get; private set; }
         
         /// <summary>
         /// List object detection results

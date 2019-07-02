@@ -20,7 +20,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// IgnoredBy
         /// </summary>
         [JsonProperty(PropertyName = "ignoredBy")]
-        public IgnoredBy IgnoredBy { get; internal set; }
+        public IgnoredBy? IgnoredBy { get; internal set; }
         
         /// <summary>
         /// Describes why ignoredBy has been set to its current value.

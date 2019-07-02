@@ -44,7 +44,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Unit
         /// </summary>
         [JsonProperty(PropertyName = "unit")]
-        public PositionUnit Unit { get; set; }
+        public PositionUnit? Unit { get; set; }
     }
 
 }

@@ -35,13 +35,13 @@ namespace Bitmovin.Api.Sdk.Models
         public double? MaxMoneyToSpendPerMonth { get; set; }
         
         /// <summary>
-        /// Id of the security group for encoding instances
+        /// Id of the security group for encoding instances (required)
         /// </summary>
         [JsonProperty(PropertyName = "securityGroupId")]
         public string SecurityGroupId { get; set; }
         
         /// <summary>
-        /// Id of the subnet for encoding instances
+        /// Id of the subnet for encoding instances (required)
         /// </summary>
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
@@ -50,7 +50,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Which machine types are allowed to be deployed. Leave empty for no machine type restrictions.
         /// </summary>
         [JsonProperty(PropertyName = "machineTypes")]
-        public List<string> MachineTypes { get; set; }
+        public List<string> MachineTypes { get; set; } = new List<string>();
         
         /// <summary>
         /// Custom SSH port. Valid values: 1 - 65535. Leave empty if the default SSH port 22 is OK.

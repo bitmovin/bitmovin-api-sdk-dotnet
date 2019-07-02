@@ -17,19 +17,19 @@ namespace Bitmovin.Api.Sdk.Models
     public class AzureOutput : Output
     {
         /// <summary>
-        /// Azure Account Name
+        /// Azure Account Name (required)
         /// </summary>
         [JsonProperty(PropertyName = "accountName")]
         public string AccountName { get; set; }
         
         /// <summary>
-        /// Azure Account Key
+        /// Azure Account Key (required)
         /// </summary>
         [JsonProperty(PropertyName = "accountKey")]
         public string AccountKey { get; set; }
         
         /// <summary>
-        /// Name of the bucket
+        /// Name of the bucket (required)
         /// </summary>
         [JsonProperty(PropertyName = "container")]
         public string Container { get; set; }

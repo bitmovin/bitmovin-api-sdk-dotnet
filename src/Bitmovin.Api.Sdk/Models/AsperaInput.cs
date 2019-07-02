@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Models
         public string MaxBandwidth { get; set; }
         
         /// <summary>
-        /// Host to use for Aspera transfers
+        /// Host to use for Aspera transfers (required)
         /// </summary>
         [JsonProperty(PropertyName = "host")]
         public string Host { get; set; }

@@ -20,7 +20,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// The type of the codec config
         /// </summary>
         [JsonProperty(PropertyName = "type")]
-        public CodecConfigType Type { get; set; }
+        public CodecConfigType? Type { get; set; }
     }
 
 }

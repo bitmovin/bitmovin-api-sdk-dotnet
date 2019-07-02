@@ -17,10 +17,10 @@ namespace Bitmovin.Api.Sdk.Models
     public class CustomPlayerBuildStatus
     {
         /// <summary>
-        /// Status of the player build
+        /// Status of the player build (required)
         /// </summary>
         [JsonProperty(PropertyName = "status")]
-        public Status Status { get; set; }
+        public Status? Status { get; set; }
         
         /// <summary>
         /// The estimated time span of the custom player build in seconds.
@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Models
         public int? Eta { get; set; }
         
         /// <summary>
-        /// The actual progress of the custom player build.
+        /// The actual progress of the custom player build. (required)
         /// </summary>
         [JsonProperty(PropertyName = "progress")]
         public int? Progress { get; set; }

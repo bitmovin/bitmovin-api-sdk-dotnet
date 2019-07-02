@@ -44,7 +44,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// SetRaiOnAu
         /// </summary>
         [JsonProperty(PropertyName = "setRaiOnAu")]
-        public RaiUnit SetRaiOnAu { get; set; }
+        public RaiUnit? SetRaiOnAu { get; set; }
     }
 
 }

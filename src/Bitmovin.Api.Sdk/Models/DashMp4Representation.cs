@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class DashMp4Representation : DashRepresentation
     {
         /// <summary>
-        /// Path to the MP4 file
+        /// Path to the MP4 file (required)
         /// </summary>
         [JsonProperty(PropertyName = "filePath")]
         public string FilePath { get; set; }

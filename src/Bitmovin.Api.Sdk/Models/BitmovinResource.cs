@@ -44,7 +44,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// User-specific meta data. This can hold anything.
         /// </summary>
         [JsonProperty(PropertyName = "customData")]
-        public Dictionary<string, Object> CustomData { get; set; }
+        public Dictionary<string, Object> CustomData { get; set; } = new Dictionary<string, Object>();
     }
 
 }

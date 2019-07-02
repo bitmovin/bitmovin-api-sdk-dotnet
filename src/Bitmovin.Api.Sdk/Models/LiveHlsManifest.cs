@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class LiveHlsManifest
     {
         /// <summary>
-        /// Hls manifest ids
+        /// Hls manifest ids (required)
         /// </summary>
         [JsonProperty(PropertyName = "manifestId")]
         public string ManifestId { get; set; }

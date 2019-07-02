@@ -17,31 +17,31 @@ namespace Bitmovin.Api.Sdk.Models
     public class StatisticsPerMuxing
     {
         /// <summary>
-        /// ID of the stream
+        /// ID of the stream (required)
         /// </summary>
         [JsonProperty(PropertyName = "streamId")]
         public string StreamId { get; set; }
         
         /// <summary>
-        /// ID of the muxing
+        /// ID of the muxing (required)
         /// </summary>
         [JsonProperty(PropertyName = "muxingId")]
         public string MuxingId { get; set; }
         
         /// <summary>
-        /// Multiplier for the encoded minutes. Depends on muxing type.
+        /// Multiplier for the encoded minutes. Depends on muxing type. (required)
         /// </summary>
         [JsonProperty(PropertyName = "multiplicator")]
         public double? Multiplicator { get; set; }
         
         /// <summary>
-        /// Encoded bytes.
+        /// Encoded bytes. (required)
         /// </summary>
         [JsonProperty(PropertyName = "encodedBytes")]
         public long? EncodedBytes { get; set; }
         
         /// <summary>
-        /// Resulting minutes you will be charged for.
+        /// Resulting minutes you will be charged for. (required)
         /// </summary>
         [JsonProperty(PropertyName = "billableMinutes")]
         public double? BillableMinutes { get; set; }
@@ -50,7 +50,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// MuxingType
         /// </summary>
         [JsonProperty(PropertyName = "muxingType")]
-        public MuxingType MuxingType { get; set; }
+        public MuxingType? MuxingType { get; set; }
     }
 
 }

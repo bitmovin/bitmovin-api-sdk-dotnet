@@ -44,7 +44,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Indicates if the call that caused the error should be retried.
         /// </summary>
         [JsonProperty(PropertyName = "retryHint")]
-        public ErrorRetryHint RetryHint { get; set; }
+        public ErrorRetryHint? RetryHint { get; set; }
     }
 
 }

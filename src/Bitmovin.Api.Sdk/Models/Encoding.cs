@@ -20,7 +20,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// CloudRegion
         /// </summary>
         [JsonProperty(PropertyName = "cloudRegion")]
-        public CloudRegion CloudRegion { get; set; }
+        public CloudRegion? CloudRegion { get; set; }
         
         /// <summary>
         /// Version of the encoder
@@ -44,7 +44,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// You may pass a list of groups associated with this encoding. This will enable you to group results in the statistics resource
         /// </summary>
         [JsonProperty(PropertyName = "labels")]
-        public List<string> Labels { get; set; }
+        public List<string> Labels { get; set; } = new List<string>();
     }
 
 }

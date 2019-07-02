@@ -17,13 +17,13 @@ namespace Bitmovin.Api.Sdk.Models
     public class SidecarFile : BitmovinResource
     {
         /// <summary>
-        /// Id of input
+        /// Id of input (required)
         /// </summary>
         [JsonProperty(PropertyName = "inputId")]
         public string InputId { get; set; }
         
         /// <summary>
-        /// Path to sidecar file
+        /// Path to sidecar file (required)
         /// </summary>
         [JsonProperty(PropertyName = "inputPath")]
         public string InputPath { get; set; }
@@ -32,13 +32,13 @@ namespace Bitmovin.Api.Sdk.Models
         /// Outputs
         /// </summary>
         [JsonProperty(PropertyName = "outputs")]
-        public List<EncodingOutput> Outputs { get; set; }
+        public List<EncodingOutput> Outputs { get; set; } = new List<EncodingOutput>();
         
         /// <summary>
         /// ErrorMode
         /// </summary>
         [JsonProperty(PropertyName = "errorMode")]
-        public SidecarErrorMode ErrorMode { get; set; }
+        public SidecarErrorMode? ErrorMode { get; set; }
     }
 
 }

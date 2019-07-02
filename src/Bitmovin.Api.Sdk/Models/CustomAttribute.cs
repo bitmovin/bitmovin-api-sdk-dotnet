@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class CustomAttribute
     {
         /// <summary>
-        /// unique string identifier for the custom attribute
+        /// unique string identifier for the custom attribute (required)
         /// </summary>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }

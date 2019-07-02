@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class TtmlEmbed : BitmovinResource
     {
         /// <summary>
-        /// The input stream to extract the subtitle from
+        /// The input stream to extract the subtitle from (required)
         /// </summary>
         [JsonProperty(PropertyName = "inputStream")]
         public StreamInput InputStream { get; set; }

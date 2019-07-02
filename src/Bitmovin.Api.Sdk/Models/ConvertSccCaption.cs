@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class ConvertSccCaption : BitmovinResource
     {
         /// <summary>
-        /// The input location to get the scc file from
+        /// The input location to get the scc file from (required)
         /// </summary>
         [JsonProperty(PropertyName = "input")]
         public InputPath Input { get; set; }
@@ -26,10 +26,10 @@ namespace Bitmovin.Api.Sdk.Models
         /// Outputs
         /// </summary>
         [JsonProperty(PropertyName = "outputs")]
-        public List<EncodingOutput> Outputs { get; set; }
+        public List<EncodingOutput> Outputs { get; set; } = new List<EncodingOutput>();
         
         /// <summary>
-        /// Name of the captions file
+        /// Name of the captions file (required)
         /// </summary>
         [JsonProperty(PropertyName = "fileName")]
         public string FileName { get; set; }
@@ -38,7 +38,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// OutputFormat
         /// </summary>
         [JsonProperty(PropertyName = "outputFormat")]
-        public StreamCaptionOutputFormat OutputFormat { get; set; }
+        public StreamCaptionOutputFormat? OutputFormat { get; set; }
         
         /// <summary>
         /// Optional settings when converting SCC to WebVTT

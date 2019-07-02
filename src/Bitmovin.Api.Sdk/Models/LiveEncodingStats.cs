@@ -20,19 +20,19 @@ namespace Bitmovin.Api.Sdk.Models
         /// Status
         /// </summary>
         [JsonProperty(PropertyName = "status")]
-        public LiveEncodingStatus Status { get; set; }
+        public LiveEncodingStatus? Status { get; set; }
         
         /// <summary>
         /// List of events
         /// </summary>
         [JsonProperty(PropertyName = "events")]
-        public List<LiveEncodingStatsEvent> Events { get; set; }
+        public List<LiveEncodingStatsEvent> Events { get; set; } = new List<LiveEncodingStatsEvent>();
         
         /// <summary>
         /// List of statistics
         /// </summary>
         [JsonProperty(PropertyName = "statistics")]
-        public List<StreamInfos> Statistics { get; set; }
+        public List<StreamInfos> Statistics { get; set; } = new List<StreamInfos>();
     }
 
 }

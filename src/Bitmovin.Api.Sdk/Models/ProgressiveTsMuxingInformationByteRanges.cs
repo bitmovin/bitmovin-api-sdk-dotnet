@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class ProgressiveTsMuxingInformationByteRanges
     {
         /// <summary>
-        /// Number of the segment (starting at 0)
+        /// Number of the segment (starting at 0) (required)
         /// </summary>
         [JsonProperty(PropertyName = "segmentNumber")]
         public int? SegmentNumber { get; set; }

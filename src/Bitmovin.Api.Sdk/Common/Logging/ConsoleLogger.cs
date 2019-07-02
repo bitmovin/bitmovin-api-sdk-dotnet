@@ -19,11 +19,10 @@ namespace Bitmovin.Api.Sdk.Common.Logging
         public async Task LogResponse(HttpResponseMessage response)
         {
             Console.WriteLine("Response: " + response);
-            
-            
+
             if (response.Content != null)
             {
-                Console.WriteLine("Request Body: " + await response.Content.ReadAsStringAsync());
+                Console.WriteLine("Response Body: " + await response.Content.ReadAsStringAsync());
             }
         }
     }

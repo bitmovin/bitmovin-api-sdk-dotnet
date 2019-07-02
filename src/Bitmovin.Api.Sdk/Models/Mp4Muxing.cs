@@ -38,7 +38,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// FragmentedMP4MuxingManifestType
         /// </summary>
         [JsonProperty(PropertyName = "fragmentedMP4MuxingManifestType")]
-        public FragmentedMp4MuxingManifestType FragmentedMP4MuxingManifestType { get; set; }
+        public FragmentedMp4MuxingManifestType? FragmentedMP4MuxingManifestType { get; set; }
         
         /// <summary>
         /// Modifies the internal chunk length used for chunked encoding

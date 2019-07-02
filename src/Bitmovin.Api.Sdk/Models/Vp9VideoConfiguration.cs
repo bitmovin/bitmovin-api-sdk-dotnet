@@ -20,7 +20,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Use a set of well defined configurations preset to support certain use cases. Can be overwritten with more specific values.
         /// </summary>
         [JsonProperty(PropertyName = "presetConfiguration")]
-        public PresetConfiguration PresetConfiguration { get; set; }
+        public PresetConfiguration? PresetConfiguration { get; set; }
         
         /// <summary>
         /// Sets the constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.
@@ -170,7 +170,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Quality
         /// </summary>
         [JsonProperty(PropertyName = "quality")]
-        public Vp9Quality Quality { get; set; }
+        public Vp9Quality? Quality { get; set; }
         
         /// <summary>
         /// Lossless mode
@@ -188,7 +188,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// AqMode
         /// </summary>
         [JsonProperty(PropertyName = "aqMode")]
-        public Vp9AqMode AqMode { get; set; }
+        public Vp9AqMode? AqMode { get; set; }
         
         /// <summary>
         /// altref noise reduction max frame count.
@@ -206,7 +206,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// ArnrType
         /// </summary>
         [JsonProperty(PropertyName = "arnrType")]
-        public Vp9ArnrType ArnrType { get; set; }
+        public Vp9ArnrType? ArnrType { get; set; }
     }
 
 }

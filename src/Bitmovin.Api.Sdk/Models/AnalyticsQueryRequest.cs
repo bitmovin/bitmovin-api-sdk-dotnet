@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class AnalyticsQueryRequest : AnalyticsQueryTimeframe
     {
         /// <summary>
-        /// Analytics license key
+        /// Analytics license key (required)
         /// </summary>
         [JsonProperty(PropertyName = "licenseKey")]
         public string LicenseKey { get; set; }
@@ -26,13 +26,13 @@ namespace Bitmovin.Api.Sdk.Models
         /// Filters
         /// </summary>
         [JsonProperty(PropertyName = "filters")]
-        public List<AnalyticsFilter> Filters { get; set; }
+        public List<AnalyticsFilter> Filters { get; set; } = new List<AnalyticsFilter>();
         
         /// <summary>
         /// OrderBy
         /// </summary>
         [JsonProperty(PropertyName = "orderBy")]
-        public List<AnalyticsOrderByEntry> OrderBy { get; set; }
+        public List<AnalyticsOrderByEntry> OrderBy { get; set; } = new List<AnalyticsOrderByEntry>();
         
         /// <summary>
         /// Dimension
@@ -44,13 +44,13 @@ namespace Bitmovin.Api.Sdk.Models
         /// Interval
         /// </summary>
         [JsonProperty(PropertyName = "interval")]
-        public AnalyticsInterval Interval { get; set; }
+        public AnalyticsInterval? Interval { get; set; }
         
         /// <summary>
         /// GroupBy
         /// </summary>
         [JsonProperty(PropertyName = "groupBy")]
-        public List<string> GroupBy { get; set; }
+        public List<string> GroupBy { get; set; } = new List<string>();
         
         /// <summary>
         /// Maximum number of rows returned (max. 200)

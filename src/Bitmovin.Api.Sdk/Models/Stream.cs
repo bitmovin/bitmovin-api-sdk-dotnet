@@ -20,13 +20,13 @@ namespace Bitmovin.Api.Sdk.Models
         /// InputStreams
         /// </summary>
         [JsonProperty(PropertyName = "inputStreams")]
-        public List<StreamInput> InputStreams { get; set; }
+        public List<StreamInput> InputStreams { get; set; } = new List<StreamInput>();
         
         /// <summary>
         /// Outputs
         /// </summary>
         [JsonProperty(PropertyName = "outputs")]
-        public List<EncodingOutput> Outputs { get; set; }
+        public List<EncodingOutput> Outputs { get; set; } = new List<EncodingOutput>();
         
         /// <summary>
         /// Set true to create quality metadata for this stream
@@ -35,7 +35,7 @@ namespace Bitmovin.Api.Sdk.Models
         public bool? CreateQualityMetaData { get; set; }
         
         /// <summary>
-        /// Id of the codec configuration
+        /// Id of the codec configuration (required)
         /// </summary>
         [JsonProperty(PropertyName = "codecConfigId")]
         public string CodecConfigId { get; set; }
@@ -56,13 +56,13 @@ namespace Bitmovin.Api.Sdk.Models
         /// If this is set and contains objects, then this stream has been ignored during the encoding process
         /// </summary>
         [JsonProperty(PropertyName = "ignoredBy")]
-        public List<Ignoring> IgnoredBy { get; set; }
+        public List<Ignoring> IgnoredBy { get; set; } = new List<Ignoring>();
         
         /// <summary>
         /// Mode of the stream
         /// </summary>
         [JsonProperty(PropertyName = "mode")]
-        public StreamMode Mode { get; set; }
+        public StreamMode? Mode { get; set; }
         
         /// <summary>
         /// Settings to configure Per-Title on stream level
@@ -80,7 +80,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Determines how to react to errors during decoding
         /// </summary>
         [JsonProperty(PropertyName = "decodingErrorMode")]
-        public DecodingErrorMode DecodingErrorMode { get; set; }
+        public DecodingErrorMode? DecodingErrorMode { get; set; }
         
         /// <summary>
         /// Contains stream properties which may not have been defined in the configuration

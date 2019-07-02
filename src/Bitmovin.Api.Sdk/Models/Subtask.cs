@@ -17,10 +17,10 @@ namespace Bitmovin.Api.Sdk.Models
     public class Subtask : BitmovinResponse
     {
         /// <summary>
-        /// Current status
+        /// Current status (required)
         /// </summary>
         [JsonProperty(PropertyName = "status")]
-        public Status Status { get; set; }
+        public Status? Status { get; set; }
         
         /// <summary>
         /// Progress in percent
@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Models
         public int? Progress { get; set; }
         
         /// <summary>
-        /// Name of the subtask
+        /// Name of the subtask (required)
         /// </summary>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
@@ -38,7 +38,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Task specific messages
         /// </summary>
         [JsonProperty(PropertyName = "messages")]
-        public List<Message> Messages { get; set; }
+        public List<Message> Messages { get; set; } = new List<Message>();
         
         /// <summary>
         /// Timestamp when the subtask was created, formatted in UTC: YYYY-MM-DDThh:mm:ssZ 

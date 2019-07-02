@@ -20,13 +20,13 @@ namespace Bitmovin.Api.Sdk.Models
         /// KeyPlacementMode
         /// </summary>
         [JsonProperty(PropertyName = "keyPlacementMode")]
-        public Av1KeyPlacementMode KeyPlacementMode { get; set; }
+        public Av1KeyPlacementMode? KeyPlacementMode { get; set; }
         
         /// <summary>
         /// AdaptiveQuantMode
         /// </summary>
         [JsonProperty(PropertyName = "adaptiveQuantMode")]
-        public Av1AdaptiveQuantMode AdaptiveQuantMode { get; set; }
+        public Av1AdaptiveQuantMode? AdaptiveQuantMode { get; set; }
         
         /// <summary>
         /// Number of frames to look ahead for alternate reference frame selection

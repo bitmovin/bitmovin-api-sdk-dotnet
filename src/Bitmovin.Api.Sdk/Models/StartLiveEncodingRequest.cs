@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class StartLiveEncodingRequest
     {
         /// <summary>
-        /// Key for the stream. (a-zA-Z, 3-20 characters)
+        /// Key for the stream. (a-zA-Z, 3-20 characters) (required)
         /// </summary>
         [JsonProperty(PropertyName = "streamKey")]
         public string StreamKey { get; set; }
@@ -26,19 +26,19 @@ namespace Bitmovin.Api.Sdk.Models
         /// List of Hls manifests to use for this live encoding
         /// </summary>
         [JsonProperty(PropertyName = "hlsManifests")]
-        public List<LiveHlsManifest> HlsManifests { get; set; }
+        public List<LiveHlsManifest> HlsManifests { get; set; } = new List<LiveHlsManifest>();
         
         /// <summary>
         /// List of Dash manifests to use for this live encoding
         /// </summary>
         [JsonProperty(PropertyName = "dashManifests")]
-        public List<LiveDashManifest> DashManifests { get; set; }
+        public List<LiveDashManifest> DashManifests { get; set; } = new List<LiveDashManifest>();
         
         /// <summary>
         /// The pass mode of the encoding
         /// </summary>
         [JsonProperty(PropertyName = "liveEncodingMode")]
-        public EncodingMode LiveEncodingMode { get; set; }
+        public EncodingMode? LiveEncodingMode { get; set; }
         
         /// <summary>
         /// Reupload specific files during a live encoding. This can be helpful if an automatic life cycle policy is enabled on the output storage

@@ -17,13 +17,13 @@ namespace Bitmovin.Api.Sdk.Models
     public class MarlinDrm : Drm
     {
         /// <summary>
-        /// 16 byte key in hex (32 characters)
+        /// 16 byte key in hex (32 characters) (required)
         /// </summary>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
         
         /// <summary>
-        /// 16 byte key in hex (32 characters)
+        /// 16 byte key in hex (32 characters) (required)
         /// </summary>
         [JsonProperty(PropertyName = "kid")]
         public string Kid { get; set; }

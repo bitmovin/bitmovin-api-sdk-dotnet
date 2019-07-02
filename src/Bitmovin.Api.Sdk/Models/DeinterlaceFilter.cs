@@ -20,19 +20,19 @@ namespace Bitmovin.Api.Sdk.Models
         /// Parity
         /// </summary>
         [JsonProperty(PropertyName = "parity")]
-        public PictureFieldParity Parity { get; set; }
+        public PictureFieldParity? Parity { get; set; }
         
         /// <summary>
         /// Mode
         /// </summary>
         [JsonProperty(PropertyName = "mode")]
-        public DeinterlaceMode Mode { get; set; }
+        public DeinterlaceMode? Mode { get; set; }
         
         /// <summary>
         /// FrameSelectionMode
         /// </summary>
         [JsonProperty(PropertyName = "frameSelectionMode")]
-        public DeinterlaceFrameSelectionMode FrameSelectionMode { get; set; }
+        public DeinterlaceFrameSelectionMode? FrameSelectionMode { get; set; }
     }
 
 }

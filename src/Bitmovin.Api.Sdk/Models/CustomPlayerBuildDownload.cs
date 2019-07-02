@@ -17,13 +17,13 @@ namespace Bitmovin.Api.Sdk.Models
     public class CustomPlayerBuildDownload
     {
         /// <summary>
-        /// The link to download the custom built player
+        /// The link to download the custom built player (required)
         /// </summary>
         [JsonProperty(PropertyName = "downloadLink")]
         public string DownloadLink { get; set; }
         
         /// <summary>
-        /// Until this date the download link is valid and can be downloaded.
+        /// Until this date the download link is valid and can be downloaded. (required)
         /// </summary>
         [JsonProperty(PropertyName = "expiresAt")]
         public DateTime? ExpiresAt { get; set; }

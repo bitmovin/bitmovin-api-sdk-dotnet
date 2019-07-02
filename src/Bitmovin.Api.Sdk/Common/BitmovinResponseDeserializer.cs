@@ -1,41 +1,31 @@
+using System;
 using System.Net.Http;
+using Bitmovin.Api.Sdk.Models;
 using Newtonsoft.Json;
 using RestEase;
-
-using Bitmovin.Api.Sdk.Common.Logging;
 
 namespace Bitmovin.Api.Sdk.Common
 {
     public class BitmovinResponseDeserializer : ResponseDeserializer
     {
-        private readonly JsonSerializerSettings _jsonSerializerSettings;
-        private readonly IBitmovinApiLogger _logger;
+        private readonly JsonSerializerSettings _jsonSettings;
 
-        public BitmovinResponseDeserializer(JsonSerializerSettings settings, IBitmovinApiLogger logger)
+        public BitmovinResponseDeserializer(JsonSerializerSettings jsonSettings)
         {
-            _jsonSerializerSettings = settings;
-            _logger = logger;
+            _jsonSettings = jsonSettings;
         }
 
         public override T Deserialize<T>(string content, HttpResponseMessage response, ResponseDeserializerInfo info)
         {
-            _logger.LogResponse(response);
-
-            if (response.IsSuccessStatusCode)
+            try
             {
-                var responseEnvelope =
-                    JsonConvert.DeserializeObject<Models.ResponseEnvelope<T>>(content, _jsonSerializerSettings);
-
+                var responseEnvelope = JsonConvert.DeserializeObject<ResponseEnvelope<T>>(content, _jsonSettings);
                 return responseEnvelope.Data.Result;
             }
-
-            Models.ResponseError responseError = null;
-            if (!string.IsNullOrWhiteSpace(content))
+            catch (Exception e)
             {
-                responseError = JsonConvert.DeserializeObject<Models.ResponseError>(content, _jsonSerializerSettings);
+                throw new BitmovinApiException("Error when deserializing response", response.StatusCode, null, e);
             }
-
-            throw new BitmovinApiException(response.StatusCode, responseError);
         }
     }
 }

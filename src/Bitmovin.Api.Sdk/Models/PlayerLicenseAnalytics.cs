@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class PlayerLicenseAnalytics
     {
         /// <summary>
-        /// Analytics License Key
+        /// Analytics License Key (required)
         /// </summary>
         [JsonProperty(PropertyName = "analyticsKey")]
         public string AnalyticsKey { get; set; }

@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class SccCaption : BitmovinResource
     {
         /// <summary>
-        /// The input location to get the scc file from
+        /// The input location to get the scc file from (required)
         /// </summary>
         [JsonProperty(PropertyName = "input")]
         public InputPath Input { get; set; }

@@ -20,7 +20,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Font
         /// </summary>
         [JsonProperty(PropertyName = "font")]
-        public TextFilterFont Font { get; set; }
+        public TextFilterFont? Font { get; set; }
         
         /// <summary>
         /// If set to true a box is drawn around the text using the background color.
@@ -113,13 +113,13 @@ namespace Bitmovin.Api.Sdk.Models
         public string Text { get; set; }
         
         /// <summary>
-        /// X position of the text. Also an expression can be used. The following variables are valid: line_h - height of each text line; main_h - input height; main_w - input width; n - number of input frame; text_h - Text height; text_w - Text width
+        /// X position of the text. Also an expression can be used. The following variables are valid: line_h - height of each text line; main_h - input height; main_w - input width; n - number of input frame; text_h - Text height; text_w - Text width (required)
         /// </summary>
         [JsonProperty(PropertyName = "x")]
         public string X { get; set; }
         
         /// <summary>
-        /// Y position of the text. Also an expression can be used. The following variables are valid: line_h - height of each text line; main_h - input height; main_w - input width; n - number of input frame; text_h - Text height; text_w - Text width
+        /// Y position of the text. Also an expression can be used. The following variables are valid: line_h - height of each text line; main_h - input height; main_w - input width; n - number of input frame; text_h - Text height; text_w - Text width (required)
         /// </summary>
         [JsonProperty(PropertyName = "y")]
         public string Y { get; set; }

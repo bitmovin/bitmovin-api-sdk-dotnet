@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class IFramePlaylist : BitmovinResource
     {
         /// <summary>
-        /// The filename of your I-frame playlist
+        /// The filename of your I-frame playlist (required)
         /// </summary>
         [JsonProperty(PropertyName = "filename")]
         public string Filename { get; set; }
