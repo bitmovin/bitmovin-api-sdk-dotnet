@@ -11,16 +11,16 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// AnalyticsFilter
+    /// LiveMediaIngestOutput
     /// </summary>
 
-    public class AnalyticsFilter : AnalyticsBaseFilter
+    public class LiveMediaIngestOutput : Output
     {
         /// <summary>
-        /// Value
+        /// URL specifying the publishing point for the output. Can use either http or https. (required)
         /// </summary>
-        [JsonProperty(PropertyName = "value")]
-        public Object Value { get; set; }
+        [JsonProperty(PropertyName = "publishingPoint")]
+        public string PublishingPoint { get; set; }
     }
 
 }

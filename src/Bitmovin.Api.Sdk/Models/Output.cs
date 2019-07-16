@@ -24,6 +24,7 @@ namespace Bitmovin.Api.Sdk.Models
     [JsonSubtypes.KnownSubType(typeof(S3RoleBasedOutput), "S3_ROLE_BASED")]
     [JsonSubtypes.KnownSubType(typeof(SftpOutput), "SFTP")]
     [JsonSubtypes.KnownSubType(typeof(AkamaiMslOutput), "AKAMAI_MSL")]
+    [JsonSubtypes.KnownSubType(typeof(LiveMediaIngestOutput), "LIVE_MEDIA_INGEST")]
 
     public class Output : BitmovinResource
     {

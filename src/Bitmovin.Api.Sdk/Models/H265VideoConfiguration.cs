@@ -182,13 +182,13 @@ namespace Bitmovin.Api.Sdk.Models
         /// Set the max content light level (MaxCLL). Use together with maxPictureAverageLightLevel (which will be 0 if not set). Part of HDR-10 metadata.
         /// </summary>
         [JsonProperty(PropertyName = "maxContentLightLevel")]
-        public string MaxContentLightLevel { get; set; }
+        public int? MaxContentLightLevel { get; set; }
         
         /// <summary>
         /// Set the maximum picture average light level (MaxFALL). Use together with maxContentLightLevel (which will be 0 if not set). Part of HDR-10 metadata.
         /// </summary>
-        [JsonProperty(PropertyName = "maxAverageLightLevel")]
-        public int? MaxAverageLightLevel { get; set; }
+        [JsonProperty(PropertyName = "maxPictureAverageLightLevel")]
+        public int? MaxPictureAverageLightLevel { get; set; }
         
         /// <summary>
         /// Force signaling of HDR parameters in SEI packets. Enabled automatically when masterDisplay or maxContentLightLevel/maxPictureAverageLightLevel are set. Useful when there is a desire to signal 0 values for maxContentLightLevel and maxPictureAverageLightLevel.

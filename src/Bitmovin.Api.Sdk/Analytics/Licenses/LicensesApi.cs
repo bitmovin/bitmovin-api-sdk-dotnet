@@ -52,6 +52,16 @@ namespace Bitmovin.Api.Sdk.Analytics.Licenses
             return await _apiClient.ListAsync();
         }
         
+        /// <summary>
+        /// Update Analytics License
+        /// </summary>
+        /// <param name="licenseId">License id</param>
+        /// <param name="analyticsLicenseUpdateRequest">The request payload</param>
+        public async Task<Models.AnalyticsLicense> UpdateAsync(string licenseId, Models.AnalyticsLicenseUpdateRequest analyticsLicenseUpdateRequest)
+        {
+            return await _apiClient.UpdateAsync(licenseId, analyticsLicenseUpdateRequest);
+        }
+        
         internal interface ILicensesApiClient
         {
             
@@ -66,6 +76,10 @@ namespace Bitmovin.Api.Sdk.Analytics.Licenses
             [Get("/analytics/licenses")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.AnalyticsLicense>> ListAsync();
+            
+            [Put("/analytics/licenses/{license_id}")]
+            [AllowAnyStatusCode]
+            Task<Models.AnalyticsLicense> UpdateAsync([Path("license_id")] string licenseId, [Body] Models.AnalyticsLicenseUpdateRequest analyticsLicenseUpdateRequest);
             
         }
         

@@ -73,7 +73,13 @@ namespace Bitmovin.Api.Sdk.Models
         /// AKAMAIMSL
         /// </summary>
         [EnumMember(Value = "AKAMAI_MSL")]
-        AKAMAIMSL
+        AKAMAIMSL,
+        
+        /// <summary>
+        /// LIVEMEDIAINGEST
+        /// </summary>
+        [EnumMember(Value = "LIVE_MEDIA_INGEST")]
+        LIVEMEDIAINGEST
         
     }
 

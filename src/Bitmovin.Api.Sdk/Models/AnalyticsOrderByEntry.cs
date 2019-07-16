@@ -20,7 +20,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Name
         /// </summary>
         [JsonProperty(PropertyName = "name")]
-        public string Name { get; set; }
+        public AnalyticsAttribute? Name { get; set; }
         
         /// <summary>
         /// Order

@@ -237,6 +237,11 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings
             /// </summary>
             public ListQueryParams Name(string Name) => SetQueryParam("name", Name);
 
+            /// <summary>
+            /// The search query string for advanced filtering.  We are using the [Apache Lucene](https://lucene.apache.org/) query syntax here.  Only lucene queries equivalent to exact matching and startsWith are supported.  Please be aware that our filters are **case-insensitive**  Examples of supported lucene queries:  + &#x60;name:MyEncoding1&#x60; - This searches for encodings with names that are equal to &#x60;myencoding1&#x60;  + &#x60;name:Test*&#x60; - This searches for encodings with names that start with &#x60;test&#x60;  Available search fields:  + &#x60;name&#x60;  If you provide fields or lucene queries that are not supported, it will result in an error response. 
+            /// </summary>
+            public ListQueryParams Search(string Search) => SetQueryParam("search", Search);
+
             private ListQueryParams SetQueryParam<T>(string key, T value)
             {
                 if (value != null)

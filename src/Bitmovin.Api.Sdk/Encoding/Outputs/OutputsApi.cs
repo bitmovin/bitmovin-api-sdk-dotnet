@@ -15,6 +15,7 @@ using Bitmovin.Api.Sdk.Encoding.Outputs.Ftp;
 using Bitmovin.Api.Sdk.Encoding.Outputs.Sftp;
 using Bitmovin.Api.Sdk.Encoding.Outputs.AkamaiMsl;
 using Bitmovin.Api.Sdk.Encoding.Outputs.AkamaiNetstorage;
+using Bitmovin.Api.Sdk.Encoding.Outputs.LiveMediaIngest;
 
 namespace Bitmovin.Api.Sdk.Encoding.Outputs
 {
@@ -37,6 +38,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs
             Sftp = new SftpApi(apiClientFactory);
             AkamaiMsl = new AkamaiMslApi(apiClientFactory);
             AkamaiNetstorage = new AkamaiNetstorageApi(apiClientFactory);
+            LiveMediaIngest = new LiveMediaIngestApi(apiClientFactory);
         }
 
         /// <summary>
@@ -55,6 +57,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs
         public SftpApi Sftp { get; private set; }
         public AkamaiMslApi AkamaiMsl { get; private set; }
         public AkamaiNetstorageApi AkamaiNetstorage { get; private set; }
+        public LiveMediaIngestApi LiveMediaIngest { get; private set; }
         
         /// <summary>
         /// List all Outputs

@@ -11,10 +11,10 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// AnalyticsQueryRequest
+    /// AnalyticsMetricsQueryRequest
     /// </summary>
 
-    public class AnalyticsQueryRequest : AnalyticsQueryTimeframe
+    public class AnalyticsMetricsQueryRequest : AnalyticsQueryTimeframe
     {
         /// <summary>
         /// Analytics license key (required)
@@ -26,19 +26,13 @@ namespace Bitmovin.Api.Sdk.Models
         /// Filters
         /// </summary>
         [JsonProperty(PropertyName = "filters")]
-        public List<AnalyticsBaseFilter> Filters { get; set; } = new List<AnalyticsBaseFilter>();
+        public List<AnalyticsFilter> Filters { get; set; } = new List<AnalyticsFilter>();
         
         /// <summary>
         /// OrderBy
         /// </summary>
         [JsonProperty(PropertyName = "orderBy")]
         public List<AnalyticsOrderByEntry> OrderBy { get; set; } = new List<AnalyticsOrderByEntry>();
-        
-        /// <summary>
-        /// Dimension
-        /// </summary>
-        [JsonProperty(PropertyName = "dimension")]
-        public AnalyticsAttribute? Dimension { get; set; }
         
         /// <summary>
         /// Interval
@@ -59,7 +53,7 @@ namespace Bitmovin.Api.Sdk.Models
         public long? Limit { get; set; }
         
         /// <summary>
-        /// Offset of data
+        /// Offset of data used for pagination
         /// </summary>
         [JsonProperty(PropertyName = "offset")]
         public long? Offset { get; set; }

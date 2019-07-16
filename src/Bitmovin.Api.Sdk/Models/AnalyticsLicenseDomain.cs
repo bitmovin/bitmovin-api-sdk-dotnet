@@ -11,16 +11,16 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// AnalyticsFilter
+    /// AnalyticsLicenseDomain
     /// </summary>
 
-    public class AnalyticsFilter : AnalyticsBaseFilter
+    public class AnalyticsLicenseDomain : BitmovinResponse
     {
         /// <summary>
-        /// Value
+        /// Url
         /// </summary>
-        [JsonProperty(PropertyName = "value")]
-        public Object Value { get; set; }
+        [JsonProperty(PropertyName = "url")]
+        public string Url { get; set; }
     }
 
 }
