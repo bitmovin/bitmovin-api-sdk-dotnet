@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using RestEase;
 using Bitmovin.Api.Sdk.Common;
+using Bitmovin.Api.Sdk.Encoding.Encodings.Live.InsertableContent;
+using Bitmovin.Api.Sdk.Encoding.Encodings.Live.ScheduledContentInsertion;
+using Bitmovin.Api.Sdk.Encoding.Encodings.Live.StopInsertedContent;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live
 {
@@ -15,6 +18,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live
         {
             _apiClient = apiClientFactory.CreateClient<ILiveApiClient>();
 
+            InsertableContent = new InsertableContentApi(apiClientFactory);
+            ScheduledContentInsertion = new ScheduledContentInsertionApi(apiClientFactory);
+            StopInsertedContent = new StopInsertedContentApi(apiClientFactory);
         }
 
         /// <summary>
@@ -22,6 +28,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live
         /// </summary>
         public static BitmovinApiBuilder<LiveApi> Builder => new BitmovinApiBuilder<LiveApi>();
 
+        public InsertableContentApi InsertableContent { get; private set; }
+        public ScheduledContentInsertionApi ScheduledContentInsertion { get; private set; }
+        public StopInsertedContentApi StopInsertedContent { get; private set; }
         
         /// <summary>
         /// Live Encoding Details

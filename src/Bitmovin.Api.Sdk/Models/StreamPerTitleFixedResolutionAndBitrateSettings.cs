@@ -38,13 +38,13 @@ namespace Bitmovin.Api.Sdk.Models
         /// Low complexity boundary for max bitrate
         /// </summary>
         [JsonProperty(PropertyName = "lowComplexityBoundaryForMaxBitrate")]
-        public double? LowComplexityBoundaryForMaxBitrate { get; set; }
+        public int? LowComplexityBoundaryForMaxBitrate { get; set; }
         
         /// <summary>
         /// High complexity boundary for max bitrate
         /// </summary>
         [JsonProperty(PropertyName = "highComplexityBoundaryForMaxBitrate")]
-        public double? HighComplexityBoundaryForMaxBitrate { get; set; }
+        public int? HighComplexityBoundaryForMaxBitrate { get; set; }
     }
 
 }

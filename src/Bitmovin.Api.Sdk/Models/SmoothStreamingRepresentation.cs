@@ -45,6 +45,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "trackName")]
         public string TrackName { get; set; }
+        
+        /// <summary>
+        /// Specify the priority of this representation. Representations with higher priority will be listed first in the manifest.
+        /// </summary>
+        [JsonProperty(PropertyName = "priority")]
+        public int? Priority { get; set; }
     }
 
 }

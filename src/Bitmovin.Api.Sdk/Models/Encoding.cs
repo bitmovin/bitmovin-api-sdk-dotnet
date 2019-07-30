@@ -41,6 +41,30 @@ namespace Bitmovin.Api.Sdk.Models
         public InfrastructureSettings Infrastructure { get; set; }
         
         /// <summary>
+        /// Will be set to the encoder version that was actually used for the encoding. This is especially useful when starting an encoding with a version tag like STABLE or BETA.
+        /// </summary>
+        [JsonProperty(PropertyName = "selectedEncoderVersion")]
+        public string SelectedEncoderVersion { get; internal set; }
+        
+        /// <summary>
+        /// Will be set to the encoding mode that was actually used for the encoding. This is especially useful when starting an encoding with encoding mode STANDARD.
+        /// </summary>
+        [JsonProperty(PropertyName = "selectedEncodingMode")]
+        public EncodingMode? SelectedEncodingMode { get; internal set; }
+        
+        /// <summary>
+        /// Contains the region which was selected when cloudregion:AUTO was specified
+        /// </summary>
+        [JsonProperty(PropertyName = "selectedCloudRegion")]
+        public CloudRegion? SelectedCloudRegion { get; internal set; }
+        
+        /// <summary>
+        /// The current status of the encoding.
+        /// </summary>
+        [JsonProperty(PropertyName = "status")]
+        public Status? Status { get; internal set; }
+        
+        /// <summary>
         /// You may pass a list of groups associated with this encoding. This will enable you to group results in the statistics resource
         /// </summary>
         [JsonProperty(PropertyName = "labels")]

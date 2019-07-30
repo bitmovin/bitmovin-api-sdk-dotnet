@@ -56,7 +56,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Number of media frames per CMAF chunk. Defaults to: Length of a segment in frames. Minimum: 1. Maximum: Length of a segment in frames.
         /// </summary>
         [JsonProperty(PropertyName = "framesPerCmafChunk")]
-        public Object FramesPerCmafChunk { get; set; }
+        public int? FramesPerCmafChunk { get; set; }
     }
 
 }

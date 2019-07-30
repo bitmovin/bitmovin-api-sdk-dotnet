@@ -29,10 +29,10 @@ namespace Bitmovin.Api.Sdk.Models
         public string Filename { get; set; }
         
         /// <summary>
-        /// Offset of MPEG-TS timestamps in seconds. E.g., first packet will start with PTS 900,000 for a 10 seconds offset (90,000 MPEG-TS timescale).
+        /// Offset of MPEG-TS timestamps in seconds. e.g. first packet will start with PTS 900,000 for a 10 seconds offset (90,000 MPEG-TS timescale).
         /// </summary>
         [JsonProperty(PropertyName = "startOffset")]
-        public double? StartOffset { get; set; }
+        public int? StartOffset { get; set; }
         
         /// <summary>
         /// Modifies the internal chunk length used for chunked encoding

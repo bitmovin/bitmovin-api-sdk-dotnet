@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Models
         public double? Crf { get; set; }
         
         /// <summary>
-        /// Profile
+        /// When setting a profile, all other settings must not exceed the limits which are defined in the profile. Otherwise, a higher profile may be automatically chosen. (required)
         /// </summary>
         [JsonProperty(PropertyName = "profile")]
         public ProfileH264? Profile { get; set; }
@@ -125,7 +125,7 @@ namespace Bitmovin.Api.Sdk.Models
         public double? MaxKeyframeInterval { get; set; }
         
         /// <summary>
-        /// Level
+        /// If three-pass encoding is used and a level is set for the encoder, the bitrate for some segments may exceed the bitrate limit which is defined by the level.
         /// </summary>
         [JsonProperty(PropertyName = "level")]
         public LevelH264? Level { get; set; }
