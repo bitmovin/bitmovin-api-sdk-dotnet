@@ -16,6 +16,11 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class WebVttConfiguration : BitmovinResource
     {
+        /// <summary>
+        /// If set to true, the hours section on webvtt timestamp values will explicitely have zeroes instead of being omitted for values where hours &#x3D; 0.
+        /// </summary>
+        [JsonProperty(PropertyName = "appendOptionalZeroHour")]
+        public bool? AppendOptionalZeroHour { get; set; }
     }
 
 }

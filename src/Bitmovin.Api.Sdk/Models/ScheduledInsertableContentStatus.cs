@@ -11,9 +11,9 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// ScheduledContentInsertionStatus
+    /// ScheduledInsertableContentStatus
     /// </summary>
-    public enum ScheduledContentInsertionStatus
+    public enum ScheduledInsertableContentStatus
     {
         /// <summary>
         /// CREATED

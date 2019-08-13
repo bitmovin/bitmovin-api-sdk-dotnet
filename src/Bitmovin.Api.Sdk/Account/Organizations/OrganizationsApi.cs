@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using RestEase;
 using Bitmovin.Api.Sdk.Common;
+using Bitmovin.Api.Sdk.Account.Organizations.SubOrganizations;
 using Bitmovin.Api.Sdk.Account.Organizations.Groups;
 
 namespace Bitmovin.Api.Sdk.Account.Organizations
@@ -16,6 +17,7 @@ namespace Bitmovin.Api.Sdk.Account.Organizations
         {
             _apiClient = apiClientFactory.CreateClient<IOrganizationsApiClient>();
 
+            SubOrganizations = new SubOrganizationsApi(apiClientFactory);
             Groups = new GroupsApi(apiClientFactory);
         }
 
@@ -24,6 +26,7 @@ namespace Bitmovin.Api.Sdk.Account.Organizations
         /// </summary>
         public static BitmovinApiBuilder<OrganizationsApi> Builder => new BitmovinApiBuilder<OrganizationsApi>();
 
+        public SubOrganizationsApi SubOrganizations { get; private set; }
         public GroupsApi Groups { get; private set; }
         
         /// <summary>
@@ -36,18 +39,9 @@ namespace Bitmovin.Api.Sdk.Account.Organizations
         }
         
         /// <summary>
-        /// Delete Organization
-        /// </summary>
-        /// <param name="organizationId">Id of the organization</param>
-        public async Task<Models.BitmovinResponse> DeleteAsync(string organizationId)
-        {
-            return await _apiClient.DeleteAsync(organizationId);
-        }
-        
-        /// <summary>
         /// Organization Details
         /// </summary>
-        /// <param name="organizationId">Id of the organization</param>
+        /// <param name="organizationId">ID of the organization</param>
         public async Task<Models.Organization> GetAsync(string organizationId)
         {
             return await _apiClient.GetAsync(organizationId);
@@ -67,10 +61,6 @@ namespace Bitmovin.Api.Sdk.Account.Organizations
             [Post("/account/organizations")]
             [AllowAnyStatusCode]
             Task<Models.Organization> CreateAsync([Body] Models.Organization organization);
-            
-            [Delete("/account/organizations/{organization_id}")]
-            [AllowAnyStatusCode]
-            Task<Models.BitmovinResponse> DeleteAsync([Path("organization_id")] string organizationId);
             
             [Get("/account/organizations/{organization_id}")]
             [AllowAnyStatusCode]

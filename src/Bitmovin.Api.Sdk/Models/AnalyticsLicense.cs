@@ -29,10 +29,10 @@ namespace Bitmovin.Api.Sdk.Models
         public string LicenseKey { get; internal set; }
         
         /// <summary>
-        /// Creation date of the Analytics License
+        /// Creation date of the Analytics License in UTC format
         /// </summary>
         [JsonProperty(PropertyName = "createdAt")]
-        public string CreatedAt { get; internal set; }
+        public DateTime? CreatedAt { get; internal set; }
         
         /// <summary>
         /// Maximum number of impressions

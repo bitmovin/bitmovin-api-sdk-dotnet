@@ -11,10 +11,16 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// AnalyticsOperator
+    /// AnalyticsQueryOperator
     /// </summary>
-    public enum AnalyticsOperator
+    public enum AnalyticsQueryOperator
     {
+        /// <summary>
+        /// IN
+        /// </summary>
+        [EnumMember(Value = "IN")]
+        IN,
+        
         /// <summary>
         /// EQ
         /// </summary>

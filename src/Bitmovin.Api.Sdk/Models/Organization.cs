@@ -16,6 +16,29 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class Organization : BitmovinResource
     {
+        /// <summary>
+        /// Type
+        /// </summary>
+        [JsonProperty(PropertyName = "type")]
+        public OrganizationType? Type { get; set; }
+        
+        /// <summary>
+        /// ID of the parent organization
+        /// </summary>
+        [JsonProperty(PropertyName = "parentId")]
+        public string ParentId { get; internal set; }
+        
+        /// <summary>
+        /// Hexadecimal color
+        /// </summary>
+        [JsonProperty(PropertyName = "labelColor")]
+        public string LabelColor { get; set; }
+        
+        /// <summary>
+        /// LimitsPerResource
+        /// </summary>
+        [JsonProperty(PropertyName = "limitsPerResource")]
+        public List<ResourceLimitContainer> LimitsPerResource { get; set; } = new List<ResourceLimitContainer>();
     }
 
 }

@@ -11,16 +11,11 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// AnalyticsFilter
+    /// AdAnalyticsMaxQueryRequest
     /// </summary>
 
-    public class AnalyticsFilter : AnalyticsBaseFilter
+    public class AdAnalyticsMaxQueryRequest : AdAnalyticsQueryRequest
     {
-        /// <summary>
-        /// Value
-        /// </summary>
-        [JsonProperty(PropertyName = "value")]
-        public Object Value { get; set; }
     }
 
 }

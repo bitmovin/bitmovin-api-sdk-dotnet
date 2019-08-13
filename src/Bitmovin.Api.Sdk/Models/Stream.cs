@@ -65,6 +65,12 @@ namespace Bitmovin.Api.Sdk.Models
         public StreamMode? Mode { get; set; }
         
         /// <summary>
+        /// The encoding mode of the stream which was applied by the assigned codec configuration
+        /// </summary>
+        [JsonProperty(PropertyName = "selectedEncodingMode")]
+        public EncodingMode? SelectedEncodingMode { get; internal set; }
+        
+        /// <summary>
         /// Settings to configure Per-Title on stream level
         /// </summary>
         [JsonProperty(PropertyName = "perTitleSettings")]

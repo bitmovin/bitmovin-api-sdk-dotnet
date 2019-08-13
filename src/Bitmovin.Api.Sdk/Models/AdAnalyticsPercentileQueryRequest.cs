@@ -11,22 +11,16 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// AnalyticsBaseFilter
+    /// AdAnalyticsPercentileQueryRequest
     /// </summary>
 
-    public class AnalyticsBaseFilter
+    public class AdAnalyticsPercentileQueryRequest : AnalyticsQueryRequest
     {
         /// <summary>
-        /// Name
+        /// The percentage (0-99) used for percentile queries.
         /// </summary>
-        [JsonProperty(PropertyName = "name")]
-        public string Name { get; set; }
-        
-        /// <summary>
-        /// Operator
-        /// </summary>
-        [JsonProperty(PropertyName = "operator")]
-        public string Operator { get; set; }
+        [JsonProperty(PropertyName = "percentile")]
+        public long? Percentile { get; set; }
     }
 
 }

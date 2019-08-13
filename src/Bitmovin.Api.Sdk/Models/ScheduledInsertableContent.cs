@@ -11,13 +11,13 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// ScheduledContentInsertion
+    /// ScheduledInsertableContent
     /// </summary>
 
-    public class ScheduledContentInsertion : BitmovinResource
+    public class ScheduledInsertableContent : BitmovinResource
     {
         /// <summary>
-        /// Id of the insertable content to play instead of the live stream (required)
+        /// Id of the insertable content to play instead of the live stream
         /// </summary>
         [JsonProperty(PropertyName = "contentId")]
         public string ContentId { get; set; }
@@ -35,10 +35,10 @@ namespace Bitmovin.Api.Sdk.Models
         public double? DurationInSeconds { get; set; }
         
         /// <summary>
-        /// Status of the scheduled content insertion.
+        /// Status of the scheduled insertable content.
         /// </summary>
         [JsonProperty(PropertyName = "status")]
-        public ScheduledContentInsertionStatus? Status { get; internal set; }
+        public ScheduledInsertableContentStatus? Status { get; internal set; }
     }
 
 }

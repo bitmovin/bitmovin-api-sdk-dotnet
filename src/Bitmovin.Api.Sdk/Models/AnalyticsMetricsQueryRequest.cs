@@ -26,7 +26,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Filters
         /// </summary>
         [JsonProperty(PropertyName = "filters")]
-        public List<AnalyticsFilter> Filters { get; set; } = new List<AnalyticsFilter>();
+        public List<AnalyticsAbstractFilter> Filters { get; set; } = new List<AnalyticsAbstractFilter>();
         
         /// <summary>
         /// OrderBy
