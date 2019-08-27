@@ -40,9 +40,9 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.Error
         /// </summary>
         /// <param name="encodingId">Id of the encoding</param>
         /// <param name="webhook">The request payload</param>
-        public async Task<Models.Webhook> CreatebyEncodingIdAsync(string encodingId, Models.Webhook webhook)
+        public async Task<Models.Webhook> CreateByEncodingIdAsync(string encodingId, Models.Webhook webhook)
         {
-            return await _apiClient.CreatebyEncodingIdAsync(encodingId, webhook);
+            return await _apiClient.CreateByEncodingIdAsync(encodingId, webhook);
         }
         
         /// <summary>
@@ -125,7 +125,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.Error
             
             [Post("/notifications/webhooks/encoding/encodings/{encoding_id}/error")]
             [AllowAnyStatusCode]
-            Task<Models.Webhook> CreatebyEncodingIdAsync([Path("encoding_id")] string encodingId, [Body] Models.Webhook webhook);
+            Task<Models.Webhook> CreateByEncodingIdAsync([Path("encoding_id")] string encodingId, [Body] Models.Webhook webhook);
             
             [Delete("/notifications/webhooks/encoding/encodings/{encoding_id}/error/{webhook_id}")]
             [AllowAnyStatusCode]

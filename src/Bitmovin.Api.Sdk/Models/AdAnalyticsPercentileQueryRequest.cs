@@ -14,7 +14,7 @@ namespace Bitmovin.Api.Sdk.Models
     /// AdAnalyticsPercentileQueryRequest
     /// </summary>
 
-    public class AdAnalyticsPercentileQueryRequest : AnalyticsQueryRequest
+    public class AdAnalyticsPercentileQueryRequest : AdAnalyticsQueryRequest
     {
         /// <summary>
         /// The percentage (0-99) used for percentile queries.
