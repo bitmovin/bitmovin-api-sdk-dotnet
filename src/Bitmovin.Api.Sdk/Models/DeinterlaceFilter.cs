@@ -33,6 +33,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "frameSelectionMode")]
         public DeinterlaceFrameSelectionMode? FrameSelectionMode { get; set; }
+        
+        /// <summary>
+        /// AutoEnable
+        /// </summary>
+        [JsonProperty(PropertyName = "autoEnable")]
+        public DeinterlaceAutoEnable? AutoEnable { get; set; }
     }
 
 }

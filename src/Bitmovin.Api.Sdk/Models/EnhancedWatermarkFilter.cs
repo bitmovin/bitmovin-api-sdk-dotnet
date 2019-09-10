@@ -57,6 +57,18 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "opacity")]
         public double? Opacity { get; set; }
+        
+        /// <summary>
+        /// Desired width of the watermark image, the unit of the parameter is specified separately by the parameter &#39;unit&#39;. If both width and height are set the watermark size is fixed. If only one is set the aspect ratio of the image will be used to rescale it
+        /// </summary>
+        [JsonProperty(PropertyName = "width")]
+        public double? Width { get; set; }
+        
+        /// <summary>
+        /// Desired height of the watermark image, the unit of the parameter is specified separately by the parameter &#39;unit&#39;. If both width and height are set the watermark size is fixed. If only one is set the aspect ratio of the image will be used to rescale it
+        /// </summary>
+        [JsonProperty(PropertyName = "height")]
+        public double? Height { get; set; }
     }
 
 }

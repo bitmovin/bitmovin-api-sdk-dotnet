@@ -55,7 +55,19 @@ namespace Bitmovin.Api.Sdk.Models
         /// FILE
         /// </summary>
         [EnumMember(Value = "FILE")]
-        FILE
+        FILE,
+        
+        /// <summary>
+        /// CAPTIONCEA608
+        /// </summary>
+        [EnumMember(Value = "CAPTION_CEA608")]
+        CAPTIONCEA608,
+        
+        /// <summary>
+        /// CAPTIONCEA708
+        /// </summary>
+        [EnumMember(Value = "CAPTION_CEA708")]
+        CAPTIONCEA708
         
     }
 

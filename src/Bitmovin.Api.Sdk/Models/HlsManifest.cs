@@ -17,7 +17,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class HlsManifest : Manifest
     {
         /// <summary>
-        /// The filename of your manifest (required)
+        /// The filename of your manifest. If this is not set, the &#x60;name&#x60; is used as output file name. Either one of &#x60;name&#x60; or &#x60;manifestName&#x60; is required. Be aware that spaces will be replaced with underlines (&#x60;_&#x60;) on the output.
         /// </summary>
         [JsonProperty(PropertyName = "manifestName")]
         public string ManifestName { get; set; }
