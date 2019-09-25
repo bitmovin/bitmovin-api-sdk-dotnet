@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class FrameIdId3Tag : Id3Tag
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "FRAME_ID";
+
         /// <summary>
         /// Base64 Encoded Data (required)
         /// </summary>

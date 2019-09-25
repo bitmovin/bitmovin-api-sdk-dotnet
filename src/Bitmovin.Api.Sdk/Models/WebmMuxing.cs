@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class WebmMuxing : Muxing
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "WEBM";
+
         /// <summary>
         /// Length of the fragments in seconds (required)
         /// </summary>

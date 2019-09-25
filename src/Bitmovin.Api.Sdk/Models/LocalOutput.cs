@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class LocalOutput : Output
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "LOCAL";
+
         /// <summary>
         /// Path to your local storage (required)
         /// </summary>

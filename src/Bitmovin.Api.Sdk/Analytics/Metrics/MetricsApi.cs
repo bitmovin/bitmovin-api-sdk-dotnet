@@ -1,4 +1,4 @@
-﻿using Bitmovin.Api.Sdk.Common;
+using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Analytics.Metrics.MaxConcurrentviewers;
 using Bitmovin.Api.Sdk.Analytics.Metrics.AvgConcurrentviewers;
 using Bitmovin.Api.Sdk.Analytics.Metrics.AvgDroppedFrames;

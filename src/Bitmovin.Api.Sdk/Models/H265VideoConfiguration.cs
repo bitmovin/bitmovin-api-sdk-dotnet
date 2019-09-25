@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class H265VideoConfiguration : VideoConfiguration
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "H265";
+
         /// <summary>
         /// Use a set of well defined configurations preset to support certain use cases. Can be overwritten with more specific values.
         /// </summary>

@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class S3Output : Output
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "S3";
+
         /// <summary>
         /// Amazon S3 bucket name (required)
         /// </summary>

@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class UdpMulticastInput : Input
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "UDP_MULTICAST";
+
         /// <summary>
         /// Host name or IP address to use (required)
         /// </summary>

@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class PlayReadyDrm : Drm
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "PLAYREADY";
+
         /// <summary>
         /// 16 byte encryption key, 32 hexadecimal characters. Either key or keySeed is required
         /// </summary>

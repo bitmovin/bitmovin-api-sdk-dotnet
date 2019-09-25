@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class SrtInput : Input
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "SRT";
+
         /// <summary>
         /// The SRT mode to use (required)
         /// </summary>

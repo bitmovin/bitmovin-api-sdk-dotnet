@@ -1,4 +1,4 @@
-﻿using Bitmovin.Api.Sdk.Common;
+using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Encoding.Inputs;
 using Bitmovin.Api.Sdk.Encoding.Outputs;
 using Bitmovin.Api.Sdk.Encoding.Configurations;

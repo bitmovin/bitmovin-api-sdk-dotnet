@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class CmafMuxing : Muxing
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "CMAF";
+
         /// <summary>
         /// Length of the fragments in seconds (required)
         /// </summary>

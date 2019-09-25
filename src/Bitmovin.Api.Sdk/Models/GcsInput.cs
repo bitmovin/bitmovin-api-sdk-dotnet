@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class GcsInput : Input
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "GCS";
+
         /// <summary>
         /// Name of the bucket (required)
         /// </summary>

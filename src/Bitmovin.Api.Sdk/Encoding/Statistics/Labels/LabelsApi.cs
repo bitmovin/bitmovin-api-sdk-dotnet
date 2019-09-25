@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -69,7 +69,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Labels
             
             [Get("/encoding/statistics/labels/{from}/{to}")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.StatisticsPerLabel>> ListByDateRangeAsync([Path("from", Format = "o")] DateTime? from, [Path("to", Format = "o")] DateTime? to, [QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.StatisticsPerLabel>> ListByDateRangeAsync([Path("from", Format = "yyyy-MM-dd")] DateTime? from, [Path("to", Format = "yyyy-MM-dd")] DateTime? to, [QueryMap] IDictionary<String, Object> queryParams);
             
         }
         

@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class HttpsInput : Input
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "HTTPS";
+
         /// <summary>
         /// Host Url or IP of the HTTP server (required)
         /// </summary>

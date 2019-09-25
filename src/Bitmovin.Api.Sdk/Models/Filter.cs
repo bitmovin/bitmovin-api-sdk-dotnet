@@ -15,6 +15,7 @@ namespace Bitmovin.Api.Sdk.Models
     /// </summary>
     [JsonConverter(typeof(JsonSubtypes), "type")]
     [JsonSubtypes.KnownSubType(typeof(CropFilter), "CROP")]
+    [JsonSubtypes.KnownSubType(typeof(ConformFilter), "CONFORM")]
     [JsonSubtypes.KnownSubType(typeof(WatermarkFilter), "WATERMARK")]
     [JsonSubtypes.KnownSubType(typeof(EnhancedWatermarkFilter), "ENHANCED_WATERMARK")]
     [JsonSubtypes.KnownSubType(typeof(RotateFilter), "ROTATE")]

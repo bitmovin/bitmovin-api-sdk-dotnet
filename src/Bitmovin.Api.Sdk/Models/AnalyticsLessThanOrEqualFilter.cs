@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class AnalyticsLessThanOrEqualFilter : AnalyticsAbstractFilter
     {
+        [JsonProperty(PropertyName = "operator")]
+        private readonly string _operator = "LTE";
+
         /// <summary>
         /// Value
         /// </summary>

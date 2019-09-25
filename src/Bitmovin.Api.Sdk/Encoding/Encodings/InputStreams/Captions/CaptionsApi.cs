@@ -1,4 +1,4 @@
-﻿using Bitmovin.Api.Sdk.Common;
+using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Captions.Cea608;
 using Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Captions.Cea708;
 

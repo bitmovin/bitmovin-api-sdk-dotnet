@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class Mp4Muxing : Muxing
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "MP4";
+
         /// <summary>
         /// Name of the new Video
         /// </summary>

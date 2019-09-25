@@ -1,9 +1,10 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using RestEase;
 using Bitmovin.Api.Sdk.Common;
+using Bitmovin.Api.Sdk.Encoding.Filters.Conform;
 using Bitmovin.Api.Sdk.Encoding.Filters.Watermark;
 using Bitmovin.Api.Sdk.Encoding.Filters.AudioVolume;
 using Bitmovin.Api.Sdk.Encoding.Filters.EnhancedWatermark;
@@ -29,6 +30,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters
         {
             _apiClient = apiClientFactory.CreateClient<IFiltersApiClient>();
 
+            Conform = new ConformApi(apiClientFactory);
             Watermark = new WatermarkApi(apiClientFactory);
             AudioVolume = new AudioVolumeApi(apiClientFactory);
             EnhancedWatermark = new EnhancedWatermarkApi(apiClientFactory);
@@ -50,6 +52,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters
         /// </summary>
         public static BitmovinApiBuilder<FiltersApi> Builder => new BitmovinApiBuilder<FiltersApi>();
 
+        public ConformApi Conform { get; private set; }
         public WatermarkApi Watermark { get; private set; }
         public AudioVolumeApi AudioVolume { get; private set; }
         public EnhancedWatermarkApi EnhancedWatermark { get; private set; }

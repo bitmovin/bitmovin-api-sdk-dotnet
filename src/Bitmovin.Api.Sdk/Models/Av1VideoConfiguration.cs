@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class Av1VideoConfiguration : VideoConfiguration
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "AV1";
+
         /// <summary>
         /// KeyPlacementMode
         /// </summary>

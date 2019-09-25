@@ -22,6 +22,12 @@ namespace Bitmovin.Api.Sdk.Models
         CROP,
         
         /// <summary>
+        /// CONFORM
+        /// </summary>
+        [EnumMember(Value = "CONFORM")]
+        CONFORM,
+        
+        /// <summary>
         /// WATERMARK
         /// </summary>
         [EnumMember(Value = "WATERMARK")]

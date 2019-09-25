@@ -1,4 +1,4 @@
-﻿using Bitmovin.Api.Sdk.Common;
+using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Audio;
 using Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Video;
 using Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Subtitle;

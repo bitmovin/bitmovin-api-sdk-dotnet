@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class TimeBasedTrimmingInputStream : InputStream
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "TRIMMING_TIME_BASED";
+
         /// <summary>
         /// The id of the ingest input stream that should be trimmed
         /// </summary>

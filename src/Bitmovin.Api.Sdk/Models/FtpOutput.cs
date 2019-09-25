@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class FtpOutput : Output
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "FTP";
+
         /// <summary>
         /// Host URL or IP of the FTP server (required)
         /// </summary>

@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class LiveMediaIngestOutput : Output
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "LIVE_MEDIA_INGEST";
+
         /// <summary>
         /// URL specifying the publishing point for the output. Can use either http or https. (required)
         /// </summary>

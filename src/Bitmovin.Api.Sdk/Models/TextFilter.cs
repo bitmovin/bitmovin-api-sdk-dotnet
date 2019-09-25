@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class TextFilter : Filter
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "TEXT";
+
         /// <summary>
         /// Font
         /// </summary>

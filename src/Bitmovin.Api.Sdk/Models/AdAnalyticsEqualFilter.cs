@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class AdAnalyticsEqualFilter : AdAnalyticsAbstractFilter
     {
+        [JsonProperty(PropertyName = "operator")]
+        private readonly string _operator = "EQ";
+
         /// <summary>
         /// Value
         /// </summary>

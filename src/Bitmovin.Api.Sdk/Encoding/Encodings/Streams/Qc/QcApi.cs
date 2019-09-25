@@ -1,4 +1,4 @@
-﻿using Bitmovin.Api.Sdk.Common;
+using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Qc.Psnr;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Qc

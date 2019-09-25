@@ -1,4 +1,4 @@
-﻿using Bitmovin.Api.Sdk.Common;
+using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Streams.BurnInSubtitles.Dvbsub;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Streams.BurnInSubtitles.Srt;
 

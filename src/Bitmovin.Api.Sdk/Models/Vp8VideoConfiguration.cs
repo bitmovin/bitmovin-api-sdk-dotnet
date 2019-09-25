@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class Vp8VideoConfiguration : VideoConfiguration
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "VP8";
+
         /// <summary>
         /// Sets the constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.
         /// </summary>

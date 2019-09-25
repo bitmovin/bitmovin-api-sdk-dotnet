@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class HeAacV2AudioConfiguration : AudioConfiguration
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "HE_AAC_V2";
+
         /// <summary>
         /// Channel layout of the audio codec configuration
         /// </summary>

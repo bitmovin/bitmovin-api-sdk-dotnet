@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class AkamaiNetStorageInput : Input
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "AKAMAI_NETSTORAGE";
+
         /// <summary>
         /// Host to use for Akamai NetStorage transfers (required)
         /// </summary>

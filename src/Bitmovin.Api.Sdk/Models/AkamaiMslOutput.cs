@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class AkamaiMslOutput : Output
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "AKAMAI_MSL";
+
         /// <summary>
         /// The Akamai stream ID (required)
         /// </summary>

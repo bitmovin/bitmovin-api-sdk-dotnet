@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class ProgressiveTsMuxing : Muxing
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "PROGRESSIVE_TS";
+
         /// <summary>
         /// Length of the segments in seconds
         /// </summary>

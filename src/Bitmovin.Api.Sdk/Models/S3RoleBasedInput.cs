@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class S3RoleBasedInput : Input
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "S3_ROLE_BASED";
+
         /// <summary>
         /// Amazon S3 bucket name (required)
         /// </summary>

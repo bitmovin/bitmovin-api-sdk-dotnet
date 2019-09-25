@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class IngestInputStream : InputStream
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "INGEST";
+
         /// <summary>
         /// Id of input
         /// </summary>

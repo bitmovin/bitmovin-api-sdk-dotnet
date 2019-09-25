@@ -1,4 +1,4 @@
-﻿using Bitmovin.Api.Sdk.Common;
+using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Account;
 using Bitmovin.Api.Sdk.Analytics;
 using Bitmovin.Api.Sdk.Encoding;

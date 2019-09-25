@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class AnalyticsContainsFilter : AnalyticsAbstractFilter
     {
+        [JsonProperty(PropertyName = "operator")]
+        private readonly string _operator = "CONTAINS";
+
         /// <summary>
         /// Value
         /// </summary>

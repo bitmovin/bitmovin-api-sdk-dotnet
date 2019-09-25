@@ -1,4 +1,4 @@
-﻿using Bitmovin.Api.Sdk.Common;
+using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Encoding.Configurations.Subtitles.Webvtt;
 
 namespace Bitmovin.Api.Sdk.Encoding.Configurations.Subtitles

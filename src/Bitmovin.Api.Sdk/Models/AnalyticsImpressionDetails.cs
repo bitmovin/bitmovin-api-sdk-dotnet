@@ -41,6 +41,12 @@ namespace Bitmovin.Api.Sdk.Models
         public long? AudioBitrate { get; set; }
         
         /// <summary>
+        /// Selected audio language
+        /// </summary>
+        [JsonProperty(PropertyName = "audioLanguage")]
+        public string AudioLanguage { get; set; }
+        
+        /// <summary>
         /// Autoplay enabled
         /// </summary>
         [JsonProperty(PropertyName = "autoplay")]
@@ -65,7 +71,7 @@ namespace Bitmovin.Api.Sdk.Models
         public string BrowserVersionMinor { get; set; }
         
         /// <summary>
-        /// Millisecond the player buffered
+        /// Milliseconds the player buffered
         /// </summary>
         [JsonProperty(PropertyName = "buffered")]
         public long? Buffered { get; set; }
@@ -369,6 +375,18 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "streamFormat")]
         public string StreamFormat { get; set; }
+        
+        /// <summary>
+        /// Subtitle enabled
+        /// </summary>
+        [JsonProperty(PropertyName = "subtitleEnabled")]
+        public bool? SubtitleEnabled { get; set; }
+        
+        /// <summary>
+        /// Selected subtitle language
+        /// </summary>
+        [JsonProperty(PropertyName = "subtitleLanguage")]
+        public string SubtitleLanguage { get; set; }
         
         /// <summary>
         /// Current time in milliseconds

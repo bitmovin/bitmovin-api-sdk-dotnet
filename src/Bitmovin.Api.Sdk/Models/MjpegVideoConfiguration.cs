@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class MjpegVideoConfiguration : CodecConfiguration
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "MJPEG";
+
         /// <summary>
         /// Width of the encoded video
         /// </summary>

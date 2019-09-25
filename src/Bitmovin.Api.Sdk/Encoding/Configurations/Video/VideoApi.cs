@@ -1,4 +1,4 @@
-﻿using Bitmovin.Api.Sdk.Common;
+using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Encoding.Configurations.Video.H264;
 using Bitmovin.Api.Sdk.Encoding.Configurations.Video.H265;
 using Bitmovin.Api.Sdk.Encoding.Configurations.Video.Vp8;

@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class FairPlayDrm : Drm
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "FAIRPLAY";
+
         /// <summary>
         /// 16 byte Encryption key, 32 hexadecimal characters (required)
         /// </summary>

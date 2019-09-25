@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class Cea608CaptionInputStream : InputStream
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "CAPTION_CEA608";
+
         /// <summary>
         /// Id of the Input (required)
         /// </summary>

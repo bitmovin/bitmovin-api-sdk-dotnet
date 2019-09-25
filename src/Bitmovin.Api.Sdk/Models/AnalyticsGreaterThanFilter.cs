@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class AnalyticsGreaterThanFilter : AnalyticsAbstractFilter
     {
+        [JsonProperty(PropertyName = "operator")]
+        private readonly string _operator = "GT";
+
         /// <summary>
         /// Value
         /// </summary>

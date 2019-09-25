@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class AudioMixInputStream : InputStream
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "AUDIO_MIX";
+
         /// <summary>
         /// Channel layout of the audio mix input stream
         /// </summary>

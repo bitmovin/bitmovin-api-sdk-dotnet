@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class PrimeTimeDrm : Drm
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "PRIMETIME";
+
         /// <summary>
         /// 16 byte Encryption key, 32 hexadecimal characters (required)
         /// </summary>

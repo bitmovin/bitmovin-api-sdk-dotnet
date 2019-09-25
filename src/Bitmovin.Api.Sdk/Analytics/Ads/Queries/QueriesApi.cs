@@ -1,4 +1,4 @@
-﻿using Bitmovin.Api.Sdk.Common;
+using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Analytics.Ads.Queries.Count;
 using Bitmovin.Api.Sdk.Analytics.Ads.Queries.Sum;
 using Bitmovin.Api.Sdk.Analytics.Ads.Queries.Avg;

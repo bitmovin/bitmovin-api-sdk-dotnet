@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class AnalyticsInFilter : AnalyticsAbstractFilter
     {
+        [JsonProperty(PropertyName = "operator")]
+        private readonly string _operator = "IN";
+
         /// <summary>
         /// Value
         /// </summary>

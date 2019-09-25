@@ -1,4 +1,4 @@
-﻿using Bitmovin.Api.Sdk.Common;
+using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Account.Information;
 using Bitmovin.Api.Sdk.Account.Login;
 using Bitmovin.Api.Sdk.Account.Limits;

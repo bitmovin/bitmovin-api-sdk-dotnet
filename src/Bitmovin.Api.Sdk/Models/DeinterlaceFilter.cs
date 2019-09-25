@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class DeinterlaceFilter : Filter
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "DEINTERLACE";
+
         /// <summary>
         /// Parity
         /// </summary>

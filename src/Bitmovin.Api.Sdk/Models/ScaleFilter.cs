@@ -16,14 +16,17 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class ScaleFilter : Filter
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "SCALE";
+
         /// <summary>
-        /// The width of the output frame in pixel. If not set: codec configuration width will be used.
+        /// The width of the output frame in pixels. If not set it will be based on the configured height by maintaining the original aspect ratio. If height is also not set, the original source dimensions will be applied.
         /// </summary>
         [JsonProperty(PropertyName = "width")]
         public int? Width { get; set; }
         
         /// <summary>
-        /// The height of the output frame in pixel. If not set: codec configuration height will be used.
+        /// The height of the output frame in pixels. If not set it will be based on the configured width by maintaining the original aspect ratio. If width is also not set, the original source dimensions will be applied.
         /// </summary>
         [JsonProperty(PropertyName = "height")]
         public int? Height { get; set; }

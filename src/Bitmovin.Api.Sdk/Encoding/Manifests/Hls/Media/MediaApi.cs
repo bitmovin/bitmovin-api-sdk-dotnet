@@ -1,4 +1,4 @@
-﻿using Bitmovin.Api.Sdk.Common;
+using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media.CustomTags;
 using Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media.Type;
 using Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media.Video;

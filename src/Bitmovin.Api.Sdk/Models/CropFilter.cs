@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class CropFilter : Filter
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "CROP";
+
         /// <summary>
         /// Amount of pixels which will be cropped of the input video from the left side.
         /// </summary>

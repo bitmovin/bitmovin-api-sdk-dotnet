@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class GcsOutput : Output
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "GCS";
+
         /// <summary>
         /// GCS access key (required)
         /// </summary>

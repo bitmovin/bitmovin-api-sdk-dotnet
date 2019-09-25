@@ -19,7 +19,13 @@ namespace Bitmovin.Api.Sdk.Models
         /// Specifies that the Sidecar file conforms to the TTML standard
         /// </summary>
         [EnumMember(Value = "TTML")]
-        TTML
+        TTML,
+        
+        /// <summary>
+        /// Specifies that the Sidecar file conforms to the WEBVTT standard
+        /// </summary>
+        [EnumMember(Value = "WEBVTT")]
+        WEBVTT
         
     }
 

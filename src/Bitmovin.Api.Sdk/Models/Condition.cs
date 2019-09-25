@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class Condition : AbstractCondition
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "CONDITION";
+
         /// <summary>
         /// The attribute that should be used for the evaluation. Valid values include, depending on the context: - HEIGHT - WIDTH - BITRATE - FPS - ASPECTRATIO - INPUTSTREAM - LANGUAGE - CHANNELFORMAT - CHANNELLAYOUT - STREAMCOUNT - AUDIOSTREAMCOUNT - VIDEOSTREAMCOUNT - DURATION - CONNECTION_STATUS - CONNECTION_STATUS_JUST_CHANGED (required)
         /// </summary>

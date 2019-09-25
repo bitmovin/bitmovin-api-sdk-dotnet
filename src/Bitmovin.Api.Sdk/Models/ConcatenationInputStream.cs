@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class ConcatenationInputStream : InputStream
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "CONCATENATION";
+
         /// <summary>
         /// Concatenation configuration for the output of this stream
         /// </summary>

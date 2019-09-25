@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class ProgressiveMovMuxing : Muxing
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "PROGRESSIVE_MOV";
+
         /// <summary>
         /// The output file name
         /// </summary>

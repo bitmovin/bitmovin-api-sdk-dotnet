@@ -1,4 +1,4 @@
-﻿using Bitmovin.Api.Sdk.Common;
+using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.Finished;
 using Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.Error;
 

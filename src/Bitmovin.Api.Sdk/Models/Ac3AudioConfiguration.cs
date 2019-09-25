@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class Ac3AudioConfiguration : AudioConfiguration
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "AC3";
+
         /// <summary>
         /// Channel layout of the audio codec configuration
         /// </summary>

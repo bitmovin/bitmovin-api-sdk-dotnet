@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class H264PictureTimingTrimmingInputStream : InputStream
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "TRIMMING_H264_PICTURE_TIMING";
+
         /// <summary>
         /// The id of the ingest input stream that should be trimmed
         /// </summary>

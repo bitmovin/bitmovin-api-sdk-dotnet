@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class GenericS3Input : Input
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "GENERIC_S3";
+
         /// <summary>
         /// Your generic S3 bucket name (required)
         /// </summary>

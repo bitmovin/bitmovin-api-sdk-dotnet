@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -66,7 +66,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Daily
             
             [Get("/encoding/statistics/daily/{from}/{to}")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.DailyStatistics>> ListByDateRangeAsync([Path("from", Format = "o")] DateTime? from, [Path("to", Format = "o")] DateTime? to, [QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.DailyStatistics>> ListByDateRangeAsync([Path("from", Format = "yyyy-MM-dd")] DateTime? from, [Path("to", Format = "yyyy-MM-dd")] DateTime? to, [QueryMap] IDictionary<String, Object> queryParams);
             
         }
         

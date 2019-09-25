@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -27,7 +27,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Type
         /// Get Filter Type
         /// </summary>
         /// <param name="filterId">Id of the filter</param>
-        public async Task<Models.FilterTypeResponse> GetAsync(string filterId)
+        public async Task<Models.FilterType> GetAsync(string filterId)
         {
             return await _apiClient.GetAsync(filterId);
         }
@@ -37,7 +37,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Type
             
             [Get("/encoding/filters/{filter_id}/type")]
             [AllowAnyStatusCode]
-            Task<Models.FilterTypeResponse> GetAsync([Path("filter_id")] string filterId);
+            Task<Models.FilterType> GetAsync([Path("filter_id")] string filterId);
             
         }
         

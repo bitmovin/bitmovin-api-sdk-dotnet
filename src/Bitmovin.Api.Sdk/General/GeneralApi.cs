@@ -1,4 +1,4 @@
-﻿using Bitmovin.Api.Sdk.Common;
+using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.General.ErrorDefinitions;
 
 namespace Bitmovin.Api.Sdk.General

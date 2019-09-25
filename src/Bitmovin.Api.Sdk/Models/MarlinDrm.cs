@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class MarlinDrm : Drm
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "MARLIN";
+
         /// <summary>
         /// 16 byte key in hex (32 characters) (required)
         /// </summary>

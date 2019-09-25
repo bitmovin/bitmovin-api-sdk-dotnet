@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class AdAnalyticsNotContainsFilter : AdAnalyticsAbstractFilter
     {
+        [JsonProperty(PropertyName = "operator")]
+        private readonly string _operator = "NOTCONTAINS";
+
         /// <summary>
         /// Value
         /// </summary>

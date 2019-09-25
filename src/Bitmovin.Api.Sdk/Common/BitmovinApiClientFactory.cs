@@ -89,7 +89,7 @@ namespace Bitmovin.Api.Sdk.Common
             var headers = new Dictionary<string, string>
             {
                 {"X-Api-Client", "bitmovin-api-sdk-dotnet"},
-                {"X-Api-Client-Version", "1.23.0-alpha.0"}
+                {"X-Api-Client-Version", "1.24.0-alpha.0"}
             };
 
             if (!string.IsNullOrEmpty(ApiKey))
@@ -110,7 +110,7 @@ namespace Bitmovin.Api.Sdk.Common
             return new JsonSerializerSettings
             {
                 ContractResolver = new EmptyCollectionContractResolver(),
-                Converters = {new StringEnumConverter()},
+                Converters = {new TolerantEnumConverter()},
                 NullValueHandling = NullValueHandling.Ignore
             };
         }
@@ -122,6 +122,21 @@ namespace Bitmovin.Api.Sdk.Common
                 RequestBodySerializer = CreateRequestBodySerializer(),
                 ResponseDeserializer = CreateResponseDeserializer()
             };
+        }
+
+        private class TolerantEnumConverter : StringEnumConverter
+        {
+            public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+            {
+                try
+                {
+                    return base.ReadJson(reader, objectType, existingValue, serializer);
+                }
+                catch
+                {
+                    return null;
+                }
+            }
         }
     }
 }

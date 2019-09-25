@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class AudioMixFilter : Filter
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "AUDIO_MIX";
+
         /// <summary>
         /// Channel layout of the audio codec configuration (required)
         /// </summary>

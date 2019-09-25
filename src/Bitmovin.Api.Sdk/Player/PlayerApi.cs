@@ -1,4 +1,4 @@
-﻿using Bitmovin.Api.Sdk.Common;
+using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Player.Channels;
 using Bitmovin.Api.Sdk.Player.Licenses;
 using Bitmovin.Api.Sdk.Player.CustomBuilds;

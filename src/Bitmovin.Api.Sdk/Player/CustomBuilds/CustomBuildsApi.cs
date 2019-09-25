@@ -1,4 +1,4 @@
-﻿using Bitmovin.Api.Sdk.Common;
+using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Player.CustomBuilds.Web;
 
 namespace Bitmovin.Api.Sdk.Player.CustomBuilds

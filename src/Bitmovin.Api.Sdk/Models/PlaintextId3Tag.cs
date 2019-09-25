@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class PlaintextId3Tag : Id3Tag
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "PLAIN_TEXT";
+
         /// <summary>
         /// Plain Text Data (required)
         /// </summary>

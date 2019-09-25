@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class BroadcastTsMuxing : Muxing
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "BROADCAST_TS";
+
         /// <summary>
         /// Length of the segments in seconds.
         /// </summary>

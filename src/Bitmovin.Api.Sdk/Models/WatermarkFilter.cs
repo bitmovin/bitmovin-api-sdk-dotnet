@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class WatermarkFilter : Filter
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "WATERMARK";
+
         /// <summary>
         /// URL of the file to be used as watermark image. Supported image formats: PNG, JPEG, BMP, GIF (required)
         /// </summary>

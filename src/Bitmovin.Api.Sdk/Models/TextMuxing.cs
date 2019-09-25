@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class TextMuxing : Muxing
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "TEXT";
+
         /// <summary>
         /// The output file name (required)
         /// </summary>

@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class AesEncryptionDrm : Drm
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "AES";
+
         /// <summary>
         /// 16 byte Encryption key, 32 hexadecimal characters (required)
         /// </summary>

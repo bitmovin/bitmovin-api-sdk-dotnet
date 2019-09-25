@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class ClearKeyDrm : Drm
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "CLEARKEY";
+
         /// <summary>
         /// 16 byte encryption key, 32 hexadecimal characters (required)
         /// </summary>

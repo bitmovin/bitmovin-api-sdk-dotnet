@@ -1,4 +1,4 @@
-﻿using Bitmovin.Api.Sdk.Common;
+using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Trimming.TimeBased;
 using Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Trimming.TimecodeTrack;
 using Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Trimming.H264PictureTiming;

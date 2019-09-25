@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class OpusAudioConfiguration : AudioConfiguration
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "OPUS";
+
         /// <summary>
         /// Channel layout of the audio codec configuration
         /// </summary>

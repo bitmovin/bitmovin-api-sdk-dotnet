@@ -20,14 +20,38 @@ namespace Bitmovin.Api.Sdk.Common.Http
         protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request,
             CancellationToken cancellationToken)
         {
-            var response = await base.SendAsync(request, cancellationToken);
-
-            if (response.IsSuccessStatusCode)
+            try
             {
-                return response;
+                var response = await base.SendAsync(request, cancellationToken);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    return response;
+                }
+
+                throw await ConstructBitmovinApiException(request, response);
+            }
+            catch (HttpRequestException ex)
+            {
+                throw await ConstructBitmovinApiExceptionAsync(request, ex);
+            }
+        }
+
+        private async Task<BitmovinApiException> ConstructBitmovinApiExceptionAsync(HttpRequestMessage request, HttpRequestException exception)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine(exception.Message);
+
+            if (exception.InnerException != null && !string.IsNullOrEmpty(exception.InnerException.Message))
+            {
+                sb.AppendLine("developerMessage:");
+                sb.AppendLine("  " + exception.InnerException.Message);
             }
 
-            throw await ConstructBitmovinApiException(request, response);
+            sb.AppendLine("request:");
+            sb.Append(await ConstructRequestMessage(request));
+
+            throw new BitmovinApiException(sb.ToString(), 0, null, exception);
         }
 
         private async Task<BitmovinApiException> ConstructBitmovinApiException(
@@ -127,7 +151,10 @@ namespace Bitmovin.Api.Sdk.Common.Http
             foreach (var message in details)
             {
                 sb.AppendLine($"  - id: {message.Id}");
-                sb.AppendLine($"    date: {message.Date}");
+                if (message.Date != null)
+                {
+                    sb.AppendLine($"    date: {message.Date?.ToString(_jsonSettings.DateFormatString)}");
+                }
                 sb.AppendLine($"    type: {message.Type}");
                 sb.AppendLine($"    text: {message.Text}");
                 sb.AppendLine($"    field: {message.Field}");

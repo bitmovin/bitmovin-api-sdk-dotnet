@@ -1,4 +1,4 @@
-﻿using Bitmovin.Api.Sdk.Common;
+using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Encoding.Manifests.Smooth.Representations.Mp4;
 
 namespace Bitmovin.Api.Sdk.Encoding.Manifests.Smooth.Representations

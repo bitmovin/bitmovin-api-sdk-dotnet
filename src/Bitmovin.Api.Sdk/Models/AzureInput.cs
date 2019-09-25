@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class AzureInput : Input
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "AZURE";
+
         /// <summary>
         /// Azure Account Name (required)
         /// </summary>

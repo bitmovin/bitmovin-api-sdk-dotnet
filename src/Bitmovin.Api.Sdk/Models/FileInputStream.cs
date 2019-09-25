@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class FileInputStream : InputStream
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "FILE";
+
         /// <summary>
         /// Id of input (required)
         /// </summary>

@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class AudioVolumeFilter : Filter
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "AUDIO_VOLUME";
+
         /// <summary>
         /// Audio volume value (required)
         /// </summary>

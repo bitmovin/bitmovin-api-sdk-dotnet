@@ -1,4 +1,4 @@
-﻿using Bitmovin.Api.Sdk.Common;
+using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Aac;
 using Bitmovin.Api.Sdk.Encoding.Configurations.Audio.HeAacV1;
 using Bitmovin.Api.Sdk.Encoding.Configurations.Audio.HeAacV2;

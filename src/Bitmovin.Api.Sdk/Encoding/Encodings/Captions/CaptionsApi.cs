@@ -1,4 +1,4 @@
-﻿using Bitmovin.Api.Sdk.Common;
+using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Captions.Scc;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Captions

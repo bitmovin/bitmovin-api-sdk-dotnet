@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class ChunkedTextMuxing : Muxing
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "CHUNKED_TEXT";
+
         /// <summary>
         /// Length of the segments in seconds (required)
         /// </summary>

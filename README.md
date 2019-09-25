@@ -1,14 +1,25 @@
-# Bitmovin C# API Client
+<p align="center">
+  <a href="https://www.bitmovin.com">
+    <img alt="Bitmovin C# API SDK Header" src="https://cdn.bitmovin.com/frontend/encoding/openapi-clients/readme-headers/ReadmeHeader_C%23.png" >
+  </a>
+
+  <h4 align="center">
+    C# API SDK which enables you to seamlessly integrate the Bitmovin API into your projects.
+  </h4>
+
+  <p align="center">
+    <a href="https://badge.fury.io/nu/Bitmovin.Api.Sdk"><img src="https://badge.fury.io/nu/Bitmovin.Api.Sdk.svg" alt="NuGet version" height="18"></a>
+    <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License"></img></a>
+  </p>
+</p>
 
 ***Important! This is an alpha version, there may be breaking changes.***
 
-[![bitmovin](http://bitmovin-a.akamaihd.net/webpages/bitmovin-logo-github.png)](http://www.bitmovin.com)
+Using this API client requires an active account.
 
-C#-Client which enables you to seamlessly integrate the Bitmovin API into your projects. Using this API client requires an active account.
+> Don't have an account yet? [Sign up for a free Bitmovin trial plan](https://dashboard.bitmovin.com/signup)!
 
-[Sign up for a Bitmovin Account!](https://dashboard.bitmovin.com/signup)
-
-The full API reference can be found [here](https://bitmovin.com/docs).
+For full documentation of all available API endpoints, see the [Bitmovin API reference](https://bitmovin.com/docs).
 
 ## Installation
 
@@ -18,13 +29,13 @@ Add this dependency to your project:
 
 Package Manager
 ```shell
-Install-Package Bitmovin.Api.Sdk -Version 1.23.0-alpha.0
+Install-Package Bitmovin.Api.Sdk -Version 1.24.0-alpha.0
 ```
 
 .NET CLI
 
 ```shell
-dotnet add package Bitmovin.Api.Sdk --version 1.23.0-alpha.0
+dotnet add package Bitmovin.Api.Sdk --version 1.24.0-alpha.0
 ```
 
 ## Initialization

@@ -1,6 +1,7 @@
-﻿using Bitmovin.Api.Sdk.Common;
+using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Encoding.Infrastructure.Kubernetes;
 using Bitmovin.Api.Sdk.Encoding.Infrastructure.Aws;
+using Bitmovin.Api.Sdk.Encoding.Infrastructure.Gce;
 
 namespace Bitmovin.Api.Sdk.Encoding.Infrastructure
 {
@@ -10,6 +11,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure
         {
             Kubernetes = new KubernetesApi(apiClientFactory);
             Aws = new AwsApi(apiClientFactory);
+            Gce = new GceApi(apiClientFactory);
         }
 
         /// <summary>
@@ -19,6 +21,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure
 
         public KubernetesApi Kubernetes { get; private set; }
         public AwsApi Aws { get; private set; }
+        public GceApi Gce { get; private set; }
 
     }
 }

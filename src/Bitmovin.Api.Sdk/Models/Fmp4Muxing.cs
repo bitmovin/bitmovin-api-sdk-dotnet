@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class Fmp4Muxing : Muxing
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "FMP4";
+
         /// <summary>
         /// Length of the fragments in seconds (required)
         /// </summary>

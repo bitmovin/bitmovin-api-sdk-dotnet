@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class SftpOutput : Output
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "SFTP";
+
         /// <summary>
         /// Host Url or IP of the SFTP server (required)
         /// </summary>

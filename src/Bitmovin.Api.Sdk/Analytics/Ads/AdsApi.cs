@@ -1,4 +1,4 @@
-﻿using Bitmovin.Api.Sdk.Common;
+using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Analytics.Ads.Queries;
 
 namespace Bitmovin.Api.Sdk.Analytics.Ads

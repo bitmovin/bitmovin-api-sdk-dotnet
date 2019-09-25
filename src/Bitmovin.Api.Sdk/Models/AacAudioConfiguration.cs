@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class AacAudioConfiguration : AudioConfiguration
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "AAC";
+
         /// <summary>
         /// Channel layout of the audio codec configuration
         /// </summary>

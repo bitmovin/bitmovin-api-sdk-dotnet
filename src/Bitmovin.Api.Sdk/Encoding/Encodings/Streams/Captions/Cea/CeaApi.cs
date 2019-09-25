@@ -1,4 +1,4 @@
-﻿using Bitmovin.Api.Sdk.Common;
+using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Captions.Cea.Scc;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Captions.Cea

@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class S3Input : Input
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "S3";
+
         /// <summary>
         /// The cloud region in which the bucket is located. Is used to determine the ideal location for your encodings automatically.
         /// </summary>

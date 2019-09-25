@@ -11,16 +11,19 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// FilterTypeResponse
+    /// ConformFilter
     /// </summary>
 
-    public class FilterTypeResponse
+    public class ConformFilter : Filter
     {
-        /// <summary>
-        /// The type of the filter
-        /// </summary>
         [JsonProperty(PropertyName = "type")]
-        public FilterType? Type { get; set; }
+        private readonly string _type = "CONFORM";
+
+        /// <summary>
+        /// The FPS the input should be changed to.
+        /// </summary>
+        [JsonProperty(PropertyName = "targetFps")]
+        public double? TargetFps { get; set; }
     }
 
 }
