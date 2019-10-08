@@ -85,7 +85,13 @@ namespace Bitmovin.Api.Sdk.Models
         /// TEXT
         /// </summary>
         [EnumMember(Value = "TEXT")]
-        TEXT
+        TEXT,
+        
+        /// <summary>
+        /// SEGMENTEDRAW
+        /// </summary>
+        [EnumMember(Value = "SEGMENTED_RAW")]
+        SEGMENTEDRAW
         
     }
 

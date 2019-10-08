@@ -22,6 +22,7 @@ namespace Bitmovin.Api.Sdk.Models
     [JsonSubtypes.KnownSubType(typeof(ClearKeyDrm), "CLEARKEY")]
     [JsonSubtypes.KnownSubType(typeof(AesEncryptionDrm), "AES")]
     [JsonSubtypes.KnownSubType(typeof(CencDrm), "CENC")]
+    [JsonSubtypes.KnownSubType(typeof(SpekeDrm), "SPEKE")]
 
     public class Drm : BitmovinResource
     {

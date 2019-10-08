@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using RestEase;
 using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Drm.Fairplay;
+using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Drm.Speke;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Drm
 {
@@ -17,6 +18,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Drm
             _apiClient = apiClientFactory.CreateClient<IDrmApiClient>();
 
             Fairplay = new FairplayApi(apiClientFactory);
+            Speke = new SpekeApi(apiClientFactory);
         }
 
         /// <summary>
@@ -25,6 +27,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Drm
         public static BitmovinApiBuilder<DrmApi> Builder => new BitmovinApiBuilder<DrmApi>();
 
         public FairplayApi Fairplay { get; private set; }
+        public SpekeApi Speke { get; private set; }
         
         /// <summary>
         /// List all DRM configurations of Progressive TS Muxing

@@ -16,6 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class DvbTeletextInputStream : InputStream
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "DVB_TELETEXT";
+
         /// <summary>
         /// Id of input
         /// </summary>

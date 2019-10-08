@@ -61,7 +61,13 @@ namespace Bitmovin.Api.Sdk.Models
         /// The type of the drm
         /// </summary>
         [EnumMember(Value = "CENC")]
-        CENC
+        CENC,
+        
+        /// <summary>
+        /// The type of the drm
+        /// </summary>
+        [EnumMember(Value = "SPEKE")]
+        SPEKE
         
     }
 

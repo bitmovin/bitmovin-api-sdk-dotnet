@@ -11,6 +11,7 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm.Fairplay;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm.Marlin;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm.Clearkey;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm.Cenc;
+using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm.Speke;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm
 {
@@ -29,6 +30,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm
             Marlin = new MarlinApi(apiClientFactory);
             Clearkey = new ClearkeyApi(apiClientFactory);
             Cenc = new CencApi(apiClientFactory);
+            Speke = new SpekeApi(apiClientFactory);
         }
 
         /// <summary>
@@ -43,6 +45,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm
         public MarlinApi Marlin { get; private set; }
         public ClearkeyApi Clearkey { get; private set; }
         public CencApi Cenc { get; private set; }
+        public SpekeApi Speke { get; private set; }
         
         /// <summary>
         /// List all DRMs of FMP4 Muxing

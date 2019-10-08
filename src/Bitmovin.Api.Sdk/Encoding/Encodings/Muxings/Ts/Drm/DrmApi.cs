@@ -6,6 +6,7 @@ using RestEase;
 using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Ts.Drm.Fairplay;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Ts.Drm.Aes;
+using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Ts.Drm.Speke;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Ts.Drm
 {
@@ -19,6 +20,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Ts.Drm
 
             Fairplay = new FairplayApi(apiClientFactory);
             Aes = new AesApi(apiClientFactory);
+            Speke = new SpekeApi(apiClientFactory);
         }
 
         /// <summary>
@@ -28,6 +30,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Ts.Drm
 
         public FairplayApi Fairplay { get; private set; }
         public AesApi Aes { get; private set; }
+        public SpekeApi Speke { get; private set; }
         
         /// <summary>
         /// List all DRM configurations of TS Muxing

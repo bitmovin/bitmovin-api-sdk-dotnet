@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using RestEase;
 using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Webm.Drm.Cenc;
+using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Webm.Drm.Speke;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Webm.Drm
 {
@@ -17,6 +18,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Webm.Drm
             _apiClient = apiClientFactory.CreateClient<IDrmApiClient>();
 
             Cenc = new CencApi(apiClientFactory);
+            Speke = new SpekeApi(apiClientFactory);
         }
 
         /// <summary>
@@ -25,6 +27,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Webm.Drm
         public static BitmovinApiBuilder<DrmApi> Builder => new BitmovinApiBuilder<DrmApi>();
 
         public CencApi Cenc { get; private set; }
+        public SpekeApi Speke { get; private set; }
         
         /// <summary>
         /// List all DRM configurations of WebM Muxing

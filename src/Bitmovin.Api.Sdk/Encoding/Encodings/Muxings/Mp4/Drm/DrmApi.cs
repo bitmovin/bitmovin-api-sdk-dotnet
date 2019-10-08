@@ -9,6 +9,7 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Clearkey;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Widevine;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Marlin;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Cenc;
+using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Speke;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm
 {
@@ -25,6 +26,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm
             Widevine = new WidevineApi(apiClientFactory);
             Marlin = new MarlinApi(apiClientFactory);
             Cenc = new CencApi(apiClientFactory);
+            Speke = new SpekeApi(apiClientFactory);
         }
 
         /// <summary>
@@ -37,6 +39,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm
         public WidevineApi Widevine { get; private set; }
         public MarlinApi Marlin { get; private set; }
         public CencApi Cenc { get; private set; }
+        public SpekeApi Speke { get; private set; }
         
         /// <summary>
         /// List all DRM configurations of MP4 Muxing
