@@ -33,6 +33,18 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "position")]
         public int? Position { get; set; }
+        
+        /// <summary>
+        /// Inserts a padding sequence (black frames and/or silent audio) before the input stream. If this is set, all video output streams of the encoding need to use the same ConcatenationInputStream.
+        /// </summary>
+        [JsonProperty(PropertyName = "paddingBefore")]
+        public PaddingSequence PaddingBefore { get; set; }
+        
+        /// <summary>
+        /// Inserts a padding sequence (black frames and/or silent audio) after the input stream. If this is set, all video output streams of the encoding need to use the same ConcatenationInputStream.
+        /// </summary>
+        [JsonProperty(PropertyName = "paddingAfter")]
+        public PaddingSequence PaddingAfter { get; set; }
     }
 
 }
