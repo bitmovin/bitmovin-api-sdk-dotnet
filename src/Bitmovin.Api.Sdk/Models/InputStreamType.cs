@@ -46,6 +46,12 @@ namespace Bitmovin.Api.Sdk.Models
         TRIMMINGH264PICTURETIMING,
         
         /// <summary>
+        /// SIDECARDOLBYVISIONMETADATA
+        /// </summary>
+        [EnumMember(Value = "SIDECAR_DOLBY_VISION_METADATA")]
+        SIDECARDOLBYVISIONMETADATA,
+        
+        /// <summary>
         /// AUDIOMIX
         /// </summary>
         [EnumMember(Value = "AUDIO_MIX")]

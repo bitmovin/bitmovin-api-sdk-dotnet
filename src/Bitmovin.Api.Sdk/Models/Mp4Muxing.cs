@@ -48,6 +48,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "internalChunkLength")]
         public InternalChunkLength InternalChunkLength { get; set; }
+        
+        /// <summary>
+        /// Dolby Vision specific configuration
+        /// </summary>
+        [JsonProperty(PropertyName = "dolbyVisionConfiguration")]
+        public DolbyVisionMuxingConfiguration DolbyVisionConfiguration { get; set; }
     }
 
 }

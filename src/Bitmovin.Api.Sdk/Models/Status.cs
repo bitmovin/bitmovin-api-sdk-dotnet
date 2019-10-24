@@ -43,7 +43,13 @@ namespace Bitmovin.Api.Sdk.Models
         /// The process has stopped due to an error. This is a final state
         /// </summary>
         [EnumMember(Value = "ERROR")]
-        ERROR
+        ERROR,
+        
+        /// <summary>
+        /// The process has been canceled by the user. This is a final state
+        /// </summary>
+        [EnumMember(Value = "CANCELED")]
+        CANCELED
         
     }
 
