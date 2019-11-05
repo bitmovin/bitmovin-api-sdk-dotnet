@@ -44,12 +44,6 @@ namespace Bitmovin.Api.Sdk.Models
         public FragmentedMp4MuxingManifestType? FragmentedMP4MuxingManifestType { get; set; }
         
         /// <summary>
-        /// Modifies the internal chunk length used for chunked encoding
-        /// </summary>
-        [JsonProperty(PropertyName = "internalChunkLength")]
-        public InternalChunkLength InternalChunkLength { get; set; }
-        
-        /// <summary>
         /// Dolby Vision specific configuration
         /// </summary>
         [JsonProperty(PropertyName = "dolbyVisionConfiguration")]

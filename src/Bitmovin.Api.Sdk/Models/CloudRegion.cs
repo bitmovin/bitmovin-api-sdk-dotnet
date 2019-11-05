@@ -232,6 +232,12 @@ namespace Bitmovin.Api.Sdk.Models
         AZURE_AUSTRALIA_SOUTHEAST,
         
         /// <summary>
+        /// AZURE_AUSTRALIA_EAST
+        /// </summary>
+        [EnumMember(Value = "AZURE_AUSTRALIA_EAST")]
+        AZURE_AUSTRALIA_EAST,
+        
+        /// <summary>
         /// NORTH_AMERICA
         /// </summary>
         [EnumMember(Value = "NORTH_AMERICA")]

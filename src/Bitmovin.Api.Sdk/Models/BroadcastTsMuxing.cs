@@ -36,12 +36,6 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "configuration")]
         public BroadcastTsMuxingConfiguration Configuration { get; set; }
-        
-        /// <summary>
-        /// Modifies the internal chunk length used for chunked encoding
-        /// </summary>
-        [JsonProperty(PropertyName = "internalChunkLength")]
-        public InternalChunkLength InternalChunkLength { get; set; }
     }
 
 }
