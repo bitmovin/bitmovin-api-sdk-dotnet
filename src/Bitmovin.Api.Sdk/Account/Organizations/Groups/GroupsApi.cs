@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using RestEase;
 using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Account.Organizations.Groups.Tenants;
+using Bitmovin.Api.Sdk.Account.Organizations.Groups.Invitations;
 using Bitmovin.Api.Sdk.Account.Organizations.Groups.Permissions;
 
 namespace Bitmovin.Api.Sdk.Account.Organizations.Groups
@@ -18,6 +19,7 @@ namespace Bitmovin.Api.Sdk.Account.Organizations.Groups
             _apiClient = apiClientFactory.CreateClient<IGroupsApiClient>();
 
             Tenants = new TenantsApi(apiClientFactory);
+            Invitations = new InvitationsApi(apiClientFactory);
             Permissions = new PermissionsApi(apiClientFactory);
         }
 
@@ -27,6 +29,7 @@ namespace Bitmovin.Api.Sdk.Account.Organizations.Groups
         public static BitmovinApiBuilder<GroupsApi> Builder => new BitmovinApiBuilder<GroupsApi>();
 
         public TenantsApi Tenants { get; private set; }
+        public InvitationsApi Invitations { get; private set; }
         public PermissionsApi Permissions { get; private set; }
         
         /// <summary>

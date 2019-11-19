@@ -26,7 +26,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Duration of the stream in seconds
         /// </summary>
         [JsonProperty(PropertyName = "duration")]
-        public long? Duration { get; set; }
+        public double? Duration { get; set; }
         
         /// <summary>
         /// Codec of the stream

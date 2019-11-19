@@ -55,6 +55,16 @@ namespace Bitmovin.Api.Sdk.Account.Organizations
             return await _apiClient.ListAsync();
         }
         
+        /// <summary>
+        /// Update Organization
+        /// </summary>
+        /// <param name="organizationId">ID of the organization</param>
+        /// <param name="updateOrganizationRequest">The request payload</param>
+        public async Task<Models.Organization> UpdateAsync(string organizationId, Models.UpdateOrganizationRequest updateOrganizationRequest)
+        {
+            return await _apiClient.UpdateAsync(organizationId, updateOrganizationRequest);
+        }
+        
         internal interface IOrganizationsApiClient
         {
             
@@ -69,6 +79,10 @@ namespace Bitmovin.Api.Sdk.Account.Organizations
             [Get("/account/organizations")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.Organization>> ListAsync();
+            
+            [Put("/account/organizations/{organization_id}")]
+            [AllowAnyStatusCode]
+            Task<Models.Organization> UpdateAsync([Path("organization_id")] string organizationId, [Body] Models.UpdateOrganizationRequest updateOrganizationRequest);
             
         }
         

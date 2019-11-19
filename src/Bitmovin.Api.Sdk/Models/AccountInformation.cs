@@ -20,13 +20,13 @@ namespace Bitmovin.Api.Sdk.Models
         /// Email address of the account. (required)
         /// </summary>
         [JsonProperty(PropertyName = "email")]
-        public string Email { get; set; }
+        public string Email { get; internal set; }
         
         /// <summary>
         /// ApiKeys associated with the account (required)
         /// </summary>
         [JsonProperty(PropertyName = "apiKeys")]
-        public List<AccountApiKey> ApiKeys { get; set; } = new List<AccountApiKey>();
+        public List<AccountApiKey> ApiKeys { get; internal set; } = new List<AccountApiKey>();
         
         /// <summary>
         /// First name of the tenant.
@@ -51,6 +51,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "company")]
         public string Company { get; set; }
+        
+        /// <summary>
+        /// IsVerified
+        /// </summary>
+        [JsonProperty(PropertyName = "isVerified")]
+        public bool? IsVerified { get; internal set; }
     }
 
 }

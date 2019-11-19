@@ -4,36 +4,30 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using RestEase;
 using Bitmovin.Api.Sdk.Common;
-using Bitmovin.Api.Sdk.Notifications.Emails.UsageReports;
-using Bitmovin.Api.Sdk.Notifications.Emails.Encoding;
 
-namespace Bitmovin.Api.Sdk.Notifications.Emails
+namespace Bitmovin.Api.Sdk.Notifications.Emails.UsageReports
 {
-    public class EmailsApi
+    public class UsageReportsApi
     {
-        private readonly IEmailsApiClient _apiClient;
+        private readonly IUsageReportsApiClient _apiClient;
 
-        public EmailsApi(IBitmovinApiClientFactory apiClientFactory)
+        public UsageReportsApi(IBitmovinApiClientFactory apiClientFactory)
         {
-            _apiClient = apiClientFactory.CreateClient<IEmailsApiClient>();
+            _apiClient = apiClientFactory.CreateClient<IUsageReportsApiClient>();
 
-            UsageReports = new UsageReportsApi(apiClientFactory);
-            Encoding = new EncodingApi(apiClientFactory);
         }
 
         /// <summary>
-        /// Fluent builder for creating an instance of EmailsApi
+        /// Fluent builder for creating an instance of UsageReportsApi
         /// </summary>
-        public static BitmovinApiBuilder<EmailsApi> Builder => new BitmovinApiBuilder<EmailsApi>();
+        public static BitmovinApiBuilder<UsageReportsApi> Builder => new BitmovinApiBuilder<UsageReportsApi>();
 
-        public UsageReportsApi UsageReports { get; private set; }
-        public EncodingApi Encoding { get; private set; }
         
         /// <summary>
-        /// List Email Notifications
+        /// List Email Notifications (All Usage Reports)
         /// </summary>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>
-        public async Task<Models.PaginationResponse<Models.Notification>> ListAsync(params Func<ListQueryParams, ListQueryParams>[] queryParams)
+        public async Task<Models.PaginationResponse<Models.EmailNotification>> ListAsync(params Func<ListQueryParams, ListQueryParams>[] queryParams)
         {
             ListQueryParams q = new ListQueryParams();
 
@@ -45,12 +39,12 @@ namespace Bitmovin.Api.Sdk.Notifications.Emails
             return await _apiClient.ListAsync(q);
         }
         
-        internal interface IEmailsApiClient
+        internal interface IUsageReportsApiClient
         {
             
-            [Get("/notifications/emails")]
+            [Get("/notifications/emails/usage-reports")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.Notification>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.EmailNotification>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
             
         }
         

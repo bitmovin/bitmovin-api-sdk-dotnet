@@ -11,22 +11,22 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// Login
+    /// InvitationStatus
     /// </summary>
-
-    public class Login
+    public enum InvitationStatus
     {
         /// <summary>
-        /// Email address of the account. (required)
+        /// Pending status of the invitation
         /// </summary>
-        [JsonProperty(PropertyName = "eMail")]
-        public string EMail { get; set; }
+        [EnumMember(Value = "PENDING")]
+        PENDING,
         
         /// <summary>
-        /// Password of the account. (required)
+        /// Accepted status of the invitation
         /// </summary>
-        [JsonProperty(PropertyName = "password")]
-        public string Password { get; set; }
+        [EnumMember(Value = "ACCEPTED")]
+        ACCEPTED
+        
     }
 
 }
