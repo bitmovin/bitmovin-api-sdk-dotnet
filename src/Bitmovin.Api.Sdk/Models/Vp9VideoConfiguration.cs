@@ -44,7 +44,7 @@ namespace Bitmovin.Api.Sdk.Models
         public bool? ErrorResiliencyEnabled { get; set; }
         
         /// <summary>
-        /// Number of tile columns to use, log2.
+        /// Number of tile columns to use, log2. Depending on the encoding width there are limitations on this value. The minimum values are 2 for width &gt;&#x3D; 1920 and 1 for width &gt;&#x3D; 1280. The minimum width of each tile is 256 pixels so the maximum values are 0 for width &lt; 256, 1 for width &lt; 512, 2 for width &lt; 1024, 3 for width &lt; 2048, 4 for width &lt; 4096, 5 for width &lt; 8192. If the value is too high or too low it will be overridden.
         /// </summary>
         [JsonProperty(PropertyName = "tileColumns")]
         public int? TileColumns { get; set; }
@@ -116,7 +116,7 @@ namespace Bitmovin.Api.Sdk.Models
         public bool? NoiseSensitivity { get; set; }
         
         /// <summary>
-        /// Controls the tradeoff between compression efficiency and encoding speed. Higher values indicate a faster encoding.
+        /// Controls the tradeoff between compression efficiency and encoding speed. Higher values indicate a faster encoding. The minimum value for width * height &gt;&#x3D; 1280 * 720 is 2. If the value is too low it will be overridden.
         /// </summary>
         [JsonProperty(PropertyName = "cpuUsed")]
         public int? CpuUsed { get; set; }

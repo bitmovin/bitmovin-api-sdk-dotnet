@@ -48,6 +48,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "initSegmentNameTemplate")]
         public string InitSegmentNameTemplate { get; set; }
+        
+        /// <summary>
+        /// Number of segments which have been encoded
+        /// </summary>
+        [JsonProperty(PropertyName = "segmentsMuxed")]
+        public int? SegmentsMuxed { get; internal set; }
     }
 
 }
