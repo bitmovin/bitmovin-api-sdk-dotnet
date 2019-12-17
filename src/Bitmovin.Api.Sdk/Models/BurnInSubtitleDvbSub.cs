@@ -11,16 +11,16 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// StreamDvbSubSubtitle
+    /// BurnInSubtitleDvbSub
     /// </summary>
 
-    public class StreamDvbSubSubtitle : BitmovinResource
+    public class BurnInSubtitleDvbSub : BitmovinResource
     {
         /// <summary>
-        /// The input stream to extract the subtitle from (required)
+        /// Id of an IngestInputStream which specifies the stream of the DVB-SUB subtitles (required)
         /// </summary>
-        [JsonProperty(PropertyName = "inputStream")]
-        public StreamInput InputStream { get; set; }
+        [JsonProperty(PropertyName = "inputStreamId")]
+        public string InputStreamId { get; set; }
     }
 
 }

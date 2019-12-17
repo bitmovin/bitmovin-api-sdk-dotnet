@@ -33,6 +33,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "columnLabels")]
         public List<AnalyticsColumnLabel> ColumnLabels { get; set; } = new List<AnalyticsColumnLabel>();
+        
+        /// <summary>
+        /// ContextDescription
+        /// </summary>
+        [JsonProperty(PropertyName = "contextDescription")]
+        public List<AnalyticsContextDescription> ContextDescription { get; set; } = new List<AnalyticsContextDescription>();
     }
 
 }

@@ -53,6 +53,12 @@ namespace Bitmovin.Api.Sdk.Models
         public List<AnalyticsAttribute> GroupBy { get; set; } = new List<AnalyticsAttribute>();
         
         /// <summary>
+        /// Whether context data should be included in the response
+        /// </summary>
+        [JsonProperty(PropertyName = "includeContext")]
+        public bool? IncludeContext { get; set; }
+        
+        /// <summary>
         /// Maximum number of rows returned (max. 200)
         /// </summary>
         [JsonProperty(PropertyName = "limit")]

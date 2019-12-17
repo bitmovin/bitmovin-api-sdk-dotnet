@@ -54,6 +54,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "kid")]
         public string Kid { get; set; }
+        
+        /// <summary>
+        /// AdditionalInformation
+        /// </summary>
+        [JsonProperty(PropertyName = "additionalInformation")]
+        public PlayReadyAdditionalInformation AdditionalInformation { get; set; }
     }
 
 }

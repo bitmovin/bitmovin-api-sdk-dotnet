@@ -45,6 +45,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "paddingAfter")]
         public PaddingSequence PaddingAfter { get; set; }
+        
+        /// <summary>
+        /// Specifies the aspect mode that is used when adapting to the main input stream&#39;s aspect ratio
+        /// </summary>
+        [JsonProperty(PropertyName = "aspectMode")]
+        public AspectMode? AspectMode { get; set; }
     }
 
 }

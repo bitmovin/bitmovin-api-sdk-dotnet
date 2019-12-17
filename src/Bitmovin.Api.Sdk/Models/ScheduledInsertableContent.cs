@@ -23,13 +23,13 @@ namespace Bitmovin.Api.Sdk.Models
         public string ContentId { get; set; }
         
         /// <summary>
-        /// Time to to play the content in UTC: YYYY-MM-DDThh:mm:ssZ
+        /// Time to to play the content in UTC: YYYY-MM-DDThh:mm:ssZ, if this property is not set the content will be played as soon as possible.
         /// </summary>
         [JsonProperty(PropertyName = "runAt")]
         public DateTime? RunAt { get; set; }
         
         /// <summary>
-        /// Duration for how long to play the content. Cut off if shorter, loop if longer than actual duration.
+        /// Duration for how long to play the content. Cut off if shorter, loop if longer than actual duration. This property is required if the insertable content is an image.
         /// </summary>
         [JsonProperty(PropertyName = "durationInSeconds")]
         public double? DurationInSeconds { get; set; }

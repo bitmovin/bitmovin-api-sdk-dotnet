@@ -27,6 +27,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "pssh")]
         public string Pssh { get; set; }
+        
+        /// <summary>
+        /// AdditionalInformation
+        /// </summary>
+        [JsonProperty(PropertyName = "additionalInformation")]
+        public PlayReadyAdditionalInformation AdditionalInformation { get; set; }
     }
 
 }
