@@ -123,6 +123,18 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "psnrMultiplicator")]
         public double? PsnrMultiplicator { get; set; }
+        
+        /// <summary>
+        /// DolbyVisionMode
+        /// </summary>
+        [JsonProperty(PropertyName = "dolbyVisionMode")]
+        public DolbyVisionPerStreamMode? DolbyVisionMode { get; set; }
+        
+        /// <summary>
+        /// The output minutes multiplicator for Dolby Vision streams
+        /// </summary>
+        [JsonProperty(PropertyName = "dolbyVisionMultiplicator")]
+        public double? DolbyVisionMultiplicator { get; set; }
     }
 
 }
