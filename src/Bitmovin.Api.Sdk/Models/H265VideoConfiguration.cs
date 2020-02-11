@@ -582,6 +582,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "lowpassDct")]
         public bool? LowpassDct { get; set; }
+        
+        /// <summary>
+        /// Defines whether CEA 608/708 subtitles are extracted from the input video stream
+        /// </summary>
+        [JsonProperty(PropertyName = "cea608708SubtitleConfig")]
+        public Cea608708SubtitleConfiguration Cea608708SubtitleConfig { get; set; }
     }
 
 }

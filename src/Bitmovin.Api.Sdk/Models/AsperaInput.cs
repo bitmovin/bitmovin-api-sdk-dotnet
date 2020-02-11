@@ -54,6 +54,18 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "token")]
         public string Token { get; set; }
+        
+        /// <summary>
+        /// Set the TCP port to be used for fasp session initiation
+        /// </summary>
+        [JsonProperty(PropertyName = "sshPort")]
+        public int? SshPort { get; set; }
+        
+        /// <summary>
+        /// Set the UDP port to be used by fasp for data transfer
+        /// </summary>
+        [JsonProperty(PropertyName = "faspPort")]
+        public int? FaspPort { get; set; }
     }
 
 }
