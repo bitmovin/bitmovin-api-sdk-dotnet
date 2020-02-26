@@ -13,9 +13,7 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// DashFmp4Representation
     /// </summary>
-
     public class DashFmp4Representation : DashSegmentedRepresentation
     {
     }
-
 }

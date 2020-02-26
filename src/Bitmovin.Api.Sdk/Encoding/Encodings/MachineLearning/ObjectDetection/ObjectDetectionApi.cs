@@ -16,7 +16,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.MachineLearning.ObjectDetection
         public ObjectDetectionApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IObjectDetectionApiClient>();
-
             Customdata = new CustomdataApi(apiClientFactory);
             Results = new ResultsApi(apiClientFactory);
         }
@@ -26,43 +25,43 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.MachineLearning.ObjectDetection
         /// </summary>
         public static BitmovinApiBuilder<ObjectDetectionApi> Builder => new BitmovinApiBuilder<ObjectDetectionApi>();
 
-        public CustomdataApi Customdata { get; private set; }
-        public ResultsApi Results { get; private set; }
-        
+        public CustomdataApi Customdata { get; }
+        public ResultsApi Results { get; }
+
         /// <summary>
         /// Add object detection configuration to an encoding
         /// </summary>
-        /// <param name="encodingId">Id of the encoding</param>
-        /// <param name="objectDetectionConfiguration">The request payload</param>
+        /// <param name="encodingId">Id of the encoding (required)</param>
+        /// <param name="objectDetectionConfiguration">The object detection configuration to be created</param>
         public async Task<Models.ObjectDetectionConfiguration> CreateAsync(string encodingId, Models.ObjectDetectionConfiguration objectDetectionConfiguration)
         {
             return await _apiClient.CreateAsync(encodingId, objectDetectionConfiguration);
         }
-        
+
         /// <summary>
         /// Delete object detection configuration
         /// </summary>
-        /// <param name="encodingId">Id of the encoding</param>
-        /// <param name="objectDetectionId">Id of the object detection configuration to be deleted</param>
+        /// <param name="encodingId">Id of the encoding (required)</param>
+        /// <param name="objectDetectionId">Id of the object detection configuration to be deleted (required)</param>
         public async Task<Models.BitmovinResponse> DeleteAsync(string encodingId, string objectDetectionId)
         {
             return await _apiClient.DeleteAsync(encodingId, objectDetectionId);
         }
-        
+
         /// <summary>
         /// Get object detection configuration details
         /// </summary>
-        /// <param name="encodingId">Id of the encoding</param>
-        /// <param name="objectDetectionId">Id of the object detection configuration</param>
+        /// <param name="encodingId">Id of the encoding (required)</param>
+        /// <param name="objectDetectionId">Id of the object detection configuration (required)</param>
         public async Task<Models.ObjectDetectionConfiguration> GetAsync(string encodingId, string objectDetectionId)
         {
             return await _apiClient.GetAsync(encodingId, objectDetectionId);
         }
-        
+
         /// <summary>
         /// List object detection configurations of an encoding
         /// </summary>
-        /// <param name="encodingId">Id of the encoding</param>
+        /// <param name="encodingId">Id of the encoding (required)</param>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>
         public async Task<Models.PaginationResponse<Models.ObjectDetectionConfiguration>> ListAsync(string encodingId, params Func<ListQueryParams, ListQueryParams>[] queryParams)
         {
@@ -75,39 +74,37 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.MachineLearning.ObjectDetection
 
             return await _apiClient.ListAsync(encodingId, q);
         }
-        
+
         internal interface IObjectDetectionApiClient
         {
-            
             [Post("/encoding/encodings/{encoding_id}/machine-learning/object-detection")]
             [AllowAnyStatusCode]
             Task<Models.ObjectDetectionConfiguration> CreateAsync([Path("encoding_id")] string encodingId, [Body] Models.ObjectDetectionConfiguration objectDetectionConfiguration);
-            
+
             [Delete("/encoding/encodings/{encoding_id}/machine-learning/object-detection/{object_detection_id}")]
             [AllowAnyStatusCode]
             Task<Models.BitmovinResponse> DeleteAsync([Path("encoding_id")] string encodingId, [Path("object_detection_id")] string objectDetectionId);
-            
+
             [Get("/encoding/encodings/{encoding_id}/machine-learning/object-detection/{object_detection_id}")]
             [AllowAnyStatusCode]
             Task<Models.ObjectDetectionConfiguration> GetAsync([Path("encoding_id")] string encodingId, [Path("object_detection_id")] string objectDetectionId);
-            
+
             [Get("/encoding/encodings/{encoding_id}/machine-learning/object-detection")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.ObjectDetectionConfiguration>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap] IDictionary<String, Object> queryParams);
-            
         }
-        
+
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>
             /// Index of the first item to return, starting at 0. Default is 0
             /// </summary>
-            public ListQueryParams Offset(int? Offset) => SetQueryParam("offset", Offset);
+            public ListQueryParams Offset(int? offset) => SetQueryParam("offset", offset);
 
             /// <summary>
             /// Maximum number of items to return. Default is 25, maximum is 100
             /// </summary>
-            public ListQueryParams Limit(int? Limit) => SetQueryParam("limit", Limit);
+            public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
 
             private ListQueryParams SetQueryParam<T>(string key, T value)
             {

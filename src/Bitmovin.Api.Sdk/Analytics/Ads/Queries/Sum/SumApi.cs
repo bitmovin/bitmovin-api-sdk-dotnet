@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Analytics.Ads.Queries.Sum
         public SumApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ISumApiClient>();
-
         }
 
         /// <summary>
@@ -22,24 +21,20 @@ namespace Bitmovin.Api.Sdk.Analytics.Ads.Queries.Sum
         /// </summary>
         public static BitmovinApiBuilder<SumApi> Builder => new BitmovinApiBuilder<SumApi>();
 
-        
         /// <summary>
         /// Sum
         /// </summary>
-        /// <param name="adAnalyticsSumQueryRequest">The request payload</param>
+        /// <param name="adAnalyticsSumQueryRequest">Analytics Query Object</param>
         public async Task<Models.AnalyticsResponse> CreateAsync(Models.AdAnalyticsSumQueryRequest adAnalyticsSumQueryRequest)
         {
             return await _apiClient.CreateAsync(adAnalyticsSumQueryRequest);
         }
-        
+
         internal interface ISumApiClient
         {
-            
             [Post("/analytics/ads/queries/sum")]
             [AllowAnyStatusCode]
             Task<Models.AnalyticsResponse> CreateAsync([Body] Models.AdAnalyticsSumQueryRequest adAnalyticsSumQueryRequest);
-            
         }
-        
     }
 }

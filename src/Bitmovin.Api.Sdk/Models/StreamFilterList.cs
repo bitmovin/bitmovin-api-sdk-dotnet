@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// StreamFilterList
     /// </summary>
-
     public class StreamFilterList
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "filters")]
         public List<StreamFilter> Filters { get; set; } = new List<StreamFilter>();
     }
-
 }

@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// WebhookSignature
     /// </summary>
-
     public class WebhookSignature
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "type")]
         public SignatureType? Type { get; set; }
-        
+
         /// <summary>
         /// The key of the signature (required)
         /// </summary>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; internal set; }
     }
-
 }

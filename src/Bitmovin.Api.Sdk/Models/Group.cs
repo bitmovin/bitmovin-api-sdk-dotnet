@@ -13,9 +13,7 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// Group
     /// </summary>
-
     public class Group : BitmovinResource
     {
     }
-
 }

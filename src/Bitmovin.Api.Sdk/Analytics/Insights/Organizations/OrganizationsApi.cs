@@ -15,7 +15,6 @@ namespace Bitmovin.Api.Sdk.Analytics.Insights.Organizations
         /// </summary>
         public static BitmovinApiBuilder<OrganizationsApi> Builder => new BitmovinApiBuilder<OrganizationsApi>();
 
-        public SettingsApi Settings { get; private set; }
-
+        public SettingsApi Settings { get; }
     }
 }

@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// PrimeTimeDrm
     /// </summary>
-
     public class PrimeTimeDrm : Drm
     {
         [JsonProperty(PropertyName = "type")]
@@ -24,18 +23,17 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-        
+
         /// <summary>
         /// 16 byte Key id, 32 hexadecimal characters (required)
         /// </summary>
         [JsonProperty(PropertyName = "kid")]
         public string Kid { get; set; }
-        
+
         /// <summary>
         /// Base 64 Encoded (required)
         /// </summary>
         [JsonProperty(PropertyName = "pssh")]
         public string Pssh { get; set; }
     }
-
 }

@@ -15,7 +15,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Conform
         public ConformApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IConformApiClient>();
-
             Customdata = new CustomdataApi(apiClientFactory);
         }
 
@@ -24,35 +23,35 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Conform
         /// </summary>
         public static BitmovinApiBuilder<ConformApi> Builder => new BitmovinApiBuilder<ConformApi>();
 
-        public CustomdataApi Customdata { get; private set; }
-        
+        public CustomdataApi Customdata { get; }
+
         /// <summary>
         /// Create Conform Filter. Keeps all the frames of the input. The playback time of the output will be slower or faster.
         /// </summary>
-        /// <param name="conformFilter">The request payload</param>
+        /// <param name="conformFilter">The Conform Filter to be created</param>
         public async Task<Models.ConformFilter> CreateAsync(Models.ConformFilter conformFilter)
         {
             return await _apiClient.CreateAsync(conformFilter);
         }
-        
+
         /// <summary>
         /// Delete Conform Filter
         /// </summary>
-        /// <param name="filterId">Id of the conform filter</param>
+        /// <param name="filterId">Id of the conform filter (required)</param>
         public async Task<Models.BitmovinResponse> DeleteAsync(string filterId)
         {
             return await _apiClient.DeleteAsync(filterId);
         }
-        
+
         /// <summary>
         /// Conform Filter Details
         /// </summary>
-        /// <param name="filterId">Id of the conform filter</param>
+        /// <param name="filterId">Id of the conform filter (required)</param>
         public async Task<Models.ConformFilter> GetAsync(string filterId)
         {
             return await _apiClient.GetAsync(filterId);
         }
-        
+
         /// <summary>
         /// List Conform Filters
         /// </summary>
@@ -68,44 +67,42 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Conform
 
             return await _apiClient.ListAsync(q);
         }
-        
+
         internal interface IConformApiClient
         {
-            
             [Post("/encoding/filters/conform")]
             [AllowAnyStatusCode]
             Task<Models.ConformFilter> CreateAsync([Body] Models.ConformFilter conformFilter);
-            
+
             [Delete("/encoding/filters/conform/{filter_id}")]
             [AllowAnyStatusCode]
             Task<Models.BitmovinResponse> DeleteAsync([Path("filter_id")] string filterId);
-            
+
             [Get("/encoding/filters/conform/{filter_id}")]
             [AllowAnyStatusCode]
             Task<Models.ConformFilter> GetAsync([Path("filter_id")] string filterId);
-            
+
             [Get("/encoding/filters/conform")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.ConformFilter>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
-            
         }
-        
+
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>
             /// Index of the first item to return, starting at 0. Default is 0
             /// </summary>
-            public ListQueryParams Offset(int? Offset) => SetQueryParam("offset", Offset);
+            public ListQueryParams Offset(int? offset) => SetQueryParam("offset", offset);
 
             /// <summary>
             /// Maximum number of items to return. Default is 25, maximum is 100
             /// </summary>
-            public ListQueryParams Limit(int? Limit) => SetQueryParam("limit", Limit);
+            public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
 
             /// <summary>
             /// Filter filters by name
             /// </summary>
-            public ListQueryParams Name(string Name) => SetQueryParam("name", Name);
+            public ListQueryParams Name(string name) => SetQueryParam("name", name);
 
             private ListQueryParams SetQueryParam<T>(string key, T value)
             {

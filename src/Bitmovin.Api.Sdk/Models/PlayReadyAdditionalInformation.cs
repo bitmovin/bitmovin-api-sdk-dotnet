@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// PlayReadyAdditionalInformation
     /// </summary>
-
     public class PlayReadyAdditionalInformation
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "wrmHeaderCustomAttributes")]
         public string WrmHeaderCustomAttributes { get; set; }
     }
-
 }

@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Account.Organizations.Groups.Invitations
         public InvitationsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IInvitationsApiClient>();
-
         }
 
         /// <summary>
@@ -22,40 +21,36 @@ namespace Bitmovin.Api.Sdk.Account.Organizations.Groups.Invitations
         /// </summary>
         public static BitmovinApiBuilder<InvitationsApi> Builder => new BitmovinApiBuilder<InvitationsApi>();
 
-        
         /// <summary>
         /// Add Invitation to Group
         /// </summary>
-        /// <param name="organizationId">Id of the organization</param>
-        /// <param name="groupId">Id of the group</param>
-        /// <param name="invitation">The request payload</param>
+        /// <param name="organizationId">Id of the organization (required)</param>
+        /// <param name="groupId">Id of the group (required)</param>
+        /// <param name="invitation">Invitation details</param>
         public async Task<Models.Invitation> CreateAsync(string organizationId, string groupId, Models.Invitation invitation)
         {
             return await _apiClient.CreateAsync(organizationId, groupId, invitation);
         }
-        
+
         /// <summary>
         /// List Invitations
         /// </summary>
-        /// <param name="organizationId">Id of the organization</param>
-        /// <param name="groupId">Id of the group</param>
+        /// <param name="organizationId">Id of the organization (required)</param>
+        /// <param name="groupId">Id of the group (required)</param>
         public async Task<Models.PaginationResponse<Models.Invitation>> ListAsync(string organizationId, string groupId)
         {
             return await _apiClient.ListAsync(organizationId, groupId);
         }
-        
+
         internal interface IInvitationsApiClient
         {
-            
             [Post("/account/organizations/{organization_id}/groups/{group_id}/invitations")]
             [AllowAnyStatusCode]
             Task<Models.Invitation> CreateAsync([Path("organization_id")] string organizationId, [Path("group_id")] string groupId, [Body] Models.Invitation invitation);
-            
+
             [Get("/account/organizations/{organization_id}/groups/{group_id}/invitations")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.Invitation>> ListAsync([Path("organization_id")] string organizationId, [Path("group_id")] string groupId);
-            
         }
-        
     }
 }

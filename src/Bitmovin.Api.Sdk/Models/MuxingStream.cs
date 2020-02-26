@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// MuxingStream
     /// </summary>
-
     public class MuxingStream
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "streamId")]
         public string StreamId { get; set; }
     }
-
 }

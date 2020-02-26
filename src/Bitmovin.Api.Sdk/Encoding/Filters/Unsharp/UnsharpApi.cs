@@ -15,7 +15,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Unsharp
         public UnsharpApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IUnsharpApiClient>();
-
             Customdata = new CustomdataApi(apiClientFactory);
         }
 
@@ -24,35 +23,35 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Unsharp
         /// </summary>
         public static BitmovinApiBuilder<UnsharpApi> Builder => new BitmovinApiBuilder<UnsharpApi>();
 
-        public CustomdataApi Customdata { get; private set; }
-        
+        public CustomdataApi Customdata { get; }
+
         /// <summary>
         /// Create Unsharp Filter
         /// </summary>
-        /// <param name="unsharpFilter">The request payload</param>
+        /// <param name="unsharpFilter">The Unsharp Filter to be created</param>
         public async Task<Models.UnsharpFilter> CreateAsync(Models.UnsharpFilter unsharpFilter)
         {
             return await _apiClient.CreateAsync(unsharpFilter);
         }
-        
+
         /// <summary>
         /// Delete Unsharp Filter
         /// </summary>
-        /// <param name="filterId">Id of the unsharp filter</param>
+        /// <param name="filterId">Id of the unsharp filter (required)</param>
         public async Task<Models.BitmovinResponse> DeleteAsync(string filterId)
         {
             return await _apiClient.DeleteAsync(filterId);
         }
-        
+
         /// <summary>
         /// Unsharp Filter Details
         /// </summary>
-        /// <param name="filterId">Id of the unsharp filter</param>
+        /// <param name="filterId">Id of the unsharp filter (required)</param>
         public async Task<Models.UnsharpFilter> GetAsync(string filterId)
         {
             return await _apiClient.GetAsync(filterId);
         }
-        
+
         /// <summary>
         /// List Unsharp Filters
         /// </summary>
@@ -68,44 +67,42 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Unsharp
 
             return await _apiClient.ListAsync(q);
         }
-        
+
         internal interface IUnsharpApiClient
         {
-            
             [Post("/encoding/filters/unsharp")]
             [AllowAnyStatusCode]
             Task<Models.UnsharpFilter> CreateAsync([Body] Models.UnsharpFilter unsharpFilter);
-            
+
             [Delete("/encoding/filters/unsharp/{filter_id}")]
             [AllowAnyStatusCode]
             Task<Models.BitmovinResponse> DeleteAsync([Path("filter_id")] string filterId);
-            
+
             [Get("/encoding/filters/unsharp/{filter_id}")]
             [AllowAnyStatusCode]
             Task<Models.UnsharpFilter> GetAsync([Path("filter_id")] string filterId);
-            
+
             [Get("/encoding/filters/unsharp")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.UnsharpFilter>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
-            
         }
-        
+
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>
             /// Index of the first item to return, starting at 0. Default is 0
             /// </summary>
-            public ListQueryParams Offset(int? Offset) => SetQueryParam("offset", Offset);
+            public ListQueryParams Offset(int? offset) => SetQueryParam("offset", offset);
 
             /// <summary>
             /// Maximum number of items to return. Default is 25, maximum is 100
             /// </summary>
-            public ListQueryParams Limit(int? Limit) => SetQueryParam("limit", Limit);
+            public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
 
             /// <summary>
             /// Filter filters by name
             /// </summary>
-            public ListQueryParams Name(string Name) => SetQueryParam("name", Name);
+            public ListQueryParams Name(string name) => SetQueryParam("name", name);
 
             private ListQueryParams SetQueryParam<T>(string key, T value)
             {

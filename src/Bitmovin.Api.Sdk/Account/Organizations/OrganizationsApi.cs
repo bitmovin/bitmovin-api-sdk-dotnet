@@ -16,7 +16,6 @@ namespace Bitmovin.Api.Sdk.Account.Organizations
         public OrganizationsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IOrganizationsApiClient>();
-
             SubOrganizations = new SubOrganizationsApi(apiClientFactory);
             Groups = new GroupsApi(apiClientFactory);
         }
@@ -26,27 +25,27 @@ namespace Bitmovin.Api.Sdk.Account.Organizations
         /// </summary>
         public static BitmovinApiBuilder<OrganizationsApi> Builder => new BitmovinApiBuilder<OrganizationsApi>();
 
-        public SubOrganizationsApi SubOrganizations { get; private set; }
-        public GroupsApi Groups { get; private set; }
-        
+        public SubOrganizationsApi SubOrganizations { get; }
+        public GroupsApi Groups { get; }
+
         /// <summary>
         /// Add Organization
         /// </summary>
-        /// <param name="organization">The request payload</param>
+        /// <param name="organization">Orgnaization Details</param>
         public async Task<Models.Organization> CreateAsync(Models.Organization organization)
         {
             return await _apiClient.CreateAsync(organization);
         }
-        
+
         /// <summary>
         /// Organization Details
         /// </summary>
-        /// <param name="organizationId">ID of the organization</param>
+        /// <param name="organizationId">ID of the organization (required)</param>
         public async Task<Models.Organization> GetAsync(string organizationId)
         {
             return await _apiClient.GetAsync(organizationId);
         }
-        
+
         /// <summary>
         /// List Organizations
         /// </summary>
@@ -54,37 +53,34 @@ namespace Bitmovin.Api.Sdk.Account.Organizations
         {
             return await _apiClient.ListAsync();
         }
-        
+
         /// <summary>
         /// Update Organization
         /// </summary>
-        /// <param name="organizationId">ID of the organization</param>
-        /// <param name="updateOrganizationRequest">The request payload</param>
+        /// <param name="organizationId">ID of the organization (required)</param>
+        /// <param name="updateOrganizationRequest">Organization Details fields to be updated</param>
         public async Task<Models.Organization> UpdateAsync(string organizationId, Models.UpdateOrganizationRequest updateOrganizationRequest)
         {
             return await _apiClient.UpdateAsync(organizationId, updateOrganizationRequest);
         }
-        
+
         internal interface IOrganizationsApiClient
         {
-            
             [Post("/account/organizations")]
             [AllowAnyStatusCode]
             Task<Models.Organization> CreateAsync([Body] Models.Organization organization);
-            
+
             [Get("/account/organizations/{organization_id}")]
             [AllowAnyStatusCode]
             Task<Models.Organization> GetAsync([Path("organization_id")] string organizationId);
-            
+
             [Get("/account/organizations")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.Organization>> ListAsync();
-            
+
             [Put("/account/organizations/{organization_id}")]
             [AllowAnyStatusCode]
             Task<Models.Organization> UpdateAsync([Path("organization_id")] string organizationId, [Body] Models.UpdateOrganizationRequest updateOrganizationRequest);
-            
         }
-        
     }
 }

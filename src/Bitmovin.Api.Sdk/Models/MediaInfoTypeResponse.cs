@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// MediaInfoTypeResponse
     /// </summary>
-
     public class MediaInfoTypeResponse
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "type")]
         public MediaInfoType? Type { get; set; }
     }
-
 }

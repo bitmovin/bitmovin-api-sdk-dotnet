@@ -19,9 +19,8 @@ namespace Bitmovin.Api.Sdk.Analytics.Metrics
         /// </summary>
         public static BitmovinApiBuilder<MetricsApi> Builder => new BitmovinApiBuilder<MetricsApi>();
 
-        public MaxConcurrentviewersApi MaxConcurrentviewers { get; private set; }
-        public AvgConcurrentviewersApi AvgConcurrentviewers { get; private set; }
-        public AvgDroppedFramesApi AvgDroppedFrames { get; private set; }
-
+        public MaxConcurrentviewersApi MaxConcurrentviewers { get; }
+        public AvgConcurrentviewersApi AvgConcurrentviewers { get; }
+        public AvgDroppedFramesApi AvgDroppedFrames { get; }
     }
 }

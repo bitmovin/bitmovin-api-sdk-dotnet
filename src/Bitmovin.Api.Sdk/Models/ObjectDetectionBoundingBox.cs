@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// ObjectDetectionBoundingBox
     /// </summary>
-
     public class ObjectDetectionBoundingBox
     {
         /// <summary>
@@ -21,24 +20,23 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "topLeftX")]
         public double? TopLeftX { get; set; }
-        
+
         /// <summary>
         /// Vertical position of the top left corner, given as a fraction of the frame height
         /// </summary>
         [JsonProperty(PropertyName = "topLeftY")]
         public double? TopLeftY { get; set; }
-        
+
         /// <summary>
         /// Horizontal position of the bottom right corner, given as a fraction of the frame width
         /// </summary>
         [JsonProperty(PropertyName = "bottomRightX")]
         public double? BottomRightX { get; set; }
-        
+
         /// <summary>
         /// Vertical position of the bottom right corner, given as a fraction of the frame height
         /// </summary>
         [JsonProperty(PropertyName = "bottomRightY")]
         public double? BottomRightY { get; set; }
     }
-
 }

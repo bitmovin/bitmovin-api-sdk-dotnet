@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// CustomXmlElement
     /// </summary>
-
     public class CustomXmlElement : BitmovinResponse
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "data")]
         public string Data { get; set; }
     }
-
 }

@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// GcsInput
     /// </summary>
-
     public class GcsInput : Input
     {
         [JsonProperty(PropertyName = "type")]
@@ -24,24 +23,23 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "bucketName")]
         public string BucketName { get; set; }
-        
+
         /// <summary>
         /// The cloud region in which the bucket is located. Is used to determine the ideal location for your encodings automatically.
         /// </summary>
         [JsonProperty(PropertyName = "cloudRegion")]
         public GoogleCloudRegion? CloudRegion { get; set; }
-        
+
         /// <summary>
         /// GCS access key (required)
         /// </summary>
         [JsonProperty(PropertyName = "accessKey")]
         public string AccessKey { get; set; }
-        
+
         /// <summary>
         /// GCS secret key (required)
         /// </summary>
         [JsonProperty(PropertyName = "secretKey")]
         public string SecretKey { get; set; }
     }
-
 }

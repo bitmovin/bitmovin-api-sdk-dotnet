@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Analytics.Metrics.AvgDroppedFrames
         public AvgDroppedFramesApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IAvgDroppedFramesApiClient>();
-
         }
 
         /// <summary>
@@ -22,24 +21,20 @@ namespace Bitmovin.Api.Sdk.Analytics.Metrics.AvgDroppedFrames
         /// </summary>
         public static BitmovinApiBuilder<AvgDroppedFramesApi> Builder => new BitmovinApiBuilder<AvgDroppedFramesApi>();
 
-        
         /// <summary>
         /// Get metrics data
         /// </summary>
-        /// <param name="analyticsMetricsQueryRequest">The request payload</param>
+        /// <param name="analyticsMetricsQueryRequest">Analytics metrics query object</param>
         public async Task<Models.AnalyticsAvgDroppedFramesResponse> CreateAsync(Models.AnalyticsMetricsQueryRequest analyticsMetricsQueryRequest)
         {
             return await _apiClient.CreateAsync(analyticsMetricsQueryRequest);
         }
-        
+
         internal interface IAvgDroppedFramesApiClient
         {
-            
             [Post("/analytics/metrics/avg-dropped-frames")]
             [AllowAnyStatusCode]
             Task<Models.AnalyticsAvgDroppedFramesResponse> CreateAsync([Body] Models.AnalyticsMetricsQueryRequest analyticsMetricsQueryRequest);
-            
         }
-        
     }
 }

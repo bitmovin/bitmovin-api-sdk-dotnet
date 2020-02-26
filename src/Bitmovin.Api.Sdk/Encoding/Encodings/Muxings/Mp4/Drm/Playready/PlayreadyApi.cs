@@ -15,7 +15,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Playready
         public PlayreadyApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IPlayreadyApiClient>();
-
             Customdata = new CustomdataApi(apiClientFactory);
         }
 
@@ -24,46 +23,46 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Playready
         /// </summary>
         public static BitmovinApiBuilder<PlayreadyApi> Builder => new BitmovinApiBuilder<PlayreadyApi>();
 
-        public CustomdataApi Customdata { get; private set; }
-        
+        public CustomdataApi Customdata { get; }
+
         /// <summary>
         /// Add PlayReady DRM to MP4
         /// </summary>
-        /// <param name="encodingId">Id of the encoding.</param>
-        /// <param name="muxingId">Id of the MP4 muxing.</param>
-        /// <param name="playReadyDrm">The request payload</param>
+        /// <param name="encodingId">Id of the encoding. (required)</param>
+        /// <param name="muxingId">Id of the MP4 muxing. (required)</param>
+        /// <param name="playReadyDrm">The PlayReady DRM to be created</param>
         public async Task<Models.PlayReadyDrm> CreateAsync(string encodingId, string muxingId, Models.PlayReadyDrm playReadyDrm)
         {
             return await _apiClient.CreateAsync(encodingId, muxingId, playReadyDrm);
         }
-        
+
         /// <summary>
         /// Delete PlayReady DRM from MP4
         /// </summary>
-        /// <param name="encodingId">Id of the encoding.</param>
-        /// <param name="muxingId">Id of the MP4 muxing.</param>
-        /// <param name="drmId">Id of the PlayReady DRM configuration.</param>
+        /// <param name="encodingId">Id of the encoding. (required)</param>
+        /// <param name="muxingId">Id of the MP4 muxing. (required)</param>
+        /// <param name="drmId">Id of the PlayReady DRM configuration. (required)</param>
         public async Task<Models.BitmovinResponse> DeleteAsync(string encodingId, string muxingId, string drmId)
         {
             return await _apiClient.DeleteAsync(encodingId, muxingId, drmId);
         }
-        
+
         /// <summary>
         /// PlayReady DRM Details of MP4
         /// </summary>
-        /// <param name="encodingId">Id of the encoding.</param>
-        /// <param name="muxingId">Id of the MP4 muxing.</param>
-        /// <param name="drmId">Id of the PlayReady DRM configuration.</param>
+        /// <param name="encodingId">Id of the encoding. (required)</param>
+        /// <param name="muxingId">Id of the MP4 muxing. (required)</param>
+        /// <param name="drmId">Id of the PlayReady DRM configuration. (required)</param>
         public async Task<Models.PlayReadyDrm> GetAsync(string encodingId, string muxingId, string drmId)
         {
             return await _apiClient.GetAsync(encodingId, muxingId, drmId);
         }
-        
+
         /// <summary>
         /// List PlayReady DRMs of MP4
         /// </summary>
-        /// <param name="encodingId">Id of the encoding.</param>
-        /// <param name="muxingId">Id of the MP4 muxing.</param>
+        /// <param name="encodingId">Id of the encoding. (required)</param>
+        /// <param name="muxingId">Id of the MP4 muxing. (required)</param>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>
         public async Task<Models.PaginationResponse<Models.PlayReadyDrm>> ListAsync(string encodingId, string muxingId, params Func<ListQueryParams, ListQueryParams>[] queryParams)
         {
@@ -76,39 +75,37 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Playready
 
             return await _apiClient.ListAsync(encodingId, muxingId, q);
         }
-        
+
         internal interface IPlayreadyApiClient
         {
-            
             [Post("/encoding/encodings/{encoding_id}/muxings/mp4/{muxing_id}/drm/playready")]
             [AllowAnyStatusCode]
             Task<Models.PlayReadyDrm> CreateAsync([Path("encoding_id")] string encodingId, [Path("muxing_id")] string muxingId, [Body] Models.PlayReadyDrm playReadyDrm);
-            
+
             [Delete("/encoding/encodings/{encoding_id}/muxings/mp4/{muxing_id}/drm/playready/{drm_id}")]
             [AllowAnyStatusCode]
             Task<Models.BitmovinResponse> DeleteAsync([Path("encoding_id")] string encodingId, [Path("muxing_id")] string muxingId, [Path("drm_id")] string drmId);
-            
+
             [Get("/encoding/encodings/{encoding_id}/muxings/mp4/{muxing_id}/drm/playready/{drm_id}")]
             [AllowAnyStatusCode]
             Task<Models.PlayReadyDrm> GetAsync([Path("encoding_id")] string encodingId, [Path("muxing_id")] string muxingId, [Path("drm_id")] string drmId);
-            
+
             [Get("/encoding/encodings/{encoding_id}/muxings/mp4/{muxing_id}/drm/playready")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.PlayReadyDrm>> ListAsync([Path("encoding_id")] string encodingId, [Path("muxing_id")] string muxingId, [QueryMap] IDictionary<String, Object> queryParams);
-            
         }
-        
+
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>
             /// Index of the first item to return, starting at 0. Default is 0
             /// </summary>
-            public ListQueryParams Offset(int? Offset) => SetQueryParam("offset", Offset);
+            public ListQueryParams Offset(int? offset) => SetQueryParam("offset", offset);
 
             /// <summary>
             /// Maximum number of items to return. Default is 25, maximum is 100
             /// </summary>
-            public ListQueryParams Limit(int? Limit) => SetQueryParam("limit", Limit);
+            public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
 
             private ListQueryParams SetQueryParam<T>(string key, T value)
             {

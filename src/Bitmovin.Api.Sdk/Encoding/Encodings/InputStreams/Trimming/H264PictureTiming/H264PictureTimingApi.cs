@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Trimming.H264PictureT
         public H264PictureTimingApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IH264PictureTimingApiClient>();
-
         }
 
         /// <summary>
@@ -22,41 +21,40 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Trimming.H264PictureT
         /// </summary>
         public static BitmovinApiBuilder<H264PictureTimingApi> Builder => new BitmovinApiBuilder<H264PictureTimingApi>();
 
-        
         /// <summary>
         /// Add H264 Picture Timing Trimming Input Stream
         /// </summary>
-        /// <param name="encodingId">Id of the encoding.</param>
-        /// <param name="h264PictureTimingTrimmingInputStream">The request payload</param>
+        /// <param name="encodingId">Id of the encoding. (required)</param>
+        /// <param name="h264PictureTimingTrimmingInputStream">The H264 Picture Timing Trimming Input Stream to be created</param>
         public async Task<Models.H264PictureTimingTrimmingInputStream> CreateAsync(string encodingId, Models.H264PictureTimingTrimmingInputStream h264PictureTimingTrimmingInputStream)
         {
             return await _apiClient.CreateAsync(encodingId, h264PictureTimingTrimmingInputStream);
         }
-        
+
         /// <summary>
         /// Delete H264 Picture Timing Trimming Input Stream
         /// </summary>
-        /// <param name="encodingId">Id of the encoding.</param>
-        /// <param name="inputStreamId">Id of the H264 Picture Timing Trimming Input Stream.</param>
+        /// <param name="encodingId">Id of the encoding. (required)</param>
+        /// <param name="inputStreamId">Id of the H264 Picture Timing Trimming Input Stream. (required)</param>
         public async Task<Models.BitmovinResponse> DeleteAsync(string encodingId, string inputStreamId)
         {
             return await _apiClient.DeleteAsync(encodingId, inputStreamId);
         }
-        
+
         /// <summary>
         /// H264 Picture Timing Trimming Input Stream Details
         /// </summary>
-        /// <param name="encodingId">Id of the encoding.</param>
-        /// <param name="inputStreamId">Id of the H264 Picture Timing Trimming Input Stream.</param>
+        /// <param name="encodingId">Id of the encoding. (required)</param>
+        /// <param name="inputStreamId">Id of the H264 Picture Timing Trimming Input Stream. (required)</param>
         public async Task<Models.H264PictureTimingTrimmingInputStream> GetAsync(string encodingId, string inputStreamId)
         {
             return await _apiClient.GetAsync(encodingId, inputStreamId);
         }
-        
+
         /// <summary>
         /// List H264 Picture Timing Trimming Input Streams
         /// </summary>
-        /// <param name="encodingId">Id of the encoding.</param>
+        /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>
         public async Task<Models.PaginationResponse<Models.H264PictureTimingTrimmingInputStream>> ListAsync(string encodingId, params Func<ListQueryParams, ListQueryParams>[] queryParams)
         {
@@ -69,39 +67,37 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Trimming.H264PictureT
 
             return await _apiClient.ListAsync(encodingId, q);
         }
-        
+
         internal interface IH264PictureTimingApiClient
         {
-            
             [Post("/encoding/encodings/{encoding_id}/input-streams/trimming/h264-picture-timing")]
             [AllowAnyStatusCode]
             Task<Models.H264PictureTimingTrimmingInputStream> CreateAsync([Path("encoding_id")] string encodingId, [Body] Models.H264PictureTimingTrimmingInputStream h264PictureTimingTrimmingInputStream);
-            
+
             [Delete("/encoding/encodings/{encoding_id}/input-streams/trimming/h264-picture-timing/{input_stream_id}")]
             [AllowAnyStatusCode]
             Task<Models.BitmovinResponse> DeleteAsync([Path("encoding_id")] string encodingId, [Path("input_stream_id")] string inputStreamId);
-            
+
             [Get("/encoding/encodings/{encoding_id}/input-streams/trimming/h264-picture-timing/{input_stream_id}")]
             [AllowAnyStatusCode]
             Task<Models.H264PictureTimingTrimmingInputStream> GetAsync([Path("encoding_id")] string encodingId, [Path("input_stream_id")] string inputStreamId);
-            
+
             [Get("/encoding/encodings/{encoding_id}/input-streams/trimming/h264-picture-timing")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.H264PictureTimingTrimmingInputStream>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap] IDictionary<String, Object> queryParams);
-            
         }
-        
+
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>
             /// Index of the first item to return, starting at 0. Default is 0
             /// </summary>
-            public ListQueryParams Offset(int? Offset) => SetQueryParam("offset", Offset);
+            public ListQueryParams Offset(int? offset) => SetQueryParam("offset", offset);
 
             /// <summary>
             /// Maximum number of items to return. Default is 25, maximum is 100
             /// </summary>
-            public ListQueryParams Limit(int? Limit) => SetQueryParam("limit", Limit);
+            public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
 
             private ListQueryParams SetQueryParam<T>(string key, T value)
             {

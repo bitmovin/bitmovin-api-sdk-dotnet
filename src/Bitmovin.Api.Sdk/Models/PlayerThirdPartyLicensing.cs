@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// PlayerThirdPartyLicensing
     /// </summary>
-
     public class PlayerThirdPartyLicensing
     {
         /// <summary>
@@ -21,24 +20,23 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "licenseCheckServer")]
         public string LicenseCheckServer { get; set; }
-        
+
         /// <summary>
         /// Timeout in ms (required)
         /// </summary>
         [JsonProperty(PropertyName = "licenseCheckTimeout")]
         public int? LicenseCheckTimeout { get; set; }
-        
+
         /// <summary>
         /// Specify if the Licensing Request should fail or not on Third Party Licensing Error (required)
         /// </summary>
         [JsonProperty(PropertyName = "errorAction")]
         public PlayerThirdPartyLicensingErrorAction? ErrorAction { get; set; }
-        
+
         /// <summary>
         /// Specify if the Licensing Request should fail or not on Third Party Licensing timeout (required)
         /// </summary>
         [JsonProperty(PropertyName = "timeoutAction")]
         public PlayerThirdPartyLicensingErrorAction? TimeoutAction { get; set; }
     }
-
 }

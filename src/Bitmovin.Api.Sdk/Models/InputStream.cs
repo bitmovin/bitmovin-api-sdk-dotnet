@@ -29,5 +29,4 @@ namespace Bitmovin.Api.Sdk.Models
     public class InputStream : BitmovinResource
     {
     }
-
 }

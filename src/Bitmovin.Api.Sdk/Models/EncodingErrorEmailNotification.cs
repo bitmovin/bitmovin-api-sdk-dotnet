@@ -13,9 +13,7 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// EncodingErrorEmailNotification
     /// </summary>
-
     public class EncodingErrorEmailNotification : EmailNotification
     {
     }
-
 }

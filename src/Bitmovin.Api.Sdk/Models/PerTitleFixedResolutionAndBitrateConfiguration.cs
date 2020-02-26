@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// PerTitleFixedResolutionAndBitrateConfiguration
     /// </summary>
-
     public class PerTitleFixedResolutionAndBitrateConfiguration
     {
         /// <summary>
@@ -21,18 +20,17 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "forcedRenditionAboveHighestFixedRepresentation")]
         public int? ForcedRenditionAboveHighestFixedRepresentation { get; set; }
-        
+
         /// <summary>
         /// The factor to calculate the bitrate that will be chosen based on the bitrate of the last FIXED_RESOLUTION.
         /// </summary>
         [JsonProperty(PropertyName = "forcedRenditionAboveHighestFixedRepresentationFactor")]
         public double? ForcedRenditionAboveHighestFixedRepresentationFactor { get; set; }
-        
+
         /// <summary>
         /// Mode to calculate the bitrate of the next representation
         /// </summary>
         [JsonProperty(PropertyName = "forcedRenditionAboveHighestFixedRepresentationCalculationMode")]
         public PerTitleFixedResolutionAndBitrateConfigurationMode? ForcedRenditionAboveHighestFixedRepresentationCalculationMode { get; set; }
     }
-
 }

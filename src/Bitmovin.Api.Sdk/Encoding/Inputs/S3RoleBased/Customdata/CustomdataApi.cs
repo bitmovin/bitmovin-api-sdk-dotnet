@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.S3RoleBased.Customdata
         public CustomdataApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ICustomdataApiClient>();
-
         }
 
         /// <summary>
@@ -22,24 +21,20 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.S3RoleBased.Customdata
         /// </summary>
         public static BitmovinApiBuilder<CustomdataApi> Builder => new BitmovinApiBuilder<CustomdataApi>();
 
-        
         /// <summary>
         /// S3 Custom Data
         /// </summary>
-        /// <param name="inputId">Id of the input</param>
+        /// <param name="inputId">Id of the input (required)</param>
         public async Task<Models.CustomData> GetAsync(string inputId)
         {
             return await _apiClient.GetAsync(inputId);
         }
-        
+
         internal interface ICustomdataApiClient
         {
-            
             [Get("/encoding/inputs/s3-role-based/{input_id}/customData")]
             [AllowAnyStatusCode]
             Task<Models.CustomData> GetAsync([Path("input_id")] string inputId);
-            
         }
-        
     }
 }

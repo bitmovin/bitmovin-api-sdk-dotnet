@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.S3.Customdata
         public CustomdataApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ICustomdataApiClient>();
-
         }
 
         /// <summary>
@@ -22,24 +21,20 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.S3.Customdata
         /// </summary>
         public static BitmovinApiBuilder<CustomdataApi> Builder => new BitmovinApiBuilder<CustomdataApi>();
 
-        
         /// <summary>
         /// S3 Output Custom Data
         /// </summary>
-        /// <param name="outputId">Id of the output</param>
+        /// <param name="outputId">Id of the output (required)</param>
         public async Task<Models.CustomData> GetAsync(string outputId)
         {
             return await _apiClient.GetAsync(outputId);
         }
-        
+
         internal interface ICustomdataApiClient
         {
-            
             [Get("/encoding/outputs/s3/{output_id}/customData")]
             [AllowAnyStatusCode]
             Task<Models.CustomData> GetAsync([Path("output_id")] string outputId);
-            
         }
-        
     }
 }

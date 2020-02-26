@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Account.ApiKeys
         public ApiKeysApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IApiKeysApiClient>();
-
         }
 
         /// <summary>
@@ -22,7 +21,6 @@ namespace Bitmovin.Api.Sdk.Account.ApiKeys
         /// </summary>
         public static BitmovinApiBuilder<ApiKeysApi> Builder => new BitmovinApiBuilder<ApiKeysApi>();
 
-        
         /// <summary>
         /// Create Api Key
         /// </summary>
@@ -30,25 +28,25 @@ namespace Bitmovin.Api.Sdk.Account.ApiKeys
         {
             return await _apiClient.CreateAsync();
         }
-        
+
         /// <summary>
         /// Delete Api Key
         /// </summary>
-        /// <param name="apiKeyId">Id of the api key</param>
+        /// <param name="apiKeyId">Id of the api key (required)</param>
         public async Task<Models.BitmovinResponse> DeleteAsync(string apiKeyId)
         {
             return await _apiClient.DeleteAsync(apiKeyId);
         }
-        
+
         /// <summary>
         /// Get Api Key
         /// </summary>
-        /// <param name="apiKeyId">Id of the api key</param>
+        /// <param name="apiKeyId">Id of the api key (required)</param>
         public async Task<Models.AccountApiKey> GetAsync(string apiKeyId)
         {
             return await _apiClient.GetAsync(apiKeyId);
         }
-        
+
         /// <summary>
         /// List Api Keys
         /// </summary>
@@ -56,27 +54,24 @@ namespace Bitmovin.Api.Sdk.Account.ApiKeys
         {
             return await _apiClient.ListAsync();
         }
-        
+
         internal interface IApiKeysApiClient
         {
-            
             [Post("/account/api-keys")]
             [AllowAnyStatusCode]
             Task<Models.AccountApiKey> CreateAsync();
-            
+
             [Delete("/account/api-keys/{api_key_id}")]
             [AllowAnyStatusCode]
             Task<Models.BitmovinResponse> DeleteAsync([Path("api_key_id")] string apiKeyId);
-            
+
             [Get("/account/api-keys/{api_key_id}")]
             [AllowAnyStatusCode]
             Task<Models.AccountApiKey> GetAsync([Path("api_key_id")] string apiKeyId);
-            
+
             [Get("/account/api-keys")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.AccountApiKey>> ListAsync();
-            
         }
-        
     }
 }

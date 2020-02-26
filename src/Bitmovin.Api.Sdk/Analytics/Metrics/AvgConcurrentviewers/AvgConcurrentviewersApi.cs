@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Analytics.Metrics.AvgConcurrentviewers
         public AvgConcurrentviewersApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IAvgConcurrentviewersApiClient>();
-
         }
 
         /// <summary>
@@ -22,24 +21,20 @@ namespace Bitmovin.Api.Sdk.Analytics.Metrics.AvgConcurrentviewers
         /// </summary>
         public static BitmovinApiBuilder<AvgConcurrentviewersApi> Builder => new BitmovinApiBuilder<AvgConcurrentviewersApi>();
 
-        
         /// <summary>
         /// Get metrics data
         /// </summary>
-        /// <param name="analyticsMetricsQueryRequest">The request payload</param>
+        /// <param name="analyticsMetricsQueryRequest">Analytics metrics query object</param>
         public async Task<Models.AnalyticsAvgConcurrentViewersResponse> CreateAsync(Models.AnalyticsMetricsQueryRequest analyticsMetricsQueryRequest)
         {
             return await _apiClient.CreateAsync(analyticsMetricsQueryRequest);
         }
-        
+
         internal interface IAvgConcurrentviewersApiClient
         {
-            
             [Post("/analytics/metrics/avg-concurrentviewers")]
             [AllowAnyStatusCode]
             Task<Models.AnalyticsAvgConcurrentViewersResponse> CreateAsync([Body] Models.AnalyticsMetricsQueryRequest analyticsMetricsQueryRequest);
-            
         }
-        
     }
 }

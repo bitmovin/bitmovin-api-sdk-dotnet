@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.EnhancedWatermark.Customdata
         public CustomdataApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ICustomdataApiClient>();
-
         }
 
         /// <summary>
@@ -22,24 +21,20 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.EnhancedWatermark.Customdata
         /// </summary>
         public static BitmovinApiBuilder<CustomdataApi> Builder => new BitmovinApiBuilder<CustomdataApi>();
 
-        
         /// <summary>
         /// Enhanced Watermark Filter Custom Data
         /// </summary>
-        /// <param name="filterId">Id of the enhanced watermark configuration.</param>
+        /// <param name="filterId">Id of the enhanced watermark configuration. (required)</param>
         public async Task<Models.CustomData> GetAsync(string filterId)
         {
             return await _apiClient.GetAsync(filterId);
         }
-        
+
         internal interface ICustomdataApiClient
         {
-            
             [Get("/encoding/filters/enhanced-watermark/{filter_id}/customData")]
             [AllowAnyStatusCode]
             Task<Models.CustomData> GetAsync([Path("filter_id")] string filterId);
-            
         }
-        
     }
 }

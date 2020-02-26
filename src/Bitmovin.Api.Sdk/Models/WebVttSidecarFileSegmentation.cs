@@ -11,9 +11,8 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// WebVttSidecarFileSegmentation
+    /// The segmenting configuration for this WebVTT sidecar file. If this is set, the given vtt file will be chunked.
     /// </summary>
-
     public class WebVttSidecarFileSegmentation
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "segmentLength")]
         public double? SegmentLength { get; set; }
     }
-
 }

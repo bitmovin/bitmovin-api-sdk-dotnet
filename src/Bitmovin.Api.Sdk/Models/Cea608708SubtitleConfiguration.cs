@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// Cea608708SubtitleConfiguration
     /// </summary>
-
     public class Cea608708SubtitleConfiguration
     {
         /// <summary>
@@ -21,6 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "passthroughActivated")]
         public bool? PassthroughActivated { get; set; }
-    }
 
+        /// <summary>
+        /// PassthroughMode
+        /// </summary>
+        [JsonProperty(PropertyName = "passthroughMode")]
+        public PassthroughMode? PassthroughMode { get; set; }
+    }
 }

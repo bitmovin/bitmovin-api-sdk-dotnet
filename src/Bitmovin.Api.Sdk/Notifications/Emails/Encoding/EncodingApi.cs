@@ -15,7 +15,6 @@ namespace Bitmovin.Api.Sdk.Notifications.Emails.Encoding
         public EncodingApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IEncodingApiClient>();
-
             Encodings = new EncodingsApi(apiClientFactory);
         }
 
@@ -24,8 +23,8 @@ namespace Bitmovin.Api.Sdk.Notifications.Emails.Encoding
         /// </summary>
         public static BitmovinApiBuilder<EncodingApi> Builder => new BitmovinApiBuilder<EncodingApi>();
 
-        public EncodingsApi Encodings { get; private set; }
-        
+        public EncodingsApi Encodings { get; }
+
         /// <summary>
         /// List Email Notifications (All Encodings)
         /// </summary>
@@ -41,27 +40,25 @@ namespace Bitmovin.Api.Sdk.Notifications.Emails.Encoding
 
             return await _apiClient.ListAsync(q);
         }
-        
+
         internal interface IEncodingApiClient
         {
-            
             [Get("/notifications/emails/encoding")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.EmailNotification>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
-            
         }
-        
+
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>
             /// Index of the first item to return, starting at 0. Default is 0
             /// </summary>
-            public ListQueryParams Offset(int? Offset) => SetQueryParam("offset", Offset);
+            public ListQueryParams Offset(int? offset) => SetQueryParam("offset", offset);
 
             /// <summary>
             /// Maximum number of items to return. Default is 25, maximum is 100
             /// </summary>
-            public ListQueryParams Limit(int? Limit) => SetQueryParam("limit", Limit);
+            public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
 
             private ListQueryParams SetQueryParam<T>(string key, T value)
             {

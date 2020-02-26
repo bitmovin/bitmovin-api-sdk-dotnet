@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// ManifestResource
     /// </summary>
-
     public class ManifestResource
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "manifestId")]
         public string ManifestId { get; set; }
     }
-
 }

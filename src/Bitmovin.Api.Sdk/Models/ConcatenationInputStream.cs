@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// ConcatenationInputStream
     /// </summary>
-
     public class ConcatenationInputStream : InputStream
     {
         [JsonProperty(PropertyName = "type")]
@@ -25,5 +24,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "concatenation")]
         public List<ConcatenationInputConfiguration> Concatenation { get; set; } = new List<ConcatenationInputConfiguration>();
     }
-
 }

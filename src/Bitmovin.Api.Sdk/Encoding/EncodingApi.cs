@@ -31,15 +31,14 @@ namespace Bitmovin.Api.Sdk.Encoding
         /// </summary>
         public static BitmovinApiBuilder<EncodingApi> Builder => new BitmovinApiBuilder<EncodingApi>();
 
-        public InputsApi Inputs { get; private set; }
-        public OutputsApi Outputs { get; private set; }
-        public ConfigurationsApi Configurations { get; private set; }
-        public FiltersApi Filters { get; private set; }
-        public EncodingsApi Encodings { get; private set; }
-        public ManifestsApi Manifests { get; private set; }
-        public InfrastructureApi Infrastructure { get; private set; }
-        public StatisticsApi Statistics { get; private set; }
-        public ErrorDefinitionsApi ErrorDefinitions { get; private set; }
-
+        public InputsApi Inputs { get; }
+        public OutputsApi Outputs { get; }
+        public ConfigurationsApi Configurations { get; }
+        public FiltersApi Filters { get; }
+        public EncodingsApi Encodings { get; }
+        public ManifestsApi Manifests { get; }
+        public InfrastructureApi Infrastructure { get; }
+        public StatisticsApi Statistics { get; }
+        public ErrorDefinitionsApi ErrorDefinitions { get; }
     }
 }

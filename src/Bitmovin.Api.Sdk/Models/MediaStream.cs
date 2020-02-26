@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// MediaStream
     /// </summary>
-
     public class MediaStream : BitmovinResponse
     {
         /// <summary>
@@ -21,18 +20,17 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "position")]
         public int? Position { get; set; }
-        
+
         /// <summary>
         /// Duration of the stream in seconds
         /// </summary>
         [JsonProperty(PropertyName = "duration")]
         public double? Duration { get; set; }
-        
+
         /// <summary>
         /// Codec of the stream
         /// </summary>
         [JsonProperty(PropertyName = "codec")]
         public string Codec { get; set; }
     }
-
 }

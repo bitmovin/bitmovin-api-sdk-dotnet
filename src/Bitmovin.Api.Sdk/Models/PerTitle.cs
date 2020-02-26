@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// PerTitle
     /// </summary>
-
     public class PerTitle
     {
         /// <summary>
@@ -21,18 +20,17 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "h264Configuration")]
         public H264PerTitleConfiguration H264Configuration { get; set; }
-        
+
         /// <summary>
         /// Per-Title configuration for H265
         /// </summary>
         [JsonProperty(PropertyName = "h265Configuration")]
         public H265PerTitleConfiguration H265Configuration { get; set; }
-        
+
         /// <summary>
         /// Per-Title configuration for VP9
         /// </summary>
         [JsonProperty(PropertyName = "vp9Configuration")]
         public Vp9PerTitleConfiguration Vp9Configuration { get; set; }
     }
-
 }

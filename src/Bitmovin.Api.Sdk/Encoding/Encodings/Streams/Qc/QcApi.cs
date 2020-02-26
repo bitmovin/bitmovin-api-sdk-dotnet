@@ -15,7 +15,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Qc
         /// </summary>
         public static BitmovinApiBuilder<QcApi> Builder => new BitmovinApiBuilder<QcApi>();
 
-        public PsnrApi Psnr { get; private set; }
-
+        public PsnrApi Psnr { get; }
     }
 }

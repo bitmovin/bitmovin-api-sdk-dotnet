@@ -17,7 +17,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Ts.Drm
         public DrmApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IDrmApiClient>();
-
             Fairplay = new FairplayApi(apiClientFactory);
             Aes = new AesApi(apiClientFactory);
             Speke = new SpekeApi(apiClientFactory);
@@ -28,28 +27,25 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Ts.Drm
         /// </summary>
         public static BitmovinApiBuilder<DrmApi> Builder => new BitmovinApiBuilder<DrmApi>();
 
-        public FairplayApi Fairplay { get; private set; }
-        public AesApi Aes { get; private set; }
-        public SpekeApi Speke { get; private set; }
-        
+        public FairplayApi Fairplay { get; }
+        public AesApi Aes { get; }
+        public SpekeApi Speke { get; }
+
         /// <summary>
-        /// List all DRM configurations of TS Muxing
+        /// List all DRM configurations of TS muxing
         /// </summary>
-        /// <param name="encodingId">Id of the encoding.</param>
-        /// <param name="muxingId">Id of the TS muxing</param>
+        /// <param name="encodingId">Id of the encoding. (required)</param>
+        /// <param name="muxingId">Id of the TS muxing (required)</param>
         public async Task<Models.PaginationResponse<Models.Drm>> ListAsync(string encodingId, string muxingId)
         {
             return await _apiClient.ListAsync(encodingId, muxingId);
         }
-        
+
         internal interface IDrmApiClient
         {
-            
             [Get("/encoding/encodings/{encoding_id}/muxings/ts/{muxing_id}/drm")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.Drm>> ListAsync([Path("encoding_id")] string encodingId, [Path("muxing_id")] string muxingId);
-            
         }
-        
     }
 }

@@ -25,18 +25,17 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "positionMode")]
         public Id3TagPositionMode? PositionMode { get; set; }
-        
+
         /// <summary>
         /// Frame number at which the Tag should be inserted
         /// </summary>
         [JsonProperty(PropertyName = "frame")]
         public long? Frame { get; set; }
-        
+
         /// <summary>
         /// Time in seconds where the Tag should be inserted
         /// </summary>
         [JsonProperty(PropertyName = "time")]
         public double? Time { get; set; }
     }
-
 }

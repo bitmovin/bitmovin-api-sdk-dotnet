@@ -1,12 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Runtime.Serialization;
-using JsonSubTypes;
-using Newtonsoft.Json;
-
-using Bitmovin.Api.Sdk.Common;
-using Bitmovin.Api.Sdk.Models;
 
 namespace Bitmovin.Api.Sdk.Models
 {
@@ -20,19 +12,17 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [EnumMember(Value = "PAD")]
         PAD,
-        
+
         /// <summary>
         /// Specifies that the Cropping aspect mode is used when adapting to the main input stream&#39;s aspect ratio (Cropping on the left/right or bottom/top).
         /// </summary>
         [EnumMember(Value = "CROP")]
         CROP,
-        
+
         /// <summary>
         /// Specifies that the Stretching aspect mode is used when adapting to the main input stream&#39;s aspect ratio (Stretching vertically or horizontally).
         /// </summary>
         [EnumMember(Value = "STRETCH")]
         STRETCH
-        
     }
-
 }

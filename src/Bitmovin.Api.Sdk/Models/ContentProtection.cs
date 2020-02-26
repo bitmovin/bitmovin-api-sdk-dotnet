@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// ContentProtection
     /// </summary>
-
     public class ContentProtection : DashRepresentation
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "drmId")]
         public string DrmId { get; set; }
     }
-
 }

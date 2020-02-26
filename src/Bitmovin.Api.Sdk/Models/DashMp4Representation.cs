@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// DashMp4Representation
     /// </summary>
-
     public class DashMp4Representation : DashRepresentation
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "filePath")]
         public string FilePath { get; set; }
     }
-
 }

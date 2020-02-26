@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// InsertableContent
     /// </summary>
-
     public class InsertableContent : BitmovinResource
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "inputs")]
         public List<InsertableContentInput> Inputs { get; set; } = new List<InsertableContentInput>();
-        
+
         /// <summary>
         /// Status of the insertable content.
         /// </summary>
         [JsonProperty(PropertyName = "status")]
         public InsertableContentStatus? Status { get; internal set; }
     }
-
 }

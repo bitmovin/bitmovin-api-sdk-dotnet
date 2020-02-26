@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// PrewarmEncoderSettings
     /// </summary>
-
     public class PrewarmEncoderSettings : BitmovinResource
     {
         /// <summary>
@@ -21,24 +20,23 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "encoderVersion")]
         public string EncoderVersion { get; set; }
-        
+
         /// <summary>
         /// The minimum number of prewarmed encoders of this Version (required)
         /// </summary>
         [JsonProperty(PropertyName = "minPrewarmed")]
         public int? MinPrewarmed { get; set; }
-        
+
         /// <summary>
         /// The maximum number of concurrent prewarmed encoders of this Version
         /// </summary>
         [JsonProperty(PropertyName = "maxPrewarmed")]
         public int? MaxPrewarmed { get; set; }
-        
+
         /// <summary>
         /// LogLevel
         /// </summary>
         [JsonProperty(PropertyName = "logLevel")]
         public LogLevel? LogLevel { get; set; }
     }
-
 }

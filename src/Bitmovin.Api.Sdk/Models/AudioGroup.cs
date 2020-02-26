@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// AudioGroup
     /// </summary>
-
     public class AudioGroup
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-        
+
         /// <summary>
         /// Priority of the audio group (required)
         /// </summary>
         [JsonProperty(PropertyName = "priority")]
         public int? Priority { get; set; }
     }
-
 }

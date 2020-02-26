@@ -27,13 +27,12 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media
         /// </summary>
         public static BitmovinApiBuilder<MediaApi> Builder => new BitmovinApiBuilder<MediaApi>();
 
-        public CustomTagsApi CustomTags { get; private set; }
-        public TypeApi Type { get; private set; }
-        public VideoApi Video { get; private set; }
-        public AudioApi Audio { get; private set; }
-        public SubtitlesApi Subtitles { get; private set; }
-        public VttApi Vtt { get; private set; }
-        public ClosedCaptionsApi ClosedCaptions { get; private set; }
-
+        public CustomTagsApi CustomTags { get; }
+        public TypeApi Type { get; }
+        public VideoApi Video { get; }
+        public AudioApi Audio { get; }
+        public SubtitlesApi Subtitles { get; }
+        public VttApi Vtt { get; }
+        public ClosedCaptionsApi ClosedCaptions { get; }
     }
 }

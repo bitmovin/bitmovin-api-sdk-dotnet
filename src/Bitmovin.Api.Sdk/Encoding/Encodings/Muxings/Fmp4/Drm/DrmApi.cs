@@ -22,7 +22,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm
         public DrmApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IDrmApiClient>();
-
             Widevine = new WidevineApi(apiClientFactory);
             Playready = new PlayreadyApi(apiClientFactory);
             Primetime = new PrimetimeApi(apiClientFactory);
@@ -38,33 +37,30 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm
         /// </summary>
         public static BitmovinApiBuilder<DrmApi> Builder => new BitmovinApiBuilder<DrmApi>();
 
-        public WidevineApi Widevine { get; private set; }
-        public PlayreadyApi Playready { get; private set; }
-        public PrimetimeApi Primetime { get; private set; }
-        public FairplayApi Fairplay { get; private set; }
-        public MarlinApi Marlin { get; private set; }
-        public ClearkeyApi Clearkey { get; private set; }
-        public CencApi Cenc { get; private set; }
-        public SpekeApi Speke { get; private set; }
-        
+        public WidevineApi Widevine { get; }
+        public PlayreadyApi Playready { get; }
+        public PrimetimeApi Primetime { get; }
+        public FairplayApi Fairplay { get; }
+        public MarlinApi Marlin { get; }
+        public ClearkeyApi Clearkey { get; }
+        public CencApi Cenc { get; }
+        public SpekeApi Speke { get; }
+
         /// <summary>
-        /// List all DRMs of FMP4 Muxing
+        /// List all DRMs of FMP4 muxing
         /// </summary>
-        /// <param name="encodingId">Id of the encoding.</param>
-        /// <param name="muxingId">Id of the fMP4 muxing</param>
+        /// <param name="encodingId">Id of the encoding. (required)</param>
+        /// <param name="muxingId">Id of the fMP4 muxing (required)</param>
         public async Task<Models.PaginationResponse<Models.Drm>> ListAsync(string encodingId, string muxingId)
         {
             return await _apiClient.ListAsync(encodingId, muxingId);
         }
-        
+
         internal interface IDrmApiClient
         {
-            
             [Get("/encoding/encodings/{encoding_id}/muxings/fmp4/{muxing_id}/drm")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.Drm>> ListAsync([Path("encoding_id")] string encodingId, [Path("muxing_id")] string muxingId);
-            
         }
-        
     }
 }

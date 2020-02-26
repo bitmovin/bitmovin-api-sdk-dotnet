@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// CodecConfigTypeResponse
     /// </summary>
-
     public class CodecConfigTypeResponse
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "type")]
         public CodecConfigType? Type { get; set; }
     }
-
 }

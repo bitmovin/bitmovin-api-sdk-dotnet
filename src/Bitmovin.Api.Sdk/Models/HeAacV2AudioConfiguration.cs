@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// HeAacV2AudioConfiguration
     /// </summary>
-
     public class HeAacV2AudioConfiguration : AudioConfiguration
     {
         [JsonProperty(PropertyName = "type")]
@@ -24,12 +23,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "channelLayout")]
         public AacChannelLayout? ChannelLayout { get; set; }
-        
+
         /// <summary>
         /// Sets the Spectral Band Replication (SBR) and Parameteric Stereo (PS) signaling style.
         /// </summary>
         [JsonProperty(PropertyName = "signaling")]
         public HeAacV2Signaling? Signaling { get; set; }
     }
-
 }

@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// InputTypeResponse
     /// </summary>
-
     public class InputTypeResponse
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "type")]
         public InputType? Type { get; set; }
     }
-
 }

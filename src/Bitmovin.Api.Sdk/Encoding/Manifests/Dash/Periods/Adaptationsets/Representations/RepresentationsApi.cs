@@ -4,6 +4,7 @@ using Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Representa
 using Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Representations.Cmaf;
 using Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Representations.Mp4;
 using Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Representations.Webm;
+using Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Representations.ProgressiveWebm;
 
 namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Representations
 {
@@ -16,6 +17,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Repres
             Cmaf = new CmafApi(apiClientFactory);
             Mp4 = new Mp4Api(apiClientFactory);
             Webm = new WebmApi(apiClientFactory);
+            ProgressiveWebm = new ProgressiveWebmApi(apiClientFactory);
         }
 
         /// <summary>
@@ -23,11 +25,11 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Repres
         /// </summary>
         public static BitmovinApiBuilder<RepresentationsApi> Builder => new BitmovinApiBuilder<RepresentationsApi>();
 
-        public VttApi Vtt { get; private set; }
-        public Fmp4Api Fmp4 { get; private set; }
-        public CmafApi Cmaf { get; private set; }
-        public Mp4Api Mp4 { get; private set; }
-        public WebmApi Webm { get; private set; }
-
+        public VttApi Vtt { get; }
+        public Fmp4Api Fmp4 { get; }
+        public CmafApi Cmaf { get; }
+        public Mp4Api Mp4 { get; }
+        public WebmApi Webm { get; }
+        public ProgressiveWebmApi ProgressiveWebm { get; }
     }
 }

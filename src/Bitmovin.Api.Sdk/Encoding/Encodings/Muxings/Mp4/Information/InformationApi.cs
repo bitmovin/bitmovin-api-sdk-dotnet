@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Information
         public InformationApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IInformationApiClient>();
-
         }
 
         /// <summary>
@@ -22,25 +21,21 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Information
         /// </summary>
         public static BitmovinApiBuilder<InformationApi> Builder => new BitmovinApiBuilder<InformationApi>();
 
-        
         /// <summary>
-        /// MP4 Muxing Information
+        /// MP4 muxing Information
         /// </summary>
-        /// <param name="encodingId">ID of the Encoding.</param>
-        /// <param name="muxingId">ID of the MP4 Muxing</param>
+        /// <param name="encodingId">ID of the Encoding. (required)</param>
+        /// <param name="muxingId">ID of the MP4 muxing (required)</param>
         public async Task<Models.Mp4MuxingInformation> GetAsync(string encodingId, string muxingId)
         {
             return await _apiClient.GetAsync(encodingId, muxingId);
         }
-        
+
         internal interface IInformationApiClient
         {
-            
             [Get("/encoding/encodings/{encoding_id}/muxings/mp4/{muxing_id}/information")]
             [AllowAnyStatusCode]
             Task<Models.Mp4MuxingInformation> GetAsync([Path("encoding_id")] string encodingId, [Path("muxing_id")] string muxingId);
-            
         }
-        
     }
 }

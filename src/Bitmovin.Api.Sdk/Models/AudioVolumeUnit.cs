@@ -1,17 +1,9 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Runtime.Serialization;
-using JsonSubTypes;
-using Newtonsoft.Json;
-
-using Bitmovin.Api.Sdk.Common;
-using Bitmovin.Api.Sdk.Models;
 
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// AudioVolumeUnit
+    /// The unit in which the audio volume should be changed
     /// </summary>
     public enum AudioVolumeUnit
     {
@@ -20,13 +12,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [EnumMember(Value = "PERCENT")]
         PERCENT,
-        
+
         /// <summary>
         /// Change the audio volume in decibels. E.g., volume 4 will increase audio volume by 4 decibels.
         /// </summary>
         [EnumMember(Value = "DB")]
         DB
-        
     }
-
 }

@@ -13,9 +13,7 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// BitmovinResponseList
     /// </summary>
-
     public class BitmovinResponseList : List<BitmovinResponse>
     {
     }
-
 }

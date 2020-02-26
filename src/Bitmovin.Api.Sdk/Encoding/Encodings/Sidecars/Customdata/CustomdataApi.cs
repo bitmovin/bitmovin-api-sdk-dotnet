@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Sidecars.Customdata
         public CustomdataApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ICustomdataApiClient>();
-
         }
 
         /// <summary>
@@ -22,25 +21,21 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Sidecars.Customdata
         /// </summary>
         public static BitmovinApiBuilder<CustomdataApi> Builder => new BitmovinApiBuilder<CustomdataApi>();
 
-        
         /// <summary>
         /// Sidecar Custom Data
         /// </summary>
-        /// <param name="encodingId">Id of the encoding.</param>
-        /// <param name="sidecarId">Id of the sidecar.</param>
+        /// <param name="encodingId">Id of the encoding. (required)</param>
+        /// <param name="sidecarId">Id of the sidecar. (required)</param>
         public async Task<Models.CustomData> GetAsync(string encodingId, string sidecarId)
         {
             return await _apiClient.GetAsync(encodingId, sidecarId);
         }
-        
+
         internal interface ICustomdataApiClient
         {
-            
             [Get("/encoding/encodings/{encoding_id}/sidecars/{sidecar_id}/customData")]
             [AllowAnyStatusCode]
             Task<Models.CustomData> GetAsync([Path("encoding_id")] string encodingId, [Path("sidecar_id")] string sidecarId);
-            
         }
-        
     }
 }

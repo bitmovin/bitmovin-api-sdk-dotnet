@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// UtcTiming
     /// </summary>
-
     public class UtcTiming
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }
-        
+
         /// <summary>
         /// The scheme id to use. Please refer to the DASH standard. (required)
         /// </summary>
         [JsonProperty(PropertyName = "schemeIdUri")]
         public string SchemeIdUri { get; set; }
     }
-
 }

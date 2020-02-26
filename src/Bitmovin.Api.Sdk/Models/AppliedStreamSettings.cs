@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// AppliedStreamSettings
     /// </summary>
-
     public class AppliedStreamSettings
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "width")]
         public int? Width { get; set; }
-        
+
         /// <summary>
         /// The applied height. Useful if the height in the configuration was undefined
         /// </summary>
         [JsonProperty(PropertyName = "height")]
         public int? Height { get; set; }
     }
-
 }

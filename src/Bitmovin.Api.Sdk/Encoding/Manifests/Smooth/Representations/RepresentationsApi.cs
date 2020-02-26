@@ -15,7 +15,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Smooth.Representations
         /// </summary>
         public static BitmovinApiBuilder<RepresentationsApi> Builder => new BitmovinApiBuilder<RepresentationsApi>();
 
-        public Mp4Api Mp4 { get; private set; }
-
+        public Mp4Api Mp4 { get; }
     }
 }

@@ -34,7 +34,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs
         public InputsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IInputsApiClient>();
-
             Type = new TypeApi(apiClientFactory);
             Rtmp = new RtmpApi(apiClientFactory);
             RedundantRtmp = new RedundantRtmpApi(apiClientFactory);
@@ -62,27 +61,27 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs
         /// </summary>
         public static BitmovinApiBuilder<InputsApi> Builder => new BitmovinApiBuilder<InputsApi>();
 
-        public TypeApi Type { get; private set; }
-        public RtmpApi Rtmp { get; private set; }
-        public RedundantRtmpApi RedundantRtmp { get; private set; }
-        public S3Api S3 { get; private set; }
-        public S3RoleBasedApi S3RoleBased { get; private set; }
-        public GenericS3Api GenericS3 { get; private set; }
-        public LocalApi Local { get; private set; }
-        public GcsApi Gcs { get; private set; }
-        public AzureApi Azure { get; private set; }
-        public FtpApi Ftp { get; private set; }
-        public SftpApi Sftp { get; private set; }
-        public HttpApi Http { get; private set; }
-        public HttpsApi Https { get; private set; }
-        public AsperaApi Aspera { get; private set; }
-        public AkamaiNetstorageApi AkamaiNetstorage { get; private set; }
-        public SrtApi Srt { get; private set; }
-        public TcpApi Tcp { get; private set; }
-        public UdpApi Udp { get; private set; }
-        public UdpMulticastApi UdpMulticast { get; private set; }
-        public ZixiApi Zixi { get; private set; }
-        
+        public TypeApi Type { get; }
+        public RtmpApi Rtmp { get; }
+        public RedundantRtmpApi RedundantRtmp { get; }
+        public S3Api S3 { get; }
+        public S3RoleBasedApi S3RoleBased { get; }
+        public GenericS3Api GenericS3 { get; }
+        public LocalApi Local { get; }
+        public GcsApi Gcs { get; }
+        public AzureApi Azure { get; }
+        public FtpApi Ftp { get; }
+        public SftpApi Sftp { get; }
+        public HttpApi Http { get; }
+        public HttpsApi Https { get; }
+        public AsperaApi Aspera { get; }
+        public AkamaiNetstorageApi AkamaiNetstorage { get; }
+        public SrtApi Srt { get; }
+        public TcpApi Tcp { get; }
+        public UdpApi Udp { get; }
+        public UdpMulticastApi UdpMulticast { get; }
+        public ZixiApi Zixi { get; }
+
         /// <summary>
         /// List all Inputs
         /// </summary>
@@ -98,32 +97,30 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs
 
             return await _apiClient.ListAsync(q);
         }
-        
+
         internal interface IInputsApiClient
         {
-            
             [Get("/encoding/inputs")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.Input>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
-            
         }
-        
+
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>
             /// Index of the first item to return, starting at 0. Default is 0
             /// </summary>
-            public ListQueryParams Offset(int? Offset) => SetQueryParam("offset", Offset);
+            public ListQueryParams Offset(int? offset) => SetQueryParam("offset", offset);
 
             /// <summary>
             /// Maximum number of items to return. Default is 25, maximum is 100
             /// </summary>
-            public ListQueryParams Limit(int? Limit) => SetQueryParam("limit", Limit);
+            public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
 
             /// <summary>
             /// Filter inputs by name
             /// </summary>
-            public ListQueryParams Name(string Name) => SetQueryParam("name", Name);
+            public ListQueryParams Name(string name) => SetQueryParam("name", name);
 
             private ListQueryParams SetQueryParam<T>(string key, T value)
             {

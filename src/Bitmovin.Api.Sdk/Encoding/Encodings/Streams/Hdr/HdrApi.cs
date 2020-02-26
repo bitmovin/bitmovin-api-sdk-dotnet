@@ -15,7 +15,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Hdr
         /// </summary>
         public static BitmovinApiBuilder<HdrApi> Builder => new BitmovinApiBuilder<HdrApi>();
 
-        public DolbyVisionApi DolbyVision { get; private set; }
-
+        public DolbyVisionApi DolbyVision { get; }
     }
 }

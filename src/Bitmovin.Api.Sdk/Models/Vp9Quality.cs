@@ -1,17 +1,9 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Runtime.Serialization;
-using JsonSubTypes;
-using Newtonsoft.Json;
-
-using Bitmovin.Api.Sdk.Common;
-using Bitmovin.Api.Sdk.Models;
 
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// Vp9Quality
+    /// Determines quality for the price of speed.
     /// </summary>
     public enum Vp9Quality
     {
@@ -20,19 +12,17 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [EnumMember(Value = "REALTIME")]
         REALTIME,
-        
+
         /// <summary>
         /// Determines quality for the price of speed.
         /// </summary>
         [EnumMember(Value = "GOOD")]
         GOOD,
-        
+
         /// <summary>
         /// Determines quality for the price of speed.
         /// </summary>
         [EnumMember(Value = "BEST")]
         BEST
-        
     }
-
 }

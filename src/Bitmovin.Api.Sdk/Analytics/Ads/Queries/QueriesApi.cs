@@ -31,15 +31,14 @@ namespace Bitmovin.Api.Sdk.Analytics.Ads.Queries
         /// </summary>
         public static BitmovinApiBuilder<QueriesApi> Builder => new BitmovinApiBuilder<QueriesApi>();
 
-        public CountApi Count { get; private set; }
-        public SumApi Sum { get; private set; }
-        public AvgApi Avg { get; private set; }
-        public MinApi Min { get; private set; }
-        public MaxApi Max { get; private set; }
-        public StddevApi Stddev { get; private set; }
-        public PercentileApi Percentile { get; private set; }
-        public VarianceApi Variance { get; private set; }
-        public MedianApi Median { get; private set; }
-
+        public CountApi Count { get; }
+        public SumApi Sum { get; }
+        public AvgApi Avg { get; }
+        public MinApi Min { get; }
+        public MaxApi Max { get; }
+        public StddevApi Stddev { get; }
+        public PercentileApi Percentile { get; }
+        public VarianceApi Variance { get; }
+        public MedianApi Median { get; }
     }
 }

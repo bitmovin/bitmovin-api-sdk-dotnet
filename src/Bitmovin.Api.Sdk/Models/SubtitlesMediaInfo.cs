@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// SubtitlesMediaInfo
     /// </summary>
-
     public class SubtitlesMediaInfo : StandardMediaInfo
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "forced")]
         public bool? Forced { get; set; }
     }
-
 }

@@ -13,12 +13,10 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// OrConjunction
     /// </summary>
-
     public class OrConjunction : AbstractConjunction
     {
         [JsonProperty(PropertyName = "type")]
         private readonly string _type = "OR";
 
     }
-
 }

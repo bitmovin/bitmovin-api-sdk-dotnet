@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Analytics.Queries.Avg
         public AvgApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IAvgApiClient>();
-
         }
 
         /// <summary>
@@ -22,24 +21,20 @@ namespace Bitmovin.Api.Sdk.Analytics.Queries.Avg
         /// </summary>
         public static BitmovinApiBuilder<AvgApi> Builder => new BitmovinApiBuilder<AvgApi>();
 
-        
         /// <summary>
         /// Avg
         /// </summary>
-        /// <param name="analyticsAvgQueryRequest">The request payload</param>
+        /// <param name="analyticsAvgQueryRequest">Analytics Query Object</param>
         public async Task<Models.AnalyticsResponse> CreateAsync(Models.AnalyticsAvgQueryRequest analyticsAvgQueryRequest)
         {
             return await _apiClient.CreateAsync(analyticsAvgQueryRequest);
         }
-        
+
         internal interface IAvgApiClient
         {
-            
             [Post("/analytics/queries/avg")]
             [AllowAnyStatusCode]
             Task<Models.AnalyticsResponse> CreateAsync([Body] Models.AnalyticsAvgQueryRequest analyticsAvgQueryRequest);
-            
         }
-        
     }
 }

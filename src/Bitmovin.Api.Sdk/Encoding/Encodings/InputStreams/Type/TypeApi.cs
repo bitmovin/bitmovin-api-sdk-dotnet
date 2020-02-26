@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Type
         public TypeApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ITypeApiClient>();
-
         }
 
         /// <summary>
@@ -22,25 +21,21 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Type
         /// </summary>
         public static BitmovinApiBuilder<TypeApi> Builder => new BitmovinApiBuilder<TypeApi>();
 
-        
         /// <summary>
         /// Get Input Stream Type
         /// </summary>
-        /// <param name="encodingId">Id of the encoding</param>
-        /// <param name="inputStreamId">Id of the input stream</param>
+        /// <param name="encodingId">Id of the encoding (required)</param>
+        /// <param name="inputStreamId">Id of the input stream (required)</param>
         public async Task<Models.InputStreamTypeResponse> GetAsync(string encodingId, string inputStreamId)
         {
             return await _apiClient.GetAsync(encodingId, inputStreamId);
         }
-        
+
         internal interface ITypeApiClient
         {
-            
             [Get("/encoding/encodings/{encoding_id}/input-streams/{input_stream_id}/type")]
             [AllowAnyStatusCode]
             Task<Models.InputStreamTypeResponse> GetAsync([Path("encoding_id")] string encodingId, [Path("input_stream_id")] string inputStreamId);
-            
         }
-        
     }
 }

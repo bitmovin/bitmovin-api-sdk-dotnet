@@ -15,7 +15,6 @@ namespace Bitmovin.Api.Sdk.Player.CustomBuilds
         /// </summary>
         public static BitmovinApiBuilder<CustomBuildsApi> Builder => new BitmovinApiBuilder<CustomBuildsApi>();
 
-        public WebApi Web { get; private set; }
-
+        public WebApi Web { get; }
     }
 }

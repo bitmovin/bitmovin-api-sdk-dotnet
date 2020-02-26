@@ -13,9 +13,7 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// ProgressiveWebmMuxingInformation
     /// </summary>
-
     public class ProgressiveWebmMuxingInformation : ProgressiveMuxingInformation
     {
     }
-
 }

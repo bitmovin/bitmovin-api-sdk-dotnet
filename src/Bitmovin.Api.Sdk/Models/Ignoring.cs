@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// Ignoring
     /// </summary>
-
     public class Ignoring
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "ignoredBy")]
         public IgnoredBy? IgnoredBy { get; internal set; }
-        
+
         /// <summary>
         /// Describes why ignoredBy has been set to its current value.
         /// </summary>
         [JsonProperty(PropertyName = "ignoredByDescription")]
         public string IgnoredByDescription { get; internal set; }
     }
-
 }

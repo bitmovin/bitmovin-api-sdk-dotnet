@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// AudioVolumeFilter
     /// </summary>
-
     public class AudioVolumeFilter : Filter
     {
         [JsonProperty(PropertyName = "type")]
@@ -24,12 +23,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "volume")]
         public double? Volume { get; set; }
-        
+
         /// <summary>
         /// Unit
         /// </summary>
         [JsonProperty(PropertyName = "unit")]
         public AudioVolumeUnit? Unit { get; set; }
     }
-
 }

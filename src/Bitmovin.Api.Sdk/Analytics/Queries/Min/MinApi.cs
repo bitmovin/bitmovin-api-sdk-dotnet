@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Analytics.Queries.Min
         public MinApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IMinApiClient>();
-
         }
 
         /// <summary>
@@ -22,24 +21,20 @@ namespace Bitmovin.Api.Sdk.Analytics.Queries.Min
         /// </summary>
         public static BitmovinApiBuilder<MinApi> Builder => new BitmovinApiBuilder<MinApi>();
 
-        
         /// <summary>
         /// Min
         /// </summary>
-        /// <param name="analyticsMinQueryRequest">The request payload</param>
+        /// <param name="analyticsMinQueryRequest">Analytics Query Object</param>
         public async Task<Models.AnalyticsResponse> CreateAsync(Models.AnalyticsMinQueryRequest analyticsMinQueryRequest)
         {
             return await _apiClient.CreateAsync(analyticsMinQueryRequest);
         }
-        
+
         internal interface IMinApiClient
         {
-            
             [Post("/analytics/queries/min")]
             [AllowAnyStatusCode]
             Task<Models.AnalyticsResponse> CreateAsync([Body] Models.AnalyticsMinQueryRequest analyticsMinQueryRequest);
-            
         }
-        
     }
 }

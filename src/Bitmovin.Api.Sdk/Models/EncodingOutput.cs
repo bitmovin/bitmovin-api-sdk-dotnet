@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// EncodingOutput
     /// </summary>
-
     public class EncodingOutput
     {
         /// <summary>
@@ -21,18 +20,17 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "outputId")]
         public string OutputId { get; set; }
-        
+
         /// <summary>
         /// Subdirectory where to save the files to (required)
         /// </summary>
         [JsonProperty(PropertyName = "outputPath")]
         public string OutputPath { get; set; }
-        
+
         /// <summary>
         /// Acl
         /// </summary>
         [JsonProperty(PropertyName = "acl")]
         public List<AclEntry> Acl { get; set; } = new List<AclEntry>();
     }
-
 }

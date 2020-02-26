@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// OpusAudioConfiguration
     /// </summary>
-
     public class OpusAudioConfiguration : AudioConfiguration
     {
         [JsonProperty(PropertyName = "type")]
@@ -25,5 +24,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "channelLayout")]
         public OpusChannelLayout? ChannelLayout { get; set; }
     }
-
 }

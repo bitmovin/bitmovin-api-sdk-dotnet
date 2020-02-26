@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Sprites.Customdata
         public CustomdataApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ICustomdataApiClient>();
-
         }
 
         /// <summary>
@@ -22,26 +21,22 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Sprites.Customdata
         /// </summary>
         public static BitmovinApiBuilder<CustomdataApi> Builder => new BitmovinApiBuilder<CustomdataApi>();
 
-        
         /// <summary>
         /// Sprite Custom Data
         /// </summary>
-        /// <param name="encodingId">Id of the encoding.</param>
-        /// <param name="streamId">Id of the stream.</param>
-        /// <param name="spriteId">Id of the sprite configuration.</param>
+        /// <param name="encodingId">Id of the encoding. (required)</param>
+        /// <param name="streamId">Id of the stream. (required)</param>
+        /// <param name="spriteId">Id of the sprite configuration. (required)</param>
         public async Task<Models.CustomData> GetAsync(string encodingId, string streamId, string spriteId)
         {
             return await _apiClient.GetAsync(encodingId, streamId, spriteId);
         }
-        
+
         internal interface ICustomdataApiClient
         {
-            
             [Get("/encoding/encodings/{encoding_id}/streams/{stream_id}/sprites/{sprite_id}/customData")]
             [AllowAnyStatusCode]
             Task<Models.CustomData> GetAsync([Path("encoding_id")] string encodingId, [Path("stream_id")] string streamId, [Path("sprite_id")] string spriteId);
-            
         }
-        
     }
 }

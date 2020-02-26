@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// BurnInSubtitleSrt
     /// </summary>
-
     public class BurnInSubtitleSrt : BitmovinResource
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "characterEncoding")]
         public CaptionCharacterEncoding? CharacterEncoding { get; set; }
-        
+
         /// <summary>
         /// The input location to get the SRT file from (required)
         /// </summary>
         [JsonProperty(PropertyName = "input")]
         public InputPath Input { get; set; }
     }
-
 }

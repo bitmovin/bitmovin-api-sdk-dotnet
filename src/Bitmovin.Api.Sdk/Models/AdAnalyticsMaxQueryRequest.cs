@@ -13,9 +13,7 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// AdAnalyticsMaxQueryRequest
     /// </summary>
-
     public class AdAnalyticsMaxQueryRequest : AdAnalyticsQueryRequest
     {
     }
-
 }

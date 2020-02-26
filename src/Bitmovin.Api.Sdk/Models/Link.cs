@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// Link
     /// </summary>
-
     public class Link
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "href")]
         public string Href { get; set; }
-        
+
         /// <summary>
         /// Short description of the linked page
         /// </summary>
         [JsonProperty(PropertyName = "title")]
         public string Title { get; set; }
     }
-
 }

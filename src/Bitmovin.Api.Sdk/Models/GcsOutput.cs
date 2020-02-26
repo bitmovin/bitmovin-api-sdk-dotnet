@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// GcsOutput
     /// </summary>
-
     public class GcsOutput : Output
     {
         [JsonProperty(PropertyName = "type")]
@@ -24,24 +23,23 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "accessKey")]
         public string AccessKey { get; set; }
-        
+
         /// <summary>
         /// GCS secret key (required)
         /// </summary>
         [JsonProperty(PropertyName = "secretKey")]
         public string SecretKey { get; set; }
-        
+
         /// <summary>
         /// Name of the bucket (required)
         /// </summary>
         [JsonProperty(PropertyName = "bucketName")]
         public string BucketName { get; set; }
-        
+
         /// <summary>
         /// CloudRegion
         /// </summary>
         [JsonProperty(PropertyName = "cloudRegion")]
         public GoogleCloudRegion? CloudRegion { get; set; }
     }
-
 }

@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Http.Customdata
         public CustomdataApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ICustomdataApiClient>();
-
         }
 
         /// <summary>
@@ -22,24 +21,20 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Http.Customdata
         /// </summary>
         public static BitmovinApiBuilder<CustomdataApi> Builder => new BitmovinApiBuilder<CustomdataApi>();
 
-        
         /// <summary>
         /// HTTP Custom Data
         /// </summary>
-        /// <param name="inputId">Id of the input</param>
+        /// <param name="inputId">Id of the input (required)</param>
         public async Task<Models.CustomData> GetAsync(string inputId)
         {
             return await _apiClient.GetAsync(inputId);
         }
-        
+
         internal interface ICustomdataApiClient
         {
-            
             [Get("/encoding/inputs/http/{input_id}/customData")]
             [AllowAnyStatusCode]
             Task<Models.CustomData> GetAsync([Path("input_id")] string inputId);
-            
         }
-        
     }
 }

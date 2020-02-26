@@ -27,7 +27,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings
         public MuxingsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IMuxingsApiClient>();
-
             Fmp4 = new Fmp4Api(apiClientFactory);
             ChunkedText = new ChunkedTextApi(apiClientFactory);
             Cmaf = new CmafApi(apiClientFactory);
@@ -48,24 +47,24 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings
         /// </summary>
         public static BitmovinApiBuilder<MuxingsApi> Builder => new BitmovinApiBuilder<MuxingsApi>();
 
-        public Fmp4Api Fmp4 { get; private set; }
-        public ChunkedTextApi ChunkedText { get; private set; }
-        public CmafApi Cmaf { get; private set; }
-        public SegmentedRawApi SegmentedRaw { get; private set; }
-        public TextApi Text { get; private set; }
-        public TsApi Ts { get; private set; }
-        public WebmApi Webm { get; private set; }
-        public Mp3Api Mp3 { get; private set; }
-        public Mp4Api Mp4 { get; private set; }
-        public ProgressiveTsApi ProgressiveTs { get; private set; }
-        public BroadcastTsApi BroadcastTs { get; private set; }
-        public ProgressiveWebmApi ProgressiveWebm { get; private set; }
-        public ProgressiveMovApi ProgressiveMov { get; private set; }
-        
+        public Fmp4Api Fmp4 { get; }
+        public ChunkedTextApi ChunkedText { get; }
+        public CmafApi Cmaf { get; }
+        public SegmentedRawApi SegmentedRaw { get; }
+        public TextApi Text { get; }
+        public TsApi Ts { get; }
+        public WebmApi Webm { get; }
+        public Mp3Api Mp3 { get; }
+        public Mp4Api Mp4 { get; }
+        public ProgressiveTsApi ProgressiveTs { get; }
+        public BroadcastTsApi BroadcastTs { get; }
+        public ProgressiveWebmApi ProgressiveWebm { get; }
+        public ProgressiveMovApi ProgressiveMov { get; }
+
         /// <summary>
         /// List All Muxings
         /// </summary>
-        /// <param name="encodingId">Id of the encoding.</param>
+        /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>
         public async Task<Models.PaginationResponse<Models.Muxing>> ListAsync(string encodingId, params Func<ListQueryParams, ListQueryParams>[] queryParams)
         {
@@ -78,32 +77,30 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings
 
             return await _apiClient.ListAsync(encodingId, q);
         }
-        
+
         internal interface IMuxingsApiClient
         {
-            
             [Get("/encoding/encodings/{encoding_id}/muxings")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.Muxing>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap] IDictionary<String, Object> queryParams);
-            
         }
-        
+
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>
             /// Index of the first item to return, starting at 0. Default is 0
             /// </summary>
-            public ListQueryParams Offset(int? Offset) => SetQueryParam("offset", Offset);
+            public ListQueryParams Offset(int? offset) => SetQueryParam("offset", offset);
 
             /// <summary>
             /// Maximum number of items to return. Default is 25, maximum is 100
             /// </summary>
-            public ListQueryParams Limit(int? Limit) => SetQueryParam("limit", Limit);
+            public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
 
             /// <summary>
             /// Filter muxings to only show the ones with the stream modes specified. Accepts multiple values separated by commas.
             /// </summary>
-            public ListQueryParams StreamMode(Models.StreamMode StreamMode) => SetQueryParam("streamMode", StreamMode);
+            public ListQueryParams StreamMode(Models.StreamMode streamMode) => SetQueryParam("streamMode", streamMode);
 
             private ListQueryParams SetQueryParam<T>(string key, T value)
             {

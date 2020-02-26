@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.AudioMix.Customdata
         public CustomdataApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ICustomdataApiClient>();
-
         }
 
         /// <summary>
@@ -22,24 +21,20 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.AudioMix.Customdata
         /// </summary>
         public static BitmovinApiBuilder<CustomdataApi> Builder => new BitmovinApiBuilder<CustomdataApi>();
 
-        
         /// <summary>
         /// Audio Mix Filter Custom Data
         /// </summary>
-        /// <param name="filterId">Id of the Audio Mix configuration.</param>
+        /// <param name="filterId">Id of the Audio Mix configuration. (required)</param>
         public async Task<Models.CustomData> GetAsync(string filterId)
         {
             return await _apiClient.GetAsync(filterId);
         }
-        
+
         internal interface ICustomdataApiClient
         {
-            
             [Get("/encoding/filters/audio-mix/{filter_id}/customData")]
             [AllowAnyStatusCode]
             Task<Models.CustomData> GetAsync([Path("filter_id")] string filterId);
-            
         }
-        
     }
 }

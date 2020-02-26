@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// BackupSrtInputs
     /// </summary>
-
     public class BackupSrtInputs
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "delayThreshold")]
         public int? DelayThreshold { get; set; }
-        
+
         /// <summary>
         /// SrtInputs
         /// </summary>
         [JsonProperty(PropertyName = "srtInputs")]
         public List<SrtInput> SrtInputs { get; set; } = new List<SrtInput>();
     }
-
 }

@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// DolbyVisionMuxingConfiguration
     /// </summary>
-
     public class DolbyVisionMuxingConfiguration
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "trackSampleEntryName")]
         public DolbyVisionTrackSampleEntryName? TrackSampleEntryName { get; set; }
     }
-
 }

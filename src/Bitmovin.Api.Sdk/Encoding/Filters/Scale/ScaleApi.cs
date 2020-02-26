@@ -15,7 +15,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Scale
         public ScaleApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IScaleApiClient>();
-
             Customdata = new CustomdataApi(apiClientFactory);
         }
 
@@ -24,35 +23,35 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Scale
         /// </summary>
         public static BitmovinApiBuilder<ScaleApi> Builder => new BitmovinApiBuilder<ScaleApi>();
 
-        public CustomdataApi Customdata { get; private set; }
-        
+        public CustomdataApi Customdata { get; }
+
         /// <summary>
         /// Create Scale Filter
         /// </summary>
-        /// <param name="scaleFilter">The request payload</param>
+        /// <param name="scaleFilter">The Scale Filter to be created</param>
         public async Task<Models.ScaleFilter> CreateAsync(Models.ScaleFilter scaleFilter)
         {
             return await _apiClient.CreateAsync(scaleFilter);
         }
-        
+
         /// <summary>
         /// Delete Scale Filter
         /// </summary>
-        /// <param name="filterId">Id of the scale filter</param>
+        /// <param name="filterId">Id of the scale filter (required)</param>
         public async Task<Models.BitmovinResponse> DeleteAsync(string filterId)
         {
             return await _apiClient.DeleteAsync(filterId);
         }
-        
+
         /// <summary>
         /// Scale Filter Details
         /// </summary>
-        /// <param name="filterId">Id of the scale filter</param>
+        /// <param name="filterId">Id of the scale filter (required)</param>
         public async Task<Models.ScaleFilter> GetAsync(string filterId)
         {
             return await _apiClient.GetAsync(filterId);
         }
-        
+
         /// <summary>
         /// List Scale Filters
         /// </summary>
@@ -68,44 +67,42 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Scale
 
             return await _apiClient.ListAsync(q);
         }
-        
+
         internal interface IScaleApiClient
         {
-            
             [Post("/encoding/filters/scale")]
             [AllowAnyStatusCode]
             Task<Models.ScaleFilter> CreateAsync([Body] Models.ScaleFilter scaleFilter);
-            
+
             [Delete("/encoding/filters/scale/{filter_id}")]
             [AllowAnyStatusCode]
             Task<Models.BitmovinResponse> DeleteAsync([Path("filter_id")] string filterId);
-            
+
             [Get("/encoding/filters/scale/{filter_id}")]
             [AllowAnyStatusCode]
             Task<Models.ScaleFilter> GetAsync([Path("filter_id")] string filterId);
-            
+
             [Get("/encoding/filters/scale")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.ScaleFilter>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
-            
         }
-        
+
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>
             /// Index of the first item to return, starting at 0. Default is 0
             /// </summary>
-            public ListQueryParams Offset(int? Offset) => SetQueryParam("offset", Offset);
+            public ListQueryParams Offset(int? offset) => SetQueryParam("offset", offset);
 
             /// <summary>
             /// Maximum number of items to return. Default is 25, maximum is 100
             /// </summary>
-            public ListQueryParams Limit(int? Limit) => SetQueryParam("limit", Limit);
+            public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
 
             /// <summary>
             /// Filter filters by name
             /// </summary>
-            public ListQueryParams Name(string Name) => SetQueryParam("name", Name);
+            public ListQueryParams Name(string name) => SetQueryParam("name", name);
 
             private ListQueryParams SetQueryParam<T>(string key, T value)
             {

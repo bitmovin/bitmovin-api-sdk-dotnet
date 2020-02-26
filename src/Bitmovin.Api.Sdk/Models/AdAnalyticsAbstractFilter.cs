@@ -32,5 +32,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "name")]
         public AdAnalyticsAttribute? Name { get; set; }
     }
-
 }

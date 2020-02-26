@@ -15,7 +15,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Sidecar
         /// </summary>
         public static BitmovinApiBuilder<SidecarApi> Builder => new BitmovinApiBuilder<SidecarApi>();
 
-        public DolbyVisionMetadataIngestApi DolbyVisionMetadataIngest { get; private set; }
-
+        public DolbyVisionMetadataIngestApi DolbyVisionMetadataIngest { get; }
     }
 }

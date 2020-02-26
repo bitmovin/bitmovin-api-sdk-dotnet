@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// ManifestTypeResponse
     /// </summary>
-
     public class ManifestTypeResponse
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "type")]
         public ManifestType? Type { get; set; }
     }
-
 }

@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// ResponseEnvelope
     /// </summary>
-
     public class ResponseEnvelope<T>
     {
         /// <summary>
@@ -21,24 +20,23 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "requestId")]
         public string RequestId { get; internal set; }
-        
+
         /// <summary>
         /// Response status information (required)
         /// </summary>
         [JsonProperty(PropertyName = "status")]
         public ResponseStatus? Status { get; internal set; }
-        
+
         /// <summary>
         /// Response information (required)
         /// </summary>
         [JsonProperty(PropertyName = "data")]
         public ResultWrapper<T> Data { get; internal set; }
-        
+
         /// <summary>
         /// Additional endpoint specific information
         /// </summary>
         [JsonProperty(PropertyName = "more")]
         public Object More { get; set; }
     }
-
 }

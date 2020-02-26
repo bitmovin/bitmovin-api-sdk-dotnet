@@ -15,7 +15,6 @@ namespace Bitmovin.Api.Sdk.Analytics.Outputs
         /// </summary>
         public static BitmovinApiBuilder<OutputsApi> Builder => new BitmovinApiBuilder<OutputsApi>();
 
-        public S3RoleBasedApi S3RoleBased { get; private set; }
-
+        public S3RoleBasedApi S3RoleBased { get; }
     }
 }

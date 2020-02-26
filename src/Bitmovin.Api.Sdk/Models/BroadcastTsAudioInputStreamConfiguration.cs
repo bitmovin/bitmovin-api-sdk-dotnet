@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// BroadcastTsAudioInputStreamConfiguration
     /// </summary>
-
     public class BroadcastTsAudioInputStreamConfiguration : BroadcastTsInputStreamConfiguration
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "useATSCBufferModel")]
         public bool? UseATSCBufferModel { get; set; }
-        
+
         /// <summary>
         /// Language of the audio stream. Specified according to the ISO 639-2 alpha code for the language descriptor.
         /// </summary>
         [JsonProperty(PropertyName = "language")]
         public string Language { get; set; }
     }
-
 }

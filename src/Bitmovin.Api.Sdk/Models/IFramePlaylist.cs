@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// IFramePlaylist
     /// </summary>
-
     public class IFramePlaylist : BitmovinResource
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "filename")]
         public string Filename { get; set; }
     }
-
 }

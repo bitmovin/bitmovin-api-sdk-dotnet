@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// ResponseError
     /// </summary>
-
     public class ResponseError
     {
         /// <summary>
@@ -21,18 +20,17 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "requestId")]
         public string RequestId { get; internal set; }
-        
+
         /// <summary>
         /// Response status information (required)
         /// </summary>
         [JsonProperty(PropertyName = "status")]
         public ResponseStatus? Status { get; internal set; }
-        
+
         /// <summary>
         /// Response information (required)
         /// </summary>
         [JsonProperty(PropertyName = "data")]
         public ResponseErrorData Data { get; internal set; }
     }
-
 }

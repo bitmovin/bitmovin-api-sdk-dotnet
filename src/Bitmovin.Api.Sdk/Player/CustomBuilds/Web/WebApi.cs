@@ -17,7 +17,6 @@ namespace Bitmovin.Api.Sdk.Player.CustomBuilds.Web
         public WebApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IWebApiClient>();
-
             Domains = new DomainsApi(apiClientFactory);
             Status = new StatusApi(apiClientFactory);
             Download = new DownloadApi(apiClientFactory);
@@ -28,28 +27,28 @@ namespace Bitmovin.Api.Sdk.Player.CustomBuilds.Web
         /// </summary>
         public static BitmovinApiBuilder<WebApi> Builder => new BitmovinApiBuilder<WebApi>();
 
-        public DomainsApi Domains { get; private set; }
-        public StatusApi Status { get; private set; }
-        public DownloadApi Download { get; private set; }
-        
+        public DomainsApi Domains { get; }
+        public StatusApi Status { get; }
+        public DownloadApi Download { get; }
+
         /// <summary>
         /// Add Custom Web Player Build
         /// </summary>
-        /// <param name="customPlayerBuildDetails">The request payload</param>
+        /// <param name="customPlayerBuildDetails">The Custom Web Player Build to be added</param>
         public async Task<Models.CustomPlayerBuildDetails> CreateAsync(Models.CustomPlayerBuildDetails customPlayerBuildDetails)
         {
             return await _apiClient.CreateAsync(customPlayerBuildDetails);
         }
-        
+
         /// <summary>
         /// Custom Web Player Build Details
         /// </summary>
-        /// <param name="customBuildId">Id of the custom player build</param>
+        /// <param name="customBuildId">Id of the custom player build (required)</param>
         public async Task<Models.CustomPlayerBuildStatus> GetAsync(string customBuildId)
         {
             return await _apiClient.GetAsync(customBuildId);
         }
-        
+
         /// <summary>
         /// List Custom Web Player Builds
         /// </summary>
@@ -57,36 +56,33 @@ namespace Bitmovin.Api.Sdk.Player.CustomBuilds.Web
         {
             return await _apiClient.ListAsync();
         }
-        
+
         /// <summary>
         /// Start Custom Web Player Build
         /// </summary>
-        /// <param name="customBuildId">Id of the custom player build</param>
+        /// <param name="customBuildId">Id of the custom player build (required)</param>
         public async Task<Models.BitmovinResponse> StartAsync(string customBuildId)
         {
             return await _apiClient.StartAsync(customBuildId);
         }
-        
+
         internal interface IWebApiClient
         {
-            
             [Post("/player/custom-builds/web")]
             [AllowAnyStatusCode]
             Task<Models.CustomPlayerBuildDetails> CreateAsync([Body] Models.CustomPlayerBuildDetails customPlayerBuildDetails);
-            
+
             [Get("/player/custom-builds/web/{custom_build_id}")]
             [AllowAnyStatusCode]
             Task<Models.CustomPlayerBuildStatus> GetAsync([Path("custom_build_id")] string customBuildId);
-            
+
             [Get("/player/custom-builds/web")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.CustomPlayerBuildDetails>> ListAsync();
-            
+
             [Post("/player/custom-builds/web/{custom_build_id}/start")]
             [AllowAnyStatusCode]
             Task<Models.BitmovinResponse> StartAsync([Path("custom_build_id")] string customBuildId);
-            
         }
-        
     }
 }

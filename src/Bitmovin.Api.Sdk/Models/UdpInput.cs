@@ -13,12 +13,10 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// UdpInput
     /// </summary>
-
     public class UdpInput : Input
     {
         [JsonProperty(PropertyName = "type")]
         private readonly string _type = "UDP";
 
     }
-
 }

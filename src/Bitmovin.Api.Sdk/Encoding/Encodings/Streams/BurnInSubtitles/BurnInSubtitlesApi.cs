@@ -17,8 +17,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.BurnInSubtitles
         /// </summary>
         public static BitmovinApiBuilder<BurnInSubtitlesApi> Builder => new BitmovinApiBuilder<BurnInSubtitlesApi>();
 
-        public DvbsubApi Dvbsub { get; private set; }
-        public SrtApi Srt { get; private set; }
-
+        public DvbsubApi Dvbsub { get; }
+        public SrtApi Srt { get; }
     }
 }

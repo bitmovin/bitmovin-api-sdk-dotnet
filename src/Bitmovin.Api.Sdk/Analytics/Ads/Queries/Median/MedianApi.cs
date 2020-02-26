@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Analytics.Ads.Queries.Median
         public MedianApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IMedianApiClient>();
-
         }
 
         /// <summary>
@@ -22,24 +21,20 @@ namespace Bitmovin.Api.Sdk.Analytics.Ads.Queries.Median
         /// </summary>
         public static BitmovinApiBuilder<MedianApi> Builder => new BitmovinApiBuilder<MedianApi>();
 
-        
         /// <summary>
         /// Median
         /// </summary>
-        /// <param name="adAnalyticsMedianQueryRequest">The request payload</param>
+        /// <param name="adAnalyticsMedianQueryRequest">Analytics Query Object</param>
         public async Task<Models.AnalyticsResponse> CreateAsync(Models.AdAnalyticsMedianQueryRequest adAnalyticsMedianQueryRequest)
         {
             return await _apiClient.CreateAsync(adAnalyticsMedianQueryRequest);
         }
-        
+
         internal interface IMedianApiClient
         {
-            
             [Post("/analytics/ads/queries/median")]
             [AllowAnyStatusCode]
             Task<Models.AnalyticsResponse> CreateAsync([Body] Models.AdAnalyticsMedianQueryRequest adAnalyticsMedianQueryRequest);
-            
         }
-        
     }
 }

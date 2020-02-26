@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// RawId3Tag
     /// </summary>
-
     public class RawId3Tag : Id3Tag
     {
         [JsonProperty(PropertyName = "type")]
@@ -25,5 +24,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "bytes")]
         public string Bytes { get; set; }
     }
-
 }

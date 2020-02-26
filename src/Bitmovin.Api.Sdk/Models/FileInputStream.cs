@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// FileInputStream
     /// </summary>
-
     public class FileInputStream : InputStream
     {
         [JsonProperty(PropertyName = "type")]
@@ -24,18 +23,17 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "inputId")]
         public string InputId { get; set; }
-        
+
         /// <summary>
         /// Path to file (required)
         /// </summary>
         [JsonProperty(PropertyName = "inputPath")]
         public string InputPath { get; set; }
-        
+
         /// <summary>
         /// FileType
         /// </summary>
         [JsonProperty(PropertyName = "fileType")]
         public FileInputStreamType? FileType { get; set; }
     }
-
 }

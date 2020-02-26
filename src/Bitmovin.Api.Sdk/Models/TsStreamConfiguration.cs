@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// TsStreamConfiguration
     /// </summary>
-
     public class TsStreamConfiguration
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "streamId")]
         public string StreamId { get; set; }
-        
+
         /// <summary>
         /// An integer value. MPEG Transport Stream Packet Identifier (PID) for this stream. (required)
         /// </summary>
         [JsonProperty(PropertyName = "pid")]
         public int? Pid { get; set; }
     }
-
 }

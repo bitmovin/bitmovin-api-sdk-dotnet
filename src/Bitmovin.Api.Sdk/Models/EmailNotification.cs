@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// EmailNotification
     /// </summary>
-
     public class EmailNotification : Notification
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "emails")]
         public List<string> Emails { get; set; } = new List<string>();
     }
-
 }

@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// ClosedCaptionsMediaInfo
     /// </summary>
-
     public class ClosedCaptionsMediaInfo : SegmentsMediaInfo
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "instreamId")]
         public string InstreamId { get; set; }
-        
+
         /// <summary>
         /// A value of true indicates that the Rendition contains content which is considered essential to play.
         /// </summary>
         [JsonProperty(PropertyName = "forced")]
         public bool? Forced { get; set; }
     }
-
 }

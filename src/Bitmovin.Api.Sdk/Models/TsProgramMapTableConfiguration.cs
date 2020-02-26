@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// TsProgramMapTableConfiguration
     /// </summary>
-
     public class TsProgramMapTableConfiguration
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "pid")]
         public int? Pid { get; set; }
     }
-
 }

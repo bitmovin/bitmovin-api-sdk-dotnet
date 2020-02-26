@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// ProgressiveTsMuxingInformation
     /// </summary>
-
     public class ProgressiveTsMuxingInformation : ProgressiveMuxingInformation
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "byteRanges")]
         public List<ProgressiveTsMuxingInformationByteRanges> ByteRanges { get; internal set; } = new List<ProgressiveTsMuxingInformationByteRanges>();
     }
-
 }

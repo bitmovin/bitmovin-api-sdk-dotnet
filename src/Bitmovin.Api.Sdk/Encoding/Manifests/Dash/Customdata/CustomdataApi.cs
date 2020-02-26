@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Customdata
         public CustomdataApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ICustomdataApiClient>();
-
         }
 
         /// <summary>
@@ -22,24 +21,20 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Customdata
         /// </summary>
         public static BitmovinApiBuilder<CustomdataApi> Builder => new BitmovinApiBuilder<CustomdataApi>();
 
-        
         /// <summary>
         /// DASH Manifest Custom Data
         /// </summary>
-        /// <param name="manifestId">UUID of the DASH manifest</param>
+        /// <param name="manifestId">UUID of the DASH manifest (required)</param>
         public async Task<Models.CustomData> GetAsync(string manifestId)
         {
             return await _apiClient.GetAsync(manifestId);
         }
-        
+
         internal interface ICustomdataApiClient
         {
-            
             [Get("/encoding/manifests/dash/{manifest_id}/customData")]
             [AllowAnyStatusCode]
             Task<Models.CustomData> GetAsync([Path("manifest_id")] string manifestId);
-            
         }
-        
     }
 }

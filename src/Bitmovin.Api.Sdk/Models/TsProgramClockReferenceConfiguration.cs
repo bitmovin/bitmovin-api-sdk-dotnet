@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// TsProgramClockReferenceConfiguration
     /// </summary>
-
     public class TsProgramClockReferenceConfiguration
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "pid")]
         public int? Pid { get; set; }
-        
+
         /// <summary>
         /// An integer value. Nominal time between MPEG Transport Stream PCRs in milliseconds.
         /// </summary>
         [JsonProperty(PropertyName = "interval")]
         public int? Interval { get; set; }
     }
-
 }

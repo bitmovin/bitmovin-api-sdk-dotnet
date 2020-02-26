@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live.InsertableContent.Scheduled
         public ScheduledApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IScheduledApiClient>();
-
         }
 
         /// <summary>
@@ -22,11 +21,10 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live.InsertableContent.Scheduled
         /// </summary>
         public static BitmovinApiBuilder<ScheduledApi> Builder => new BitmovinApiBuilder<ScheduledApi>();
 
-        
         /// <summary>
         /// List All Scheduled Insertable Content For A Live Encoding
         /// </summary>
-        /// <param name="encodingId">Id of the encoding.</param>
+        /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>
         public async Task<Models.PaginationResponse<Models.ScheduledInsertableContent>> ListAsync(string encodingId, params Func<ListQueryParams, ListQueryParams>[] queryParams)
         {
@@ -39,27 +37,25 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live.InsertableContent.Scheduled
 
             return await _apiClient.ListAsync(encodingId, q);
         }
-        
+
         internal interface IScheduledApiClient
         {
-            
             [Get("/encoding/encodings/{encoding_id}/live/insertable-content/scheduled")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.ScheduledInsertableContent>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap] IDictionary<String, Object> queryParams);
-            
         }
-        
+
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>
             /// Index of the first item to return, starting at 0. Default is 0
             /// </summary>
-            public ListQueryParams Offset(int? Offset) => SetQueryParam("offset", Offset);
+            public ListQueryParams Offset(int? offset) => SetQueryParam("offset", offset);
 
             /// <summary>
             /// Maximum number of items to return. Default is 25, maximum is 100
             /// </summary>
-            public ListQueryParams Limit(int? Limit) => SetQueryParam("limit", Limit);
+            public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
 
             private ListQueryParams SetQueryParam<T>(string key, T value)
             {

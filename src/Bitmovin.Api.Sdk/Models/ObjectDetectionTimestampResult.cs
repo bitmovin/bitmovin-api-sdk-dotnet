@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// ObjectDetectionTimestampResult
     /// </summary>
-
     public class ObjectDetectionTimestampResult : BitmovinResponse
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "timestamp")]
         public double? Timestamp { get; set; }
-        
+
         /// <summary>
         /// Objects detected for the given timestamp
         /// </summary>
         [JsonProperty(PropertyName = "objects")]
         public List<ObjectDetectionResult> Objects { get; set; } = new List<ObjectDetectionResult>();
     }
-
 }

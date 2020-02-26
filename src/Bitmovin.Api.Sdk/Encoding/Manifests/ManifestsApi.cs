@@ -18,7 +18,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests
         public ManifestsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IManifestsApiClient>();
-
             Type = new TypeApi(apiClientFactory);
             Dash = new DashApi(apiClientFactory);
             Hls = new HlsApi(apiClientFactory);
@@ -30,11 +29,11 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests
         /// </summary>
         public static BitmovinApiBuilder<ManifestsApi> Builder => new BitmovinApiBuilder<ManifestsApi>();
 
-        public TypeApi Type { get; private set; }
-        public DashApi Dash { get; private set; }
-        public HlsApi Hls { get; private set; }
-        public SmoothApi Smooth { get; private set; }
-        
+        public TypeApi Type { get; }
+        public DashApi Dash { get; }
+        public HlsApi Hls { get; }
+        public SmoothApi Smooth { get; }
+
         /// <summary>
         /// List all Manifests
         /// </summary>
@@ -50,27 +49,25 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests
 
             return await _apiClient.ListAsync(q);
         }
-        
+
         internal interface IManifestsApiClient
         {
-            
             [Get("/encoding/manifests")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.Manifest>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
-            
         }
-        
+
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>
             /// Index of the first item to return, starting at 0. Default is 0
             /// </summary>
-            public ListQueryParams Offset(int? Offset) => SetQueryParam("offset", Offset);
+            public ListQueryParams Offset(int? offset) => SetQueryParam("offset", offset);
 
             /// <summary>
             /// Maximum number of items to return. Default is 25, maximum is 100
             /// </summary>
-            public ListQueryParams Limit(int? Limit) => SetQueryParam("limit", Limit);
+            public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
 
             private ListQueryParams SetQueryParam<T>(string key, T value)
             {

@@ -13,9 +13,7 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// BroadcastTsMuxingInformation
     /// </summary>
-
     public class BroadcastTsMuxingInformation : ProgressiveMuxingInformation
     {
     }
-
 }

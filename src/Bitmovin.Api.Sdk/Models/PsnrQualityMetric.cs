@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// PsnrQualityMetric
     /// </summary>
-
     public class PsnrQualityMetric
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "timeSpan")]
         public TimeSpan TimeSpan { get; set; }
-        
+
         /// <summary>
         /// Peak signal-to-noise ratio (required)
         /// </summary>
         [JsonProperty(PropertyName = "psnr")]
         public double? Psnr { get; set; }
     }
-
 }

@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// RotateFilter
     /// </summary>
-
     public class RotateFilter : Filter
     {
         [JsonProperty(PropertyName = "type")]
@@ -25,5 +24,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "rotation")]
         public int? Rotation { get; set; }
     }
-
 }

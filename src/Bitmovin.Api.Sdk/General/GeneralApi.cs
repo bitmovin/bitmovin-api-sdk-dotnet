@@ -15,7 +15,6 @@ namespace Bitmovin.Api.Sdk.General
         /// </summary>
         public static BitmovinApiBuilder<GeneralApi> Builder => new BitmovinApiBuilder<GeneralApi>();
 
-        public ErrorDefinitionsApi ErrorDefinitions { get; private set; }
-
+        public ErrorDefinitionsApi ErrorDefinitions { get; }
     }
 }

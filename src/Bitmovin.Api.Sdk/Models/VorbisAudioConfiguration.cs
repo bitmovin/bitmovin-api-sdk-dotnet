@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// VorbisAudioConfiguration
     /// </summary>
-
     public class VorbisAudioConfiguration : AudioConfiguration
     {
         [JsonProperty(PropertyName = "type")]
@@ -25,5 +24,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "channelLayout")]
         public VorbisChannelLayout? ChannelLayout { get; set; }
     }
-
 }

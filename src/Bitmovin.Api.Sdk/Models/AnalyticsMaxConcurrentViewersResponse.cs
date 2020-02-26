@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// AnalyticsMaxConcurrentViewersResponse
     /// </summary>
-
     public class AnalyticsMaxConcurrentViewersResponse
     {
         /// <summary>
@@ -21,18 +20,17 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "rows")]
         public List<double?> Rows { get; set; } = new List<double?>();
-        
+
         /// <summary>
         /// Number of rows returned
         /// </summary>
         [JsonProperty(PropertyName = "rowCount")]
         public long? RowCount { get; set; }
-        
+
         /// <summary>
         /// ColumnLabels
         /// </summary>
         [JsonProperty(PropertyName = "columnLabels")]
         public List<AnalyticsColumnLabel> ColumnLabels { get; set; } = new List<AnalyticsColumnLabel>();
     }
-
 }

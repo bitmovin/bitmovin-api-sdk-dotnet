@@ -13,12 +13,10 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// AndConjunction
     /// </summary>
-
     public class AndConjunction : AbstractConjunction
     {
         [JsonProperty(PropertyName = "type")]
         private readonly string _type = "AND";
 
     }
-
 }

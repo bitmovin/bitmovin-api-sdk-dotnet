@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// Domain
     /// </summary>
-
     public class Domain : BitmovinResource
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "url")]
         public string Url { get; set; }
     }
-
 }

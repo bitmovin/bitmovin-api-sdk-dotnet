@@ -19,9 +19,8 @@ namespace Bitmovin.Api.Sdk.Player
         /// </summary>
         public static BitmovinApiBuilder<PlayerApi> Builder => new BitmovinApiBuilder<PlayerApi>();
 
-        public ChannelsApi Channels { get; private set; }
-        public LicensesApi Licenses { get; private set; }
-        public CustomBuildsApi CustomBuilds { get; private set; }
-
+        public ChannelsApi Channels { get; }
+        public LicensesApi Licenses { get; }
+        public CustomBuildsApi CustomBuilds { get; }
     }
 }

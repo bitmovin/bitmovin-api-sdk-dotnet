@@ -13,9 +13,7 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// TsVideoStreamConfiguration
     /// </summary>
-
     public class TsVideoStreamConfiguration : TsStreamConfiguration
     {
     }
-
 }

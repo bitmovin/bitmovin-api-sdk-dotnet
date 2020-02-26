@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// TimeBasedTrimmingInputStream
     /// </summary>
-
     public class TimeBasedTrimmingInputStream : InputStream
     {
         [JsonProperty(PropertyName = "type")]
@@ -24,18 +23,17 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "inputStreamId")]
         public string InputStreamId { get; set; }
-        
+
         /// <summary>
         /// Defines the offset in seconds at which the encoding should start, beginning at 0. The frame indicated by this value will be included in the encoding
         /// </summary>
         [JsonProperty(PropertyName = "offset")]
         public double? Offset { get; set; }
-        
+
         /// <summary>
         /// Defines how many seconds of the input will be encoded
         /// </summary>
         [JsonProperty(PropertyName = "duration")]
         public double? Duration { get; set; }
     }
-
 }

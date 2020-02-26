@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// S3Input
     /// </summary>
-
     public class S3Input : Input
     {
         [JsonProperty(PropertyName = "type")]
@@ -24,24 +23,23 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "cloudRegion")]
         public AwsCloudRegion? CloudRegion { get; set; }
-        
+
         /// <summary>
         /// Name of the bucket (required)
         /// </summary>
         [JsonProperty(PropertyName = "bucketName")]
         public string BucketName { get; set; }
-        
+
         /// <summary>
         /// Amazon access key (required)
         /// </summary>
         [JsonProperty(PropertyName = "accessKey")]
         public string AccessKey { get; set; }
-        
+
         /// <summary>
         /// Amazon secret key (required)
         /// </summary>
         [JsonProperty(PropertyName = "secretKey")]
         public string SecretKey { get; set; }
     }
-
 }

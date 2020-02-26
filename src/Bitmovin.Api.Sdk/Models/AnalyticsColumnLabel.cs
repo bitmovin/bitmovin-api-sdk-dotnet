@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// AnalyticsColumnLabel
     /// </summary>
-
     public class AnalyticsColumnLabel
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-        
+
         /// <summary>
         /// Label
         /// </summary>
         [JsonProperty(PropertyName = "label")]
         public string Label { get; set; }
     }
-
 }

@@ -31,15 +31,14 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio
         /// </summary>
         public static BitmovinApiBuilder<AudioApi> Builder => new BitmovinApiBuilder<AudioApi>();
 
-        public AacApi Aac { get; private set; }
-        public HeAacV1Api HeAacV1 { get; private set; }
-        public HeAacV2Api HeAacV2 { get; private set; }
-        public VorbisApi Vorbis { get; private set; }
-        public OpusApi Opus { get; private set; }
-        public Ac3Api Ac3 { get; private set; }
-        public Eac3Api Eac3 { get; private set; }
-        public Mp2Api Mp2 { get; private set; }
-        public Mp3Api Mp3 { get; private set; }
-
+        public AacApi Aac { get; }
+        public HeAacV1Api HeAacV1 { get; }
+        public HeAacV2Api HeAacV2 { get; }
+        public VorbisApi Vorbis { get; }
+        public OpusApi Opus { get; }
+        public Ac3Api Ac3 { get; }
+        public Eac3Api Eac3 { get; }
+        public Mp2Api Mp2 { get; }
+        public Mp3Api Mp3 { get; }
     }
 }

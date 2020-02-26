@@ -35,42 +35,41 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "streams")]
         public List<MuxingStream> Streams { get; set; } = new List<MuxingStream>();
-        
+
         /// <summary>
         /// Outputs
         /// </summary>
         [JsonProperty(PropertyName = "outputs")]
         public List<EncodingOutput> Outputs { get; set; } = new List<EncodingOutput>();
-        
+
         /// <summary>
         /// Average bitrate. Available after encoding finishes.
         /// </summary>
         [JsonProperty(PropertyName = "avgBitrate")]
         public long? AvgBitrate { get; internal set; }
-        
+
         /// <summary>
         /// Min bitrate. Available after encoding finishes.
         /// </summary>
         [JsonProperty(PropertyName = "minBitrate")]
         public long? MinBitrate { get; internal set; }
-        
+
         /// <summary>
         /// Max bitrate. Available after encoding finishes.
         /// </summary>
         [JsonProperty(PropertyName = "maxBitrate")]
         public long? MaxBitrate { get; internal set; }
-        
+
         /// <summary>
         /// If this is set and contains objects, then this muxing has been ignored during the encoding process
         /// </summary>
         [JsonProperty(PropertyName = "ignoredBy")]
         public List<Ignoring> IgnoredBy { get; internal set; } = new List<Ignoring>();
-        
+
         /// <summary>
         /// Specifies how to handle streams that don&#39;t fulfill stream conditions
         /// </summary>
         [JsonProperty(PropertyName = "streamConditionsMode")]
         public StreamConditionsMode? StreamConditionsMode { get; set; }
     }
-
 }

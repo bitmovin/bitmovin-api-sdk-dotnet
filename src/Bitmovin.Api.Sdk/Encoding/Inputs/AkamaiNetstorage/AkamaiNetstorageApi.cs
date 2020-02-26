@@ -15,7 +15,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.AkamaiNetstorage
         public AkamaiNetstorageApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IAkamaiNetstorageApiClient>();
-
             Customdata = new CustomdataApi(apiClientFactory);
         }
 
@@ -24,35 +23,35 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.AkamaiNetstorage
         /// </summary>
         public static BitmovinApiBuilder<AkamaiNetstorageApi> Builder => new BitmovinApiBuilder<AkamaiNetstorageApi>();
 
-        public CustomdataApi Customdata { get; private set; }
-        
+        public CustomdataApi Customdata { get; }
+
         /// <summary>
         /// Create Akamai NetStorage Input
         /// </summary>
-        /// <param name="akamaiNetStorageInput">The request payload</param>
+        /// <param name="akamaiNetStorageInput">The Akamai NetStorage input to be created</param>
         public async Task<Models.AkamaiNetStorageInput> CreateAsync(Models.AkamaiNetStorageInput akamaiNetStorageInput)
         {
             return await _apiClient.CreateAsync(akamaiNetStorageInput);
         }
-        
+
         /// <summary>
         /// Delete Akamai NetStorage Input
         /// </summary>
-        /// <param name="inputId">Id of the input</param>
+        /// <param name="inputId">Id of the input (required)</param>
         public async Task<Models.AkamaiNetStorageInput> DeleteAsync(string inputId)
         {
             return await _apiClient.DeleteAsync(inputId);
         }
-        
+
         /// <summary>
         /// Akamai NetStorage Input Details
         /// </summary>
-        /// <param name="inputId">Id of the input</param>
+        /// <param name="inputId">Id of the input (required)</param>
         public async Task<Models.AkamaiNetStorageInput> GetAsync(string inputId)
         {
             return await _apiClient.GetAsync(inputId);
         }
-        
+
         /// <summary>
         /// List Akamai NetStorage Inputs
         /// </summary>
@@ -68,44 +67,42 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.AkamaiNetstorage
 
             return await _apiClient.ListAsync(q);
         }
-        
+
         internal interface IAkamaiNetstorageApiClient
         {
-            
             [Post("/encoding/inputs/akamai-netstorage")]
             [AllowAnyStatusCode]
             Task<Models.AkamaiNetStorageInput> CreateAsync([Body] Models.AkamaiNetStorageInput akamaiNetStorageInput);
-            
+
             [Delete("/encoding/inputs/akamai-netstorage/{input_id}")]
             [AllowAnyStatusCode]
             Task<Models.AkamaiNetStorageInput> DeleteAsync([Path("input_id")] string inputId);
-            
+
             [Get("/encoding/inputs/akamai-netstorage/{input_id}")]
             [AllowAnyStatusCode]
             Task<Models.AkamaiNetStorageInput> GetAsync([Path("input_id")] string inputId);
-            
+
             [Get("/encoding/inputs/akamai-netstorage")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.AkamaiNetStorageInput>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
-            
         }
-        
+
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>
             /// Index of the first item to return, starting at 0. Default is 0
             /// </summary>
-            public ListQueryParams Offset(int? Offset) => SetQueryParam("offset", Offset);
+            public ListQueryParams Offset(int? offset) => SetQueryParam("offset", offset);
 
             /// <summary>
             /// Maximum number of items to return. Default is 25, maximum is 100
             /// </summary>
-            public ListQueryParams Limit(int? Limit) => SetQueryParam("limit", Limit);
+            public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
 
             /// <summary>
             /// Filter inputs by name
             /// </summary>
-            public ListQueryParams Name(string Name) => SetQueryParam("name", Name);
+            public ListQueryParams Name(string name) => SetQueryParam("name", name);
 
             private ListQueryParams SetQueryParam<T>(string key, T value)
             {

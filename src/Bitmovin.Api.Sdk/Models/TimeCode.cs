@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// TimeCode
     /// </summary>
-
     public class TimeCode
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "timeCodeStart")]
         public string TimeCodeStart { get; set; }
     }
-
 }

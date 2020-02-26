@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// AclEntry
     /// </summary>
-
     public class AclEntry
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "scope")]
         public string Scope { get; set; }
-        
+
         /// <summary>
         /// Permission
         /// </summary>
         [JsonProperty(PropertyName = "permission")]
         public AclPermission? Permission { get; set; }
     }
-
 }

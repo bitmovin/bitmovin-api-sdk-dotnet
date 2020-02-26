@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// AudioMixChannel
     /// </summary>
-
     public class AudioMixChannel
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "channelNumber")]
         public int? ChannelNumber { get; set; }
-        
+
         /// <summary>
         /// List of source channels to be mixed (required)
         /// </summary>
         [JsonProperty(PropertyName = "sourceChannels")]
         public List<SourceChannel> SourceChannels { get; set; } = new List<SourceChannel>();
     }
-
 }

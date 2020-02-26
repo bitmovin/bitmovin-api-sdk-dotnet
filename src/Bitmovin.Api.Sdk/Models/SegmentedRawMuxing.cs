@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// SegmentedRawMuxing
     /// </summary>
-
     public class SegmentedRawMuxing : Muxing
     {
         [JsonProperty(PropertyName = "type")]
@@ -24,18 +23,17 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "segmentLength")]
         public double? SegmentLength { get; set; }
-        
+
         /// <summary>
         /// Segment naming policy (required)
         /// </summary>
         [JsonProperty(PropertyName = "segmentNaming")]
         public string SegmentNaming { get; set; }
-        
+
         /// <summary>
         /// Number of segments which have been encoded
         /// </summary>
         [JsonProperty(PropertyName = "segmentsMuxed")]
         public int? SegmentsMuxed { get; internal set; }
     }
-
 }

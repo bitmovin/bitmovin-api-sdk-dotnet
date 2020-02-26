@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// TsMuxingConfiguration
     /// </summary>
-
     public class TsMuxingConfiguration
     {
         /// <summary>
@@ -21,30 +20,29 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "programNumber")]
         public int? ProgramNumber { get; set; }
-        
+
         /// <summary>
         /// Pmt
         /// </summary>
         [JsonProperty(PropertyName = "pmt")]
         public TsProgramMapTableConfiguration Pmt { get; set; }
-        
+
         /// <summary>
         /// Pcr
         /// </summary>
         [JsonProperty(PropertyName = "pcr")]
         public TsProgramClockReferenceConfiguration Pcr { get; set; }
-        
+
         /// <summary>
         /// VideoStreams
         /// </summary>
         [JsonProperty(PropertyName = "videoStreams")]
         public List<TsVideoStreamConfiguration> VideoStreams { get; set; } = new List<TsVideoStreamConfiguration>();
-        
+
         /// <summary>
         /// AudioStreams
         /// </summary>
         [JsonProperty(PropertyName = "audioStreams")]
         public List<TsAudioStreamConfiguration> AudioStreams { get; set; } = new List<TsAudioStreamConfiguration>();
     }
-
 }

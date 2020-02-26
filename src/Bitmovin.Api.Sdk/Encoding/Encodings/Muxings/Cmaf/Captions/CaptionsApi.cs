@@ -15,7 +15,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Cmaf.Captions
         /// </summary>
         public static BitmovinApiBuilder<CaptionsApi> Builder => new BitmovinApiBuilder<CaptionsApi>();
 
-        public TtmlApi Ttml { get; private set; }
-
+        public TtmlApi Ttml { get; }
     }
 }

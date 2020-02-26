@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// AdAnalyticsInFilter
     /// </summary>
-
     public class AdAnalyticsInFilter : AdAnalyticsAbstractFilter
     {
         [JsonProperty(PropertyName = "operator")]
@@ -25,5 +24,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "value")]
         public List<Object> Value { get; set; } = new List<Object>();
     }
-
 }

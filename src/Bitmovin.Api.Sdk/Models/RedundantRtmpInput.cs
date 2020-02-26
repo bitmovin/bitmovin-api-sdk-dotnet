@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// RedundantRtmpInput
     /// </summary>
-
     public class RedundantRtmpInput : Input
     {
         [JsonProperty(PropertyName = "type")]
@@ -24,12 +23,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "delayThreshold")]
         public int? DelayThreshold { get; set; }
-        
+
         /// <summary>
         /// IngestPoints
         /// </summary>
         [JsonProperty(PropertyName = "ingestPoints")]
         public List<RtmpIngestPoint> IngestPoints { get; set; } = new List<RtmpIngestPoint>();
     }
-
 }

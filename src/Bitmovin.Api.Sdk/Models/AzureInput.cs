@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// AzureInput
     /// </summary>
-
     public class AzureInput : Input
     {
         [JsonProperty(PropertyName = "type")]
@@ -24,18 +23,17 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "accountName")]
         public string AccountName { get; set; }
-        
+
         /// <summary>
         /// Azure Account Key (required)
         /// </summary>
         [JsonProperty(PropertyName = "accountKey")]
         public string AccountKey { get; set; }
-        
+
         /// <summary>
         /// Name of the bucket (required)
         /// </summary>
         [JsonProperty(PropertyName = "container")]
         public string Container { get; set; }
     }
-
 }

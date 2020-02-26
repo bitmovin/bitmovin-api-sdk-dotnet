@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// AnalyticsOrderByEntry
     /// </summary>
-
     public class AnalyticsOrderByEntry
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "name")]
         public AnalyticsAttribute? Name { get; set; }
-        
+
         /// <summary>
         /// Order
         /// </summary>
         [JsonProperty(PropertyName = "order")]
         public AnalyticsOrder? Order { get; set; }
     }
-
 }

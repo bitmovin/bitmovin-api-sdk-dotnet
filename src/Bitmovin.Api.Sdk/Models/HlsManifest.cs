@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// HlsManifest
     /// </summary>
-
     public class HlsManifest : Manifest
     {
         /// <summary>
@@ -21,18 +20,17 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "manifestName")]
         public string ManifestName { get; set; }
-        
+
         /// <summary>
         /// If this is set, the EXT-X-VERSION tags of the Media Playlists are set to the provided version
         /// </summary>
         [JsonProperty(PropertyName = "hlsMediaPlaylistVersion")]
         public HlsVersion? HlsMediaPlaylistVersion { get; set; }
-        
+
         /// <summary>
         /// If this is set, the EXT-X-VERSION tag of the Master Playlist is set to the provided version
         /// </summary>
         [JsonProperty(PropertyName = "hlsMasterPlaylistVersion")]
         public HlsVersion? HlsMasterPlaylistVersion { get; set; }
     }
-
 }

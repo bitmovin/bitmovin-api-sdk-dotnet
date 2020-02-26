@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// AudioMixFilter
     /// </summary>
-
     public class AudioMixFilter : Filter
     {
         [JsonProperty(PropertyName = "type")]
@@ -24,12 +23,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "channelLayout")]
         public AudioMixChannelLayout? ChannelLayout { get; set; }
-        
+
         /// <summary>
         /// List of mixed channels that matches the channel layout (required)
         /// </summary>
         [JsonProperty(PropertyName = "audioMixChannels")]
         public List<AudioMixChannel> AudioMixChannels { get; set; } = new List<AudioMixChannel>();
     }
-
 }

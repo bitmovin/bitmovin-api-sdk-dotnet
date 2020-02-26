@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// Keyframe
     /// </summary>
-
     public class Keyframe : BitmovinResource
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "time")]
         public double? Time { get; set; }
-        
+
         /// <summary>
         /// Instructs the encoder to cut the segment at this position
         /// </summary>
         [JsonProperty(PropertyName = "segmentCut")]
         public bool? SegmentCut { get; set; }
     }
-
 }

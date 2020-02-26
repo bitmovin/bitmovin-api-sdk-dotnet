@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// SccCaption
     /// </summary>
-
     public class SccCaption : BitmovinResource
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "input")]
         public InputPath Input { get; set; }
     }
-
 }

@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// DashRepresentation
     /// </summary>
-
     public class DashRepresentation : BitmovinResponse
     {
         /// <summary>
@@ -21,18 +20,17 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "encodingId")]
         public string EncodingId { get; set; }
-        
+
         /// <summary>
         /// UUID of a muxing (required)
         /// </summary>
         [JsonProperty(PropertyName = "muxingId")]
         public string MuxingId { get; set; }
-        
+
         /// <summary>
         /// Used to signal a dependency with another representation. The representation may belong to a different adaptation set
         /// </summary>
         [JsonProperty(PropertyName = "dependencyId")]
         public string DependencyId { get; set; }
     }
-
 }

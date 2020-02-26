@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.MachineLearning.ObjectDetection.Cu
         public CustomdataApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ICustomdataApiClient>();
-
         }
 
         /// <summary>
@@ -22,25 +21,21 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.MachineLearning.ObjectDetection.Cu
         /// </summary>
         public static BitmovinApiBuilder<CustomdataApi> Builder => new BitmovinApiBuilder<CustomdataApi>();
 
-        
         /// <summary>
         /// Get the custom data of an object detection configuration
         /// </summary>
-        /// <param name="encodingId">Id of the encoding</param>
-        /// <param name="objectDetectionId">Id of the object detection configuration</param>
+        /// <param name="encodingId">Id of the encoding (required)</param>
+        /// <param name="objectDetectionId">Id of the object detection configuration (required)</param>
         public async Task<Models.CustomData> GetAsync(string encodingId, string objectDetectionId)
         {
             return await _apiClient.GetAsync(encodingId, objectDetectionId);
         }
-        
+
         internal interface ICustomdataApiClient
         {
-            
             [Get("/encoding/encodings/{encoding_id}/machine-learning/object-detection/{object_detection_id}/customData")]
             [AllowAnyStatusCode]
             Task<Models.CustomData> GetAsync([Path("encoding_id")] string encodingId, [Path("object_detection_id")] string objectDetectionId);
-            
         }
-        
     }
 }

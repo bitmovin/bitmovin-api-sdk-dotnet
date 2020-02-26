@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// SubtitleStream
     /// </summary>
-
     public class SubtitleStream : MediaStream
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "language")]
         public string Language { get; set; }
-        
+
         /// <summary>
         /// Hearing impaired support
         /// </summary>
         [JsonProperty(PropertyName = "hearingImpaired")]
         public bool? HearingImpaired { get; set; }
     }
-
 }

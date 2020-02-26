@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Scale.Customdata
         public CustomdataApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ICustomdataApiClient>();
-
         }
 
         /// <summary>
@@ -22,24 +21,20 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Scale.Customdata
         /// </summary>
         public static BitmovinApiBuilder<CustomdataApi> Builder => new BitmovinApiBuilder<CustomdataApi>();
 
-        
         /// <summary>
         /// Scale Filter Custom Data
         /// </summary>
-        /// <param name="filterId">Id of the scale filter</param>
+        /// <param name="filterId">Id of the scale filter (required)</param>
         public async Task<Models.CustomData> GetAsync(string filterId)
         {
             return await _apiClient.GetAsync(filterId);
         }
-        
+
         internal interface ICustomdataApiClient
         {
-            
             [Get("/encoding/filters/scale/{filter_id}/customData")]
             [AllowAnyStatusCode]
             Task<Models.CustomData> GetAsync([Path("filter_id")] string filterId);
-            
         }
-        
     }
 }

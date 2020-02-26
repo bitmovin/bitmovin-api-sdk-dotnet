@@ -15,7 +15,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Aws
         public AwsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IAwsApiClient>();
-
             Regions = new RegionsApi(apiClientFactory);
         }
 
@@ -24,35 +23,35 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Aws
         /// </summary>
         public static BitmovinApiBuilder<AwsApi> Builder => new BitmovinApiBuilder<AwsApi>();
 
-        public RegionsApi Regions { get; private set; }
-        
+        public RegionsApi Regions { get; }
+
         /// <summary>
         /// Add AWS Account
         /// </summary>
-        /// <param name="awsAccount">The request payload</param>
+        /// <param name="awsAccount">The AWS Account to be added</param>
         public async Task<Models.AwsAccount> CreateAsync(Models.AwsAccount awsAccount)
         {
             return await _apiClient.CreateAsync(awsAccount);
         }
-        
+
         /// <summary>
         /// Delete AWS Account
         /// </summary>
-        /// <param name="infrastructureId">Id of the AWS account</param>
+        /// <param name="infrastructureId">Id of the AWS account (required)</param>
         public async Task<Models.AwsAccount> DeleteAsync(string infrastructureId)
         {
             return await _apiClient.DeleteAsync(infrastructureId);
         }
-        
+
         /// <summary>
         /// AWS Account Details
         /// </summary>
-        /// <param name="infrastructureId">Id of the AWS account</param>
+        /// <param name="infrastructureId">Id of the AWS account (required)</param>
         public async Task<Models.AwsAccount> GetAsync(string infrastructureId)
         {
             return await _apiClient.GetAsync(infrastructureId);
         }
-        
+
         /// <summary>
         /// List AWS Accounts
         /// </summary>
@@ -68,39 +67,37 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Aws
 
             return await _apiClient.ListAsync(q);
         }
-        
+
         internal interface IAwsApiClient
         {
-            
             [Post("/encoding/infrastructure/aws")]
             [AllowAnyStatusCode]
             Task<Models.AwsAccount> CreateAsync([Body] Models.AwsAccount awsAccount);
-            
+
             [Delete("/encoding/infrastructure/aws/{infrastructure_id}")]
             [AllowAnyStatusCode]
             Task<Models.AwsAccount> DeleteAsync([Path("infrastructure_id")] string infrastructureId);
-            
+
             [Get("/encoding/infrastructure/aws/{infrastructure_id}")]
             [AllowAnyStatusCode]
             Task<Models.AwsAccount> GetAsync([Path("infrastructure_id")] string infrastructureId);
-            
+
             [Get("/encoding/infrastructure/aws")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.AwsAccount>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
-            
         }
-        
+
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>
             /// Index of the first item to return, starting at 0. Default is 0
             /// </summary>
-            public ListQueryParams Offset(int? Offset) => SetQueryParam("offset", Offset);
+            public ListQueryParams Offset(int? offset) => SetQueryParam("offset", offset);
 
             /// <summary>
             /// Maximum number of items to return. Default is 25, maximum is 100
             /// </summary>
-            public ListQueryParams Limit(int? Limit) => SetQueryParam("limit", Limit);
+            public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
 
             private ListQueryParams SetQueryParam<T>(string key, T value)
             {

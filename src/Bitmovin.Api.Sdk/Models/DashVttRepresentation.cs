@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// DashVttRepresentation
     /// </summary>
-
     public class DashVttRepresentation : BitmovinResource
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "vttUrl")]
         public string VttUrl { get; set; }
     }
-
 }

@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// AkamaiNetStorageInput
     /// </summary>
-
     public class AkamaiNetStorageInput : Input
     {
         [JsonProperty(PropertyName = "type")]
@@ -24,18 +23,17 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "host")]
         public string Host { get; set; }
-        
+
         /// <summary>
         /// Your Akamai NetStorage Username (required)
         /// </summary>
         [JsonProperty(PropertyName = "username")]
         public string Username { get; set; }
-        
+
         /// <summary>
         /// Your Akamai NetStorage password (required)
         /// </summary>
         [JsonProperty(PropertyName = "password")]
         public string Password { get; set; }
     }
-
 }

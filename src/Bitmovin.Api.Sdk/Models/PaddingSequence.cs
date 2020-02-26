@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// PaddingSequence
     /// </summary>
-
     public class PaddingSequence
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "duration")]
         public double? Duration { get; set; }
-        
+
         /// <summary>
         /// The unit of the &#x60;duration&#x60; property
         /// </summary>
         [JsonProperty(PropertyName = "unit")]
         public PaddingDurationUnit? Unit { get; set; }
     }
-
 }

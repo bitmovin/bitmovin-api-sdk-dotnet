@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// AnalyticsImpressionListItem
     /// </summary>
-
     public class AnalyticsImpressionListItem
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "impressionId")]
         public string ImpressionId { get; set; }
     }
-
 }

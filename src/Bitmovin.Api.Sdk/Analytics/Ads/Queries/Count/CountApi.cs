@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Analytics.Ads.Queries.Count
         public CountApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ICountApiClient>();
-
         }
 
         /// <summary>
@@ -22,24 +21,20 @@ namespace Bitmovin.Api.Sdk.Analytics.Ads.Queries.Count
         /// </summary>
         public static BitmovinApiBuilder<CountApi> Builder => new BitmovinApiBuilder<CountApi>();
 
-        
         /// <summary>
         /// Count
         /// </summary>
-        /// <param name="adAnalyticsCountQueryRequest">The request payload</param>
+        /// <param name="adAnalyticsCountQueryRequest">Analytics Query Object</param>
         public async Task<Models.AnalyticsResponse> CreateAsync(Models.AdAnalyticsCountQueryRequest adAnalyticsCountQueryRequest)
         {
             return await _apiClient.CreateAsync(adAnalyticsCountQueryRequest);
         }
-        
+
         internal interface ICountApiClient
         {
-            
             [Post("/analytics/ads/queries/count")]
             [AllowAnyStatusCode]
             Task<Models.AnalyticsResponse> CreateAsync([Body] Models.AdAnalyticsCountQueryRequest adAnalyticsCountQueryRequest);
-            
         }
-        
     }
 }

@@ -15,7 +15,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Https
         public HttpsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IHttpsApiClient>();
-
             Customdata = new CustomdataApi(apiClientFactory);
         }
 
@@ -24,35 +23,35 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Https
         /// </summary>
         public static BitmovinApiBuilder<HttpsApi> Builder => new BitmovinApiBuilder<HttpsApi>();
 
-        public CustomdataApi Customdata { get; private set; }
-        
+        public CustomdataApi Customdata { get; }
+
         /// <summary>
         /// Create HTTPS Input
         /// </summary>
-        /// <param name="httpsInput">The request payload</param>
+        /// <param name="httpsInput">The Https input to be created</param>
         public async Task<Models.HttpsInput> CreateAsync(Models.HttpsInput httpsInput)
         {
             return await _apiClient.CreateAsync(httpsInput);
         }
-        
+
         /// <summary>
         /// Delete HTTPS Input
         /// </summary>
-        /// <param name="inputId">Id of the input</param>
+        /// <param name="inputId">Id of the input (required)</param>
         public async Task<Models.HttpsInput> DeleteAsync(string inputId)
         {
             return await _apiClient.DeleteAsync(inputId);
         }
-        
+
         /// <summary>
         /// HTTPS Input Details
         /// </summary>
-        /// <param name="inputId">Id of the input</param>
+        /// <param name="inputId">Id of the input (required)</param>
         public async Task<Models.HttpsInput> GetAsync(string inputId)
         {
             return await _apiClient.GetAsync(inputId);
         }
-        
+
         /// <summary>
         /// List HTTPS Inputs
         /// </summary>
@@ -68,44 +67,42 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Https
 
             return await _apiClient.ListAsync(q);
         }
-        
+
         internal interface IHttpsApiClient
         {
-            
             [Post("/encoding/inputs/https")]
             [AllowAnyStatusCode]
             Task<Models.HttpsInput> CreateAsync([Body] Models.HttpsInput httpsInput);
-            
+
             [Delete("/encoding/inputs/https/{input_id}")]
             [AllowAnyStatusCode]
             Task<Models.HttpsInput> DeleteAsync([Path("input_id")] string inputId);
-            
+
             [Get("/encoding/inputs/https/{input_id}")]
             [AllowAnyStatusCode]
             Task<Models.HttpsInput> GetAsync([Path("input_id")] string inputId);
-            
+
             [Get("/encoding/inputs/https")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.HttpsInput>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
-            
         }
-        
+
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>
             /// Index of the first item to return, starting at 0. Default is 0
             /// </summary>
-            public ListQueryParams Offset(int? Offset) => SetQueryParam("offset", Offset);
+            public ListQueryParams Offset(int? offset) => SetQueryParam("offset", offset);
 
             /// <summary>
             /// Maximum number of items to return. Default is 25, maximum is 100
             /// </summary>
-            public ListQueryParams Limit(int? Limit) => SetQueryParam("limit", Limit);
+            public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
 
             /// <summary>
             /// Filter inputs by name
             /// </summary>
-            public ListQueryParams Name(string Name) => SetQueryParam("name", Name);
+            public ListQueryParams Name(string name) => SetQueryParam("name", name);
 
             private ListQueryParams SetQueryParam<T>(string key, T value)
             {

@@ -15,7 +15,6 @@ namespace Bitmovin.Api.Sdk.Player.Channels
         public ChannelsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IChannelsApiClient>();
-
             Versions = new VersionsApi(apiClientFactory);
         }
 
@@ -24,8 +23,8 @@ namespace Bitmovin.Api.Sdk.Player.Channels
         /// </summary>
         public static BitmovinApiBuilder<ChannelsApi> Builder => new BitmovinApiBuilder<ChannelsApi>();
 
-        public VersionsApi Versions { get; private set; }
-        
+        public VersionsApi Versions { get; }
+
         /// <summary>
         /// List Player Channels
         /// </summary>
@@ -33,15 +32,12 @@ namespace Bitmovin.Api.Sdk.Player.Channels
         {
             return await _apiClient.ListAsync();
         }
-        
+
         internal interface IChannelsApiClient
         {
-            
             [Get("/player/channels")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.PlayerChannel>> ListAsync();
-            
         }
-        
     }
 }

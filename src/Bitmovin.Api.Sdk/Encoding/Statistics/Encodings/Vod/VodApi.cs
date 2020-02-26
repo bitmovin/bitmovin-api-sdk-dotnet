@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.Vod
         public VodApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IVodApiClient>();
-
         }
 
         /// <summary>
@@ -22,7 +21,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.Vod
         /// </summary>
         public static BitmovinApiBuilder<VodApi> Builder => new BitmovinApiBuilder<VodApi>();
 
-        
         /// <summary>
         /// List VOD Encoding Statistics
         /// </summary>
@@ -38,12 +36,12 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.Vod
 
             return await _apiClient.ListAsync(q);
         }
-        
+
         /// <summary>
         /// List VOD Encoding Statistics Within Specific Dates
         /// </summary>
-        /// <param name="from">Start date, format: yyyy-MM-dd</param>
-        /// <param name="to">End date, format: yyyy-MM-dd</param>
+        /// <param name="from">Start date, format: yyyy-MM-dd (required)</param>
+        /// <param name="to">End date, format: yyyy-MM-dd (required)</param>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>
         public async Task<Models.PaginationResponse<Models.EncodingStatisticsVod>> ListByDateRangeAsync(DateTime? from, DateTime? to, params Func<ListByDateRangeQueryParams, ListByDateRangeQueryParams>[] queryParams)
         {
@@ -56,31 +54,29 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.Vod
 
             return await _apiClient.ListByDateRangeAsync(from, to, q);
         }
-        
+
         internal interface IVodApiClient
         {
-            
             [Get("/encoding/statistics/encodings/vod")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.EncodingStatisticsVod>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
-            
+
             [Get("/encoding/statistics/encodings/vod/{from}/{to}")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.EncodingStatisticsVod>> ListByDateRangeAsync([Path("from", Format = "yyyy-MM-dd")] DateTime? from, [Path("to", Format = "yyyy-MM-dd")] DateTime? to, [QueryMap] IDictionary<String, Object> queryParams);
-            
         }
-        
+
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>
             /// Index of the first item to return, starting at 0. Default is 0
             /// </summary>
-            public ListQueryParams Offset(int? Offset) => SetQueryParam("offset", Offset);
+            public ListQueryParams Offset(int? offset) => SetQueryParam("offset", offset);
 
             /// <summary>
             /// Maximum number of items to return. Default is 25, maximum is 100
             /// </summary>
-            public ListQueryParams Limit(int? Limit) => SetQueryParam("limit", Limit);
+            public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
 
             private ListQueryParams SetQueryParam<T>(string key, T value)
             {
@@ -92,17 +88,18 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.Vod
                 return this;
             }
         }
+
         public class ListByDateRangeQueryParams : Dictionary<string,Object>
         {
             /// <summary>
             /// Index of the first item to return, starting at 0. Default is 0
             /// </summary>
-            public ListByDateRangeQueryParams Offset(int? Offset) => SetQueryParam("offset", Offset);
+            public ListByDateRangeQueryParams Offset(int? offset) => SetQueryParam("offset", offset);
 
             /// <summary>
             /// Maximum number of items to return. Default is 25, maximum is 100
             /// </summary>
-            public ListByDateRangeQueryParams Limit(int? Limit) => SetQueryParam("limit", Limit);
+            public ListByDateRangeQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
 
             private ListByDateRangeQueryParams SetQueryParam<T>(string key, T value)
             {

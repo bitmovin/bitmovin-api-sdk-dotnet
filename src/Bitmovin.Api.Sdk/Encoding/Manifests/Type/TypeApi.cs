@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Type
         public TypeApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ITypeApiClient>();
-
         }
 
         /// <summary>
@@ -22,24 +21,20 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Type
         /// </summary>
         public static BitmovinApiBuilder<TypeApi> Builder => new BitmovinApiBuilder<TypeApi>();
 
-        
         /// <summary>
         /// Get Manifest Type
         /// </summary>
-        /// <param name="manifestId">UUID of the manifest</param>
+        /// <param name="manifestId">UUID of the manifest (required)</param>
         public async Task<Models.ManifestTypeResponse> GetAsync(string manifestId)
         {
             return await _apiClient.GetAsync(manifestId);
         }
-        
+
         internal interface ITypeApiClient
         {
-            
             [Get("/encoding/manifests/{manifest_id}/type")]
             [AllowAnyStatusCode]
             Task<Models.ManifestTypeResponse> GetAsync([Path("manifest_id")] string manifestId);
-            
         }
-        
     }
 }

@@ -17,8 +17,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings
         /// </summary>
         public static BitmovinApiBuilder<EncodingsApi> Builder => new BitmovinApiBuilder<EncodingsApi>();
 
-        public FinishedApi Finished { get; private set; }
-        public ErrorApi Error { get; private set; }
-
+        public FinishedApi Finished { get; }
+        public ErrorApi Error { get; }
     }
 }

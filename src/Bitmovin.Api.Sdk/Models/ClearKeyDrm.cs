@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// ClearKeyDrm
     /// </summary>
-
     public class ClearKeyDrm : Drm
     {
         [JsonProperty(PropertyName = "type")]
@@ -24,12 +23,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-        
+
         /// <summary>
         /// 16 byte key id (required)
         /// </summary>
         [JsonProperty(PropertyName = "kid")]
         public string Kid { get; set; }
     }
-
 }

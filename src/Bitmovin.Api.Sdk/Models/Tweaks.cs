@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// Tweaks
     /// </summary>
-
     public class Tweaks
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "audioVideoSyncMode")]
         public AudioVideoSyncMode? AudioVideoSyncMode { get; set; }
     }
-
 }

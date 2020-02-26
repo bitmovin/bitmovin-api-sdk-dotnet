@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Kubernetes.Customdata
         public CustomdataApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ICustomdataApiClient>();
-
         }
 
         /// <summary>
@@ -22,24 +21,20 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Kubernetes.Customdata
         /// </summary>
         public static BitmovinApiBuilder<CustomdataApi> Builder => new BitmovinApiBuilder<CustomdataApi>();
 
-        
         /// <summary>
         /// Kubernetes Cluster Custom Data
         /// </summary>
-        /// <param name="infrastructureId">Id of the Kubernetes cluster</param>
+        /// <param name="infrastructureId">Id of the Kubernetes cluster (required)</param>
         public async Task<Models.CustomData> GetAsync(string infrastructureId)
         {
             return await _apiClient.GetAsync(infrastructureId);
         }
-        
+
         internal interface ICustomdataApiClient
         {
-            
             [Get("/encoding/infrastructure/kubernetes/{infrastructure_id}/customData")]
             [AllowAnyStatusCode]
             Task<Models.CustomData> GetAsync([Path("infrastructure_id")] string infrastructureId);
-            
         }
-        
     }
 }

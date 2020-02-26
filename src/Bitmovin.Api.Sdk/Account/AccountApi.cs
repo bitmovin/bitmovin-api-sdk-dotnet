@@ -19,9 +19,8 @@ namespace Bitmovin.Api.Sdk.Account
         /// </summary>
         public static BitmovinApiBuilder<AccountApi> Builder => new BitmovinApiBuilder<AccountApi>();
 
-        public InformationApi Information { get; private set; }
-        public ApiKeysApi ApiKeys { get; private set; }
-        public OrganizationsApi Organizations { get; private set; }
-
+        public InformationApi Information { get; }
+        public ApiKeysApi ApiKeys { get; }
+        public OrganizationsApi Organizations { get; }
     }
 }

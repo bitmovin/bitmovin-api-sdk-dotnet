@@ -1,17 +1,9 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Runtime.Serialization;
-using JsonSubTypes;
-using Newtonsoft.Json;
-
-using Bitmovin.Api.Sdk.Common;
-using Bitmovin.Api.Sdk.Models;
 
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// ConditionOperator
+    /// The operator that should be used for the evaluation
     /// </summary>
     public enum ConditionOperator
     {
@@ -20,37 +12,35 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [EnumMember(Value = "==")]
         EQUAL,
-        
+
         /// <summary>
         /// Not equal
         /// </summary>
         [EnumMember(Value = "!=")]
         NOT_EQUAL,
-        
+
         /// <summary>
         /// Less than or equal
         /// </summary>
         [EnumMember(Value = "<=")]
         LESS_THAN_OR_EQUAL,
-        
+
         /// <summary>
         /// Less then
         /// </summary>
         [EnumMember(Value = "<")]
         LESS_THAN,
-        
+
         /// <summary>
         /// Greater than
         /// </summary>
         [EnumMember(Value = ">")]
         GREATER_THAN,
-        
+
         /// <summary>
         /// Greater than or equal
         /// </summary>
         [EnumMember(Value = ">=")]
         GREATER_THAN_OR_EQUAL
-        
     }
-
 }

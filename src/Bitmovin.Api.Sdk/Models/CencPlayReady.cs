@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// CencPlayReady
     /// </summary>
-
     public class CencPlayReady
     {
         /// <summary>
@@ -21,18 +20,17 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "laUrl")]
         public string LaUrl { get; set; }
-        
+
         /// <summary>
         /// Base64 encoded pssh payload.
         /// </summary>
         [JsonProperty(PropertyName = "pssh")]
         public string Pssh { get; set; }
-        
+
         /// <summary>
         /// AdditionalInformation
         /// </summary>
         [JsonProperty(PropertyName = "additionalInformation")]
         public PlayReadyAdditionalInformation AdditionalInformation { get; set; }
     }
-
 }

@@ -16,7 +16,6 @@ namespace Bitmovin.Api.Sdk.Notifications.Emails
         public EmailsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IEmailsApiClient>();
-
             UsageReports = new UsageReportsApi(apiClientFactory);
             Encoding = new EncodingApi(apiClientFactory);
         }
@@ -26,9 +25,9 @@ namespace Bitmovin.Api.Sdk.Notifications.Emails
         /// </summary>
         public static BitmovinApiBuilder<EmailsApi> Builder => new BitmovinApiBuilder<EmailsApi>();
 
-        public UsageReportsApi UsageReports { get; private set; }
-        public EncodingApi Encoding { get; private set; }
-        
+        public UsageReportsApi UsageReports { get; }
+        public EncodingApi Encoding { get; }
+
         /// <summary>
         /// List Email Notifications
         /// </summary>
@@ -44,27 +43,25 @@ namespace Bitmovin.Api.Sdk.Notifications.Emails
 
             return await _apiClient.ListAsync(q);
         }
-        
+
         internal interface IEmailsApiClient
         {
-            
             [Get("/notifications/emails")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.Notification>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
-            
         }
-        
+
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>
             /// Index of the first item to return, starting at 0. Default is 0
             /// </summary>
-            public ListQueryParams Offset(int? Offset) => SetQueryParam("offset", Offset);
+            public ListQueryParams Offset(int? offset) => SetQueryParam("offset", offset);
 
             /// <summary>
             /// Maximum number of items to return. Default is 25, maximum is 100
             /// </summary>
-            public ListQueryParams Limit(int? Limit) => SetQueryParam("limit", Limit);
+            public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
 
             private ListQueryParams SetQueryParam<T>(string key, T value)
             {

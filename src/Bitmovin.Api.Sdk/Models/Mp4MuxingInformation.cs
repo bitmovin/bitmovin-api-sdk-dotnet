@@ -13,9 +13,7 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// Mp4MuxingInformation
     /// </summary>
-
     public class Mp4MuxingInformation : ProgressiveMuxingInformation
     {
     }
-
 }

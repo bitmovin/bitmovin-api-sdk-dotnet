@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Account.Information
         public InformationApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IInformationApiClient>();
-
         }
 
         /// <summary>
@@ -22,7 +21,6 @@ namespace Bitmovin.Api.Sdk.Account.Information
         /// </summary>
         public static BitmovinApiBuilder<InformationApi> Builder => new BitmovinApiBuilder<InformationApi>();
 
-        
         /// <summary>
         /// Current Account Information
         /// </summary>
@@ -30,15 +28,12 @@ namespace Bitmovin.Api.Sdk.Account.Information
         {
             return await _apiClient.GetAsync();
         }
-        
+
         internal interface IInformationApiClient
         {
-            
             [Get("/account/information")]
             [AllowAnyStatusCode]
             Task<Models.AccountInformation> GetAsync();
-            
         }
-        
     }
 }

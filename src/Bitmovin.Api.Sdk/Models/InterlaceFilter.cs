@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// InterlaceFilter
     /// </summary>
-
     public class InterlaceFilter : Filter
     {
         [JsonProperty(PropertyName = "type")]
@@ -24,12 +23,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "mode")]
         public InterlaceMode? Mode { get; set; }
-        
+
         /// <summary>
         /// VerticalLowPassFilteringMode
         /// </summary>
         [JsonProperty(PropertyName = "verticalLowPassFilteringMode")]
         public VerticalLowPassFilteringMode? VerticalLowPassFilteringMode { get; set; }
     }
-
 }

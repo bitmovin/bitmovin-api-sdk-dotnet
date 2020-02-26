@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// AnalyticsLicenseUpdateRequest
     /// </summary>
-
     public class AnalyticsLicenseUpdateRequest
     {
         /// <summary>
@@ -21,24 +20,23 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-        
+
         /// <summary>
         /// IgnoreDNT
         /// </summary>
         [JsonProperty(PropertyName = "ignoreDNT")]
         public bool? IgnoreDNT { get; set; }
-        
+
         /// <summary>
         /// TimeZone
         /// </summary>
         [JsonProperty(PropertyName = "timeZone")]
         public string TimeZone { get; set; }
-        
+
         /// <summary>
         /// Labels for CustomData fields
         /// </summary>
         [JsonProperty(PropertyName = "customDataFieldLabels")]
         public AnalyticsLicenseCustomDataFieldLabels CustomDataFieldLabels { get; set; }
     }
-
 }

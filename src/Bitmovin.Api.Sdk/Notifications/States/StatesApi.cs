@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Notifications.States
         public StatesApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IStatesApiClient>();
-
         }
 
         /// <summary>
@@ -22,12 +21,11 @@ namespace Bitmovin.Api.Sdk.Notifications.States
         /// </summary>
         public static BitmovinApiBuilder<StatesApi> Builder => new BitmovinApiBuilder<StatesApi>();
 
-        
         /// <summary>
         /// List Notification State History (Specific Resource)
         /// </summary>
-        /// <param name="notificationId">Id of the notification</param>
-        /// <param name="resourceId">Id of the resource, e.g. encoding id</param>
+        /// <param name="notificationId">Id of the notification (required)</param>
+        /// <param name="resourceId">Id of the resource, e.g. encoding id (required)</param>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>
         public async Task<Models.PaginationResponse<Models.NotificationStateEntry>> ListAsync(string notificationId, string resourceId, params Func<ListQueryParams, ListQueryParams>[] queryParams)
         {
@@ -40,27 +38,25 @@ namespace Bitmovin.Api.Sdk.Notifications.States
 
             return await _apiClient.ListAsync(notificationId, resourceId, q);
         }
-        
+
         internal interface IStatesApiClient
         {
-            
             [Get("/notifications/{notification_id}/states/{resource_id}")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.NotificationStateEntry>> ListAsync([Path("notification_id")] string notificationId, [Path("resource_id")] string resourceId, [QueryMap] IDictionary<String, Object> queryParams);
-            
         }
-        
+
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>
             /// Index of the first item to return, starting at 0. Default is 0
             /// </summary>
-            public ListQueryParams Offset(int? Offset) => SetQueryParam("offset", Offset);
+            public ListQueryParams Offset(int? offset) => SetQueryParam("offset", offset);
 
             /// <summary>
             /// Maximum number of items to return. Default is 25, maximum is 100
             /// </summary>
-            public ListQueryParams Limit(int? Limit) => SetQueryParam("limit", Limit);
+            public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
 
             private ListQueryParams SetQueryParam<T>(string key, T value)
             {

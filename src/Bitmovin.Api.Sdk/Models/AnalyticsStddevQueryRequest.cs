@@ -13,9 +13,7 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// AnalyticsStddevQueryRequest
     /// </summary>
-
     public class AnalyticsStddevQueryRequest : AnalyticsQueryRequest
     {
     }
-
 }

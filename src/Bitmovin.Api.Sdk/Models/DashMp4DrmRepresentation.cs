@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// DashMp4DrmRepresentation
     /// </summary>
-
     public class DashMp4DrmRepresentation : DashMp4Representation
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "drmId")]
         public string DrmId { get; set; }
     }
-
 }

@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// BillableEncodingMinutesDetails
     /// </summary>
-
     public class BillableEncodingMinutesDetails
     {
         /// <summary>
@@ -21,30 +20,29 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "UNKNOWN")]
         public double? UNKNOWN { get; set; }
-        
+
         /// <summary>
         /// Billable minutes for audio. Available if stream is an audio stream.
         /// </summary>
         [JsonProperty(PropertyName = "AUDIO")]
         public double? AUDIO { get; set; }
-        
+
         /// <summary>
         /// Billable minutes for SD resolutions.
         /// </summary>
         [JsonProperty(PropertyName = "SD")]
         public double? SD { get; set; }
-        
+
         /// <summary>
         /// Billable minutes for HD resolutions.
         /// </summary>
         [JsonProperty(PropertyName = "HD")]
         public double? HD { get; set; }
-        
+
         /// <summary>
         /// Billable minutes for UHD resolutions.
         /// </summary>
         [JsonProperty(PropertyName = "UHD")]
         public double? UHD { get; set; }
     }
-
 }

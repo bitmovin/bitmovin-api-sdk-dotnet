@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// ReprioritizeEncodingRequest
     /// </summary>
-
     public class ReprioritizeEncodingRequest
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "priority")]
         public int? Priority { get; set; }
     }
-
 }

@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// CustomPlayerBuildDetails
     /// </summary>
-
     public class CustomPlayerBuildDetails : BitmovinResource
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "playerVersion")]
         public string PlayerVersion { get; set; }
-        
+
         /// <summary>
         /// The domains that the player is locked to. If not set the player will only work with &#39;localhost&#39;. Not more than 49 additional domains can be added. (required)
         /// </summary>
         [JsonProperty(PropertyName = "domains")]
         public List<string> Domains { get; set; } = new List<string>();
     }
-
 }

@@ -15,7 +15,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Captions.Cea
         /// </summary>
         public static BitmovinApiBuilder<CeaApi> Builder => new BitmovinApiBuilder<CeaApi>();
 
-        public SccApi Scc { get; private set; }
-
+        public SccApi Scc { get; }
     }
 }

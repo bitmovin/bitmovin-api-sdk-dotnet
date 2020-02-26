@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// LiveEncodingStatsEvent
     /// </summary>
-
     public class LiveEncodingStatsEvent
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "time")]
         public DateTime? Time { get; set; }
-        
+
         /// <summary>
         /// Details
         /// </summary>
         [JsonProperty(PropertyName = "details")]
         public LiveEncodingStatsEventDetails Details { get; set; }
     }
-
 }

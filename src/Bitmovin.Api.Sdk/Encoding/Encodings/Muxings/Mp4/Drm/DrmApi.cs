@@ -20,7 +20,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm
         public DrmApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IDrmApiClient>();
-
             Playready = new PlayreadyApi(apiClientFactory);
             Clearkey = new ClearkeyApi(apiClientFactory);
             Widevine = new WidevineApi(apiClientFactory);
@@ -34,31 +33,28 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm
         /// </summary>
         public static BitmovinApiBuilder<DrmApi> Builder => new BitmovinApiBuilder<DrmApi>();
 
-        public PlayreadyApi Playready { get; private set; }
-        public ClearkeyApi Clearkey { get; private set; }
-        public WidevineApi Widevine { get; private set; }
-        public MarlinApi Marlin { get; private set; }
-        public CencApi Cenc { get; private set; }
-        public SpekeApi Speke { get; private set; }
-        
+        public PlayreadyApi Playready { get; }
+        public ClearkeyApi Clearkey { get; }
+        public WidevineApi Widevine { get; }
+        public MarlinApi Marlin { get; }
+        public CencApi Cenc { get; }
+        public SpekeApi Speke { get; }
+
         /// <summary>
-        /// List all DRM configurations of MP4 Muxing
+        /// List all DRM configurations of MP4 muxing
         /// </summary>
-        /// <param name="encodingId">Id of the encoding.</param>
-        /// <param name="muxingId">Id of the MP4 muxing</param>
+        /// <param name="encodingId">Id of the encoding. (required)</param>
+        /// <param name="muxingId">Id of the MP4 muxing (required)</param>
         public async Task<Models.PaginationResponse<Models.Drm>> ListAsync(string encodingId, string muxingId)
         {
             return await _apiClient.ListAsync(encodingId, muxingId);
         }
-        
+
         internal interface IDrmApiClient
         {
-            
             [Get("/encoding/encodings/{encoding_id}/muxings/mp4/{muxing_id}/drm")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.Drm>> ListAsync([Path("encoding_id")] string encodingId, [Path("muxing_id")] string muxingId);
-            
         }
-        
     }
 }

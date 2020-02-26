@@ -25,12 +25,11 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Video
         /// </summary>
         public static BitmovinApiBuilder<VideoApi> Builder => new BitmovinApiBuilder<VideoApi>();
 
-        public H264Api H264 { get; private set; }
-        public H265Api H265 { get; private set; }
-        public Vp8Api Vp8 { get; private set; }
-        public Vp9Api Vp9 { get; private set; }
-        public Av1Api Av1 { get; private set; }
-        public MjpegApi Mjpeg { get; private set; }
-
+        public H264Api H264 { get; }
+        public H265Api H265 { get; }
+        public Vp8Api Vp8 { get; }
+        public Vp9Api Vp9 { get; }
+        public Av1Api Av1 { get; }
+        public MjpegApi Mjpeg { get; }
     }
 }

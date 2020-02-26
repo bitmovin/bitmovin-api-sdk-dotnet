@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Player.CustomBuilds.Web.Status
         public StatusApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IStatusApiClient>();
-
         }
 
         /// <summary>
@@ -22,24 +21,20 @@ namespace Bitmovin.Api.Sdk.Player.CustomBuilds.Web.Status
         /// </summary>
         public static BitmovinApiBuilder<StatusApi> Builder => new BitmovinApiBuilder<StatusApi>();
 
-        
         /// <summary>
         /// Custom Web Player Build Status
         /// </summary>
-        /// <param name="customBuildId">Id of the custom player build</param>
+        /// <param name="customBuildId">Id of the custom player build (required)</param>
         public async Task<Models.CustomPlayerBuildStatus> GetAsync(string customBuildId)
         {
             return await _apiClient.GetAsync(customBuildId);
         }
-        
+
         internal interface IStatusApiClient
         {
-            
             [Get("/player/custom-builds/web/{custom_build_id}/status")]
             [AllowAnyStatusCode]
             Task<Models.CustomPlayerBuildStatus> GetAsync([Path("custom_build_id")] string customBuildId);
-            
         }
-        
     }
 }

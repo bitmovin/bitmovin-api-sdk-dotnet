@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// InfrastructureSettings
     /// </summary>
-
     public class InfrastructureSettings
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "infrastructureId")]
         public string InfrastructureId { get; set; }
-        
+
         /// <summary>
         /// CloudRegion
         /// </summary>
         [JsonProperty(PropertyName = "cloudRegion")]
         public CloudRegion? CloudRegion { get; set; }
     }
-
 }

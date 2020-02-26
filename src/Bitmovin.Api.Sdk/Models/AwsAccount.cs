@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// AwsAccount
     /// </summary>
-
     public class AwsAccount : BitmovinResource
     {
         /// <summary>
@@ -21,18 +20,17 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "accessKey")]
         public string AccessKey { get; set; }
-        
+
         /// <summary>
         /// Amazon secret key (required)
         /// </summary>
         [JsonProperty(PropertyName = "secretKey")]
         public string SecretKey { get; set; }
-        
+
         /// <summary>
         /// Amazon account number (12 digits as per AWS spec) (required)
         /// </summary>
         [JsonProperty(PropertyName = "accountNumber")]
         public string AccountNumber { get; set; }
     }
-
 }

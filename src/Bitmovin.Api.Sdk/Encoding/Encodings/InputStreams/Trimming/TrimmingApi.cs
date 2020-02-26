@@ -19,9 +19,8 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Trimming
         /// </summary>
         public static BitmovinApiBuilder<TrimmingApi> Builder => new BitmovinApiBuilder<TrimmingApi>();
 
-        public TimeBasedApi TimeBased { get; private set; }
-        public TimecodeTrackApi TimecodeTrack { get; private set; }
-        public H264PictureTimingApi H264PictureTiming { get; private set; }
-
+        public TimeBasedApi TimeBased { get; }
+        public TimecodeTrackApi TimecodeTrack { get; }
+        public H264PictureTimingApi H264PictureTiming { get; }
     }
 }

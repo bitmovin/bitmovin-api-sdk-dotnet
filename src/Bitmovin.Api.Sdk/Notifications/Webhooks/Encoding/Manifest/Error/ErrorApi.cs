@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Manifest.Error
         public ErrorApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IErrorApiClient>();
-
         }
 
         /// <summary>
@@ -22,52 +21,48 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Manifest.Error
         /// </summary>
         public static BitmovinApiBuilder<ErrorApi> Builder => new BitmovinApiBuilder<ErrorApi>();
 
-        
         /// <summary>
         /// Add Manifest Error Webhook (All Manifests)
         /// </summary>
-        /// <param name="webhook">The request payload</param>
+        /// <param name="webhook">Add a new webhook notification if a manifest creation failed with an error</param>
         public async Task<Models.PaginationResponse<Models.Webhook>> CreateAsync(Models.Webhook webhook)
         {
             return await _apiClient.CreateAsync(webhook);
         }
-        
+
         /// <summary>
         /// Add Manifest Error Webhook Notification (Specific Manifest)
         /// </summary>
-        /// <param name="manifestId">Id of the manifest resource</param>
-        /// <param name="webhook">The request payload</param>
+        /// <param name="manifestId">Id of the manifest resource (required)</param>
+        /// <param name="webhook">The webhook notifications object</param>
         public async Task<Models.Webhook> CreateByManifestIdAsync(string manifestId, Models.Webhook webhook)
         {
             return await _apiClient.CreateByManifestIdAsync(manifestId, webhook);
         }
-        
+
         /// <summary>
         /// Replace Manifest Error Webhook Notification
         /// </summary>
-        /// <param name="notificationId">Id of the webhook notification</param>
-        /// <param name="webhook">The request payload</param>
+        /// <param name="notificationId">Id of the webhook notification (required)</param>
+        /// <param name="webhook">The webhook notification with the updated values</param>
         public async Task<Models.Webhook> UpdateAsync(string notificationId, Models.Webhook webhook)
         {
             return await _apiClient.UpdateAsync(notificationId, webhook);
         }
-        
+
         internal interface IErrorApiClient
         {
-            
             [Post("/notifications/webhooks/encoding/manifest/error")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.Webhook>> CreateAsync([Body] Models.Webhook webhook);
-            
+
             [Post("/notifications/webhooks/encoding/manifest/{manifest_id}/error")]
             [AllowAnyStatusCode]
             Task<Models.Webhook> CreateByManifestIdAsync([Path("manifest_id")] string manifestId, [Body] Models.Webhook webhook);
-            
+
             [Put("/notifications/webhooks/encoding/manifest/error/{notification_id}")]
             [AllowAnyStatusCode]
             Task<Models.Webhook> UpdateAsync([Path("notification_id")] string notificationId, [Body] Models.Webhook webhook);
-            
         }
-        
     }
 }

@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// StreamPerTitleFixedResolutionAndBitrateSettings
     /// </summary>
-
     public class StreamPerTitleFixedResolutionAndBitrateSettings
     {
         /// <summary>
@@ -21,30 +20,29 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "minBitrate")]
         public int? MinBitrate { get; set; }
-        
+
         /// <summary>
         /// The maximum bitrate that will be used for that template.
         /// </summary>
         [JsonProperty(PropertyName = "maxBitrate")]
         public int? MaxBitrate { get; set; }
-        
+
         /// <summary>
         /// Bitrate selection mode
         /// </summary>
         [JsonProperty(PropertyName = "bitrateSelectionMode")]
         public BitrateSelectionMode? BitrateSelectionMode { get; set; }
-        
+
         /// <summary>
         /// Low complexity boundary for max bitrate
         /// </summary>
         [JsonProperty(PropertyName = "lowComplexityBoundaryForMaxBitrate")]
         public int? LowComplexityBoundaryForMaxBitrate { get; set; }
-        
+
         /// <summary>
         /// High complexity boundary for max bitrate
         /// </summary>
         [JsonProperty(PropertyName = "highComplexityBoundaryForMaxBitrate")]
         public int? HighComplexityBoundaryForMaxBitrate { get; set; }
     }
-
 }

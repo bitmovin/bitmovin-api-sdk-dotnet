@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// PlayerChannel
     /// </summary>
-
     public class PlayerChannel : BitmovinResponse
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "name")]
         public string Name { get; internal set; }
     }
-
 }

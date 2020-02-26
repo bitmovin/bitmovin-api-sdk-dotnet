@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// AbstractConjunction
     /// </summary>
-
     public class AbstractConjunction : AbstractCondition
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "conditions")]
         public List<AbstractCondition> Conditions { get; set; } = new List<AbstractCondition>();
     }
-
 }

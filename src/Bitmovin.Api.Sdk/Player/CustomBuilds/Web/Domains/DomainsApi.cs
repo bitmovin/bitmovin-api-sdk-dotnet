@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Player.CustomBuilds.Web.Domains
         public DomainsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IDomainsApiClient>();
-
         }
 
         /// <summary>
@@ -22,34 +21,33 @@ namespace Bitmovin.Api.Sdk.Player.CustomBuilds.Web.Domains
         /// </summary>
         public static BitmovinApiBuilder<DomainsApi> Builder => new BitmovinApiBuilder<DomainsApi>();
 
-        
         /// <summary>
         /// Add Domain
         /// </summary>
-        /// <param name="customWebPlayerBuildDomain">The request payload</param>
+        /// <param name="customWebPlayerBuildDomain">The Domain to be added</param>
         public async Task<Models.CustomWebPlayerBuildDomain> CreateAsync(Models.CustomWebPlayerBuildDomain customWebPlayerBuildDomain)
         {
             return await _apiClient.CreateAsync(customWebPlayerBuildDomain);
         }
-        
+
         /// <summary>
         /// Delete Domain
         /// </summary>
-        /// <param name="domainId">Id of the domain</param>
+        /// <param name="domainId">Id of the domain (required)</param>
         public async Task<Models.BitmovinResponse> DeleteAsync(string domainId)
         {
             return await _apiClient.DeleteAsync(domainId);
         }
-        
+
         /// <summary>
         /// Get Domain Details
         /// </summary>
-        /// <param name="domainId">Id of the domain</param>
+        /// <param name="domainId">Id of the domain (required)</param>
         public async Task<Models.CustomWebPlayerBuildDomain> GetAsync(string domainId)
         {
             return await _apiClient.GetAsync(domainId);
         }
-        
+
         /// <summary>
         /// List Domain Details
         /// </summary>
@@ -57,27 +55,24 @@ namespace Bitmovin.Api.Sdk.Player.CustomBuilds.Web.Domains
         {
             return await _apiClient.ListAsync();
         }
-        
+
         internal interface IDomainsApiClient
         {
-            
             [Post("/player/custom-builds/web/domains")]
             [AllowAnyStatusCode]
             Task<Models.CustomWebPlayerBuildDomain> CreateAsync([Body] Models.CustomWebPlayerBuildDomain customWebPlayerBuildDomain);
-            
+
             [Delete("/player/custom-builds/web/domains/{domain_id}")]
             [AllowAnyStatusCode]
             Task<Models.BitmovinResponse> DeleteAsync([Path("domain_id")] string domainId);
-            
+
             [Get("/player/custom-builds/web/domains/{domain_id}")]
             [AllowAnyStatusCode]
             Task<Models.CustomWebPlayerBuildDomain> GetAsync([Path("domain_id")] string domainId);
-            
+
             [Get("/player/custom-builds/web/domains")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.CustomWebPlayerBuildDomain>> ListAsync();
-            
         }
-        
     }
 }

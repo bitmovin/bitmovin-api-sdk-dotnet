@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Analytics.Ads.Queries.Max
         public MaxApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IMaxApiClient>();
-
         }
 
         /// <summary>
@@ -22,24 +21,20 @@ namespace Bitmovin.Api.Sdk.Analytics.Ads.Queries.Max
         /// </summary>
         public static BitmovinApiBuilder<MaxApi> Builder => new BitmovinApiBuilder<MaxApi>();
 
-        
         /// <summary>
         /// Max
         /// </summary>
-        /// <param name="adAnalyticsMaxQueryRequest">The request payload</param>
+        /// <param name="adAnalyticsMaxQueryRequest">Analytics Query Object</param>
         public async Task<Models.AnalyticsResponse> CreateAsync(Models.AdAnalyticsMaxQueryRequest adAnalyticsMaxQueryRequest)
         {
             return await _apiClient.CreateAsync(adAnalyticsMaxQueryRequest);
         }
-        
+
         internal interface IMaxApiClient
         {
-            
             [Post("/analytics/ads/queries/max")]
             [AllowAnyStatusCode]
             Task<Models.AnalyticsResponse> CreateAsync([Body] Models.AdAnalyticsMaxQueryRequest adAnalyticsMaxQueryRequest);
-            
         }
-        
     }
 }

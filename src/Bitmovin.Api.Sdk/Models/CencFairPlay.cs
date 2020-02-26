@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// CencFairPlay
     /// </summary>
-
     public class CencFairPlay
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "iv")]
         public string Iv { get; set; }
-        
+
         /// <summary>
         /// URL of the licensing server
         /// </summary>
         [JsonProperty(PropertyName = "uri")]
         public string Uri { get; set; }
     }
-
 }

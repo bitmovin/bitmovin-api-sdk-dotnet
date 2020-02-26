@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// TimeSpan
     /// </summary>
-
     public class TimeSpan
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "from")]
         public long? From { get; set; }
-        
+
         /// <summary>
         /// End offset of the time frame in milliseconds (required)
         /// </summary>
         [JsonProperty(PropertyName = "to")]
         public long? To { get; set; }
     }
-
 }

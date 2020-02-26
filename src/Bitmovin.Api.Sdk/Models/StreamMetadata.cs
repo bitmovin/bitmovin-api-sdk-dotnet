@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// StreamMetadata
     /// </summary>
-
     public class StreamMetadata
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "language")]
         public string Language { get; set; }
     }
-
 }

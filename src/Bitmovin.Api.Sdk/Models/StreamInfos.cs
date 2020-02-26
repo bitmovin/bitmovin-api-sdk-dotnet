@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// StreamInfos
     /// </summary>
-
     public class StreamInfos
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "time")]
         public DateTime? Time { get; set; }
-        
+
         /// <summary>
         /// Details about billable minutes for each resolution category
         /// </summary>
         [JsonProperty(PropertyName = "streamInfos")]
         public List<StreamInfosDetails> _StreamInfos { get; set; } = new List<StreamInfosDetails>();
     }
-
 }

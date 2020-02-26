@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// AccountInformation
     /// </summary>
-
     public class AccountInformation : BitmovinResource
     {
         /// <summary>
@@ -21,42 +20,41 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "email")]
         public string Email { get; internal set; }
-        
+
         /// <summary>
         /// ApiKeys associated with the account (required)
         /// </summary>
         [JsonProperty(PropertyName = "apiKeys")]
         public List<AccountApiKey> ApiKeys { get; internal set; } = new List<AccountApiKey>();
-        
+
         /// <summary>
         /// First name of the tenant.
         /// </summary>
         [JsonProperty(PropertyName = "firstName")]
         public string FirstName { get; set; }
-        
+
         /// <summary>
         /// Last name of the tenant.
         /// </summary>
         [JsonProperty(PropertyName = "lastName")]
         public string LastName { get; set; }
-        
+
         /// <summary>
         /// Phone number of the tenant.
         /// </summary>
         [JsonProperty(PropertyName = "phone")]
         public string Phone { get; set; }
-        
+
         /// <summary>
         /// Company name of the tenant.
         /// </summary>
         [JsonProperty(PropertyName = "company")]
         public string Company { get; set; }
-        
+
         /// <summary>
         /// IsVerified
         /// </summary>
         [JsonProperty(PropertyName = "isVerified")]
         public bool? IsVerified { get; internal set; }
     }
-
 }

@@ -19,9 +19,8 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure
         /// </summary>
         public static BitmovinApiBuilder<InfrastructureApi> Builder => new BitmovinApiBuilder<InfrastructureApi>();
 
-        public KubernetesApi Kubernetes { get; private set; }
-        public AwsApi Aws { get; private set; }
-        public GceApi Gce { get; private set; }
-
+        public KubernetesApi Kubernetes { get; }
+        public AwsApi Aws { get; }
+        public GceApi Gce { get; }
     }
 }

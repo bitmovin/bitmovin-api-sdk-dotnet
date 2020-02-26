@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// WebVttConfiguration
     /// </summary>
-
     public class WebVttConfiguration : BitmovinResource
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "appendOptionalZeroHour")]
         public bool? AppendOptionalZeroHour { get; set; }
-        
+
         /// <summary>
         /// If set to true, the region information of the resulting webvtt file will be omitted. Defaults to false.
         /// </summary>
         [JsonProperty(PropertyName = "ignoreRegion")]
         public bool? IgnoreRegion { get; set; }
     }
-
 }

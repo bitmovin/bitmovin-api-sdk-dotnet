@@ -17,7 +17,6 @@ namespace Bitmovin.Api.Sdk.Player.Licenses
         public LicensesApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ILicensesApiClient>();
-
             Analytics = new AnalyticsApi(apiClientFactory);
             Domains = new DomainsApi(apiClientFactory);
             ThirdPartyLicensing = new ThirdPartyLicensingApi(apiClientFactory);
@@ -28,28 +27,28 @@ namespace Bitmovin.Api.Sdk.Player.Licenses
         /// </summary>
         public static BitmovinApiBuilder<LicensesApi> Builder => new BitmovinApiBuilder<LicensesApi>();
 
-        public AnalyticsApi Analytics { get; private set; }
-        public DomainsApi Domains { get; private set; }
-        public ThirdPartyLicensingApi ThirdPartyLicensing { get; private set; }
-        
+        public AnalyticsApi Analytics { get; }
+        public DomainsApi Domains { get; }
+        public ThirdPartyLicensingApi ThirdPartyLicensing { get; }
+
         /// <summary>
         /// Create Player License
         /// </summary>
-        /// <param name="playerLicense">The request payload</param>
+        /// <param name="playerLicense">Player License to be created</param>
         public async Task<Models.PlayerLicense> CreateAsync(Models.PlayerLicense playerLicense)
         {
             return await _apiClient.CreateAsync(playerLicense);
         }
-        
+
         /// <summary>
         /// Get License
         /// </summary>
-        /// <param name="licenseId">ID of the License</param>
+        /// <param name="licenseId">ID of the License (required)</param>
         public async Task<Models.PlayerLicense> GetAsync(string licenseId)
         {
             return await _apiClient.GetAsync(licenseId);
         }
-        
+
         /// <summary>
         /// List Player Licenses
         /// </summary>
@@ -65,35 +64,33 @@ namespace Bitmovin.Api.Sdk.Player.Licenses
 
             return await _apiClient.ListAsync(q);
         }
-        
+
         internal interface ILicensesApiClient
         {
-            
             [Post("/player/licenses")]
             [AllowAnyStatusCode]
             Task<Models.PlayerLicense> CreateAsync([Body] Models.PlayerLicense playerLicense);
-            
+
             [Get("/player/licenses/{license_id}")]
             [AllowAnyStatusCode]
             Task<Models.PlayerLicense> GetAsync([Path("license_id")] string licenseId);
-            
+
             [Get("/player/licenses")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.PlayerLicense>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
-            
         }
-        
+
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>
             /// Index of the first item to return, starting at 0. Default is 0
             /// </summary>
-            public ListQueryParams Offset(int? Offset) => SetQueryParam("offset", Offset);
+            public ListQueryParams Offset(int? offset) => SetQueryParam("offset", offset);
 
             /// <summary>
             /// Maximum number of items to return. Default is 25, maximum is 100
             /// </summary>
-            public ListQueryParams Limit(int? Limit) => SetQueryParam("limit", Limit);
+            public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
 
             private ListQueryParams SetQueryParam<T>(string key, T value)
             {

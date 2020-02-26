@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// CustomWebPlayerBuildDomain
     /// </summary>
-
     public class CustomWebPlayerBuildDomain : BitmovinResource
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "domain")]
         public string Domain { get; set; }
     }
-
 }

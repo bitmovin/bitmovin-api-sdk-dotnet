@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Information
         public InformationApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IInformationApiClient>();
-
         }
 
         /// <summary>
@@ -22,25 +21,21 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Information
         /// </summary>
         public static BitmovinApiBuilder<InformationApi> Builder => new BitmovinApiBuilder<InformationApi>();
 
-        
         /// <summary>
-        /// Progressive TS Muxing Information
+        /// Progressive TS muxing Information
         /// </summary>
-        /// <param name="encodingId">ID of the Encoding.</param>
-        /// <param name="muxingId">ID of the Progressive TS Muxing</param>
+        /// <param name="encodingId">ID of the Encoding. (required)</param>
+        /// <param name="muxingId">ID of the Progressive TS muxing (required)</param>
         public async Task<Models.ProgressiveTsMuxingInformation> GetAsync(string encodingId, string muxingId)
         {
             return await _apiClient.GetAsync(encodingId, muxingId);
         }
-        
+
         internal interface IInformationApiClient
         {
-            
             [Get("/encoding/encodings/{encoding_id}/muxings/progressive-ts/{muxing_id}/information")]
             [AllowAnyStatusCode]
             Task<Models.ProgressiveTsMuxingInformation> GetAsync([Path("encoding_id")] string encodingId, [Path("muxing_id")] string muxingId);
-            
         }
-        
     }
 }

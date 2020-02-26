@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media.Type
         public TypeApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ITypeApiClient>();
-
         }
 
         /// <summary>
@@ -22,25 +21,21 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media.Type
         /// </summary>
         public static BitmovinApiBuilder<TypeApi> Builder => new BitmovinApiBuilder<TypeApi>();
 
-        
         /// <summary>
         /// HLS Media Type
         /// </summary>
-        /// <param name="manifestId">Id of the hls manifest.</param>
-        /// <param name="mediaId">Id of the video media.</param>
+        /// <param name="manifestId">Id of the hls manifest. (required)</param>
+        /// <param name="mediaId">Id of the video media. (required)</param>
         public async Task<Models.MediaInfoTypeResponse> GetAsync(string manifestId, string mediaId)
         {
             return await _apiClient.GetAsync(manifestId, mediaId);
         }
-        
+
         internal interface ITypeApiClient
         {
-            
             [Get("/encoding/manifests/hls/{manifest_id}/media/{media_id}/type")]
             [AllowAnyStatusCode]
             Task<Models.MediaInfoTypeResponse> GetAsync([Path("manifest_id")] string manifestId, [Path("media_id")] string mediaId);
-            
         }
-        
     }
 }

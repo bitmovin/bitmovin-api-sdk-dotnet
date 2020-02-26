@@ -11,9 +11,8 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// LiveMediaIngestOutput
+    /// Live Media and Metadata Ingest Protocol. See https://tools.ietf.org/html/draft-mekuria-mmediaingest-01.
     /// </summary>
-
     public class LiveMediaIngestOutput : Output
     {
         [JsonProperty(PropertyName = "type")]
@@ -25,5 +24,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "publishingPoint")]
         public string PublishingPoint { get; set; }
     }
-
 }

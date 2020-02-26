@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// AudioAdaptationSet
     /// </summary>
-
     public class AudioAdaptationSet : AdaptationSet
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "lang")]
         public string Lang { get; set; }
     }
-
 }

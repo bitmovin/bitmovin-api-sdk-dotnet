@@ -1,17 +1,9 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Runtime.Serialization;
-using JsonSubTypes;
-using Newtonsoft.Json;
-
-using Bitmovin.Api.Sdk.Common;
-using Bitmovin.Api.Sdk.Models;
 
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// H264MotionEstimationMethod
+    /// Integer pixel motion estimation method
     /// </summary>
     public enum H264MotionEstimationMethod
     {
@@ -20,19 +12,17 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [EnumMember(Value = "DIA")]
         DIA,
-        
+
         /// <summary>
         /// hexagonal search, radius 2
         /// </summary>
         [EnumMember(Value = "HEX")]
         HEX,
-        
+
         /// <summary>
         /// uneven multi-hexagon search
         /// </summary>
         [EnumMember(Value = "UMH")]
         UMH
-        
     }
-
 }

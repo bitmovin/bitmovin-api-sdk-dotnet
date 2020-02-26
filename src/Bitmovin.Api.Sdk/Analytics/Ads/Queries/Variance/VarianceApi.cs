@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Analytics.Ads.Queries.Variance
         public VarianceApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IVarianceApiClient>();
-
         }
 
         /// <summary>
@@ -22,24 +21,20 @@ namespace Bitmovin.Api.Sdk.Analytics.Ads.Queries.Variance
         /// </summary>
         public static BitmovinApiBuilder<VarianceApi> Builder => new BitmovinApiBuilder<VarianceApi>();
 
-        
         /// <summary>
         /// Variance
         /// </summary>
-        /// <param name="adAnalyticsVarianceQueryRequest">The request payload</param>
+        /// <param name="adAnalyticsVarianceQueryRequest">Analytics Query Object</param>
         public async Task<Models.AnalyticsResponse> CreateAsync(Models.AdAnalyticsVarianceQueryRequest adAnalyticsVarianceQueryRequest)
         {
             return await _apiClient.CreateAsync(adAnalyticsVarianceQueryRequest);
         }
-        
+
         internal interface IVarianceApiClient
         {
-            
             [Post("/analytics/ads/queries/variance")]
             [AllowAnyStatusCode]
             Task<Models.AnalyticsResponse> CreateAsync([Body] Models.AdAnalyticsVarianceQueryRequest adAnalyticsVarianceQueryRequest);
-            
         }
-        
     }
 }

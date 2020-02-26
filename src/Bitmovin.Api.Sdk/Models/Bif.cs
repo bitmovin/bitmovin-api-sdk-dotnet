@@ -11,9 +11,8 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// Bif
+    /// Either height or width is required. It is also possible to set both properties.
     /// </summary>
-
     public class Bif : BitmovinResource
     {
         /// <summary>
@@ -21,30 +20,29 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "height")]
         public int? Height { get; set; }
-        
+
         /// <summary>
         /// Width of one thumbnail. Roku recommends a width of 240 for SD and 320 for HD.
         /// </summary>
         [JsonProperty(PropertyName = "width")]
         public int? Width { get; set; }
-        
+
         /// <summary>
         /// Distance in seconds between a screenshot
         /// </summary>
         [JsonProperty(PropertyName = "distance")]
         public double? Distance { get; set; }
-        
+
         /// <summary>
         /// Filename of the Bif image. (required)
         /// </summary>
         [JsonProperty(PropertyName = "filename")]
         public string Filename { get; set; }
-        
+
         /// <summary>
         /// Outputs
         /// </summary>
         [JsonProperty(PropertyName = "outputs")]
         public List<EncodingOutput> Outputs { get; set; } = new List<EncodingOutput>();
     }
-
 }

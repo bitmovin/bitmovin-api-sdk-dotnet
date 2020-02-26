@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Notifications.Emails.UsageReports
         public UsageReportsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IUsageReportsApiClient>();
-
         }
 
         /// <summary>
@@ -22,7 +21,6 @@ namespace Bitmovin.Api.Sdk.Notifications.Emails.UsageReports
         /// </summary>
         public static BitmovinApiBuilder<UsageReportsApi> Builder => new BitmovinApiBuilder<UsageReportsApi>();
 
-        
         /// <summary>
         /// List Email Notifications (All Usage Reports)
         /// </summary>
@@ -38,27 +36,25 @@ namespace Bitmovin.Api.Sdk.Notifications.Emails.UsageReports
 
             return await _apiClient.ListAsync(q);
         }
-        
+
         internal interface IUsageReportsApiClient
         {
-            
             [Get("/notifications/emails/usage-reports")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.EmailNotification>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
-            
         }
-        
+
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>
             /// Index of the first item to return, starting at 0. Default is 0
             /// </summary>
-            public ListQueryParams Offset(int? Offset) => SetQueryParam("offset", Offset);
+            public ListQueryParams Offset(int? offset) => SetQueryParam("offset", offset);
 
             /// <summary>
             /// Maximum number of items to return. Default is 25, maximum is 100
             /// </summary>
-            public ListQueryParams Limit(int? Limit) => SetQueryParam("limit", Limit);
+            public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
 
             private ListQueryParams SetQueryParam<T>(string key, T value)
             {

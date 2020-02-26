@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// SrtStatisticWindow
     /// </summary>
-
     public class SrtStatisticWindow
     {
         /// <summary>
@@ -21,18 +20,17 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "congestion")]
         public long? Congestion { get; set; }
-        
+
         /// <summary>
         /// Flight
         /// </summary>
         [JsonProperty(PropertyName = "flight")]
         public long? Flight { get; set; }
-        
+
         /// <summary>
         /// Flow
         /// </summary>
         [JsonProperty(PropertyName = "flow")]
         public long? Flow { get; set; }
     }
-
 }

@@ -15,7 +15,6 @@ namespace Bitmovin.Api.Sdk.Analytics.Ads
         /// </summary>
         public static BitmovinApiBuilder<AdsApi> Builder => new BitmovinApiBuilder<AdsApi>();
 
-        public QueriesApi Queries { get; private set; }
-
+        public QueriesApi Queries { get; }
     }
 }

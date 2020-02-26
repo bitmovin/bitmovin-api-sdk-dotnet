@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// CropFilter
     /// </summary>
-
     public class CropFilter : Filter
     {
         [JsonProperty(PropertyName = "type")]
@@ -24,30 +23,29 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "left")]
         public int? Left { get; set; }
-        
+
         /// <summary>
         /// Amount of pixels which will be cropped of the input video from the right side.
         /// </summary>
         [JsonProperty(PropertyName = "right")]
         public int? Right { get; set; }
-        
+
         /// <summary>
         /// Amount of pixels which will be cropped of the input video from the top.
         /// </summary>
         [JsonProperty(PropertyName = "top")]
         public int? Top { get; set; }
-        
+
         /// <summary>
         /// Amount of pixels which will be cropped of the input video from the bottom.
         /// </summary>
         [JsonProperty(PropertyName = "bottom")]
         public int? Bottom { get; set; }
-        
+
         /// <summary>
         /// Unit
         /// </summary>
         [JsonProperty(PropertyName = "unit")]
         public PositionUnit? Unit { get; set; }
     }
-
 }

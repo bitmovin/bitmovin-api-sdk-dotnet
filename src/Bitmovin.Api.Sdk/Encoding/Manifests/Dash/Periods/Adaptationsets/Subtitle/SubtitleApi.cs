@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Subtit
         public SubtitleApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ISubtitleApiClient>();
-
         }
 
         /// <summary>
@@ -22,45 +21,44 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Subtit
         /// </summary>
         public static BitmovinApiBuilder<SubtitleApi> Builder => new BitmovinApiBuilder<SubtitleApi>();
 
-        
         /// <summary>
         /// Add Subtitle AdaptationSet
         /// </summary>
-        /// <param name="manifestId">Id of the manifest</param>
-        /// <param name="periodId">Id of the period</param>
-        /// <param name="subtitleAdaptationSet">The request payload</param>
+        /// <param name="manifestId">Id of the manifest (required)</param>
+        /// <param name="periodId">Id of the period (required)</param>
+        /// <param name="subtitleAdaptationSet">The subtitle adaptation set to be added to the period</param>
         public async Task<Models.SubtitleAdaptationSet> CreateAsync(string manifestId, string periodId, Models.SubtitleAdaptationSet subtitleAdaptationSet)
         {
             return await _apiClient.CreateAsync(manifestId, periodId, subtitleAdaptationSet);
         }
-        
+
         /// <summary>
         /// Delete Subtitle AdaptationSet
         /// </summary>
-        /// <param name="manifestId">Id of the manifest</param>
-        /// <param name="periodId">Id of the period</param>
-        /// <param name="adaptationsetId">Id of the subtitle adaptation set to be deleted</param>
+        /// <param name="manifestId">Id of the manifest (required)</param>
+        /// <param name="periodId">Id of the period (required)</param>
+        /// <param name="adaptationsetId">Id of the subtitle adaptation set to be deleted (required)</param>
         public async Task<Models.BitmovinResponse> DeleteAsync(string manifestId, string periodId, string adaptationsetId)
         {
             return await _apiClient.DeleteAsync(manifestId, periodId, adaptationsetId);
         }
-        
+
         /// <summary>
         /// Subtitle AdaptationSet Details
         /// </summary>
-        /// <param name="manifestId">Id of the manifest</param>
-        /// <param name="periodId">Id of the period</param>
-        /// <param name="adaptationsetId">Id of the subtitle adaptation set</param>
+        /// <param name="manifestId">Id of the manifest (required)</param>
+        /// <param name="periodId">Id of the period (required)</param>
+        /// <param name="adaptationsetId">Id of the subtitle adaptation set (required)</param>
         public async Task<Models.SubtitleAdaptationSet> GetAsync(string manifestId, string periodId, string adaptationsetId)
         {
             return await _apiClient.GetAsync(manifestId, periodId, adaptationsetId);
         }
-        
+
         /// <summary>
         /// List all Subtitle AdaptationSets
         /// </summary>
-        /// <param name="manifestId">Id of the manifest</param>
-        /// <param name="periodId">Id of the period</param>
+        /// <param name="manifestId">Id of the manifest (required)</param>
+        /// <param name="periodId">Id of the period (required)</param>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>
         public async Task<Models.PaginationResponse<Models.SubtitleAdaptationSet>> ListAsync(string manifestId, string periodId, params Func<ListQueryParams, ListQueryParams>[] queryParams)
         {
@@ -73,39 +71,37 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Subtit
 
             return await _apiClient.ListAsync(manifestId, periodId, q);
         }
-        
+
         internal interface ISubtitleApiClient
         {
-            
             [Post("/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/subtitle")]
             [AllowAnyStatusCode]
             Task<Models.SubtitleAdaptationSet> CreateAsync([Path("manifest_id")] string manifestId, [Path("period_id")] string periodId, [Body] Models.SubtitleAdaptationSet subtitleAdaptationSet);
-            
+
             [Delete("/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/subtitle/{adaptationset_id}")]
             [AllowAnyStatusCode]
             Task<Models.BitmovinResponse> DeleteAsync([Path("manifest_id")] string manifestId, [Path("period_id")] string periodId, [Path("adaptationset_id")] string adaptationsetId);
-            
+
             [Get("/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/subtitle/{adaptationset_id}")]
             [AllowAnyStatusCode]
             Task<Models.SubtitleAdaptationSet> GetAsync([Path("manifest_id")] string manifestId, [Path("period_id")] string periodId, [Path("adaptationset_id")] string adaptationsetId);
-            
+
             [Get("/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/subtitle")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.SubtitleAdaptationSet>> ListAsync([Path("manifest_id")] string manifestId, [Path("period_id")] string periodId, [QueryMap] IDictionary<String, Object> queryParams);
-            
         }
-        
+
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>
             /// Index of the first item to return, starting at 0. Default is 0
             /// </summary>
-            public ListQueryParams Offset(int? Offset) => SetQueryParam("offset", Offset);
+            public ListQueryParams Offset(int? offset) => SetQueryParam("offset", offset);
 
             /// <summary>
             /// Maximum number of items to return. Default is 25, maximum is 100
             /// </summary>
-            public ListQueryParams Limit(int? Limit) => SetQueryParam("limit", Limit);
+            public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
 
             private ListQueryParams SetQueryParam<T>(string key, T value)
             {

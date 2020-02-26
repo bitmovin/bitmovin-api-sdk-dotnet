@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// PlayReadyDrm
     /// </summary>
-
     public class PlayReadyDrm : Drm
     {
         [JsonProperty(PropertyName = "type")]
@@ -24,42 +23,41 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-        
+
         /// <summary>
         /// Key seed to generate key. Either key or keySeed is required
         /// </summary>
         [JsonProperty(PropertyName = "keySeed")]
         public string KeySeed { get; set; }
-        
+
         /// <summary>
         /// URL of the license server
         /// </summary>
         [JsonProperty(PropertyName = "laUrl")]
         public string LaUrl { get; set; }
-        
+
         /// <summary>
         /// Base64 encoded pssh payload
         /// </summary>
         [JsonProperty(PropertyName = "pssh")]
         public string Pssh { get; set; }
-        
+
         /// <summary>
         /// Method
         /// </summary>
         [JsonProperty(PropertyName = "method")]
         public PlayReadyEncryptionMethod? Method { get; set; }
-        
+
         /// <summary>
         /// Key identifier
         /// </summary>
         [JsonProperty(PropertyName = "kid")]
         public string Kid { get; set; }
-        
+
         /// <summary>
         /// AdditionalInformation
         /// </summary>
         [JsonProperty(PropertyName = "additionalInformation")]
         public PlayReadyAdditionalInformation AdditionalInformation { get; set; }
     }
-
 }

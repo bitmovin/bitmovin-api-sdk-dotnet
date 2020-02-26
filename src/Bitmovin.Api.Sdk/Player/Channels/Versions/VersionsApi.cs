@@ -15,7 +15,6 @@ namespace Bitmovin.Api.Sdk.Player.Channels.Versions
         public VersionsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IVersionsApiClient>();
-
             Latest = new LatestApi(apiClientFactory);
         }
 
@@ -24,25 +23,22 @@ namespace Bitmovin.Api.Sdk.Player.Channels.Versions
         /// </summary>
         public static BitmovinApiBuilder<VersionsApi> Builder => new BitmovinApiBuilder<VersionsApi>();
 
-        public LatestApi Latest { get; private set; }
-        
+        public LatestApi Latest { get; }
+
         /// <summary>
         /// List Player Versions for Channel
         /// </summary>
-        /// <param name="channelName">Name of the channel to get the player versions for.</param>
+        /// <param name="channelName">Name of the channel to get the player versions for. (required)</param>
         public async Task<Models.PaginationResponse<Models.PlayerVersion>> ListAsync(string channelName)
         {
             return await _apiClient.ListAsync(channelName);
         }
-        
+
         internal interface IVersionsApiClient
         {
-            
             [Get("/player/channels/{channel_name}/versions")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.PlayerVersion>> ListAsync([Path("channel_name")] string channelName);
-            
         }
-        
     }
 }

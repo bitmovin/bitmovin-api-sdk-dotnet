@@ -23,11 +23,10 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets
         /// </summary>
         public static BitmovinApiBuilder<AdaptationsetsApi> Builder => new BitmovinApiBuilder<AdaptationsetsApi>();
 
-        public AudioApi Audio { get; private set; }
-        public VideoApi Video { get; private set; }
-        public SubtitleApi Subtitle { get; private set; }
-        public RepresentationsApi Representations { get; private set; }
-        public ContentprotectionApi Contentprotection { get; private set; }
-
+        public AudioApi Audio { get; }
+        public VideoApi Video { get; }
+        public SubtitleApi Subtitle { get; }
+        public RepresentationsApi Representations { get; }
+        public ContentprotectionApi Contentprotection { get; }
     }
 }

@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// StreamPerTitleSettings
     /// </summary>
-
     public class StreamPerTitleSettings
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "fixedResolutionAndBitrateSettings")]
         public StreamPerTitleFixedResolutionAndBitrateSettings FixedResolutionAndBitrateSettings { get; set; }
     }
-
 }

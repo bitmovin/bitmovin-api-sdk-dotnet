@@ -13,12 +13,10 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// RtmpInput
     /// </summary>
-
     public class RtmpInput : Input
     {
         [JsonProperty(PropertyName = "type")]
         private readonly string _type = "RTMP";
 
     }
-
 }

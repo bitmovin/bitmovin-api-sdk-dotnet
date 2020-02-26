@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// UpdateOrganizationRequest
     /// </summary>
-
     public class UpdateOrganizationRequest
     {
         /// <summary>
@@ -21,18 +20,17 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-        
+
         /// <summary>
         /// Description
         /// </summary>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
-        
+
         /// <summary>
         /// Hexadecimal color
         /// </summary>
         [JsonProperty(PropertyName = "labelColor")]
         public string LabelColor { get; set; }
     }
-
 }

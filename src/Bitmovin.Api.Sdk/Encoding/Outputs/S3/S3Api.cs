@@ -15,7 +15,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.S3
         public S3Api(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IS3ApiClient>();
-
             Customdata = new CustomdataApi(apiClientFactory);
         }
 
@@ -24,35 +23,35 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.S3
         /// </summary>
         public static BitmovinApiBuilder<S3Api> Builder => new BitmovinApiBuilder<S3Api>();
 
-        public CustomdataApi Customdata { get; private set; }
-        
+        public CustomdataApi Customdata { get; }
+
         /// <summary>
         /// Create S3 Output
         /// </summary>
-        /// <param name="s3Output">The request payload</param>
+        /// <param name="s3Output">The S3 output to be created</param>
         public async Task<Models.S3Output> CreateAsync(Models.S3Output s3Output)
         {
             return await _apiClient.CreateAsync(s3Output);
         }
-        
+
         /// <summary>
         /// Delete S3 Output
         /// </summary>
-        /// <param name="outputId">Id of the output</param>
+        /// <param name="outputId">Id of the output (required)</param>
         public async Task<Models.S3Output> DeleteAsync(string outputId)
         {
             return await _apiClient.DeleteAsync(outputId);
         }
-        
+
         /// <summary>
         /// S3 Output Details
         /// </summary>
-        /// <param name="outputId">Id of the input</param>
+        /// <param name="outputId">Id of the input (required)</param>
         public async Task<Models.S3Output> GetAsync(string outputId)
         {
             return await _apiClient.GetAsync(outputId);
         }
-        
+
         /// <summary>
         /// List S3 Outputs
         /// </summary>
@@ -68,44 +67,42 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.S3
 
             return await _apiClient.ListAsync(q);
         }
-        
+
         internal interface IS3ApiClient
         {
-            
             [Post("/encoding/outputs/s3")]
             [AllowAnyStatusCode]
             Task<Models.S3Output> CreateAsync([Body] Models.S3Output s3Output);
-            
+
             [Delete("/encoding/outputs/s3/{output_id}")]
             [AllowAnyStatusCode]
             Task<Models.S3Output> DeleteAsync([Path("output_id")] string outputId);
-            
+
             [Get("/encoding/outputs/s3/{output_id}")]
             [AllowAnyStatusCode]
             Task<Models.S3Output> GetAsync([Path("output_id")] string outputId);
-            
+
             [Get("/encoding/outputs/s3")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.S3Output>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
-            
         }
-        
+
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>
             /// Index of the first item to return, starting at 0. Default is 0
             /// </summary>
-            public ListQueryParams Offset(int? Offset) => SetQueryParam("offset", Offset);
+            public ListQueryParams Offset(int? offset) => SetQueryParam("offset", offset);
 
             /// <summary>
             /// Maximum number of items to return. Default is 25, maximum is 100
             /// </summary>
-            public ListQueryParams Limit(int? Limit) => SetQueryParam("limit", Limit);
+            public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
 
             /// <summary>
             /// Filter output by name
             /// </summary>
-            public ListQueryParams Name(string Name) => SetQueryParam("name", Name);
+            public ListQueryParams Name(string name) => SetQueryParam("name", name);
 
             private ListQueryParams SetQueryParam<T>(string key, T value)
             {

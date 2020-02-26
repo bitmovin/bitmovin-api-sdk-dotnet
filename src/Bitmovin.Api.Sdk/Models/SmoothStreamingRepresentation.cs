@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// SmoothStreamingRepresentation
     /// </summary>
-
     public class SmoothStreamingRepresentation : BitmovinResource
     {
         /// <summary>
@@ -21,36 +20,35 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "encodingId")]
         public string EncodingId { get; set; }
-        
+
         /// <summary>
         /// Id of the muxing. (required)
         /// </summary>
         [JsonProperty(PropertyName = "muxingId")]
         public string MuxingId { get; set; }
-        
+
         /// <summary>
         /// The Smooth Streaming ismv or isma file that will be referenced in the manifest. (required)
         /// </summary>
         [JsonProperty(PropertyName = "mediaFile")]
         public string MediaFile { get; set; }
-        
+
         /// <summary>
         /// Language of the MP4 file
         /// </summary>
         [JsonProperty(PropertyName = "language")]
         public string Language { get; set; }
-        
+
         /// <summary>
         /// Track where this MP4 shoudl be added
         /// </summary>
         [JsonProperty(PropertyName = "trackName")]
         public string TrackName { get; set; }
-        
+
         /// <summary>
         /// Specify the priority of this representation. Representations with higher priority will be listed first in the manifest.
         /// </summary>
         [JsonProperty(PropertyName = "priority")]
         public int? Priority { get; set; }
     }
-
 }

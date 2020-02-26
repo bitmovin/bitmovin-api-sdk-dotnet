@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Sidecars.Webvtt
         public WebvttApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IWebvttApiClient>();
-
         }
 
         /// <summary>
@@ -22,53 +21,49 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Sidecars.Webvtt
         /// </summary>
         public static BitmovinApiBuilder<WebvttApi> Builder => new BitmovinApiBuilder<WebvttApi>();
 
-        
         /// <summary>
         /// Add WebVTT sidecar file
         /// </summary>
-        /// <param name="encodingId">Id of the encoding.</param>
-        /// <param name="webVttSidecarFile">The request payload</param>
+        /// <param name="encodingId">Id of the encoding. (required)</param>
+        /// <param name="webVttSidecarFile">The WebVTT Sidecar file to be added</param>
         public async Task<Models.WebVttSidecarFile> CreateAsync(string encodingId, Models.WebVttSidecarFile webVttSidecarFile)
         {
             return await _apiClient.CreateAsync(encodingId, webVttSidecarFile);
         }
-        
+
         /// <summary>
         /// Delete Sidecar
         /// </summary>
-        /// <param name="encodingId">Id of the encoding.</param>
-        /// <param name="sidecarId">Id of the sidecar.</param>
+        /// <param name="encodingId">Id of the encoding. (required)</param>
+        /// <param name="sidecarId">Id of the sidecar. (required)</param>
         public async Task<Models.BitmovinResponse> DeleteAsync(string encodingId, string sidecarId)
         {
             return await _apiClient.DeleteAsync(encodingId, sidecarId);
         }
-        
+
         /// <summary>
         /// WebVTT Sidecar Details
         /// </summary>
-        /// <param name="encodingId">Id of the encoding.</param>
-        /// <param name="sidecarId">Id of the sidecar.</param>
+        /// <param name="encodingId">Id of the encoding. (required)</param>
+        /// <param name="sidecarId">Id of the sidecar. (required)</param>
         public async Task<Models.WebVttSidecarFile> GetAsync(string encodingId, string sidecarId)
         {
             return await _apiClient.GetAsync(encodingId, sidecarId);
         }
-        
+
         internal interface IWebvttApiClient
         {
-            
             [Post("/encoding/encodings/{encoding_id}/sidecars/webvtt")]
             [AllowAnyStatusCode]
             Task<Models.WebVttSidecarFile> CreateAsync([Path("encoding_id")] string encodingId, [Body] Models.WebVttSidecarFile webVttSidecarFile);
-            
+
             [Delete("/encoding/encodings/{encoding_id}/sidecars/webvtt/{sidecar_id}")]
             [AllowAnyStatusCode]
             Task<Models.BitmovinResponse> DeleteAsync([Path("encoding_id")] string encodingId, [Path("sidecar_id")] string sidecarId);
-            
+
             [Get("/encoding/encodings/{encoding_id}/sidecars/webvtt/{sidecar_id}")]
             [AllowAnyStatusCode]
             Task<Models.WebVttSidecarFile> GetAsync([Path("encoding_id")] string encodingId, [Path("sidecar_id")] string sidecarId);
-            
         }
-        
     }
 }

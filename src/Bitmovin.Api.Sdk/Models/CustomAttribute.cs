@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// CustomAttribute
     /// </summary>
-
     public class CustomAttribute
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-        
+
         /// <summary>
         /// value of the custom attribute
         /// </summary>
         [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }
     }
-
 }

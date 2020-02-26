@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// UdpMulticastInput
     /// </summary>
-
     public class UdpMulticastInput : Input
     {
         [JsonProperty(PropertyName = "type")]
@@ -24,12 +23,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "host")]
         public string Host { get; set; }
-        
+
         /// <summary>
         /// Port to use (required)
         /// </summary>
         [JsonProperty(PropertyName = "port")]
         public int? Port { get; set; }
     }
-
 }

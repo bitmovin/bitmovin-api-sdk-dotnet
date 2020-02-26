@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// InsertableContentInput
     /// </summary>
-
     public class InsertableContentInput
     {
         /// <summary>
@@ -21,18 +20,17 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "inputId")]
         public string InputId { get; set; }
-        
+
         /// <summary>
         /// Path to the file on the input (required)
         /// </summary>
         [JsonProperty(PropertyName = "inputPath")]
         public string InputPath { get; set; }
-        
+
         /// <summary>
         /// Description of this input
         /// </summary>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
     }
-
 }

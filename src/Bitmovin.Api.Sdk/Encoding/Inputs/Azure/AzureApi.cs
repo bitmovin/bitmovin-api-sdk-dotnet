@@ -15,7 +15,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Azure
         public AzureApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IAzureApiClient>();
-
             Customdata = new CustomdataApi(apiClientFactory);
         }
 
@@ -24,35 +23,35 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Azure
         /// </summary>
         public static BitmovinApiBuilder<AzureApi> Builder => new BitmovinApiBuilder<AzureApi>();
 
-        public CustomdataApi Customdata { get; private set; }
-        
+        public CustomdataApi Customdata { get; }
+
         /// <summary>
         /// Create Azure Input
         /// </summary>
-        /// <param name="azureInput">The request payload</param>
+        /// <param name="azureInput">The Azure input to be created</param>
         public async Task<Models.AzureInput> CreateAsync(Models.AzureInput azureInput)
         {
             return await _apiClient.CreateAsync(azureInput);
         }
-        
+
         /// <summary>
         /// Delete Azure Input
         /// </summary>
-        /// <param name="inputId">Id of the input</param>
+        /// <param name="inputId">Id of the input (required)</param>
         public async Task<Models.AzureInput> DeleteAsync(string inputId)
         {
             return await _apiClient.DeleteAsync(inputId);
         }
-        
+
         /// <summary>
         /// Azure Input Details
         /// </summary>
-        /// <param name="inputId">Id of the input</param>
+        /// <param name="inputId">Id of the input (required)</param>
         public async Task<Models.AzureInput> GetAsync(string inputId)
         {
             return await _apiClient.GetAsync(inputId);
         }
-        
+
         /// <summary>
         /// List Azure Inputs
         /// </summary>
@@ -68,44 +67,42 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Azure
 
             return await _apiClient.ListAsync(q);
         }
-        
+
         internal interface IAzureApiClient
         {
-            
             [Post("/encoding/inputs/azure")]
             [AllowAnyStatusCode]
             Task<Models.AzureInput> CreateAsync([Body] Models.AzureInput azureInput);
-            
+
             [Delete("/encoding/inputs/azure/{input_id}")]
             [AllowAnyStatusCode]
             Task<Models.AzureInput> DeleteAsync([Path("input_id")] string inputId);
-            
+
             [Get("/encoding/inputs/azure/{input_id}")]
             [AllowAnyStatusCode]
             Task<Models.AzureInput> GetAsync([Path("input_id")] string inputId);
-            
+
             [Get("/encoding/inputs/azure")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.AzureInput>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
-            
         }
-        
+
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>
             /// Index of the first item to return, starting at 0. Default is 0
             /// </summary>
-            public ListQueryParams Offset(int? Offset) => SetQueryParam("offset", Offset);
+            public ListQueryParams Offset(int? offset) => SetQueryParam("offset", offset);
 
             /// <summary>
             /// Maximum number of items to return. Default is 25, maximum is 100
             /// </summary>
-            public ListQueryParams Limit(int? Limit) => SetQueryParam("limit", Limit);
+            public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
 
             /// <summary>
             /// Filter inputs by name
             /// </summary>
-            public ListQueryParams Name(string Name) => SetQueryParam("name", Name);
+            public ListQueryParams Name(string name) => SetQueryParam("name", name);
 
             private ListQueryParams SetQueryParam<T>(string key, T value)
             {

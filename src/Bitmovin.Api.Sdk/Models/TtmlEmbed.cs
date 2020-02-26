@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// TtmlEmbed
     /// </summary>
-
     public class TtmlEmbed : BitmovinResource
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "inputStream")]
         public StreamInput InputStream { get; set; }
     }
-
 }

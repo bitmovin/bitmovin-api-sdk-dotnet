@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// EmailNotificationWithStreamConditions
     /// </summary>
-
     public class EmailNotificationWithStreamConditions : EmailNotification
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "conditions")]
         public AbstractCondition Conditions { get; set; }
     }
-
 }

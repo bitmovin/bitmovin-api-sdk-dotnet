@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// SmoothStreamingManifest
     /// </summary>
-
     public class SmoothStreamingManifest : Manifest
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "serverManifestName")]
         public string ServerManifestName { get; set; }
-        
+
         /// <summary>
         /// Filename of the client manifest
         /// </summary>
         [JsonProperty(PropertyName = "clientManifestName")]
         public string ClientManifestName { get; set; }
     }
-
 }

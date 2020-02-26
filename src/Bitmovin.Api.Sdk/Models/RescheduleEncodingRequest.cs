@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// RescheduleEncodingRequest
     /// </summary>
-
     public class RescheduleEncodingRequest
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "infrastructureId")]
         public string InfrastructureId { get; set; }
     }
-
 }

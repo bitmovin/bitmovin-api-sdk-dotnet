@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Inputs
         public InputsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IInputsApiClient>();
-
         }
 
         /// <summary>
@@ -22,25 +21,21 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Inputs
         /// </summary>
         public static BitmovinApiBuilder<InputsApi> Builder => new BitmovinApiBuilder<InputsApi>();
 
-        
         /// <summary>
         /// Stream Input Analysis Details
         /// </summary>
-        /// <param name="encodingId">Id of the encoding.</param>
-        /// <param name="streamId">Id of the stream.</param>
+        /// <param name="encodingId">Id of the encoding. (required)</param>
+        /// <param name="streamId">Id of the stream. (required)</param>
         public async Task<Models.PaginationResponse<Models.StreamDetails>> ListAsync(string encodingId, string streamId)
         {
             return await _apiClient.ListAsync(encodingId, streamId);
         }
-        
+
         internal interface IInputsApiClient
         {
-            
             [Get("/encoding/encodings/{encoding_id}/streams/{stream_id}/inputs")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.StreamDetails>> ListAsync([Path("encoding_id")] string encodingId, [Path("stream_id")] string streamId);
-            
         }
-        
     }
 }

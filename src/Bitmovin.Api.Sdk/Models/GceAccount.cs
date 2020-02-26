@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// GceAccount
     /// </summary>
-
     public class GceAccount : BitmovinResource
     {
         /// <summary>
@@ -21,18 +20,17 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "serviceAccountEmail")]
         public string ServiceAccountEmail { get; set; }
-        
+
         /// <summary>
         /// Google private key of the Google service account that will be used to spin up VMs (required)
         /// </summary>
         [JsonProperty(PropertyName = "privateKey")]
         public string PrivateKey { get; set; }
-        
+
         /// <summary>
         /// ID of the GCP project in which the VMs are supposed to run. (required)
         /// </summary>
         [JsonProperty(PropertyName = "projectId")]
         public string ProjectId { get; set; }
     }
-
 }

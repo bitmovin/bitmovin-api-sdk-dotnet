@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// AudioConfiguration
     /// </summary>
-
     public class AudioConfiguration : CodecConfiguration
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "bitrate")]
         public long? Bitrate { get; set; }
-        
+
         /// <summary>
         /// Audio sampling rate Hz
         /// </summary>
         [JsonProperty(PropertyName = "rate")]
         public double? Rate { get; set; }
     }
-
 }

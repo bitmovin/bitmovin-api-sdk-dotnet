@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// DolbyVisionMetadataIngestInputStream
     /// </summary>
-
     public class DolbyVisionMetadataIngestInputStream : InputStream
     {
         [JsonProperty(PropertyName = "type")]
@@ -24,12 +23,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "inputId")]
         public string InputId { get; set; }
-        
+
         /// <summary>
         /// Path to Dolby Vision Metadata file (required)
         /// </summary>
         [JsonProperty(PropertyName = "inputPath")]
         public string InputPath { get; set; }
     }
-
 }

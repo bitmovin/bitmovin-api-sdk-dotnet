@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Gce
         public GceApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IGceApiClient>();
-
         }
 
         /// <summary>
@@ -22,34 +21,33 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Gce
         /// </summary>
         public static BitmovinApiBuilder<GceApi> Builder => new BitmovinApiBuilder<GceApi>();
 
-        
         /// <summary>
         /// Add GCE Account
         /// </summary>
-        /// <param name="gceAccount">The request payload</param>
+        /// <param name="gceAccount">The GCE Account to be added</param>
         public async Task<Models.GceAccount> CreateAsync(Models.GceAccount gceAccount)
         {
             return await _apiClient.CreateAsync(gceAccount);
         }
-        
+
         /// <summary>
         /// Delete GCE Account
         /// </summary>
-        /// <param name="infrastructureId">Id of the GCE account</param>
+        /// <param name="infrastructureId">Id of the GCE account (required)</param>
         public async Task<Models.GceAccount> DeleteAsync(string infrastructureId)
         {
             return await _apiClient.DeleteAsync(infrastructureId);
         }
-        
+
         /// <summary>
         /// GCE Account Details
         /// </summary>
-        /// <param name="infrastructureId">Id of the GCE account</param>
+        /// <param name="infrastructureId">Id of the GCE account (required)</param>
         public async Task<Models.GceAccount> GetAsync(string infrastructureId)
         {
             return await _apiClient.GetAsync(infrastructureId);
         }
-        
+
         /// <summary>
         /// List GCE Accounts
         /// </summary>
@@ -65,39 +63,37 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Gce
 
             return await _apiClient.ListAsync(q);
         }
-        
+
         internal interface IGceApiClient
         {
-            
             [Post("/encoding/infrastructure/gce")]
             [AllowAnyStatusCode]
             Task<Models.GceAccount> CreateAsync([Body] Models.GceAccount gceAccount);
-            
+
             [Delete("/encoding/infrastructure/gce/{infrastructure_id}")]
             [AllowAnyStatusCode]
             Task<Models.GceAccount> DeleteAsync([Path("infrastructure_id")] string infrastructureId);
-            
+
             [Get("/encoding/infrastructure/gce/{infrastructure_id}")]
             [AllowAnyStatusCode]
             Task<Models.GceAccount> GetAsync([Path("infrastructure_id")] string infrastructureId);
-            
+
             [Get("/encoding/infrastructure/gce")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.GceAccount>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
-            
         }
-        
+
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>
             /// Index of the first item to return, starting at 0. Default is 0
             /// </summary>
-            public ListQueryParams Offset(int? Offset) => SetQueryParam("offset", Offset);
+            public ListQueryParams Offset(int? offset) => SetQueryParam("offset", offset);
 
             /// <summary>
             /// Maximum number of items to return. Default is 25, maximum is 100
             /// </summary>
-            public ListQueryParams Limit(int? Limit) => SetQueryParam("limit", Limit);
+            public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
 
             private ListQueryParams SetQueryParam<T>(string key, T value)
             {

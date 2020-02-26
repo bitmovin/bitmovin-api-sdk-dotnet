@@ -13,9 +13,7 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// VideoAdaptationSet
     /// </summary>
-
     public class VideoAdaptationSet : AdaptationSet
     {
     }
-
 }

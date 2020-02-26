@@ -11,9 +11,8 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// WebVttSidecarFile
+    /// An external WebVTT file that is added to an encoding. The size limit for a sidecar file is 10 MB
     /// </summary>
-
     public class WebVttSidecarFile : SidecarFile
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "segmentation")]
         public WebVttSidecarFileSegmentation Segmentation { get; set; }
     }
-
 }

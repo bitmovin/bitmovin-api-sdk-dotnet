@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// ResourceLimitContainer
     /// </summary>
-
     public class ResourceLimitContainer
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "resource")]
         public ResourceType? Resource { get; set; }
-        
+
         /// <summary>
         /// Limits
         /// </summary>
         [JsonProperty(PropertyName = "limits")]
         public List<ResourceLimit> Limits { get; set; } = new List<ResourceLimit>();
     }
-
 }

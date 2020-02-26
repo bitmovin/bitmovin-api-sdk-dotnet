@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// Mp3AudioConfiguration
     /// </summary>
-
     public class Mp3AudioConfiguration : AudioConfiguration
     {
         [JsonProperty(PropertyName = "type")]
@@ -25,5 +24,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "channelLayout")]
         public ChannelLayout? ChannelLayout { get; set; }
     }
-
 }

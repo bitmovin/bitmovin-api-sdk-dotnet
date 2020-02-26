@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// LiveDashManifest
     /// </summary>
-
     public class LiveDashManifest
     {
         /// <summary>
@@ -21,18 +20,17 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "manifestId")]
         public string ManifestId { get; set; }
-        
+
         /// <summary>
         /// Timeshift in seconds
         /// </summary>
         [JsonProperty(PropertyName = "timeshift")]
         public double? Timeshift { get; set; }
-        
+
         /// <summary>
         /// Live edge offset in seconds
         /// </summary>
         [JsonProperty(PropertyName = "liveEdgeOffset")]
         public double? LiveEdgeOffset { get; set; }
     }
-
 }

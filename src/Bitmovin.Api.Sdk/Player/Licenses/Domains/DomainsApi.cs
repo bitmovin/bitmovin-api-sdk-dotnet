@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Player.Licenses.Domains
         public DomainsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IDomainsApiClient>();
-
         }
 
         /// <summary>
@@ -22,52 +21,48 @@ namespace Bitmovin.Api.Sdk.Player.Licenses.Domains
         /// </summary>
         public static BitmovinApiBuilder<DomainsApi> Builder => new BitmovinApiBuilder<DomainsApi>();
 
-        
         /// <summary>
         /// Add Domain
         /// </summary>
-        /// <param name="licenseId">Id of the Player License</param>
-        /// <param name="domain">The request payload</param>
+        /// <param name="licenseId">Id of the Player License (required)</param>
+        /// <param name="domain">The Domain to be added to Player License Whitelist</param>
         public async Task<Models.Domain> CreateAsync(string licenseId, Models.Domain domain)
         {
             return await _apiClient.CreateAsync(licenseId, domain);
         }
-        
+
         /// <summary>
         /// Delete Domain
         /// </summary>
-        /// <param name="licenseId">Id of license</param>
-        /// <param name="domainId">Id of the domain</param>
+        /// <param name="licenseId">Id of license (required)</param>
+        /// <param name="domainId">Id of the domain (required)</param>
         public async Task<Models.BitmovinResponse> DeleteAsync(string licenseId, string domainId)
         {
             return await _apiClient.DeleteAsync(licenseId, domainId);
         }
-        
+
         /// <summary>
         /// List allowed Domains for Player License
         /// </summary>
-        /// <param name="licenseId">Id of the Player License</param>
+        /// <param name="licenseId">Id of the Player License (required)</param>
         public async Task<Models.PaginationResponse<Models.Domain>> ListAsync(string licenseId)
         {
             return await _apiClient.ListAsync(licenseId);
         }
-        
+
         internal interface IDomainsApiClient
         {
-            
             [Post("/player/licenses/{license_id}/domains")]
             [AllowAnyStatusCode]
             Task<Models.Domain> CreateAsync([Path("license_id")] string licenseId, [Body] Models.Domain domain);
-            
+
             [Delete("/player/licenses/{license_id}/domains/{domain_id}")]
             [AllowAnyStatusCode]
             Task<Models.BitmovinResponse> DeleteAsync([Path("license_id")] string licenseId, [Path("domain_id")] string domainId);
-            
+
             [Get("/player/licenses/{license_id}/domains")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.Domain>> ListAsync([Path("license_id")] string licenseId);
-            
         }
-        
     }
 }

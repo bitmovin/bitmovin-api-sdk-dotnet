@@ -15,7 +15,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Subtitles
         /// </summary>
         public static BitmovinApiBuilder<SubtitlesApi> Builder => new BitmovinApiBuilder<SubtitlesApi>();
 
-        public WebvttApi Webvtt { get; private set; }
-
+        public WebvttApi Webvtt { get; }
     }
 }

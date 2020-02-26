@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// AudioGroupConfiguration
     /// </summary>
-
     public class AudioGroupConfiguration
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "droppingMode")]
         public VariantStreamDroppingMode? DroppingMode { get; set; }
-        
+
         /// <summary>
         /// Audio groups (required)
         /// </summary>
         [JsonProperty(PropertyName = "groups")]
         public List<AudioGroup> Groups { get; set; } = new List<AudioGroup>();
     }
-
 }

@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// BillableEncodingFeatureMinutes
     /// </summary>
-
     public class BillableEncodingFeatureMinutes
     {
         /// <summary>
@@ -21,24 +20,23 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "featureType")]
         public string FeatureType { get; set; }
-        
+
         /// <summary>
         /// Encoded minutes related to this feature.
         /// </summary>
         [JsonProperty(PropertyName = "encodedMinutes")]
         public double? EncodedMinutes { get; set; }
-        
+
         /// <summary>
         /// The multiplier used for this feature.
         /// </summary>
         [JsonProperty(PropertyName = "featureMultiplier")]
         public double? FeatureMultiplier { get; set; }
-        
+
         /// <summary>
         /// The billable minutes related to this feature.
         /// </summary>
         [JsonProperty(PropertyName = "billableMinutes")]
         public double? BillableMinutes { get; set; }
     }
-
 }

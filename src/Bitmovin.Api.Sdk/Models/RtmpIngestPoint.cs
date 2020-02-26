@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// RtmpIngestPoint
     /// </summary>
-
     public class RtmpIngestPoint
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "applicationName")]
         public string ApplicationName { get; set; }
-        
+
         /// <summary>
         /// The stream key for the backup input (required)
         /// </summary>
         [JsonProperty(PropertyName = "streamKey")]
         public string StreamKey { get; set; }
     }
-
 }

@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// SrtStatisticLink
     /// </summary>
-
     public class SrtStatisticLink
     {
         /// <summary>
@@ -21,18 +20,17 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "bandwidth")]
         public double? Bandwidth { get; set; }
-        
+
         /// <summary>
         /// MaxBandwidth
         /// </summary>
         [JsonProperty(PropertyName = "maxBandwidth")]
         public double? MaxBandwidth { get; set; }
-        
+
         /// <summary>
         /// Rtt
         /// </summary>
         [JsonProperty(PropertyName = "rtt")]
         public double? Rtt { get; set; }
     }
-
 }

@@ -16,7 +16,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Webm.Drm
         public DrmApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IDrmApiClient>();
-
             Cenc = new CencApi(apiClientFactory);
             Speke = new SpekeApi(apiClientFactory);
         }
@@ -26,27 +25,24 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Webm.Drm
         /// </summary>
         public static BitmovinApiBuilder<DrmApi> Builder => new BitmovinApiBuilder<DrmApi>();
 
-        public CencApi Cenc { get; private set; }
-        public SpekeApi Speke { get; private set; }
-        
+        public CencApi Cenc { get; }
+        public SpekeApi Speke { get; }
+
         /// <summary>
-        /// List all DRM configurations of WebM Muxing
+        /// List all DRM configurations of WebM muxing
         /// </summary>
-        /// <param name="encodingId">Id of the encoding.</param>
-        /// <param name="muxingId">Id of the WebM muxing</param>
+        /// <param name="encodingId">Id of the encoding. (required)</param>
+        /// <param name="muxingId">Id of the WebM muxing (required)</param>
         public async Task<Models.PaginationResponse<Models.Drm>> ListAsync(string encodingId, string muxingId)
         {
             return await _apiClient.ListAsync(encodingId, muxingId);
         }
-        
+
         internal interface IDrmApiClient
         {
-            
             [Get("/encoding/encodings/{encoding_id}/muxings/webm/{muxing_id}/drm")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.Drm>> ListAsync([Path("encoding_id")] string encodingId, [Path("muxing_id")] string muxingId);
-            
         }
-        
     }
 }

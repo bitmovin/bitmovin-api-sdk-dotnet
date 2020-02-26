@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// KubernetesClusterConfiguration
     /// </summary>
-
     public class KubernetesClusterConfiguration
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "parallelEncodings")]
         public int? ParallelEncodings { get; set; }
-        
+
         /// <summary>
         /// Number of worker nodes used for each encoding on the Kubernetes cluster (required)
         /// </summary>
         [JsonProperty(PropertyName = "workersPerEncoding")]
         public int? WorkersPerEncoding { get; set; }
     }
-
 }

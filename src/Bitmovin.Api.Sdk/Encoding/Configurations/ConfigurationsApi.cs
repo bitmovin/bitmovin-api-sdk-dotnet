@@ -18,7 +18,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations
         public ConfigurationsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IConfigurationsApiClient>();
-
             Type = new TypeApi(apiClientFactory);
             Video = new VideoApi(apiClientFactory);
             Audio = new AudioApi(apiClientFactory);
@@ -30,11 +29,11 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations
         /// </summary>
         public static BitmovinApiBuilder<ConfigurationsApi> Builder => new BitmovinApiBuilder<ConfigurationsApi>();
 
-        public TypeApi Type { get; private set; }
-        public VideoApi Video { get; private set; }
-        public AudioApi Audio { get; private set; }
-        public SubtitlesApi Subtitles { get; private set; }
-        
+        public TypeApi Type { get; }
+        public VideoApi Video { get; }
+        public AudioApi Audio { get; }
+        public SubtitlesApi Subtitles { get; }
+
         /// <summary>
         /// List all Codec Configurations
         /// </summary>
@@ -50,32 +49,30 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations
 
             return await _apiClient.ListAsync(q);
         }
-        
+
         internal interface IConfigurationsApiClient
         {
-            
             [Get("/encoding/configurations")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.CodecConfiguration>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
-            
         }
-        
+
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>
             /// Index of the first item to return, starting at 0. Default is 0
             /// </summary>
-            public ListQueryParams Offset(int? Offset) => SetQueryParam("offset", Offset);
+            public ListQueryParams Offset(int? offset) => SetQueryParam("offset", offset);
 
             /// <summary>
             /// Maximum number of items to return. Default is 25, maximum is 100
             /// </summary>
-            public ListQueryParams Limit(int? Limit) => SetQueryParam("limit", Limit);
+            public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
 
             /// <summary>
             /// Filter configuration by name
             /// </summary>
-            public ListQueryParams Name(string Name) => SetQueryParam("name", Name);
+            public ListQueryParams Name(string name) => SetQueryParam("name", name);
 
             private ListQueryParams SetQueryParam<T>(string key, T value)
             {

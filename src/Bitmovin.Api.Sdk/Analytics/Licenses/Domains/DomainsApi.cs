@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Analytics.Licenses.Domains
         public DomainsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IDomainsApiClient>();
-
         }
 
         /// <summary>
@@ -22,52 +21,48 @@ namespace Bitmovin.Api.Sdk.Analytics.Licenses.Domains
         /// </summary>
         public static BitmovinApiBuilder<DomainsApi> Builder => new BitmovinApiBuilder<DomainsApi>();
 
-        
         /// <summary>
         /// Add Domain
         /// </summary>
-        /// <param name="licenseId">License id</param>
-        /// <param name="domain">The request payload</param>
+        /// <param name="licenseId">License id (required)</param>
+        /// <param name="domain">The domain to be added</param>
         public async Task<Models.Domain> CreateAsync(string licenseId, Models.Domain domain)
         {
             return await _apiClient.CreateAsync(licenseId, domain);
         }
-        
+
         /// <summary>
         /// Delete Domain
         /// </summary>
-        /// <param name="licenseId">License id</param>
-        /// <param name="domainId">id of domain to delete</param>
+        /// <param name="licenseId">License id (required)</param>
+        /// <param name="domainId">id of domain to delete (required)</param>
         public async Task<Models.BitmovinResponse> DeleteAsync(string licenseId, string domainId)
         {
             return await _apiClient.DeleteAsync(licenseId, domainId);
         }
-        
+
         /// <summary>
         /// List License Domains
         /// </summary>
-        /// <param name="licenseId">License id</param>
+        /// <param name="licenseId">License id (required)</param>
         public async Task<Models.DomainList> GetAsync(string licenseId)
         {
             return await _apiClient.GetAsync(licenseId);
         }
-        
+
         internal interface IDomainsApiClient
         {
-            
             [Post("/analytics/licenses/{license_id}/domains")]
             [AllowAnyStatusCode]
             Task<Models.Domain> CreateAsync([Path("license_id")] string licenseId, [Body] Models.Domain domain);
-            
+
             [Delete("/analytics/licenses/{license_id}/domains/{domain_id}")]
             [AllowAnyStatusCode]
             Task<Models.BitmovinResponse> DeleteAsync([Path("license_id")] string licenseId, [Path("domain_id")] string domainId);
-            
+
             [Get("/analytics/licenses/{license_id}/domains")]
             [AllowAnyStatusCode]
             Task<Models.DomainList> GetAsync([Path("license_id")] string licenseId);
-            
         }
-        
     }
 }

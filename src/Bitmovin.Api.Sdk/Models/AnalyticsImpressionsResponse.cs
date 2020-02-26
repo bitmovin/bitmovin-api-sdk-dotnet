@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// AnalyticsImpressionsResponse
     /// </summary>
-
     public class AnalyticsImpressionsResponse
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "impressions")]
         public List<AnalyticsImpressionListItem> Impressions { get; set; } = new List<AnalyticsImpressionListItem>();
     }
-
 }

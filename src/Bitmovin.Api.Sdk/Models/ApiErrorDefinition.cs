@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// ApiErrorDefinition
     /// </summary>
-
     public class ApiErrorDefinition
     {
         /// <summary>
@@ -21,18 +20,17 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "code")]
         public long? Code { get; set; }
-        
+
         /// <summary>
         /// The error category.
         /// </summary>
         [JsonProperty(PropertyName = "category")]
         public string Category { get; set; }
-        
+
         /// <summary>
         /// The returned error description.
         /// </summary>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
     }
-
 }

@@ -26,7 +26,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs
         public OutputsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IOutputsApiClient>();
-
             Type = new TypeApi(apiClientFactory);
             S3 = new S3Api(apiClientFactory);
             S3RoleBased = new S3RoleBasedApi(apiClientFactory);
@@ -46,19 +45,19 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs
         /// </summary>
         public static BitmovinApiBuilder<OutputsApi> Builder => new BitmovinApiBuilder<OutputsApi>();
 
-        public TypeApi Type { get; private set; }
-        public S3Api S3 { get; private set; }
-        public S3RoleBasedApi S3RoleBased { get; private set; }
-        public GenericS3Api GenericS3 { get; private set; }
-        public LocalApi Local { get; private set; }
-        public GcsApi Gcs { get; private set; }
-        public AzureApi Azure { get; private set; }
-        public FtpApi Ftp { get; private set; }
-        public SftpApi Sftp { get; private set; }
-        public AkamaiMslApi AkamaiMsl { get; private set; }
-        public AkamaiNetstorageApi AkamaiNetstorage { get; private set; }
-        public LiveMediaIngestApi LiveMediaIngest { get; private set; }
-        
+        public TypeApi Type { get; }
+        public S3Api S3 { get; }
+        public S3RoleBasedApi S3RoleBased { get; }
+        public GenericS3Api GenericS3 { get; }
+        public LocalApi Local { get; }
+        public GcsApi Gcs { get; }
+        public AzureApi Azure { get; }
+        public FtpApi Ftp { get; }
+        public SftpApi Sftp { get; }
+        public AkamaiMslApi AkamaiMsl { get; }
+        public AkamaiNetstorageApi AkamaiNetstorage { get; }
+        public LiveMediaIngestApi LiveMediaIngest { get; }
+
         /// <summary>
         /// List all Outputs
         /// </summary>
@@ -74,32 +73,30 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs
 
             return await _apiClient.ListAsync(q);
         }
-        
+
         internal interface IOutputsApiClient
         {
-            
             [Get("/encoding/outputs")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.Output>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
-            
         }
-        
+
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>
             /// Index of the first item to return, starting at 0. Default is 0
             /// </summary>
-            public ListQueryParams Offset(int? Offset) => SetQueryParam("offset", Offset);
+            public ListQueryParams Offset(int? offset) => SetQueryParam("offset", offset);
 
             /// <summary>
             /// Maximum number of items to return. Default is 25, maximum is 100
             /// </summary>
-            public ListQueryParams Limit(int? Limit) => SetQueryParam("limit", Limit);
+            public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
 
             /// <summary>
             /// Filter output by name
             /// </summary>
-            public ListQueryParams Name(string Name) => SetQueryParam("name", Name);
+            public ListQueryParams Name(string name) => SetQueryParam("name", name);
 
             private ListQueryParams SetQueryParam<T>(string key, T value)
             {

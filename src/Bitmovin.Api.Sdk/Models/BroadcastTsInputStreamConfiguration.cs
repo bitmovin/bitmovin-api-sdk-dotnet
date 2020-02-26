@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// BroadcastTsInputStreamConfiguration
     /// </summary>
-
     public class BroadcastTsInputStreamConfiguration
     {
         /// <summary>
@@ -21,30 +20,29 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "streamId")]
         public string StreamId { get; set; }
-        
+
         /// <summary>
         /// An integer value. Packet Identifier (PID) for this stream.
         /// </summary>
         [JsonProperty(PropertyName = "packetIdentifier")]
         public int? PacketIdentifier { get; set; }
-        
+
         /// <summary>
         /// Start stream with initial discontinuity indicator set to one. If true, set the discontinuity indicator in the first packet for this PID.
         /// </summary>
         [JsonProperty(PropertyName = "startWithDiscontinuityIndicator")]
         public bool? StartWithDiscontinuityIndicator { get; set; }
-        
+
         /// <summary>
         /// Align access units to PES packets. If true, align access units to PES packet headers. Uses adaptation field stuffing to position an access unit at the beginning of each PES packet.
         /// </summary>
         [JsonProperty(PropertyName = "alignPes")]
         public bool? AlignPes { get; set; }
-        
+
         /// <summary>
         /// SetRaiOnAu
         /// </summary>
         [JsonProperty(PropertyName = "setRaiOnAu")]
         public RaiUnit? SetRaiOnAu { get; set; }
     }
-
 }

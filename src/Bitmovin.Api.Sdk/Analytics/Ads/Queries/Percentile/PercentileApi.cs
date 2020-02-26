@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Analytics.Ads.Queries.Percentile
         public PercentileApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IPercentileApiClient>();
-
         }
 
         /// <summary>
@@ -22,24 +21,20 @@ namespace Bitmovin.Api.Sdk.Analytics.Ads.Queries.Percentile
         /// </summary>
         public static BitmovinApiBuilder<PercentileApi> Builder => new BitmovinApiBuilder<PercentileApi>();
 
-        
         /// <summary>
         /// Percentile
         /// </summary>
-        /// <param name="adAnalyticsPercentileQueryRequest">The request payload</param>
+        /// <param name="adAnalyticsPercentileQueryRequest">Analytics Query Object</param>
         public async Task<Models.AnalyticsResponse> CreateAsync(Models.AdAnalyticsPercentileQueryRequest adAnalyticsPercentileQueryRequest)
         {
             return await _apiClient.CreateAsync(adAnalyticsPercentileQueryRequest);
         }
-        
+
         internal interface IPercentileApiClient
         {
-            
             [Post("/analytics/ads/queries/percentile")]
             [AllowAnyStatusCode]
             Task<Models.AnalyticsResponse> CreateAsync([Body] Models.AdAnalyticsPercentileQueryRequest adAnalyticsPercentileQueryRequest);
-            
         }
-        
     }
 }

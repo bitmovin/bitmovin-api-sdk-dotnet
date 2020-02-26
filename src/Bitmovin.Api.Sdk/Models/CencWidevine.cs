@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// CencWidevine
     /// </summary>
-
     public class CencWidevine
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "pssh")]
         public string Pssh { get; set; }
     }
-
 }

@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Kubernetes.AgentDeployment
         public AgentDeploymentApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IAgentDeploymentApiClient>();
-
         }
 
         /// <summary>
@@ -22,24 +21,20 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Kubernetes.AgentDeployment
         /// </summary>
         public static BitmovinApiBuilder<AgentDeploymentApi> Builder => new BitmovinApiBuilder<AgentDeploymentApi>();
 
-        
         /// <summary>
         /// Download bitmovin-agent deployment
         /// </summary>
-        /// <param name="infrastructureId">Id of the Kubernetes cluster</param>
+        /// <param name="infrastructureId">Id of the Kubernetes cluster (required)</param>
         public async Task GetAsync(string infrastructureId)
         {
             await _apiClient.GetAsync(infrastructureId);
         }
-        
+
         internal interface IAgentDeploymentApiClient
         {
-            
             [Get("/encoding/infrastructure/kubernetes/{infrastructure_id}/agent-deployment")]
             [AllowAnyStatusCode]
             Task GetAsync([Path("infrastructure_id")] string infrastructureId);
-            
         }
-        
     }
 }

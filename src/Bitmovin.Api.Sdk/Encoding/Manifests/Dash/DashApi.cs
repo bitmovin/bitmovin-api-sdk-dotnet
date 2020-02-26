@@ -17,7 +17,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash
         public DashApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IDashApiClient>();
-
             Default = new DefaultApi(apiClientFactory);
             Customdata = new CustomdataApi(apiClientFactory);
             Periods = new PeriodsApi(apiClientFactory);
@@ -28,37 +27,37 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash
         /// </summary>
         public static BitmovinApiBuilder<DashApi> Builder => new BitmovinApiBuilder<DashApi>();
 
-        public DefaultApi Default { get; private set; }
-        public CustomdataApi Customdata { get; private set; }
-        public PeriodsApi Periods { get; private set; }
-        
+        public DefaultApi Default { get; }
+        public CustomdataApi Customdata { get; }
+        public PeriodsApi Periods { get; }
+
         /// <summary>
         /// Create DASH Manifest
         /// </summary>
-        /// <param name="dashManifest">The request payload</param>
+        /// <param name="dashManifest">The DASH manifest to be created</param>
         public async Task<Models.DashManifest> CreateAsync(Models.DashManifest dashManifest)
         {
             return await _apiClient.CreateAsync(dashManifest);
         }
-        
+
         /// <summary>
         /// Delete DASH Manifest
         /// </summary>
-        /// <param name="manifestId">UUID of the DASH manifest to be deleted</param>
+        /// <param name="manifestId">UUID of the DASH manifest to be deleted (required)</param>
         public async Task<Models.BitmovinResponse> DeleteAsync(string manifestId)
         {
             return await _apiClient.DeleteAsync(manifestId);
         }
-        
+
         /// <summary>
         /// DASH Manifest Details
         /// </summary>
-        /// <param name="manifestId">UUID of the dash manifest</param>
+        /// <param name="manifestId">UUID of the dash manifest (required)</param>
         public async Task<Models.DashManifest> GetAsync(string manifestId)
         {
             return await _apiClient.GetAsync(manifestId);
         }
-        
+
         /// <summary>
         /// List DASH Manifests
         /// </summary>
@@ -74,83 +73,81 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash
 
             return await _apiClient.ListAsync(q);
         }
-        
+
         /// <summary>
         /// Start DASH Manifest Creation
         /// </summary>
-        /// <param name="manifestId">Id of the DASH manifest.</param>
+        /// <param name="manifestId">Id of the DASH manifest. (required)</param>
         public async Task<Models.BitmovinResponse> StartAsync(string manifestId)
         {
             return await _apiClient.StartAsync(manifestId);
         }
-        
+
         /// <summary>
         /// DASH Manifest Creation Status
         /// </summary>
-        /// <param name="manifestId">Id of the DASH manifest.</param>
+        /// <param name="manifestId">Id of the DASH manifest. (required)</param>
         public async Task<Models.ServiceTaskStatus> StatusAsync(string manifestId)
         {
             return await _apiClient.StatusAsync(manifestId);
         }
-        
+
         /// <summary>
         /// Stop DASH Manifest Creation
         /// </summary>
-        /// <param name="manifestId">Id of the DASH manifest.</param>
+        /// <param name="manifestId">Id of the DASH manifest. (required)</param>
         public async Task<Models.BitmovinResponse> StopAsync(string manifestId)
         {
             return await _apiClient.StopAsync(manifestId);
         }
-        
+
         internal interface IDashApiClient
         {
-            
             [Post("/encoding/manifests/dash")]
             [AllowAnyStatusCode]
             Task<Models.DashManifest> CreateAsync([Body] Models.DashManifest dashManifest);
-            
+
             [Delete("/encoding/manifests/dash/{manifest_id}")]
             [AllowAnyStatusCode]
             Task<Models.BitmovinResponse> DeleteAsync([Path("manifest_id")] string manifestId);
-            
+
             [Get("/encoding/manifests/dash/{manifest_id}")]
             [AllowAnyStatusCode]
             Task<Models.DashManifest> GetAsync([Path("manifest_id")] string manifestId);
-            
+
             [Get("/encoding/manifests/dash")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.DashManifest>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
-            
+
             [Post("/encoding/manifests/dash/{manifest_id}/start")]
             [AllowAnyStatusCode]
             Task<Models.BitmovinResponse> StartAsync([Path("manifest_id")] string manifestId);
-            
+
             [Get("/encoding/manifests/dash/{manifest_id}/status")]
             [AllowAnyStatusCode]
             Task<Models.ServiceTaskStatus> StatusAsync([Path("manifest_id")] string manifestId);
-            
+
             [Post("/encoding/manifests/dash/{manifest_id}/stop")]
             [AllowAnyStatusCode]
             Task<Models.BitmovinResponse> StopAsync([Path("manifest_id")] string manifestId);
-            
         }
-        
+
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>
             /// Index of the first item to return, starting at 0. Default is 0
             /// </summary>
-            public ListQueryParams Offset(int? Offset) => SetQueryParam("offset", Offset);
+            public ListQueryParams Offset(int? offset) => SetQueryParam("offset", offset);
 
             /// <summary>
             /// Maximum number of items to return. Default is 25, maximum is 100
             /// </summary>
-            public ListQueryParams Limit(int? Limit) => SetQueryParam("limit", Limit);
+            public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
 
             /// <summary>
             /// Get the manifests that belong to that encoding id
             /// </summary>
-            public ListQueryParams EncodingId(string EncodingId) => SetQueryParam("encodingId", EncodingId);
+            public ListQueryParams EncodingId(string encodingId) => SetQueryParam("encodingId", encodingId);
 
             private ListQueryParams SetQueryParam<T>(string key, T value)
             {

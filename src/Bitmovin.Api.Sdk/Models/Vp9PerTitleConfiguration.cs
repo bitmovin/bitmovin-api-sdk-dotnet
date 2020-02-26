@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// Vp9PerTitleConfiguration
     /// </summary>
-
     public class Vp9PerTitleConfiguration : PerTitleConfiguration
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "targetQualityCrf")]
         public double? TargetQualityCrf { get; set; }
     }
-
 }

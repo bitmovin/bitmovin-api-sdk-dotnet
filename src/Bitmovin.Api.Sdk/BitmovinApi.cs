@@ -25,12 +25,11 @@ namespace Bitmovin.Api.Sdk
         /// </summary>
         public static BitmovinApiBuilder<BitmovinApi> Builder => new BitmovinApiBuilder<BitmovinApi>();
 
-        public AccountApi Account { get; private set; }
-        public AnalyticsApi Analytics { get; private set; }
-        public EncodingApi Encoding { get; private set; }
-        public GeneralApi General { get; private set; }
-        public NotificationsApi Notifications { get; private set; }
-        public PlayerApi Player { get; private set; }
-
+        public AccountApi Account { get; }
+        public AnalyticsApi Analytics { get; }
+        public EncodingApi Encoding { get; }
+        public GeneralApi General { get; }
+        public NotificationsApi Notifications { get; }
+        public PlayerApi Player { get; }
     }
 }

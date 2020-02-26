@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// SourceChannel
     /// </summary>
-
     public class SourceChannel
     {
         /// <summary>
@@ -21,18 +20,17 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "gain")]
         public double? Gain { get; set; }
-        
+
         /// <summary>
         /// Type
         /// </summary>
         [JsonProperty(PropertyName = "type")]
         public SourceChannelType? Type { get; set; }
-        
+
         /// <summary>
         /// Number of this source channel. If type is &#39;CHANNEL_NUMBER&#39;, this must be set.
         /// </summary>
         [JsonProperty(PropertyName = "channelNumber")]
         public int? ChannelNumber { get; set; }
     }
-
 }

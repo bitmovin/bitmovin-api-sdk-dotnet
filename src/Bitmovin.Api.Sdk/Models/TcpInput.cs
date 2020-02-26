@@ -13,12 +13,10 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// TcpInput
     /// </summary>
-
     public class TcpInput : Input
     {
         [JsonProperty(PropertyName = "type")]
         private readonly string _type = "TCP";
 
     }
-
 }

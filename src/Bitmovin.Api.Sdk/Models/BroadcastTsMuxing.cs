@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// BroadcastTsMuxing
     /// </summary>
-
     public class BroadcastTsMuxing : Muxing
     {
         [JsonProperty(PropertyName = "type")]
@@ -24,18 +23,17 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "segmentLength")]
         public double? SegmentLength { get; set; }
-        
+
         /// <summary>
         /// Name of the new Video
         /// </summary>
         [JsonProperty(PropertyName = "filename")]
         public string Filename { get; set; }
-        
+
         /// <summary>
         /// Configuration
         /// </summary>
         [JsonProperty(PropertyName = "configuration")]
         public BroadcastTsMuxingConfiguration Configuration { get; set; }
     }
-
 }

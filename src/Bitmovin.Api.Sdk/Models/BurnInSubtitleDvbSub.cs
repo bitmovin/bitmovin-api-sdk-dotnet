@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// BurnInSubtitleDvbSub
     /// </summary>
-
     public class BurnInSubtitleDvbSub : BitmovinResource
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "inputStreamId")]
         public string InputStreamId { get; set; }
     }
-
 }

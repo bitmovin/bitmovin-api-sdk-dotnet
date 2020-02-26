@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// StreamFilter
     /// </summary>
-
     public class StreamFilter
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-        
+
         /// <summary>
         /// Defines the order in which filters are applied. Filters are applied in ascending order. (required)
         /// </summary>
         [JsonProperty(PropertyName = "position")]
         public int? Position { get; set; }
     }
-
 }

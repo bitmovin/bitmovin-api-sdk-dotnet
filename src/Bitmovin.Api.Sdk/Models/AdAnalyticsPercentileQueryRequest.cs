@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// AdAnalyticsPercentileQueryRequest
     /// </summary>
-
     public class AdAnalyticsPercentileQueryRequest : AdAnalyticsQueryRequest
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "percentile")]
         public long? Percentile { get; set; }
     }
-
 }

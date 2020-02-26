@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.Type
         public TypeApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ITypeApiClient>();
-
         }
 
         /// <summary>
@@ -22,24 +21,20 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.Type
         /// </summary>
         public static BitmovinApiBuilder<TypeApi> Builder => new BitmovinApiBuilder<TypeApi>();
 
-        
         /// <summary>
         /// Get Output Type
         /// </summary>
-        /// <param name="outputId">Id of the wanted output</param>
+        /// <param name="outputId">Id of the wanted output (required)</param>
         public async Task<Models.OutputTypeResponse> GetAsync(string outputId)
         {
             return await _apiClient.GetAsync(outputId);
         }
-        
+
         internal interface ITypeApiClient
         {
-            
             [Get("/encoding/outputs/{output_id}/type")]
             [AllowAnyStatusCode]
             Task<Models.OutputTypeResponse> GetAsync([Path("output_id")] string outputId);
-            
         }
-        
     }
 }

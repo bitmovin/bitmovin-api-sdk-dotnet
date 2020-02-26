@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// AnalyticsImpressionsQuery
     /// </summary>
-
     public class AnalyticsImpressionsQuery : AnalyticsQueryTimeframe
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "licenseKey")]
         public string LicenseKey { get; set; }
-        
+
         /// <summary>
         /// Filters
         /// </summary>
         [JsonProperty(PropertyName = "filters")]
         public List<AnalyticsAbstractFilter> Filters { get; set; } = new List<AnalyticsAbstractFilter>();
     }
-
 }

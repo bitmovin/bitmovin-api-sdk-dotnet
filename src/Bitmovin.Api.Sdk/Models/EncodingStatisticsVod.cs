@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// EncodingStatisticsVod
     /// </summary>
-
     public class EncodingStatisticsVod : EncodingStatistics
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "timeEnqueued")]
         public long? TimeEnqueued { get; set; }
-        
+
         /// <summary>
         /// The realtime factor. (required)
         /// </summary>
         [JsonProperty(PropertyName = "realTimeFactor")]
         public double? RealTimeFactor { get; set; }
     }
-
 }

@@ -18,7 +18,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs
         public ProgressiveTsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IProgressiveTsApiClient>();
-
             Customdata = new CustomdataApi(apiClientFactory);
             Information = new InformationApi(apiClientFactory);
             Id3 = new Id3Api(apiClientFactory);
@@ -30,45 +29,45 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs
         /// </summary>
         public static BitmovinApiBuilder<ProgressiveTsApi> Builder => new BitmovinApiBuilder<ProgressiveTsApi>();
 
-        public CustomdataApi Customdata { get; private set; }
-        public InformationApi Information { get; private set; }
-        public Id3Api Id3 { get; private set; }
-        public DrmApi Drm { get; private set; }
-        
+        public CustomdataApi Customdata { get; }
+        public InformationApi Information { get; }
+        public Id3Api Id3 { get; }
+        public DrmApi Drm { get; }
+
         /// <summary>
-        /// Add Progressive TS Muxing
+        /// Add Progressive TS muxing
         /// </summary>
-        /// <param name="encodingId">ID of the encoding.</param>
-        /// <param name="progressiveTsMuxing">The request payload</param>
+        /// <param name="encodingId">ID of the encoding. (required)</param>
+        /// <param name="progressiveTsMuxing">The Progressive TS muxing to be created</param>
         public async Task<Models.ProgressiveTsMuxing> CreateAsync(string encodingId, Models.ProgressiveTsMuxing progressiveTsMuxing)
         {
             return await _apiClient.CreateAsync(encodingId, progressiveTsMuxing);
         }
-        
+
         /// <summary>
-        /// Delete Progressive TS Muxing
+        /// Delete Progressive TS muxing
         /// </summary>
-        /// <param name="encodingId">ID of the Encoding.</param>
-        /// <param name="muxingId">ID of the Progressive TS muxing</param>
+        /// <param name="encodingId">ID of the Encoding. (required)</param>
+        /// <param name="muxingId">ID of the Progressive TS muxing (required)</param>
         public async Task<Models.BitmovinResponse> DeleteAsync(string encodingId, string muxingId)
         {
             return await _apiClient.DeleteAsync(encodingId, muxingId);
         }
-        
+
         /// <summary>
-        /// Progressive TS Muxing Details
+        /// Progressive TS muxing details
         /// </summary>
-        /// <param name="encodingId">ID of the Encoding.</param>
-        /// <param name="muxingId">ID of the Progressive TS Muxing</param>
+        /// <param name="encodingId">ID of the Encoding. (required)</param>
+        /// <param name="muxingId">ID of the Progressive TS muxing (required)</param>
         public async Task<Models.ProgressiveTsMuxing> GetAsync(string encodingId, string muxingId)
         {
             return await _apiClient.GetAsync(encodingId, muxingId);
         }
-        
+
         /// <summary>
-        /// List Progressive TS Muxings
+        /// List Progressive TS muxings
         /// </summary>
-        /// <param name="encodingId">ID of the Encoding.</param>
+        /// <param name="encodingId">ID of the Encoding. (required)</param>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>
         public async Task<Models.PaginationResponse<Models.ProgressiveTsMuxing>> ListAsync(string encodingId, params Func<ListQueryParams, ListQueryParams>[] queryParams)
         {
@@ -81,39 +80,37 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs
 
             return await _apiClient.ListAsync(encodingId, q);
         }
-        
+
         internal interface IProgressiveTsApiClient
         {
-            
             [Post("/encoding/encodings/{encoding_id}/muxings/progressive-ts")]
             [AllowAnyStatusCode]
             Task<Models.ProgressiveTsMuxing> CreateAsync([Path("encoding_id")] string encodingId, [Body] Models.ProgressiveTsMuxing progressiveTsMuxing);
-            
+
             [Delete("/encoding/encodings/{encoding_id}/muxings/progressive-ts/{muxing_id}")]
             [AllowAnyStatusCode]
             Task<Models.BitmovinResponse> DeleteAsync([Path("encoding_id")] string encodingId, [Path("muxing_id")] string muxingId);
-            
+
             [Get("/encoding/encodings/{encoding_id}/muxings/progressive-ts/{muxing_id}")]
             [AllowAnyStatusCode]
             Task<Models.ProgressiveTsMuxing> GetAsync([Path("encoding_id")] string encodingId, [Path("muxing_id")] string muxingId);
-            
+
             [Get("/encoding/encodings/{encoding_id}/muxings/progressive-ts")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.ProgressiveTsMuxing>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap] IDictionary<String, Object> queryParams);
-            
         }
-        
+
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>
             /// Index of the first item to return, starting at 0. Default is 0
             /// </summary>
-            public ListQueryParams Offset(int? Offset) => SetQueryParam("offset", Offset);
+            public ListQueryParams Offset(int? offset) => SetQueryParam("offset", offset);
 
             /// <summary>
             /// Maximum number of items to return. Default is 25, maximum is 100
             /// </summary>
-            public ListQueryParams Limit(int? Limit) => SetQueryParam("limit", Limit);
+            public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
 
             private ListQueryParams SetQueryParam<T>(string key, T value)
             {

@@ -11,9 +11,8 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// CustomPlayerBuildDownload
+    /// Custom player download information
     /// </summary>
-
     public class CustomPlayerBuildDownload
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "downloadLink")]
         public string DownloadLink { get; set; }
-        
+
         /// <summary>
         /// Until this date the download link is valid and can be downloaded. (required)
         /// </summary>
         [JsonProperty(PropertyName = "expiresAt")]
         public DateTime? ExpiresAt { get; set; }
     }
-
 }

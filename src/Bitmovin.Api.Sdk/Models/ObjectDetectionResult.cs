@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// ObjectDetectionResult
     /// </summary>
-
     public class ObjectDetectionResult : BitmovinResponse
     {
         /// <summary>
@@ -21,24 +20,23 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "detectedObject")]
         public string DetectedObject { get; set; }
-        
+
         /// <summary>
         /// Time in seconds where the object was detected in the video
         /// </summary>
         [JsonProperty(PropertyName = "timestamp")]
         public double? Timestamp { get; set; }
-        
+
         /// <summary>
         /// A number between 0 and 1 indicating the confidence of the detection
         /// </summary>
         [JsonProperty(PropertyName = "score")]
         public double? Score { get; set; }
-        
+
         /// <summary>
         /// A box indicating the position and size of the detected object within the frame
         /// </summary>
         [JsonProperty(PropertyName = "boundingBox")]
         public ObjectDetectionBoundingBox BoundingBox { get; set; }
     }
-
 }

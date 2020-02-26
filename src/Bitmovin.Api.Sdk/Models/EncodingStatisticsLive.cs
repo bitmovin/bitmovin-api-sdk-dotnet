@@ -13,9 +13,7 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// EncodingStatisticsLive
     /// </summary>
-
     public class EncodingStatisticsLive : EncodingStatistics
     {
     }
-
 }

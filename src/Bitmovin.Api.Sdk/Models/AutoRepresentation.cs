@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// AutoRepresentation
     /// </summary>
-
     public class AutoRepresentation
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "adoptConfigurationThreshold")]
         public double? AdoptConfigurationThreshold { get; set; }
     }
-
 }

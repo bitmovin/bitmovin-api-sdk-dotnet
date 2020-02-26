@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// Period
     /// </summary>
-
     public class Period : BitmovinResponse
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "start")]
         public double? Start { get; set; }
-        
+
         /// <summary>
         /// Duration in seconds
         /// </summary>
         [JsonProperty(PropertyName = "duration")]
         public double? Duration { get; set; }
     }
-
 }

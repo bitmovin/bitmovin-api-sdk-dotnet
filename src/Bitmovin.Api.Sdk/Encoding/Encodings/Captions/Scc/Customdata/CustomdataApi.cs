@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Captions.Scc.Customdata
         public CustomdataApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ICustomdataApiClient>();
-
         }
 
         /// <summary>
@@ -22,25 +21,21 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Captions.Scc.Customdata
         /// </summary>
         public static BitmovinApiBuilder<CustomdataApi> Builder => new BitmovinApiBuilder<CustomdataApi>();
 
-        
         /// <summary>
         /// Convert SCC captions Custom Data
         /// </summary>
-        /// <param name="encodingId">Id of the encoding.</param>
-        /// <param name="captionsId">Id of the caption.</param>
+        /// <param name="encodingId">Id of the encoding. (required)</param>
+        /// <param name="captionsId">Id of the caption. (required)</param>
         public async Task<Models.CustomData> GetAsync(string encodingId, string captionsId)
         {
             return await _apiClient.GetAsync(encodingId, captionsId);
         }
-        
+
         internal interface ICustomdataApiClient
         {
-            
             [Get("/encoding/encodings/{encoding_id}/captions/scc/{captions_id}/customData")]
             [AllowAnyStatusCode]
             Task<Models.CustomData> GetAsync([Path("encoding_id")] string encodingId, [Path("captions_id")] string captionsId);
-            
         }
-        
     }
 }

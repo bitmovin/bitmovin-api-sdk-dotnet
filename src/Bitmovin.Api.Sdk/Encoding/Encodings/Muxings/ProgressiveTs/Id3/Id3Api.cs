@@ -17,7 +17,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Id3
         public Id3Api(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IId3ApiClient>();
-
             Raw = new RawApi(apiClientFactory);
             FrameId = new FrameIdApi(apiClientFactory);
             PlainText = new PlainTextApi(apiClientFactory);
@@ -28,15 +27,15 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Id3
         /// </summary>
         public static BitmovinApiBuilder<Id3Api> Builder => new BitmovinApiBuilder<Id3Api>();
 
-        public RawApi Raw { get; private set; }
-        public FrameIdApi FrameId { get; private set; }
-        public PlainTextApi PlainText { get; private set; }
-        
+        public RawApi Raw { get; }
+        public FrameIdApi FrameId { get; }
+        public PlainTextApi PlainText { get; }
+
         /// <summary>
-        /// List all ID3 Tags of Progressive TS Muxing
+        /// List all ID3 Tags of Progressive TS muxing
         /// </summary>
-        /// <param name="encodingId">ID of the Encoding.</param>
-        /// <param name="muxingId">ID of the Progressive TS Muxing</param>
+        /// <param name="encodingId">ID of the Encoding. (required)</param>
+        /// <param name="muxingId">ID of the Progressive TS muxing (required)</param>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>
         public async Task<Models.PaginationResponse<Models.Id3Tag>> ListAsync(string encodingId, string muxingId, params Func<ListQueryParams, ListQueryParams>[] queryParams)
         {
@@ -49,27 +48,25 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Id3
 
             return await _apiClient.ListAsync(encodingId, muxingId, q);
         }
-        
+
         internal interface IId3ApiClient
         {
-            
             [Get("/encoding/encodings/{encoding_id}/muxings/progressive-ts/{muxing_id}/id3")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.Id3Tag>> ListAsync([Path("encoding_id")] string encodingId, [Path("muxing_id")] string muxingId, [QueryMap] IDictionary<String, Object> queryParams);
-            
         }
-        
+
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>
             /// Index of the first item to return, starting at 0. Default is 0
             /// </summary>
-            public ListQueryParams Offset(int? Offset) => SetQueryParam("offset", Offset);
+            public ListQueryParams Offset(int? offset) => SetQueryParam("offset", offset);
 
             /// <summary>
             /// Maximum number of items to return. Default is 25, maximum is 100
             /// </summary>
-            public ListQueryParams Limit(int? Limit) => SetQueryParam("limit", Limit);
+            public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
 
             private ListQueryParams SetQueryParam<T>(string key, T value)
             {

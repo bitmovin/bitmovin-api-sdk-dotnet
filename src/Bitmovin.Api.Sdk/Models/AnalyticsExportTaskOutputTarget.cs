@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// AnalyticsExportTaskOutputTarget
     /// </summary>
-
     public class AnalyticsExportTaskOutputTarget
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "outputPath")]
         public string OutputPath { get; set; }
-        
+
         /// <summary>
         /// Id of the output that should be used (required)
         /// </summary>
         [JsonProperty(PropertyName = "outputId")]
         public string OutputId { get; set; }
     }
-
 }

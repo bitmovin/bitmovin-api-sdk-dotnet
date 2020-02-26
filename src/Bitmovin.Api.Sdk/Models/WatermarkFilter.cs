@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// WatermarkFilter
     /// </summary>
-
     public class WatermarkFilter : Filter
     {
         [JsonProperty(PropertyName = "type")]
@@ -24,36 +23,35 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "image")]
         public string Image { get; set; }
-        
+
         /// <summary>
         /// Distance from the left edge of the input video to the left edge of the watermark image. May not be set if &#39;right&#39; is set.
         /// </summary>
         [JsonProperty(PropertyName = "left")]
         public int? Left { get; set; }
-        
+
         /// <summary>
         /// Distance from the right edge of the input video to the right edge of the watermark image . May not be set if &#39;left&#39; is set.
         /// </summary>
         [JsonProperty(PropertyName = "right")]
         public int? Right { get; set; }
-        
+
         /// <summary>
         /// Distance from the top edge of the input video to the top edge of the watermark image. May not be set if &#39;bottom&#39; is set.
         /// </summary>
         [JsonProperty(PropertyName = "top")]
         public int? Top { get; set; }
-        
+
         /// <summary>
         /// Distance from the bottom edge of the input video to the bottom edge of the watermark image. May not be set if &#39;top&#39; is set.
         /// </summary>
         [JsonProperty(PropertyName = "bottom")]
         public int? Bottom { get; set; }
-        
+
         /// <summary>
         /// Unit
         /// </summary>
         [JsonProperty(PropertyName = "unit")]
         public PositionUnit? Unit { get; set; }
     }
-
 }

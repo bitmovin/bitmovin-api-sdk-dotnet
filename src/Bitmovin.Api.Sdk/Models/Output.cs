@@ -34,5 +34,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "acl")]
         public List<AclEntry> Acl { get; set; } = new List<AclEntry>();
     }
-
 }

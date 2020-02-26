@@ -15,7 +15,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.MachineLearning
         /// </summary>
         public static BitmovinApiBuilder<MachineLearningApi> Builder => new BitmovinApiBuilder<MachineLearningApi>();
 
-        public ObjectDetectionApi ObjectDetection { get; private set; }
-
+        public ObjectDetectionApi ObjectDetection { get; }
     }
 }

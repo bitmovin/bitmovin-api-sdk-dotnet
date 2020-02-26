@@ -29,7 +29,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters
         public FiltersApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IFiltersApiClient>();
-
             Conform = new ConformApi(apiClientFactory);
             Watermark = new WatermarkApi(apiClientFactory);
             AudioVolume = new AudioVolumeApi(apiClientFactory);
@@ -52,22 +51,22 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters
         /// </summary>
         public static BitmovinApiBuilder<FiltersApi> Builder => new BitmovinApiBuilder<FiltersApi>();
 
-        public ConformApi Conform { get; private set; }
-        public WatermarkApi Watermark { get; private set; }
-        public AudioVolumeApi AudioVolume { get; private set; }
-        public EnhancedWatermarkApi EnhancedWatermark { get; private set; }
-        public CropApi Crop { get; private set; }
-        public RotateApi Rotate { get; private set; }
-        public DeinterlaceApi Deinterlace { get; private set; }
-        public AudioMixApi AudioMix { get; private set; }
-        public DenoiseHqdn3dApi DenoiseHqdn3d { get; private set; }
-        public EbuR128SinglePassApi EbuR128SinglePass { get; private set; }
-        public TextApi Text { get; private set; }
-        public InterlaceApi Interlace { get; private set; }
-        public UnsharpApi Unsharp { get; private set; }
-        public ScaleApi Scale { get; private set; }
-        public TypeApi Type { get; private set; }
-        
+        public ConformApi Conform { get; }
+        public WatermarkApi Watermark { get; }
+        public AudioVolumeApi AudioVolume { get; }
+        public EnhancedWatermarkApi EnhancedWatermark { get; }
+        public CropApi Crop { get; }
+        public RotateApi Rotate { get; }
+        public DeinterlaceApi Deinterlace { get; }
+        public AudioMixApi AudioMix { get; }
+        public DenoiseHqdn3dApi DenoiseHqdn3d { get; }
+        public EbuR128SinglePassApi EbuR128SinglePass { get; }
+        public TextApi Text { get; }
+        public InterlaceApi Interlace { get; }
+        public UnsharpApi Unsharp { get; }
+        public ScaleApi Scale { get; }
+        public TypeApi Type { get; }
+
         /// <summary>
         /// List all Filters
         /// </summary>
@@ -83,32 +82,30 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters
 
             return await _apiClient.ListAsync(q);
         }
-        
+
         internal interface IFiltersApiClient
         {
-            
             [Get("/encoding/filters")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.Filter>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
-            
         }
-        
+
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>
             /// Index of the first item to return, starting at 0. Default is 0
             /// </summary>
-            public ListQueryParams Offset(int? Offset) => SetQueryParam("offset", Offset);
+            public ListQueryParams Offset(int? offset) => SetQueryParam("offset", offset);
 
             /// <summary>
             /// Maximum number of items to return. Default is 25, maximum is 100
             /// </summary>
-            public ListQueryParams Limit(int? Limit) => SetQueryParam("limit", Limit);
+            public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
 
             /// <summary>
             /// Filter filters by name
             /// </summary>
-            public ListQueryParams Name(string Name) => SetQueryParam("name", Name);
+            public ListQueryParams Name(string name) => SetQueryParam("name", name);
 
             private ListQueryParams SetQueryParam<T>(string key, T value)
             {

@@ -33,5 +33,4 @@ namespace Bitmovin.Api.Sdk.Models
     public class CodecConfiguration : BitmovinResource
     {
     }
-
 }

@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// AnalyticsQueryTimeframe
     /// </summary>
-
     public class AnalyticsQueryTimeframe
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "start")]
         public DateTime? Start { get; set; }
-        
+
         /// <summary>
         /// End of timeframe which is queried in UTC format.
         /// </summary>
         [JsonProperty(PropertyName = "end")]
         public DateTime? End { get; set; }
     }
-
 }

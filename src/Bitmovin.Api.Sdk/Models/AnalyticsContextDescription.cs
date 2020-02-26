@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// AnalyticsContextDescription
     /// </summary>
-
     public class AnalyticsContextDescription
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "label")]
         public string Label { get; set; }
-        
+
         /// <summary>
         /// Description
         /// </summary>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
     }
-
 }

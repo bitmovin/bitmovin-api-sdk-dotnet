@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// PlaintextId3Tag
     /// </summary>
-
     public class PlaintextId3Tag : Id3Tag
     {
         [JsonProperty(PropertyName = "type")]
@@ -24,12 +23,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "text")]
         public string Text { get; set; }
-        
+
         /// <summary>
         /// 4 character long Frame ID (required)
         /// </summary>
         [JsonProperty(PropertyName = "frameId")]
         public string FrameId { get; set; }
     }
-
 }

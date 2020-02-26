@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// ServiceTaskStatus
     /// </summary>
-
     public class ServiceTaskStatus : BitmovinResponse
     {
         /// <summary>
@@ -21,66 +20,65 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "status")]
         public Status? Status { get; set; }
-        
+
         /// <summary>
         /// Estimated ETA in seconds
         /// </summary>
         [JsonProperty(PropertyName = "eta")]
         public double? Eta { get; set; }
-        
+
         /// <summary>
         /// Progress in percent
         /// </summary>
         [JsonProperty(PropertyName = "progress")]
         public int? Progress { get; set; }
-        
+
         /// <summary>
         /// List of subtasks
         /// </summary>
         [JsonProperty(PropertyName = "subtasks")]
         public List<Subtask> Subtasks { get; set; } = new List<Subtask>();
-        
+
         /// <summary>
         /// Task specific messages
         /// </summary>
         [JsonProperty(PropertyName = "messages")]
         public List<Message> Messages { get; set; } = new List<Message>();
-        
+
         /// <summary>
         /// Timestamp when the task was created, formatted in UTC: YYYY-MM-DDThh:mm:ssZ
         /// </summary>
         [JsonProperty(PropertyName = "createdAt")]
         public DateTime? CreatedAt { get; set; }
-        
+
         /// <summary>
         /// Timestamp when the task status changed to \&quot;QUEUED\&quot;, formatted in UTC: YYYY-MM-DDThh:mm:ssZ
         /// </summary>
         [JsonProperty(PropertyName = "queuedAt")]
         public DateTime? QueuedAt { get; set; }
-        
+
         /// <summary>
         /// Timestamp when the task status changed to to \&quot;RUNNING\&quot;, formatted in UTC: YYYY-MM-DDThh:mm:ssZ
         /// </summary>
         [JsonProperty(PropertyName = "runningAt")]
         public DateTime? RunningAt { get; set; }
-        
+
         /// <summary>
         /// Timestamp when the task status changed to \&quot;FINISHED\&quot;, formatted in UTC: YYYY-MM-DDThh:mm:ssZ
         /// </summary>
         [JsonProperty(PropertyName = "finishedAt")]
         public DateTime? FinishedAt { get; set; }
-        
+
         /// <summary>
         /// Timestamp when the task status changed to \&quot;ERROR\&quot;, formatted in UTC: YYYY-MM-DDThh:mm:ssZ
         /// </summary>
         [JsonProperty(PropertyName = "errorAt")]
         public DateTime? ErrorAt { get; set; }
-        
+
         /// <summary>
         /// Additional optional error details
         /// </summary>
         [JsonProperty(PropertyName = "error")]
         public ErrorDetails Error { get; set; }
     }
-
 }

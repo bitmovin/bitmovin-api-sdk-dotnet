@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Player.CustomBuilds.Web.Download
         public DownloadApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IDownloadApiClient>();
-
         }
 
         /// <summary>
@@ -22,24 +21,20 @@ namespace Bitmovin.Api.Sdk.Player.CustomBuilds.Web.Download
         /// </summary>
         public static BitmovinApiBuilder<DownloadApi> Builder => new BitmovinApiBuilder<DownloadApi>();
 
-        
         /// <summary>
         /// Custom Web Player Build Download Link
         /// </summary>
-        /// <param name="customBuildId">Id of the custom player build</param>
+        /// <param name="customBuildId">Id of the custom player build (required)</param>
         public async Task<Models.CustomPlayerBuildDownload> GetAsync(string customBuildId)
         {
             return await _apiClient.GetAsync(customBuildId);
         }
-        
+
         internal interface IDownloadApiClient
         {
-            
             [Get("/player/custom-builds/web/{custom_build_id}/download")]
             [AllowAnyStatusCode]
             Task<Models.CustomPlayerBuildDownload> GetAsync([Path("custom_build_id")] string customBuildId);
-            
         }
-        
     }
 }

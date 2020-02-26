@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Analytics.Metrics.MaxConcurrentviewers
         public MaxConcurrentviewersApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IMaxConcurrentviewersApiClient>();
-
         }
 
         /// <summary>
@@ -22,24 +21,20 @@ namespace Bitmovin.Api.Sdk.Analytics.Metrics.MaxConcurrentviewers
         /// </summary>
         public static BitmovinApiBuilder<MaxConcurrentviewersApi> Builder => new BitmovinApiBuilder<MaxConcurrentviewersApi>();
 
-        
         /// <summary>
         /// Get metrics data
         /// </summary>
-        /// <param name="analyticsMetricsQueryRequest">The request payload</param>
+        /// <param name="analyticsMetricsQueryRequest">Analytics metrics query object</param>
         public async Task<Models.AnalyticsMaxConcurrentViewersResponse> CreateAsync(Models.AnalyticsMetricsQueryRequest analyticsMetricsQueryRequest)
         {
             return await _apiClient.CreateAsync(analyticsMetricsQueryRequest);
         }
-        
+
         internal interface IMaxConcurrentviewersApiClient
         {
-            
             [Post("/analytics/metrics/max-concurrentviewers")]
             [AllowAnyStatusCode]
             Task<Models.AnalyticsMaxConcurrentViewersResponse> CreateAsync([Body] Models.AnalyticsMetricsQueryRequest analyticsMetricsQueryRequest);
-            
         }
-        
     }
 }

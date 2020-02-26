@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// DailyStatisticsPerLabel
     /// </summary>
-
     public class DailyStatisticsPerLabel
     {
         /// <summary>
@@ -21,12 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "date")]
         public DateTime? Date { get; set; }
-        
+
         /// <summary>
         /// List of labels and their aggregated statistics (required)
         /// </summary>
         [JsonProperty(PropertyName = "labels")]
         public List<DailyStatistics> Labels { get; set; } = new List<DailyStatistics>();
     }
-
 }

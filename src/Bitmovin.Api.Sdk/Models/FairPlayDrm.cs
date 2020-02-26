@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// FairPlayDrm
     /// </summary>
-
     public class FairPlayDrm : Drm
     {
         [JsonProperty(PropertyName = "type")]
@@ -24,18 +23,17 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "key")]
         public string Key { get; set; }
-        
+
         /// <summary>
         /// 16 byte initialization vector (required)
         /// </summary>
         [JsonProperty(PropertyName = "iv")]
         public string Iv { get; set; }
-        
+
         /// <summary>
         /// Url of the licensing server
         /// </summary>
         [JsonProperty(PropertyName = "uri")]
         public string Uri { get; set; }
     }
-
 }

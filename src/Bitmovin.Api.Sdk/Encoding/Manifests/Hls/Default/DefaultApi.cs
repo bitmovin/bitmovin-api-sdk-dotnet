@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Default
         public DefaultApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IDefaultApiClient>();
-
         }
 
         /// <summary>
@@ -22,24 +21,20 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Default
         /// </summary>
         public static BitmovinApiBuilder<DefaultApi> Builder => new BitmovinApiBuilder<DefaultApi>();
 
-        
         /// <summary>
         /// Create HLS Manifest Default
         /// </summary>
-        /// <param name="hlsManifestDefault">The request payload</param>
+        /// <param name="hlsManifestDefault">The HLS Manifest to be created</param>
         public async Task<Models.HlsManifestDefault> CreateAsync(Models.HlsManifestDefault hlsManifestDefault)
         {
             return await _apiClient.CreateAsync(hlsManifestDefault);
         }
-        
+
         internal interface IDefaultApiClient
         {
-            
             [Post("/encoding/manifests/hls/default")]
             [AllowAnyStatusCode]
             Task<Models.HlsManifestDefault> CreateAsync([Body] Models.HlsManifestDefault hlsManifestDefault);
-            
         }
-        
     }
 }

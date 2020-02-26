@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// DomainList
     /// </summary>
-
     public class DomainList
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "domains")]
         public List<Domain> Domains { get; set; } = new List<Domain>();
     }
-
 }

@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// SmoothManifestContentProtection
     /// </summary>
-
     public class SmoothManifestContentProtection : BitmovinResource
     {
         /// <summary>
@@ -21,18 +20,17 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "encodingId")]
         public string EncodingId { get; set; }
-        
+
         /// <summary>
         /// Id of the muxing. (required)
         /// </summary>
         [JsonProperty(PropertyName = "muxingId")]
         public string MuxingId { get; set; }
-        
+
         /// <summary>
         /// Id of the drm. (required)
         /// </summary>
         [JsonProperty(PropertyName = "drmId")]
         public string DrmId { get; set; }
     }
-
 }

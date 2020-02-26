@@ -17,7 +17,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings
         public EncodingsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IEncodingsApiClient>();
-
             Live = new LiveApi(apiClientFactory);
             Vod = new VodApi(apiClientFactory);
             LiveStatistics = new LiveStatisticsApi(apiClientFactory);
@@ -28,27 +27,24 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings
         /// </summary>
         public static BitmovinApiBuilder<EncodingsApi> Builder => new BitmovinApiBuilder<EncodingsApi>();
 
-        public LiveApi Live { get; private set; }
-        public VodApi Vod { get; private set; }
-        public LiveStatisticsApi LiveStatistics { get; private set; }
-        
+        public LiveApi Live { get; }
+        public VodApi Vod { get; }
+        public LiveStatisticsApi LiveStatistics { get; }
+
         /// <summary>
         /// Get Statistics from an Encoding
         /// </summary>
-        /// <param name="encodingId">Id of the encoding</param>
+        /// <param name="encodingId">Id of the encoding (required)</param>
         public async Task<Models.EncodingStats> GetAsync(string encodingId)
         {
             return await _apiClient.GetAsync(encodingId);
         }
-        
+
         internal interface IEncodingsApiClient
         {
-            
             [Get("/encoding/statistics/encodings/{encoding_id}")]
             [AllowAnyStatusCode]
             Task<Models.EncodingStats> GetAsync([Path("encoding_id")] string encodingId);
-            
         }
-        
     }
 }

@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// Webhook
     /// </summary>
-
     public class Webhook : BitmovinResource
     {
         /// <summary>
@@ -21,30 +20,29 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "url")]
         public string Url { get; set; }
-        
+
         /// <summary>
         /// HTTP method used for the webhook
         /// </summary>
         [JsonProperty(PropertyName = "method")]
         public WebhookHttpMethod? Method { get; set; }
-        
+
         /// <summary>
         /// Whether to skip SSL certification verification or not
         /// </summary>
         [JsonProperty(PropertyName = "insecureSsl")]
         public bool? InsecureSsl { get; set; }
-        
+
         /// <summary>
         /// Encryption used for the webhook
         /// </summary>
         [JsonProperty(PropertyName = "encryption")]
         public WebhookEncryption Encryption { get; set; }
-        
+
         /// <summary>
         /// Signature used for the webhook
         /// </summary>
         [JsonProperty(PropertyName = "signature")]
         public WebhookSignature Signature { get; set; }
     }
-
 }

@@ -1,17 +1,9 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Runtime.Serialization;
-using JsonSubTypes;
-using Newtonsoft.Json;
-
-using Bitmovin.Api.Sdk.Common;
-using Bitmovin.Api.Sdk.Models;
 
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// Vp9ArnrType
+    /// altref noise reduction filter type
     /// </summary>
     public enum Vp9ArnrType
     {
@@ -20,19 +12,17 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [EnumMember(Value = "BACKWARD")]
         BACKWARD,
-        
+
         /// <summary>
         /// altref noise reduction filter type
         /// </summary>
         [EnumMember(Value = "FORWARD")]
         FORWARD,
-        
+
         /// <summary>
         /// altref noise reduction filter type
         /// </summary>
         [EnumMember(Value = "CENTERED")]
         CENTERED
-        
     }
-
 }

@@ -1,12 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Runtime.Serialization;
-using JsonSubTypes;
-using Newtonsoft.Json;
-
-using Bitmovin.Api.Sdk.Common;
-using Bitmovin.Api.Sdk.Models;
 
 namespace Bitmovin.Api.Sdk.Models
 {
@@ -20,13 +12,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [EnumMember(Value = "FAIL_ON_ERROR")]
         FAIL_ON_ERROR,
-        
+
         /// <summary>
         /// If a frame is undecodable, other frames will be duplicated to compensate for the lost frame. The encoding will not fail, but there will be warnings about which frames could not be decoded.
         /// </summary>
         [EnumMember(Value = "DUPLICATE_FRAMES")]
         DUPLICATE_FRAMES
-        
     }
-
 }

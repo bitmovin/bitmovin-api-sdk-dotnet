@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// AkamaiMslOutput
     /// </summary>
-
     public class AkamaiMslOutput : Output
     {
         [JsonProperty(PropertyName = "type")]
@@ -24,24 +23,23 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "streamId")]
         public int? StreamId { get; set; }
-        
+
         /// <summary>
         /// The Akamai event name (required)
         /// </summary>
         [JsonProperty(PropertyName = "eventName")]
         public string EventName { get; set; }
-        
+
         /// <summary>
         /// StreamFormat
         /// </summary>
         [JsonProperty(PropertyName = "streamFormat")]
         public AkamaiMslStreamFormat? StreamFormat { get; set; }
-        
+
         /// <summary>
         /// MslVersion
         /// </summary>
         [JsonProperty(PropertyName = "mslVersion")]
         public AkamaiMslVersion? MslVersion { get; set; }
     }
-
 }

@@ -15,7 +15,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Subtitles
         /// </summary>
         public static BitmovinApiBuilder<SubtitlesApi> Builder => new BitmovinApiBuilder<SubtitlesApi>();
 
-        public DvbTeletextApi DvbTeletext { get; private set; }
-
+        public DvbTeletextApi DvbTeletext { get; }
     }
 }

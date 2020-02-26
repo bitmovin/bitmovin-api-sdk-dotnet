@@ -13,9 +13,7 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// ObjectDetectionConfiguration
     /// </summary>
-
     public class ObjectDetectionConfiguration : BitmovinResource
     {
     }
-
 }

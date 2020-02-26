@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// ConformFilter
     /// </summary>
-
     public class ConformFilter : Filter
     {
         [JsonProperty(PropertyName = "type")]
@@ -25,5 +24,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "targetFps")]
         public double? TargetFps { get; set; }
     }
-
 }

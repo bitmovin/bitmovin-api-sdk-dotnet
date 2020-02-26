@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// AnalyticsInsightsOrganizationSettingsRequest
     /// </summary>
-
     public class AnalyticsInsightsOrganizationSettingsRequest
     {
         /// <summary>
@@ -22,5 +21,4 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "includeInInsights")]
         public bool? IncludeInInsights { get; set; }
     }
-
 }

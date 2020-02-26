@@ -13,7 +13,6 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// StreamDetails
     /// </summary>
-
     public class StreamDetails
     {
         /// <summary>
@@ -21,24 +20,23 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
-        
+
         /// <summary>
         /// Codec
         /// </summary>
         [JsonProperty(PropertyName = "codec")]
         public string Codec { get; set; }
-        
+
         /// <summary>
         /// Duration
         /// </summary>
         [JsonProperty(PropertyName = "duration")]
         public int? Duration { get; set; }
-        
+
         /// <summary>
         /// Position
         /// </summary>
         [JsonProperty(PropertyName = "position")]
         public int? Position { get; set; }
     }
-
 }

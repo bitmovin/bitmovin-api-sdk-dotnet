@@ -14,7 +14,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live.InsertableContent.Stop
         public StopApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IStopApiClient>();
-
         }
 
         /// <summary>
@@ -22,24 +21,20 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live.InsertableContent.Stop
         /// </summary>
         public static BitmovinApiBuilder<StopApi> Builder => new BitmovinApiBuilder<StopApi>();
 
-        
         /// <summary>
         /// Stops Currently Running Inserted Content
         /// </summary>
-        /// <param name="encodingId">Id of the encoding.</param>
+        /// <param name="encodingId">Id of the encoding. (required)</param>
         public async Task CreateAsync(string encodingId)
         {
             await _apiClient.CreateAsync(encodingId);
         }
-        
+
         internal interface IStopApiClient
         {
-            
             [Post("/encoding/encodings/{encoding_id}/live/insertable-content/stop")]
             [AllowAnyStatusCode]
             Task CreateAsync([Path("encoding_id")] string encodingId);
-            
         }
-        
     }
 }
