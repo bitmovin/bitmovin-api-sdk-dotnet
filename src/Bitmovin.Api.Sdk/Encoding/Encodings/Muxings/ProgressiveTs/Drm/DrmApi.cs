@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using RestEase;
 using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Drm.Fairplay;
+using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Drm.Aes;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Drm.Speke;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Drm
@@ -17,6 +18,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Drm
         {
             _apiClient = apiClientFactory.CreateClient<IDrmApiClient>();
             Fairplay = new FairplayApi(apiClientFactory);
+            Aes = new AesApi(apiClientFactory);
             Speke = new SpekeApi(apiClientFactory);
         }
 
@@ -26,6 +28,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Drm
         public static BitmovinApiBuilder<DrmApi> Builder => new BitmovinApiBuilder<DrmApi>();
 
         public FairplayApi Fairplay { get; }
+        public AesApi Aes { get; }
         public SpekeApi Speke { get; }
 
         /// <summary>

@@ -20,5 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "filePath")]
         public string FilePath { get; set; }
+
+        /// <summary>
+        /// The type of the dash representation
+        /// </summary>
+        [JsonProperty(PropertyName = "type")]
+        public DashOnDemandRepresentationType? Type { get; set; }
     }
 }
