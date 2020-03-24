@@ -1,6 +1,7 @@
 using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.Finished;
 using Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.Error;
+using Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.TransferError;
 
 namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings
 {
@@ -10,6 +11,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings
         {
             Finished = new FinishedApi(apiClientFactory);
             Error = new ErrorApi(apiClientFactory);
+            TransferError = new TransferErrorApi(apiClientFactory);
         }
 
         /// <summary>
@@ -19,5 +21,6 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings
 
         public FinishedApi Finished { get; }
         public ErrorApi Error { get; }
+        public TransferErrorApi TransferError { get; }
     }
 }

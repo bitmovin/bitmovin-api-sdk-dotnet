@@ -83,10 +83,10 @@
 <h3 id="nuget">Nuget</h3>
 <p>Add this dependency to your project:</p>
 <p>Package Manager</p>
-<pre><code class="lang-shell">Install-Package Bitmovin.Api.Sdk -Version 1.36.0-alpha.0
+<pre><code class="lang-shell">Install-Package Bitmovin.Api.Sdk -Version 1.37.0
 </code></pre>
 <p>.NET CLI</p>
-<pre><code class="lang-shell">dotnet add package Bitmovin.Api.Sdk --version 1.36.0-alpha.0
+<pre><code class="lang-shell">dotnet add package Bitmovin.Api.Sdk --version 1.37.0
 </code></pre>
 <h2 id="initialization">Initialization</h2>
 <pre><code class="lang-csharp">    using Bitmovin.Api;
@@ -96,6 +96,11 @@
         .WithLogger(new XunitLogger(output))
         .Build();  
 </code></pre>
+<h2 id="examples">Examples</h2>
+<p>You can find sample workflow scripts in the <a href="https://github.com/bitmovin/bitmovin-api-sdk-examples">Bitmovin API SDK examples</a> repository.</p>
+<h1 id="previous-api-client-legacy">Previous API Client (Legacy)</h1>
+<p><code>bitmovin-api-sdk-dotnet</code> is the latest Bitmovin API client for .NET Core 2.0+ and .NET Framework 4.6.1+. It guarantees 100% specification conformity at any given time and access to all features of the API as soon as they are released.</p>
+<p>However, if you need to use the previous version for legacy reasons, you can still find it at <a href="https://github.com/bitmovin/bitmovin-dotnet">bitmovin-dotnet</a>.</p>
 </article>
           </div>
           

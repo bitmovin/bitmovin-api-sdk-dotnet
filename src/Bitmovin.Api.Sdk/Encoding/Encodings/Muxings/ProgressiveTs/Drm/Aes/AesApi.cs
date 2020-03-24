@@ -30,7 +30,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Drm.Aes
         /// </summary>
         /// <param name="encodingId">Id of the encoding (required)</param>
         /// <param name="muxingId">Id of the Progressive TS muxing (required)</param>
-        /// <param name="aesEncryptionDrm">The AES encryption configuration to be created</param>
+        /// <param name="aesEncryptionDrm">The AES encryption configuration to be created. Note that for AES encryption in conjunction with Progressive TS muxing the &#39;iv&#39; must remain unset or be empty.</param>
         public async Task<Models.AesEncryptionDrm> CreateAsync(string encodingId, string muxingId, Models.AesEncryptionDrm aesEncryptionDrm)
         {
             return await _apiClient.CreateAsync(encodingId, muxingId, aesEncryptionDrm);

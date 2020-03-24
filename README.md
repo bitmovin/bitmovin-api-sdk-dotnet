@@ -29,13 +29,13 @@ Add this dependency to your project:
 
 Package Manager
 ```shell
-Install-Package Bitmovin.Api.Sdk -Version 1.36.0-alpha.0
+Install-Package Bitmovin.Api.Sdk -Version 1.37.0
 ```
 
 .NET CLI
 
 ```shell
-dotnet add package Bitmovin.Api.Sdk --version 1.36.0-alpha.0
+dotnet add package Bitmovin.Api.Sdk --version 1.37.0
 ```
 
 ## Initialization
@@ -48,3 +48,12 @@ dotnet add package Bitmovin.Api.Sdk --version 1.36.0-alpha.0
         .WithLogger(new XunitLogger(output))
         .Build();  
 ```
+
+## Examples
+You can find sample workflow scripts in the [Bitmovin API SDK examples](https://github.com/bitmovin/bitmovin-api-sdk-examples) repository.
+
+# Previous API Client (Legacy)
+
+`bitmovin-api-sdk-dotnet` is the latest Bitmovin API client for .NET Core 2.0+ and .NET Framework 4.6.1+. It guarantees 100% specification conformity at any given time and access to all features of the API as soon as they are released. 
+
+However, if you need to use the previous version for legacy reasons, you can still find it at [bitmovin-dotnet](https://github.com/bitmovin/bitmovin-dotnet).

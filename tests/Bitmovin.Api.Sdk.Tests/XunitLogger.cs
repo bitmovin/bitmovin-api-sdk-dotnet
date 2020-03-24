@@ -27,11 +27,10 @@ namespace Bitmovin.Api.Sdk.Tests
         public async Task LogResponse(HttpResponseMessage response)
         {
             _output.WriteLine("Response: " + response);
-            
-            
+
             if (response.Content != null)
             {
-                _output.WriteLine("Request Body: " + await response.Content.ReadAsStringAsync());
+                _output.WriteLine("Response Body: " + await response.Content.ReadAsStringAsync());
             }
         }
     }

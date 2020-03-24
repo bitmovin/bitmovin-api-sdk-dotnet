@@ -11,6 +11,7 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm.Fairplay;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm.Marlin;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm.Clearkey;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm.Cenc;
+using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm.Aes;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm.Speke;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm
@@ -29,6 +30,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm
             Marlin = new MarlinApi(apiClientFactory);
             Clearkey = new ClearkeyApi(apiClientFactory);
             Cenc = new CencApi(apiClientFactory);
+            Aes = new AesApi(apiClientFactory);
             Speke = new SpekeApi(apiClientFactory);
         }
 
@@ -44,6 +46,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm
         public MarlinApi Marlin { get; }
         public ClearkeyApi Clearkey { get; }
         public CencApi Cenc { get; }
+        public AesApi Aes { get; }
         public SpekeApi Speke { get; }
 
         /// <summary>
