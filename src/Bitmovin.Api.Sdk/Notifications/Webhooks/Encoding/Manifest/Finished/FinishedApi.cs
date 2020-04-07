@@ -24,8 +24,8 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Manifest.Finished
         /// <summary>
         /// Add Manifest Finished Successfully Webhook (All Manifests)
         /// </summary>
-        /// <param name="webhook">Add a new webhook notification if a manifest creation finished successfully</param>
-        public async Task<Models.PaginationResponse<Models.Webhook>> CreateAsync(Models.Webhook webhook)
+        /// <param name="webhook">Add a new webhook notification if a manifest creation finished successfully. **Note:** A maximum number of 5 webhooks is allowed</param>
+        public async Task<Models.Webhook> CreateAsync(Models.Webhook webhook)
         {
             return await _apiClient.CreateAsync(webhook);
         }
@@ -34,10 +34,19 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Manifest.Finished
         /// Add Manifest Finished Successfully Webhook Notification (Specific Manifest)
         /// </summary>
         /// <param name="manifestId">Id of the manifest resource (required)</param>
-        /// <param name="webhook">The webhook notifications object</param>
+        /// <param name="webhook">The webhook notifications object. **Note:** A maximum number of 5 webhooks is allowed</param>
         public async Task<Models.Webhook> CreateByManifestIdAsync(string manifestId, Models.Webhook webhook)
         {
             return await _apiClient.CreateByManifestIdAsync(manifestId, webhook);
+        }
+
+        /// <summary>
+        /// Delete Manifest Finished Webhook
+        /// </summary>
+        /// <param name="notificationId">Id of the webhook notification (required)</param>
+        public async Task<Models.BitmovinResponse> DeleteAsync(string notificationId)
+        {
+            return await _apiClient.DeleteAsync(notificationId);
         }
 
         /// <summary>
@@ -54,11 +63,15 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Manifest.Finished
         {
             [Post("/notifications/webhooks/encoding/manifest/finished")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.Webhook>> CreateAsync([Body] Models.Webhook webhook);
+            Task<Models.Webhook> CreateAsync([Body] Models.Webhook webhook);
 
             [Post("/notifications/webhooks/encoding/manifest/{manifest_id}/finished")]
             [AllowAnyStatusCode]
             Task<Models.Webhook> CreateByManifestIdAsync([Path("manifest_id")] string manifestId, [Body] Models.Webhook webhook);
+
+            [Delete("/notifications/webhooks/encoding/manifest/finished/{notification_id}")]
+            [AllowAnyStatusCode]
+            Task<Models.BitmovinResponse> DeleteAsync([Path("notification_id")] string notificationId);
 
             [Put("/notifications/webhooks/encoding/manifest/finished/{notification_id}")]
             [AllowAnyStatusCode]

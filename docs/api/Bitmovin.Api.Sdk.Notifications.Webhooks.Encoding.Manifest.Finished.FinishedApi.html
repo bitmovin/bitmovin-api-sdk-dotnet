@@ -193,7 +193,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;PaginationResponse&lt;Webhook&gt;&gt; CreateAsync(Webhook webhook)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;Webhook&gt; CreateAsync(Webhook webhook)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -208,7 +208,7 @@
       <tr>
         <td><a class="xref" href="Bitmovin.Api.Sdk.Models.Webhook.html">Webhook</a></td>
         <td><span class="parametername">webhook</span></td>
-        <td><p>Add a new webhook notification if a manifest creation finished successfully</p>
+        <td><p>Add a new webhook notification if a manifest creation finished successfully. <strong>Note:</strong> A maximum number of 5 webhooks is allowed</p>
 </td>
       </tr>
     </tbody>
@@ -223,7 +223,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Bitmovin.Api.Sdk.Models.PaginationResponse-1.html">PaginationResponse</a>&lt;<a class="xref" href="Bitmovin.Api.Sdk.Models.Webhook.html">Webhook</a>&gt;&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Bitmovin.Api.Sdk.Models.Webhook.html">Webhook</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -263,7 +263,7 @@
       <tr>
         <td><a class="xref" href="Bitmovin.Api.Sdk.Models.Webhook.html">Webhook</a></td>
         <td><span class="parametername">webhook</span></td>
-        <td><p>The webhook notifications object</p>
+        <td><p>The webhook notifications object. <strong>Note:</strong> A maximum number of 5 webhooks is allowed</p>
 </td>
       </tr>
     </tbody>
@@ -285,10 +285,59 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/bitmovin/bitmovin-api-sdk-dotnet/new/master/apiSpec/new?filename=Bitmovin_Api_Sdk_Notifications_Webhooks_Encoding_Manifest_Finished_FinishedApi_DeleteAsync_System_String_.md&amp;value=---%0Auid%3A%20Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Manifest.Finished.FinishedApi.DeleteAsync(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/bitmovin/bitmovin-api-sdk-dotnet/blob/master/src/Bitmovin.Api.Sdk/Notifications/Webhooks/Encoding/Manifest/Finished/FinishedApi.cs/#L47">View Source</a>
+  </span>
+  <a id="Bitmovin_Api_Sdk_Notifications_Webhooks_Encoding_Manifest_Finished_FinishedApi_DeleteAsync_" data-uid="Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Manifest.Finished.FinishedApi.DeleteAsync*"></a>
+  <h4 id="Bitmovin_Api_Sdk_Notifications_Webhooks_Encoding_Manifest_Finished_FinishedApi_DeleteAsync_System_String_" data-uid="Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Manifest.Finished.FinishedApi.DeleteAsync(System.String)">DeleteAsync(String)</h4>
+  <div class="markdown level1 summary"><p>Delete Manifest Finished Webhook</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;BitmovinResponse&gt; DeleteAsync(string notificationId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">notificationId</span></td>
+        <td><p>Id of the webhook notification (required)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Bitmovin.Api.Sdk.Models.BitmovinResponse.html">BitmovinResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/bitmovin/bitmovin-api-sdk-dotnet/new/master/apiSpec/new?filename=Bitmovin_Api_Sdk_Notifications_Webhooks_Encoding_Manifest_Finished_FinishedApi_UpdateAsync_System_String_Bitmovin_Api_Sdk_Models_Webhook_.md&amp;value=---%0Auid%3A%20Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Manifest.Finished.FinishedApi.UpdateAsync(System.String%2CBitmovin.Api.Sdk.Models.Webhook)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/bitmovin/bitmovin-api-sdk-dotnet/blob/master/src/Bitmovin.Api.Sdk/Notifications/Webhooks/Encoding/Manifest/Finished/FinishedApi.cs/#L48">View Source</a>
+    <a href="https://github.com/bitmovin/bitmovin-api-sdk-dotnet/blob/master/src/Bitmovin.Api.Sdk/Notifications/Webhooks/Encoding/Manifest/Finished/FinishedApi.cs/#L57">View Source</a>
   </span>
   <a id="Bitmovin_Api_Sdk_Notifications_Webhooks_Encoding_Manifest_Finished_FinishedApi_UpdateAsync_" data-uid="Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Manifest.Finished.FinishedApi.UpdateAsync*"></a>
   <h4 id="Bitmovin_Api_Sdk_Notifications_Webhooks_Encoding_Manifest_Finished_FinishedApi_UpdateAsync_System_String_Bitmovin_Api_Sdk_Models_Webhook_" data-uid="Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Manifest.Finished.FinishedApi.UpdateAsync(System.String,Bitmovin.Api.Sdk.Models.Webhook)">UpdateAsync(String, Webhook)</h4>

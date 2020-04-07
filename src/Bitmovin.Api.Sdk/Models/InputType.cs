@@ -119,6 +119,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// SRT
         /// </summary>
         [EnumMember(Value = "SRT")]
-        SRT
+        SRT,
+
+        /// <summary>
+        /// GCSSERVICEACCOUNT
+        /// </summary>
+        [EnumMember(Value = "GCS_SERVICE_ACCOUNT")]
+        GCSSERVICEACCOUNT
     }
 }

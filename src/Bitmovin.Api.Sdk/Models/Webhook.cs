@@ -44,5 +44,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "signature")]
         public WebhookSignature Signature { get; set; }
+
+        /// <summary>
+        /// The json schema of the data that is send as webhook payload
+        /// </summary>
+        [JsonProperty(PropertyName = "schema")]
+        public Object Schema { get; set; }
     }
 }

@@ -33,6 +33,7 @@ namespace Bitmovin.Api.Sdk.Models
     [JsonSubtypes.KnownSubType(typeof(UdpMulticastInput), "UDP_MULTICAST")]
     [JsonSubtypes.KnownSubType(typeof(ZixiInput), "ZIXI")]
     [JsonSubtypes.KnownSubType(typeof(SrtInput), "SRT")]
+    [JsonSubtypes.KnownSubType(typeof(GcsServiceAccountInput), "GCS_SERVICE_ACCOUNT")]
 
     public class Input : BitmovinResource
     {

@@ -40,6 +40,12 @@ namespace Bitmovin.Api.Sdk.Models
         public PsnrPerStreamMode? PsnrMode { get; set; }
 
         /// <summary>
+        /// Name of the preset configuration used for the codec configuration or \&quot;CUSTOM\&quot; if any preset values were overridden
+        /// </summary>
+        [JsonProperty(PropertyName = "preset")]
+        public string Preset { get; internal set; }
+
+        /// <summary>
         /// BillableMinutes
         /// </summary>
         [JsonProperty(PropertyName = "billableMinutes")]

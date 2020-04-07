@@ -71,6 +71,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// LIVEMEDIAINGEST
         /// </summary>
         [EnumMember(Value = "LIVE_MEDIA_INGEST")]
-        LIVEMEDIAINGEST
+        LIVEMEDIAINGEST,
+
+        /// <summary>
+        /// GCSSERVICEACCOUNT
+        /// </summary>
+        [EnumMember(Value = "GCS_SERVICE_ACCOUNT")]
+        GCSSERVICEACCOUNT
     }
 }

@@ -25,6 +25,6 @@ namespace Bitmovin.Api.Sdk.Models
         /// The key of the signature (required)
         /// </summary>
         [JsonProperty(PropertyName = "key")]
-        public string Key { get; internal set; }
+        public string Key { get; set; }
     }
 }

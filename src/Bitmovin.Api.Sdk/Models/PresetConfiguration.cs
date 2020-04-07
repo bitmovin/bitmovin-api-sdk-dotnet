@@ -56,6 +56,12 @@ namespace Bitmovin.Api.Sdk.Models
         VOD_HIGH_QUALITY,
 
         /// <summary>
+        /// VOD_QUALITY
+        /// </summary>
+        [EnumMember(Value = "VOD_QUALITY")]
+        VOD_QUALITY,
+
+        /// <summary>
         /// VOD_HIGH_SPEED
         /// </summary>
         [EnumMember(Value = "VOD_HIGH_SPEED")]

@@ -12,6 +12,7 @@ using Bitmovin.Api.Sdk.Encoding.Inputs.S3RoleBased;
 using Bitmovin.Api.Sdk.Encoding.Inputs.GenericS3;
 using Bitmovin.Api.Sdk.Encoding.Inputs.Local;
 using Bitmovin.Api.Sdk.Encoding.Inputs.Gcs;
+using Bitmovin.Api.Sdk.Encoding.Inputs.GcsServiceAccount;
 using Bitmovin.Api.Sdk.Encoding.Inputs.Azure;
 using Bitmovin.Api.Sdk.Encoding.Inputs.Ftp;
 using Bitmovin.Api.Sdk.Encoding.Inputs.Sftp;
@@ -42,6 +43,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs
             GenericS3 = new GenericS3Api(apiClientFactory);
             Local = new LocalApi(apiClientFactory);
             Gcs = new GcsApi(apiClientFactory);
+            GcsServiceAccount = new GcsServiceAccountApi(apiClientFactory);
             Azure = new AzureApi(apiClientFactory);
             Ftp = new FtpApi(apiClientFactory);
             Sftp = new SftpApi(apiClientFactory);
@@ -69,6 +71,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs
         public GenericS3Api GenericS3 { get; }
         public LocalApi Local { get; }
         public GcsApi Gcs { get; }
+        public GcsServiceAccountApi GcsServiceAccount { get; }
         public AzureApi Azure { get; }
         public FtpApi Ftp { get; }
         public SftpApi Sftp { get; }

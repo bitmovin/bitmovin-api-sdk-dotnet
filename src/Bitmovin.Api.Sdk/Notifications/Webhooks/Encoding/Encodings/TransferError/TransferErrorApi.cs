@@ -28,7 +28,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.TransferErr
         /// <summary>
         /// Add Encoding Transfer Error Webhook
         /// </summary>
-        /// <param name="webhook">The Encoding Transfer Error Webhook to be added</param>
+        /// <param name="webhook">The Encoding Transfer Error Webhook to be added. **Note:** A maximum number of 5 webhooks is allowed</param>
         public async Task<Models.Webhook> CreateAsync(Models.Webhook webhook)
         {
             return await _apiClient.CreateAsync(webhook);
@@ -38,7 +38,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.TransferErr
         /// Add Encoding Transfer Error Webhook for specific Encoding Resource
         /// </summary>
         /// <param name="encodingId">Id of the encoding (required)</param>
-        /// <param name="webhook">The Encoding Transfer Error Webhook to be added</param>
+        /// <param name="webhook">The Encoding Transfer Error Webhook to be added. **Note:** A maximum number of 5 webhooks is allowed</param>
         public async Task<Models.Webhook> CreateByEncodingIdAsync(string encodingId, Models.Webhook webhook)
         {
             return await _apiClient.CreateByEncodingIdAsync(encodingId, webhook);

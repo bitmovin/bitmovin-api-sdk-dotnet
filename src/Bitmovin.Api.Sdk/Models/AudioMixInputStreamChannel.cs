@@ -32,5 +32,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "outputChannelNumber")]
         public int? OutputChannelNumber { get; set; }
+
+        /// <summary>
+        /// List of source channels to be mixed
+        /// </summary>
+        [JsonProperty(PropertyName = "sourceChannels")]
+        public List<AudioMixInputStreamSourceChannel> SourceChannels { get; set; } = new List<AudioMixInputStreamSourceChannel>();
     }
 }
