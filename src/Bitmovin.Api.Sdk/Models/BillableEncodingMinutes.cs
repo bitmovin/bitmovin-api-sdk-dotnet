@@ -46,6 +46,12 @@ namespace Bitmovin.Api.Sdk.Models
         public string Preset { get; internal set; }
 
         /// <summary>
+        /// Indicates if the stream was part of a live encoding.
+        /// </summary>
+        [JsonProperty(PropertyName = "live")]
+        public bool? Live { get; internal set; }
+
+        /// <summary>
         /// BillableMinutes
         /// </summary>
         [JsonProperty(PropertyName = "billableMinutes")]

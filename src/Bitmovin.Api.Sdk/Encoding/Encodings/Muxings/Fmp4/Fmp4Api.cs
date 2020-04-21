@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using RestEase;
 using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Customdata;
+using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Information;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4
@@ -17,6 +18,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4
         {
             _apiClient = apiClientFactory.CreateClient<IFmp4ApiClient>();
             Customdata = new CustomdataApi(apiClientFactory);
+            Information = new InformationApi(apiClientFactory);
             Drm = new DrmApi(apiClientFactory);
         }
 
@@ -26,6 +28,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4
         public static BitmovinApiBuilder<Fmp4Api> Builder => new BitmovinApiBuilder<Fmp4Api>();
 
         public CustomdataApi Customdata { get; }
+        public InformationApi Information { get; }
         public DrmApi Drm { get; }
 
         /// <summary>
