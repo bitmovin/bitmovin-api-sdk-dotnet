@@ -13,8 +13,6 @@
   </p>
 </p>
 
-***Important! This is an alpha version, there may be breaking changes.***
-
 Using this API client requires an active account.
 
 > Don't have an account yet? [Sign up for a free Bitmovin trial plan](https://dashboard.bitmovin.com/signup)!
