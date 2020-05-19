@@ -19,7 +19,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// The id of the stream (required)
         /// </summary>
         [JsonProperty(PropertyName = "id")]
-        public long? Id { get; set; }
+        public string Id { get; set; }
 
         /// <summary>
         /// The media type of the stream (required)
