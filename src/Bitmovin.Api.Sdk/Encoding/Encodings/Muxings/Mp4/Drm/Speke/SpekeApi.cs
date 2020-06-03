@@ -26,7 +26,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Speke
         public CustomdataApi Customdata { get; }
 
         /// <summary>
-        /// Add SPEKE DRM key provider to MP4
+        /// Add SPEKE DRM key provider to an MP4 muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the MP4 muxing (required)</param>
@@ -37,7 +37,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Speke
         }
 
         /// <summary>
-        /// Delete SPEKE DRM from MP4
+        /// Delete SPEKE DRM from an MP4 muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the MP4 muxing (required)</param>
@@ -48,7 +48,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Speke
         }
 
         /// <summary>
-        /// SPEKE DRM Details of MP4
+        /// SPEKE DRM Details of an MP4 muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the MP4 muxing (required)</param>
@@ -59,7 +59,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Speke
         }
 
         /// <summary>
-        /// List SPEKE DRM of MP4
+        /// List SPEKE DRM of an MP4 muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the MP4 muxing (required)</param>

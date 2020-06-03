@@ -26,7 +26,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Clearkey
         public CustomdataApi Customdata { get; }
 
         /// <summary>
-        /// Add ClearKey DRM to MP4
+        /// Add ClearKey DRM to an MP4 muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the MP4 muxing. (required)</param>
@@ -37,7 +37,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Clearkey
         }
 
         /// <summary>
-        /// Delete ClearKey DRM from MP4
+        /// Delete ClearKey DRM from an MP4 muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the mp4. (required)</param>
@@ -48,7 +48,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Clearkey
         }
 
         /// <summary>
-        /// ClearKey DRM Details of MP4
+        /// ClearKey DRM Details of an MP4 muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the mp4. (required)</param>
@@ -59,7 +59,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Clearkey
         }
 
         /// <summary>
-        /// List ClearKey DRMs of MP4
+        /// List ClearKey DRMs of an MP4 muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the mp4. (required)</param>

@@ -26,7 +26,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Marlin
         public CustomdataApi Customdata { get; }
 
         /// <summary>
-        /// Add Marlin DRM to MP4
+        /// Add Marlin DRM to an MP4 muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the MP4 muxing. (required)</param>
@@ -37,7 +37,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Marlin
         }
 
         /// <summary>
-        /// Delete Marlin DRM from MP4
+        /// Delete Marlin DRM from an MP4 muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the mp4. (required)</param>
@@ -48,7 +48,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Marlin
         }
 
         /// <summary>
-        /// Marlin DRM Details of MP4
+        /// Marlin DRM Details of an MP4 muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the mp4. (required)</param>
@@ -59,7 +59,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Marlin
         }
 
         /// <summary>
-        /// List Marlin DRMs of MP4
+        /// List Marlin DRMs of an MP4 muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the mp4. (required)</param>

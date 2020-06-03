@@ -22,7 +22,7 @@ namespace Bitmovin.Api.Sdk.Models
         public long? Bitrate { get; set; }
 
         /// <summary>
-        /// Audio sampling rate Hz
+        /// Audio sampling rate in Hz
         /// </summary>
         [JsonProperty(PropertyName = "rate")]
         public double? Rate { get; set; }

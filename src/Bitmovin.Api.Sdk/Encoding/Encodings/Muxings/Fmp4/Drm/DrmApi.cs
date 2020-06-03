@@ -50,7 +50,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm
         public SpekeApi Speke { get; }
 
         /// <summary>
-        /// List all DRMs of FMP4 muxing
+        /// List all DRMs of an fMP4 muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the fMP4 muxing (required)</param>

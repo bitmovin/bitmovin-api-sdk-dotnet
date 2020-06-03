@@ -37,7 +37,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Drm.Speke
         }
 
         /// <summary>
-        /// Delete SPEKE DRM from Progressive TS
+        /// Delete SPEKE DRM from a Progressive TS muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the Progressive TS muxing (required)</param>
@@ -48,7 +48,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Drm.Speke
         }
 
         /// <summary>
-        /// SPEKE DRM Details of Progressive TS
+        /// SPEKE DRM Details of a Progressive TS muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the Progressive TS muxing (required)</param>
@@ -59,7 +59,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Drm.Speke
         }
 
         /// <summary>
-        /// List SPEKE DRM of Progressive TS
+        /// List SPEKE DRM of a Progressive TS muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the Progressive TS muxing (required)</param>

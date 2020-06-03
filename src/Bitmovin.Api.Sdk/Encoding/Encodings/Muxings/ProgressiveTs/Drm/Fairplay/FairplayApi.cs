@@ -26,10 +26,10 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Drm.Fairplay
         public CustomdataApi Customdata { get; }
 
         /// <summary>
-        /// Add FairPlay DRM to Progressive TS
+        /// Add FairPlay DRM to a Progressive TS muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
-        /// <param name="muxingId">Id of the progressive TS fragment. (required)</param>
+        /// <param name="muxingId">Id of the Progressive TS muxing. (required)</param>
         /// <param name="fairPlayDrm">The FairPlay DRM to be created</param>
         public async Task<Models.FairPlayDrm> CreateAsync(string encodingId, string muxingId, Models.FairPlayDrm fairPlayDrm)
         {
@@ -37,10 +37,10 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Drm.Fairplay
         }
 
         /// <summary>
-        /// Delete FairPlay DRM from Progressive TS
+        /// Delete FairPlay DRM from a Progressive TS muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
-        /// <param name="muxingId">Id of the progressive TS fragment. (required)</param>
+        /// <param name="muxingId">Id of the Progressive TS muxing. (required)</param>
         /// <param name="drmId">Id of the FairPlay DRM configuration. (required)</param>
         public async Task<Models.BitmovinResponse> DeleteAsync(string encodingId, string muxingId, string drmId)
         {
@@ -48,10 +48,10 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Drm.Fairplay
         }
 
         /// <summary>
-        /// FairPlay DRM Details of Progressive TS
+        /// FairPlay DRM Details of a Progressive TS
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
-        /// <param name="muxingId">Id of the progressive TS fragment. (required)</param>
+        /// <param name="muxingId">Id of the Progressive TS muxing. (required)</param>
         /// <param name="drmId">Id of the FairPlay DRM configuration. (required)</param>
         public async Task<Models.FairPlayDrm> GetAsync(string encodingId, string muxingId, string drmId)
         {
@@ -59,10 +59,10 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Drm.Fairplay
         }
 
         /// <summary>
-        /// List FairPlay DRMs of Progressive TS
+        /// List FairPlay DRMs of a Progressive TS muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
-        /// <param name="muxingId">Id of the progressive TS fragment. (required)</param>
+        /// <param name="muxingId">Id of the Progressive TS muxing. (required)</param>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>
         public async Task<Models.PaginationResponse<Models.FairPlayDrm>> ListAsync(string encodingId, string muxingId, params Func<ListQueryParams, ListQueryParams>[] queryParams)
         {

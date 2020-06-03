@@ -26,5 +26,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "outputs")]
         public List<EncodingOutput> Outputs { get; set; } = new List<EncodingOutput>();
+
+        /// <summary>
+        /// Current status
+        /// </summary>
+        [JsonProperty(PropertyName = "status")]
+        public Status? Status { get; set; }
     }
 }

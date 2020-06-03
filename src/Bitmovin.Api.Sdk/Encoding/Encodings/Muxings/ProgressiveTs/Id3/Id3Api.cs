@@ -32,7 +32,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Id3
         public PlainTextApi PlainText { get; }
 
         /// <summary>
-        /// List all ID3 Tags of Progressive TS muxing
+        /// List all ID3 Tags of a Progressive TS muxing
         /// </summary>
         /// <param name="encodingId">ID of the Encoding. (required)</param>
         /// <param name="muxingId">ID of the Progressive TS muxing (required)</param>

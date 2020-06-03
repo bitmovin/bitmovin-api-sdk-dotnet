@@ -42,7 +42,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live.InsertableContent
         }
 
         /// <summary>
-        /// List All Inseratble Content Available For A Live Encoding
+        /// List All Insertable Content Available For A Live Encoding
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>

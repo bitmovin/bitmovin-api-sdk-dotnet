@@ -28,7 +28,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.S3RoleBased
         /// <summary>
         /// Create S3 Role-based Output
         /// </summary>
-        /// <param name="s3RoleBasedOutput">The S3 Role-based output to be created</param>
+        /// <param name="s3RoleBasedOutput">The S3 Role-based output to be created  The following permissions are required for S3 Role-based output:  * s3:PutObject  * s3:PutObjectAcl  * s3:ListBucket  * s3:GetBucketLocation </param>
         public async Task<Models.S3RoleBasedOutput> CreateAsync(Models.S3RoleBasedOutput s3RoleBasedOutput)
         {
             return await _apiClient.CreateAsync(s3RoleBasedOutput);

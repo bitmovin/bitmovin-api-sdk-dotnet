@@ -28,7 +28,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.S3
         /// <summary>
         /// Create S3 Input
         /// </summary>
-        /// <param name="s3Input">The S3 input to be created</param>
+        /// <param name="s3Input">The S3 input to be created  The following permissions are required for S3 input:   * s3:GetObject   * s3:GetBucketLocation, </param>
         public async Task<Models.S3Input> CreateAsync(Models.S3Input s3Input)
         {
             return await _apiClient.CreateAsync(s3Input);

@@ -32,7 +32,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Drm
         public SpekeApi Speke { get; }
 
         /// <summary>
-        /// List all DRM configurations of Progressive TS muxing
+        /// List all DRM configurations of a Progressive TS muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the Progressive TS muxing (required)</param>

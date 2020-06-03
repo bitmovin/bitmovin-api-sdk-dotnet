@@ -26,7 +26,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Drm.Aes
         public CustomdataApi Customdata { get; }
 
         /// <summary>
-        /// Add AES encryption configuration to Progressive TS muxing
+        /// Add AES encryption configuration to a Progressive TS muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding (required)</param>
         /// <param name="muxingId">Id of the Progressive TS muxing (required)</param>
@@ -37,7 +37,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Drm.Aes
         }
 
         /// <summary>
-        /// Delete AES encryption configuration from Progressive TS muxing
+        /// Delete AES encryption configuration from a Progressive TS muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding (required)</param>
         /// <param name="muxingId">Id of the Progressive TS muxing (required)</param>
@@ -48,7 +48,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Drm.Aes
         }
 
         /// <summary>
-        /// AES encryption Details of Progressive TS muxing
+        /// AES encryption Details of a Progressive TS muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding (required)</param>
         /// <param name="muxingId">Id of the Progressive TS muxing (required)</param>
@@ -59,7 +59,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Drm.Aes
         }
 
         /// <summary>
-        /// List AES encryption configurations of Progressive TS muxing
+        /// List AES encryption configurations of a Progressive TS muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding (required)</param>
         /// <param name="muxingId">Id of the Progressive TS muxing (required)</param>

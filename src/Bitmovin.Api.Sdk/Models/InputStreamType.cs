@@ -20,34 +20,34 @@ namespace Bitmovin.Api.Sdk.Models
         CONCATENATION,
 
         /// <summary>
-        /// TRIMMINGTIMEBASED
+        /// TRIMMING_TIME_BASED
         /// </summary>
         [EnumMember(Value = "TRIMMING_TIME_BASED")]
-        TRIMMINGTIMEBASED,
+        TRIMMING_TIME_BASED,
 
         /// <summary>
-        /// TRIMMINGTIMECODETRACK
+        /// TRIMMING_TIME_CODE_TRACK
         /// </summary>
         [EnumMember(Value = "TRIMMING_TIME_CODE_TRACK")]
-        TRIMMINGTIMECODETRACK,
+        TRIMMING_TIME_CODE_TRACK,
 
         /// <summary>
-        /// TRIMMINGH264PICTURETIMING
+        /// TRIMMING_H264_PICTURE_TIMING
         /// </summary>
         [EnumMember(Value = "TRIMMING_H264_PICTURE_TIMING")]
-        TRIMMINGH264PICTURETIMING,
+        TRIMMING_H264_PICTURE_TIMING,
 
         /// <summary>
-        /// SIDECARDOLBYVISIONMETADATA
+        /// SIDECAR_DOLBY_VISION_METADATA
         /// </summary>
         [EnumMember(Value = "SIDECAR_DOLBY_VISION_METADATA")]
-        SIDECARDOLBYVISIONMETADATA,
+        SIDECAR_DOLBY_VISION_METADATA,
 
         /// <summary>
-        /// AUDIOMIX
+        /// AUDIO_MIX
         /// </summary>
         [EnumMember(Value = "AUDIO_MIX")]
-        AUDIOMIX,
+        AUDIO_MIX,
 
         /// <summary>
         /// FILE
@@ -56,21 +56,21 @@ namespace Bitmovin.Api.Sdk.Models
         FILE,
 
         /// <summary>
-        /// CAPTIONCEA608
+        /// CAPTION_CEA608
         /// </summary>
         [EnumMember(Value = "CAPTION_CEA608")]
-        CAPTIONCEA608,
+        CAPTION_CEA608,
 
         /// <summary>
-        /// CAPTIONCEA708
+        /// CAPTION_CEA708
         /// </summary>
         [EnumMember(Value = "CAPTION_CEA708")]
-        CAPTIONCEA708,
+        CAPTION_CEA708,
 
         /// <summary>
-        /// DVBTELETEXT
+        /// DVB_TELETEXT
         /// </summary>
         [EnumMember(Value = "DVB_TELETEXT")]
-        DVBTELETEXT
+        DVB_TELETEXT
     }
 }

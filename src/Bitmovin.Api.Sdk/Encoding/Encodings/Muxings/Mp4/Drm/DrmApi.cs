@@ -41,7 +41,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm
         public SpekeApi Speke { get; }
 
         /// <summary>
-        /// List all DRM configurations of MP4 muxing
+        /// List all DRM configurations of an MP4 muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the MP4 muxing (required)</param>

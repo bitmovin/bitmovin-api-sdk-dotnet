@@ -26,18 +26,18 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Ts.Drm.Aes
         public CustomdataApi Customdata { get; }
 
         /// <summary>
-        /// Add AES Encryption to TS muxing
+        /// Add AES encryption configuration to a TS muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the TS muxing. (required)</param>
-        /// <param name="aesEncryptionDrm">The AES Encryption to be created</param>
+        /// <param name="aesEncryptionDrm">The AES encryption configuration to be created</param>
         public async Task<Models.AesEncryptionDrm> CreateAsync(string encodingId, string muxingId, Models.AesEncryptionDrm aesEncryptionDrm)
         {
             return await _apiClient.CreateAsync(encodingId, muxingId, aesEncryptionDrm);
         }
 
         /// <summary>
-        /// Delete AES Encryption from TS muxing
+        /// Delete AES encryption configuration from a TS muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the TS muxing. (required)</param>
@@ -48,18 +48,18 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Ts.Drm.Aes
         }
 
         /// <summary>
-        /// AES Encryption Details of TS muxing
+        /// AES encryption Details of a TS muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the TS muxing. (required)</param>
-        /// <param name="drmId">Id of the AESEncryption configuration. (required)</param>
+        /// <param name="drmId">Id of the AES encryption configuration. (required)</param>
         public async Task<Models.AesEncryptionDrm> GetAsync(string encodingId, string muxingId, string drmId)
         {
             return await _apiClient.GetAsync(encodingId, muxingId, drmId);
         }
 
         /// <summary>
-        /// List AES Encryption of TS muxing
+        /// List AES encryption configurations of a TS muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the TS muxing. (required)</param>

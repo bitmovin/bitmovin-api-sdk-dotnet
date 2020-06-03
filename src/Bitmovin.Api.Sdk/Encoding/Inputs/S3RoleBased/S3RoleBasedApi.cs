@@ -28,7 +28,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.S3RoleBased
         /// <summary>
         /// Create S3 Role-based Input
         /// </summary>
-        /// <param name="s3RoleBasedInput">The S3 Role-based input to be created</param>
+        /// <param name="s3RoleBasedInput">The S3 Role-based input to be created  The following permissions are required for S3 Role-based input:   * s3:GetObject   * s3:GetBucketLocation, </param>
         public async Task<Models.S3RoleBasedInput> CreateAsync(Models.S3RoleBasedInput s3RoleBasedInput)
         {
             return await _apiClient.CreateAsync(s3RoleBasedInput);

@@ -22,10 +22,10 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Drm.Fairplay
         public static BitmovinApiBuilder<CustomdataApi> Builder => new BitmovinApiBuilder<CustomdataApi>();
 
         /// <summary>
-        /// FairPlay DRM Custom Data of Progressive TS
+        /// FairPlay DRM Custom Data of a Progressive TS muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
-        /// <param name="muxingId">Id of the progressive TS fragment. (required)</param>
+        /// <param name="muxingId">Id of the Progressive TS muxing. (required)</param>
         /// <param name="drmId">Id of the FairPlay DRM configuration. (required)</param>
         public async Task<Models.CustomData> GetAsync(string encodingId, string muxingId, string drmId)
         {

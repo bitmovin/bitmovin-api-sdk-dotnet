@@ -28,7 +28,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.S3
         /// <summary>
         /// Create S3 Output
         /// </summary>
-        /// <param name="s3Output">The S3 output to be created</param>
+        /// <param name="s3Output">The S3 output to be created  The following permissions are required for S3 output:  * s3:PutObject  * s3:PutObjectAcl  * s3:ListBucket  * s3:GetBucketLocation </param>
         public async Task<Models.S3Output> CreateAsync(Models.S3Output s3Output)
         {
             return await _apiClient.CreateAsync(s3Output);

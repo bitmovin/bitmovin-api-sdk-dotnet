@@ -26,7 +26,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Id3.PlainTex
         public CustomdataApi Customdata { get; }
 
         /// <summary>
-        /// Add Plain Text ID3 Tag to Progressive TS muxing
+        /// Add Plain Text ID3 Tag to a Progressive TS muxing
         /// </summary>
         /// <param name="encodingId">ID of the Encoding. (required)</param>
         /// <param name="muxingId">ID of the Progressive TS muxing (required)</param>
@@ -37,7 +37,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Id3.PlainTex
         }
 
         /// <summary>
-        /// Delete Plain Text ID3 Tag of Progressive TS muxing
+        /// Delete Plain Text ID3 Tag of a Progressive TS muxing
         /// </summary>
         /// <param name="encodingId">ID of the Encoding. (required)</param>
         /// <param name="muxingId">ID of the Progressive TS muxing (required)</param>
@@ -48,7 +48,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Id3.PlainTex
         }
 
         /// <summary>
-        /// Plain Text ID3 Tag Details of Progressive TS muxing
+        /// Plain Text ID3 Tag Details of a Progressive TS muxing
         /// </summary>
         /// <param name="encodingId">ID of the Encoding. (required)</param>
         /// <param name="muxingId">ID of the Progressive TS muxing (required)</param>
@@ -59,7 +59,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Id3.PlainTex
         }
 
         /// <summary>
-        /// List Plain Text ID3 Tags of Progressive TS muxing
+        /// List Plain Text ID3 Tags of a Progressive TS muxing
         /// </summary>
         /// <param name="encodingId">ID of the Encoding. (required)</param>
         /// <param name="muxingId">ID of the Progressive TS muxing (required)</param>
