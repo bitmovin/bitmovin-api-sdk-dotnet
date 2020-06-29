@@ -38,5 +38,47 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "bytesEgress")]
         public long? BytesEgress { get; internal set; }
+
+        /// <summary>
+        /// BillableEncodingMinutes
+        /// </summary>
+        [JsonProperty(PropertyName = "billableEncodingMinutes")]
+        public List<BillableEncodingMinutes> BillableEncodingMinutes { get; set; } = new List<BillableEncodingMinutes>();
+
+        /// <summary>
+        /// BillableEgressBytes
+        /// </summary>
+        [JsonProperty(PropertyName = "billableEgressBytes")]
+        public List<EgressInformation> BillableEgressBytes { get; set; } = new List<EgressInformation>();
+
+        /// <summary>
+        /// Streams
+        /// </summary>
+        [JsonProperty(PropertyName = "streams")]
+        public List<StatisticsPerStream> Streams { get; set; } = new List<StatisticsPerStream>();
+
+        /// <summary>
+        /// Muxings
+        /// </summary>
+        [JsonProperty(PropertyName = "muxings")]
+        public List<StatisticsPerMuxing> Muxings { get; set; } = new List<StatisticsPerMuxing>();
+
+        /// <summary>
+        /// Features
+        /// </summary>
+        [JsonProperty(PropertyName = "features")]
+        public List<BillableEncodingFeatureMinutes> Features { get; set; } = new List<BillableEncodingFeatureMinutes>();
+
+        /// <summary>
+        /// Billable minutes for the muxings.
+        /// </summary>
+        [JsonProperty(PropertyName = "billableTransmuxingMinutes")]
+        public double? BillableTransmuxingMinutes { get; internal set; }
+
+        /// <summary>
+        /// Billable minutes for the features.
+        /// </summary>
+        [JsonProperty(PropertyName = "billableFeatureMinutes")]
+        public double? BillableFeatureMinutes { get; internal set; }
     }
 }

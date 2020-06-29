@@ -82,7 +82,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// If set, alpha blending for the text is applied. Values are valid between 0.0 and 1.0.
         /// </summary>
         [JsonProperty(PropertyName = "alpha")]
-        public int? Alpha { get; set; }
+        public double? Alpha { get; set; }
 
         /// <summary>
         /// Color of the shadow
@@ -125,5 +125,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "y")]
         public string Y { get; set; }
+
+        /// <summary>
+        /// Rate
+        /// </summary>
+        [JsonProperty(PropertyName = "rate")]
+        public string Rate { get; set; }
     }
 }

@@ -29,5 +29,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "unit")]
         public AudioVolumeUnit? Unit { get; set; }
+
+        /// <summary>
+        /// Format
+        /// </summary>
+        [JsonProperty(PropertyName = "format")]
+        public AudioVolumeFormat? Format { get; set; }
     }
 }
