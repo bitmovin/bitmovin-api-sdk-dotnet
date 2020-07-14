@@ -14,6 +14,12 @@ namespace Bitmovin.Api.Sdk.Models
         AAC,
 
         /// <summary>
+        /// DTS_PASSTHROUGH
+        /// </summary>
+        [EnumMember(Value = "DTS_PASSTHROUGH")]
+        DTS_PASSTHROUGH,
+
+        /// <summary>
         /// HE_AAC_V1
         /// </summary>
         [EnumMember(Value = "HE_AAC_V1")]

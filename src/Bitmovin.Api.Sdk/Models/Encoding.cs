@@ -22,6 +22,12 @@ namespace Bitmovin.Api.Sdk.Models
         public CloudRegion? CloudRegion { get; set; }
 
         /// <summary>
+        /// Specify a list of regions which are used in case the preferred region is down. Currently there are several restrictions. - The region has to be specific or AUTO - The region has to be for the same cloud provider as the default one - You can only configure at most 3 fallback regions 
+        /// </summary>
+        [JsonProperty(PropertyName = "fallbackCloudRegions")]
+        public List<CloudRegion> FallbackCloudRegions { get; set; } = new List<CloudRegion>();
+
+        /// <summary>
         /// Version of the encoder
         /// </summary>
         [JsonProperty(PropertyName = "encoderVersion")]

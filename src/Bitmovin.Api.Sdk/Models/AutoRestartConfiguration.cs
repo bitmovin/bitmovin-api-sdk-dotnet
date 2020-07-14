@@ -50,5 +50,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "scheduleExpression")]
         public string ScheduleExpression { get; set; }
+
+        /// <summary>
+        /// Defines if the encoding should be restarted in case of an error during encoding.
+        /// </summary>
+        [JsonProperty(PropertyName = "restartOnEncoderError")]
+        public bool? RestartOnEncoderError { get; set; }
     }
 }

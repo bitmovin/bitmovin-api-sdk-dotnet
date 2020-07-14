@@ -158,5 +158,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "liveMultiplicator")]
         public double? LiveMultiplicator { get; internal set; }
+
+        /// <summary>
+        /// InputFactor
+        /// </summary>
+        [JsonProperty(PropertyName = "inputFactor")]
+        public InputFactor InputFactor { get; set; }
     }
 }

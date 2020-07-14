@@ -52,16 +52,22 @@ namespace Bitmovin.Api.Sdk.Models
         public ColorConfig ColorConfig { get; set; }
 
         /// <summary>
-        /// The numerator of the sample aspect ratio (also known as pixel aspect ratio). Must be set if sampleAspectRatioDenominator is set.
+        /// The numerator of the sample aspect ratio (also known as pixel aspect ratio). Must be set if sampleAspectRatioDenominator is set. If set then displayAspectRatio is not allowed.
         /// </summary>
         [JsonProperty(PropertyName = "sampleAspectRatioNumerator")]
         public int? SampleAspectRatioNumerator { get; set; }
 
         /// <summary>
-        /// The denominator of the sample aspect ratio (also known as pixel aspect ratio). Must be set if sampleAspectRatioNumerator is set.
+        /// The denominator of the sample aspect ratio (also known as pixel aspect ratio). Must be set if sampleAspectRatioNumerator is set. If set then displayAspectRatio is not allowed.
         /// </summary>
         [JsonProperty(PropertyName = "sampleAspectRatioDenominator")]
         public int? SampleAspectRatioDenominator { get; set; }
+
+        /// <summary>
+        /// Specifies a display aspect ratio (DAR) to be enforced. The sample aspect ratio (SAR) will be adjusted accordingly. If set then sampleAspectRatioNumerator and sampleAspectRatioDenominator are not allowed.
+        /// </summary>
+        [JsonProperty(PropertyName = "displayAspectRatio")]
+        public DisplayAspectRatio DisplayAspectRatio { get; set; }
 
         /// <summary>
         /// The mode of the encoding
