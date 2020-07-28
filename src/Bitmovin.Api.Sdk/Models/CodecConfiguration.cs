@@ -30,6 +30,7 @@ namespace Bitmovin.Api.Sdk.Models
     [JsonSubtypes.KnownSubType(typeof(VorbisAudioConfiguration), "VORBIS")]
     [JsonSubtypes.KnownSubType(typeof(MjpegVideoConfiguration), "MJPEG")]
     [JsonSubtypes.KnownSubType(typeof(Av1VideoConfiguration), "AV1")]
+    [JsonSubtypes.KnownSubType(typeof(DolbyAtmosAudioConfiguration), "DOLBY_ATMOS")]
 
     public class CodecConfiguration : BitmovinResource
     {

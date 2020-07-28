@@ -52,25 +52,25 @@ namespace Bitmovin.Api.Sdk.Models
         public ChromaLocation? ChromaLocation { get; set; }
 
         /// <summary>
-        /// The color space to be applied
+        /// The color space to be applied. If used on a Dolby Vision stream, this value must be set to UNSPECIFIED.
         /// </summary>
         [JsonProperty(PropertyName = "colorSpace")]
         public ColorSpace? ColorSpace { get; set; }
 
         /// <summary>
-        /// The color primaries to be applied
+        /// The color primaries to be applied. If used on a Dolby Vision stream, this value must be set to UNSPECIFIED.
         /// </summary>
         [JsonProperty(PropertyName = "colorPrimaries")]
         public ColorPrimaries? ColorPrimaries { get; set; }
 
         /// <summary>
-        /// The color range to be applied
+        /// The color range to be applied. If used on a Dolby Vision stream, this value must be set to JPEG.
         /// </summary>
         [JsonProperty(PropertyName = "colorRange")]
         public ColorRange? ColorRange { get; set; }
 
         /// <summary>
-        /// The color transfer to be applied
+        /// The color transfer to be applied. If used on a Dolby Vision stream, this value must be set to UNSPECIFIED.
         /// </summary>
         [JsonProperty(PropertyName = "colorTransfer")]
         public ColorTransfer? ColorTransfer { get; set; }

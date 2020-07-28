@@ -101,6 +101,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// AV1
         /// </summary>
         [EnumMember(Value = "AV1")]
-        AV1
+        AV1,
+
+        /// <summary>
+        /// DOLBY_ATMOS
+        /// </summary>
+        [EnumMember(Value = "DOLBY_ATMOS")]
+        DOLBY_ATMOS
     }
 }

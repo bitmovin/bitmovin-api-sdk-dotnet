@@ -12,7 +12,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "2EQcOWVYSGdIu6u/M6u5sg=="
+          "hash": "+IrKtnwWFGGOhLB6+iV0lw=="
         }
       },
       "is_incremental": false,
@@ -1380,7 +1380,67 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Configurations.Audio.AudioApi.html",
-          "hash": "YYDh01ETrPF/RzxzG03NSQ=="
+          "hash": "6ZQI7r98yX33Wu1WsNwD9w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Configurations.Audio.DolbyAtmos.Customdata.CustomdataApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Configurations.Audio.DolbyAtmos.Customdata.CustomdataApi.html",
+          "hash": "Df+GbbUpa95P5exi2ylShg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Configurations.Audio.DolbyAtmos.Customdata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Configurations.Audio.DolbyAtmos.Customdata.html",
+          "hash": "ZjRodNN3wEJESLxFdpga+A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Configurations.Audio.DolbyAtmos.DolbyAtmosApi.ListQueryParams.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Configurations.Audio.DolbyAtmos.DolbyAtmosApi.ListQueryParams.html",
+          "hash": "7XVQFwUw2pab7R31ZvGQ/w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Configurations.Audio.DolbyAtmos.DolbyAtmosApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Configurations.Audio.DolbyAtmos.DolbyAtmosApi.html",
+          "hash": "kGxUNFTwnMlz3tA2yF7zQg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Configurations.Audio.DolbyAtmos.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Configurations.Audio.DolbyAtmos.html",
+          "hash": "Z2Y5gS40kM5Ud4OjBL137A=="
         }
       },
       "is_incremental": false,
@@ -2708,6 +2768,42 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.DolbyAtmos.DolbyAtmosApi.ListQueryParams.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.DolbyAtmos.DolbyAtmosApi.ListQueryParams.html",
+          "hash": "Qq1uGl3A5w32tyAcAeRHtA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.DolbyAtmos.DolbyAtmosApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.DolbyAtmos.DolbyAtmosApi.html",
+          "hash": "GXcTAP8T7wZ3/s0XXDojKg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.DolbyAtmos.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.DolbyAtmos.html",
+          "hash": "1Wvs44wPnG/aNRkXWjkjgA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.File.FileApi.ListQueryParams.yml",
       "output": {
         ".html": {
@@ -2784,7 +2880,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.InputStreamsApi.ListQueryParams.html",
-          "hash": "WgZcO1NuKVrXk3Z5X5AFNw=="
+          "hash": "9s5nyHWrOJ4m05fTB8WY3g=="
         }
       },
       "is_incremental": false,
@@ -2796,7 +2892,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.InputStreamsApi.html",
-          "hash": "MJGx+UmEPVXR74RMvyTauQ=="
+          "hash": "j6M875g2xaLb3O5Q5UPOWw=="
         }
       },
       "is_incremental": false,
@@ -13476,7 +13572,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.AudioConfiguration.html",
-          "hash": "0Cq0m1VPVRpZQzDjtmXJ3Q=="
+          "hash": "yVC3jhKW5YdvLXC2AMGoCA=="
         }
       },
       "is_incremental": false,
@@ -14280,7 +14376,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.CodecConfigType.html",
-          "hash": "b5M02pRliNzVuEcjOmJmNw=="
+          "hash": "e2UonubqFXDBk6G7bV/TTg=="
         }
       },
       "is_incremental": false,
@@ -14316,7 +14412,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.ColorConfig.html",
-          "hash": "ayqpglPx5+1T1pdpGQY8VQ=="
+          "hash": "aym0/gbbtxus/UAAJndVnA=="
         }
       },
       "is_incremental": false,
@@ -14965,6 +15061,78 @@
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.DisplayAspectRatio.html",
           "hash": "kwvTUFfZUTAEhU+Dq3Td+Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.DolbyAtmosAudioConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.DolbyAtmosAudioConfiguration.html",
+          "hash": "hyA6bpU57uitVt+Jt7vNjA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.DolbyAtmosDialogueIntelligence.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.DolbyAtmosDialogueIntelligence.html",
+          "hash": "6jXQnGSYF/YCa33dt16pfQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.DolbyAtmosIngestInputStream.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.DolbyAtmosIngestInputStream.html",
+          "hash": "JE3IWXvKCJLvgfI1YMoJ+A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.DolbyAtmosInputFormat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.DolbyAtmosInputFormat.html",
+          "hash": "xUrc5eSeAK1YK/OZl3nqEA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.DolbyAtmosLoudnessControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.DolbyAtmosLoudnessControl.html",
+          "hash": "+36i5Mx6HjMRFlLByYxoQQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.DolbyAtmosMeteringMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.DolbyAtmosMeteringMode.html",
+          "hash": "+tY3v5EiF/Nn9/KSOrmlBw=="
         }
       },
       "is_incremental": false,
@@ -15792,7 +15960,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.H265VideoConfiguration.html",
-          "hash": "ksaJHYMHiKsyjSuLBfu+5w=="
+          "hash": "jYqs7O3wnjpVACCeWYvxnA=="
         }
       },
       "is_incremental": false,
@@ -16104,7 +16272,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.InputStream.html",
-          "hash": "2W8QfIzCrBJCQvbtcTpwzQ=="
+          "hash": "TQLi/5qDC5WYkR6hq70siA=="
         }
       },
       "is_incremental": false,
@@ -16116,7 +16284,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.InputStreamType.html",
-          "hash": "3UIXiuVjum20cl/zykzHqQ=="
+          "hash": "rxv41HH9bZqA/E4zlQA0OQ=="
         }
       },
       "is_incremental": false,
@@ -19320,7 +19488,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.html",
-          "hash": "v7HVWEh3f9KnoZoDTUCYXQ=="
+          "hash": "SZPqFCZGBn38AFi9YqA28g=="
         }
       },
       "is_incremental": false,
@@ -20316,7 +20484,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "upAZanTkvN8Gv1jcasilEg=="
+          "hash": "N0UTAfnSzDbSPIiGRXgdlQ=="
         }
       },
       "is_incremental": false,
@@ -20331,7 +20499,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "hODb8YBIdrqBw7l3AeRfSw=="
+          "hash": "lGnKhzg74HHY3oa4EYR2bw=="
         }
       },
       "is_incremental": false,
@@ -20377,7 +20545,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 1691,
+          "total_file_count": 1705,
           "skipped_file_count": 0
         }
       }

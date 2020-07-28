@@ -13,6 +13,7 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.File;
 using Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Trimming;
 using Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Subtitles;
 using Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Captions;
+using Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.DolbyAtmos;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams
 {
@@ -32,6 +33,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams
             Trimming = new TrimmingApi(apiClientFactory);
             Subtitles = new SubtitlesApi(apiClientFactory);
             Captions = new CaptionsApi(apiClientFactory);
+            DolbyAtmos = new DolbyAtmosApi(apiClientFactory);
         }
 
         /// <summary>
@@ -48,6 +50,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams
         public TrimmingApi Trimming { get; }
         public SubtitlesApi Subtitles { get; }
         public CaptionsApi Captions { get; }
+        public DolbyAtmosApi DolbyAtmos { get; }
 
         /// <summary>
         /// Input Stream Details
