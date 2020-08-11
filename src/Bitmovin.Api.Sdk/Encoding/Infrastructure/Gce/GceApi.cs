@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using RestEase;
 using Bitmovin.Api.Sdk.Common;
+using Bitmovin.Api.Sdk.Encoding.Infrastructure.Gce.Regions;
 
 namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Gce
 {
@@ -14,12 +15,15 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Gce
         public GceApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IGceApiClient>();
+            Regions = new RegionsApi(apiClientFactory);
         }
 
         /// <summary>
         /// Fluent builder for creating an instance of GceApi
         /// </summary>
         public static BitmovinApiBuilder<GceApi> Builder => new BitmovinApiBuilder<GceApi>();
+
+        public RegionsApi Regions { get; }
 
         /// <summary>
         /// Add GCE Account

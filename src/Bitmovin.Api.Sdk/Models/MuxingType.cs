@@ -44,34 +44,34 @@ namespace Bitmovin.Api.Sdk.Models
         MP3,
 
         /// <summary>
-        /// PROGRESSIVEWEBM
+        /// PROGRESSIVE_WEBM
         /// </summary>
         [EnumMember(Value = "PROGRESSIVE_WEBM")]
-        PROGRESSIVEWEBM,
+        PROGRESSIVE_WEBM,
 
         /// <summary>
-        /// PROGRESSIVEMOV
+        /// PROGRESSIVE_MOV
         /// </summary>
         [EnumMember(Value = "PROGRESSIVE_MOV")]
-        PROGRESSIVEMOV,
+        PROGRESSIVE_MOV,
 
         /// <summary>
-        /// PROGRESSIVETS
+        /// PROGRESSIVE_TS
         /// </summary>
         [EnumMember(Value = "PROGRESSIVE_TS")]
-        PROGRESSIVETS,
+        PROGRESSIVE_TS,
 
         /// <summary>
-        /// BROADCASTTS
+        /// BROADCAST_TS
         /// </summary>
         [EnumMember(Value = "BROADCAST_TS")]
-        BROADCASTTS,
+        BROADCAST_TS,
 
         /// <summary>
-        /// CHUNKEDTEXT
+        /// CHUNKED_TEXT
         /// </summary>
         [EnumMember(Value = "CHUNKED_TEXT")]
-        CHUNKEDTEXT,
+        CHUNKED_TEXT,
 
         /// <summary>
         /// TEXT
@@ -80,9 +80,9 @@ namespace Bitmovin.Api.Sdk.Models
         TEXT,
 
         /// <summary>
-        /// SEGMENTEDRAW
+        /// SEGMENTED_RAW
         /// </summary>
         [EnumMember(Value = "SEGMENTED_RAW")]
-        SEGMENTEDRAW
+        SEGMENTED_RAW
     }
 }

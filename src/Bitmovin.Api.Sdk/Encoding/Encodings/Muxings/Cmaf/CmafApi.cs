@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using RestEase;
 using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Cmaf.Customdata;
-using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Cmaf.Captions;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Cmaf
 {
@@ -17,7 +16,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Cmaf
         {
             _apiClient = apiClientFactory.CreateClient<ICmafApiClient>();
             Customdata = new CustomdataApi(apiClientFactory);
-            Captions = new CaptionsApi(apiClientFactory);
         }
 
         /// <summary>
@@ -26,7 +24,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Cmaf
         public static BitmovinApiBuilder<CmafApi> Builder => new BitmovinApiBuilder<CmafApi>();
 
         public CustomdataApi Customdata { get; }
-        public CaptionsApi Captions { get; }
 
         /// <summary>
         /// Add CMAF muxing

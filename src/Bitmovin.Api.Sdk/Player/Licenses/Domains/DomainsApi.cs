@@ -25,7 +25,7 @@ namespace Bitmovin.Api.Sdk.Player.Licenses.Domains
         /// Add Domain
         /// </summary>
         /// <param name="licenseId">Id of the Player License (required)</param>
-        /// <param name="domain">The Domain to be added to Player License Whitelist</param>
+        /// <param name="domain">The Domain to be added to Player License Allowlist</param>
         public async Task<Models.Domain> CreateAsync(string licenseId, Models.Domain domain)
         {
             return await _apiClient.CreateAsync(licenseId, domain);

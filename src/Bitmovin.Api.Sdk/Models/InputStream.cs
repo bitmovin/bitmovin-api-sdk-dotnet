@@ -24,6 +24,7 @@ namespace Bitmovin.Api.Sdk.Models
     [JsonSubtypes.KnownSubType(typeof(Cea608CaptionInputStream), "CAPTION_CEA608")]
     [JsonSubtypes.KnownSubType(typeof(Cea708CaptionInputStream), "CAPTION_CEA708")]
     [JsonSubtypes.KnownSubType(typeof(FileInputStream), "FILE")]
+    [JsonSubtypes.KnownSubType(typeof(DvbSubtitleInputStream), "DVB_SUBTITLE")]
     [JsonSubtypes.KnownSubType(typeof(DvbTeletextInputStream), "DVB_TELETEXT")]
     [JsonSubtypes.KnownSubType(typeof(DolbyAtmosIngestInputStream), "DOLBY_ATMOS")]
 

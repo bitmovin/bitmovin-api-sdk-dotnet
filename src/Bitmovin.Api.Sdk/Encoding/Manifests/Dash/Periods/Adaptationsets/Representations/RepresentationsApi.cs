@@ -1,6 +1,7 @@
 using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Representations.Vtt;
 using Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Representations.Fmp4;
+using Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Representations.ChunkedText;
 using Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Representations.Cmaf;
 using Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Representations.Mp4;
 using Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Representations.Webm;
@@ -14,6 +15,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Repres
         {
             Vtt = new VttApi(apiClientFactory);
             Fmp4 = new Fmp4Api(apiClientFactory);
+            ChunkedText = new ChunkedTextApi(apiClientFactory);
             Cmaf = new CmafApi(apiClientFactory);
             Mp4 = new Mp4Api(apiClientFactory);
             Webm = new WebmApi(apiClientFactory);
@@ -27,6 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Repres
 
         public VttApi Vtt { get; }
         public Fmp4Api Fmp4 { get; }
+        public ChunkedTextApi ChunkedText { get; }
         public CmafApi Cmaf { get; }
         public Mp4Api Mp4 { get; }
         public WebmApi Webm { get; }

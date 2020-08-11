@@ -68,6 +68,12 @@ namespace Bitmovin.Api.Sdk.Models
         CAPTION_CEA708,
 
         /// <summary>
+        /// DVB_SUBTITLE
+        /// </summary>
+        [EnumMember(Value = "DVB_SUBTITLE")]
+        DVB_SUBTITLE,
+
+        /// <summary>
         /// DVB_TELETEXT
         /// </summary>
         [EnumMember(Value = "DVB_TELETEXT")]
