@@ -107,6 +107,24 @@ namespace Bitmovin.Api.Sdk.Models
         /// DOLBY_ATMOS
         /// </summary>
         [EnumMember(Value = "DOLBY_ATMOS")]
-        DOLBY_ATMOS
+        DOLBY_ATMOS,
+
+        /// <summary>
+        /// H262
+        /// </summary>
+        [EnumMember(Value = "H262")]
+        H262,
+
+        /// <summary>
+        /// PCM
+        /// </summary>
+        [EnumMember(Value = "PCM")]
+        PCM,
+
+        /// <summary>
+        /// WEBVTT
+        /// </summary>
+        [EnumMember(Value = "WEBVTT")]
+        WEBVTT
     }
 }

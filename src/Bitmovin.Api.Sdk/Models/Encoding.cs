@@ -16,6 +16,48 @@ namespace Bitmovin.Api.Sdk.Models
     public class Encoding : BitmovinResource
     {
         /// <summary>
+        /// Type of the encoding
+        /// </summary>
+        [JsonProperty(PropertyName = "type")]
+        public EncodingType? Type { get; internal set; }
+
+        /// <summary>
+        /// Timestamp when the encoding was started, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
+        /// </summary>
+        [JsonProperty(PropertyName = "startedAt")]
+        public DateTime? StartedAt { get; internal set; }
+
+        /// <summary>
+        /// Timestamp when the encoding status changed to \&quot;QUEUED\&quot;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
+        /// </summary>
+        [JsonProperty(PropertyName = "queuedAt")]
+        public DateTime? QueuedAt { get; internal set; }
+
+        /// <summary>
+        /// Timestamp when the encoding status changed to to \&quot;RUNNING\&quot;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
+        /// </summary>
+        [JsonProperty(PropertyName = "runningAt")]
+        public DateTime? RunningAt { get; internal set; }
+
+        /// <summary>
+        /// Timestamp when the encoding status changed to \&quot;FINISHED\&quot;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
+        /// </summary>
+        [JsonProperty(PropertyName = "finishedAt")]
+        public DateTime? FinishedAt { get; internal set; }
+
+        /// <summary>
+        /// Timestamp when the encoding status changed to \&quot;ERROR\&quot;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
+        /// </summary>
+        [JsonProperty(PropertyName = "errorAt")]
+        public DateTime? ErrorAt { get; internal set; }
+
+        /// <summary>
+        /// Progress of the encoding in percent
+        /// </summary>
+        [JsonProperty(PropertyName = "progress")]
+        public int? Progress { get; internal set; }
+
+        /// <summary>
         /// CloudRegion
         /// </summary>
         [JsonProperty(PropertyName = "cloudRegion")]

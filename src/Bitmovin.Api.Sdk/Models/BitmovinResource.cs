@@ -28,13 +28,13 @@ namespace Bitmovin.Api.Sdk.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// Creation timestamp formatted in UTC: YYYY-MM-DDThh:mm:ssZ
+        /// Creation timestamp, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
         /// </summary>
         [JsonProperty(PropertyName = "createdAt")]
         public DateTime? CreatedAt { get; internal set; }
 
         /// <summary>
-        /// Modified timestamp formatted in UTC: YYYY-MM-DDThh:mm:ssZ
+        /// Modified timestamp, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
         /// </summary>
         [JsonProperty(PropertyName = "modifiedAt")]
         public DateTime? ModifiedAt { get; internal set; }

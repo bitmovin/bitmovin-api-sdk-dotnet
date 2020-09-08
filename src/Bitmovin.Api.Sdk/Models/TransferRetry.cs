@@ -22,19 +22,19 @@ namespace Bitmovin.Api.Sdk.Models
         public Status? Status { get; internal set; }
 
         /// <summary>
-        /// Timestamp when the transfer-retry was started, formatted in UTC: YYYY-MM-DDThh:mm:ssZ 
+        /// Timestamp when the transfer-retry was started, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ 
         /// </summary>
         [JsonProperty(PropertyName = "startedAt")]
         public DateTime? StartedAt { get; internal set; }
 
         /// <summary>
-        /// Timestamp when the transfer-retry status changed to &#39;FINISHED&#39;, formatted in UTC: YYYY-MM-DDThh:mm:ssZ 
+        /// Timestamp when the transfer-retry status changed to &#39;FINISHED&#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ 
         /// </summary>
         [JsonProperty(PropertyName = "finishedAt")]
         public DateTime? FinishedAt { get; internal set; }
 
         /// <summary>
-        /// Timestamp when the transfer-retry status changed to &#39;ERROR&#39;, formatted in UTC: YYYY-MM-DDThh:mm:ssZ 
+        /// Timestamp when the transfer-retry status changed to &#39;ERROR&#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ 
         /// </summary>
         [JsonProperty(PropertyName = "errorAt")]
         public DateTime? ErrorAt { get; internal set; }

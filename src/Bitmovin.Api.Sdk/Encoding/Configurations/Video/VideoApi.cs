@@ -1,4 +1,5 @@
 using Bitmovin.Api.Sdk.Common;
+using Bitmovin.Api.Sdk.Encoding.Configurations.Video.H262;
 using Bitmovin.Api.Sdk.Encoding.Configurations.Video.H264;
 using Bitmovin.Api.Sdk.Encoding.Configurations.Video.H265;
 using Bitmovin.Api.Sdk.Encoding.Configurations.Video.Vp8;
@@ -12,6 +13,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Video
     {
         public VideoApi(IBitmovinApiClientFactory apiClientFactory)
         {
+            H262 = new H262Api(apiClientFactory);
             H264 = new H264Api(apiClientFactory);
             H265 = new H265Api(apiClientFactory);
             Vp8 = new Vp8Api(apiClientFactory);
@@ -25,6 +27,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Video
         /// </summary>
         public static BitmovinApiBuilder<VideoApi> Builder => new BitmovinApiBuilder<VideoApi>();
 
+        public H262Api H262 { get; }
         public H264Api H264 { get; }
         public H265Api H265 { get; }
         public Vp8Api Vp8 { get; }

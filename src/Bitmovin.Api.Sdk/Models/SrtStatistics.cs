@@ -22,7 +22,7 @@ namespace Bitmovin.Api.Sdk.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// Timestamp when the srt statistics event was created, formatted in UTC: YYYY-MM-DDThh:mm:ssZ
+        /// Timestamp when the srt statistics event was created, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
         /// </summary>
         [JsonProperty(PropertyName = "createdAt")]
         public DateTime? CreatedAt { get; set; }

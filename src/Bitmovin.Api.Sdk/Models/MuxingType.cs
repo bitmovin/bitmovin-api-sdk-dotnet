@@ -44,6 +44,12 @@ namespace Bitmovin.Api.Sdk.Models
         MP3,
 
         /// <summary>
+        /// MXF
+        /// </summary>
+        [EnumMember(Value = "MXF")]
+        MXF,
+
+        /// <summary>
         /// PROGRESSIVE_WEBM
         /// </summary>
         [EnumMember(Value = "PROGRESSIVE_WEBM")]

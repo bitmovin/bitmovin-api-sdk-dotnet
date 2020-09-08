@@ -6,6 +6,7 @@ using Bitmovin.Api.Sdk.Encoding.Configurations.Audio.HeAacV1;
 using Bitmovin.Api.Sdk.Encoding.Configurations.Audio.HeAacV2;
 using Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Vorbis;
 using Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Opus;
+using Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Pcm;
 using Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Ac3;
 using Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Eac3;
 using Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Mp2;
@@ -24,6 +25,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio
             HeAacV2 = new HeAacV2Api(apiClientFactory);
             Vorbis = new VorbisApi(apiClientFactory);
             Opus = new OpusApi(apiClientFactory);
+            Pcm = new PcmApi(apiClientFactory);
             Ac3 = new Ac3Api(apiClientFactory);
             Eac3 = new Eac3Api(apiClientFactory);
             Mp2 = new Mp2Api(apiClientFactory);
@@ -42,6 +44,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio
         public HeAacV2Api HeAacV2 { get; }
         public VorbisApi Vorbis { get; }
         public OpusApi Opus { get; }
+        public PcmApi Pcm { get; }
         public Ac3Api Ac3 { get; }
         public Eac3Api Eac3 { get; }
         public Mp2Api Mp2 { get; }

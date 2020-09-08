@@ -70,6 +70,12 @@ namespace Bitmovin.Api.Sdk.Models
         public List<ManifestResource> VodHlsManifests { get; set; } = new List<ManifestResource>();
 
         /// <summary>
+        /// List of VoD SMOOTH manifests to be created after encoding finished successfully
+        /// </summary>
+        [JsonProperty(PropertyName = "vodSmoothManifests")]
+        public List<ManifestResource> VodSmoothManifests { get; set; } = new List<ManifestResource>();
+
+        /// <summary>
         /// Per-Title settings
         /// </summary>
         [JsonProperty(PropertyName = "perTitle")]

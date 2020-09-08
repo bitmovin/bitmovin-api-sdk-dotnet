@@ -22,7 +22,7 @@ namespace Bitmovin.Api.Sdk.Models
         public Dictionary<string, Object> _CustomData { get; set; } = new Dictionary<string, Object>();
 
         /// <summary>
-        /// Creation timestamp formatted in UTC: YYYY-MM-DDThh:mm:ssZ
+        /// Creation timestamp, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
         /// </summary>
         [JsonProperty(PropertyName = "createdAt")]
         public DateTime? CreatedAt { get; set; }

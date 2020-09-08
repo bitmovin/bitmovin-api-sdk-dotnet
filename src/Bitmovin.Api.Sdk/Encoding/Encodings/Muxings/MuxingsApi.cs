@@ -13,6 +13,7 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Ts;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Webm;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp3;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4;
+using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mxf;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.BroadcastTs;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveWebm;
@@ -36,6 +37,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings
             Webm = new WebmApi(apiClientFactory);
             Mp3 = new Mp3Api(apiClientFactory);
             Mp4 = new Mp4Api(apiClientFactory);
+            Mxf = new MxfApi(apiClientFactory);
             ProgressiveTs = new ProgressiveTsApi(apiClientFactory);
             BroadcastTs = new BroadcastTsApi(apiClientFactory);
             ProgressiveWebm = new ProgressiveWebmApi(apiClientFactory);
@@ -56,6 +58,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings
         public WebmApi Webm { get; }
         public Mp3Api Mp3 { get; }
         public Mp4Api Mp4 { get; }
+        public MxfApi Mxf { get; }
         public ProgressiveTsApi ProgressiveTs { get; }
         public BroadcastTsApi BroadcastTs { get; }
         public ProgressiveWebmApi ProgressiveWebm { get; }

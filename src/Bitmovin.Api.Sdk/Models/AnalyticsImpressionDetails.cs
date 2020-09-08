@@ -464,5 +464,17 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "videoWindowWidth")]
         public int? VideoWindowWidth { get; set; }
+
+        /// <summary>
+        /// True if starting the video failed
+        /// </summary>
+        [JsonProperty(PropertyName = "videostartFailed")]
+        public bool? VideostartFailed { get; set; }
+
+        /// <summary>
+        /// VideostartFailedReason
+        /// </summary>
+        [JsonProperty(PropertyName = "videostartFailedReason")]
+        public AnalyticsVideoStartFailedReason? VideostartFailedReason { get; set; }
     }
 }

@@ -16,7 +16,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class StreamInfos
     {
         /// <summary>
-        /// Timestamp of the event formatted in UTC: YYYY-MM-DDThh:mm:ssZ (required)
+        /// Timestamp of the event, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ (required)
         /// </summary>
         [JsonProperty(PropertyName = "time")]
         public DateTime? Time { get; set; }

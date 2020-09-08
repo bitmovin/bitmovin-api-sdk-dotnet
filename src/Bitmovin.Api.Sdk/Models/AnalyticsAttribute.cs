@@ -545,6 +545,18 @@ namespace Bitmovin.Api.Sdk.Models
         /// VIDEOTIMESTART
         /// </summary>
         [EnumMember(Value = "VIDEOTIME_START")]
-        VIDEOTIMESTART
+        VIDEOTIMESTART,
+
+        /// <summary>
+        /// VIDEOSTARTFAILED
+        /// </summary>
+        [EnumMember(Value = "VIDEOSTART_FAILED")]
+        VIDEOSTARTFAILED,
+
+        /// <summary>
+        /// VIDEOSTARTFAILEDREASON
+        /// </summary>
+        [EnumMember(Value = "VIDEOSTART_FAILED_REASON")]
+        VIDEOSTARTFAILEDREASON
     }
 }
