@@ -28,12 +28,6 @@ namespace Bitmovin.Api.Sdk.Models
         public string AnalyticsVersion { get; set; }
 
         /// <summary>
-        /// Autonomous System Number inferred from the IP address
-        /// </summary>
-        [JsonProperty(PropertyName = "asn")]
-        public long? Asn { get; set; }
-
-        /// <summary>
         /// Audio Bitrate
         /// </summary>
         [JsonProperty(PropertyName = "audioBitrate")]

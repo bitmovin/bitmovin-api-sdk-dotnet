@@ -35,6 +35,15 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations
         public SubtitlesApi Subtitles { get; }
 
         /// <summary>
+        /// Get Codec Configuration Details
+        /// </summary>
+        /// <param name="configurationId">Id of the codec configuration (required)</param>
+        public async Task<Models.CodecConfiguration> GetAsync(string configurationId)
+        {
+            return await _apiClient.GetAsync(configurationId);
+        }
+
+        /// <summary>
         /// List all Codec Configurations
         /// </summary>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>
@@ -52,6 +61,10 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations
 
         internal interface IConfigurationsApiClient
         {
+            [Get("/encoding/configurations/{configuration_id}")]
+            [AllowAnyStatusCode]
+            Task<Models.CodecConfiguration> GetAsync([Path("configuration_id")] string configurationId);
+
             [Get("/encoding/configurations")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.CodecConfiguration>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);

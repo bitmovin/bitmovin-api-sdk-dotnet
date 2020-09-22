@@ -62,6 +62,15 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs
         public LiveMediaIngestApi LiveMediaIngest { get; }
 
         /// <summary>
+        /// Get Output Details
+        /// </summary>
+        /// <param name="outputId">Id of the wanted output (required)</param>
+        public async Task<Models.Output> GetAsync(string outputId)
+        {
+            return await _apiClient.GetAsync(outputId);
+        }
+
+        /// <summary>
         /// List all Outputs
         /// </summary>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>
@@ -79,6 +88,10 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs
 
         internal interface IOutputsApiClient
         {
+            [Get("/encoding/outputs/{output_id}")]
+            [AllowAnyStatusCode]
+            Task<Models.Output> GetAsync([Path("output_id")] string outputId);
+
             [Get("/encoding/outputs")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.Output>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);

@@ -188,12 +188,6 @@ namespace Bitmovin.Api.Sdk.Models
         APIFRAMEWORK,
 
         /// <summary>
-        /// ASN
-        /// </summary>
-        [EnumMember(Value = "ASN")]
-        ASN,
-
-        /// <summary>
         /// AUDIOBITRATE
         /// </summary>
         [EnumMember(Value = "AUDIO_BITRATE")]

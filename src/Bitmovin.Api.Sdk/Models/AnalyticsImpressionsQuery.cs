@@ -26,5 +26,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "filters")]
         public List<AnalyticsAbstractFilter> Filters { get; set; } = new List<AnalyticsAbstractFilter>();
+
+        /// <summary>
+        /// Number of returned impressions
+        /// </summary>
+        [JsonProperty(PropertyName = "limit")]
+        public int? Limit { get; set; }
     }
 }

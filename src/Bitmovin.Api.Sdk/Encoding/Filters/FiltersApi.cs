@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using RestEase;
 using Bitmovin.Api.Sdk.Common;
+using Bitmovin.Api.Sdk.Encoding.Filters.Type;
 using Bitmovin.Api.Sdk.Encoding.Filters.Conform;
 using Bitmovin.Api.Sdk.Encoding.Filters.Watermark;
 using Bitmovin.Api.Sdk.Encoding.Filters.AudioVolume;
@@ -18,7 +19,6 @@ using Bitmovin.Api.Sdk.Encoding.Filters.Text;
 using Bitmovin.Api.Sdk.Encoding.Filters.Interlace;
 using Bitmovin.Api.Sdk.Encoding.Filters.Unsharp;
 using Bitmovin.Api.Sdk.Encoding.Filters.Scale;
-using Bitmovin.Api.Sdk.Encoding.Filters.Type;
 
 namespace Bitmovin.Api.Sdk.Encoding.Filters
 {
@@ -29,6 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters
         public FiltersApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IFiltersApiClient>();
+            Type = new TypeApi(apiClientFactory);
             Conform = new ConformApi(apiClientFactory);
             Watermark = new WatermarkApi(apiClientFactory);
             AudioVolume = new AudioVolumeApi(apiClientFactory);
@@ -43,7 +44,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters
             Interlace = new InterlaceApi(apiClientFactory);
             Unsharp = new UnsharpApi(apiClientFactory);
             Scale = new ScaleApi(apiClientFactory);
-            Type = new TypeApi(apiClientFactory);
         }
 
         /// <summary>
@@ -51,6 +51,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters
         /// </summary>
         public static BitmovinApiBuilder<FiltersApi> Builder => new BitmovinApiBuilder<FiltersApi>();
 
+        public TypeApi Type { get; }
         public ConformApi Conform { get; }
         public WatermarkApi Watermark { get; }
         public AudioVolumeApi AudioVolume { get; }
@@ -65,7 +66,15 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters
         public InterlaceApi Interlace { get; }
         public UnsharpApi Unsharp { get; }
         public ScaleApi Scale { get; }
-        public TypeApi Type { get; }
+
+        /// <summary>
+        /// Get Filter Details
+        /// </summary>
+        /// <param name="filterId">Id of the filter (required)</param>
+        public async Task<Models.Filter> GetAsync(string filterId)
+        {
+            return await _apiClient.GetAsync(filterId);
+        }
 
         /// <summary>
         /// List all Filters
@@ -85,6 +94,10 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters
 
         internal interface IFiltersApiClient
         {
+            [Get("/encoding/filters/{filter_id}")]
+            [AllowAnyStatusCode]
+            Task<Models.Filter> GetAsync([Path("filter_id")] string filterId);
+
             [Get("/encoding/filters")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.Filter>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);

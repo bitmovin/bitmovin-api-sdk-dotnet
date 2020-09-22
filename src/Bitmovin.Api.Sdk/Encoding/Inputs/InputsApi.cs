@@ -86,6 +86,15 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs
         public ZixiApi Zixi { get; }
 
         /// <summary>
+        /// Get Input Details
+        /// </summary>
+        /// <param name="inputId">Id of the Input (required)</param>
+        public async Task<Models.Input> GetAsync(string inputId)
+        {
+            return await _apiClient.GetAsync(inputId);
+        }
+
+        /// <summary>
         /// List all Inputs
         /// </summary>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>
@@ -103,6 +112,10 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs
 
         internal interface IInputsApiClient
         {
+            [Get("/encoding/inputs/{input_id}")]
+            [AllowAnyStatusCode]
+            Task<Models.Input> GetAsync([Path("input_id")] string inputId);
+
             [Get("/encoding/inputs")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.Input>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);

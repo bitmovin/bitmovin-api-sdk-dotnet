@@ -65,6 +65,16 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings
         public ProgressiveMovApi ProgressiveMov { get; }
 
         /// <summary>
+        /// Muxing Details
+        /// </summary>
+        /// <param name="encodingId">Id of the encoding. (required)</param>
+        /// <param name="muxingId">Id of the muxing. (required)</param>
+        public async Task<Models.Muxing> GetAsync(string encodingId, string muxingId)
+        {
+            return await _apiClient.GetAsync(encodingId, muxingId);
+        }
+
+        /// <summary>
         /// List All Muxings
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
@@ -83,6 +93,10 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings
 
         internal interface IMuxingsApiClient
         {
+            [Get("/encoding/encodings/{encoding_id}/muxings/{muxing_id}")]
+            [AllowAnyStatusCode]
+            Task<Models.Muxing> GetAsync([Path("encoding_id")] string encodingId, [Path("muxing_id")] string muxingId);
+
             [Get("/encoding/encodings/{encoding_id}/muxings")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.Muxing>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap] IDictionary<String, Object> queryParams);

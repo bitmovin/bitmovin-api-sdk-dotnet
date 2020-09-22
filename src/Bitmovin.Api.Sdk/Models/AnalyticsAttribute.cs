@@ -32,12 +32,6 @@ namespace Bitmovin.Api.Sdk.Models
         ANALYTICSVERSION,
 
         /// <summary>
-        /// ASN
-        /// </summary>
-        [EnumMember(Value = "ASN")]
-        ASN,
-
-        /// <summary>
         /// AUDIOBITRATE
         /// </summary>
         [EnumMember(Value = "AUDIO_BITRATE")]
