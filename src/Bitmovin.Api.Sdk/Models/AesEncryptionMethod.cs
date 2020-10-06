@@ -11,12 +11,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// Detailed encryption method
         /// </summary>
         [EnumMember(Value = "SAMPLE_AES")]
-        SAMPLEAES,
+        SAMPLE_AES,
 
         /// <summary>
         /// Detailed encryption method
         /// </summary>
         [EnumMember(Value = "AES_128")]
-        AES128
+        AES_128
     }
 }

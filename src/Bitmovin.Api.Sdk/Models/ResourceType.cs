@@ -8,27 +8,27 @@ namespace Bitmovin.Api.Sdk.Models
     public enum ResourceType
     {
         /// <summary>
-        /// Account
+        /// ACCOUNT
         /// </summary>
         [EnumMember(Value = "account")]
-        Account,
+        ACCOUNT,
 
         /// <summary>
-        /// Encoding
+        /// ENCODING
         /// </summary>
         [EnumMember(Value = "encoding")]
-        Encoding,
+        ENCODING,
 
         /// <summary>
-        /// Player
+        /// PLAYER
         /// </summary>
         [EnumMember(Value = "player")]
-        Player,
+        PLAYER,
 
         /// <summary>
-        /// Analytics
+        /// ANALYTICS
         /// </summary>
         [EnumMember(Value = "analytics")]
-        Analytics
+        ANALYTICS
     }
 }

@@ -8,10 +8,10 @@ namespace Bitmovin.Api.Sdk.Models
     public enum EgressCategory
     {
         /// <summary>
-        /// TRANSFERRETRY
+        /// TRANSFER_RETRY
         /// </summary>
         [EnumMember(Value = "TRANSFER_RETRY")]
-        TRANSFERRETRY,
+        TRANSFER_RETRY,
 
         /// <summary>
         /// TRANSFER

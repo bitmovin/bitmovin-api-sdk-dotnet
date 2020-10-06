@@ -26,9 +26,9 @@ namespace Bitmovin.Api.Sdk.Models
         UHD,
 
         /// <summary>
-        /// UHD8K
+        /// UHD_8K
         /// </summary>
         [EnumMember(Value = "UHD_8K")]
-        UHD8K
+        UHD_8K
     }
 }

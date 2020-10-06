@@ -228,9 +228,24 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings
             public ListQueryParams CloudRegion(Models.CloudRegion cloudRegion) => SetQueryParam("cloudRegion", cloudRegion);
 
             /// <summary>
+            /// Filter encodings to only show the ones with the selectedCloudRegion specified which was selected when cloudregion:AUTO was set
+            /// </summary>
+            public ListQueryParams SelectedCloudRegion(Models.CloudRegion selectedCloudRegion) => SetQueryParam("selectedCloudRegion", selectedCloudRegion);
+
+            /// <summary>
             /// Filter encodings to only show the ones with the encoderVersion specified.
             /// </summary>
             public ListQueryParams EncoderVersion(string encoderVersion) => SetQueryParam("encoderVersion", encoderVersion);
+
+            /// <summary>
+            /// Filter encodings to only show the ones with the encoderVersion specified that was actually used for the encoding.
+            /// </summary>
+            public ListQueryParams SelectedEncoderVersion(string selectedEncoderVersion) => SetQueryParam("selectedEncoderVersion", selectedEncoderVersion);
+
+            /// <summary>
+            /// Filter encodings to only show the ones with the encodingMode specified that was actually used for the encoding.
+            /// </summary>
+            public ListQueryParams SelectedEncodingMode(Models.EncodingMode selectedEncodingMode) => SetQueryParam("selectedEncodingMode", selectedEncodingMode);
 
             /// <summary>
             /// Filter encodings to only show the ones with this exact name.

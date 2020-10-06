@@ -157,7 +157,7 @@
   </span>
   <a id="Bitmovin_Api_Sdk_Models_Subtask_ErrorAt_" data-uid="Bitmovin.Api.Sdk.Models.Subtask.ErrorAt*"></a>
   <h4 id="Bitmovin_Api_Sdk_Models_Subtask_ErrorAt" data-uid="Bitmovin.Api.Sdk.Models.Subtask.ErrorAt">ErrorAt</h4>
-  <div class="markdown level1 summary"><p>Timestamp when the subtask status changed to 'ERROR', returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</p>
+  <div class="markdown level1 summary"><p>Timestamp when the subtask status changed to 'ERROR', returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp is deprecated and is equivalent to finishedAt in case of an 'ERROR'.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -188,7 +188,7 @@
   </span>
   <a id="Bitmovin_Api_Sdk_Models_Subtask_FinishedAt_" data-uid="Bitmovin.Api.Sdk.Models.Subtask.FinishedAt*"></a>
   <h4 id="Bitmovin_Api_Sdk_Models_Subtask_FinishedAt" data-uid="Bitmovin.Api.Sdk.Models.Subtask.FinishedAt">FinishedAt</h4>
-  <div class="markdown level1 summary"><p>Timestamp when the subtask status changed to 'FINISHED', returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</p>
+  <div class="markdown level1 summary"><p>Timestamp when the subtask status changed to a final state like  'FINISHED', 'ERROR', 'CANCELED', returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp might be inaccurate for subtasks which ran prior to the <a href="https://bitmovin.com/docs/encoding/changelogs/rest">1.50.0 REST API release</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -343,7 +343,7 @@
   </span>
   <a id="Bitmovin_Api_Sdk_Models_Subtask_RunningAt_" data-uid="Bitmovin.Api.Sdk.Models.Subtask.RunningAt*"></a>
   <h4 id="Bitmovin_Api_Sdk_Models_Subtask_RunningAt" data-uid="Bitmovin.Api.Sdk.Models.Subtask.RunningAt">RunningAt</h4>
-  <div class="markdown level1 summary"><p>Timestamp when the subtask status changed to to 'RUNNING', returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</p>
+  <div class="markdown level1 summary"><p>Timestamp when the subtask status changed to 'RUNNING', returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

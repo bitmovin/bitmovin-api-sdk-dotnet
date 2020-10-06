@@ -8,10 +8,10 @@ namespace Bitmovin.Api.Sdk.Models
     public enum AclPermission
     {
         /// <summary>
-        /// PUBLICREAD
+        /// PUBLIC_READ
         /// </summary>
         [EnumMember(Value = "PUBLIC_READ")]
-        PUBLICREAD,
+        PUBLIC_READ,
 
         /// <summary>
         /// PRIVATE

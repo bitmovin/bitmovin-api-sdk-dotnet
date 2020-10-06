@@ -8,10 +8,10 @@ namespace Bitmovin.Api.Sdk.Models
     public enum OutputType
     {
         /// <summary>
-        /// AKAMAINETSTORAGE
+        /// AKAMAI_NETSTORAGE
         /// </summary>
         [EnumMember(Value = "AKAMAI_NETSTORAGE")]
-        AKAMAINETSTORAGE,
+        AKAMAI_NETSTORAGE,
 
         /// <summary>
         /// AZURE
@@ -20,10 +20,10 @@ namespace Bitmovin.Api.Sdk.Models
         AZURE,
 
         /// <summary>
-        /// GENERICS3
+        /// GENERIC_S3
         /// </summary>
         [EnumMember(Value = "GENERIC_S3")]
-        GENERICS3,
+        GENERIC_S3,
 
         /// <summary>
         /// GCS
@@ -50,10 +50,10 @@ namespace Bitmovin.Api.Sdk.Models
         S3,
 
         /// <summary>
-        /// S3ROLEBASED
+        /// S3_ROLE_BASED
         /// </summary>
         [EnumMember(Value = "S3_ROLE_BASED")]
-        S3ROLEBASED,
+        S3_ROLE_BASED,
 
         /// <summary>
         /// SFTP
@@ -62,21 +62,21 @@ namespace Bitmovin.Api.Sdk.Models
         SFTP,
 
         /// <summary>
-        /// AKAMAIMSL
+        /// AKAMAI_MSL
         /// </summary>
         [EnumMember(Value = "AKAMAI_MSL")]
-        AKAMAIMSL,
+        AKAMAI_MSL,
 
         /// <summary>
-        /// LIVEMEDIAINGEST
+        /// LIVE_MEDIA_INGEST
         /// </summary>
         [EnumMember(Value = "LIVE_MEDIA_INGEST")]
-        LIVEMEDIAINGEST,
+        LIVE_MEDIA_INGEST,
 
         /// <summary>
-        /// GCSSERVICEACCOUNT
+        /// GCS_SERVICE_ACCOUNT
         /// </summary>
         [EnumMember(Value = "GCS_SERVICE_ACCOUNT")]
-        GCSSERVICEACCOUNT
+        GCS_SERVICE_ACCOUNT
     }
 }

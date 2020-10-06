@@ -20,10 +20,10 @@ namespace Bitmovin.Api.Sdk.Models
         DISCONNECTED,
 
         /// <summary>
-        /// WAITINGFORFIRSTCONNECT
+        /// WAITING_FOR_FIRST_CONNECT
         /// </summary>
         [EnumMember(Value = "WAITING_FOR_FIRST_CONNECT")]
-        WAITINGFORFIRSTCONNECT,
+        WAITING_FOR_FIRST_CONNECT,
 
         /// <summary>
         /// ERROR
@@ -32,10 +32,10 @@ namespace Bitmovin.Api.Sdk.Models
         ERROR,
 
         /// <summary>
-        /// NOTAVAILABLE
+        /// NOT_AVAILABLE
         /// </summary>
         [EnumMember(Value = "NOT_AVAILABLE")]
-        NOTAVAILABLE,
+        NOT_AVAILABLE,
 
         /// <summary>
         /// FINISHED

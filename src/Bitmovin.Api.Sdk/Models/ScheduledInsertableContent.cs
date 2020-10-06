@@ -22,7 +22,7 @@ namespace Bitmovin.Api.Sdk.Models
         public string ContentId { get; set; }
 
         /// <summary>
-        /// Time to to play the content in UTC: YYYY-MM-DDThh:mm:ssZ, if this property is not set the content will be played as soon as possible.
+        /// Time to play the content in UTC: YYYY-MM-DDThh:mm:ssZ, if this property is not set the content will be played as soon as possible.
         /// </summary>
         [JsonProperty(PropertyName = "runAt")]
         public DateTime? RunAt { get; set; }

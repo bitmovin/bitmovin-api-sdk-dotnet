@@ -11,7 +11,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Determines the algorithm used for scaling
         /// </summary>
         [EnumMember(Value = "FAST_BILINEAR")]
-        FASTBILINEAR,
+        FAST_BILINEAR,
 
         /// <summary>
         /// Determines the algorithm used for scaling
@@ -35,19 +35,19 @@ namespace Bitmovin.Api.Sdk.Models
         /// Determines the algorithm used for scaling
         /// </summary>
         [EnumMember(Value = "NEAREST_NEIGHBOR")]
-        NEARESTNEIGHBOR,
+        NEAREST_NEIGHBOR,
 
         /// <summary>
         /// Determines the algorithm used for scaling
         /// </summary>
         [EnumMember(Value = "AVERAGING_AREA")]
-        AVERAGINGAREA,
+        AVERAGING_AREA,
 
         /// <summary>
         /// Determines the algorithm used for scaling
         /// </summary>
         [EnumMember(Value = "BICUBIC_LUMA_BILINEAR_CHROMA")]
-        BICUBICLUMABILINEARCHROMA,
+        BICUBIC_LUMA_BILINEAR_CHROMA,
 
         /// <summary>
         /// Determines the algorithm used for scaling

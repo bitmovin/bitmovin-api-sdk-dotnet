@@ -34,22 +34,22 @@ namespace Bitmovin.Api.Sdk.Models
         public DateTime? QueuedAt { get; internal set; }
 
         /// <summary>
-        /// Timestamp when the encoding status changed to to \&quot;RUNNING\&quot;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
+        /// Timestamp when the encoding status changed to \&quot;RUNNING\&quot;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
         /// </summary>
         [JsonProperty(PropertyName = "runningAt")]
         public DateTime? RunningAt { get; internal set; }
 
         /// <summary>
-        /// Timestamp when the encoding status changed to \&quot;FINISHED\&quot;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
+        /// Timestamp when the encoding status changed to &#39;FINISHED&#39;, &#39;ERROR&#39;, &#39;CANCELED&#39;, or &#39;TRANSFER_ERROR&#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp might be inaccurate for encodings which ran prior to the [1.50.0 REST API release](https://bitmovin.com/docs/encoding/changelogs/rest). 
         /// </summary>
         [JsonProperty(PropertyName = "finishedAt")]
         public DateTime? FinishedAt { get; internal set; }
 
         /// <summary>
-        /// Timestamp when the encoding status changed to \&quot;ERROR\&quot;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
+        /// Timestamp when the encoding status changed to &#39;ERROR&#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp is deprecated and is equivalent to finishedAt in case of an &#39;ERROR&#39;. 
         /// </summary>
         [JsonProperty(PropertyName = "errorAt")]
-        public DateTime? ErrorAt { get; internal set; }
+        public DateTime? ErrorAt { get; set; }
 
         /// <summary>
         /// Progress of the encoding in percent
@@ -88,19 +88,19 @@ namespace Bitmovin.Api.Sdk.Models
         public InfrastructureSettings Infrastructure { get; set; }
 
         /// <summary>
-        /// Will be set to the encoder version that was actually used for the encoding. This is especially useful when starting an encoding with a version tag like STABLE or BETA.
+        /// After the encoding has been started, this will contain the encoder version that was actually used. Especially useful when starting an encoding with a version tag like STABLE or BETA.
         /// </summary>
         [JsonProperty(PropertyName = "selectedEncoderVersion")]
         public string SelectedEncoderVersion { get; internal set; }
 
         /// <summary>
-        /// Will be set to the encoding mode that was actually used for the encoding. This is especially useful when starting an encoding with encoding mode STANDARD.
+        /// After the encoding has been started, this will contain the encoding mode that was actually used. Especially useful when starting an encoding with encoding mode STANDARD.
         /// </summary>
         [JsonProperty(PropertyName = "selectedEncodingMode")]
         public EncodingMode? SelectedEncodingMode { get; internal set; }
 
         /// <summary>
-        /// Contains the region which was selected when cloudregion:AUTO was specified
+        /// After the encoding has been started, this will contain the cloud region that was actually used. This will differ from cloudRegion if cloudRegion was set to an unspecific region (e.g. &#39;AUTO&#39;)
         /// </summary>
         [JsonProperty(PropertyName = "selectedCloudRegion")]
         public CloudRegion? SelectedCloudRegion { get; internal set; }

@@ -14,16 +14,16 @@ namespace Bitmovin.Api.Sdk.Models
         AES,
 
         /// <summary>
-        /// DESede
+        /// DESEDE
         /// </summary>
         [EnumMember(Value = "DESede")]
-        DESede,
+        DESEDE,
 
         /// <summary>
-        /// Blowfish
+        /// BLOWFISH
         /// </summary>
         [EnumMember(Value = "Blowfish")]
-        Blowfish,
+        BLOWFISH,
 
         /// <summary>
         /// RSA

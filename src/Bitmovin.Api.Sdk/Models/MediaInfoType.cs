@@ -26,10 +26,10 @@ namespace Bitmovin.Api.Sdk.Models
         SUBTITLES,
 
         /// <summary>
-        /// CLOSEDCAPTIONS
+        /// CLOSED_CAPTIONS
         /// </summary>
         [EnumMember(Value = "CLOSED_CAPTIONS")]
-        CLOSEDCAPTIONS,
+        CLOSED_CAPTIONS,
 
         /// <summary>
         /// VTT

@@ -20,10 +20,10 @@ namespace Bitmovin.Api.Sdk.Models
         SCHEDULED,
 
         /// <summary>
-        /// TOBEDESCHEDULED
+        /// TO_BE_DESCHEDULED
         /// </summary>
         [EnumMember(Value = "TO_BE_DESCHEDULED")]
-        TOBEDESCHEDULED,
+        TO_BE_DESCHEDULED,
 
         /// <summary>
         /// DESCHEDULED

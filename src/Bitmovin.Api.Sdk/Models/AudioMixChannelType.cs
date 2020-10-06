@@ -11,19 +11,19 @@ namespace Bitmovin.Api.Sdk.Models
         /// Type of this channel
         /// </summary>
         [EnumMember(Value = "CHANNEL_NUMBER")]
-        CHANNELNUMBER,
+        CHANNEL_NUMBER,
 
         /// <summary>
         /// Type of this channel
         /// </summary>
         [EnumMember(Value = "FRONT_LEFT")]
-        FRONTLEFT,
+        FRONT_LEFT,
 
         /// <summary>
         /// Type of this channel
         /// </summary>
         [EnumMember(Value = "FRONT_RIGHT")]
-        FRONTRIGHT,
+        FRONT_RIGHT,
 
         /// <summary>
         /// Type of this channel
@@ -35,30 +35,30 @@ namespace Bitmovin.Api.Sdk.Models
         /// Type of this channel
         /// </summary>
         [EnumMember(Value = "LOW_FREQUENCY")]
-        LOWFREQUENCY,
+        LOW_FREQUENCY,
 
         /// <summary>
         /// Type of this channel
         /// </summary>
         [EnumMember(Value = "BACK_LEFT")]
-        BACKLEFT,
+        BACK_LEFT,
 
         /// <summary>
         /// Type of this channel
         /// </summary>
         [EnumMember(Value = "BACK_RIGHT")]
-        BACKRIGHT,
+        BACK_RIGHT,
 
         /// <summary>
         /// Type of this channel
         /// </summary>
         [EnumMember(Value = "SURROUND_LEFT")]
-        SURROUNDLEFT,
+        SURROUND_LEFT,
 
         /// <summary>
         /// Type of this channel
         /// </summary>
         [EnumMember(Value = "SURROUND_RIGHT")]
-        SURROUNDRIGHT
+        SURROUND_RIGHT
     }
 }

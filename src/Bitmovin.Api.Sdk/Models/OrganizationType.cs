@@ -8,15 +8,15 @@ namespace Bitmovin.Api.Sdk.Models
     public enum OrganizationType
     {
         /// <summary>
-        /// ROOTORGANIZATION
+        /// ROOT_ORGANIZATION
         /// </summary>
         [EnumMember(Value = "ROOT_ORGANIZATION")]
-        ROOTORGANIZATION,
+        ROOT_ORGANIZATION,
 
         /// <summary>
-        /// SUBORGANIZATION
+        /// SUB_ORGANIZATION
         /// </summary>
         [EnumMember(Value = "SUB_ORGANIZATION")]
-        SUBORGANIZATION
+        SUB_ORGANIZATION
     }
 }

@@ -8,196 +8,196 @@ namespace Bitmovin.Api.Sdk.Models
     public enum AdAnalyticsAttribute
     {
         /// <summary>
-        /// ADIMPRESSIONID
+        /// AD_IMPRESSION_ID
         /// </summary>
         [EnumMember(Value = "AD_IMPRESSION_ID")]
-        ADIMPRESSIONID,
+        AD_IMPRESSION_ID,
 
         /// <summary>
-        /// ADCLICKTHROUGHURL
+        /// AD_CLICKTHROUGH_URL
         /// </summary>
         [EnumMember(Value = "AD_CLICKTHROUGH_URL")]
-        ADCLICKTHROUGHURL,
+        AD_CLICKTHROUGH_URL,
 
         /// <summary>
-        /// ADDESCRIPTION
+        /// AD_DESCRIPTION
         /// </summary>
         [EnumMember(Value = "AD_DESCRIPTION")]
-        ADDESCRIPTION,
+        AD_DESCRIPTION,
 
         /// <summary>
-        /// ADDURATION
+        /// AD_DURATION
         /// </summary>
         [EnumMember(Value = "AD_DURATION")]
-        ADDURATION,
+        AD_DURATION,
 
         /// <summary>
-        /// ADFALLBACKINDEX
+        /// AD_FALLBACK_INDEX
         /// </summary>
         [EnumMember(Value = "AD_FALLBACK_INDEX")]
-        ADFALLBACKINDEX,
+        AD_FALLBACK_INDEX,
 
         /// <summary>
-        /// ADID
+        /// AD_ID
         /// </summary>
         [EnumMember(Value = "AD_ID")]
-        ADID,
+        AD_ID,
 
         /// <summary>
-        /// ADIDPLAYER
+        /// AD_ID_PLAYER
         /// </summary>
         [EnumMember(Value = "AD_ID_PLAYER")]
-        ADIDPLAYER,
+        AD_ID_PLAYER,
 
         /// <summary>
-        /// ADISPERSISTENT
+        /// AD_IS_PERSISTENT
         /// </summary>
         [EnumMember(Value = "AD_IS_PERSISTENT")]
-        ADISPERSISTENT,
+        AD_IS_PERSISTENT,
 
         /// <summary>
-        /// ADMODULE
+        /// AD_MODULE
         /// </summary>
         [EnumMember(Value = "AD_MODULE")]
-        ADMODULE,
+        AD_MODULE,
 
         /// <summary>
-        /// ADOFFSET
+        /// AD_OFFSET
         /// </summary>
         [EnumMember(Value = "AD_OFFSET")]
-        ADOFFSET,
+        AD_OFFSET,
 
         /// <summary>
-        /// ADPLAYBACKHEIGHT
+        /// AD_PLAYBACK_HEIGHT
         /// </summary>
         [EnumMember(Value = "AD_PLAYBACK_HEIGHT")]
-        ADPLAYBACKHEIGHT,
+        AD_PLAYBACK_HEIGHT,
 
         /// <summary>
-        /// ADPLAYBACKWIDTH
+        /// AD_PLAYBACK_WIDTH
         /// </summary>
         [EnumMember(Value = "AD_PLAYBACK_WIDTH")]
-        ADPLAYBACKWIDTH,
+        AD_PLAYBACK_WIDTH,
 
         /// <summary>
-        /// ADPODPOSITION
+        /// AD_POD_POSITION
         /// </summary>
         [EnumMember(Value = "AD_POD_POSITION")]
-        ADPODPOSITION,
+        AD_POD_POSITION,
 
         /// <summary>
-        /// ADPOSITION
+        /// AD_POSITION
         /// </summary>
         [EnumMember(Value = "AD_POSITION")]
-        ADPOSITION,
+        AD_POSITION,
 
         /// <summary>
-        /// ADPRELOADOFFSET
+        /// AD_PRELOAD_OFFSET
         /// </summary>
         [EnumMember(Value = "AD_PRELOAD_OFFSET")]
-        ADPRELOADOFFSET,
+        AD_PRELOAD_OFFSET,
 
         /// <summary>
-        /// ADREPLACECONTENTDURATION
+        /// AD_REPLACE_CONTENT_DURATION
         /// </summary>
         [EnumMember(Value = "AD_REPLACE_CONTENT_DURATION")]
-        ADREPLACECONTENTDURATION,
+        AD_REPLACE_CONTENT_DURATION,
 
         /// <summary>
-        /// ADSCHEDULETIME
+        /// AD_SCHEDULE_TIME
         /// </summary>
         [EnumMember(Value = "AD_SCHEDULE_TIME")]
-        ADSCHEDULETIME,
+        AD_SCHEDULE_TIME,
 
         /// <summary>
-        /// ADSKIPAFTER
+        /// AD_SKIP_AFTER
         /// </summary>
         [EnumMember(Value = "AD_SKIP_AFTER")]
-        ADSKIPAFTER,
+        AD_SKIP_AFTER,
 
         /// <summary>
-        /// ADSKIPPABLE
+        /// AD_SKIPPABLE
         /// </summary>
         [EnumMember(Value = "AD_SKIPPABLE")]
-        ADSKIPPABLE,
+        AD_SKIPPABLE,
 
         /// <summary>
-        /// ADSTARTUPTIME
+        /// AD_STARTUP_TIME
         /// </summary>
         [EnumMember(Value = "AD_STARTUP_TIME")]
-        ADSTARTUPTIME,
+        AD_STARTUP_TIME,
 
         /// <summary>
-        /// ADSYSTEM
+        /// AD_SYSTEM
         /// </summary>
         [EnumMember(Value = "AD_SYSTEM")]
-        ADSYSTEM,
+        AD_SYSTEM,
 
         /// <summary>
-        /// ADTAGPATH
+        /// AD_TAG_PATH
         /// </summary>
         [EnumMember(Value = "AD_TAG_PATH")]
-        ADTAGPATH,
+        AD_TAG_PATH,
 
         /// <summary>
-        /// ADTAGSERVER
+        /// AD_TAG_SERVER
         /// </summary>
         [EnumMember(Value = "AD_TAG_SERVER")]
-        ADTAGSERVER,
+        AD_TAG_SERVER,
 
         /// <summary>
-        /// ADTAGTYPE
+        /// AD_TAG_TYPE
         /// </summary>
         [EnumMember(Value = "AD_TAG_TYPE")]
-        ADTAGTYPE,
+        AD_TAG_TYPE,
 
         /// <summary>
-        /// ADTAGURL
+        /// AD_TAG_URL
         /// </summary>
         [EnumMember(Value = "AD_TAG_URL")]
-        ADTAGURL,
+        AD_TAG_URL,
 
         /// <summary>
-        /// ADTITLE
+        /// AD_TITLE
         /// </summary>
         [EnumMember(Value = "AD_TITLE")]
-        ADTITLE,
+        AD_TITLE,
 
         /// <summary>
-        /// ADWRAPPERADSCOUNT
+        /// AD_WRAPPER_ADS_COUNT
         /// </summary>
         [EnumMember(Value = "AD_WRAPPER_ADS_COUNT")]
-        ADWRAPPERADSCOUNT,
+        AD_WRAPPER_ADS_COUNT,
 
         /// <summary>
-        /// ADVERTISERNAME
+        /// ADVERTISER_NAME
         /// </summary>
         [EnumMember(Value = "ADVERTISER_NAME")]
-        ADVERTISERNAME,
+        ADVERTISER_NAME,
 
         /// <summary>
-        /// ANALYTICSVERSION
+        /// ANALYTICS_VERSION
         /// </summary>
         [EnumMember(Value = "ANALYTICS_VERSION")]
-        ANALYTICSVERSION,
+        ANALYTICS_VERSION,
 
         /// <summary>
-        /// APIFRAMEWORK
+        /// API_FRAMEWORK
         /// </summary>
         [EnumMember(Value = "API_FRAMEWORK")]
-        APIFRAMEWORK,
+        API_FRAMEWORK,
 
         /// <summary>
-        /// AUDIOBITRATE
+        /// AUDIO_BITRATE
         /// </summary>
         [EnumMember(Value = "AUDIO_BITRATE")]
-        AUDIOBITRATE,
+        AUDIO_BITRATE,
 
         /// <summary>
-        /// AUDIOCODEC
+        /// AUDIO_CODEC
         /// </summary>
         [EnumMember(Value = "AUDIO_CODEC")]
-        AUDIOCODEC,
+        AUDIO_CODEC,
 
         /// <summary>
         /// AUTOPLAY
@@ -212,16 +212,16 @@ namespace Bitmovin.Api.Sdk.Models
         BROWSER,
 
         /// <summary>
-        /// BROWSERVERSIONMAJOR
+        /// BROWSER_VERSION_MAJOR
         /// </summary>
         [EnumMember(Value = "BROWSER_VERSION_MAJOR")]
-        BROWSERVERSIONMAJOR,
+        BROWSER_VERSION_MAJOR,
 
         /// <summary>
-        /// CDNPROVIDER
+        /// CDN_PROVIDER
         /// </summary>
         [EnumMember(Value = "CDN_PROVIDER")]
-        CDNPROVIDER,
+        CDN_PROVIDER,
 
         /// <summary>
         /// CITY
@@ -230,16 +230,16 @@ namespace Bitmovin.Api.Sdk.Models
         CITY,
 
         /// <summary>
-        /// CLICKPERCENTAGE
+        /// CLICK_PERCENTAGE
         /// </summary>
         [EnumMember(Value = "CLICK_PERCENTAGE")]
-        CLICKPERCENTAGE,
+        CLICK_PERCENTAGE,
 
         /// <summary>
-        /// CLICKPOSITION
+        /// CLICK_POSITION
         /// </summary>
         [EnumMember(Value = "CLICK_POSITION")]
-        CLICKPOSITION,
+        CLICK_POSITION,
 
         /// <summary>
         /// CLICKED
@@ -248,22 +248,22 @@ namespace Bitmovin.Api.Sdk.Models
         CLICKED,
 
         /// <summary>
-        /// CLIENTTIME
+        /// CLIENT_TIME
         /// </summary>
         [EnumMember(Value = "CLIENT_TIME")]
-        CLIENTTIME,
+        CLIENT_TIME,
 
         /// <summary>
-        /// CLOSEPERCENTAGE
+        /// CLOSE_PERCENTAGE
         /// </summary>
         [EnumMember(Value = "CLOSE_PERCENTAGE")]
-        CLOSEPERCENTAGE,
+        CLOSE_PERCENTAGE,
 
         /// <summary>
-        /// CLOSEPOSITION
+        /// CLOSE_POSITION
         /// </summary>
         [EnumMember(Value = "CLOSE_POSITION")]
-        CLOSEPOSITION,
+        CLOSE_POSITION,
 
         /// <summary>
         /// CLOSED
@@ -284,52 +284,52 @@ namespace Bitmovin.Api.Sdk.Models
         COUNTRY,
 
         /// <summary>
-        /// CREATIVEADID
+        /// CREATIVE_AD_ID
         /// </summary>
         [EnumMember(Value = "CREATIVE_AD_ID")]
-        CREATIVEADID,
+        CREATIVE_AD_ID,
 
         /// <summary>
-        /// CREATIVEID
+        /// CREATIVE_ID
         /// </summary>
         [EnumMember(Value = "CREATIVE_ID")]
-        CREATIVEID,
+        CREATIVE_ID,
 
         /// <summary>
-        /// CUSTOMDATA1
+        /// CUSTOM_DATA_1
         /// </summary>
         [EnumMember(Value = "CUSTOM_DATA_1")]
-        CUSTOMDATA1,
+        CUSTOM_DATA_1,
 
         /// <summary>
-        /// CUSTOMDATA2
+        /// CUSTOM_DATA_2
         /// </summary>
         [EnumMember(Value = "CUSTOM_DATA_2")]
-        CUSTOMDATA2,
+        CUSTOM_DATA_2,
 
         /// <summary>
-        /// CUSTOMDATA3
+        /// CUSTOM_DATA_3
         /// </summary>
         [EnumMember(Value = "CUSTOM_DATA_3")]
-        CUSTOMDATA3,
+        CUSTOM_DATA_3,
 
         /// <summary>
-        /// CUSTOMDATA4
+        /// CUSTOM_DATA_4
         /// </summary>
         [EnumMember(Value = "CUSTOM_DATA_4")]
-        CUSTOMDATA4,
+        CUSTOM_DATA_4,
 
         /// <summary>
-        /// CUSTOMDATA5
+        /// CUSTOM_DATA_5
         /// </summary>
         [EnumMember(Value = "CUSTOM_DATA_5")]
-        CUSTOMDATA5,
+        CUSTOM_DATA_5,
 
         /// <summary>
-        /// CUSTOMUSERID
+        /// CUSTOM_USER_ID
         /// </summary>
         [EnumMember(Value = "CUSTOM_USER_ID")]
-        CUSTOMUSERID,
+        CUSTOM_USER_ID,
 
         /// <summary>
         /// DAY
@@ -338,22 +338,22 @@ namespace Bitmovin.Api.Sdk.Models
         DAY,
 
         /// <summary>
-        /// DEALID
+        /// DEAL_ID
         /// </summary>
         [EnumMember(Value = "DEAL_ID")]
-        DEALID,
+        DEAL_ID,
 
         /// <summary>
-        /// DEVICECLASS
+        /// DEVICE_CLASS
         /// </summary>
         [EnumMember(Value = "DEVICE_CLASS")]
-        DEVICECLASS,
+        DEVICE_CLASS,
 
         /// <summary>
-        /// DEVICETYPE
+        /// DEVICE_TYPE
         /// </summary>
         [EnumMember(Value = "DEVICE_TYPE")]
-        DEVICETYPE,
+        DEVICE_TYPE,
 
         /// <summary>
         /// DOMAIN
@@ -362,34 +362,34 @@ namespace Bitmovin.Api.Sdk.Models
         DOMAIN,
 
         /// <summary>
-        /// ERRORCODE
+        /// ERROR_CODE
         /// </summary>
         [EnumMember(Value = "ERROR_CODE")]
-        ERRORCODE,
+        ERROR_CODE,
 
         /// <summary>
-        /// ERRORPERCENTAGE
+        /// ERROR_PERCENTAGE
         /// </summary>
         [EnumMember(Value = "ERROR_PERCENTAGE")]
-        ERRORPERCENTAGE,
+        ERROR_PERCENTAGE,
 
         /// <summary>
-        /// ERRORPOSITION
+        /// ERROR_POSITION
         /// </summary>
         [EnumMember(Value = "ERROR_POSITION")]
-        ERRORPOSITION,
+        ERROR_POSITION,
 
         /// <summary>
-        /// EXITPOSITION
+        /// EXIT_POSITION
         /// </summary>
         [EnumMember(Value = "EXIT_POSITION")]
-        EXITPOSITION,
+        EXIT_POSITION,
 
         /// <summary>
-        /// EXPERIMENTNAME
+        /// EXPERIMENT_NAME
         /// </summary>
         [EnumMember(Value = "EXPERIMENT_NAME")]
-        EXPERIMENTNAME,
+        EXPERIMENT_NAME,
 
         /// <summary>
         /// HOUR
@@ -398,16 +398,16 @@ namespace Bitmovin.Api.Sdk.Models
         HOUR,
 
         /// <summary>
-        /// IPADDRESS
+        /// IP_ADDRESS
         /// </summary>
         [EnumMember(Value = "IP_ADDRESS")]
-        IPADDRESS,
+        IP_ADDRESS,
 
         /// <summary>
-        /// ISLINEAR
+        /// IS_LINEAR
         /// </summary>
         [EnumMember(Value = "IS_LINEAR")]
-        ISLINEAR,
+        IS_LINEAR,
 
         /// <summary>
         /// ISP
@@ -422,34 +422,34 @@ namespace Bitmovin.Api.Sdk.Models
         LANGUAGE,
 
         /// <summary>
-        /// LICENSEKEY
+        /// LICENSE_KEY
         /// </summary>
         [EnumMember(Value = "LICENSE_KEY")]
-        LICENSEKEY,
+        LICENSE_KEY,
 
         /// <summary>
-        /// MANIFESTDOWNLOADTIME
+        /// MANIFEST_DOWNLOAD_TIME
         /// </summary>
         [EnumMember(Value = "MANIFEST_DOWNLOAD_TIME")]
-        MANIFESTDOWNLOADTIME,
+        MANIFEST_DOWNLOAD_TIME,
 
         /// <summary>
-        /// MEDIAPATH
+        /// MEDIA_PATH
         /// </summary>
         [EnumMember(Value = "MEDIA_PATH")]
-        MEDIAPATH,
+        MEDIA_PATH,
 
         /// <summary>
-        /// MEDIASERVER
+        /// MEDIA_SERVER
         /// </summary>
         [EnumMember(Value = "MEDIA_SERVER")]
-        MEDIASERVER,
+        MEDIA_SERVER,
 
         /// <summary>
-        /// MEDIAURL
+        /// MEDIA_URL
         /// </summary>
         [EnumMember(Value = "MEDIA_URL")]
-        MEDIAURL,
+        MEDIA_URL,
 
         /// <summary>
         /// MIDPOINT
@@ -458,10 +458,10 @@ namespace Bitmovin.Api.Sdk.Models
         MIDPOINT,
 
         /// <summary>
-        /// MINSUGGESTEDDURATION
+        /// MIN_SUGGESTED_DURATION
         /// </summary>
         [EnumMember(Value = "MIN_SUGGESTED_DURATION")]
-        MINSUGGESTEDDURATION,
+        MIN_SUGGESTED_DURATION,
 
         /// <summary>
         /// MINUTE
@@ -482,22 +482,22 @@ namespace Bitmovin.Api.Sdk.Models
         OPERATINGSYSTEM,
 
         /// <summary>
-        /// OPERATINGSYSTEMVERSIONMAJOR
+        /// OPERATINGSYSTEM_VERSION_MAJOR
         /// </summary>
         [EnumMember(Value = "OPERATINGSYSTEM_VERSION_MAJOR")]
-        OPERATINGSYSTEMVERSIONMAJOR,
+        OPERATINGSYSTEM_VERSION_MAJOR,
 
         /// <summary>
-        /// PAGELOADTIME
+        /// PAGE_LOAD_TIME
         /// </summary>
         [EnumMember(Value = "PAGE_LOAD_TIME")]
-        PAGELOADTIME,
+        PAGE_LOAD_TIME,
 
         /// <summary>
-        /// PAGELOADTYPE
+        /// PAGE_LOAD_TYPE
         /// </summary>
         [EnumMember(Value = "PAGE_LOAD_TYPE")]
-        PAGELOADTYPE,
+        PAGE_LOAD_TYPE,
 
         /// <summary>
         /// PATH
@@ -506,10 +506,10 @@ namespace Bitmovin.Api.Sdk.Models
         PATH,
 
         /// <summary>
-        /// PERCENTAGEINVIEWPORT
+        /// PERCENTAGE_IN_VIEWPORT
         /// </summary>
         [EnumMember(Value = "PERCENTAGE_IN_VIEWPORT")]
-        PERCENTAGEINVIEWPORT,
+        PERCENTAGE_IN_VIEWPORT,
 
         /// <summary>
         /// PLATFORM
@@ -518,10 +518,10 @@ namespace Bitmovin.Api.Sdk.Models
         PLATFORM,
 
         /// <summary>
-        /// PLAYPERCENTAGE
+        /// PLAY_PERCENTAGE
         /// </summary>
         [EnumMember(Value = "PLAY_PERCENTAGE")]
-        PLAYPERCENTAGE,
+        PLAY_PERCENTAGE,
 
         /// <summary>
         /// PLAYER
@@ -530,40 +530,40 @@ namespace Bitmovin.Api.Sdk.Models
         PLAYER,
 
         /// <summary>
-        /// PLAYERKEY
+        /// PLAYER_KEY
         /// </summary>
         [EnumMember(Value = "PLAYER_KEY")]
-        PLAYERKEY,
+        PLAYER_KEY,
 
         /// <summary>
-        /// PLAYERSTARTUPTIME
+        /// PLAYER_STARTUPTIME
         /// </summary>
         [EnumMember(Value = "PLAYER_STARTUPTIME")]
-        PLAYERSTARTUPTIME,
+        PLAYER_STARTUPTIME,
 
         /// <summary>
-        /// PLAYERTECH
+        /// PLAYER_TECH
         /// </summary>
         [EnumMember(Value = "PLAYER_TECH")]
-        PLAYERTECH,
+        PLAYER_TECH,
 
         /// <summary>
-        /// PLAYERVERSION
+        /// PLAYER_VERSION
         /// </summary>
         [EnumMember(Value = "PLAYER_VERSION")]
-        PLAYERVERSION,
+        PLAYER_VERSION,
 
         /// <summary>
-        /// QUARTILE1
+        /// QUARTILE_1
         /// </summary>
         [EnumMember(Value = "QUARTILE_1")]
-        QUARTILE1,
+        QUARTILE_1,
 
         /// <summary>
-        /// QUARTILE3
+        /// QUARTILE_3
         /// </summary>
         [EnumMember(Value = "QUARTILE_3")]
-        QUARTILE3,
+        QUARTILE_3,
 
         /// <summary>
         /// REGION
@@ -572,22 +572,22 @@ namespace Bitmovin.Api.Sdk.Models
         REGION,
 
         /// <summary>
-        /// SCALEFACTOR
+        /// SCALE_FACTOR
         /// </summary>
         [EnumMember(Value = "SCALE_FACTOR")]
-        SCALEFACTOR,
+        SCALE_FACTOR,
 
         /// <summary>
-        /// SCREENHEIGHT
+        /// SCREEN_HEIGHT
         /// </summary>
         [EnumMember(Value = "SCREEN_HEIGHT")]
-        SCREENHEIGHT,
+        SCREEN_HEIGHT,
 
         /// <summary>
-        /// SCREENWIDTH
+        /// SCREEN_WIDTH
         /// </summary>
         [EnumMember(Value = "SCREEN_WIDTH")]
-        SCREENWIDTH,
+        SCREEN_WIDTH,
 
         /// <summary>
         /// SIZE
@@ -596,16 +596,16 @@ namespace Bitmovin.Api.Sdk.Models
         SIZE,
 
         /// <summary>
-        /// SKIPPERCENTAGE
+        /// SKIP_PERCENTAGE
         /// </summary>
         [EnumMember(Value = "SKIP_PERCENTAGE")]
-        SKIPPERCENTAGE,
+        SKIP_PERCENTAGE,
 
         /// <summary>
-        /// SKIPPOSITION
+        /// SKIP_POSITION
         /// </summary>
         [EnumMember(Value = "SKIP_POSITION")]
-        SKIPPOSITION,
+        SKIP_POSITION,
 
         /// <summary>
         /// SKIPPED
@@ -620,16 +620,16 @@ namespace Bitmovin.Api.Sdk.Models
         STARTED,
 
         /// <summary>
-        /// STREAMFORMAT
+        /// STREAM_FORMAT
         /// </summary>
         [EnumMember(Value = "STREAM_FORMAT")]
-        STREAMFORMAT,
+        STREAM_FORMAT,
 
         /// <summary>
-        /// SURVEYURL
+        /// SURVEY_URL
         /// </summary>
         [EnumMember(Value = "SURVEY_URL")]
-        SURVEYURL,
+        SURVEY_URL,
 
         /// <summary>
         /// TIME
@@ -638,87 +638,87 @@ namespace Bitmovin.Api.Sdk.Models
         TIME,
 
         /// <summary>
-        /// TIMEFROMCONTENT
+        /// TIME_FROM_CONTENT
         /// </summary>
         [EnumMember(Value = "TIME_FROM_CONTENT")]
-        TIMEFROMCONTENT,
+        TIME_FROM_CONTENT,
 
         /// <summary>
-        /// TIMEINVIEWPORT
+        /// TIME_IN_VIEWPORT
         /// </summary>
         [EnumMember(Value = "TIME_IN_VIEWPORT")]
-        TIMEINVIEWPORT,
+        TIME_IN_VIEWPORT,
 
         /// <summary>
-        /// TIMEPLAYED
+        /// TIME_PLAYED
         /// </summary>
         [EnumMember(Value = "TIME_PLAYED")]
-        TIMEPLAYED,
+        TIME_PLAYED,
 
         /// <summary>
-        /// TIMETOCONTENT
+        /// TIME_TO_CONTENT
         /// </summary>
         [EnumMember(Value = "TIME_TO_CONTENT")]
-        TIMETOCONTENT,
+        TIME_TO_CONTENT,
 
         /// <summary>
-        /// UNIVERSALADIDREGISTRY
+        /// UNIVERSAL_AD_ID_REGISTRY
         /// </summary>
         [EnumMember(Value = "UNIVERSAL_AD_ID_REGISTRY")]
-        UNIVERSALADIDREGISTRY,
+        UNIVERSAL_AD_ID_REGISTRY,
 
         /// <summary>
-        /// UNIVERSALADIDVALUE
+        /// UNIVERSAL_AD_ID_VALUE
         /// </summary>
         [EnumMember(Value = "UNIVERSAL_AD_ID_VALUE")]
-        UNIVERSALADIDVALUE,
+        UNIVERSAL_AD_ID_VALUE,
 
         /// <summary>
-        /// USERID
+        /// USER_ID
         /// </summary>
         [EnumMember(Value = "USER_ID")]
-        USERID,
+        USER_ID,
 
         /// <summary>
-        /// VIDEOBITRATE
+        /// VIDEO_BITRATE
         /// </summary>
         [EnumMember(Value = "VIDEO_BITRATE")]
-        VIDEOBITRATE,
+        VIDEO_BITRATE,
 
         /// <summary>
-        /// VIDEOCODEC
+        /// VIDEO_CODEC
         /// </summary>
         [EnumMember(Value = "VIDEO_CODEC")]
-        VIDEOCODEC,
+        VIDEO_CODEC,
 
         /// <summary>
-        /// VIDEOID
+        /// VIDEO_ID
         /// </summary>
         [EnumMember(Value = "VIDEO_ID")]
-        VIDEOID,
+        VIDEO_ID,
 
         /// <summary>
-        /// VIDEOIMPRESSIONID
+        /// VIDEO_IMPRESSION_ID
         /// </summary>
         [EnumMember(Value = "VIDEO_IMPRESSION_ID")]
-        VIDEOIMPRESSIONID,
+        VIDEO_IMPRESSION_ID,
 
         /// <summary>
-        /// VIDEOTITLE
+        /// VIDEO_TITLE
         /// </summary>
         [EnumMember(Value = "VIDEO_TITLE")]
-        VIDEOTITLE,
+        VIDEO_TITLE,
 
         /// <summary>
-        /// VIDEOWINDOWHEIGHT
+        /// VIDEO_WINDOW_HEIGHT
         /// </summary>
         [EnumMember(Value = "VIDEO_WINDOW_HEIGHT")]
-        VIDEOWINDOWHEIGHT,
+        VIDEO_WINDOW_HEIGHT,
 
         /// <summary>
-        /// VIDEOWINDOWWIDTH
+        /// VIDEO_WINDOW_WIDTH
         /// </summary>
         [EnumMember(Value = "VIDEO_WINDOW_WIDTH")]
-        VIDEOWINDOWWIDTH
+        VIDEO_WINDOW_WIDTH
     }
 }

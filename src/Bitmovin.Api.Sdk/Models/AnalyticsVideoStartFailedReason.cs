@@ -8,16 +8,16 @@ namespace Bitmovin.Api.Sdk.Models
     public enum AnalyticsVideoStartFailedReason
     {
         /// <summary>
-        /// PAGECLOSED
+        /// PAGE_CLOSED
         /// </summary>
         [EnumMember(Value = "PAGE_CLOSED")]
-        PAGECLOSED,
+        PAGE_CLOSED,
 
         /// <summary>
-        /// PLAYERERROR
+        /// PLAYER_ERROR
         /// </summary>
         [EnumMember(Value = "PLAYER_ERROR")]
-        PLAYERERROR,
+        PLAYER_ERROR,
 
         /// <summary>
         /// TIMEOUT

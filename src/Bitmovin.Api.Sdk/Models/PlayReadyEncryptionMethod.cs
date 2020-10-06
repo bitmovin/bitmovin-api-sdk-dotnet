@@ -11,12 +11,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// Encryption method
         /// </summary>
         [EnumMember(Value = "MPEG_CENC")]
-        MPEGCENC,
+        MPEG_CENC,
 
         /// <summary>
         /// Encryption method
         /// </summary>
         [EnumMember(Value = "PIFF_CTR")]
-        PIFFCTR
+        PIFF_CTR
     }
 }

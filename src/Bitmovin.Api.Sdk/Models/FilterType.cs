@@ -26,10 +26,10 @@ namespace Bitmovin.Api.Sdk.Models
         WATERMARK,
 
         /// <summary>
-        /// ENHANCEDWATERMARK
+        /// ENHANCED_WATERMARK
         /// </summary>
         [EnumMember(Value = "ENHANCED_WATERMARK")]
-        ENHANCEDWATERMARK,
+        ENHANCED_WATERMARK,
 
         /// <summary>
         /// ROTATE
@@ -44,16 +44,16 @@ namespace Bitmovin.Api.Sdk.Models
         DEINTERLACE,
 
         /// <summary>
-        /// AUDIOMIX
+        /// AUDIO_MIX
         /// </summary>
         [EnumMember(Value = "AUDIO_MIX")]
-        AUDIOMIX,
+        AUDIO_MIX,
 
         /// <summary>
-        /// DENOISEHQDN3D
+        /// DENOISE_HQDN3D
         /// </summary>
         [EnumMember(Value = "DENOISE_HQDN3D")]
-        DENOISEHQDN3D,
+        DENOISE_HQDN3D,
 
         /// <summary>
         /// TEXT
@@ -80,15 +80,15 @@ namespace Bitmovin.Api.Sdk.Models
         INTERLACE,
 
         /// <summary>
-        /// AUDIOVOLUME
+        /// AUDIO_VOLUME
         /// </summary>
         [EnumMember(Value = "AUDIO_VOLUME")]
-        AUDIOVOLUME,
+        AUDIO_VOLUME,
 
         /// <summary>
-        /// EBUR128SINGLEPASS
+        /// EBU_R128_SINGLE_PASS
         /// </summary>
         [EnumMember(Value = "EBU_R128_SINGLE_PASS")]
-        EBUR128SINGLEPASS
+        EBU_R128_SINGLE_PASS
     }
 }

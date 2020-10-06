@@ -204,12 +204,12 @@
   </span>
   <a id="Bitmovin_Api_Sdk_Models_Encoding_ErrorAt_" data-uid="Bitmovin.Api.Sdk.Models.Encoding.ErrorAt*"></a>
   <h4 id="Bitmovin_Api_Sdk_Models_Encoding_ErrorAt" data-uid="Bitmovin.Api.Sdk.Models.Encoding.ErrorAt">ErrorAt</h4>
-  <div class="markdown level1 summary"><p>Timestamp when the encoding status changed to &amp;quot;ERROR&amp;quot;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</p>
+  <div class="markdown level1 summary"><p>Timestamp when the encoding status changed to 'ERROR', returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp is deprecated and is equivalent to finishedAt in case of an 'ERROR'.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DateTime? ErrorAt { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public DateTime? ErrorAt { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -266,7 +266,7 @@
   </span>
   <a id="Bitmovin_Api_Sdk_Models_Encoding_FinishedAt_" data-uid="Bitmovin.Api.Sdk.Models.Encoding.FinishedAt*"></a>
   <h4 id="Bitmovin_Api_Sdk_Models_Encoding_FinishedAt" data-uid="Bitmovin.Api.Sdk.Models.Encoding.FinishedAt">FinishedAt</h4>
-  <div class="markdown level1 summary"><p>Timestamp when the encoding status changed to &amp;quot;FINISHED&amp;quot;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</p>
+  <div class="markdown level1 summary"><p>Timestamp when the encoding status changed to 'FINISHED', 'ERROR', 'CANCELED', or 'TRANSFER_ERROR', returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp might be inaccurate for encodings which ran prior to the <a href="https://bitmovin.com/docs/encoding/changelogs/rest">1.50.0 REST API release</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -452,7 +452,7 @@
   </span>
   <a id="Bitmovin_Api_Sdk_Models_Encoding_RunningAt_" data-uid="Bitmovin.Api.Sdk.Models.Encoding.RunningAt*"></a>
   <h4 id="Bitmovin_Api_Sdk_Models_Encoding_RunningAt" data-uid="Bitmovin.Api.Sdk.Models.Encoding.RunningAt">RunningAt</h4>
-  <div class="markdown level1 summary"><p>Timestamp when the encoding status changed to to &amp;quot;RUNNING&amp;quot;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</p>
+  <div class="markdown level1 summary"><p>Timestamp when the encoding status changed to &amp;quot;RUNNING&amp;quot;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -483,7 +483,7 @@
   </span>
   <a id="Bitmovin_Api_Sdk_Models_Encoding_SelectedCloudRegion_" data-uid="Bitmovin.Api.Sdk.Models.Encoding.SelectedCloudRegion*"></a>
   <h4 id="Bitmovin_Api_Sdk_Models_Encoding_SelectedCloudRegion" data-uid="Bitmovin.Api.Sdk.Models.Encoding.SelectedCloudRegion">SelectedCloudRegion</h4>
-  <div class="markdown level1 summary"><p>Contains the region which was selected when cloudregion:AUTO was specified</p>
+  <div class="markdown level1 summary"><p>After the encoding has been started, this will contain the cloud region that was actually used. This will differ from cloudRegion if cloudRegion was set to an unspecific region (e.g. 'AUTO')</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -514,7 +514,7 @@
   </span>
   <a id="Bitmovin_Api_Sdk_Models_Encoding_SelectedEncoderVersion_" data-uid="Bitmovin.Api.Sdk.Models.Encoding.SelectedEncoderVersion*"></a>
   <h4 id="Bitmovin_Api_Sdk_Models_Encoding_SelectedEncoderVersion" data-uid="Bitmovin.Api.Sdk.Models.Encoding.SelectedEncoderVersion">SelectedEncoderVersion</h4>
-  <div class="markdown level1 summary"><p>Will be set to the encoder version that was actually used for the encoding. This is especially useful when starting an encoding with a version tag like STABLE or BETA.</p>
+  <div class="markdown level1 summary"><p>After the encoding has been started, this will contain the encoder version that was actually used. Especially useful when starting an encoding with a version tag like STABLE or BETA.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -545,7 +545,7 @@
   </span>
   <a id="Bitmovin_Api_Sdk_Models_Encoding_SelectedEncodingMode_" data-uid="Bitmovin.Api.Sdk.Models.Encoding.SelectedEncodingMode*"></a>
   <h4 id="Bitmovin_Api_Sdk_Models_Encoding_SelectedEncodingMode" data-uid="Bitmovin.Api.Sdk.Models.Encoding.SelectedEncodingMode">SelectedEncodingMode</h4>
-  <div class="markdown level1 summary"><p>Will be set to the encoding mode that was actually used for the encoding. This is especially useful when starting an encoding with encoding mode STANDARD.</p>
+  <div class="markdown level1 summary"><p>After the encoding has been started, this will contain the encoding mode that was actually used. Especially useful when starting an encoding with encoding mode STANDARD.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

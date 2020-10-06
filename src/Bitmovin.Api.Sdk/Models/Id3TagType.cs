@@ -14,15 +14,15 @@ namespace Bitmovin.Api.Sdk.Models
         RAW,
 
         /// <summary>
-        /// FRAMEID
+        /// FRAME_ID
         /// </summary>
         [EnumMember(Value = "FRAME_ID")]
-        FRAMEID,
+        FRAME_ID,
 
         /// <summary>
-        /// PLAINTEXT
+        /// PLAIN_TEXT
         /// </summary>
         [EnumMember(Value = "PLAIN_TEXT")]
-        PLAINTEXT
+        PLAIN_TEXT
     }
 }

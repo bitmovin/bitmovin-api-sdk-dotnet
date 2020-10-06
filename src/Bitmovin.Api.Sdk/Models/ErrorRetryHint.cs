@@ -14,15 +14,15 @@ namespace Bitmovin.Api.Sdk.Models
         RETRY,
 
         /// <summary>
-        /// NORETRY
+        /// NO_RETRY
         /// </summary>
         [EnumMember(Value = "NO_RETRY")]
-        NORETRY,
+        NO_RETRY,
 
         /// <summary>
-        /// RETRYINDIFFERENTREGION
+        /// RETRY_IN_DIFFERENT_REGION
         /// </summary>
         [EnumMember(Value = "RETRY_IN_DIFFERENT_REGION")]
-        RETRYINDIFFERENTREGION
+        RETRY_IN_DIFFERENT_REGION
     }
 }
