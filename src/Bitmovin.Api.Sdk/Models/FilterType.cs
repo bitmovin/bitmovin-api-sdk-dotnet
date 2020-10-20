@@ -44,6 +44,12 @@ namespace Bitmovin.Api.Sdk.Models
         DEINTERLACE,
 
         /// <summary>
+        /// ENHANCED_DEINTERLACE
+        /// </summary>
+        [EnumMember(Value = "ENHANCED_DEINTERLACE")]
+        ENHANCED_DEINTERLACE,
+
+        /// <summary>
         /// AUDIO_MIX
         /// </summary>
         [EnumMember(Value = "AUDIO_MIX")]

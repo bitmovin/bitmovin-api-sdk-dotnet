@@ -12,6 +12,7 @@ using Bitmovin.Api.Sdk.Encoding.Filters.EnhancedWatermark;
 using Bitmovin.Api.Sdk.Encoding.Filters.Crop;
 using Bitmovin.Api.Sdk.Encoding.Filters.Rotate;
 using Bitmovin.Api.Sdk.Encoding.Filters.Deinterlace;
+using Bitmovin.Api.Sdk.Encoding.Filters.EnhancedDeinterlace;
 using Bitmovin.Api.Sdk.Encoding.Filters.AudioMix;
 using Bitmovin.Api.Sdk.Encoding.Filters.DenoiseHqdn3d;
 using Bitmovin.Api.Sdk.Encoding.Filters.EbuR128SinglePass;
@@ -37,6 +38,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters
             Crop = new CropApi(apiClientFactory);
             Rotate = new RotateApi(apiClientFactory);
             Deinterlace = new DeinterlaceApi(apiClientFactory);
+            EnhancedDeinterlace = new EnhancedDeinterlaceApi(apiClientFactory);
             AudioMix = new AudioMixApi(apiClientFactory);
             DenoiseHqdn3d = new DenoiseHqdn3dApi(apiClientFactory);
             EbuR128SinglePass = new EbuR128SinglePassApi(apiClientFactory);
@@ -59,6 +61,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters
         public CropApi Crop { get; }
         public RotateApi Rotate { get; }
         public DeinterlaceApi Deinterlace { get; }
+        public EnhancedDeinterlaceApi EnhancedDeinterlace { get; }
         public AudioMixApi AudioMix { get; }
         public DenoiseHqdn3dApi DenoiseHqdn3d { get; }
         public EbuR128SinglePassApi EbuR128SinglePass { get; }

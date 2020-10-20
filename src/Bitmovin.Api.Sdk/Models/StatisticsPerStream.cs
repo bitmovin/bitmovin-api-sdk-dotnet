@@ -160,6 +160,18 @@ namespace Bitmovin.Api.Sdk.Models
         public double? LiveMultiplicator { get; internal set; }
 
         /// <summary>
+        /// Indicates if an enhanced interlace filter was used.
+        /// </summary>
+        [JsonProperty(PropertyName = "enhancedDeinterlace")]
+        public bool? EnhancedDeinterlace { get; internal set; }
+
+        /// <summary>
+        /// The output minutes multiplicator for streams using an enhanced deinterlace filter.
+        /// </summary>
+        [JsonProperty(PropertyName = "enhancedDeinterlaceMultiplicator")]
+        public double? EnhancedDeinterlaceMultiplicator { get; internal set; }
+
+        /// <summary>
         /// InputFactor
         /// </summary>
         [JsonProperty(PropertyName = "inputFactor")]

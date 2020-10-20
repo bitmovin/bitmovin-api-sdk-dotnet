@@ -52,6 +52,12 @@ namespace Bitmovin.Api.Sdk.Models
         public bool? Live { get; internal set; }
 
         /// <summary>
+        /// Indicates if an enhanced interlace filter was used.
+        /// </summary>
+        [JsonProperty(PropertyName = "enhancedDeinterlace")]
+        public bool? EnhancedDeinterlace { get; internal set; }
+
+        /// <summary>
         /// BillableMinutes
         /// </summary>
         [JsonProperty(PropertyName = "billableMinutes")]

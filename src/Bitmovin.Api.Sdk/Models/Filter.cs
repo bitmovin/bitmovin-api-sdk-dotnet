@@ -20,6 +20,7 @@ namespace Bitmovin.Api.Sdk.Models
     [JsonSubtypes.KnownSubType(typeof(EnhancedWatermarkFilter), "ENHANCED_WATERMARK")]
     [JsonSubtypes.KnownSubType(typeof(RotateFilter), "ROTATE")]
     [JsonSubtypes.KnownSubType(typeof(DeinterlaceFilter), "DEINTERLACE")]
+    [JsonSubtypes.KnownSubType(typeof(EnhancedDeinterlaceFilter), "ENHANCED_DEINTERLACE")]
     [JsonSubtypes.KnownSubType(typeof(AudioMixFilter), "AUDIO_MIX")]
     [JsonSubtypes.KnownSubType(typeof(DenoiseHqdn3dFilter), "DENOISE_HQDN3D")]
     [JsonSubtypes.KnownSubType(typeof(TextFilter), "TEXT")]
