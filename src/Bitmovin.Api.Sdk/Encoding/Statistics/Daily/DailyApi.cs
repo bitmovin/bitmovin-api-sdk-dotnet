@@ -59,11 +59,11 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Daily
         {
             [Get("/encoding/statistics/daily")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.DailyStatistics>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.DailyStatistics>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
 
             [Get("/encoding/statistics/daily/{from}/{to}")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.DailyStatistics>> ListByDateRangeAsync([Path("from", Format = "yyyy-MM-dd")] DateTime? from, [Path("to", Format = "yyyy-MM-dd")] DateTime? to, [QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.DailyStatistics>> ListByDateRangeAsync([Path("from", Format = "yyyy-MM-dd")] DateTime? from, [Path("to", Format = "yyyy-MM-dd")] DateTime? to, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

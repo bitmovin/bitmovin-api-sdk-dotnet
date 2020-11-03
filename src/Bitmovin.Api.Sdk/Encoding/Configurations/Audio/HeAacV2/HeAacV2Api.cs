@@ -84,7 +84,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.HeAacV2
 
             [Get("/encoding/configurations/audio/he-aac-v2")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.HeAacV2AudioConfiguration>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.HeAacV2AudioConfiguration>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

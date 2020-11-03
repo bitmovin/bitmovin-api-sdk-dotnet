@@ -67,7 +67,7 @@ namespace Bitmovin.Api.Sdk.Analytics.Exports
 
             [Get("/analytics/exports")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.AnalyticsExportTask>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.AnalyticsExportTask>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

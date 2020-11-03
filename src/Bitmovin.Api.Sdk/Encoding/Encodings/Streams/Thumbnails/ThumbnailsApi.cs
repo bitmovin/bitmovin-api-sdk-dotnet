@@ -92,7 +92,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Thumbnails
 
             [Get("/encoding/encodings/{encoding_id}/streams/{stream_id}/thumbnails")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.Thumbnail>> ListAsync([Path("encoding_id")] string encodingId, [Path("stream_id")] string streamId, [QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.Thumbnail>> ListAsync([Path("encoding_id")] string encodingId, [Path("stream_id")] string streamId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

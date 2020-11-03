@@ -88,7 +88,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Cmaf
 
             [Get("/encoding/encodings/{encoding_id}/muxings/cmaf")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.CmafMuxing>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.CmafMuxing>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

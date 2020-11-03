@@ -84,7 +84,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Pcm
 
             [Get("/encoding/configurations/audio/pcm")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.PcmAudioConfiguration>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.PcmAudioConfiguration>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

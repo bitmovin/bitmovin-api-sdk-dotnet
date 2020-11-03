@@ -66,7 +66,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live.InsertableContent
 
             [Get("/encoding/encodings/{encoding_id}/live/insertable-content")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.InsertableContent>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.InsertableContent>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

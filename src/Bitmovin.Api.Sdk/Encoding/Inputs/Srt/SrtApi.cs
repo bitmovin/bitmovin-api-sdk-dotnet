@@ -84,7 +84,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Srt
 
             [Get("/encoding/inputs/srt")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.SrtInput>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.SrtInput>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

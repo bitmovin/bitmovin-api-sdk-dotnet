@@ -84,7 +84,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Aspera
 
             [Get("/encoding/inputs/aspera")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.AsperaInput>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.AsperaInput>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

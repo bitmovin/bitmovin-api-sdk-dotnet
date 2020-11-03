@@ -49,7 +49,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Emails.Encoding.Encodings
         {
             [Get("/notifications/emails/encoding/encodings/{encoding_id}")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.EmailNotificationWithStreamConditions>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.EmailNotificationWithStreamConditions>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

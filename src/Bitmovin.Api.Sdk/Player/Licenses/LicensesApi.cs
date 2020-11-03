@@ -77,7 +77,7 @@ namespace Bitmovin.Api.Sdk.Player.Licenses
 
             [Get("/player/licenses")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.PlayerLicense>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.PlayerLicense>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

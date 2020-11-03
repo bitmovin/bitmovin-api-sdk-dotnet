@@ -84,7 +84,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Video.H262
 
             [Get("/encoding/configurations/video/h262")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.H262VideoConfiguration>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.H262VideoConfiguration>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

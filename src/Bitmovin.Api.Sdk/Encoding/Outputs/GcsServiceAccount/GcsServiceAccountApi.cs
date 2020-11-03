@@ -84,7 +84,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.GcsServiceAccount
 
             [Get("/encoding/outputs/gcs-service-account")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.GcsServiceAccountOutput>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.GcsServiceAccountOutput>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

@@ -84,7 +84,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.Azure
 
             [Get("/encoding/outputs/azure")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.AzureOutput>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.AzureOutput>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

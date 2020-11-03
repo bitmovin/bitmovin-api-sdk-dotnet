@@ -65,7 +65,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics
 
             [Get("/encoding/statistics/{from}/{to}")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.Statistics>> ListAsync([Path("from", Format = "yyyy-MM-dd")] DateTime? from, [Path("to", Format = "yyyy-MM-dd")] DateTime? to, [QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.Statistics>> ListAsync([Path("from", Format = "yyyy-MM-dd")] DateTime? from, [Path("to", Format = "yyyy-MM-dd")] DateTime? to, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

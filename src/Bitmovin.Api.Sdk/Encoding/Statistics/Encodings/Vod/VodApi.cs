@@ -59,11 +59,11 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.Vod
         {
             [Get("/encoding/statistics/encodings/vod")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.EncodingStatisticsVod>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.EncodingStatisticsVod>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
 
             [Get("/encoding/statistics/encodings/vod/{from}/{to}")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.EncodingStatisticsVod>> ListByDateRangeAsync([Path("from", Format = "yyyy-MM-dd")] DateTime? from, [Path("to", Format = "yyyy-MM-dd")] DateTime? to, [QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.EncodingStatisticsVod>> ListByDateRangeAsync([Path("from", Format = "yyyy-MM-dd")] DateTime? from, [Path("to", Format = "yyyy-MM-dd")] DateTime? to, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

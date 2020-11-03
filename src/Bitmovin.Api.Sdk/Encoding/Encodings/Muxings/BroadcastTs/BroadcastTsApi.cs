@@ -91,7 +91,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.BroadcastTs
 
             [Get("/encoding/encodings/{encoding_id}/muxings/broadcast-ts")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.BroadcastTsMuxing>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.BroadcastTsMuxing>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

@@ -84,7 +84,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Local
 
             [Get("/encoding/inputs/local")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.LocalInput>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.LocalInput>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

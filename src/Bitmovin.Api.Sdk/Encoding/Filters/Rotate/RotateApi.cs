@@ -84,7 +84,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Rotate
 
             [Get("/encoding/filters/rotate")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.RotateFilter>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.RotateFilter>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

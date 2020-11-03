@@ -172,7 +172,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings
 
             [Get("/encoding/encodings")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.Encoding>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.Encoding>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
 
             [Post("/encoding/encodings/{encoding_id}/reprioritize")]
             [AllowAnyStatusCode]
@@ -208,7 +208,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings
             public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
 
             /// <summary>
-            /// Order list result according an encoding resource attribute
+            /// Order list result according an encoding resource attribute.  The fields that can be used for sorting are: + &#x60;id&#x60; + &#x60;startedAt&#x60; + &#x60;createdAt&#x60; + &#x60;modifiedAt&#x60; + &#x60;type&#x60; + &#x60;name&#x60; + &#x60;status&#x60; + &#x60;cloudRegion&#x60; + &#x60;encoderVersion&#x60; 
             /// </summary>
             public ListQueryParams Sort(string sort) => SetQueryParam("sort", sort);
 
@@ -256,6 +256,26 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings
             /// The search query string for advanced filtering.  We are using the [Apache Lucene](https://lucene.apache.org/) query syntax here.  Only lucene queries equivalent to exact matching and startsWith are supported. Also only AND conjunctions supported at the moment.  Please be aware that our filters are **case-insensitive**  Examples of supported lucene queries: + &#x60;name:MyEncoding1&#x60; - This searches for encodings with names that are equal to &#x60;myencoding1&#x60;  + &#x60;name:\&quot;My Encoding\&quot;&#x60; - This searches for encodings with names that are equal to &#x60;my encoding&#x60;  + &#x60;name:MyEncoding\\*&#x60; - This searches for encodings with names that are equal to &#x60;myencoding*&#x60; Please have a look at the [Lucene Documentation - Escaping Special Characters](https://lucene.apache.org/core/8_1_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Escaping_Special_Characters) section to see what characters have to be escaped.  + &#x60;name:test*&#x60; - This searches for encodings with names that start with &#x60;test&#x60;  + &#x60;name:test* AND labels:Customer1&#x60; - This searches for encodings with names starting with &#x60;test&#x60; and labels containing an entry that is equal to &#x60;customer1&#x60;  Available search fields: + &#x60;name&#x60;  + &#x60;labels&#x60;  Please be aware to send these queries url encoded.  If you provide fields or lucene queries that are not supported, it will result in an error response. 
             /// </summary>
             public ListQueryParams Search(string search) => SetQueryParam("search", search);
+
+            /// <summary>
+            /// Filter encodings to only return those created after this exact time, provided in ISO8601 format: YYYY-MM-DDThh:mm:ssZ
+            /// </summary>
+            public ListQueryParams CreatedAtNewerThan(DateTime? createdAtNewerThan) => SetQueryParam("createdAtNewerThan", createdAtNewerThan);
+
+            /// <summary>
+            /// Filter encodings to only return those created before this exact time, provided in ISO8601 format: YYYY-MM-DDThh:mm:ssZ
+            /// </summary>
+            public ListQueryParams CreatedAtOlderThan(DateTime? createdAtOlderThan) => SetQueryParam("createdAtOlderThan", createdAtOlderThan);
+
+            /// <summary>
+            /// Filter encodings to only return those started after this exact time, provided in ISO8601 format: YYYY-MM-DDThh:mm:ssZ
+            /// </summary>
+            public ListQueryParams StartedAtNewerThan(DateTime? startedAtNewerThan) => SetQueryParam("startedAtNewerThan", startedAtNewerThan);
+
+            /// <summary>
+            /// Filter encodings to only return those started before this exact time, provided in ISO8601 format: YYYY-MM-DDThh:mm:ssZ
+            /// </summary>
+            public ListQueryParams StartedAtOlderThan(DateTime? startedAtOlderThan) => SetQueryParam("startedAtOlderThan", startedAtOlderThan);
 
             private ListQueryParams SetQueryParam<T>(string key, T value)
             {

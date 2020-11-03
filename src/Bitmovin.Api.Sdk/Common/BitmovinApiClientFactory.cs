@@ -79,9 +79,14 @@ namespace Bitmovin.Api.Sdk.Common
             return new JsonRequestBodySerializer {JsonSerializerSettings = JsonSettings};
         }
 
-        protected virtual BitmovinResponseDeserializer CreateResponseDeserializer()
+        protected virtual ResponseDeserializer CreateResponseDeserializer()
         {
             return new BitmovinResponseDeserializer(JsonSettings);
+        }
+
+        protected virtual RequestQueryParamSerializer CreateQueryParamSerializer()
+        {
+            return new BitmovinQueryParamSerializer();
         }
 
         protected virtual Dictionary<string, string> GetHeaders()
@@ -89,7 +94,7 @@ namespace Bitmovin.Api.Sdk.Common
             var headers = new Dictionary<string, string>
             {
                 {"X-Api-Client", "bitmovin-api-sdk-dotnet"},
-                {"X-Api-Client-Version", "1.51.0"}
+                {"X-Api-Client-Version", "1.52.0"}
             };
 
             if (!string.IsNullOrEmpty(ApiKey))
@@ -120,7 +125,8 @@ namespace Bitmovin.Api.Sdk.Common
             return new RestClient(CreateHttpClient(baseUrl))
             {
                 RequestBodySerializer = CreateRequestBodySerializer(),
-                ResponseDeserializer = CreateResponseDeserializer()
+                ResponseDeserializer = CreateResponseDeserializer(),
+                RequestQueryParamSerializer = CreateQueryParamSerializer()
             };
         }
 
@@ -140,3 +146,4 @@ namespace Bitmovin.Api.Sdk.Common
         }
     }
 }
+

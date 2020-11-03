@@ -84,7 +84,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.DenoiseHqdn3d
 
             [Get("/encoding/filters/denoise-hqdn3d")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.DenoiseHqdn3dFilter>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.DenoiseHqdn3dFilter>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

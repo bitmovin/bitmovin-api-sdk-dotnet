@@ -84,7 +84,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Http
 
             [Get("/encoding/inputs/http")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.HttpInput>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.HttpInput>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

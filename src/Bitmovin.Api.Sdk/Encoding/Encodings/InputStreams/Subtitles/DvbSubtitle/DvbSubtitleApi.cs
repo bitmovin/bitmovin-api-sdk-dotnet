@@ -84,7 +84,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Subtitles.DvbSubtitle
 
             [Get("/encoding/encodings/{encoding_id}/input-streams/subtitles/dvb-subtitle")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.DvbSubtitleInputStream>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.DvbSubtitleInputStream>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

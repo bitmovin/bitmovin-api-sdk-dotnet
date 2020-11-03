@@ -96,7 +96,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Kubernetes
 
             [Get("/encoding/infrastructure/kubernetes")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.KubernetesCluster>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.KubernetesCluster>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

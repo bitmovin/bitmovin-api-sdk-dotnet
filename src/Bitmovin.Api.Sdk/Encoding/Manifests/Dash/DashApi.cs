@@ -117,7 +117,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash
 
             [Get("/encoding/manifests/dash")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.DashManifest>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.DashManifest>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
 
             [Post("/encoding/manifests/dash/{manifest_id}/start")]
             [AllowAnyStatusCode]

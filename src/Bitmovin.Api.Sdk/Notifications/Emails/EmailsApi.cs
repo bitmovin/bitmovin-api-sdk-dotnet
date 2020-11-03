@@ -48,7 +48,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Emails
         {
             [Get("/notifications/emails")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.Notification>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.Notification>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

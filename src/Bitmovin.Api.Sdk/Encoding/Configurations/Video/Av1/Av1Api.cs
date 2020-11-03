@@ -84,7 +84,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Video.Av1
 
             [Get("/encoding/configurations/video/av1")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.Av1VideoConfiguration>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.Av1VideoConfiguration>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

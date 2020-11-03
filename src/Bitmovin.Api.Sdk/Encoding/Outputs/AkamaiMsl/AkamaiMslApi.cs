@@ -84,7 +84,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.AkamaiMsl
 
             [Get("/encoding/outputs/akamai-msl")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.AkamaiMslOutput>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.AkamaiMslOutput>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

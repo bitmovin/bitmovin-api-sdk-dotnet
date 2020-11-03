@@ -84,7 +84,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Sidecar.DolbyVisionMe
 
             [Get("/encoding/encodings/{encoding_id}/input-streams/sidecar/dolby-vision-metadata-ingest")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.DolbyVisionMetadataIngestInputStream>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.DolbyVisionMetadataIngestInputStream>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

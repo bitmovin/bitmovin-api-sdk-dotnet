@@ -84,7 +84,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.Sftp
 
             [Get("/encoding/outputs/sftp")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.SftpOutput>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.SftpOutput>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

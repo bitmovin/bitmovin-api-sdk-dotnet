@@ -84,7 +84,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Concatenation
 
             [Get("/encoding/encodings/{encoding_id}/input-streams/concatenation")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.ConcatenationInputStream>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.ConcatenationInputStream>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

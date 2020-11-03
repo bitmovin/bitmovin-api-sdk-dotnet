@@ -84,7 +84,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Text
 
             [Get("/encoding/filters/text")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.TextFilter>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.TextFilter>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

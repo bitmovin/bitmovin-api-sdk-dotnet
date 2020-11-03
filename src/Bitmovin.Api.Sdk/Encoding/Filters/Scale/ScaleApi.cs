@@ -84,7 +84,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Scale
 
             [Get("/encoding/filters/scale")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.ScaleFilter>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.ScaleFilter>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

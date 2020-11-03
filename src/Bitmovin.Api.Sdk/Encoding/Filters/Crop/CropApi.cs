@@ -84,7 +84,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Crop
 
             [Get("/encoding/filters/crop")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.CropFilter>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.CropFilter>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

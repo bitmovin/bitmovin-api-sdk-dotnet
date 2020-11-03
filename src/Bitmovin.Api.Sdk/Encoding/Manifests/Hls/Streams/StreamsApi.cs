@@ -91,7 +91,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Streams
 
             [Get("/encoding/manifests/hls/{manifest_id}/streams")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.StreamInfo>> ListAsync([Path("manifest_id")] string manifestId, [QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.StreamInfo>> ListAsync([Path("manifest_id")] string manifestId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

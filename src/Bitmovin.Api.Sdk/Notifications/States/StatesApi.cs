@@ -43,7 +43,7 @@ namespace Bitmovin.Api.Sdk.Notifications.States
         {
             [Get("/notifications/{notification_id}/states/{resource_id}")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.NotificationStateEntry>> ListAsync([Path("notification_id")] string notificationId, [Path("resource_id")] string resourceId, [QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.NotificationStateEntry>> ListAsync([Path("notification_id")] string notificationId, [Path("resource_id")] string resourceId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

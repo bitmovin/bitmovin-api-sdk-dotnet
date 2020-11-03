@@ -120,7 +120,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Smooth
 
             [Get("/encoding/manifests/smooth")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.SmoothStreamingManifest>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.SmoothStreamingManifest>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
 
             [Post("/encoding/manifests/smooth/{manifest_id}/start")]
             [AllowAnyStatusCode]

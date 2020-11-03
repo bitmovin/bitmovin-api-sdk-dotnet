@@ -88,7 +88,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Hdr.DolbyVision
 
             [Get("/encoding/encodings/{encoding_id}/streams/{stream_id}/hdr/dolby-vision")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.DolbyVisionMetadata>> ListAsync([Path("encoding_id")] string encodingId, [Path("stream_id")] string streamId, [QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.DolbyVisionMetadata>> ListAsync([Path("encoding_id")] string encodingId, [Path("stream_id")] string streamId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

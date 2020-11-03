@@ -49,7 +49,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Manifest
         {
             [Get("/notifications/webhooks/encoding/manifest/{manifest_id}")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.Notification>> ListAsync([Path("manifest_id")] string manifestId, [QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.Notification>> ListAsync([Path("manifest_id")] string manifestId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

@@ -206,6 +206,12 @@ namespace Bitmovin.Api.Sdk.Models
         EXPERIMENT_NAME,
 
         /// <summary>
+        /// FUNCTION
+        /// </summary>
+        [EnumMember(Value = "FUNCTION")]
+        FUNCTION,
+
+        /// <summary>
         /// HOUR
         /// </summary>
         [EnumMember(Value = "HOUR")]
@@ -378,6 +384,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [EnumMember(Value = "PROG_URL")]
         PROG_URL,
+
+        /// <summary>
+        /// REBUFFER_PERCENTAGE
+        /// </summary>
+        [EnumMember(Value = "REBUFFER_PERCENTAGE")]
+        REBUFFER_PERCENTAGE,
 
         /// <summary>
         /// REGION

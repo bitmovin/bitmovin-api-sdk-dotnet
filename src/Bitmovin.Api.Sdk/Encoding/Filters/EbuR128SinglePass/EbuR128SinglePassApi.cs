@@ -84,7 +84,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.EbuR128SinglePass
 
             [Get("/encoding/filters/ebu-r128-single-pass")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.EbuR128SinglePassFilter>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.EbuR128SinglePassFilter>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

@@ -84,7 +84,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Ingest
 
             [Get("/encoding/encodings/{encoding_id}/input-streams/ingest")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.IngestInputStream>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.IngestInputStream>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

@@ -143,11 +143,11 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.Error
 
             [Get("/notifications/webhooks/encoding/encodings/error")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.Webhook>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.Webhook>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
 
             [Get("/notifications/webhooks/encoding/encodings/{encoding_id}/error")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.Webhook>> ListByEncodingIdAsync([Path("encoding_id")] string encodingId, [QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.Webhook>> ListByEncodingIdAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

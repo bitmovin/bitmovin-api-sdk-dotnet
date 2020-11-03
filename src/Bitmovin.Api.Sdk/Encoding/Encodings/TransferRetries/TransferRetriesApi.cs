@@ -69,7 +69,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.TransferRetries
 
             [Get("/encoding/encodings/{encoding_id}/transfer-retries")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.TransferRetry>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.TransferRetry>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

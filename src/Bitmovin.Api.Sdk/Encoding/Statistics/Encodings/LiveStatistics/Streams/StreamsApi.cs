@@ -42,7 +42,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.LiveStatistics.Streams
         {
             [Get("/encoding/statistics/encodings/{encoding_id}/live-statistics/streams")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.StreamInfos>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.StreamInfos>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

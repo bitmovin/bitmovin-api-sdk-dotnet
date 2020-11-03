@@ -84,7 +84,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Conform
 
             [Get("/encoding/filters/conform")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.ConformFilter>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.ConformFilter>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

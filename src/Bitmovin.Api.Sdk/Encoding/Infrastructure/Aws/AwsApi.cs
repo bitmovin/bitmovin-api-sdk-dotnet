@@ -84,7 +84,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Aws
 
             [Get("/encoding/infrastructure/aws")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.AwsAccount>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.AwsAccount>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

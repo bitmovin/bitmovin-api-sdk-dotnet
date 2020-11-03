@@ -41,7 +41,7 @@ namespace Bitmovin.Api.Sdk.General.ErrorDefinitions
         {
             [Get("/general/error-definitions")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.ApiErrorDefinition>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.ApiErrorDefinition>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

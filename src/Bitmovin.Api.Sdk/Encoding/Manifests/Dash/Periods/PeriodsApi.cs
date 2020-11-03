@@ -91,7 +91,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods
 
             [Get("/encoding/manifests/dash/{manifest_id}/periods")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.Period>> ListAsync([Path("manifest_id")] string manifestId, [QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.Period>> ListAsync([Path("manifest_id")] string manifestId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

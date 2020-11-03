@@ -84,7 +84,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.S3
 
             [Get("/encoding/outputs/s3")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.S3Output>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.S3Output>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

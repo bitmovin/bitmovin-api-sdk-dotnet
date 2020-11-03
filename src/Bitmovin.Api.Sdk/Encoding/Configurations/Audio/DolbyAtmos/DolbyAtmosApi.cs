@@ -84,7 +84,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.DolbyAtmos
 
             [Get("/encoding/configurations/audio/dolby-atmos")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.DolbyAtmosAudioConfiguration>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.DolbyAtmosAudioConfiguration>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

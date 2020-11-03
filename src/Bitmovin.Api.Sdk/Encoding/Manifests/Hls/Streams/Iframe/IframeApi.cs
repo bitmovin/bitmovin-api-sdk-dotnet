@@ -88,7 +88,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Streams.Iframe
 
             [Get("/encoding/manifests/hls/{manifest_id}/streams/{stream_id}/iframe")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.IFramePlaylist>> ListAsync([Path("manifest_id")] string manifestId, [Path("stream_id")] string streamId, [QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.IFramePlaylist>> ListAsync([Path("manifest_id")] string manifestId, [Path("stream_id")] string streamId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

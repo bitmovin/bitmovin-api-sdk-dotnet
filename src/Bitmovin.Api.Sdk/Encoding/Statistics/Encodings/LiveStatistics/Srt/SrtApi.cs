@@ -60,11 +60,11 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.LiveStatistics.Srt
         {
             [Get("/encoding/statistics/encodings/{encoding_id}/live-statistics/srt")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.SrtStatistics>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.SrtStatistics>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
 
             [Get("/encoding/statistics/encodings/{encoding_id}/live-statistics/srt/{srt_input_id}")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.SrtStatistics>> ListBySrtInputIdAsync([Path("encoding_id")] string encodingId, [Path("srt_input_id")] string srtInputId, [QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.SrtStatistics>> ListBySrtInputIdAsync([Path("encoding_id")] string encodingId, [Path("srt_input_id")] string srtInputId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

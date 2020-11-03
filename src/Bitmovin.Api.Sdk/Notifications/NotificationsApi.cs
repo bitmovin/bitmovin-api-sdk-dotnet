@@ -112,11 +112,11 @@ namespace Bitmovin.Api.Sdk.Notifications
 
             [Get("/notifications")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.Notification>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.Notification>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
 
             [Get("/notifications/{notification_id}/states")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.NotificationStateEntry>> ListByNotificationIdAsync([Path("notification_id")] string notificationId, [QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.NotificationStateEntry>> ListByNotificationIdAsync([Path("notification_id")] string notificationId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
 
             [Post("/notifications/{notification_id}/mute")]
             [AllowAnyStatusCode]

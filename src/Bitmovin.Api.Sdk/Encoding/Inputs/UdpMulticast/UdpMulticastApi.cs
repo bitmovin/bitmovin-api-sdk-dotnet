@@ -84,7 +84,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.UdpMulticast
 
             [Get("/encoding/inputs/udp-multicast")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.UdpMulticastInput>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.UdpMulticastInput>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

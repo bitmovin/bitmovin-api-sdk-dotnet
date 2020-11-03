@@ -118,7 +118,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams
 
             [Get("/encoding/encodings/{encoding_id}/streams")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.Stream>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.Stream>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

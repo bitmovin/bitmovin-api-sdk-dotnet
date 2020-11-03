@@ -94,7 +94,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveWebm
 
             [Get("/encoding/encodings/{encoding_id}/muxings/progressive-webm")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.ProgressiveWebmMuxing>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.ProgressiveWebmMuxing>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

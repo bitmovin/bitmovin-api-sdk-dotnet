@@ -84,7 +84,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Kubernetes.PrewarmedDeploymen
 
             [Get("/encoding/infrastructure/kubernetes/{infrastructure_id}/prewarmed-deployment")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.PrewarmEncoderSettings>> ListAsync([Path("infrastructure_id")] string infrastructureId, [QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.PrewarmEncoderSettings>> ListAsync([Path("infrastructure_id")] string infrastructureId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

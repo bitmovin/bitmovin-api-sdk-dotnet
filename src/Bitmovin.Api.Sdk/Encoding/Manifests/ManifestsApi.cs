@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests
         {
             [Get("/encoding/manifests")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.Manifest>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.Manifest>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

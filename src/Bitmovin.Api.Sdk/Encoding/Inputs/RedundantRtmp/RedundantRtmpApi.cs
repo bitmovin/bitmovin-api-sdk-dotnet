@@ -80,7 +80,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.RedundantRtmp
 
             [Get("/encoding/inputs/redundant-rtmp")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.RedundantRtmpInput>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.RedundantRtmpInput>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

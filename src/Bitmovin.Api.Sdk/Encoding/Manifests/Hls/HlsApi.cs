@@ -120,7 +120,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls
 
             [Get("/encoding/manifests/hls")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.HlsManifest>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.HlsManifest>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
 
             [Post("/encoding/manifests/hls/{manifest_id}/start")]
             [AllowAnyStatusCode]

@@ -43,7 +43,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.MachineLearning.ObjectDetection.Re
         {
             [Get("/encoding/encodings/{encoding_id}/machine-learning/object-detection/{object_detection_id}/results/by-timestamp")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.ObjectDetectionTimestampResult>> ListAsync([Path("encoding_id")] string encodingId, [Path("object_detection_id")] string objectDetectionId, [QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.ObjectDetectionTimestampResult>> ListAsync([Path("encoding_id")] string encodingId, [Path("object_detection_id")] string objectDetectionId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

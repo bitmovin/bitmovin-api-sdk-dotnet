@@ -85,7 +85,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Gce.Regions
 
             [Get("/encoding/infrastructure/gce/{infrastructure_id}/regions")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.GceAccountRegionSettings>> ListAsync([Path("infrastructure_id")] string infrastructureId, [QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.GceAccountRegionSettings>> ListAsync([Path("infrastructure_id")] string infrastructureId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

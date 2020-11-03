@@ -84,7 +84,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media.Audio
 
             [Get("/encoding/manifests/hls/{manifest_id}/media/audio")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.AudioMediaInfo>> ListAsync([Path("manifest_id")] string manifestId, [QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.AudioMediaInfo>> ListAsync([Path("manifest_id")] string manifestId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

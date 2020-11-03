@@ -88,7 +88,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media.CustomTags
 
             [Get("/encoding/manifests/hls/{manifest_id}/media/{media_id}/custom-tags")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.CustomTag>> ListAsync([Path("manifest_id")] string manifestId, [Path("media_id")] string mediaId, [QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.CustomTag>> ListAsync([Path("manifest_id")] string manifestId, [Path("media_id")] string mediaId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

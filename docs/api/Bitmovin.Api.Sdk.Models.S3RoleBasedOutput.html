@@ -137,13 +137,8 @@
   </div>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/bitmovin/bitmovin-api-sdk-dotnet/new/master/apiSpec/new?filename=Bitmovin_Api_Sdk_Models_S3RoleBasedOutput_BucketName.md&amp;value=---%0Auid%3A%20Bitmovin.Api.Sdk.Models.S3RoleBasedOutput.BucketName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/bitmovin/bitmovin-api-sdk-dotnet/blob/master/src/Bitmovin.Api.Sdk/Models/S3RoleBasedOutput.cs/#L24">View Source</a>
-  </span>
+  
+  
   <a id="Bitmovin_Api_Sdk_Models_S3RoleBasedOutput_BucketName_" data-uid="Bitmovin.Api.Sdk.Models.S3RoleBasedOutput.BucketName*"></a>
   <h4 id="Bitmovin_Api_Sdk_Models_S3RoleBasedOutput_BucketName" data-uid="Bitmovin.Api.Sdk.Models.S3RoleBasedOutput.BucketName">BucketName</h4>
   <div class="markdown level1 summary"><p>Amazon S3 bucket name (required)</p>
@@ -168,13 +163,8 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/bitmovin/bitmovin-api-sdk-dotnet/new/master/apiSpec/new?filename=Bitmovin_Api_Sdk_Models_S3RoleBasedOutput_CloudRegion.md&amp;value=---%0Auid%3A%20Bitmovin.Api.Sdk.Models.S3RoleBasedOutput.CloudRegion%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/bitmovin/bitmovin-api-sdk-dotnet/blob/master/src/Bitmovin.Api.Sdk/Models/S3RoleBasedOutput.cs/#L48">View Source</a>
-  </span>
+  
+  
   <a id="Bitmovin_Api_Sdk_Models_S3RoleBasedOutput_CloudRegion_" data-uid="Bitmovin.Api.Sdk.Models.S3RoleBasedOutput.CloudRegion*"></a>
   <h4 id="Bitmovin_Api_Sdk_Models_S3RoleBasedOutput_CloudRegion" data-uid="Bitmovin.Api.Sdk.Models.S3RoleBasedOutput.CloudRegion">CloudRegion</h4>
   <div class="markdown level1 summary"><p>CloudRegion</p>
@@ -199,13 +189,8 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/bitmovin/bitmovin-api-sdk-dotnet/new/master/apiSpec/new?filename=Bitmovin_Api_Sdk_Models_S3RoleBasedOutput_ExternalId.md&amp;value=---%0Auid%3A%20Bitmovin.Api.Sdk.Models.S3RoleBasedOutput.ExternalId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/bitmovin/bitmovin-api-sdk-dotnet/blob/master/src/Bitmovin.Api.Sdk/Models/S3RoleBasedOutput.cs/#L36">View Source</a>
-  </span>
+  
+  
   <a id="Bitmovin_Api_Sdk_Models_S3RoleBasedOutput_ExternalId_" data-uid="Bitmovin.Api.Sdk.Models.S3RoleBasedOutput.ExternalId*"></a>
   <h4 id="Bitmovin_Api_Sdk_Models_S3RoleBasedOutput_ExternalId" data-uid="Bitmovin.Api.Sdk.Models.S3RoleBasedOutput.ExternalId">ExternalId</h4>
   <div class="markdown level1 summary"><p>External ID used together with the IAM role identified by <code>roleArn</code> to assume S3 access.  This ID is generated once by the owner of the account with the S3 bucket (i.e., you as a customer) and added to the IAM role on AWS. Although it can be any string we recommend using a randomly generated UUID for better uniqueness. This ID then should be added to the trust policy of the IAM role <code>roleArn</code> configured above so that it looks something like this:  <code>{ \&amp;quot;Effect\&amp;quot;: \&amp;quot;Allow\&amp;quot;, \&amp;quot;Principal\&amp;quot;: { \&amp;quot;AWS\&amp;quot;: \&amp;quot;arn:aws:iam::630681592166:user/bitmovinCustomerS3Access\&amp;quot; }, \&amp;quot;Action\&amp;quot;: \&amp;quot;sts:AssumeRole\&amp;quot;, \&amp;quot;Condition\&amp;quot;: { \&amp;quot;StringEquals\&amp;quot;: { \&amp;quot;sts:ExternalId\&amp;quot;: \&amp;quot;{{externalId}}\&amp;quot; } } }</code>  where &amp;quot;{{externalId}}&amp;quot; is the generated ID.  This property is optional but we recommend it as an additional security feature. We will use both the <code>roleArn</code> and the <code>externalId</code> to access your S3 data. If the Amazon IAM role has an external ID configured but it is not provided in the output configuration Bitmovin won't be able to write to the S3 bucket. Also if the provided external ID does not match the one configured for the IAM role on AWS side, Bitmovin won't be able to access the S3 bucket.  You can change the external ID whenever you want, just update the trust policy of the IAM role and provide the new external ID in the output configuration. Note that we then won't be able to access your S3 buckets with the old external ID anymore, so you have to provide new output configuration.  For more information please visit <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html">https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html</a></p>
@@ -230,13 +215,8 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/bitmovin/bitmovin-api-sdk-dotnet/new/master/apiSpec/new?filename=Bitmovin_Api_Sdk_Models_S3RoleBasedOutput_Md5MetaTag.md&amp;value=---%0Auid%3A%20Bitmovin.Api.Sdk.Models.S3RoleBasedOutput.Md5MetaTag%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/bitmovin/bitmovin-api-sdk-dotnet/blob/master/src/Bitmovin.Api.Sdk/Models/S3RoleBasedOutput.cs/#L42">View Source</a>
-  </span>
+  
+  
   <a id="Bitmovin_Api_Sdk_Models_S3RoleBasedOutput_Md5MetaTag_" data-uid="Bitmovin.Api.Sdk.Models.S3RoleBasedOutput.Md5MetaTag*"></a>
   <h4 id="Bitmovin_Api_Sdk_Models_S3RoleBasedOutput_Md5MetaTag" data-uid="Bitmovin.Api.Sdk.Models.S3RoleBasedOutput.Md5MetaTag">Md5MetaTag</h4>
   <div class="markdown level1 summary"><p>If set a user defined tag (x-amz-meta-) with that key will be used to store the MD5 hash of the file.</p>
@@ -261,13 +241,8 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/bitmovin/bitmovin-api-sdk-dotnet/new/master/apiSpec/new?filename=Bitmovin_Api_Sdk_Models_S3RoleBasedOutput_RoleArn.md&amp;value=---%0Auid%3A%20Bitmovin.Api.Sdk.Models.S3RoleBasedOutput.RoleArn%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/bitmovin/bitmovin-api-sdk-dotnet/blob/master/src/Bitmovin.Api.Sdk/Models/S3RoleBasedOutput.cs/#L30">View Source</a>
-  </span>
+  
+  
   <a id="Bitmovin_Api_Sdk_Models_S3RoleBasedOutput_RoleArn_" data-uid="Bitmovin.Api.Sdk.Models.S3RoleBasedOutput.RoleArn*"></a>
   <h4 id="Bitmovin_Api_Sdk_Models_S3RoleBasedOutput_RoleArn" data-uid="Bitmovin.Api.Sdk.Models.S3RoleBasedOutput.RoleArn">RoleArn</h4>
   <div class="markdown level1 summary"><p>Amazon ARN of the IAM Role (Identity and Access Management Role) that will be assumed for S3 access.  This role has to be created by the owner of the account with the S3 bucket (i.e., you as a customer). For Bitmovin to be able to assume this role, the following has to be added to the trust policy of the role:  <code>{ \&amp;quot;Effect\&amp;quot;: \&amp;quot;Allow\&amp;quot;, \&amp;quot;Principal\&amp;quot;: { \&amp;quot;AWS\&amp;quot;: \&amp;quot;arn:aws:iam::630681592166:user/bitmovinCustomerS3Access\&amp;quot; }, \&amp;quot;Action\&amp;quot;: \&amp;quot;sts:AssumeRole\&amp;quot;, \&amp;quot;Condition\&amp;quot;: { \&amp;quot;StringEquals\&amp;quot;: { \&amp;quot;sts:ExternalId\&amp;quot;: \&amp;quot;{{externalId}}\&amp;quot; } } }</code>  where &amp;quot;arn:aws:iam::630681592166:user/bitmovinCustomerS3Access&amp;quot; is the Bitmovin user used for the access. The <code>Condition</code> is optional but we highly recommend it, see property <code>externalId</code> below for more information.  This setup allows Bitmovin assume the provided IAM role and to write data to your S3 bucket. Please note that the IAM role has to have write access to S3.  For more information about role creation please visit <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-service.html#roles-creatingrole-service-console">https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-service.html#roles-creatingrole-service-console</a> (required)</p>
@@ -292,13 +267,8 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/bitmovin/bitmovin-api-sdk-dotnet/new/master/apiSpec/new?filename=Bitmovin_Api_Sdk_Models_S3RoleBasedOutput_SignatureVersion.md&amp;value=---%0Auid%3A%20Bitmovin.Api.Sdk.Models.S3RoleBasedOutput.SignatureVersion%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/bitmovin/bitmovin-api-sdk-dotnet/blob/master/src/Bitmovin.Api.Sdk/Models/S3RoleBasedOutput.cs/#L54">View Source</a>
-  </span>
+  
+  
   <a id="Bitmovin_Api_Sdk_Models_S3RoleBasedOutput_SignatureVersion_" data-uid="Bitmovin.Api.Sdk.Models.S3RoleBasedOutput.SignatureVersion*"></a>
   <h4 id="Bitmovin_Api_Sdk_Models_S3RoleBasedOutput_SignatureVersion" data-uid="Bitmovin.Api.Sdk.Models.S3RoleBasedOutput.SignatureVersion">SignatureVersion</h4>
   <div class="markdown level1 summary"><p>Specifies the method used for authentication</p>
@@ -330,12 +300,6 @@
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/bitmovin/bitmovin-api-sdk-dotnet/new/master/apiSpec/new?filename=Bitmovin_Api_Sdk_Models_S3RoleBasedOutput.md&amp;value=---%0Auid%3A%20Bitmovin.Api.Sdk.Models.S3RoleBasedOutput%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/bitmovin/bitmovin-api-sdk-dotnet/blob/master/src/Bitmovin.Api.Sdk/Models/S3RoleBasedOutput.cs/#L16" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

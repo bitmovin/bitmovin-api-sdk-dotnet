@@ -84,7 +84,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.S3RoleBased
 
             [Get("/encoding/inputs/s3-role-based")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.S3RoleBasedInput>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.S3RoleBasedInput>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

@@ -84,7 +84,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Trimming.H264PictureT
 
             [Get("/encoding/encodings/{encoding_id}/input-streams/trimming/h264-picture-timing")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.H264PictureTimingTrimmingInputStream>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.H264PictureTimingTrimmingInputStream>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

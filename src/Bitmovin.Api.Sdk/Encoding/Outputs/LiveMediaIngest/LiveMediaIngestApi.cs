@@ -84,7 +84,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.LiveMediaIngest
 
             [Get("/encoding/outputs/live-media-ingest")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.LiveMediaIngestOutput>> ListAsync([QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.LiveMediaIngestOutput>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

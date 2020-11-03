@@ -84,7 +84,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Smooth.Representations.Mp4
 
             [Get("/encoding/manifests/smooth/{manifest_id}/representations/mp4")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.SmoothStreamingRepresentation>> ListAsync([Path("manifest_id")] string manifestId, [QueryMap] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.SmoothStreamingRepresentation>> ListAsync([Path("manifest_id")] string manifestId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>
