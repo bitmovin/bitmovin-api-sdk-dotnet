@@ -46,6 +46,12 @@ namespace Bitmovin.Api.Sdk.Models
         public string ExternalId { get; set; }
 
         /// <summary>
+        /// ExternalIdMode
+        /// </summary>
+        [JsonProperty(PropertyName = "externalIdMode")]
+        public ExternalIdMode? ExternalIdMode { get; set; }
+
+        /// <summary>
         /// Describes the region of the AWS API Gateway that is used to access the SPEKE server. This property is mandatory when setting &#39;roleArn&#39; and has to indicate in which region the AWS API Gateway is setup. This usually corresponds to the &#x60;{{region}}&#x60; one sets in the execute-api policy for the role as described in &#39;roleArn&#39;. 
         /// </summary>
         [JsonProperty(PropertyName = "gatewayRegion")]

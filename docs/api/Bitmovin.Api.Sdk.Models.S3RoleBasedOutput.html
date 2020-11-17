@@ -193,7 +193,7 @@
   
   <a id="Bitmovin_Api_Sdk_Models_S3RoleBasedOutput_ExternalId_" data-uid="Bitmovin.Api.Sdk.Models.S3RoleBasedOutput.ExternalId*"></a>
   <h4 id="Bitmovin_Api_Sdk_Models_S3RoleBasedOutput_ExternalId" data-uid="Bitmovin.Api.Sdk.Models.S3RoleBasedOutput.ExternalId">ExternalId</h4>
-  <div class="markdown level1 summary"><p>External ID used together with the IAM role identified by <code>roleArn</code> to assume S3 access.  This ID is generated once by the owner of the account with the S3 bucket (i.e., you as a customer) and added to the IAM role on AWS. Although it can be any string we recommend using a randomly generated UUID for better uniqueness. This ID then should be added to the trust policy of the IAM role <code>roleArn</code> configured above so that it looks something like this:  <code>{ \&amp;quot;Effect\&amp;quot;: \&amp;quot;Allow\&amp;quot;, \&amp;quot;Principal\&amp;quot;: { \&amp;quot;AWS\&amp;quot;: \&amp;quot;arn:aws:iam::630681592166:user/bitmovinCustomerS3Access\&amp;quot; }, \&amp;quot;Action\&amp;quot;: \&amp;quot;sts:AssumeRole\&amp;quot;, \&amp;quot;Condition\&amp;quot;: { \&amp;quot;StringEquals\&amp;quot;: { \&amp;quot;sts:ExternalId\&amp;quot;: \&amp;quot;{{externalId}}\&amp;quot; } } }</code>  where &amp;quot;{{externalId}}&amp;quot; is the generated ID.  This property is optional but we recommend it as an additional security feature. We will use both the <code>roleArn</code> and the <code>externalId</code> to access your S3 data. If the Amazon IAM role has an external ID configured but it is not provided in the output configuration Bitmovin won't be able to write to the S3 bucket. Also if the provided external ID does not match the one configured for the IAM role on AWS side, Bitmovin won't be able to access the S3 bucket.  You can change the external ID whenever you want, just update the trust policy of the IAM role and provide the new external ID in the output configuration. Note that we then won't be able to access your S3 buckets with the old external ID anymore, so you have to provide new output configuration.  For more information please visit <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html">https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html</a></p>
+  <div class="markdown level1 summary"><p>External ID used together with the IAM role identified by <code>roleArn</code> to assume S3 access.  This ID is provided by the API if <code>externalIdMode</code> is set to <code>GLOBAL</code> or <code>GENERATED</code>. If present, it has to be added to the trust policy of the IAM role <code>roleArn</code> configured above, otherwise the API won't be able to write to the S3 bucket. An appropriate trust policy would look like this:  <code>{ \&amp;quot;Effect\&amp;quot;: \&amp;quot;Allow\&amp;quot;, \&amp;quot;Principal\&amp;quot;: { \&amp;quot;AWS\&amp;quot;: \&amp;quot;arn:aws:iam::630681592166:user/bitmovinCustomerS3Access\&amp;quot; }, \&amp;quot;Action\&amp;quot;: \&amp;quot;sts:AssumeRole\&amp;quot;, \&amp;quot;Condition\&amp;quot;: { \&amp;quot;StringEquals\&amp;quot;: { \&amp;quot;sts:ExternalId\&amp;quot;: \&amp;quot;{{externalId}}\&amp;quot; } } }</code>  where &amp;quot;{{externalId}}&amp;quot; is the generated ID.  This property is optional but we recommend it as an additional security feature. We will use both the <code>roleArn</code> and the <code>externalId</code> to access your S3 data. If the Amazon IAM role has an external ID configured but it is not provided in the output configuration Bitmovin won't be able to write to the S3 bucket. Also if the external ID does not match the one configured for the IAM role on AWS side, Bitmovin won't be able to access the S3 bucket.  If you need to change the external ID that is used by your IAM role, you need to create a new output, and use the external ID provided by the API to update your IAM role.  For more information please visit <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html">https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -211,6 +211,32 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Bitmovin_Api_Sdk_Models_S3RoleBasedOutput_ExternalIdMode_" data-uid="Bitmovin.Api.Sdk.Models.S3RoleBasedOutput.ExternalIdMode*"></a>
+  <h4 id="Bitmovin_Api_Sdk_Models_S3RoleBasedOutput_ExternalIdMode" data-uid="Bitmovin.Api.Sdk.Models.S3RoleBasedOutput.ExternalIdMode">ExternalIdMode</h4>
+  <div class="markdown level1 summary"><p>ExternalIdMode</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExternalIdMode? ExternalIdMode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Bitmovin.Api.Sdk.Models.ExternalIdMode.html">ExternalIdMode</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>

@@ -32,5 +32,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "hlsMasterPlaylistVersion")]
         public HlsVersion? HlsMasterPlaylistVersion { get; set; }
+
+        /// <summary>
+        /// Controls the behaviour of the CHANNELS attribute for the EXT-X-VERSION tag
+        /// </summary>
+        [JsonProperty(PropertyName = "channelsAttributeForAudio")]
+        public ChannelsAttributeForAudio? ChannelsAttributeForAudio { get; set; }
     }
 }

@@ -34,12 +34,6 @@ namespace Bitmovin.Api.Sdk.Models
         public bool? InsecureSsl { get; set; }
 
         /// <summary>
-        /// Encryption used for the webhook
-        /// </summary>
-        [JsonProperty(PropertyName = "encryption")]
-        public WebhookEncryption Encryption { get; set; }
-
-        /// <summary>
         /// Signature used for the webhook
         /// </summary>
         [JsonProperty(PropertyName = "signature")]

@@ -3,6 +3,7 @@ using Bitmovin.Api.Sdk.Encoding.Infrastructure.Kubernetes;
 using Bitmovin.Api.Sdk.Encoding.Infrastructure.Aws;
 using Bitmovin.Api.Sdk.Encoding.Infrastructure.Azure;
 using Bitmovin.Api.Sdk.Encoding.Infrastructure.Gce;
+using Bitmovin.Api.Sdk.Encoding.Infrastructure.PrewarmedEncoderPools;
 
 namespace Bitmovin.Api.Sdk.Encoding.Infrastructure
 {
@@ -14,6 +15,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure
             Aws = new AwsApi(apiClientFactory);
             Azure = new AzureApi(apiClientFactory);
             Gce = new GceApi(apiClientFactory);
+            PrewarmedEncoderPools = new PrewarmedEncoderPoolsApi(apiClientFactory);
         }
 
         /// <summary>
@@ -25,5 +27,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure
         public AwsApi Aws { get; }
         public AzureApi Azure { get; }
         public GceApi Gce { get; }
+        public PrewarmedEncoderPoolsApi PrewarmedEncoderPools { get; }
     }
 }
