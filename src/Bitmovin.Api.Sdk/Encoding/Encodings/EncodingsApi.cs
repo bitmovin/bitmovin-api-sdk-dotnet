@@ -208,7 +208,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings
             public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
 
             /// <summary>
-            /// Order list result according an encoding resource attribute.  The fields that can be used for sorting are: + &#x60;id&#x60; + &#x60;startedAt&#x60; + &#x60;createdAt&#x60; + &#x60;modifiedAt&#x60; + &#x60;type&#x60; + &#x60;name&#x60; + &#x60;status&#x60; + &#x60;cloudRegion&#x60; + &#x60;encoderVersion&#x60; 
+            /// Order list result according an encoding resource attribute.  The fields that can be used for sorting are: + &#x60;id&#x60; + &#x60;startedAt&#x60; + &#x60;createdAt&#x60; + &#x60;modifiedAt&#x60; + &#x60;finishedAt&#x60; + &#x60;type&#x60; + &#x60;name&#x60; + &#x60;status&#x60; + &#x60;cloudRegion&#x60; + &#x60;encoderVersion&#x60; 
             /// </summary>
             public ListQueryParams Sort(string sort) => SetQueryParam("sort", sort);
 
@@ -258,24 +258,34 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings
             public ListQueryParams Search(string search) => SetQueryParam("search", search);
 
             /// <summary>
-            /// Filter encodings to only return those created after this exact time, provided in ISO8601 format: YYYY-MM-DDThh:mm:ssZ
+            /// Filter encodings to only return those created after this exact time, provided in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
             /// </summary>
             public ListQueryParams CreatedAtNewerThan(DateTime? createdAtNewerThan) => SetQueryParam("createdAtNewerThan", createdAtNewerThan);
 
             /// <summary>
-            /// Filter encodings to only return those created before this exact time, provided in ISO8601 format: YYYY-MM-DDThh:mm:ssZ
+            /// Filter encodings to only return those created before this exact time, provided in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
             /// </summary>
             public ListQueryParams CreatedAtOlderThan(DateTime? createdAtOlderThan) => SetQueryParam("createdAtOlderThan", createdAtOlderThan);
 
             /// <summary>
-            /// Filter encodings to only return those started after this exact time, provided in ISO8601 format: YYYY-MM-DDThh:mm:ssZ
+            /// Filter encodings to only return those started after this exact time, provided in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
             /// </summary>
             public ListQueryParams StartedAtNewerThan(DateTime? startedAtNewerThan) => SetQueryParam("startedAtNewerThan", startedAtNewerThan);
 
             /// <summary>
-            /// Filter encodings to only return those started before this exact time, provided in ISO8601 format: YYYY-MM-DDThh:mm:ssZ
+            /// Filter encodings to only return those started before this exact time, provided in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
             /// </summary>
             public ListQueryParams StartedAtOlderThan(DateTime? startedAtOlderThan) => SetQueryParam("startedAtOlderThan", startedAtOlderThan);
+
+            /// <summary>
+            /// Filter encodings to only return those finished at newer than this exact time, provided in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ Available for all encodings started after REST API Service release v1.50.0 (Changelogs for more information https://bitmovin.com/docs/encoding/changelogs/rest) 
+            /// </summary>
+            public ListQueryParams FinishedAtNewerThan(DateTime? finishedAtNewerThan) => SetQueryParam("finishedAtNewerThan", finishedAtNewerThan);
+
+            /// <summary>
+            /// Filter encodings to only return those finished at older than this exact time, provided in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ Available for all encodings started after REST API Service release v1.50.0 (Changelogs for more information https://bitmovin.com/docs/encoding/changelogs/rest) 
+            /// </summary>
+            public ListQueryParams FinishedAtOlderThan(DateTime? finishedAtOlderThan) => SetQueryParam("finishedAtOlderThan", finishedAtOlderThan);
 
             private ListQueryParams SetQueryParam<T>(string key, T value)
             {

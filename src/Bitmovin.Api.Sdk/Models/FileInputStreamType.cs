@@ -8,13 +8,13 @@ namespace Bitmovin.Api.Sdk.Models
     public enum FileInputStreamType
     {
         /// <summary>
-        /// Specifies that the Sidecar file conforms to the TTML standard
+        /// Specifies that the sidecar file conforms to the TTML standard
         /// </summary>
         [EnumMember(Value = "TTML")]
         TTML,
 
         /// <summary>
-        /// Specifies that the Sidecar file conforms to the WEBVTT standard
+        /// Specifies that the sidecar file conforms to the WEBVTT standard
         /// </summary>
         [EnumMember(Value = "WEBVTT")]
         WEBVTT

@@ -61,7 +61,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Labels
 
         internal interface ILabelsApiClient
         {
-            [Get("/encoding/statistics/labels/")]
+            [Get("/encoding/statistics/labels")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.StatisticsPerLabel>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
 

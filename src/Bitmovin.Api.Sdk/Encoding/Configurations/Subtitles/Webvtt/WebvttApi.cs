@@ -26,16 +26,16 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Subtitles.Webvtt
         public CustomdataApi Customdata { get; }
 
         /// <summary>
-        /// Create WebVtt Subtitle Configuration
+        /// Create WebVtt subtitle configuration
         /// </summary>
-        /// <param name="webVttConfiguration">The WebVtt Subtitle Configuration to be created</param>
+        /// <param name="webVttConfiguration">The WebVtt subtitle configuration to be created</param>
         public async Task<Models.WebVttConfiguration> CreateAsync(Models.WebVttConfiguration webVttConfiguration)
         {
             return await _apiClient.CreateAsync(webVttConfiguration);
         }
 
         /// <summary>
-        /// Delete WebVtt Subtitle Configuration
+        /// Delete WebVtt subtitle configuration
         /// </summary>
         /// <param name="configurationId">Id of the subtitle configuration (required)</param>
         public async Task<Models.BitmovinResponse> DeleteAsync(string configurationId)
@@ -44,7 +44,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Subtitles.Webvtt
         }
 
         /// <summary>
-        /// WebVtt Subtitle Configuration Details
+        /// WebVtt subtitle configuration details
         /// </summary>
         /// <param name="configurationId">Id of the codec configuration (required)</param>
         public async Task<Models.WebVttConfiguration> GetAsync(string configurationId)
@@ -53,7 +53,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Subtitles.Webvtt
         }
 
         /// <summary>
-        /// List WebVtt Configurations
+        /// List WebVtt subtitle configurations
         /// </summary>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>
         public async Task<Models.PaginationResponse<Models.WebVttConfiguration>> ListAsync(params Func<ListQueryParams, ListQueryParams>[] queryParams)
@@ -70,7 +70,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Subtitles.Webvtt
 
         internal interface IWebvttApiClient
         {
-            [Post("/encoding/configurations/subtitles/webvtt/")]
+            [Post("/encoding/configurations/subtitles/webvtt")]
             [AllowAnyStatusCode]
             Task<Models.WebVttConfiguration> CreateAsync([Body] Models.WebVttConfiguration webVttConfiguration);
 
@@ -82,7 +82,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Subtitles.Webvtt
             [AllowAnyStatusCode]
             Task<Models.WebVttConfiguration> GetAsync([Path("configuration_id")] string configurationId);
 
-            [Get("/encoding/configurations/subtitles/webvtt/")]
+            [Get("/encoding/configurations/subtitles/webvtt")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.WebVttConfiguration>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }

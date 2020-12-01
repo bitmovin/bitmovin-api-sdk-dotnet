@@ -49,7 +49,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Timestamp when the encoding status changed to &#39;ERROR&#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp is deprecated and is equivalent to finishedAt in case of an &#39;ERROR&#39;. 
         /// </summary>
         [JsonProperty(PropertyName = "errorAt")]
-        public DateTime? ErrorAt { get; set; }
+        public DateTime? ErrorAt { get; internal set; }
 
         /// <summary>
         /// Progress of the encoding in percent
