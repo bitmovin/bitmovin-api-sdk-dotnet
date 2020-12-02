@@ -3,6 +3,7 @@ using Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.Finished;
 using Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.Error;
 using Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.TransferError;
 using Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.LiveInputStreamChanged;
+using Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.EncodingStatusChanged;
 
 namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings
 {
@@ -14,6 +15,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings
             Error = new ErrorApi(apiClientFactory);
             TransferError = new TransferErrorApi(apiClientFactory);
             LiveInputStreamChanged = new LiveInputStreamChangedApi(apiClientFactory);
+            EncodingStatusChanged = new EncodingStatusChangedApi(apiClientFactory);
         }
 
         /// <summary>
@@ -25,5 +27,6 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings
         public ErrorApi Error { get; }
         public TransferErrorApi TransferError { get; }
         public LiveInputStreamChangedApi LiveInputStreamChanged { get; }
+        public EncodingStatusChangedApi EncodingStatusChanged { get; }
     }
 }
