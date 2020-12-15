@@ -19,25 +19,25 @@ namespace Bitmovin.Api.Sdk.Models
         private readonly string _type = "CROP";
 
         /// <summary>
-        /// Amount of pixels which will be cropped of the input video from the left side.
+        /// Amount of pixels that will be cropped of the input video from the left side. Must be zero or a positive value.
         /// </summary>
         [JsonProperty(PropertyName = "left")]
         public int? Left { get; set; }
 
         /// <summary>
-        /// Amount of pixels which will be cropped of the input video from the right side.
+        /// Amount of pixels that will be cropped of the input video from the right side. Must be zero or a positive value.
         /// </summary>
         [JsonProperty(PropertyName = "right")]
         public int? Right { get; set; }
 
         /// <summary>
-        /// Amount of pixels which will be cropped of the input video from the top.
+        /// Amount of pixels that will be cropped of the input video from the top. Must be zero or a positive value.
         /// </summary>
         [JsonProperty(PropertyName = "top")]
         public int? Top { get; set; }
 
         /// <summary>
-        /// Amount of pixels which will be cropped of the input video from the bottom.
+        /// Amount of pixels that will be cropped of the input video from the bottom. Must be zero or a positive value.
         /// </summary>
         [JsonProperty(PropertyName = "bottom")]
         public int? Bottom { get; set; }

@@ -7,7 +7,6 @@ using Bitmovin.Api.Sdk.Analytics.Ads;
 using Bitmovin.Api.Sdk.Analytics.Queries;
 using Bitmovin.Api.Sdk.Analytics.Licenses;
 using Bitmovin.Api.Sdk.Analytics.Outputs;
-using Bitmovin.Api.Sdk.Analytics.Alerting;
 
 namespace Bitmovin.Api.Sdk.Analytics
 {
@@ -23,7 +22,6 @@ namespace Bitmovin.Api.Sdk.Analytics
             Queries = new QueriesApi(apiClientFactory);
             Licenses = new LicensesApi(apiClientFactory);
             Outputs = new OutputsApi(apiClientFactory);
-            Alerting = new AlertingApi(apiClientFactory);
         }
 
         /// <summary>
@@ -39,6 +37,5 @@ namespace Bitmovin.Api.Sdk.Analytics
         public QueriesApi Queries { get; }
         public LicensesApi Licenses { get; }
         public OutputsApi Outputs { get; }
-        public AlertingApi Alerting { get; }
     }
 }

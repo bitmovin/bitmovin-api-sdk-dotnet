@@ -17,6 +17,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// Specifies that the sidecar file conforms to the WEBVTT standard
         /// </summary>
         [EnumMember(Value = "WEBVTT")]
-        WEBVTT
+        WEBVTT,
+
+        /// <summary>
+        /// Specifies that the sidecar file conforms to the SRT standard
+        /// </summary>
+        [EnumMember(Value = "SRT")]
+        SRT
     }
 }

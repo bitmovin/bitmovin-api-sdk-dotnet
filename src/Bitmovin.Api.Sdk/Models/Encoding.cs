@@ -88,6 +88,12 @@ namespace Bitmovin.Api.Sdk.Models
         public InfrastructureSettings Infrastructure { get; set; }
 
         /// <summary>
+        /// Specify an ID of a Static IP infrastructure resource this encoding should use. A Static IP cannot be used by multiple encodings at once. The encoding will go to an error state if the Static IP is already in use. This is currently only supported for live encodings.
+        /// </summary>
+        [JsonProperty(PropertyName = "staticIpId")]
+        public string StaticIpId { get; set; }
+
+        /// <summary>
         /// After the encoding has been started, this will contain the encoder version that was actually used. Especially useful when starting an encoding with a version tag like STABLE or BETA.
         /// </summary>
         [JsonProperty(PropertyName = "selectedEncoderVersion")]

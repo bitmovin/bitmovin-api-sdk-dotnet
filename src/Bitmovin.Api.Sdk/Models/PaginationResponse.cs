@@ -19,36 +19,36 @@ namespace Bitmovin.Api.Sdk.Models
         /// TotalCount
         /// </summary>
         [JsonProperty(PropertyName = "totalCount")]
-        public long? TotalCount { get; set; }
+        public long? TotalCount { get; internal set; }
 
         /// <summary>
         /// Offset
         /// </summary>
         [JsonProperty(PropertyName = "offset")]
-        public int? Offset { get; set; }
+        public int? Offset { get; internal set; }
 
         /// <summary>
         /// Limit
         /// </summary>
         [JsonProperty(PropertyName = "limit")]
-        public int? Limit { get; set; }
+        public int? Limit { get; internal set; }
 
         /// <summary>
         /// Previous
         /// </summary>
         [JsonProperty(PropertyName = "previous")]
-        public string Previous { get; set; }
+        public string Previous { get; internal set; }
 
         /// <summary>
         /// Next
         /// </summary>
         [JsonProperty(PropertyName = "next")]
-        public string Next { get; set; }
+        public string Next { get; internal set; }
 
         /// <summary>
         /// Items
         /// </summary>
         [JsonProperty(PropertyName = "items")]
-        public List<T> Items { get; set; } = new List<T>();
+        public List<T> Items { get; internal set; } = new List<T>();
     }
 }

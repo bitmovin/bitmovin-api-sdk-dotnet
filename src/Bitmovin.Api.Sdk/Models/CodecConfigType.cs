@@ -125,6 +125,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// WEBVTT
         /// </summary>
         [EnumMember(Value = "WEBVTT")]
-        WEBVTT
+        WEBVTT,
+
+        /// <summary>
+        /// DVB_SUBTITLE
+        /// </summary>
+        [EnumMember(Value = "DVB_SUBTITLE")]
+        DVB_SUBTITLE
     }
 }

@@ -50,11 +50,5 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "autoRestartConfiguration")]
         public AutoRestartConfiguration AutoRestartConfiguration { get; set; }
-
-        /// <summary>
-        /// The static IP that will be used for the live encoding. If the provider and the region do not match the encoding start call will fail.
-        /// </summary>
-        [JsonProperty(PropertyName = "staticIpId")]
-        public List<string> StaticIpId { get; set; } = new List<string>();
     }
 }

@@ -52,6 +52,22 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Mp2
             return await _apiClient.GetAsync(configurationId);
         }
 
+        /// <summary>
+        /// List MP2 Configurations
+        /// </summary>
+        /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>
+        public async Task<Models.PaginationResponse<Models.Mp2AudioConfiguration>> ListAsync(params Func<ListQueryParams, ListQueryParams>[] queryParams)
+        {
+            ListQueryParams q = new ListQueryParams();
+
+            foreach (var builderFunc in queryParams)
+            {
+                builderFunc(q);
+            }
+
+            return await _apiClient.ListAsync(q);
+        }
+
         internal interface IMp2ApiClient
         {
             [Post("/encoding/configurations/audio/mp2")]
@@ -65,6 +81,38 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Mp2
             [Get("/encoding/configurations/audio/mp2/{configuration_id}")]
             [AllowAnyStatusCode]
             Task<Models.Mp2AudioConfiguration> GetAsync([Path("configuration_id")] string configurationId);
+
+            [Get("/encoding/configurations/audio/mp2")]
+            [AllowAnyStatusCode]
+            Task<Models.PaginationResponse<Models.Mp2AudioConfiguration>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
+        }
+
+        public class ListQueryParams : Dictionary<string,Object>
+        {
+            /// <summary>
+            /// Index of the first item to return, starting at 0. Default is 0
+            /// </summary>
+            public ListQueryParams Offset(int? offset) => SetQueryParam("offset", offset);
+
+            /// <summary>
+            /// Maximum number of items to return. Default is 25, maximum is 100
+            /// </summary>
+            public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
+
+            /// <summary>
+            /// Filter configuration by name
+            /// </summary>
+            public ListQueryParams Name(string name) => SetQueryParam("name", name);
+
+            private ListQueryParams SetQueryParam<T>(string key, T value)
+            {
+                if (value != null)
+                {
+                    this[key] = value;
+                }
+
+                return this;
+            }
         }
     }
 }
