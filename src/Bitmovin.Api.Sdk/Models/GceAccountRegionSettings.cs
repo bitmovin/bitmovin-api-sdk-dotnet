@@ -26,5 +26,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "subnetId")]
         public string SubnetId { get; set; }
+
+        /// <summary>
+        /// Region
+        /// </summary>
+        [JsonProperty(PropertyName = "region")]
+        public GoogleCloudRegion? Region { get; set; }
     }
 }

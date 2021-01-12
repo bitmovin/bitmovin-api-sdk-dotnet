@@ -43,7 +43,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Number of encoded segments. Available after encoding finishes.
         /// </summary>
         [JsonProperty(PropertyName = "segmentsEncoded")]
-        public int? SegmentsEncoded { get; set; }
+        public int? SegmentsEncoded { get; internal set; }
 
         /// <summary>
         /// Conditions to evaluate before creating the stream. If this evaluation fails, the stream won&#39;t be created. All muxings that depend on the stream will also not be created.

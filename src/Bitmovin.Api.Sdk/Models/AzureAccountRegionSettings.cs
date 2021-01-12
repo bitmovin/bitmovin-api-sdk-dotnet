@@ -26,5 +26,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "subnetName")]
         public string SubnetName { get; set; }
+
+        /// <summary>
+        /// Region
+        /// </summary>
+        [JsonProperty(PropertyName = "region")]
+        public AzureCloudRegion? Region { get; set; }
     }
 }

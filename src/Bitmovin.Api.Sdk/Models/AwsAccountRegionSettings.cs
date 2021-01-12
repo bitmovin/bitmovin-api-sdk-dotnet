@@ -38,5 +38,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "sshPort")]
         public int? SshPort { get; set; }
+
+        /// <summary>
+        /// Region
+        /// </summary>
+        [JsonProperty(PropertyName = "region")]
+        public AwsCloudRegion? Region { get; set; }
     }
 }
