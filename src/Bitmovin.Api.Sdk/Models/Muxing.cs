@@ -28,6 +28,7 @@ namespace Bitmovin.Api.Sdk.Models
     [JsonSubtypes.KnownSubType(typeof(ChunkedTextMuxing), "CHUNKED_TEXT")]
     [JsonSubtypes.KnownSubType(typeof(TextMuxing), "TEXT")]
     [JsonSubtypes.KnownSubType(typeof(SegmentedRawMuxing), "SEGMENTED_RAW")]
+    [JsonSubtypes.KnownSubType(typeof(PackedAudioMuxing), "PACKED_AUDIO")]
 
     public class Muxing : BitmovinResource
     {

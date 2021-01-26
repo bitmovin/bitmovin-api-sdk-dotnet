@@ -8,6 +8,7 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ChunkedText;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Cmaf;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.SegmentedRaw;
+using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.PackedAudio;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Text;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Ts;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Webm;
@@ -32,6 +33,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings
             ChunkedText = new ChunkedTextApi(apiClientFactory);
             Cmaf = new CmafApi(apiClientFactory);
             SegmentedRaw = new SegmentedRawApi(apiClientFactory);
+            PackedAudio = new PackedAudioApi(apiClientFactory);
             Text = new TextApi(apiClientFactory);
             Ts = new TsApi(apiClientFactory);
             Webm = new WebmApi(apiClientFactory);
@@ -53,6 +55,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings
         public ChunkedTextApi ChunkedText { get; }
         public CmafApi Cmaf { get; }
         public SegmentedRawApi SegmentedRaw { get; }
+        public PackedAudioApi PackedAudio { get; }
         public TextApi Text { get; }
         public TsApi Ts { get; }
         public WebmApi Webm { get; }

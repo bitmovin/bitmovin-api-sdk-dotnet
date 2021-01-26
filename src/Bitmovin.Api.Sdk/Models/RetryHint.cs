@@ -23,6 +23,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// The process is expected to fail on subsequent retries
         /// </summary>
         [EnumMember(Value = "NO_RETRY")]
-        NO_RETRY
+        NO_RETRY,
+
+        /// <summary>
+        /// Unable to determine if the error is retryable.
+        /// </summary>
+        [EnumMember(Value = "UNDEFINED")]
+        UNDEFINED
     }
 }

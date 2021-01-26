@@ -32,5 +32,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "insertProgramClockRefOnPes")]
         public bool? InsertProgramClockRefOnPes { get; set; }
+
+        /// <summary>
+        /// Interval between Program Clock References (PCRs) in milliseconds. Defines the period between PCR fields inserted in the stream. The default value is 90ms.
+        /// </summary>
+        [JsonProperty(PropertyName = "programClockRefInterval")]
+        public int? ProgramClockRefInterval { get; set; }
     }
 }

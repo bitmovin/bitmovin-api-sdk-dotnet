@@ -1,5 +1,6 @@
 using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Analytics.Outputs.S3RoleBased;
+using Bitmovin.Api.Sdk.Analytics.Outputs.GcsServiceAccount;
 
 namespace Bitmovin.Api.Sdk.Analytics.Outputs
 {
@@ -8,6 +9,7 @@ namespace Bitmovin.Api.Sdk.Analytics.Outputs
         public OutputsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             S3RoleBased = new S3RoleBasedApi(apiClientFactory);
+            GcsServiceAccount = new GcsServiceAccountApi(apiClientFactory);
         }
 
         /// <summary>
@@ -16,5 +18,6 @@ namespace Bitmovin.Api.Sdk.Analytics.Outputs
         public static BitmovinApiBuilder<OutputsApi> Builder => new BitmovinApiBuilder<OutputsApi>();
 
         public S3RoleBasedApi S3RoleBased { get; }
+        public GcsServiceAccountApi GcsServiceAccount { get; }
     }
 }

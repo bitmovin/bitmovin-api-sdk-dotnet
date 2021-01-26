@@ -89,6 +89,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// SEGMENTED_RAW
         /// </summary>
         [EnumMember(Value = "SEGMENTED_RAW")]
-        SEGMENTED_RAW
+        SEGMENTED_RAW,
+
+        /// <summary>
+        /// PACKED_AUDIO
+        /// </summary>
+        [EnumMember(Value = "PACKED_AUDIO")]
+        PACKED_AUDIO
     }
 }
