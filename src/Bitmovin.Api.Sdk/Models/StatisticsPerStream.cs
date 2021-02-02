@@ -172,6 +172,18 @@ namespace Bitmovin.Api.Sdk.Models
         public double? EnhancedDeinterlaceMultiplicator { get; internal set; }
 
         /// <summary>
+        /// NexGuardABWatermarkingType
+        /// </summary>
+        [JsonProperty(PropertyName = "nexGuardABWatermarkingType")]
+        public NexGuardABWatermarkingFeature? NexGuardABWatermarkingType { get; set; }
+
+        /// <summary>
+        /// The output minutes multiplicator for streams using a NexGuard A/B Watermarking.
+        /// </summary>
+        [JsonProperty(PropertyName = "nexGuardABWatermarkingMultiplicator")]
+        public double? NexGuardABWatermarkingMultiplicator { get; internal set; }
+
+        /// <summary>
         /// InputFactor
         /// </summary>
         [JsonProperty(PropertyName = "inputFactor")]

@@ -29,5 +29,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "ignoreRegion")]
         public bool? IgnoreRegion { get; set; }
+
+        /// <summary>
+        /// CueIdentifierPolicy
+        /// </summary>
+        [JsonProperty(PropertyName = "cueIdentifierPolicy")]
+        public WebVttCueIdentifierPolicy? CueIdentifierPolicy { get; set; }
     }
 }

@@ -12,7 +12,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "D+Rdwtv8WLR7TxS6XsPqcQ=="
+          "hash": "g7SuxldMebjFprKRuOzRBw=="
         }
       },
       "is_incremental": false,
@@ -7464,7 +7464,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.Streams.StreamsApi.html",
-          "hash": "/pSbIoSI5ss+xzQZzcqABA=="
+          "hash": "KIMu5g8RF+9jJTNf5+suIQ=="
         }
       },
       "is_incremental": false,
@@ -7525,6 +7525,90 @@
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Thumbnails.html",
           "hash": "iB3cPtGncR72Ta09eShqcA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Watermarking.NexguardFileMarker.Customdata.CustomdataApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Watermarking.NexguardFileMarker.Customdata.CustomdataApi.html",
+          "hash": "2UIQ5CLREEDzsmnYmp+87g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Watermarking.NexguardFileMarker.Customdata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Watermarking.NexguardFileMarker.Customdata.html",
+          "hash": "ZPmuPp0TLew9RCtG80SBZA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Watermarking.NexguardFileMarker.NexguardFileMarkerApi.ListQueryParams.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Watermarking.NexguardFileMarker.NexguardFileMarkerApi.ListQueryParams.html",
+          "hash": "IubuKiZosI0Kn4Jlc40AQQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Watermarking.NexguardFileMarker.NexguardFileMarkerApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Watermarking.NexguardFileMarker.NexguardFileMarkerApi.html",
+          "hash": "17gjmE/TUUG3/MYVihUpkg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Watermarking.NexguardFileMarker.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Watermarking.NexguardFileMarker.html",
+          "hash": "9qf6jeMzZXDpNsIe0PeR+Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Watermarking.WatermarkingApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Watermarking.WatermarkingApi.html",
+          "hash": "Hk5rhqd8N03mRbvmh73cOg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Watermarking.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Watermarking.html",
+          "hash": "8FdSNaY6hPNx9dL9d7MYXg=="
         }
       },
       "is_incremental": false,
@@ -14748,7 +14832,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.BillableEncodingMinutes.html",
-          "hash": "VdVhS46yi/LbFHj9sA3rIQ=="
+          "hash": "dGMfH9syMuekFwrwzng3Hg=="
         }
       },
       "is_incremental": false,
@@ -14772,7 +14856,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.BitmovinResource.html",
-          "hash": "oyrx/9qO8SAyJPP/TVjEJQ=="
+          "hash": "0bj2s2Ht/1/Zaxa1DiOnfg=="
         }
       },
       "is_incremental": false,
@@ -17972,6 +18056,54 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.NexGuardABWatermarkingFeature.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.NexGuardABWatermarkingFeature.html",
+          "hash": "CwpnHpcfBlg7mZsrOt7sqg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.NexGuardFileMarker.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.NexGuardFileMarker.html",
+          "hash": "APy/9hFP2HDl8Y63klilBQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.NexGuardWatermarkingStrength.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.NexGuardWatermarkingStrength.html",
+          "hash": "BGNC0KeOItU002Qe6iStdQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.NexGuardWatermarkingType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.NexGuardWatermarkingType.html",
+          "hash": "qoQmhEZdy1H8pCIhYiSG4A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Bitmovin.Api.Sdk.Models.Notification.yml",
       "output": {
         ".html": {
@@ -19596,7 +19728,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.StatisticsPerStream.html",
-          "hash": "t75yO3SqTsxjCQbA4rIGsA=="
+          "hash": "3Q8dO4HAi8JZIgC5Hdvpgg=="
         }
       },
       "is_incremental": false,
@@ -20472,7 +20604,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.WebVttConfiguration.html",
-          "hash": "eoRzfm9EREO0tqf0gMwsRw=="
+          "hash": "U/iVXjZW/UXgwvRCevw0kg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.WebVttCueIdentifierPolicy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.WebVttCueIdentifierPolicy.html",
+          "hash": "8tL19KlWkpuKgaGUyuct6w=="
         }
       },
       "is_incremental": false,
@@ -20640,7 +20784,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.html",
-          "hash": "MfsnyF2/CSzlX5zMJpfHTA=="
+          "hash": "rkAqH+o9tTbRXrZmN1ezlQ=="
         }
       },
       "is_incremental": false,
@@ -21684,7 +21828,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "WxioeSoOxQr6gFJuDFaZaA=="
+          "hash": "mYU5ybSBzKFiER4ZIvZcDg=="
         }
       },
       "is_incremental": false,
@@ -21699,7 +21843,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "CmDuTqnonaRpasQdgsfrVA=="
+          "hash": "POTQhkLyayjHJFp2sVW3yQ=="
         }
       },
       "is_incremental": false,
@@ -21736,16 +21880,16 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 1817,
+          "skipped_file_count": 0
+        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 2,
-          "skipped_file_count": 0
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 1805,
           "skipped_file_count": 0
         }
       }

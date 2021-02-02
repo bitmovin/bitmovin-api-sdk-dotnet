@@ -58,6 +58,12 @@ namespace Bitmovin.Api.Sdk.Models
         public bool? EnhancedDeinterlace { get; internal set; }
 
         /// <summary>
+        /// NexGuardABWatermarkingType
+        /// </summary>
+        [JsonProperty(PropertyName = "nexGuardABWatermarkingType")]
+        public NexGuardABWatermarkingFeature? NexGuardABWatermarkingType { get; set; }
+
+        /// <summary>
         /// BillableMinutes
         /// </summary>
         [JsonProperty(PropertyName = "billableMinutes")]

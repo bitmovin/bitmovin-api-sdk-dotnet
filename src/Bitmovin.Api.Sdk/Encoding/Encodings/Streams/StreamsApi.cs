@@ -9,6 +9,7 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Input;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Inputs;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Filters;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Streams.BurnInSubtitles;
+using Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Watermarking;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Captions;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Bifs;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Hdr;
@@ -30,6 +31,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams
             Inputs = new InputsApi(apiClientFactory);
             Filters = new FiltersApi(apiClientFactory);
             BurnInSubtitles = new BurnInSubtitlesApi(apiClientFactory);
+            Watermarking = new WatermarkingApi(apiClientFactory);
             Captions = new CaptionsApi(apiClientFactory);
             Bifs = new BifsApi(apiClientFactory);
             Hdr = new HdrApi(apiClientFactory);
@@ -48,6 +50,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams
         public InputsApi Inputs { get; }
         public FiltersApi Filters { get; }
         public BurnInSubtitlesApi BurnInSubtitles { get; }
+        public WatermarkingApi Watermarking { get; }
         public CaptionsApi Captions { get; }
         public BifsApi Bifs { get; }
         public HdrApi Hdr { get; }
