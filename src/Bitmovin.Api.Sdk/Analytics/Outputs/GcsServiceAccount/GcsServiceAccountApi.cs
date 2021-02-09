@@ -28,10 +28,10 @@ namespace Bitmovin.Api.Sdk.Analytics.Outputs.GcsServiceAccount
         /// <summary>
         /// Create Service Account based GCS Output
         /// </summary>
-        /// <param name="gcsServiceAccountOutput">The GCS output to be created</param>
-        public async Task<Models.GcsServiceAccountOutput> CreateAsync(Models.GcsServiceAccountOutput gcsServiceAccountOutput)
+        /// <param name="analyticsGcsServiceAccountOutput">The GCS output to be created</param>
+        public async Task<Models.AnalyticsGcsServiceAccountOutput> CreateAsync(Models.AnalyticsGcsServiceAccountOutput analyticsGcsServiceAccountOutput)
         {
-            return await _apiClient.CreateAsync(gcsServiceAccountOutput);
+            return await _apiClient.CreateAsync(analyticsGcsServiceAccountOutput);
         }
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace Bitmovin.Api.Sdk.Analytics.Outputs.GcsServiceAccount
         /// List Service Account based GCS Outputs
         /// </summary>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>
-        public async Task<Models.PaginationResponse<Models.GcsServiceAccountOutput>> ListAsync(params Func<ListQueryParams, ListQueryParams>[] queryParams)
+        public async Task<Models.PaginationResponse<Models.AnalyticsGcsServiceAccountOutput>> ListAsync(params Func<ListQueryParams, ListQueryParams>[] queryParams)
         {
             ListQueryParams q = new ListQueryParams();
 
@@ -72,7 +72,7 @@ namespace Bitmovin.Api.Sdk.Analytics.Outputs.GcsServiceAccount
         {
             [Post("/analytics/outputs/gcs-service-account")]
             [AllowAnyStatusCode]
-            Task<Models.GcsServiceAccountOutput> CreateAsync([Body] Models.GcsServiceAccountOutput gcsServiceAccountOutput);
+            Task<Models.AnalyticsGcsServiceAccountOutput> CreateAsync([Body] Models.AnalyticsGcsServiceAccountOutput analyticsGcsServiceAccountOutput);
 
             [Delete("/analytics/outputs/gcs-service-account/{output_id}")]
             [AllowAnyStatusCode]
@@ -84,7 +84,7 @@ namespace Bitmovin.Api.Sdk.Analytics.Outputs.GcsServiceAccount
 
             [Get("/analytics/outputs/gcs-service-account")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.GcsServiceAccountOutput>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.AnalyticsGcsServiceAccountOutput>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

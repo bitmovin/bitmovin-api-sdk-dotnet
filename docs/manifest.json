@@ -12,7 +12,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "g7SuxldMebjFprKRuOzRBw=="
+          "hash": "vkWwZvzw3o6mDxEXTAFVIQ=="
         }
       },
       "is_incremental": false,
@@ -828,7 +828,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Analytics.Outputs.GcsServiceAccount.GcsServiceAccountApi.html",
-          "hash": "+HKHiE46pm/KpiP0Jez4EQ=="
+          "hash": "LZL9OE5QrkVZxZJ8xsheEw=="
         }
       },
       "is_incremental": false,
@@ -900,7 +900,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Analytics.Outputs.S3RoleBased.S3RoleBasedApi.html",
-          "hash": "48VZ1dBJMmCBFnNRjc3jvQ=="
+          "hash": "dLV+8T04+3j4SVWlL1jfog=="
         }
       },
       "is_incremental": false,
@@ -13880,6 +13880,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.AnalyticsGcsServiceAccountOutput.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.AnalyticsGcsServiceAccountOutput.html",
+          "hash": "XIFD9pfTCHheOBpvHiNX3A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Bitmovin.Api.Sdk.Models.AnalyticsGreaterThanFilter.yml",
       "output": {
         ".html": {
@@ -14204,6 +14216,30 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.AnalyticsOutput.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.AnalyticsOutput.html",
+          "hash": "FECZzy7idRAOTde66sP0WA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.AnalyticsOutputType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.AnalyticsOutputType.html",
+          "hash": "Z18CiphoJE4fsqfQRYt7zw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Bitmovin.Api.Sdk.Models.AnalyticsPercentileQueryRequest.yml",
       "output": {
         ".html": {
@@ -14257,6 +14293,18 @@
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.AnalyticsResponse.html",
           "hash": "B8wX5mB1qI2Uqcxggo3SeA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.AnalyticsS3RoleBasedOutput.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.AnalyticsS3RoleBasedOutput.html",
+          "hash": "enmJKuZ37mfTlropEOECvQ=="
         }
       },
       "is_incremental": false,
@@ -14856,7 +14904,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.BitmovinResource.html",
-          "hash": "0bj2s2Ht/1/Zaxa1DiOnfg=="
+          "hash": "v2Ua82i/kfKyshmhZaDz1g=="
         }
       },
       "is_incremental": false,
@@ -20784,7 +20832,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.html",
-          "hash": "rkAqH+o9tTbRXrZmN1ezlQ=="
+          "hash": "IOMn/qCjEoAmKkZfa3PgkQ=="
         }
       },
       "is_incremental": false,
@@ -21828,7 +21876,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "mYU5ybSBzKFiER4ZIvZcDg=="
+          "hash": "vMNSL5co1b9VrP4DECg9/g=="
         }
       },
       "is_incremental": false,
@@ -21843,7 +21891,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "POTQhkLyayjHJFp2sVW3yQ=="
+          "hash": "T0JlDOfH7lB1/srBlPjMeA=="
         }
       },
       "is_incremental": false,
@@ -21883,7 +21931,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 1817,
+          "total_file_count": 1821,
           "skipped_file_count": 0
         },
         "ConceptualDocumentProcessor": {

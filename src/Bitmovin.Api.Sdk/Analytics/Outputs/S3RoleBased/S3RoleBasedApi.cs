@@ -28,10 +28,10 @@ namespace Bitmovin.Api.Sdk.Analytics.Outputs.S3RoleBased
         /// <summary>
         /// Create S3 Role-based Output
         /// </summary>
-        /// <param name="s3RoleBasedOutput">The S3 Role-based output to be created</param>
-        public async Task<Models.S3RoleBasedOutput> CreateAsync(Models.S3RoleBasedOutput s3RoleBasedOutput)
+        /// <param name="analyticsS3RoleBasedOutput">The S3 Role-based output to be created</param>
+        public async Task<Models.AnalyticsS3RoleBasedOutput> CreateAsync(Models.AnalyticsS3RoleBasedOutput analyticsS3RoleBasedOutput)
         {
-            return await _apiClient.CreateAsync(s3RoleBasedOutput);
+            return await _apiClient.CreateAsync(analyticsS3RoleBasedOutput);
         }
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace Bitmovin.Api.Sdk.Analytics.Outputs.S3RoleBased
         /// List S3 Role-based Outputs
         /// </summary>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>
-        public async Task<Models.PaginationResponse<Models.S3RoleBasedOutput>> ListAsync(params Func<ListQueryParams, ListQueryParams>[] queryParams)
+        public async Task<Models.PaginationResponse<Models.AnalyticsS3RoleBasedOutput>> ListAsync(params Func<ListQueryParams, ListQueryParams>[] queryParams)
         {
             ListQueryParams q = new ListQueryParams();
 
@@ -72,7 +72,7 @@ namespace Bitmovin.Api.Sdk.Analytics.Outputs.S3RoleBased
         {
             [Post("/analytics/outputs/s3-role-based")]
             [AllowAnyStatusCode]
-            Task<Models.S3RoleBasedOutput> CreateAsync([Body] Models.S3RoleBasedOutput s3RoleBasedOutput);
+            Task<Models.AnalyticsS3RoleBasedOutput> CreateAsync([Body] Models.AnalyticsS3RoleBasedOutput analyticsS3RoleBasedOutput);
 
             [Delete("/analytics/outputs/s3-role-based/{output_id}")]
             [AllowAnyStatusCode]
@@ -84,7 +84,7 @@ namespace Bitmovin.Api.Sdk.Analytics.Outputs.S3RoleBased
 
             [Get("/analytics/outputs/s3-role-based")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.S3RoleBasedOutput>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.AnalyticsS3RoleBasedOutput>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>
