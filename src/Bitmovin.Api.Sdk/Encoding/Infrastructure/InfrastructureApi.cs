@@ -1,5 +1,4 @@
 using Bitmovin.Api.Sdk.Common;
-using Bitmovin.Api.Sdk.Encoding.Infrastructure.Kubernetes;
 using Bitmovin.Api.Sdk.Encoding.Infrastructure.Aws;
 using Bitmovin.Api.Sdk.Encoding.Infrastructure.StaticIps;
 using Bitmovin.Api.Sdk.Encoding.Infrastructure.Azure;
@@ -12,7 +11,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure
     {
         public InfrastructureApi(IBitmovinApiClientFactory apiClientFactory)
         {
-            Kubernetes = new KubernetesApi(apiClientFactory);
             Aws = new AwsApi(apiClientFactory);
             StaticIps = new StaticIpsApi(apiClientFactory);
             Azure = new AzureApi(apiClientFactory);
@@ -25,7 +23,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure
         /// </summary>
         public static BitmovinApiBuilder<InfrastructureApi> Builder => new BitmovinApiBuilder<InfrastructureApi>();
 
-        public KubernetesApi Kubernetes { get; }
         public AwsApi Aws { get; }
         public StaticIpsApi StaticIps { get; }
         public AzureApi Azure { get; }

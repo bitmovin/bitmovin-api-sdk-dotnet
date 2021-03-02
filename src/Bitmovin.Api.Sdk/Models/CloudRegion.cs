@@ -278,12 +278,6 @@ namespace Bitmovin.Api.Sdk.Models
         GOOGLE,
 
         /// <summary>
-        /// KUBERNETES
-        /// </summary>
-        [EnumMember(Value = "KUBERNETES")]
-        KUBERNETES,
-
-        /// <summary>
         /// EXTERNAL
         /// </summary>
         [EnumMember(Value = "EXTERNAL")]

@@ -16,7 +16,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class RescheduleEncodingRequest
     {
         /// <summary>
-        /// Id of a custom infrastructure, e.g., Kubernetes Cluster
+        /// Id of a custom infrastructure, e.g., AWS Cloud Connect
         /// </summary>
         [JsonProperty(PropertyName = "infrastructureId")]
         public string InfrastructureId { get; set; }

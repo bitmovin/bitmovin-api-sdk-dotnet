@@ -12,7 +12,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "GN6B05SysLAA4WzFb7oP/g=="
+          "hash": "OGNuAcgyFmvra34v6Ogtsw=="
         }
       },
       "is_incremental": false,
@@ -8892,175 +8892,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Infrastructure.InfrastructureApi.html",
-          "hash": "wDoHc6noJtTqSn27F5I69A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Infrastructure.Kubernetes.AgentDeployment.AgentDeploymentApi.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Infrastructure.Kubernetes.AgentDeployment.AgentDeploymentApi.html",
-          "hash": "XveZOj9iryUzk+04VyYt4Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Infrastructure.Kubernetes.AgentDeployment.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Infrastructure.Kubernetes.AgentDeployment.html",
-          "hash": "bGQRJTd5ezOp+eCBQjJivA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Infrastructure.Kubernetes.Configuration.ConfigurationApi.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Infrastructure.Kubernetes.Configuration.ConfigurationApi.html",
-          "hash": "nl/IzGcLtNkYY2PsAuMJ3Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Infrastructure.Kubernetes.Configuration.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Infrastructure.Kubernetes.Configuration.html",
-          "hash": "MVOj9dVu7zMJZMzQxvZgmg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Infrastructure.Kubernetes.Customdata.CustomdataApi.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Infrastructure.Kubernetes.Customdata.CustomdataApi.html",
-          "hash": "0GLcaUC+wTUF+abOlAjH/w=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Infrastructure.Kubernetes.Customdata.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Infrastructure.Kubernetes.Customdata.html",
-          "hash": "YrC9idiKzhJYgRMG+ybjOA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Infrastructure.Kubernetes.KubernetesApi.ListQueryParams.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Infrastructure.Kubernetes.KubernetesApi.ListQueryParams.html",
-          "hash": "L4bXlij17ei/z5nWi9ojBw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Infrastructure.Kubernetes.KubernetesApi.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Infrastructure.Kubernetes.KubernetesApi.html",
-          "hash": "SpO2Jw4xiD75WG2SOzFEag=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Infrastructure.Kubernetes.PrewarmedDeployment.PrewarmedDeploymentApi.ListQueryParams.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Infrastructure.Kubernetes.PrewarmedDeployment.PrewarmedDeploymentApi.ListQueryParams.html",
-          "hash": "HmXUM6JQnBWQVAhuQwjIxQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Infrastructure.Kubernetes.PrewarmedDeployment.PrewarmedDeploymentApi.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Infrastructure.Kubernetes.PrewarmedDeployment.PrewarmedDeploymentApi.html",
-          "hash": "KBc6fs/SW5deBMyVgBfZ9g=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Infrastructure.Kubernetes.PrewarmedDeployment.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Infrastructure.Kubernetes.PrewarmedDeployment.html",
-          "hash": "K0VP9BRHGDhLDB/J/BXqdQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Infrastructure.Kubernetes.Status.StatusApi.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Infrastructure.Kubernetes.Status.StatusApi.html",
-          "hash": "LS2a4SDNnFPOWz1Kg5iq5A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Infrastructure.Kubernetes.Status.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Infrastructure.Kubernetes.Status.html",
-          "hash": "vqVhsquaiHLrQPHeSWCjJQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Infrastructure.Kubernetes.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Infrastructure.Kubernetes.html",
-          "hash": "aFTsUF8q2zCnOPvahAEDCA=="
+          "hash": "u/hHV7GqAECP6txcvQ9l8g=="
         }
       },
       "is_incremental": false,
@@ -14904,7 +14736,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.BitmovinResource.html",
-          "hash": "v2Ua82i/kfKyshmhZaDz1g=="
+          "hash": "FJkF3Gn3s6D3F9TV8CTatQ=="
         }
       },
       "is_incremental": false,
@@ -15264,7 +15096,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.CloudRegion.html",
-          "hash": "pNy2GCN8t8qATO+BjfHfkg=="
+          "hash": "3b2RieNE0R57a6Sc58x+hA=="
         }
       },
       "is_incremental": false,
@@ -17232,7 +17064,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.InfrastructureSettings.html",
-          "hash": "BhA2XEPw2RJgxkLY7bYjqQ=="
+          "hash": "J3ecu/6+MzwcJtSLlj65pA=="
         }
       },
       "is_incremental": false,
@@ -17504,30 +17336,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.KubernetesCluster.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Bitmovin.Api.Sdk.Models.KubernetesCluster.html",
-          "hash": "rzBkaa6d/8c2x2WITJAgJA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.KubernetesClusterConfiguration.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Bitmovin.Api.Sdk.Models.KubernetesClusterConfiguration.html",
-          "hash": "KtPGkVwzzAFoK29K+asrBw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Bitmovin.Api.Sdk.Models.LevelH262.yml",
       "output": {
         ".html": {
@@ -17737,18 +17545,6 @@
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.LocalOutput.html",
           "hash": "BF3CxJmaAIVfEodC1+FgDg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.LogLevel.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Bitmovin.Api.Sdk.Models.LogLevel.html",
-          "hash": "BD+gsySd8dmQX4QqpPJvpQ=="
         }
       },
       "is_incremental": false,
@@ -18716,18 +18512,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.PrewarmEncoderSettings.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Bitmovin.Api.Sdk.Models.PrewarmEncoderSettings.html",
-          "hash": "HdYGxO0suvOCQMZtRhFryg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Bitmovin.Api.Sdk.Models.PrewarmedEncoderDiskSize.yml",
       "output": {
         ".html": {
@@ -19056,7 +18840,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.RescheduleEncodingRequest.html",
-          "hash": "rWq/wbK/rpMNQSKATUpXSg=="
+          "hash": "upYtiAG4NToNuccB3W7cYg=="
         }
       },
       "is_incremental": false,
@@ -20832,7 +20616,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.html",
-          "hash": "IOMn/qCjEoAmKkZfa3PgkQ=="
+          "hash": "7ecNjAKNacYbicTxMIBQ/g=="
         }
       },
       "is_incremental": false,
@@ -21876,7 +21660,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "vMNSL5co1b9VrP4DECg9/g=="
+          "hash": "X+rTXC7GAUjU46nx4rr0ig=="
         }
       },
       "is_incremental": false,
@@ -21891,7 +21675,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "yz01xlXdJ/xhrWhMufj7cQ=="
+          "hash": "XMr155TWeDuum6yb/erMhg=="
         }
       },
       "is_incremental": false,
@@ -21931,7 +21715,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 1821,
+          "total_file_count": 1803,
           "skipped_file_count": 0
         },
         "ConceptualDocumentProcessor": {
