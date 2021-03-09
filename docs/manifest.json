@@ -12,7 +12,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "OGNuAcgyFmvra34v6Ogtsw=="
+          "hash": "UPRiCvtBelL2WTDc4M+qLA=="
         }
       },
       "is_incremental": false,
@@ -5324,6 +5324,90 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.PackedAudio.Drm.Aes.AesApi.ListQueryParams.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.PackedAudio.Drm.Aes.AesApi.ListQueryParams.html",
+          "hash": "Ok6tyuyPVdqYeBnNo746kg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.PackedAudio.Drm.Aes.AesApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.PackedAudio.Drm.Aes.AesApi.html",
+          "hash": "867b5JEyvqi1SzdzAgTG5A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.PackedAudio.Drm.Aes.Customdata.CustomdataApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.PackedAudio.Drm.Aes.Customdata.CustomdataApi.html",
+          "hash": "oTgS+yvkQvi0DSoKldKadg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.PackedAudio.Drm.Aes.Customdata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.PackedAudio.Drm.Aes.Customdata.html",
+          "hash": "RihQVu5pqEdAUmHRvFsMcg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.PackedAudio.Drm.Aes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.PackedAudio.Drm.Aes.html",
+          "hash": "5vjS7jWHbCRF9Twv3DL5lA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.PackedAudio.Drm.DrmApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.PackedAudio.Drm.DrmApi.html",
+          "hash": "39f2u3mt6JPaaHMUmMjj5Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.PackedAudio.Drm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.PackedAudio.Drm.html",
+          "hash": "GuSSzjLbeB/2e8V85GgxZA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.PackedAudio.Information.InformationApi.yml",
       "output": {
         ".html": {
@@ -5364,7 +5448,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.PackedAudio.PackedAudioApi.html",
-          "hash": "CJJi61iho9V40BavbG573Q=="
+          "hash": "2Kp8VwlIPCtnP1kbjQkp3w=="
         }
       },
       "is_incremental": false,
@@ -13692,7 +13776,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.AnalyticsExportTask.html",
-          "hash": "fBXqnuxn9c2dfrnvsgXFMw=="
+          "hash": "MegAt37u8c8K3TP4ohhibw=="
         }
       },
       "is_incremental": false,
@@ -13705,6 +13789,18 @@
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.AnalyticsExportTaskOutputTarget.html",
           "hash": "XboGxdFRk5XyQAlbXkM3XA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.AnalyticsExportType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.AnalyticsExportType.html",
+          "hash": "KwDa8sB/3KNtGl2rPexrag=="
         }
       },
       "is_incremental": false,
@@ -19704,7 +19800,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.StreamInput.html",
-          "hash": "CjepVehhXz2Iy/ffd0JtXQ=="
+          "hash": "/xPeMrs0/X5uofl+vkZmLQ=="
         }
       },
       "is_incremental": false,
@@ -20616,7 +20712,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.html",
-          "hash": "7ecNjAKNacYbicTxMIBQ/g=="
+          "hash": "F/YJ0kWUXCra0bkim0bYTQ=="
         }
       },
       "is_incremental": false,
@@ -21660,7 +21756,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "X+rTXC7GAUjU46nx4rr0ig=="
+          "hash": "tFK1d1XtFvtNxpa6uzDv3A=="
         }
       },
       "is_incremental": false,
@@ -21675,7 +21771,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "XMr155TWeDuum6yb/erMhg=="
+          "hash": "m68wOmk9zFs8JdOr44+epQ=="
         }
       },
       "is_incremental": false,
@@ -21715,7 +21811,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 1803,
+          "total_file_count": 1811,
           "skipped_file_count": 0
         },
         "ConceptualDocumentProcessor": {

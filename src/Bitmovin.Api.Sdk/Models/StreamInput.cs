@@ -44,5 +44,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "inputStreamId")]
         public string InputStreamId { get; set; }
+
+        /// <summary>
+        /// Input analysis details  This property is populated after the encoding has finished 
+        /// </summary>
+        [JsonProperty(PropertyName = "analysisDetails")]
+        public EncodingStreamInputDetails AnalysisDetails { get; internal set; }
     }
 }

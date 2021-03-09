@@ -6,6 +6,7 @@ using RestEase;
 using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.PackedAudio.Customdata;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.PackedAudio.Information;
+using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.PackedAudio.Drm;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.PackedAudio
 {
@@ -18,6 +19,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.PackedAudio
             _apiClient = apiClientFactory.CreateClient<IPackedAudioApiClient>();
             Customdata = new CustomdataApi(apiClientFactory);
             Information = new InformationApi(apiClientFactory);
+            Drm = new DrmApi(apiClientFactory);
         }
 
         /// <summary>
@@ -27,6 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.PackedAudio
 
         public CustomdataApi Customdata { get; }
         public InformationApi Information { get; }
+        public DrmApi Drm { get; }
 
         /// <summary>
         /// Add Packed Audio muxing

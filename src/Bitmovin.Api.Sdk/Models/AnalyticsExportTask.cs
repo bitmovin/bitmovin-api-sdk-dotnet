@@ -74,5 +74,17 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "finishedAt")]
         public DateTime? FinishedAt { get; internal set; }
+
+        /// <summary>
+        /// Type
+        /// </summary>
+        [JsonProperty(PropertyName = "type")]
+        public AnalyticsExportType? Type { get; set; }
+
+        /// <summary>
+        /// Columns
+        /// </summary>
+        [JsonProperty(PropertyName = "columns")]
+        public List<string> Columns { get; set; } = new List<string>();
     }
 }
