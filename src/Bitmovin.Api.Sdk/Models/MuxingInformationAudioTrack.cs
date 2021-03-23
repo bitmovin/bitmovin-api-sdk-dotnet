@@ -58,7 +58,7 @@ namespace Bitmovin.Api.Sdk.Models
         public int? Channels { get; internal set; }
 
         /// <summary>
-        /// TODO add description
+        /// The duration in seconds
         /// </summary>
         [JsonProperty(PropertyName = "duration")]
         public double? Duration { get; internal set; }

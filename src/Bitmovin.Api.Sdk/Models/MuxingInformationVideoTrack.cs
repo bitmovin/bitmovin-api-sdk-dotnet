@@ -40,7 +40,7 @@ namespace Bitmovin.Api.Sdk.Models
         public long? BitRate { get; internal set; }
 
         /// <summary>
-        /// TODO add description
+        /// Rate
         /// </summary>
         [JsonProperty(PropertyName = "rate")]
         public long? Rate { get; internal set; }
