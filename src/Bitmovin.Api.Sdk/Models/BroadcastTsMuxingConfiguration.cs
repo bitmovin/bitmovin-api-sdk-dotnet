@@ -38,5 +38,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "audioStreams")]
         public List<BroadcastTsAudioInputStreamConfiguration> AudioStreams { get; set; } = new List<BroadcastTsAudioInputStreamConfiguration>();
+
+        /// <summary>
+        /// SubtitleStreams
+        /// </summary>
+        [JsonProperty(PropertyName = "subtitleStreams")]
+        public List<BroadcastTsSubtitleInputStreamConfiguration> SubtitleStreams { get; set; } = new List<BroadcastTsSubtitleInputStreamConfiguration>();
     }
 }

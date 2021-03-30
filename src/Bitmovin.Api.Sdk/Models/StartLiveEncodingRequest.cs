@@ -46,6 +46,12 @@ namespace Bitmovin.Api.Sdk.Models
         public ReuploadSettings ReuploadSettings { get; set; }
 
         /// <summary>
+        /// Sets the version of the manifest generation engine
+        /// </summary>
+        [JsonProperty(PropertyName = "manifestGenerator")]
+        public ManifestGenerator? ManifestGenerator { get; set; }
+
+        /// <summary>
         /// Configuration for auto restarting the live encoding
         /// </summary>
         [JsonProperty(PropertyName = "autoRestartConfiguration")]

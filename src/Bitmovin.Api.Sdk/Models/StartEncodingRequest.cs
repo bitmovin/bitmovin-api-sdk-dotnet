@@ -76,6 +76,12 @@ namespace Bitmovin.Api.Sdk.Models
         public List<ManifestResource> VodSmoothManifests { get; set; } = new List<ManifestResource>();
 
         /// <summary>
+        /// Sets the version of the manifest generation engine
+        /// </summary>
+        [JsonProperty(PropertyName = "manifestGenerator")]
+        public ManifestGenerator? ManifestGenerator { get; set; }
+
+        /// <summary>
         /// Per-Title settings
         /// </summary>
         [JsonProperty(PropertyName = "perTitle")]
