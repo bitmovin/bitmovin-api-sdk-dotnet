@@ -37,7 +37,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.AudioVolume
         /// <summary>
         /// Delete Audio Volume Filter
         /// </summary>
-        /// <param name="filterId">Id of the Audio volume configuration. (required)</param>
+        /// <param name="filterId">Id of the Audio Volume Filter. (required)</param>
         public async Task<Models.BitmovinResponse> DeleteAsync(string filterId)
         {
             return await _apiClient.DeleteAsync(filterId);
@@ -46,7 +46,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.AudioVolume
         /// <summary>
         /// Audio Volume Filter Details
         /// </summary>
-        /// <param name="filterId">Id of the audio volume configuration. (required)</param>
+        /// <param name="filterId">Id of the Audio Volume Filter. (required)</param>
         public async Task<Models.AudioVolumeFilter> GetAsync(string filterId)
         {
             return await _apiClient.GetAsync(filterId);

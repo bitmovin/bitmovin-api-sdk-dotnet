@@ -37,7 +37,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Deinterlace
         /// <summary>
         /// Delete Deinterlace Filter
         /// </summary>
-        /// <param name="filterId">Id of the deinterlace filter (required)</param>
+        /// <param name="filterId">Id of the Deinterlace Filter (required)</param>
         public async Task<Models.BitmovinResponse> DeleteAsync(string filterId)
         {
             return await _apiClient.DeleteAsync(filterId);
@@ -46,7 +46,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Deinterlace
         /// <summary>
         /// Deinterlace Filter Details
         /// </summary>
-        /// <param name="filterId">Id of the deinterlace filter (required)</param>
+        /// <param name="filterId">Id of the Deinterlace Filter (required)</param>
         public async Task<Models.DeinterlaceFilter> GetAsync(string filterId)
         {
             return await _apiClient.GetAsync(filterId);

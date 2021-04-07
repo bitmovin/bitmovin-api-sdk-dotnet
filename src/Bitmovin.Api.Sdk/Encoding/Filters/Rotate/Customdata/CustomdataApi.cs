@@ -24,7 +24,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Rotate.Customdata
         /// <summary>
         /// Rotate Filter Custom Data
         /// </summary>
-        /// <param name="filterId">Id of the Rotate configuration. (required)</param>
+        /// <param name="filterId">Id of the Rotate Filter. (required)</param>
         public async Task<Models.CustomData> GetAsync(string filterId)
         {
             return await _apiClient.GetAsync(filterId);

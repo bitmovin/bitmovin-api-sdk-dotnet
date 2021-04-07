@@ -170,6 +170,12 @@ namespace Bitmovin.Api.Sdk.Models
         GOOGLE_EUROPE_WEST_2,
 
         /// <summary>
+        /// Google Frankfurt, Germany
+        /// </summary>
+        [EnumMember(Value = "GOOGLE_EUROPE_WEST_3")]
+        GOOGLE_EUROPE_WEST_3,
+
+        /// <summary>
         /// Google Eemshaven, Netherlands
         /// </summary>
         [EnumMember(Value = "GOOGLE_EUROPE_WEST_4")]

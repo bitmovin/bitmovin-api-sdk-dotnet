@@ -76,12 +76,6 @@ namespace Bitmovin.Api.Sdk.Models
         public string EncoderVersion { get; set; }
 
         /// <summary>
-        /// Define an external infrastructure to run the encoding on. Note If you set this value, the &#x60;cloudRegion&#x60; must be &#39;EXTERNAL&#39;.
-        /// </summary>
-        [JsonProperty(PropertyName = "infrastructureId")]
-        public string InfrastructureId { get; set; }
-
-        /// <summary>
         /// Infrastructure
         /// </summary>
         [JsonProperty(PropertyName = "infrastructure")]

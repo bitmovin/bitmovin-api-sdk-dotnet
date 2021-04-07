@@ -37,7 +37,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Watermark
         /// <summary>
         /// Delete Watermark Filter
         /// </summary>
-        /// <param name="filterId">Id of the watermark configuration. (required)</param>
+        /// <param name="filterId">Id of the Watermark Filter. (required)</param>
         public async Task<Models.BitmovinResponse> DeleteAsync(string filterId)
         {
             return await _apiClient.DeleteAsync(filterId);
@@ -46,7 +46,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Watermark
         /// <summary>
         /// Watermark Filter Details
         /// </summary>
-        /// <param name="filterId">Id of the watermark configuration. (required)</param>
+        /// <param name="filterId">Id of the Watermark Filter. (required)</param>
         public async Task<Models.WatermarkFilter> GetAsync(string filterId)
         {
             return await _apiClient.GetAsync(filterId);

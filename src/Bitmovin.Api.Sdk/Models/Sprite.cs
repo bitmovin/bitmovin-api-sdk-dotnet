@@ -52,7 +52,7 @@ namespace Bitmovin.Api.Sdk.Models
         public string Filename { get; set; }
 
         /// <summary>
-        /// Filename of the vtt-file. The file-extension \&quot;.vtt\&quot; is required. (required)
+        /// Filename of the vtt-file. The file-extension \&quot;.vtt\&quot; is required.
         /// </summary>
         [JsonProperty(PropertyName = "vttName")]
         public string VttName { get; set; }
@@ -64,7 +64,7 @@ namespace Bitmovin.Api.Sdk.Models
         public List<EncodingOutput> Outputs { get; set; } = new List<EncodingOutput>();
 
         /// <summary>
-        /// Number of images per file. If more images are generated than specified in this value, multiple sprites will be created. You can use the placeholder &#39;%number%&#39; in the spriteName to specify the naming policy.
+        /// Number of images per file. If more images are generated than specified in this value, multiple sprites will be created. You can use the placeholder &#39;%number%&#39; in the spriteName to specify the naming policy. Either this property must be set or hTiles and vTiles. 
         /// </summary>
         [JsonProperty(PropertyName = "imagesPerFile")]
         public int? ImagesPerFile { get; set; }

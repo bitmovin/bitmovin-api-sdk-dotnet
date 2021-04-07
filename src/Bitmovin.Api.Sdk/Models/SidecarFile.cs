@@ -13,6 +13,9 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// A file that is added to an encoding. The size limit for a sidecar file is 10 MB
     /// </summary>
+    [JsonConverter(typeof(JsonSubtypes), "type")]
+    [JsonSubtypes.KnownSubType(typeof(WebVttSidecarFile), "WEB_VTT")]
+
     public class SidecarFile : BitmovinResource
     {
         /// <summary>

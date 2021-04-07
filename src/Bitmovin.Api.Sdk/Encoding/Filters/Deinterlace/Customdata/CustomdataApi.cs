@@ -24,7 +24,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Deinterlace.Customdata
         /// <summary>
         /// Deinterlace Filter Custom Data
         /// </summary>
-        /// <param name="filterId">Id of the deinterlace filter (required)</param>
+        /// <param name="filterId">Id of the Deinterlace Filter (required)</param>
         public async Task<Models.CustomData> GetAsync(string filterId)
         {
             return await _apiClient.GetAsync(filterId);

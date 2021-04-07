@@ -37,7 +37,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Rotate
         /// <summary>
         /// Delete Rotate Filter
         /// </summary>
-        /// <param name="filterId">Id of the Rotate configuration. (required)</param>
+        /// <param name="filterId">Id of the Rotate Filter. (required)</param>
         public async Task<Models.BitmovinResponse> DeleteAsync(string filterId)
         {
             return await _apiClient.DeleteAsync(filterId);
@@ -46,7 +46,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Rotate
         /// <summary>
         /// Rotate Filter Details
         /// </summary>
-        /// <param name="filterId">Id of the Rotate configuration. (required)</param>
+        /// <param name="filterId">Id of the Rotate Filter. (required)</param>
         public async Task<Models.RotateFilter> GetAsync(string filterId)
         {
             return await _apiClient.GetAsync(filterId);

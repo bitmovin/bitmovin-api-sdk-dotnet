@@ -15,6 +15,9 @@ namespace Bitmovin.Api.Sdk.Models
     /// </summary>
     public class WebVttSidecarFile : SidecarFile
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "WEB_VTT";
+
         /// <summary>
         /// Segmentation
         /// </summary>

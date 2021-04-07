@@ -24,7 +24,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Watermark.Customdata
         /// <summary>
         /// Watermark Filter Custom Data
         /// </summary>
-        /// <param name="filterId">Id of the watermark configuration. (required)</param>
+        /// <param name="filterId">Id of the Watermark Filter. (required)</param>
         public async Task<Models.CustomData> GetAsync(string filterId)
         {
             return await _apiClient.GetAsync(filterId);

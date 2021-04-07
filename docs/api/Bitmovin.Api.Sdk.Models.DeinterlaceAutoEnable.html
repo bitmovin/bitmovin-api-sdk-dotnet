@@ -73,7 +73,7 @@
   
   <h1 id="Bitmovin_Api_Sdk_Models_DeinterlaceAutoEnable" data-uid="Bitmovin.Api.Sdk.Models.DeinterlaceAutoEnable" class="text-break">Enum DeinterlaceAutoEnable
   </h1>
-  <div class="markdown level0 summary"><p>Specifies if the deinterlace filter should be applied unconditionally or only on demand.</p>
+  <div class="markdown level0 summary"><p>Specifies if the Deinterlace Filter should be applied unconditionally or only on demand.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Bitmovin.Api.Sdk.Models.html">Bitmovin.Api.Sdk.Models</a></h6>
@@ -99,12 +99,12 @@
       </tr>
       <tr>
         <td id="Bitmovin_Api_Sdk_Models_DeinterlaceAutoEnable_META_DATA_AND_CONTENT_BASED">META_DATA_AND_CONTENT_BASED</td>
-        <td><p>This option will check if the content is signaled as interlaced first. If not, the frames are analyzed to detect interlaced frames. If the content is signaled as interlaced by the meta data this mode works same as &quot;META_DATA_BASED&quot;. If content analysis detects interlaced frames the deinterlace filter will be applied in frameSelectionMode &quot;ALL&quot;. Additionally, the parity will always be overwritten with the result of the metadata probing.</p>
+        <td><p>This option will check if the content is signaled as interlaced first. If not, the frames are analyzed to detect interlaced frames. If the content is signaled as interlaced by the meta data this mode works same as &quot;META_DATA_BASED&quot;. If content analysis detects interlaced frames the Deinterlace Filter will be applied in frameSelectionMode &quot;ALL&quot;. Additionally, the parity will always be overwritten with the result of the metadata probing.</p>
 </td>
       </tr>
       <tr>
         <td id="Bitmovin_Api_Sdk_Models_DeinterlaceAutoEnable_META_DATA_BASED">META_DATA_BASED</td>
-        <td><p>The deinterlace filter will only be applied when interlaced content is signaled in the meta data of the input stream. In that case, if the parity setting is set to &quot;AUTO&quot;, it will be overwritten with the result of the metadata probing. In cases where parity is not set to &quot;AUTO&quot; the configured value will be used.</p>
+        <td><p>The Deinterlace Filter will only be applied when interlaced content is signaled in the meta data of the input stream. In that case, if the parity setting is set to &quot;AUTO&quot;, it will be overwritten with the result of the metadata probing. In cases where parity is not set to &quot;AUTO&quot; the configured value will be used.</p>
 </td>
       </tr>
     </tbody>

@@ -24,7 +24,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.AudioMix.Customdata
         /// <summary>
         /// Audio Mix Filter Custom Data
         /// </summary>
-        /// <param name="filterId">Id of the Audio Mix configuration. (required)</param>
+        /// <param name="filterId">Id of the Audio Mix Filter. (required)</param>
         public async Task<Models.CustomData> GetAsync(string filterId)
         {
             return await _apiClient.GetAsync(filterId);

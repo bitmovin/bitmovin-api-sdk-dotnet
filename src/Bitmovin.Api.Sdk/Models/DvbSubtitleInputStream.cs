@@ -31,7 +31,7 @@ namespace Bitmovin.Api.Sdk.Models
         public string InputPath { get; set; }
 
         /// <summary>
-        /// Specifies the algorithm how the stream in the input file will be selected. Only POSITION_ABSOLUTE is supported.
+        /// Specifies the algorithm for selecting a stream from the input file. Supported values for VOD encodings: AUTO, POSITION_ABSOLUTE, SUBTITLE_RELATIVE. Supported values for LIVE encodings: POSITION_ABSOLUTE
         /// </summary>
         [JsonProperty(PropertyName = "selectionMode")]
         public StreamSelectionMode? SelectionMode { get; set; }

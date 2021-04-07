@@ -12,7 +12,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "p2ow3sn2GwJ+gls/AO3aPg=="
+          "hash": "+aqe5nwd59id+l5gx/DPQA=="
         }
       },
       "is_incremental": false,
@@ -7812,7 +7812,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Filters.AudioMix.AudioMixApi.html",
-          "hash": "evp3DzWPNKyJyfKQq6GbCw=="
+          "hash": "qmjoJxiy1IvQqmwk1xEEng=="
         }
       },
       "is_incremental": false,
@@ -7824,7 +7824,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Filters.AudioMix.Customdata.CustomdataApi.html",
-          "hash": "c2aENnavHI5qgcQs1rYM8A=="
+          "hash": "sexBT0Fj8HRW6+fAGRx0fA=="
         }
       },
       "is_incremental": false,
@@ -7872,7 +7872,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Filters.AudioVolume.AudioVolumeApi.html",
-          "hash": "FpQxewJDHLEHb1xGRHjv2w=="
+          "hash": "Rx1/2iNLIkWbdiN8vIW00w=="
         }
       },
       "is_incremental": false,
@@ -7884,7 +7884,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Filters.AudioVolume.Customdata.CustomdataApi.html",
-          "hash": "XtVWfuvwW2SgUOpWPRRKOw=="
+          "hash": "YYnn9BEsqIuc7dK+wZMOcA=="
         }
       },
       "is_incremental": false,
@@ -7992,7 +7992,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Filters.Crop.CropApi.html",
-          "hash": "dM9UO5tYMDnyNrTF7rlnkQ=="
+          "hash": "c81aT3MR8/wHKXB8+MDlBg=="
         }
       },
       "is_incremental": false,
@@ -8004,7 +8004,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Filters.Crop.Customdata.CustomdataApi.html",
-          "hash": "WIvURe8MmLM5PpKzyuRsvQ=="
+          "hash": "F4N332mgGzidmM+6t864UA=="
         }
       },
       "is_incremental": false,
@@ -8040,7 +8040,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Filters.Deinterlace.Customdata.CustomdataApi.html",
-          "hash": "JiDEf6WPZlZR7MBK1BObOw=="
+          "hash": "C/MUNabCuUzbW84vuI5bxQ=="
         }
       },
       "is_incremental": false,
@@ -8076,7 +8076,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Filters.Deinterlace.DeinterlaceApi.html",
-          "hash": "WatGjN5xl73C2BeadTYhqg=="
+          "hash": "svovAXhZkrDgaar+FZtF7A=="
         }
       },
       "is_incremental": false,
@@ -8280,7 +8280,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Filters.EnhancedWatermark.Customdata.CustomdataApi.html",
-          "hash": "UZRrRTi8J9rTuYIQdDDnJQ=="
+          "hash": "nyxX/sriDrPoU+fmFxoK3A=="
         }
       },
       "is_incremental": false,
@@ -8316,7 +8316,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Filters.EnhancedWatermark.EnhancedWatermarkApi.html",
-          "hash": "Ym8v+RIrvB1vUskTAupVIw=="
+          "hash": "X0Ww4sXAFUz122eCaHUCLg=="
         }
       },
       "is_incremental": false,
@@ -8424,7 +8424,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Filters.Rotate.Customdata.CustomdataApi.html",
-          "hash": "GoQ6tCjoC7IrtjhFbIBkLA=="
+          "hash": "nqYQtj662GQB/XrMXcFp/w=="
         }
       },
       "is_incremental": false,
@@ -8460,7 +8460,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Filters.Rotate.RotateApi.html",
-          "hash": "b3weMmCSydCDza5v8OTW5A=="
+          "hash": "xmGsuXYlLaSZx1Qok59rnA=="
         }
       },
       "is_incremental": false,
@@ -8688,7 +8688,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Filters.Watermark.Customdata.CustomdataApi.html",
-          "hash": "UgrL2XHYfNOgsQwZb/OjjQ=="
+          "hash": "8X8oUPJtrpV+GRmE8NtCqw=="
         }
       },
       "is_incremental": false,
@@ -8724,7 +8724,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Filters.Watermark.WatermarkApi.html",
-          "hash": "8RxVTYkFWt61unE0U17MOg=="
+          "hash": "M8PL9EtGzGKFlH3FyAeOSg=="
         }
       },
       "is_incremental": false,
@@ -14964,7 +14964,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.BroadcastTsTransportConfiguration.html",
-          "hash": "DFNH3a76ravit3wq5ZF8MA=="
+          "hash": "VAbMUQovFB9cNtL+qb1XdA=="
         }
       },
       "is_incremental": false,
@@ -15204,7 +15204,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.CloudRegion.html",
-          "hash": "3b2RieNE0R57a6Sc58x+hA=="
+          "hash": "Ti+c/r/3PFrRUVwDBfa4Nw=="
         }
       },
       "is_incremental": false,
@@ -15864,7 +15864,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.DeinterlaceAutoEnable.html",
-          "hash": "8wXwv+nAxbBsecbC5VuCSw=="
+          "hash": "Y5ShE70Ml0Jq/VmuEVMR3g=="
         }
       },
       "is_incremental": false,
@@ -16164,7 +16164,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.DvbSubtitleInputStream.html",
-          "hash": "jTziHsCSoagx7ibZE6Zlvw=="
+          "hash": "UZnKHpvsvEzaFIHMoP2SGg=="
         }
       },
       "is_incremental": false,
@@ -16272,7 +16272,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.Encoding.html",
-          "hash": "PBeFrPCPkobayFFvRXP6Cg=="
+          "hash": "FDfhTSnITPCdHgP0/vyIQQ=="
         }
       },
       "is_incremental": false,
@@ -16428,7 +16428,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.EnhancedDeinterlaceAutoEnable.html",
-          "hash": "DEh+BoMUGHcX7FMXXv721A=="
+          "hash": "Bp319B7jvPZI4S3fo+ubdw=="
         }
       },
       "is_incremental": false,
@@ -17520,7 +17520,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.LiveDashManifest.html",
-          "hash": "Pyd16H63n/ANi8AFx4CBJw=="
+          "hash": "U0Bl/aWB4SAky08WirUOpA=="
         }
       },
       "is_incremental": false,
@@ -17616,7 +17616,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.LiveHlsManifest.html",
-          "hash": "zxstbECP4QFlRogMYR/2pw=="
+          "hash": "LNfI0vHtLa+376ei1GLAEg=="
         }
       },
       "is_incremental": false,
@@ -19340,6 +19340,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.SidecarFileType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.SidecarFileType.html",
+          "hash": "B6lHXz0u1dMCEtDom741Pg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Bitmovin.Api.Sdk.Models.SignatureType.yml",
       "output": {
         ".html": {
@@ -19452,7 +19464,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.SpekeDrm.html",
-          "hash": "c8DevGQF7wbxJJOaTZEDOg=="
+          "hash": "h+3gqTltPL3dZqm/tLmcRw=="
         }
       },
       "is_incremental": false,
@@ -19476,7 +19488,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.Sprite.html",
-          "hash": "xQCk24IjQMnE7qp+8ZbXbg=="
+          "hash": "30q0v+NRNgIdTv9DZwEYVQ=="
         }
       },
       "is_incremental": false,
@@ -19680,7 +19692,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.StatisticsPerStream.html",
-          "hash": "3Q8dO4HAi8JZIgC5Hdvpgg=="
+          "hash": "HXAt1/6uKn1+RWC96jOkuw=="
         }
       },
       "is_incremental": false,
@@ -20736,7 +20748,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.html",
-          "hash": "ROD5GxpewCv66rhiIMERJA=="
+          "hash": "pYC7RS7LcQaroxBxN7PaFQ=="
         }
       },
       "is_incremental": false,
@@ -21780,7 +21792,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "zkbJfvnXPTIM6k0wmWdV+w=="
+          "hash": "AUDzMdlyVroENTiFnrIfPg=="
         }
       },
       "is_incremental": false,
@@ -21795,7 +21807,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "jxLCxLr5iARU86hwWfB0MA=="
+          "hash": "NcbvgjjJ0yZm4vR9nmgojQ=="
         }
       },
       "is_incremental": false,
@@ -21832,16 +21844,16 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 1814,
+          "skipped_file_count": 0
+        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 2,
-          "skipped_file_count": 0
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 1813,
           "skipped_file_count": 0
         }
       }

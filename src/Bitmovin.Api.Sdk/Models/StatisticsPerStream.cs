@@ -166,7 +166,7 @@ namespace Bitmovin.Api.Sdk.Models
         public bool? EnhancedDeinterlace { get; internal set; }
 
         /// <summary>
-        /// The output minutes multiplicator for streams using an enhanced deinterlace filter.
+        /// The output minutes multiplicator for streams using an enhanced Deinterlace Filter.
         /// </summary>
         [JsonProperty(PropertyName = "enhancedDeinterlaceMultiplicator")]
         public double? EnhancedDeinterlaceMultiplicator { get; internal set; }

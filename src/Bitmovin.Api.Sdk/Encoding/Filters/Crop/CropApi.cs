@@ -37,7 +37,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Crop
         /// <summary>
         /// Delete Crop Filter
         /// </summary>
-        /// <param name="filterId">Id of the Crop configuration. (required)</param>
+        /// <param name="filterId">Id of the Crop Filter. (required)</param>
         public async Task<Models.BitmovinResponse> DeleteAsync(string filterId)
         {
             return await _apiClient.DeleteAsync(filterId);
@@ -46,7 +46,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Crop
         /// <summary>
         /// Crop Filter Details
         /// </summary>
-        /// <param name="filterId">Id of the Crop configuration. (required)</param>
+        /// <param name="filterId">Id of the Crop Filter. (required)</param>
         public async Task<Models.CropFilter> GetAsync(string filterId)
         {
             return await _apiClient.GetAsync(filterId);
