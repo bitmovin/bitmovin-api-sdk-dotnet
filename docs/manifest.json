@@ -12,7 +12,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "hzyTlAYSUYy62a/kgb8Daw=="
+          "hash": "V7fjdg6hasxH0zf5x162TQ=="
         }
       },
       "is_incremental": false,
@@ -14808,7 +14808,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.BillableEncodingMinutes.html",
-          "hash": "dGMfH9syMuekFwrwzng3Hg=="
+          "hash": "2hSPAKB3mjKL8RwTVnc/cA=="
         }
       },
       "is_incremental": false,
@@ -18464,6 +18464,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.PixelFormatBitDepth.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.PixelFormatBitDepth.html",
+          "hash": "yE4AoezSTTlTFL01ZkZdxw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Bitmovin.Api.Sdk.Models.PlaintextId3Tag.yml",
       "output": {
         ".html": {
@@ -19692,7 +19704,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.StatisticsPerStream.html",
-          "hash": "HXAt1/6uKn1+RWC96jOkuw=="
+          "hash": "761W/5mMJdprOkthxE13xg=="
         }
       },
       "is_incremental": false,
@@ -20748,7 +20760,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.html",
-          "hash": "pYC7RS7LcQaroxBxN7PaFQ=="
+          "hash": "tLethSCIru0UrXcAiya1hw=="
         }
       },
       "is_incremental": false,
@@ -21792,7 +21804,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "AUDzMdlyVroENTiFnrIfPg=="
+          "hash": "Xc75oprEn3daOlsT1czuTA=="
         }
       },
       "is_incremental": false,
@@ -21807,7 +21819,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "y+BKY7KeV/ReMhdyNggIdA=="
+          "hash": "sto51ptQKxIJWvgZP+bVbw=="
         }
       },
       "is_incremental": false,
@@ -21844,16 +21856,16 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 1814,
-          "skipped_file_count": 0
-        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 2,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 1815,
           "skipped_file_count": 0
         }
       }

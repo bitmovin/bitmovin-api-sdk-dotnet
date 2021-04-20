@@ -64,6 +64,12 @@ namespace Bitmovin.Api.Sdk.Models
         public NexGuardABWatermarkingFeature? NexGuardABWatermarkingType { get; set; }
 
         /// <summary>
+        /// PixelFormatBitDepth
+        /// </summary>
+        [JsonProperty(PropertyName = "pixelFormatBitDepth")]
+        public PixelFormatBitDepth? PixelFormatBitDepth { get; set; }
+
+        /// <summary>
         /// BillableMinutes
         /// </summary>
         [JsonProperty(PropertyName = "billableMinutes")]

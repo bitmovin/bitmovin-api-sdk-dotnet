@@ -184,6 +184,18 @@ namespace Bitmovin.Api.Sdk.Models
         public double? NexGuardABWatermarkingMultiplicator { get; internal set; }
 
         /// <summary>
+        /// PixelFormatBitDepth
+        /// </summary>
+        [JsonProperty(PropertyName = "pixelFormatBitDepth")]
+        public PixelFormatBitDepth? PixelFormatBitDepth { get; set; }
+
+        /// <summary>
+        /// The output minutes multiplicator for the pixel format bit depth
+        /// </summary>
+        [JsonProperty(PropertyName = "pixelFormatMultiplicator")]
+        public double? PixelFormatMultiplicator { get; internal set; }
+
+        /// <summary>
         /// InputFactor
         /// </summary>
         [JsonProperty(PropertyName = "inputFactor")]
