@@ -35,5 +35,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "cueIdentifierPolicy")]
         public WebVttCueIdentifierPolicy? CueIdentifierPolicy { get; set; }
+
+        /// <summary>
+        /// Styling
+        /// </summary>
+        [JsonProperty(PropertyName = "styling")]
+        public WebVttStyling Styling { get; set; }
     }
 }

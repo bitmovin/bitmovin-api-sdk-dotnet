@@ -12,7 +12,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "V7fjdg6hasxH0zf5x162TQ=="
+          "hash": "esdSh5EDit4573CQk7tAfQ=="
         }
       },
       "is_incremental": false,
@@ -20580,7 +20580,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.WebVttConfiguration.html",
-          "hash": "U/iVXjZW/UXgwvRCevw0kg=="
+          "hash": "z81NE1ONr3Ek4Bsr1gB17A=="
         }
       },
       "is_incremental": false,
@@ -20617,6 +20617,30 @@
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.WebVttSidecarFileSegmentation.html",
           "hash": "Q2ddtOEFR1CWNgUQKAMnYQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.WebVttStyling.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.WebVttStyling.html",
+          "hash": "pb1mkhnHNpaC7zqqgQiw7w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.WebVttStylingMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.WebVttStylingMode.html",
+          "hash": "lqxBx08ZLz9C5Afcstz7Zg=="
         }
       },
       "is_incremental": false,
@@ -20760,7 +20784,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.html",
-          "hash": "tLethSCIru0UrXcAiya1hw=="
+          "hash": "2q0l0LiFohUQqk32/+tvUQ=="
         }
       },
       "is_incremental": false,
@@ -21804,7 +21828,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "Xc75oprEn3daOlsT1czuTA=="
+          "hash": "6o8bgsUsghEJnu8aTGb1kA=="
         }
       },
       "is_incremental": false,
@@ -21819,7 +21843,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "sto51ptQKxIJWvgZP+bVbw=="
+          "hash": "Q48I+6mzAhewRJLvfydyTA=="
         }
       },
       "is_incremental": false,
@@ -21856,16 +21880,16 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 1817,
+          "skipped_file_count": 0
+        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 2,
-          "skipped_file_count": 0
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 1815,
           "skipped_file_count": 0
         }
       }
