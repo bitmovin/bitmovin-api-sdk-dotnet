@@ -43,7 +43,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// The rate (sample rate / fps) of the stream (required)
         /// </summary>
         [JsonProperty(PropertyName = "rate")]
-        public long? Rate { get; set; }
+        public double? Rate { get; set; }
 
         /// <summary>
         /// The codec of the input stream (required)
