@@ -2,6 +2,7 @@ using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Audio;
 using Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Video;
 using Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Subtitle;
+using Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Image;
 using Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Representations;
 using Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Contentprotection;
 
@@ -14,6 +15,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets
             Audio = new AudioApi(apiClientFactory);
             Video = new VideoApi(apiClientFactory);
             Subtitle = new SubtitleApi(apiClientFactory);
+            Image = new ImageApi(apiClientFactory);
             Representations = new RepresentationsApi(apiClientFactory);
             Contentprotection = new ContentprotectionApi(apiClientFactory);
         }
@@ -26,6 +28,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets
         public AudioApi Audio { get; }
         public VideoApi Video { get; }
         public SubtitleApi Subtitle { get; }
+        public ImageApi Image { get; }
         public RepresentationsApi Representations { get; }
         public ContentprotectionApi Contentprotection { get; }
     }

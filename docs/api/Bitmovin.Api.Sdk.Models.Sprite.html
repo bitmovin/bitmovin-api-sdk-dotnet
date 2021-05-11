@@ -135,6 +135,32 @@
   </h3>
   
   
+  <a id="Bitmovin_Api_Sdk_Models_Sprite_CreationMode_" data-uid="Bitmovin.Api.Sdk.Models.Sprite.CreationMode*"></a>
+  <h4 id="Bitmovin_Api_Sdk_Models_Sprite_CreationMode" data-uid="Bitmovin.Api.Sdk.Models.Sprite.CreationMode">CreationMode</h4>
+  <div class="markdown level1 summary"><p>The creation mode for the thumbnails in the Sprite.  Two possible creation modes exist: generate thumbnails starting with the beginning of the video or after the first configured period.  When using distance=10 and unit=SECONDS and INTERVAL_END, the first image of the sprite is from the second 10 of the video. When using distance=10 and unit=SECONDS and INTERVAL_START, the first image of the sprite is from the very start of the video, while the second image is from second 10 of the video.  It is recommended to use 'INTERVAL_START' when using the sprites for trick play so that there is an additional thumbnail from the beginning of the video.  Only supported starting with encoder version <code>2.76.0</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SpriteCreationMode? CreationMode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Bitmovin.Api.Sdk.Models.SpriteCreationMode.html">SpriteCreationMode</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Bitmovin_Api_Sdk_Models_Sprite_Distance_" data-uid="Bitmovin.Api.Sdk.Models.Sprite.Distance*"></a>
   <h4 id="Bitmovin_Api_Sdk_Models_Sprite_Distance" data-uid="Bitmovin.Api.Sdk.Models.Sprite.Distance">Distance</h4>
   <div class="markdown level1 summary"><p>Distance in the given unit between a screenshot</p>
@@ -213,6 +239,32 @@
   </table>
   
   
+  <a id="Bitmovin_Api_Sdk_Models_Sprite_HTiles_" data-uid="Bitmovin.Api.Sdk.Models.Sprite.HTiles*"></a>
+  <h4 id="Bitmovin_Api_Sdk_Models_Sprite_HTiles" data-uid="Bitmovin.Api.Sdk.Models.Sprite.HTiles">HTiles</h4>
+  <div class="markdown level1 summary"><p>Number of rows of images per file.  Has to be set together with vTiles. If this property and vTiles are set, the imagesPerFile property must not be set.  It is recommended to use the placeholder '%number%' in the spriteName to allow the generation of multiple sprites.  Only supported starting with encoder version <code>2.76.0</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? HTiles { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Bitmovin_Api_Sdk_Models_Sprite_ImagesPerFile_" data-uid="Bitmovin.Api.Sdk.Models.Sprite.ImagesPerFile*"></a>
   <h4 id="Bitmovin_Api_Sdk_Models_Sprite_ImagesPerFile" data-uid="Bitmovin.Api.Sdk.Models.Sprite.ImagesPerFile">ImagesPerFile</h4>
   <div class="markdown level1 summary"><p>Number of images per file. If more images are generated than specified in this value, multiple sprites will be created. You can use the placeholder '%number%' in the spriteName to specify the naming policy. Either this property must be set or hTiles and vTiles.</p>
@@ -233,6 +285,32 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Bitmovin_Api_Sdk_Models_Sprite_JpegConfig_" data-uid="Bitmovin.Api.Sdk.Models.Sprite.JpegConfig*"></a>
+  <h4 id="Bitmovin_Api_Sdk_Models_Sprite_JpegConfig" data-uid="Bitmovin.Api.Sdk.Models.Sprite.JpegConfig">JpegConfig</h4>
+  <div class="markdown level1 summary"><p>Additional configuration for JPEG sprite generation.  If this property is set the extension of the file must be '.jpg.' or '.jpeg'  Only supported starting with encoder version <code>2.76.0</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SpriteJpegConfig JpegConfig { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Bitmovin.Api.Sdk.Models.SpriteJpegConfig.html">SpriteJpegConfig</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -267,7 +345,7 @@
   
   <a id="Bitmovin_Api_Sdk_Models_Sprite_SpriteName_" data-uid="Bitmovin.Api.Sdk.Models.Sprite.SpriteName*"></a>
   <h4 id="Bitmovin_Api_Sdk_Models_Sprite_SpriteName" data-uid="Bitmovin.Api.Sdk.Models.Sprite.SpriteName">SpriteName</h4>
-  <div class="markdown level1 summary"><p>Name of the sprite image. File extension &amp;quot;.jpg&amp;quot; or &amp;quot;.png&amp;quot; is required. (required)</p>
+  <div class="markdown level1 summary"><p>Name of the sprite image. File extension &amp;quot;.jpg&amp;quot;/&amp;quot;.jpeg&amp;quot; or &amp;quot;.png&amp;quot; is required. (required)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -311,6 +389,32 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Bitmovin.Api.Sdk.Models.SpriteUnit.html">SpriteUnit</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Bitmovin_Api_Sdk_Models_Sprite_VTiles_" data-uid="Bitmovin.Api.Sdk.Models.Sprite.VTiles*"></a>
+  <h4 id="Bitmovin_Api_Sdk_Models_Sprite_VTiles" data-uid="Bitmovin.Api.Sdk.Models.Sprite.VTiles">VTiles</h4>
+  <div class="markdown level1 summary"><p>Number of columns of images per file.  Has to be set together with hTiles. If this property and hTiles are set, the imagesPerFile property must not be set.  It is recommended to use the placeholder '%number%' in the spriteName to allow the generation of multiple sprites.  Only supported starting with encoder version <code>2.76.0</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? VTiles { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>

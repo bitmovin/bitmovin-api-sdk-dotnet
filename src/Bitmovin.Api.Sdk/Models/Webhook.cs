@@ -43,6 +43,6 @@ namespace Bitmovin.Api.Sdk.Models
         /// The json schema of the data that is send as webhook payload
         /// </summary>
         [JsonProperty(PropertyName = "schema")]
-        public Object Schema { get; set; }
+        public Object Schema { get; internal set; }
     }
 }

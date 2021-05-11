@@ -17,8 +17,17 @@ Using this API client requires an active account.
 
 > Don't have an account yet? [Sign up for a free Bitmovin trial plan](https://dashboard.bitmovin.com/signup)!
 
-For full documentation of all available API endpoints, see the [Bitmovin API reference](https://bitmovin.com/docs).
+---
 
+## Documentation & Release Notes
++ Full Bitmovin API reference documentation: https://bitmovin.com/docs/encoding/api-reference
++ SDK reference documentation for .NET: [https://bitmovin.github.io/bitmovin-api-sdk-dotnet](https://bitmovin.github.io/bitmovin-api-sdk-dotnet/api/Bitmovin.Api.Sdk.BitmovinApi.html)
++ Release Notes: https://bitmovin.com/docs/encoding/changelogs/rest
+
+## Support
+If you have any questions regarding the SDK, provided examples or our services, please log in to your Bitmovin Dashboard at https://bitmovin.com/dashboard and [create a support ticket](https://bitmovin.com/dashboard/support/cases/create?tab=encoding). Our team will get back to you as soon as possible :+1:
+
+---
 ## Installation
 
 ### Nuget
@@ -27,13 +36,13 @@ Add this dependency to your project:
 
 Package Manager
 ```shell
-Install-Package Bitmovin.Api.Sdk -Version 1.70.0
+Install-Package Bitmovin.Api.Sdk -Version 1.71.0
 ```
 
 .NET CLI
 
 ```shell
-dotnet add package Bitmovin.Api.Sdk --version 1.70.0
+dotnet add package Bitmovin.Api.Sdk --version 1.71.0
 ```
 
 ## Initialization
@@ -50,7 +59,9 @@ dotnet add package Bitmovin.Api.Sdk --version 1.70.0
 ## Examples
 You can find sample workflow scripts in the [Bitmovin API SDK examples](https://github.com/bitmovin/bitmovin-api-sdk-examples) repository.
 
-# Previous API Client (Legacy)
+---
+
+## Deprecated API Client (Legacy)
 
 `bitmovin-api-sdk-dotnet` is the latest Bitmovin API client for .NET Core 2.0+ and .NET Framework 4.6.1+. It guarantees 100% specification conformity at any given time and access to all features of the API as soon as they are released. 
 

@@ -43,6 +43,6 @@ namespace Bitmovin.Api.Sdk.Models
         /// TriggeredAt
         /// </summary>
         [JsonProperty(PropertyName = "triggeredAt")]
-        public DateTime? TriggeredAt { get; set; }
+        public DateTime? TriggeredAt { get; internal set; }
     }
 }
