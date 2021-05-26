@@ -16,6 +16,7 @@ namespace Bitmovin.Api.Sdk.Models
     [JsonConverter(typeof(JsonSubtypes), "type")]
     [JsonSubtypes.KnownSubType(typeof(AnalyticsS3RoleBasedOutput), "S3_ROLE_BASED")]
     [JsonSubtypes.KnownSubType(typeof(AnalyticsGcsServiceAccountOutput), "GCS_SERVICE_ACCOUNT")]
+    [JsonSubtypes.KnownSubType(typeof(AnalyticsAzureOutput), "AZURE")]
 
     public class AnalyticsOutput : BitmovinResource
     {

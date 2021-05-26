@@ -17,6 +17,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// GCS_SERVICE_ACCOUNT
         /// </summary>
         [EnumMember(Value = "GCS_SERVICE_ACCOUNT")]
-        GCS_SERVICE_ACCOUNT
+        GCS_SERVICE_ACCOUNT,
+
+        /// <summary>
+        /// AZURE
+        /// </summary>
+        [EnumMember(Value = "AZURE")]
+        AZURE
     }
 }

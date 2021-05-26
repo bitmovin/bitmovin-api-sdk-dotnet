@@ -12,7 +12,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "Nk91Ec++kJTPkYxJtaXX/Q=="
+          "hash": "j1zo3h2/APsSGDRLMC6dDw=="
         }
       },
       "is_incremental": false,
@@ -788,6 +788,66 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Analytics.Outputs.Azure.AzureApi.ListQueryParams.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Analytics.Outputs.Azure.AzureApi.ListQueryParams.html",
+          "hash": "X2Lnp4/GF4hpGSk5AOERTw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Analytics.Outputs.Azure.AzureApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Analytics.Outputs.Azure.AzureApi.html",
+          "hash": "9IgQu9Nl7i9Eq2OT3A6aYA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Analytics.Outputs.Azure.Customdata.CustomdataApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Analytics.Outputs.Azure.Customdata.CustomdataApi.html",
+          "hash": "pgxbfOjSJ8byHr0FBdkvEA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Analytics.Outputs.Azure.Customdata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Analytics.Outputs.Azure.Customdata.html",
+          "hash": "PC389TvwHlNw025IY+QHYQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Analytics.Outputs.Azure.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Analytics.Outputs.Azure.html",
+          "hash": "M7HqVvMpFYaG2rfQ/eO0dw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Bitmovin.Api.Sdk.Analytics.Outputs.GcsServiceAccount.Customdata.CustomdataApi.yml",
       "output": {
         ".html": {
@@ -852,7 +912,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Analytics.Outputs.OutputsApi.html",
-          "hash": "x3GH2cIEoEfJ/djYBcLPvw=="
+          "hash": "Z/fqhmvYEpM6wWWuSh1l/A=="
         }
       },
       "is_incremental": false,
@@ -13772,6 +13832,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.AnalyticsAzureOutput.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.AnalyticsAzureOutput.html",
+          "hash": "ZwTACApCYIngClnDPXDL1w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Bitmovin.Api.Sdk.Models.AnalyticsColumnLabel.yml",
       "output": {
         ".html": {
@@ -14220,7 +14292,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.AnalyticsOutput.html",
-          "hash": "FECZzy7idRAOTde66sP0WA=="
+          "hash": "vWDa0A7sP6inZvEuax2xMg=="
         }
       },
       "is_incremental": false,
@@ -14232,7 +14304,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.AnalyticsOutputType.html",
-          "hash": "Z18CiphoJE4fsqfQRYt7zw=="
+          "hash": "e+m7sYsy96OXiWSf99Thog=="
         }
       },
       "is_incremental": false,
@@ -20904,7 +20976,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.html",
-          "hash": "NvDMcesfuh15Jp8I0AIK2g=="
+          "hash": "Q2/gze+l87kdi3oyOaSoKg=="
         }
       },
       "is_incremental": false,
@@ -21948,7 +22020,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "bxfh3zsnbg047w1+F7U1Gg=="
+          "hash": "PC9ASJzXEv0yFj7mfQfm/w=="
         }
       },
       "is_incremental": false,
@@ -21963,7 +22035,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "I0ujltaKiCm71QRpDKRwgw=="
+          "hash": "OkaUkSZEhhSWix9ZQGpEyg=="
         }
       },
       "is_incremental": false,
@@ -22000,16 +22072,16 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 1833,
+          "skipped_file_count": 0
+        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 2,
-          "skipped_file_count": 0
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 1827,
           "skipped_file_count": 0
         }
       }
