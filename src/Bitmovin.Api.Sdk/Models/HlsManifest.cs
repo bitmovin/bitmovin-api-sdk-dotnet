@@ -38,5 +38,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "channelsAttributeForAudio")]
         public ChannelsAttributeForAudio? ChannelsAttributeForAudio { get; set; }
+
+        /// <summary>
+        /// The rounding applied to target duration. Two possible rouding modes exist: NORMAL_ROUNDING, when the target duration is rounded to the nearest integer, or UPWARDS_ROUNDING, when the target duration is rounded to the highest integer. 
+        /// </summary>
+        [JsonProperty(PropertyName = "targetDurationRoundingMode")]
+        public HlsTargetDurationRoundingMode? TargetDurationRoundingMode { get; set; }
     }
 }

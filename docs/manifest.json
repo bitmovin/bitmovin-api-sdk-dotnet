@@ -12,7 +12,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "j1zo3h2/APsSGDRLMC6dDw=="
+          "hash": "HJlDGswx/24lpqAhLzFoSw=="
         }
       },
       "is_incremental": false,
@@ -17172,7 +17172,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.HlsManifest.html",
-          "hash": "GOYyhPcN2PUXAhtvOkfrIw=="
+          "hash": "9JpztgjkZWvOLwJAjJb1MQ=="
         }
       },
       "is_incremental": false,
@@ -17184,7 +17184,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.HlsManifestDefault.html",
-          "hash": "SDaSZDcYCPGC+MJpi6amAQ=="
+          "hash": "O+efjsU9VhS/VWbefBr3pQ=="
         }
       },
       "is_incremental": false,
@@ -17197,6 +17197,18 @@
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.HlsManifestDefaultVersion.html",
           "hash": "nPr2lhatxNDWt6ckRs7xAw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.HlsTargetDurationRoundingMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.HlsTargetDurationRoundingMode.html",
+          "hash": "j0bCuuHkr4lJYu3L7cp2MA=="
         }
       },
       "is_incremental": false,
@@ -20976,7 +20988,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.html",
-          "hash": "Q2/gze+l87kdi3oyOaSoKg=="
+          "hash": "Vt3E6XJxjeSDaphhK6MUlw=="
         }
       },
       "is_incremental": false,
@@ -22020,7 +22032,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "PC9ASJzXEv0yFj7mfQfm/w=="
+          "hash": "DZbroK+yrKOCdBgOKoYanQ=="
         }
       },
       "is_incremental": false,
@@ -22035,7 +22047,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "OkaUkSZEhhSWix9ZQGpEyg=="
+          "hash": "R6dvmvbu/EeRKdsmmoFWeg=="
         }
       },
       "is_incremental": false,
@@ -22075,7 +22087,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 1833,
+          "total_file_count": 1834,
           "skipped_file_count": 0
         },
         "ConceptualDocumentProcessor": {
