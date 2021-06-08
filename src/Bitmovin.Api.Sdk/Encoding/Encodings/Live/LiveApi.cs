@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using RestEase;
 using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Live.InsertableContent;
+using Bitmovin.Api.Sdk.Encoding.Encodings.Live.Scte35Cue;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live
 {
@@ -16,6 +17,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live
         {
             _apiClient = apiClientFactory.CreateClient<ILiveApiClient>();
             InsertableContent = new InsertableContentApi(apiClientFactory);
+            Scte35Cue = new Scte35CueApi(apiClientFactory);
         }
 
         /// <summary>
@@ -24,6 +26,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live
         public static BitmovinApiBuilder<LiveApi> Builder => new BitmovinApiBuilder<LiveApi>();
 
         public InsertableContentApi InsertableContent { get; }
+        public Scte35CueApi Scte35Cue { get; }
 
         /// <summary>
         /// Live Encoding Details
