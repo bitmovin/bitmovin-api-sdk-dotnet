@@ -16,7 +16,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class Stream : BitmovinResource
     {
         /// <summary>
-        /// InputStreams
+        /// Determines the input source(s) for the stream. All video streams of an encoding need to have identical input configurations (required)
         /// </summary>
         [JsonProperty(PropertyName = "inputStreams")]
         public List<StreamInput> InputStreams { get; set; } = new List<StreamInput>();

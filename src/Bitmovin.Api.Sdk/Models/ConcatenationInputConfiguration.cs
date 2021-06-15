@@ -16,7 +16,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class ConcatenationInputConfiguration
     {
         /// <summary>
-        /// The ID of the input stream to be concatenated. This can be an ingest input stream or a trimming input stream
+        /// The ID of the input stream to be concatenated. This can be an ingest input stream or a trimming input stream (required)
         /// </summary>
         [JsonProperty(PropertyName = "inputStreamId")]
         public string InputStreamId { get; set; }
@@ -28,19 +28,19 @@ namespace Bitmovin.Api.Sdk.Models
         public bool? IsMain { get; set; }
 
         /// <summary>
-        /// Position of the stream
+        /// A unique integer value that determines concatenation order (required)
         /// </summary>
         [JsonProperty(PropertyName = "position")]
         public int? Position { get; set; }
 
         /// <summary>
-        /// Inserts a padding sequence (black frames and/or silent audio) before the input stream. If this is set, all video output streams of the encoding need to use the same ConcatenationInputStream.
+        /// Inserts a padding sequence (black frames and/or silent audio) before the input stream.
         /// </summary>
         [JsonProperty(PropertyName = "paddingBefore")]
         public PaddingSequence PaddingBefore { get; set; }
 
         /// <summary>
-        /// Inserts a padding sequence (black frames and/or silent audio) after the input stream. If this is set, all video output streams of the encoding need to use the same ConcatenationInputStream.
+        /// Inserts a padding sequence (black frames and/or silent audio) after the input stream.
         /// </summary>
         [JsonProperty(PropertyName = "paddingAfter")]
         public PaddingSequence PaddingAfter { get; set; }
