@@ -80,6 +80,18 @@ namespace Bitmovin.Api.Sdk.Models
         EAC3,
 
         /// <summary>
+        /// DD
+        /// </summary>
+        [EnumMember(Value = "DD")]
+        DD,
+
+        /// <summary>
+        /// DDPLUS
+        /// </summary>
+        [EnumMember(Value = "DDPLUS")]
+        DDPLUS,
+
+        /// <summary>
         /// OPUS
         /// </summary>
         [EnumMember(Value = "OPUS")]

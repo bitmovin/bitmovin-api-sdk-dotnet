@@ -16,13 +16,19 @@ namespace Bitmovin.Api.Sdk.Models
     public class Thumbnail : BitmovinResource
     {
         /// <summary>
-        /// Height of the thumbnail. (required)
+        /// Height of the thumbnail, either height or width are required fields. If only one is given the encoder will calculate the other way value based on the aspect ratio of the video file. If the encoder version is below 2.83.0 only height is supported and mandatory. 
         /// </summary>
         [JsonProperty(PropertyName = "height")]
         public int? Height { get; set; }
 
         /// <summary>
-        ///  Pattern which describes the thumbnail filenames. For example with thumbnail-%number%.png as pattern and 3 positions: thumbnail-3_0.png, thumbnail-5_0.png and thumbnail-25_5.png. (The number represents the position in the source video in seconds, in the previous example the first filename represents the thumbnail at 3s, the second one at 5s and the third one at 25.5s).
+        /// Width of the thumbnail, either height or width are required fields. If only one is given the encoder will calculate the other way value based on the aspect ratio of the video file. If the encoder version is below 2.83.0 only height is supported 
+        /// </summary>
+        [JsonProperty(PropertyName = "width")]
+        public int? Width { get; set; }
+
+        /// <summary>
+        ///  Pattern which describes the thumbnail filenames. For example with thumbnail-%number%.png as pattern and 3 positions: thumbnail-3_0.png, thumbnail-5_0.png and thumbnail-25_5.png. (The number represents the position in the source video in seconds, in the previous example the first filename represents the thumbnail at 3s, the second one at 5s and the third one at 25.5s). (required)
         /// </summary>
         [JsonProperty(PropertyName = "pattern")]
         public string Pattern { get; set; }

@@ -16,13 +16,13 @@ namespace Bitmovin.Api.Sdk.Models
     public class Sprite : BitmovinResource
     {
         /// <summary>
-        /// Height of one thumbnail (required)
+        /// Height of one thumbnail, either height or width are required fields. If only one is given the encoder will calculate the other way value based on the aspect ratio of the video file. If the encoder version is below 2.83.0 both are required 
         /// </summary>
         [JsonProperty(PropertyName = "height")]
         public int? Height { get; set; }
 
         /// <summary>
-        /// Width of one thumbnail (required)
+        /// Width of one thumbnail, either height or width are required fields. If only one is given the encoder will calculate the other way value based on the aspect ratio of the video file. If the encoder version is below 2.83.0 both are required 
         /// </summary>
         [JsonProperty(PropertyName = "width")]
         public int? Width { get; set; }

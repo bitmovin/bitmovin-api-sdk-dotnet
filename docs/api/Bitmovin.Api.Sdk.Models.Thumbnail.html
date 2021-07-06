@@ -137,7 +137,7 @@
   
   <a id="Bitmovin_Api_Sdk_Models_Thumbnail_Height_" data-uid="Bitmovin.Api.Sdk.Models.Thumbnail.Height*"></a>
   <h4 id="Bitmovin_Api_Sdk_Models_Thumbnail_Height" data-uid="Bitmovin.Api.Sdk.Models.Thumbnail.Height">Height</h4>
-  <div class="markdown level1 summary"><p>Height of the thumbnail. (required)</p>
+  <div class="markdown level1 summary"><p>Height of the thumbnail, either height or width are required fields. If only one is given the encoder will calculate the other way value based on the aspect ratio of the video file. If the encoder version is below 2.83.0 only height is supported and mandatory.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -215,7 +215,7 @@
   
   <a id="Bitmovin_Api_Sdk_Models_Thumbnail_Pattern_" data-uid="Bitmovin.Api.Sdk.Models.Thumbnail.Pattern*"></a>
   <h4 id="Bitmovin_Api_Sdk_Models_Thumbnail_Pattern" data-uid="Bitmovin.Api.Sdk.Models.Thumbnail.Pattern">Pattern</h4>
-  <div class="markdown level1 summary"><p>Pattern which describes the thumbnail filenames. For example with thumbnail-%number%.png as pattern and 3 positions: thumbnail-3_0.png, thumbnail-5_0.png and thumbnail-25_5.png. (The number represents the position in the source video in seconds, in the previous example the first filename represents the thumbnail at 3s, the second one at 5s and the third one at 25.5s).</p>
+  <div class="markdown level1 summary"><p>Pattern which describes the thumbnail filenames. For example with thumbnail-%number%.png as pattern and 3 positions: thumbnail-3_0.png, thumbnail-5_0.png and thumbnail-25_5.png. (The number represents the position in the source video in seconds, in the previous example the first filename represents the thumbnail at 3s, the second one at 5s and the third one at 25.5s). (required)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -285,6 +285,32 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Bitmovin.Api.Sdk.Models.ThumbnailUnit.html">ThumbnailUnit</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Bitmovin_Api_Sdk_Models_Thumbnail_Width_" data-uid="Bitmovin.Api.Sdk.Models.Thumbnail.Width*"></a>
+  <h4 id="Bitmovin_Api_Sdk_Models_Thumbnail_Width" data-uid="Bitmovin.Api.Sdk.Models.Thumbnail.Width">Width</h4>
+  <div class="markdown level1 summary"><p>Width of the thumbnail, either height or width are required fields. If only one is given the encoder will calculate the other way value based on the aspect ratio of the video file. If the encoder version is below 2.83.0 only height is supported</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? Width { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
