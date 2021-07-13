@@ -22,7 +22,7 @@ namespace Bitmovin.Api.Sdk.Models
         public string IpAddress { get; internal set; }
 
         /// <summary>
-        /// Required if the static IP should be created for an AWS infrastructure account.
+        /// Required if the static IP should be created for an AWS infrastructure account. If this is left blank the static Ip will be created for the managed cloud.
         /// </summary>
         [JsonProperty(PropertyName = "infrastructureId")]
         public string InfrastructureId { get; set; }

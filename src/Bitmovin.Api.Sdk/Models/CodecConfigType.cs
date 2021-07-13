@@ -140,6 +140,12 @@ namespace Bitmovin.Api.Sdk.Models
         WEBVTT,
 
         /// <summary>
+        /// IMSC
+        /// </summary>
+        [EnumMember(Value = "IMSC")]
+        IMSC,
+
+        /// <summary>
         /// DVB_SUBTITLE
         /// </summary>
         [EnumMember(Value = "DVB_SUBTITLE")]

@@ -1,6 +1,7 @@
 using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Encoding.Configurations.Subtitles.DvbSubtitle;
 using Bitmovin.Api.Sdk.Encoding.Configurations.Subtitles.Webvtt;
+using Bitmovin.Api.Sdk.Encoding.Configurations.Subtitles.Imsc;
 
 namespace Bitmovin.Api.Sdk.Encoding.Configurations.Subtitles
 {
@@ -10,6 +11,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Subtitles
         {
             DvbSubtitle = new DvbSubtitleApi(apiClientFactory);
             Webvtt = new WebvttApi(apiClientFactory);
+            Imsc = new ImscApi(apiClientFactory);
         }
 
         /// <summary>
@@ -19,5 +21,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Subtitles
 
         public DvbSubtitleApi DvbSubtitle { get; }
         public WebvttApi Webvtt { get; }
+        public ImscApi Imsc { get; }
     }
 }

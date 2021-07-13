@@ -1,5 +1,6 @@
 using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Representations.Vtt;
+using Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Representations.Imsc;
 using Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Representations.Sprite;
 using Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Representations.Fmp4;
 using Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Representations.ChunkedText;
@@ -15,6 +16,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Repres
         public RepresentationsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             Vtt = new VttApi(apiClientFactory);
+            Imsc = new ImscApi(apiClientFactory);
             Sprite = new SpriteApi(apiClientFactory);
             Fmp4 = new Fmp4Api(apiClientFactory);
             ChunkedText = new ChunkedTextApi(apiClientFactory);
@@ -30,6 +32,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Repres
         public static BitmovinApiBuilder<RepresentationsApi> Builder => new BitmovinApiBuilder<RepresentationsApi>();
 
         public VttApi Vtt { get; }
+        public ImscApi Imsc { get; }
         public SpriteApi Sprite { get; }
         public Fmp4Api Fmp4 { get; }
         public ChunkedTextApi ChunkedText { get; }

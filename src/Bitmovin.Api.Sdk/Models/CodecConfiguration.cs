@@ -37,6 +37,7 @@ namespace Bitmovin.Api.Sdk.Models
     [JsonSubtypes.KnownSubType(typeof(H262VideoConfiguration), "H262")]
     [JsonSubtypes.KnownSubType(typeof(PcmAudioConfiguration), "PCM")]
     [JsonSubtypes.KnownSubType(typeof(WebVttConfiguration), "WEBVTT")]
+    [JsonSubtypes.KnownSubType(typeof(ImscConfiguration), "IMSC")]
 
     public class CodecConfiguration : BitmovinResource
     {
