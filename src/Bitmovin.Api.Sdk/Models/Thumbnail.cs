@@ -56,5 +56,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "unit")]
         public ThumbnailUnit? Unit { get; set; }
+
+        /// <summary>
+        /// Specifies the aspect mode that is used when both height and width are specified Only supported starting with encoder version &#x60;2.85.0&#x60;. 
+        /// </summary>
+        [JsonProperty(PropertyName = "aspectMode")]
+        public ThumbnailAspectMode? AspectMode { get; set; }
     }
 }

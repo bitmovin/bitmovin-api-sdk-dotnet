@@ -16,7 +16,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class MediaStream : BitmovinResponse
     {
         /// <summary>
-        /// Position starts from 0 and indicates the position of the stream in the media. 0 means that this is the first stream found in the media
+        /// Position of the stream in the media, starting from 0.
         /// </summary>
         [JsonProperty(PropertyName = "position")]
         public int? Position { get; set; }

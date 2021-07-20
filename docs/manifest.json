@@ -12,7 +12,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "v6yy8VK5F5VONoohrmX87A=="
+          "hash": "+h8lXBlG3EjtPwCofbw8eA=="
         }
       },
       "is_incremental": false,
@@ -15216,7 +15216,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.Bif.html",
-          "hash": "16u9uANN9cdBpVDAakSo0g=="
+          "hash": "AL7kbG2ENeuwk2bCRwExyQ=="
         }
       },
       "is_incremental": false,
@@ -17064,7 +17064,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.DvbSubtitleInputStream.html",
-          "hash": "UZnKHpvsvEzaFIHMoP2SGg=="
+          "hash": "t3reUSbLBnHirVMG8BWgbA=="
         }
       },
       "is_incremental": false,
@@ -17076,7 +17076,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.DvbTeletextInputStream.html",
-          "hash": "+bGAOqTHJca52rLVsckZzQ=="
+          "hash": "J4SE04n3Lz9xg3tOTmziZQ=="
         }
       },
       "is_incremental": false,
@@ -18144,7 +18144,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.IngestInputStream.html",
-          "hash": "LLLyObYN1YAV/vfdpaG9xQ=="
+          "hash": "If/yFQnGMzps4h73EjsEfw=="
         }
       },
       "is_incremental": false,
@@ -18744,7 +18744,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.MediaStream.html",
-          "hash": "PEz37SEs0RLx0QiYw3dkQg=="
+          "hash": "dRtSbw4xXvIs/sWaIpjsNQ=="
         }
       },
       "is_incremental": false,
@@ -20472,7 +20472,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.Sprite.html",
-          "hash": "+C6NmZF2RkBK41eKNJ5vsA=="
+          "hash": "ZRTpf0kxlX/9TYNBgHZG5w=="
         }
       },
       "is_incremental": false,
@@ -20856,7 +20856,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.StreamInput.html",
-          "hash": "/xPeMrs0/X5uofl+vkZmLQ=="
+          "hash": "pberre00UgBs0tCwM3fh3A=="
         }
       },
       "is_incremental": false,
@@ -21048,7 +21048,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.Thumbnail.html",
-          "hash": "zCGLH3jqEFD6RCF8sa8tEQ=="
+          "hash": "7HfDUaXtIQeq6J84YPLyjQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.ThumbnailAspectMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.ThumbnailAspectMode.html",
+          "hash": "MjokAqSDT4WXJidQaGED/A=="
         }
       },
       "is_incremental": false,
@@ -21792,7 +21804,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.html",
-          "hash": "lvcKcqMX9WpvlZquAsdkZw=="
+          "hash": "Ci1B80D2d0wPzBwmsewCtQ=="
         }
       },
       "is_incremental": false,
@@ -22836,7 +22848,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "lmj7OJEzjnnxi80tePmvOw=="
+          "hash": "s8r5A6HNayK8cwtriL/xsg=="
         }
       },
       "is_incremental": false,
@@ -22851,7 +22863,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "xsccyMRZKnqjSH02LVDSfg=="
+          "hash": "V5SofRAjwHj4aK4y0zLBKw=="
         }
       },
       "is_incremental": false,
@@ -22891,7 +22903,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 1901,
+          "total_file_count": 1902,
           "skipped_file_count": 0
         },
         "ConceptualDocumentProcessor": {

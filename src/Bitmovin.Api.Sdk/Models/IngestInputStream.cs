@@ -37,7 +37,7 @@ namespace Bitmovin.Api.Sdk.Models
         public StreamSelectionMode? SelectionMode { get; set; }
 
         /// <summary>
-        /// Position of the stream
+        /// Position of the stream, starting from 0.
         /// </summary>
         [JsonProperty(PropertyName = "position")]
         public int? Position { get; set; }
