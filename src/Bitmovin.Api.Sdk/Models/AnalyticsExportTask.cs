@@ -61,7 +61,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Status
         /// </summary>
         [JsonProperty(PropertyName = "status")]
-        public AnalyticsExportStatus? Status { get; set; }
+        public AnalyticsExportStatus? Status { get; internal set; }
 
         /// <summary>
         /// UTC timestamp when the export task started

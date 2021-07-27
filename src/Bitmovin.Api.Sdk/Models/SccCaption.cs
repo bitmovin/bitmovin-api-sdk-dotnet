@@ -22,7 +22,7 @@ namespace Bitmovin.Api.Sdk.Models
         public InputPath Input { get; set; }
 
         /// <summary>
-        /// SmpteTimecodeFlavor
+        /// Flavor of SMPTE timecodes in the SCC file (drop-frame or non-drop)
         /// </summary>
         [JsonProperty(PropertyName = "smpteTimecodeFlavor")]
         public SmpteTimecodeFlavor? SmpteTimecodeFlavor { get; set; }

@@ -31,13 +31,13 @@ namespace Bitmovin.Api.Sdk.Models
         public string EventName { get; set; }
 
         /// <summary>
-        /// StreamFormat
+        /// The stream format. Only DASH is supported at the moment. (required)
         /// </summary>
         [JsonProperty(PropertyName = "streamFormat")]
         public AkamaiMslStreamFormat? StreamFormat { get; set; }
 
         /// <summary>
-        /// MslVersion
+        /// The Akamai MSL Version. Only MSL4 is supported at the moment. (required)
         /// </summary>
         [JsonProperty(PropertyName = "mslVersion")]
         public AkamaiMslVersion? MslVersion { get; set; }

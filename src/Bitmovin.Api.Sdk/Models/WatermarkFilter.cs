@@ -49,7 +49,7 @@ namespace Bitmovin.Api.Sdk.Models
         public int? Bottom { get; set; }
 
         /// <summary>
-        /// Unit
+        /// Specifies if the values of &#39;left&#39;, &#39;right&#39;, &#39;top&#39; and &#39;bottom&#39; are interpreted as pixels or as a percentage of the input video&#39;s dimensions.
         /// </summary>
         [JsonProperty(PropertyName = "unit")]
         public PositionUnit? Unit { get; set; }

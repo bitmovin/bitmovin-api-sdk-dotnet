@@ -82,6 +82,12 @@ namespace Bitmovin.Api.Sdk.Models
         public string CdnProvider { get; set; }
 
         /// <summary>
+        /// Casting Technology
+        /// </summary>
+        [JsonProperty(PropertyName = "cast_tech")]
+        public string CastTech { get; set; }
+
+        /// <summary>
         /// City
         /// </summary>
         [JsonProperty(PropertyName = "city")]
@@ -538,7 +544,7 @@ namespace Bitmovin.Api.Sdk.Models
         public bool? VideostartFailed { get; set; }
 
         /// <summary>
-        /// VideostartFailedReason
+        /// Reason why starting the video failed
         /// </summary>
         [JsonProperty(PropertyName = "videostart_failed_reason")]
         public AnalyticsVideoStartFailedReason? VideostartFailedReason { get; set; }

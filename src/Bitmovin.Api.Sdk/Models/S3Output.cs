@@ -43,13 +43,13 @@ namespace Bitmovin.Api.Sdk.Models
         public string Md5MetaTag { get; set; }
 
         /// <summary>
-        /// CloudRegion
+        /// The cloud region in which the bucket is located. Is used to determine the ideal location for your encodings automatically.
         /// </summary>
         [JsonProperty(PropertyName = "cloudRegion")]
         public AwsCloudRegion? CloudRegion { get; set; }
 
         /// <summary>
-        /// SignatureVersion
+        /// Specifies the method used for authentication. Must be set to S3_V2 if the region supports both V2 and V4, but the bucket allows V2 only (see https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region)
         /// </summary>
         [JsonProperty(PropertyName = "signatureVersion")]
         public S3SignatureVersion? SignatureVersion { get; set; }

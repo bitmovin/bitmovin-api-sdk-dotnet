@@ -137,7 +137,7 @@
   
   <a id="Bitmovin_Api_Sdk_Models_PrewarmedEncoderPool_CloudRegion_" data-uid="Bitmovin.Api.Sdk.Models.PrewarmedEncoderPool.CloudRegion*"></a>
   <h4 id="Bitmovin_Api_Sdk_Models_PrewarmedEncoderPool_CloudRegion" data-uid="Bitmovin.Api.Sdk.Models.PrewarmedEncoderPool.CloudRegion">CloudRegion</h4>
-  <div class="markdown level1 summary"><p>CloudRegion</p>
+  <div class="markdown level1 summary"><p>The cloud region in which the pool's instances will be running. Must be a specific region (e.g. not 'AUTO', 'GOOGLE' or 'EUROPE') (required)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -163,7 +163,7 @@
   
   <a id="Bitmovin_Api_Sdk_Models_PrewarmedEncoderPool_DiskSize_" data-uid="Bitmovin.Api.Sdk.Models.PrewarmedEncoderPool.DiskSize*"></a>
   <h4 id="Bitmovin_Api_Sdk_Models_PrewarmedEncoderPool_DiskSize" data-uid="Bitmovin.Api.Sdk.Models.PrewarmedEncoderPool.DiskSize">DiskSize</h4>
-  <div class="markdown level1 summary"><p>DiskSize</p>
+  <div class="markdown level1 summary"><p>Disk size of the prewarmed instances in GB. Needs to be chosen depending on input file sizes and encoding features used. (required)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -241,12 +241,12 @@
   
   <a id="Bitmovin_Api_Sdk_Models_PrewarmedEncoderPool_Status_" data-uid="Bitmovin.Api.Sdk.Models.PrewarmedEncoderPool.Status*"></a>
   <h4 id="Bitmovin_Api_Sdk_Models_PrewarmedEncoderPool_Status" data-uid="Bitmovin.Api.Sdk.Models.PrewarmedEncoderPool.Status">Status</h4>
-  <div class="markdown level1 summary"><p>Status</p>
+  <div class="markdown level1 summary"><p>Current status of the pool.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PrewarmedEncoderPoolStatus? Status { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public PrewarmedEncoderPoolStatus? Status { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

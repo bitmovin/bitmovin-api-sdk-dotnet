@@ -37,7 +37,7 @@ namespace Bitmovin.Api.Sdk.Models
         public List<EncodingOutput> Outputs { get; set; } = new List<EncodingOutput>();
 
         /// <summary>
-        /// ErrorMode
+        /// This defines how errors should be handled
         /// </summary>
         [JsonProperty(PropertyName = "errorMode")]
         public SidecarErrorMode? ErrorMode { get; set; }

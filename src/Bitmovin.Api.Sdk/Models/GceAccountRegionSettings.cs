@@ -31,6 +31,6 @@ namespace Bitmovin.Api.Sdk.Models
         /// Region
         /// </summary>
         [JsonProperty(PropertyName = "region")]
-        public GoogleCloudRegion? Region { get; set; }
+        public GoogleCloudRegion? Region { get; internal set; }
     }
 }

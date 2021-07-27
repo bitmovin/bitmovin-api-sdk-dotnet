@@ -31,7 +31,7 @@ namespace Bitmovin.Api.Sdk.Models
         public string BucketName { get; set; }
 
         /// <summary>
-        /// CloudRegion
+        /// The cloud region in which the bucket is located. Is used to determine the ideal location for your encodings automatically.
         /// </summary>
         [JsonProperty(PropertyName = "cloudRegion")]
         public GoogleCloudRegion? CloudRegion { get; set; }

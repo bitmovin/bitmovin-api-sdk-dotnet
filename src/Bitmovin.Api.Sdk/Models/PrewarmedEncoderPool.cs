@@ -22,7 +22,7 @@ namespace Bitmovin.Api.Sdk.Models
         public string EncoderVersion { get; set; }
 
         /// <summary>
-        /// CloudRegion
+        /// The cloud region in which the pool&#39;s instances will be running. Must be a specific region (e.g. not &#39;AUTO&#39;, &#39;GOOGLE&#39; or &#39;EUROPE&#39;) (required)
         /// </summary>
         [JsonProperty(PropertyName = "cloudRegion")]
         public CloudRegion? CloudRegion { get; set; }
@@ -34,7 +34,7 @@ namespace Bitmovin.Api.Sdk.Models
         public string InfrastructureId { get; set; }
 
         /// <summary>
-        /// DiskSize
+        /// Disk size of the prewarmed instances in GB. Needs to be chosen depending on input file sizes and encoding features used. (required)
         /// </summary>
         [JsonProperty(PropertyName = "diskSize")]
         public PrewarmedEncoderDiskSize? DiskSize { get; set; }
@@ -46,9 +46,9 @@ namespace Bitmovin.Api.Sdk.Models
         public int? TargetPoolSize { get; set; }
 
         /// <summary>
-        /// Status
+        /// Current status of the pool.
         /// </summary>
         [JsonProperty(PropertyName = "status")]
-        public PrewarmedEncoderPoolStatus? Status { get; set; }
+        public PrewarmedEncoderPoolStatus? Status { get; internal set; }
     }
 }

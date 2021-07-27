@@ -16,7 +16,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class Organization : BitmovinResource
     {
         /// <summary>
-        /// Type
+        /// Specifies the type of the organization in the hierachy. Only sub-organizations can be newly created. (required)
         /// </summary>
         [JsonProperty(PropertyName = "type")]
         public OrganizationType? Type { get; set; }

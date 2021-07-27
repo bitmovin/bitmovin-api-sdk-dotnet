@@ -80,6 +80,12 @@ namespace Bitmovin.Api.Sdk.Models
         CDN_PROVIDER,
 
         /// <summary>
+        /// CAST_TECH
+        /// </summary>
+        [EnumMember(Value = "CAST_TECH")]
+        CAST_TECH,
+
+        /// <summary>
         /// CITY
         /// </summary>
         [EnumMember(Value = "CITY")]
