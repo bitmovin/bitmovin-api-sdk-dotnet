@@ -16,7 +16,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class Tweaks
     {
         /// <summary>
-        /// Defines special audio video sync handling
+        /// Different modes for syncing the start and end of audio input streams with the video inputs. This feature does not work with Dolby Digital (Plus) or Dolby Atmos.
         /// </summary>
         [JsonProperty(PropertyName = "audioVideoSyncMode")]
         public AudioVideoSyncMode? AudioVideoSyncMode { get; set; }

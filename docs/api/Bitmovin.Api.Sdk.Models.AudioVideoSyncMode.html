@@ -94,12 +94,17 @@
     <tbody>
       <tr>
         <td id="Bitmovin_Api_Sdk_Models_AudioVideoSyncMode_RESYNC_AT_START">RESYNC_AT_START</td>
-        <td><p>Adds a sync at the start of the file. Useful if the source file was cut out of already encoded content.</p>
+        <td><p>Drop audio samples or add audio silence samples at the start of the audio stream.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Bitmovin_Api_Sdk_Models_AudioVideoSyncMode_RESYNC_AT_START_AND_END">RESYNC_AT_START_AND_END</td>
+        <td><p>Adds or drops audio samples at the start.&lt;br&gt; Adds silence audio samples at the end of the audio inputs.&lt;br&gt; This mode does not drop audio samples from the end.</p>
 </td>
       </tr>
       <tr>
         <td id="Bitmovin_Api_Sdk_Models_AudioVideoSyncMode_STANDARD">STANDARD</td>
-        <td><p>Default audio video sync handling</p>
+        <td><p>Do not add or drop any audio samples.</p>
 </td>
       </tr>
     </tbody>
