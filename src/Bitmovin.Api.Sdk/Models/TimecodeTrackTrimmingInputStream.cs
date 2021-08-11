@@ -19,19 +19,19 @@ namespace Bitmovin.Api.Sdk.Models
         private readonly string _type = "TRIMMING_TIME_CODE_TRACK";
 
         /// <summary>
-        /// The id of the ingest input stream that should be trimmed
+        /// The id of the ingest input stream that should be trimmed (required)
         /// </summary>
         [JsonProperty(PropertyName = "inputStreamId")]
         public string InputStreamId { get; set; }
 
         /// <summary>
-        /// Defines the timecode, in SMPTE-12M format, of the frame from which the encoding should start. The frame indicated by this value will be included in the encoding
+        /// Defines the timecode, in SMPTE-12M format, of the frame from which the encoding should start. The frame indicated by this value will be included in the encoding (required)
         /// </summary>
         [JsonProperty(PropertyName = "startTimeCode")]
         public string StartTimeCode { get; set; }
 
         /// <summary>
-        /// Defines the timecode, in SMPTE-12M format, of the frame at which the encoding should stop. The frame indicated by this value will be included in the encoding
+        /// Defines the timecode, in SMPTE-12M format, of the frame at which the encoding should stop. The frame indicated by this value will be included in the encoding (required)
         /// </summary>
         [JsonProperty(PropertyName = "endTimeCode")]
         public string EndTimeCode { get; set; }
