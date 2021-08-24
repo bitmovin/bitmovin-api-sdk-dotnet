@@ -12,7 +12,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "Wllzpd62cWEiY5XFjvBCug=="
+          "hash": "lnFqAv4MJbUAB5psfQNAww=="
         }
       },
       "is_incremental": false,
@@ -3120,7 +3120,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Encoding.EncodingApi.html",
-          "hash": "ilXsFyBr2HfsL8LA8c88rg=="
+          "hash": "WUdn/87fMhNgb6PrQZ1C5w=="
         }
       },
       "is_incremental": false,
@@ -13580,6 +13580,42 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.WatchFolders.WatchFoldersApi.ListQueryParams.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.WatchFolders.WatchFoldersApi.ListQueryParams.html",
+          "hash": "swehiQkArPRy/7DM3XI1Dw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.WatchFolders.WatchFoldersApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.WatchFolders.WatchFoldersApi.html",
+          "hash": "iwiBOtwzkUjqxXmc6t6Nvw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.WatchFolders.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.WatchFolders.html",
+          "hash": "9QotOHwP2mJLdityw3HU/Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.yml",
       "output": {
         ".html": {
@@ -15468,7 +15504,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.BitmovinResource.html",
-          "hash": "dHk5S+9aMHyTmhgFx2PGlg=="
+          "hash": "h/Qj9K85PeQppEqaQ1bnKA=="
         }
       },
       "is_incremental": false,
@@ -17928,7 +17964,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.GoogleCloudRegion.html",
-          "hash": "rtOdW/qAPCGPdUzfNwrYnQ=="
+          "hash": "vY14rKBXi2R5YqFQy5uQhA=="
         }
       },
       "is_incremental": false,
@@ -18888,7 +18924,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.ManifestGenerator.html",
-          "hash": "x7+e96SyC7MIvLdDfyf+3Q=="
+          "hash": "T/yLEVBD1hXD+JRDDLk2bQ=="
         }
       },
       "is_incremental": false,
@@ -21860,6 +21896,54 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.WatchFolder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.WatchFolder.html",
+          "hash": "+YKo609AatR+T+oGL7ciig=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.WatchFolderInput.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.WatchFolderInput.html",
+          "hash": "8xDpXAkUkJWk+gfuIcHQpQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.WatchFolderOutput.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.WatchFolderOutput.html",
+          "hash": "u15oCRwS17+349ESLM49qA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.WatchFolderStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.WatchFolderStatus.html",
+          "hash": "YVaJCf1SLNBROriWSlNBzw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Bitmovin.Api.Sdk.Models.WatermarkFilter.yml",
       "output": {
         ".html": {
@@ -22080,7 +22164,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.html",
-          "hash": "nDPkWJQBeBnhp3iYjSAEFQ=="
+          "hash": "ZKRX90onVxP8SPquYJduyw=="
         }
       },
       "is_incremental": false,
@@ -23124,7 +23208,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "j6u2cl89X8cRd1ljIQUXnw=="
+          "hash": "oHHN6ky6bfmBvwXM48QFPw=="
         }
       },
       "is_incremental": false,
@@ -23139,7 +23223,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "p0vup9UQdakpwIl1MnC3pg=="
+          "hash": "7qUUMDHzqjUs1lW3/hnGnA=="
         }
       },
       "is_incremental": false,
@@ -23176,16 +23260,16 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 1925,
-          "skipped_file_count": 0
-        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 2,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 1932,
           "skipped_file_count": 0
         }
       }

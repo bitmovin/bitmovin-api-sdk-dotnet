@@ -80,6 +80,12 @@ namespace Bitmovin.Api.Sdk.Models
         EUROPE_WEST_2,
 
         /// <summary>
+        /// Frankfurt, Germany
+        /// </summary>
+        [EnumMember(Value = "EUROPE_WEST_3")]
+        EUROPE_WEST_3,
+
+        /// <summary>
         /// Eemshaven, Netherlands
         /// </summary>
         [EnumMember(Value = "EUROPE_WEST_4")]

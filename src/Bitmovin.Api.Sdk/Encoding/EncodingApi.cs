@@ -7,6 +7,7 @@ using Bitmovin.Api.Sdk.Encoding.Encodings;
 using Bitmovin.Api.Sdk.Encoding.Manifests;
 using Bitmovin.Api.Sdk.Encoding.Infrastructure;
 using Bitmovin.Api.Sdk.Encoding.Statistics;
+using Bitmovin.Api.Sdk.Encoding.WatchFolders;
 using Bitmovin.Api.Sdk.Encoding.ErrorDefinitions;
 
 namespace Bitmovin.Api.Sdk.Encoding
@@ -23,6 +24,7 @@ namespace Bitmovin.Api.Sdk.Encoding
             Manifests = new ManifestsApi(apiClientFactory);
             Infrastructure = new InfrastructureApi(apiClientFactory);
             Statistics = new StatisticsApi(apiClientFactory);
+            WatchFolders = new WatchFoldersApi(apiClientFactory);
             ErrorDefinitions = new ErrorDefinitionsApi(apiClientFactory);
         }
 
@@ -39,6 +41,7 @@ namespace Bitmovin.Api.Sdk.Encoding
         public ManifestsApi Manifests { get; }
         public InfrastructureApi Infrastructure { get; }
         public StatisticsApi Statistics { get; }
+        public WatchFoldersApi WatchFolders { get; }
         public ErrorDefinitionsApi ErrorDefinitions { get; }
     }
 }
