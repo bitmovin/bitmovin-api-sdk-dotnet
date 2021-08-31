@@ -19,7 +19,7 @@ namespace Bitmovin.Api.Sdk.Models
         private readonly string _type = "H265";
 
         /// <summary>
-        /// Use a set of well defined configurations preset to support certain use cases. Can be overwritten with more specific values. Valid values [VOD_HIGH_QUALITY, VOD_STANDARD, VOD_SPEED, VOD_HIGH_SPEED, VOD_VERYHIGH_SPEED, VOD_EXTRAHIGH_SPEED, VOD_SUPERHIGH_SPEED, VOD_ULTRAHIGH_SPEED, LIVE_LOW_LATENCY, LIVE_HIGH_QUALITY]
+        /// Choose from a set of preset configurations tailored for common use cases. Check out [H265 Presets](https://bitmovin.com/docs/encoding/tutorials/h265-presets) to see which values get applied by each preset. Explicitly setting a property to a different value will override the preset&#39;s value for that property.
         /// </summary>
         [JsonProperty(PropertyName = "presetConfiguration")]
         public PresetConfiguration? PresetConfiguration { get; set; }
