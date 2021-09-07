@@ -38,5 +38,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "utcTimings")]
         public List<UtcTiming> UtcTimings { get; set; } = new List<UtcTiming>();
+
+        /// <summary>
+        /// The manifest compatibility with the standard DASH Edition.
+        /// </summary>
+        [JsonProperty(PropertyName = "dashEditionCompatibility")]
+        public DashEditionCompatibility? DashEditionCompatibility { get; set; }
     }
 }
