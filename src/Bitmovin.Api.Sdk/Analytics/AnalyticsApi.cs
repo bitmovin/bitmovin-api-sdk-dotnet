@@ -6,6 +6,7 @@ using Bitmovin.Api.Sdk.Analytics.Metrics;
 using Bitmovin.Api.Sdk.Analytics.Ads;
 using Bitmovin.Api.Sdk.Analytics.Queries;
 using Bitmovin.Api.Sdk.Analytics.Licenses;
+using Bitmovin.Api.Sdk.Analytics.VirtualLicenses;
 using Bitmovin.Api.Sdk.Analytics.Outputs;
 
 namespace Bitmovin.Api.Sdk.Analytics
@@ -21,6 +22,7 @@ namespace Bitmovin.Api.Sdk.Analytics
             Ads = new AdsApi(apiClientFactory);
             Queries = new QueriesApi(apiClientFactory);
             Licenses = new LicensesApi(apiClientFactory);
+            VirtualLicenses = new VirtualLicensesApi(apiClientFactory);
             Outputs = new OutputsApi(apiClientFactory);
         }
 
@@ -36,6 +38,7 @@ namespace Bitmovin.Api.Sdk.Analytics
         public AdsApi Ads { get; }
         public QueriesApi Queries { get; }
         public LicensesApi Licenses { get; }
+        public VirtualLicensesApi VirtualLicenses { get; }
         public OutputsApi Outputs { get; }
     }
 }

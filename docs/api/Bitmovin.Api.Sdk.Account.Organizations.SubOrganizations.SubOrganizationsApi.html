@@ -172,13 +172,13 @@
   
   
   <a id="Bitmovin_Api_Sdk_Account_Organizations_SubOrganizations_SubOrganizationsApi_ListAsync_" data-uid="Bitmovin.Api.Sdk.Account.Organizations.SubOrganizations.SubOrganizationsApi.ListAsync*"></a>
-  <h4 id="Bitmovin_Api_Sdk_Account_Organizations_SubOrganizations_SubOrganizationsApi_ListAsync_System_String_" data-uid="Bitmovin.Api.Sdk.Account.Organizations.SubOrganizations.SubOrganizationsApi.ListAsync(System.String)">ListAsync(String)</h4>
+  <h4 id="Bitmovin_Api_Sdk_Account_Organizations_SubOrganizations_SubOrganizationsApi_ListAsync_System_String_System_Func_Bitmovin_Api_Sdk_Account_Organizations_SubOrganizations_SubOrganizationsApi_ListQueryParams_Bitmovin_Api_Sdk_Account_Organizations_SubOrganizations_SubOrganizationsApi_ListQueryParams____" data-uid="Bitmovin.Api.Sdk.Account.Organizations.SubOrganizations.SubOrganizationsApi.ListAsync(System.String,System.Func{Bitmovin.Api.Sdk.Account.Organizations.SubOrganizations.SubOrganizationsApi.ListQueryParams,Bitmovin.Api.Sdk.Account.Organizations.SubOrganizations.SubOrganizationsApi.ListQueryParams}[])">ListAsync(String, Func&lt;SubOrganizationsApi.ListQueryParams, SubOrganizationsApi.ListQueryParams&gt;[])</h4>
   <div class="markdown level1 summary"><p>Organizations under given parent organization</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;PaginationResponse&lt;Organization&gt;&gt; ListAsync(string organizationId)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;PaginationResponse&lt;Organization&gt;&gt; ListAsync(string organizationId, params Func&lt;SubOrganizationsApi.ListQueryParams, SubOrganizationsApi.ListQueryParams&gt;[] queryParams)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -194,6 +194,12 @@
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">organizationId</span></td>
         <td><p>ID of the parent organization (required)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="Bitmovin.Api.Sdk.Account.Organizations.SubOrganizations.SubOrganizationsApi.ListQueryParams.html">SubOrganizationsApi.ListQueryParams</a>, <a class="xref" href="Bitmovin.Api.Sdk.Account.Organizations.SubOrganizations.SubOrganizationsApi.ListQueryParams.html">SubOrganizationsApi.ListQueryParams</a>&gt;[]</td>
+        <td><span class="parametername">queryParams</span></td>
+        <td><p>The query parameters for sorting, filtering and paging options (optional)</p>
 </td>
       </tr>
     </tbody>

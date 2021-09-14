@@ -56,5 +56,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "autoRestartConfiguration")]
         public AutoRestartConfiguration AutoRestartConfiguration { get; set; }
+
+        /// <summary>
+        /// Configuration for auto shutdown of the live encoding
+        /// </summary>
+        [JsonProperty(PropertyName = "autoShutdownConfiguration")]
+        public LiveAutoShutdownConfiguration AutoShutdownConfiguration { get; set; }
     }
 }

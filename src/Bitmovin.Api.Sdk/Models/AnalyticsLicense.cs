@@ -68,5 +68,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "customDataFieldLabels")]
         public AnalyticsLicenseCustomDataFieldLabels CustomDataFieldLabels { get; set; }
+
+        /// <summary>
+        /// Features
+        /// </summary>
+        [JsonProperty(PropertyName = "features")]
+        public AnalyticsLicenseFeatures Features { get; set; }
     }
 }
