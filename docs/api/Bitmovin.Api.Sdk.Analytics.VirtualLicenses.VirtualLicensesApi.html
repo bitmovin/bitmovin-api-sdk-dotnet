@@ -172,13 +172,13 @@
   
   
   <a id="Bitmovin_Api_Sdk_Analytics_VirtualLicenses_VirtualLicensesApi_CreateAsync_" data-uid="Bitmovin.Api.Sdk.Analytics.VirtualLicenses.VirtualLicensesApi.CreateAsync*"></a>
-  <h4 id="Bitmovin_Api_Sdk_Analytics_VirtualLicenses_VirtualLicensesApi_CreateAsync_Bitmovin_Api_Sdk_Models_VirtualLicenseCreateRequest_" data-uid="Bitmovin.Api.Sdk.Analytics.VirtualLicenses.VirtualLicensesApi.CreateAsync(Bitmovin.Api.Sdk.Models.VirtualLicenseCreateRequest)">CreateAsync(VirtualLicenseCreateRequest)</h4>
-  <div class="markdown level1 summary"><p>Create Virtual License</p>
+  <h4 id="Bitmovin_Api_Sdk_Analytics_VirtualLicenses_VirtualLicensesApi_CreateAsync_Bitmovin_Api_Sdk_Models_AnalyticsVirtualLicenseRequest_" data-uid="Bitmovin.Api.Sdk.Analytics.VirtualLicenses.VirtualLicensesApi.CreateAsync(Bitmovin.Api.Sdk.Models.AnalyticsVirtualLicenseRequest)">CreateAsync(AnalyticsVirtualLicenseRequest)</h4>
+  <div class="markdown level1 summary"><p>Create Analytics Virtual License</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;VirtualLicense&gt; CreateAsync(VirtualLicenseCreateRequest virtualLicenseCreateRequest)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;AnalyticsVirtualLicense&gt; CreateAsync(AnalyticsVirtualLicenseRequest analyticsVirtualLicenseRequest)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -191,9 +191,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Bitmovin.Api.Sdk.Models.VirtualLicenseCreateRequest.html">VirtualLicenseCreateRequest</a></td>
-        <td><span class="parametername">virtualLicenseCreateRequest</span></td>
-        <td><p>Virtual License to be created</p>
+        <td><a class="xref" href="Bitmovin.Api.Sdk.Models.AnalyticsVirtualLicenseRequest.html">AnalyticsVirtualLicenseRequest</a></td>
+        <td><span class="parametername">analyticsVirtualLicenseRequest</span></td>
+        <td><p>Analytics Virtual License to be created</p>
 </td>
       </tr>
     </tbody>
@@ -208,7 +208,145 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Bitmovin.Api.Sdk.Models.VirtualLicense.html">VirtualLicense</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Bitmovin.Api.Sdk.Models.AnalyticsVirtualLicense.html">AnalyticsVirtualLicense</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Bitmovin_Api_Sdk_Analytics_VirtualLicenses_VirtualLicensesApi_DeleteAsync_" data-uid="Bitmovin.Api.Sdk.Analytics.VirtualLicenses.VirtualLicensesApi.DeleteAsync*"></a>
+  <h4 id="Bitmovin_Api_Sdk_Analytics_VirtualLicenses_VirtualLicensesApi_DeleteAsync_System_String_" data-uid="Bitmovin.Api.Sdk.Analytics.VirtualLicenses.VirtualLicensesApi.DeleteAsync(System.String)">DeleteAsync(String)</h4>
+  <div class="markdown level1 summary"><p>Delete Analytics Virtual License</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;BitmovinResponse&gt; DeleteAsync(string virtualLicenseId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">virtualLicenseId</span></td>
+        <td><p>Virtual License id (required)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Bitmovin.Api.Sdk.Models.BitmovinResponse.html">BitmovinResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Bitmovin_Api_Sdk_Analytics_VirtualLicenses_VirtualLicensesApi_ListAsync_" data-uid="Bitmovin.Api.Sdk.Analytics.VirtualLicenses.VirtualLicensesApi.ListAsync*"></a>
+  <h4 id="Bitmovin_Api_Sdk_Analytics_VirtualLicenses_VirtualLicensesApi_ListAsync_System_Func_Bitmovin_Api_Sdk_Analytics_VirtualLicenses_VirtualLicensesApi_ListQueryParams_Bitmovin_Api_Sdk_Analytics_VirtualLicenses_VirtualLicensesApi_ListQueryParams____" data-uid="Bitmovin.Api.Sdk.Analytics.VirtualLicenses.VirtualLicensesApi.ListAsync(System.Func{Bitmovin.Api.Sdk.Analytics.VirtualLicenses.VirtualLicensesApi.ListQueryParams,Bitmovin.Api.Sdk.Analytics.VirtualLicenses.VirtualLicensesApi.ListQueryParams}[])">ListAsync(Func&lt;VirtualLicensesApi.ListQueryParams, VirtualLicensesApi.ListQueryParams&gt;[])</h4>
+  <div class="markdown level1 summary"><p>List Analytics Virtual Licenses</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;PaginationResponse&lt;AnalyticsVirtualLicense&gt;&gt; ListAsync(params Func&lt;VirtualLicensesApi.ListQueryParams, VirtualLicensesApi.ListQueryParams&gt;[] queryParams)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="Bitmovin.Api.Sdk.Analytics.VirtualLicenses.VirtualLicensesApi.ListQueryParams.html">VirtualLicensesApi.ListQueryParams</a>, <a class="xref" href="Bitmovin.Api.Sdk.Analytics.VirtualLicenses.VirtualLicensesApi.ListQueryParams.html">VirtualLicensesApi.ListQueryParams</a>&gt;[]</td>
+        <td><span class="parametername">queryParams</span></td>
+        <td><p>The query parameters for sorting, filtering and paging options (optional)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Bitmovin.Api.Sdk.Models.PaginationResponse-1.html">PaginationResponse</a>&lt;<a class="xref" href="Bitmovin.Api.Sdk.Models.AnalyticsVirtualLicense.html">AnalyticsVirtualLicense</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Bitmovin_Api_Sdk_Analytics_VirtualLicenses_VirtualLicensesApi_UpdateAsync_" data-uid="Bitmovin.Api.Sdk.Analytics.VirtualLicenses.VirtualLicensesApi.UpdateAsync*"></a>
+  <h4 id="Bitmovin_Api_Sdk_Analytics_VirtualLicenses_VirtualLicensesApi_UpdateAsync_System_String_Bitmovin_Api_Sdk_Models_AnalyticsVirtualLicenseRequest_" data-uid="Bitmovin.Api.Sdk.Analytics.VirtualLicenses.VirtualLicensesApi.UpdateAsync(System.String,Bitmovin.Api.Sdk.Models.AnalyticsVirtualLicenseRequest)">UpdateAsync(String, AnalyticsVirtualLicenseRequest)</h4>
+  <div class="markdown level1 summary"><p>Update Analytics Virtual License</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;AnalyticsVirtualLicense&gt; UpdateAsync(string virtualLicenseId, AnalyticsVirtualLicenseRequest analyticsVirtualLicenseRequest)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">virtualLicenseId</span></td>
+        <td><p>Virtual license id (required)</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Bitmovin.Api.Sdk.Models.AnalyticsVirtualLicenseRequest.html">AnalyticsVirtualLicenseRequest</a></td>
+        <td><span class="parametername">analyticsVirtualLicenseRequest</span></td>
+        <td><p>Analytics Virtual License details to be updated</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Bitmovin.Api.Sdk.Models.AnalyticsVirtualLicense.html">AnalyticsVirtualLicense</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>

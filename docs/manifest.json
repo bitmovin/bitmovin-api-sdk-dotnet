@@ -12,7 +12,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "ReMzGcdwaiNf9XKHqBb3Ag=="
+          "hash": "0n/sC8+AMQilOEsvWglJew=="
         }
       },
       "is_incremental": false,
@@ -728,11 +728,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Analytics.Licenses.LicensesApi.ListQueryParams.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Analytics.Licenses.LicensesApi.ListQueryParams.html",
+          "hash": "im0R7uV3B1XDkUvqPuzJeQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Bitmovin.Api.Sdk.Analytics.Licenses.LicensesApi.yml",
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Analytics.Licenses.LicensesApi.html",
-          "hash": "9vODIEK9tJDWnLrDGzxsvQ=="
+          "hash": "ChF8owiH5MV5GhC8vaAV4g=="
         }
       },
       "is_incremental": false,
@@ -744,7 +756,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Analytics.Licenses.html",
-          "hash": "wibLiKDt++orBEzJqDR+Yg=="
+          "hash": "57uNTZCJ7O+2GzBCDs09Ng=="
         }
       },
       "is_incremental": false,
@@ -1292,11 +1304,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Analytics.VirtualLicenses.VirtualLicensesApi.ListQueryParams.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Analytics.VirtualLicenses.VirtualLicensesApi.ListQueryParams.html",
+          "hash": "McFAGYROVo0QJF+fw2AkNw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Bitmovin.Api.Sdk.Analytics.VirtualLicenses.VirtualLicensesApi.yml",
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Analytics.VirtualLicenses.VirtualLicensesApi.html",
-          "hash": "a0GtZM8Lcy4GxMdAK4sUwg=="
+          "hash": "lYS0csfBRO1TiQIwXs7VCQ=="
         }
       },
       "is_incremental": false,
@@ -1308,7 +1332,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Analytics.VirtualLicenses.html",
-          "hash": "jxgOB5unxsCxpY27tstnag=="
+          "hash": "jNvtb5JzYrueC8oEiQop3Q=="
         }
       },
       "is_incremental": false,
@@ -9492,7 +9516,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Infrastructure.PrewarmedEncoderPools.Schedules.SchedulesApi.html",
-          "hash": "dOU6H9eSQ76hiTSkUJSj/A=="
+          "hash": "lhOzlcrBnP003R4kAvN7yA=="
         }
       },
       "is_incremental": false,
@@ -15020,6 +15044,42 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.AnalyticsVirtualLicense.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.AnalyticsVirtualLicense.html",
+          "hash": "b92EAo9Jjx0aC6QHMF035w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.AnalyticsVirtualLicenseLicensesListItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.AnalyticsVirtualLicenseLicensesListItem.html",
+          "hash": "bAJzcJSdac8KxSsZvD9W4A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.AnalyticsVirtualLicenseRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.AnalyticsVirtualLicenseRequest.html",
+          "hash": "U3d6//07t0s3EcbVIkh+8A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Bitmovin.Api.Sdk.Models.AndConjunction.yml",
       "output": {
         ".html": {
@@ -15576,7 +15636,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.BitmovinResponse.html",
-          "hash": "z/eOzzai8YPVySU9KRVplg=="
+          "hash": "+z9d+LC80jaMTjU6/s4vjg=="
         }
       },
       "is_incremental": false,
@@ -21492,7 +21552,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.TimeBasedTrimmingInputStream.html",
-          "hash": "J6fdw0hmaUyv0IGdUz/d7A=="
+          "hash": "AMSVXgxcrJHYgYgSYM7Bhg=="
         }
       },
       "is_incremental": false,
@@ -21841,42 +21901,6 @@
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.VideoStream.html",
           "hash": "C4429CZNgkYFiI28Xwt00A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.VirtualLicense.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Bitmovin.Api.Sdk.Models.VirtualLicense.html",
-          "hash": "BbUSQYc/Q6bNmTnjlOzNYw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.VirtualLicenseCreateRequest.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Bitmovin.Api.Sdk.Models.VirtualLicenseCreateRequest.html",
-          "hash": "Iq3pgHoZrSWoHtrkiP6suw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.VirtualLicenseLicensesListItem.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Bitmovin.Api.Sdk.Models.VirtualLicenseLicensesListItem.html",
-          "hash": "AqVjZ0Qgi4aIAG+zTLyCXg=="
         }
       },
       "is_incremental": false,
@@ -22296,7 +22320,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.html",
-          "hash": "NUWFEvwoaToZ2Lx5jiMIkw=="
+          "hash": "bP9tT93m1bCULcikuvf6+w=="
         }
       },
       "is_incremental": false,
@@ -23340,7 +23364,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "9zdz1Gp6nMwYcmpEd6bmdw=="
+          "hash": "yS+arCALevWgBD8GbC+GKw=="
         }
       },
       "is_incremental": false,
@@ -23355,7 +23379,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "TWi7mXsN0v4bUizl0gTckw=="
+          "hash": "ZZLoRan0BgPaGxOZGUgkpw=="
         }
       },
       "is_incremental": false,
@@ -23401,7 +23425,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 1943,
+          "total_file_count": 1945,
           "skipped_file_count": 0
         }
       }

@@ -56,7 +56,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.PrewarmedEncoderPools.Schedul
         /// </summary>
         /// <param name="poolId">Id of the scheduled encoder pool (required)</param>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>
-        public async Task<Models.PaginationResponse<Models.PrewarmedEncoderPool>> ListAsync(string poolId, params Func<ListQueryParams, ListQueryParams>[] queryParams)
+        public async Task<Models.PaginationResponse<Models.PrewarmedEncoderPoolSchedule>> ListAsync(string poolId, params Func<ListQueryParams, ListQueryParams>[] queryParams)
         {
             ListQueryParams q = new ListQueryParams();
 
@@ -84,7 +84,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.PrewarmedEncoderPools.Schedul
 
             [Get("/encoding/infrastructure/prewarmed-encoder-pools/{pool_id}/schedules")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.PrewarmedEncoderPool>> ListAsync([Path("pool_id")] string poolId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.PrewarmedEncoderPoolSchedule>> ListAsync([Path("pool_id")] string poolId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

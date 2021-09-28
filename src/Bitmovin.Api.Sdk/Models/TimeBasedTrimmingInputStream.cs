@@ -31,7 +31,7 @@ namespace Bitmovin.Api.Sdk.Models
         public double? Offset { get; set; }
 
         /// <summary>
-        /// Defines how many seconds of the input will be encoded
+        /// Defines how many seconds of the input will be encoded. Not defining or setting it to null indicates that the remaining input (considering offset) will be encoded.
         /// </summary>
         [JsonProperty(PropertyName = "duration")]
         public double? Duration { get; set; }
