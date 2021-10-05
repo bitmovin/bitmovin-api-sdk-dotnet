@@ -40,6 +40,15 @@ namespace Bitmovin.Api.Sdk.Analytics.VirtualLicenses
         }
 
         /// <summary>
+        /// Analytics Virtual License
+        /// </summary>
+        /// <param name="virtualLicenseId">Virtual license id (required)</param>
+        public async Task<Models.AnalyticsVirtualLicense> GetAsync(string virtualLicenseId)
+        {
+            return await _apiClient.GetAsync(virtualLicenseId);
+        }
+
+        /// <summary>
         /// List Analytics Virtual Licenses
         /// </summary>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>
@@ -74,6 +83,10 @@ namespace Bitmovin.Api.Sdk.Analytics.VirtualLicenses
             [Delete("/analytics/virtual-licenses/{virtual_license_id}")]
             [AllowAnyStatusCode]
             Task<Models.BitmovinResponse> DeleteAsync([Path("virtual_license_id")] string virtualLicenseId);
+
+            [Get("/analytics/virtual-licenses/{virtual_license_id}")]
+            [AllowAnyStatusCode]
+            Task<Models.AnalyticsVirtualLicense> GetAsync([Path("virtual_license_id")] string virtualLicenseId);
 
             [Get("/analytics/virtual-licenses")]
             [AllowAnyStatusCode]

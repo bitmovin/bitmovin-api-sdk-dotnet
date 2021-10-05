@@ -12,7 +12,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "0n/sC8+AMQilOEsvWglJew=="
+          "hash": "hs80g2TIp3ytMVEKkjj2NA=="
         }
       },
       "is_incremental": false,
@@ -1320,7 +1320,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Analytics.VirtualLicenses.VirtualLicensesApi.html",
-          "hash": "lYS0csfBRO1TiQIwXs7VCQ=="
+          "hash": "lgzkDIcagZbP/dk2KKrPEA=="
         }
       },
       "is_incremental": false,
@@ -3524,6 +3524,42 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.DolbyVision.DolbyVisionApi.ListQueryParams.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.DolbyVision.DolbyVisionApi.ListQueryParams.html",
+          "hash": "wEhcJs8KQ/0eQksKhN0rSw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.DolbyVision.DolbyVisionApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.DolbyVision.DolbyVisionApi.html",
+          "hash": "uBTr0aoqdPBdUK6vCWJbIA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.DolbyVision.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.DolbyVision.html",
+          "hash": "SNn+PWCydt9no8SwyX9eKw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.File.FileApi.ListQueryParams.yml",
       "output": {
         ".html": {
@@ -3612,7 +3648,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.InputStreamsApi.html",
-          "hash": "mEuxt4lZdodHzQNjxP03oQ=="
+          "hash": "PyCSs200yGK7BsHM6ump5A=="
         }
       },
       "is_incremental": false,
@@ -17276,6 +17312,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.DolbyVisionInputStream.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.DolbyVisionInputStream.html",
+          "hash": "vvGLerENq81yN+VS4HF4jg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Bitmovin.Api.Sdk.Models.DolbyVisionMetadata.yml",
       "output": {
         ".html": {
@@ -18272,6 +18320,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.H265DynamicRangeFormat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.H265DynamicRangeFormat.html",
+          "hash": "sl8tBQIthmMyM4ZWBs76PA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Bitmovin.Api.Sdk.Models.H265PerTitleConfiguration.yml",
       "output": {
         ".html": {
@@ -18288,7 +18348,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.H265VideoConfiguration.html",
-          "hash": "l4qlPc3VBr2EgcfL7Jm3nQ=="
+          "hash": "idcCFW97f3a7Bbf8IVUCxw=="
         }
       },
       "is_incremental": false,
@@ -18660,7 +18720,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.InputStream.html",
-          "hash": "LD1r4txAl8zDbG1UM4Kpww=="
+          "hash": "n6eY8zYS6FcxyOyjGAFdxg=="
         }
       },
       "is_incremental": false,
@@ -18672,7 +18732,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.InputStreamType.html",
-          "hash": "csJ3K1mn21k6dpgFgoKW4w=="
+          "hash": "FphoxbBhGXaNW5pbe2Qyhg=="
         }
       },
       "is_incremental": false,
@@ -21180,7 +21240,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.StatisticsPerStream.html",
-          "hash": "761W/5mMJdprOkthxE13xg=="
+          "hash": "RPCRSnSXBi+GEJxJnnJirA=="
         }
       },
       "is_incremental": false,
@@ -22320,7 +22380,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.html",
-          "hash": "bP9tT93m1bCULcikuvf6+w=="
+          "hash": "RO0mDSKNKpYZkKw3KCe+Nw=="
         }
       },
       "is_incremental": false,
@@ -23364,7 +23424,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "yS+arCALevWgBD8GbC+GKw=="
+          "hash": "M0hv3KsLS8MAxCG0828aGw=="
         }
       },
       "is_incremental": false,
@@ -23379,7 +23439,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "ZZLoRan0BgPaGxOZGUgkpw=="
+          "hash": "iv7jfBGOQ+3t15KDiUfyhw=="
         }
       },
       "is_incremental": false,
@@ -23425,7 +23485,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 1945,
+          "total_file_count": 1950,
           "skipped_file_count": 0
         }
       }

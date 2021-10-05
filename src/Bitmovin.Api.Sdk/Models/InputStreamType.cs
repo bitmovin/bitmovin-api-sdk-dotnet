@@ -83,6 +83,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// DOLBY_ATMOS
         /// </summary>
         [EnumMember(Value = "DOLBY_ATMOS")]
-        DOLBY_ATMOS
+        DOLBY_ATMOS,
+
+        /// <summary>
+        /// DOLBY_VISION
+        /// </summary>
+        [EnumMember(Value = "DOLBY_VISION")]
+        DOLBY_VISION
     }
 }

@@ -27,6 +27,7 @@ namespace Bitmovin.Api.Sdk.Models
     [JsonSubtypes.KnownSubType(typeof(DvbSubtitleInputStream), "DVB_SUBTITLE")]
     [JsonSubtypes.KnownSubType(typeof(DvbTeletextInputStream), "DVB_TELETEXT")]
     [JsonSubtypes.KnownSubType(typeof(DolbyAtmosIngestInputStream), "DOLBY_ATMOS")]
+    [JsonSubtypes.KnownSubType(typeof(DolbyVisionInputStream), "DOLBY_VISION")]
 
     public class InputStream : BitmovinResource
     {

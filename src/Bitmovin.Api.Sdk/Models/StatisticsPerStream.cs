@@ -172,6 +172,30 @@ namespace Bitmovin.Api.Sdk.Models
         public double? EnhancedDeinterlaceMultiplicator { get; internal set; }
 
         /// <summary>
+        /// Indicates if the conversion from Dolby Vision to HDR was triggered.
+        /// </summary>
+        [JsonProperty(PropertyName = "dolbyVisionToHdr")]
+        public bool? DolbyVisionToHdr { get; internal set; }
+
+        /// <summary>
+        /// The output minutes multiplicator for streams using the conversion from Dolby Vision to HDR.
+        /// </summary>
+        [JsonProperty(PropertyName = "dolbyVisionToHdrMultiplicator")]
+        public double? DolbyVisionToHdrMultiplicator { get; internal set; }
+
+        /// <summary>
+        /// Indicates if the conversion from Dolby Vision to SDR was triggered.
+        /// </summary>
+        [JsonProperty(PropertyName = "dolbyVisionToSdr")]
+        public bool? DolbyVisionToSdr { get; internal set; }
+
+        /// <summary>
+        /// The output minutes multiplicator for streams using the conversion from Dolby Vision to SDR.
+        /// </summary>
+        [JsonProperty(PropertyName = "dolbyVisionToSdrMultiplicator")]
+        public double? DolbyVisionToSdrMultiplicator { get; internal set; }
+
+        /// <summary>
         /// NexGuardABWatermarkingType
         /// </summary>
         [JsonProperty(PropertyName = "nexGuardABWatermarkingType")]
