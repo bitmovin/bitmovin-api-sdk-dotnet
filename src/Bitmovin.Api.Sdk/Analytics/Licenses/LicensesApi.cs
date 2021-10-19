@@ -63,10 +63,10 @@ namespace Bitmovin.Api.Sdk.Analytics.Licenses
         /// Update Analytics License
         /// </summary>
         /// <param name="licenseId">License id (required)</param>
-        /// <param name="analyticsLicenseUpdateRequest">Analytics License details to be updated</param>
-        public async Task<Models.AnalyticsLicense> UpdateAsync(string licenseId, Models.AnalyticsLicenseUpdateRequest analyticsLicenseUpdateRequest)
+        /// <param name="analyticsLicense">Analytics License details to be updated</param>
+        public async Task<Models.AnalyticsLicense> UpdateAsync(string licenseId, Models.AnalyticsLicense analyticsLicense)
         {
-            return await _apiClient.UpdateAsync(licenseId, analyticsLicenseUpdateRequest);
+            return await _apiClient.UpdateAsync(licenseId, analyticsLicense);
         }
 
         internal interface ILicensesApiClient
@@ -85,7 +85,7 @@ namespace Bitmovin.Api.Sdk.Analytics.Licenses
 
             [Put("/analytics/licenses/{license_id}")]
             [AllowAnyStatusCode]
-            Task<Models.AnalyticsLicense> UpdateAsync([Path("license_id")] string licenseId, [Body] Models.AnalyticsLicenseUpdateRequest analyticsLicenseUpdateRequest);
+            Task<Models.AnalyticsLicense> UpdateAsync([Path("license_id")] string licenseId, [Body] Models.AnalyticsLicense analyticsLicense);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

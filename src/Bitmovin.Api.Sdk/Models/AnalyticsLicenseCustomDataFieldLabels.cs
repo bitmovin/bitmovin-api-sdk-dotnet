@@ -44,5 +44,17 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "customData5")]
         public string CustomData5 { get; set; }
+
+        /// <summary>
+        /// Custom Data 6
+        /// </summary>
+        [JsonProperty(PropertyName = "customData6")]
+        public string CustomData6 { get; set; }
+
+        /// <summary>
+        /// Custom Data 7
+        /// </summary>
+        [JsonProperty(PropertyName = "customData7")]
+        public string CustomData7 { get; set; }
     }
 }
