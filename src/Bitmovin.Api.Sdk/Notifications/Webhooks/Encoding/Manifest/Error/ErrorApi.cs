@@ -22,26 +22,26 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Manifest.Error
         public static BitmovinApiBuilder<ErrorApi> Builder => new BitmovinApiBuilder<ErrorApi>();
 
         /// <summary>
-        /// Add Manifest Error Webhook (All Manifests)
+        /// Add &#39;Manifest Error&#39; Webhook (All Manifests)
         /// </summary>
-        /// <param name="webhook">Add a new webhook notification if a manifest creation failed with an error. **Note:** A maximum number of 5 webhooks is allowed</param>
+        /// <param name="webhook">Add a new webhook notification if a manifest creation failed with an error. A maximum number of 5 webhooks is allowed</param>
         public async Task<Models.Webhook> CreateAsync(Models.Webhook webhook)
         {
             return await _apiClient.CreateAsync(webhook);
         }
 
         /// <summary>
-        /// Add Manifest Error Webhook Notification (Specific Manifest)
+        /// Add &#39;Manifest Error&#39; Webhook Notification (Specific Manifest)
         /// </summary>
         /// <param name="manifestId">Id of the manifest resource (required)</param>
-        /// <param name="webhook">The webhook notifications object. **Note:** A maximum number of 5 webhooks is allowed</param>
+        /// <param name="webhook">The webhook notifications object. A maximum number of 5 webhooks per Manifest is allowed</param>
         public async Task<Models.Webhook> CreateByManifestIdAsync(string manifestId, Models.Webhook webhook)
         {
             return await _apiClient.CreateByManifestIdAsync(manifestId, webhook);
         }
 
         /// <summary>
-        /// Delete Manifest Error Webhook
+        /// Delete &#39;Manifest Error&#39; Webhook
         /// </summary>
         /// <param name="notificationId">Id of the webhook notification (required)</param>
         public async Task<Models.BitmovinResponse> DeleteAsync(string notificationId)
@@ -50,7 +50,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Manifest.Error
         }
 
         /// <summary>
-        /// Replace Manifest Error Webhook Notification
+        /// Replace &#39;Manifest Error&#39; Webhook Notification
         /// </summary>
         /// <param name="notificationId">Id of the webhook notification (required)</param>
         /// <param name="webhook">The webhook notification with the updated values</param>

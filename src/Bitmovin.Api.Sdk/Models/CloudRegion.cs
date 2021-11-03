@@ -206,34 +206,58 @@ namespace Bitmovin.Api.Sdk.Models
         GOOGLE_US_WEST_2,
 
         /// <summary>
-        /// AZURE_EUROPE_WEST
+        /// Azure Netherlands
         /// </summary>
         [EnumMember(Value = "AZURE_EUROPE_WEST")]
         AZURE_EUROPE_WEST,
 
         /// <summary>
-        /// AZURE_US_WEST2
+        /// Azure Ireland
+        /// </summary>
+        [EnumMember(Value = "AZURE_EUROPE_NORTH")]
+        AZURE_EUROPE_NORTH,
+
+        /// <summary>
+        /// Azure Washington, USA
         /// </summary>
         [EnumMember(Value = "AZURE_US_WEST2")]
         AZURE_US_WEST2,
 
         /// <summary>
-        /// AZURE_US_EAST
+        /// Azure Virginia, USA
         /// </summary>
         [EnumMember(Value = "AZURE_US_EAST")]
         AZURE_US_EAST,
 
         /// <summary>
-        /// AZURE_AUSTRALIA_SOUTHEAST
+        /// Azure Victoria, Australia
         /// </summary>
         [EnumMember(Value = "AZURE_AUSTRALIA_SOUTHEAST")]
         AZURE_AUSTRALIA_SOUTHEAST,
 
         /// <summary>
-        /// AZURE_AUSTRALIA_EAST
+        /// Azure New South Wales, Australia
         /// </summary>
         [EnumMember(Value = "AZURE_AUSTRALIA_EAST")]
         AZURE_AUSTRALIA_EAST,
+
+        /// <summary>
+        /// Azure Frankfurt, Germany
+        /// </summary>
+        [EnumMember(Value = "AZURE_GERMANY_WESTCENTRAL")]
+        AZURE_GERMANY_WESTCENTRAL,
+
+        /// <summary>
+        /// Azure Abu Dhabi, United Arab Emirates - Reserved for UAE North customers requiring in-country disaster recovery
+        /// </summary>
+        [EnumMember(Value = "AZURE_UAE_CENTRAL")]
+        AZURE_UAE_CENTRAL,
+
+        /// <summary>
+        /// Azure Dubai, United Arab Emirates
+        /// </summary>
+        [EnumMember(Value = "AZURE_UAE_NORTH")]
+        AZURE_UAE_NORTH,
 
         /// <summary>
         /// NORTH_AMERICA

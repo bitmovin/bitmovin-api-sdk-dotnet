@@ -196,6 +196,18 @@ namespace Bitmovin.Api.Sdk.Models
         public double? DolbyVisionToSdrMultiplicator { get; internal set; }
 
         /// <summary>
+        /// Indicates if the conversion from HDR10/HLG to SDR was triggered.
+        /// </summary>
+        [JsonProperty(PropertyName = "hdrHlgToSdr")]
+        public bool? HdrHlgToSdr { get; internal set; }
+
+        /// <summary>
+        /// The output minutes multiplicator for streams using the conversion from HDR10/HLG to SDR.
+        /// </summary>
+        [JsonProperty(PropertyName = "hdrHlgToSdrMultiplicator")]
+        public double? HdrHlgToSdrMultiplicator { get; internal set; }
+
+        /// <summary>
         /// NexGuardABWatermarkingType
         /// </summary>
         [JsonProperty(PropertyName = "nexGuardABWatermarkingType")]

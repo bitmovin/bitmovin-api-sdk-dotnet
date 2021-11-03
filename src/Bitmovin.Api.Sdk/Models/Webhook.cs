@@ -16,7 +16,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class Webhook : BitmovinResource
     {
         /// <summary>
-        /// Webhook url (required)
+        /// Webhook URL (required)
         /// </summary>
         [JsonProperty(PropertyName = "url")]
         public string Url { get; set; }
@@ -28,7 +28,7 @@ namespace Bitmovin.Api.Sdk.Models
         public WebhookHttpMethod? Method { get; set; }
 
         /// <summary>
-        /// Whether to skip SSL certification verification or not
+        /// Skip verification of the SSL certificate
         /// </summary>
         [JsonProperty(PropertyName = "insecureSsl")]
         public bool? InsecureSsl { get; set; }
@@ -40,7 +40,7 @@ namespace Bitmovin.Api.Sdk.Models
         public WebhookSignature Signature { get; set; }
 
         /// <summary>
-        /// The json schema of the data that is send as webhook payload
+        /// JSON schema of the webhook payload
         /// </summary>
         [JsonProperty(PropertyName = "schema")]
         public Object Schema { get; internal set; }

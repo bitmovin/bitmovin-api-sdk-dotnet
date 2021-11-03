@@ -26,7 +26,7 @@ namespace Bitmovin.Api.Sdk.Models
         US_CENTRAL,
 
         /// <summary>
-        /// US_EAST
+        /// Virginia
         /// </summary>
         [EnumMember(Value = "US_EAST")]
         US_EAST,
@@ -74,6 +74,12 @@ namespace Bitmovin.Api.Sdk.Models
         BRAZIL_SOUTH,
 
         /// <summary>
+        /// Rio de Janeiro - Reserved for Brazil South customers requiring scenario-based in-country disaster recovery
+        /// </summary>
+        [EnumMember(Value = "BRAZIL_SOUTHEAST")]
+        BRAZIL_SOUTHEAST,
+
+        /// <summary>
         /// Ireland
         /// </summary>
         [EnumMember(Value = "EUROPE_NORTH")]
@@ -96,6 +102,54 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [EnumMember(Value = "UK_WEST")]
         UK_WEST,
+
+        /// <summary>
+        /// Paris
+        /// </summary>
+        [EnumMember(Value = "FRANCE_CENTRAL")]
+        FRANCE_CENTRAL,
+
+        /// <summary>
+        /// Marseille - Reserved for France Central customers requiring in-country disaster recovery
+        /// </summary>
+        [EnumMember(Value = "FRANCE_SOUTH")]
+        FRANCE_SOUTH,
+
+        /// <summary>
+        /// Zürich
+        /// </summary>
+        [EnumMember(Value = "SWITZERLAND_NORTH")]
+        SWITZERLAND_NORTH,
+
+        /// <summary>
+        /// Geneva - Reserved for Switzerland North customers requiring in-country disaster recovery
+        /// </summary>
+        [EnumMember(Value = "SWITZERLAND_WEST")]
+        SWITZERLAND_WEST,
+
+        /// <summary>
+        /// Berlin - Reserved for Germany West Central customers requiring in-country disaster recovery
+        /// </summary>
+        [EnumMember(Value = "GERMANY_NORTH")]
+        GERMANY_NORTH,
+
+        /// <summary>
+        /// Frankfurt
+        /// </summary>
+        [EnumMember(Value = "GERMANY_WESTCENTRAL")]
+        GERMANY_WESTCENTRAL,
+
+        /// <summary>
+        /// Stavanger - Reserved for Norway East customers requiring in-country diaster recovery
+        /// </summary>
+        [EnumMember(Value = "NORWAY_WEST")]
+        NORWAY_WEST,
+
+        /// <summary>
+        /// Oslo
+        /// </summary>
+        [EnumMember(Value = "NORWAY_EAST")]
+        NORWAY_EAST,
 
         /// <summary>
         /// Hong Kong
@@ -134,6 +188,18 @@ namespace Bitmovin.Api.Sdk.Models
         AUSTRALIA_SOUTHEAST,
 
         /// <summary>
+        /// Canberra
+        /// </summary>
+        [EnumMember(Value = "AUSTRALIA_CENTRAL")]
+        AUSTRALIA_CENTRAL,
+
+        /// <summary>
+        /// Canberra - Reserved for Australia Central customers requiring in-country disaster recovery
+        /// </summary>
+        [EnumMember(Value = "AUSTRALIA_CENTRAL2")]
+        AUSTRALIA_CENTRAL2,
+
+        /// <summary>
         /// Pune
         /// </summary>
         [EnumMember(Value = "INDIA_CENTRAL")]
@@ -164,6 +230,30 @@ namespace Bitmovin.Api.Sdk.Models
         KOREA_SOUTH,
 
         /// <summary>
+        /// Abu Dhabi - Reserved for UAE North customers requiring in-country disaster recovery
+        /// </summary>
+        [EnumMember(Value = "UAE_CENTRAL")]
+        UAE_CENTRAL,
+
+        /// <summary>
+        /// Dubai
+        /// </summary>
+        [EnumMember(Value = "UAE_NORTH")]
+        UAE_NORTH,
+
+        /// <summary>
+        /// Johannesburg
+        /// </summary>
+        [EnumMember(Value = "SOUTHAFRICA_NORTH")]
+        SOUTHAFRICA_NORTH,
+
+        /// <summary>
+        /// Cape Town - Reserved for South Africa North customers requiring in-country disaster recovery
+        /// </summary>
+        [EnumMember(Value = "SOUTHAFRICA_WEST")]
+        SOUTHAFRICA_WEST,
+
+        /// <summary>
         /// Beijing
         /// </summary>
         [EnumMember(Value = "CHINA_NORTH")]
@@ -176,27 +266,63 @@ namespace Bitmovin.Api.Sdk.Models
         CHINA_EAST,
 
         /// <summary>
-        /// Frankfurt
+        /// Beijing
+        /// </summary>
+        [EnumMember(Value = "CHINA_NORTH2")]
+        CHINA_NORTH2,
+
+        /// <summary>
+        /// Shanghai
+        /// </summary>
+        [EnumMember(Value = "CHINA_EAST2")]
+        CHINA_EAST2,
+
+        /// <summary>
+        /// Frankfurt - No longer listed by https://azure.microsoft.com/en-us/global-infrastructure/data-residency
         /// </summary>
         [EnumMember(Value = "GERMANY_CENTRAL")]
         GERMANY_CENTRAL,
 
         /// <summary>
-        /// Magdeburg
+        /// Magdeburg - No longer listed by https://azure.microsoft.com/en-us/global-infrastructure/data-residency
         /// </summary>
         [EnumMember(Value = "GERMANY_NORTHEAST")]
         GERMANY_NORTHEAST,
 
         /// <summary>
-        /// Virginia
+        /// US Government Virginia - Reserved for US government entities and their partners only
         /// </summary>
         [EnumMember(Value = "GOV_US_VIRGINIA")]
         GOV_US_VIRGINIA,
 
         /// <summary>
-        /// Iowa
+        /// US Government Iowa - Reserved for US government entities and their partners only
         /// </summary>
         [EnumMember(Value = "GOV_US_IOWA")]
-        GOV_US_IOWA
+        GOV_US_IOWA,
+
+        /// <summary>
+        /// US Government Arizona - Reserved for US government entities and their partners only
+        /// </summary>
+        [EnumMember(Value = "GOV_US_ARIZONA")]
+        GOV_US_ARIZONA,
+
+        /// <summary>
+        /// US Government Texas - Reserved for US government entities and their partners only
+        /// </summary>
+        [EnumMember(Value = "GOV_US_TEXAS")]
+        GOV_US_TEXAS,
+
+        /// <summary>
+        /// Virginia - Reserved for exclusive use by the Department of Defense
+        /// </summary>
+        [EnumMember(Value = "GOV_US_DOD_EAST")]
+        GOV_US_DOD_EAST,
+
+        /// <summary>
+        /// Iowa - Reserved for exclusive use by the Department of Defense
+        /// </summary>
+        [EnumMember(Value = "GOV_US_DOD_CENTRAL")]
+        GOV_US_DOD_CENTRAL
     }
 }

@@ -22,7 +22,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.Finished.Cu
         public static BitmovinApiBuilder<CustomdataApi> Builder => new BitmovinApiBuilder<CustomdataApi>();
 
         /// <summary>
-        /// Encoding Finished Webhook Custom Data for specific Encoding Resource
+        /// &#39;Encoding Finished&#39; Webhook Custom Data for a specific Encoding
         /// </summary>
         /// <param name="encodingId">Id of the encoding (required)</param>
         /// <param name="webhookId">Id of the webhook (required)</param>
@@ -32,7 +32,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.Finished.Cu
         }
 
         /// <summary>
-        /// Encoding Finished Webhook Custom Data
+        /// &#39;Encoding Finished&#39; Webhook Custom Data
         /// </summary>
         /// <param name="webhookId">Id of the webhook (required)</param>
         public async Task<Models.CustomData> GetCustomDataByWebhookIdAsync(string webhookId)

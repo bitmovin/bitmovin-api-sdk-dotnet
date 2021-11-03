@@ -28,7 +28,7 @@ namespace Bitmovin.Api.Sdk.Models
         public int? Width { get; set; }
 
         /// <summary>
-        /// Distance in seconds between a screenshot
+        /// Distance in seconds between a screenshot (required)
         /// </summary>
         [JsonProperty(PropertyName = "distance")]
         public double? Distance { get; set; }
