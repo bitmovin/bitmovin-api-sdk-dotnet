@@ -25,6 +25,12 @@ namespace Bitmovin.Api.Sdk.Models
         public PresetConfiguration? PresetConfiguration { get; set; }
 
         /// <summary>
+        /// Automatically configures the VP9 Video Codec to be compatible with the given SDR/HLG format. Bitmovin recommends to use the dynamic range format together with a preset configuration to achieve good results. Explicitly configured properties will take precedence over dynamic range format settings, which in turn will take precedence over preset configurations.
+        /// </summary>
+        [JsonProperty(PropertyName = "dynamicRangeFormat")]
+        public Vp9DynamicRangeFormat? DynamicRangeFormat { get; set; }
+
+        /// <summary>
         /// Sets the constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.
         /// </summary>
         [JsonProperty(PropertyName = "crf")]
