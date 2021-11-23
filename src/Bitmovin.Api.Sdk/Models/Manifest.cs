@@ -31,6 +31,6 @@ namespace Bitmovin.Api.Sdk.Models
         /// Current status
         /// </summary>
         [JsonProperty(PropertyName = "status")]
-        public Status? Status { get; set; }
+        public Status? Status { get; internal set; }
     }
 }

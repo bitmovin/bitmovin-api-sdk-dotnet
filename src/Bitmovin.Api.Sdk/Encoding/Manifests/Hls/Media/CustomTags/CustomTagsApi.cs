@@ -22,10 +22,10 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media.CustomTags
         public static BitmovinApiBuilder<CustomTagsApi> Builder => new BitmovinApiBuilder<CustomTagsApi>();
 
         /// <summary>
-        /// Add Custom Tag to Audio Media
+        /// Add Custom Tag to a Audio Media or a Subtitle media
         /// </summary>
         /// <param name="manifestId">Id of the hls manifest. (required)</param>
-        /// <param name="mediaId">Id of the audio media. (required)</param>
+        /// <param name="mediaId">Id of the media. (required)</param>
         /// <param name="customTag">The Custom Tag to be added</param>
         public async Task<Models.CustomTag> CreateAsync(string manifestId, string mediaId, Models.CustomTag customTag)
         {
@@ -36,7 +36,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media.CustomTags
         /// Delete Custom Tag
         /// </summary>
         /// <param name="manifestId">Id of the hls manifest. (required)</param>
-        /// <param name="mediaId">Id of the audio media. (required)</param>
+        /// <param name="mediaId">Id of the media. (required)</param>
         /// <param name="customTagId">Id of the custom tag. (required)</param>
         public async Task<Models.BitmovinResponse> DeleteAsync(string manifestId, string mediaId, string customTagId)
         {
@@ -47,7 +47,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media.CustomTags
         /// Custom Tag Details
         /// </summary>
         /// <param name="manifestId">Id of the hls manifest. (required)</param>
-        /// <param name="mediaId">Id of the audio media (required)</param>
+        /// <param name="mediaId">Id of the media (required)</param>
         /// <param name="customTagId">Id of the custom tag. (required)</param>
         public async Task<Models.CustomTag> GetAsync(string manifestId, string mediaId, string customTagId)
         {
@@ -55,10 +55,10 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media.CustomTags
         }
 
         /// <summary>
-        /// List all Custom Tags of a Audio media
+        /// List all Custom Tags of a Audio media or a Subtitle media
         /// </summary>
         /// <param name="manifestId">Id of the hls manifest. (required)</param>
-        /// <param name="mediaId">Id of the audio media. (required)</param>
+        /// <param name="mediaId">Id of the media. (required)</param>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>
         public async Task<Models.PaginationResponse<Models.CustomTag>> ListAsync(string manifestId, string mediaId, params Func<ListQueryParams, ListQueryParams>[] queryParams)
         {

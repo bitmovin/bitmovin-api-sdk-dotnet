@@ -32,5 +32,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "accessibilities")]
         public List<Accessibility> Accessibilities { get; set; } = new List<Accessibility>();
+
+        /// <summary>
+        /// List of labels
+        /// </summary>
+        [JsonProperty(PropertyName = "labels")]
+        public List<Label> Labels { get; set; } = new List<Label>();
     }
 }

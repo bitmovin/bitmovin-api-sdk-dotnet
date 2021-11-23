@@ -248,12 +248,6 @@ namespace Bitmovin.Api.Sdk.Models
         AZURE_GERMANY_WESTCENTRAL,
 
         /// <summary>
-        /// Azure Abu Dhabi, United Arab Emirates - Reserved for UAE North customers requiring in-country disaster recovery
-        /// </summary>
-        [EnumMember(Value = "AZURE_UAE_CENTRAL")]
-        AZURE_UAE_CENTRAL,
-
-        /// <summary>
         /// Azure Dubai, United Arab Emirates
         /// </summary>
         [EnumMember(Value = "AZURE_UAE_NORTH")]

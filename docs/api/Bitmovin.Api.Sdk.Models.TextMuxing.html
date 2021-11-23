@@ -181,6 +181,32 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Bitmovin_Api_Sdk_Models_TextMuxing_StartOffset_" data-uid="Bitmovin.Api.Sdk.Models.TextMuxing.StartOffset*"></a>
+  <h4 id="Bitmovin_Api_Sdk_Models_TextMuxing_StartOffset" data-uid="Bitmovin.Api.Sdk.Models.TextMuxing.StartOffset">StartOffset</h4>
+  <div class="markdown level1 summary"><p>Offset of MPEG-TS timestamps in seconds. This only affects streams with <a href="#/Encoding/PostEncodingConfigurationsSubtitlesWebVtt">WebVttConfiguration</a>. If set, the X-TIMESTAMP-MAP will be added as described in the <a href="https://datatracker.ietf.org/doc/html/rfc8216#section-3.5">HLS specification</a>. For example, if set to 10 seconds, <em>X-TIMESTAMP-MAP=MPEGTS:900000,LOCAL:00:00:00.000</em> will be added after each <em>WEBVTT</em> header. The default for TextMuxing is that the X-TIMESTAMP-MAP will not be written. Important to note is that the default for <code>startOffset</code> for <a href="#/Encoding/PostEncodingEncodingsMuxingsTsByEncodingId">TsMuxings</a> and <a href="#/Encoding/PostEncodingEncodingsMuxingsProgressiveTsByEncodingId">ProgressiveTsMuxings</a> is 10 seconds. If the output of this muxing is used for HLS together with video/audio streams using TsMuxings and ProgressiveTsMuxings, this value should be set to the same <code>startOffset</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? StartOffset { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
