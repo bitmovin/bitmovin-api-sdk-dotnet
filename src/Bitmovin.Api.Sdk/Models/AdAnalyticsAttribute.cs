@@ -326,6 +326,126 @@ namespace Bitmovin.Api.Sdk.Models
         CUSTOM_DATA_5,
 
         /// <summary>
+        /// CUSTOM_DATA_6
+        /// </summary>
+        [EnumMember(Value = "CUSTOM_DATA_6")]
+        CUSTOM_DATA_6,
+
+        /// <summary>
+        /// CUSTOM_DATA_7
+        /// </summary>
+        [EnumMember(Value = "CUSTOM_DATA_7")]
+        CUSTOM_DATA_7,
+
+        /// <summary>
+        /// CUSTOM_DATA_8
+        /// </summary>
+        [EnumMember(Value = "CUSTOM_DATA_8")]
+        CUSTOM_DATA_8,
+
+        /// <summary>
+        /// CUSTOM_DATA_9
+        /// </summary>
+        [EnumMember(Value = "CUSTOM_DATA_9")]
+        CUSTOM_DATA_9,
+
+        /// <summary>
+        /// CUSTOM_DATA_10
+        /// </summary>
+        [EnumMember(Value = "CUSTOM_DATA_10")]
+        CUSTOM_DATA_10,
+
+        /// <summary>
+        /// CUSTOM_DATA_11
+        /// </summary>
+        [EnumMember(Value = "CUSTOM_DATA_11")]
+        CUSTOM_DATA_11,
+
+        /// <summary>
+        /// CUSTOM_DATA_12
+        /// </summary>
+        [EnumMember(Value = "CUSTOM_DATA_12")]
+        CUSTOM_DATA_12,
+
+        /// <summary>
+        /// CUSTOM_DATA_13
+        /// </summary>
+        [EnumMember(Value = "CUSTOM_DATA_13")]
+        CUSTOM_DATA_13,
+
+        /// <summary>
+        /// CUSTOM_DATA_14
+        /// </summary>
+        [EnumMember(Value = "CUSTOM_DATA_14")]
+        CUSTOM_DATA_14,
+
+        /// <summary>
+        /// CUSTOM_DATA_15
+        /// </summary>
+        [EnumMember(Value = "CUSTOM_DATA_15")]
+        CUSTOM_DATA_15,
+
+        /// <summary>
+        /// CUSTOM_DATA_16
+        /// </summary>
+        [EnumMember(Value = "CUSTOM_DATA_16")]
+        CUSTOM_DATA_16,
+
+        /// <summary>
+        /// CUSTOM_DATA_17
+        /// </summary>
+        [EnumMember(Value = "CUSTOM_DATA_17")]
+        CUSTOM_DATA_17,
+
+        /// <summary>
+        /// CUSTOM_DATA_18
+        /// </summary>
+        [EnumMember(Value = "CUSTOM_DATA_18")]
+        CUSTOM_DATA_18,
+
+        /// <summary>
+        /// CUSTOM_DATA_19
+        /// </summary>
+        [EnumMember(Value = "CUSTOM_DATA_19")]
+        CUSTOM_DATA_19,
+
+        /// <summary>
+        /// CUSTOM_DATA_20
+        /// </summary>
+        [EnumMember(Value = "CUSTOM_DATA_20")]
+        CUSTOM_DATA_20,
+
+        /// <summary>
+        /// CUSTOM_DATA_21
+        /// </summary>
+        [EnumMember(Value = "CUSTOM_DATA_21")]
+        CUSTOM_DATA_21,
+
+        /// <summary>
+        /// CUSTOM_DATA_22
+        /// </summary>
+        [EnumMember(Value = "CUSTOM_DATA_22")]
+        CUSTOM_DATA_22,
+
+        /// <summary>
+        /// CUSTOM_DATA_23
+        /// </summary>
+        [EnumMember(Value = "CUSTOM_DATA_23")]
+        CUSTOM_DATA_23,
+
+        /// <summary>
+        /// CUSTOM_DATA_24
+        /// </summary>
+        [EnumMember(Value = "CUSTOM_DATA_24")]
+        CUSTOM_DATA_24,
+
+        /// <summary>
+        /// CUSTOM_DATA_25
+        /// </summary>
+        [EnumMember(Value = "CUSTOM_DATA_25")]
+        CUSTOM_DATA_25,
+
+        /// <summary>
         /// CUSTOM_USER_ID
         /// </summary>
         [EnumMember(Value = "CUSTOM_USER_ID")]

@@ -370,6 +370,114 @@ namespace Bitmovin.Api.Sdk.Models
         public string CustomData7 { get; set; }
 
         /// <summary>
+        /// Free form data set via the customData8 field in the analytics collector configuration
+        /// </summary>
+        [JsonProperty(PropertyName = "custom_data_8")]
+        public string CustomData8 { get; set; }
+
+        /// <summary>
+        /// Free form data set via the customData9 field in the analytics collector configuration
+        /// </summary>
+        [JsonProperty(PropertyName = "custom_data_9")]
+        public string CustomData9 { get; set; }
+
+        /// <summary>
+        /// Free form data set via the customData10 field in the analytics collector configuration
+        /// </summary>
+        [JsonProperty(PropertyName = "custom_data_10")]
+        public string CustomData10 { get; set; }
+
+        /// <summary>
+        /// Free form data set via the customData11 field in the analytics collector configuration
+        /// </summary>
+        [JsonProperty(PropertyName = "custom_data_11")]
+        public string CustomData11 { get; set; }
+
+        /// <summary>
+        /// Free form data set via the customData12 field in the analytics collector configuration
+        /// </summary>
+        [JsonProperty(PropertyName = "custom_data_12")]
+        public string CustomData12 { get; set; }
+
+        /// <summary>
+        /// Free form data set via the customData13 field in the analytics collector configuration
+        /// </summary>
+        [JsonProperty(PropertyName = "custom_data_13")]
+        public string CustomData13 { get; set; }
+
+        /// <summary>
+        /// Free form data set via the customData14 field in the analytics collector configuration
+        /// </summary>
+        [JsonProperty(PropertyName = "custom_data_14")]
+        public string CustomData14 { get; set; }
+
+        /// <summary>
+        /// Free form data set via the customData15 field in the analytics collector configuration
+        /// </summary>
+        [JsonProperty(PropertyName = "custom_data_15")]
+        public string CustomData15 { get; set; }
+
+        /// <summary>
+        /// Free form data set via the customData16 field in the analytics collector configuration
+        /// </summary>
+        [JsonProperty(PropertyName = "custom_data_16")]
+        public string CustomData16 { get; set; }
+
+        /// <summary>
+        /// Free form data set via the customData17 field in the analytics collector configuration
+        /// </summary>
+        [JsonProperty(PropertyName = "custom_data_17")]
+        public string CustomData17 { get; set; }
+
+        /// <summary>
+        /// Free form data set via the customData18 field in the analytics collector configuration
+        /// </summary>
+        [JsonProperty(PropertyName = "custom_data_18")]
+        public string CustomData18 { get; set; }
+
+        /// <summary>
+        /// Free form data set via the customData19 field in the analytics collector configuration
+        /// </summary>
+        [JsonProperty(PropertyName = "custom_data_19")]
+        public string CustomData19 { get; set; }
+
+        /// <summary>
+        /// Free form data set via the customData20 field in the analytics collector configuration
+        /// </summary>
+        [JsonProperty(PropertyName = "custom_data_20")]
+        public string CustomData20 { get; set; }
+
+        /// <summary>
+        /// Free form data set via the customData21 field in the analytics collector configuration
+        /// </summary>
+        [JsonProperty(PropertyName = "custom_data_21")]
+        public string CustomData21 { get; set; }
+
+        /// <summary>
+        /// Free form data set via the customData22 field in the analytics collector configuration
+        /// </summary>
+        [JsonProperty(PropertyName = "custom_data_22")]
+        public string CustomData22 { get; set; }
+
+        /// <summary>
+        /// Free form data set via the customData23 field in the analytics collector configuration
+        /// </summary>
+        [JsonProperty(PropertyName = "custom_data_23")]
+        public string CustomData23 { get; set; }
+
+        /// <summary>
+        /// Free form data set via the customData24 field in the analytics collector configuration
+        /// </summary>
+        [JsonProperty(PropertyName = "custom_data_24")]
+        public string CustomData24 { get; set; }
+
+        /// <summary>
+        /// Free form data set via the customData25 field in the analytics collector configuration
+        /// </summary>
+        [JsonProperty(PropertyName = "custom_data_25")]
+        public string CustomData25 { get; set; }
+
+        /// <summary>
         /// Custom user ID
         /// </summary>
         [JsonProperty(PropertyName = "custom_user_id")]
