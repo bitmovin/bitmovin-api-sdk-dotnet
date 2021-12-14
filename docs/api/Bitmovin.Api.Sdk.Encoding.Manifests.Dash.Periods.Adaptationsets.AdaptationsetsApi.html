@@ -294,6 +294,31 @@
   </table>
   
   
+  <a id="Bitmovin_Api_Sdk_Encoding_Manifests_Dash_Periods_Adaptationsets_AdaptationsetsApi_Type_" data-uid="Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.AdaptationsetsApi.Type*"></a>
+  <h4 id="Bitmovin_Api_Sdk_Encoding_Manifests_Dash_Periods_Adaptationsets_AdaptationsetsApi_Type" data-uid="Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.AdaptationsetsApi.Type">Type</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TypeApi Type { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Type.TypeApi.html">TypeApi</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Bitmovin_Api_Sdk_Encoding_Manifests_Dash_Periods_Adaptationsets_AdaptationsetsApi_Video_" data-uid="Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.AdaptationsetsApi.Video*"></a>
   <h4 id="Bitmovin_Api_Sdk_Encoding_Manifests_Dash_Periods_Adaptationsets_AdaptationsetsApi_Video" data-uid="Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.AdaptationsetsApi.Video">Video</h4>
   <div class="markdown level1 summary"></div>
@@ -313,6 +338,64 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Video.VideoApi.html">VideoApi</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Bitmovin_Api_Sdk_Encoding_Manifests_Dash_Periods_Adaptationsets_AdaptationsetsApi_ListAsync_" data-uid="Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.AdaptationsetsApi.ListAsync*"></a>
+  <h4 id="Bitmovin_Api_Sdk_Encoding_Manifests_Dash_Periods_Adaptationsets_AdaptationsetsApi_ListAsync_System_String_System_String_System_Func_Bitmovin_Api_Sdk_Encoding_Manifests_Dash_Periods_Adaptationsets_AdaptationsetsApi_ListQueryParams_Bitmovin_Api_Sdk_Encoding_Manifests_Dash_Periods_Adaptationsets_AdaptationsetsApi_ListQueryParams____" data-uid="Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.AdaptationsetsApi.ListAsync(System.String,System.String,System.Func{Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.AdaptationsetsApi.ListQueryParams,Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.AdaptationsetsApi.ListQueryParams}[])">ListAsync(String, String, Func&lt;AdaptationsetsApi.ListQueryParams, AdaptationsetsApi.ListQueryParams&gt;[])</h4>
+  <div class="markdown level1 summary"><p>List all AdaptationSets</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;PaginationResponse&lt;AdaptationSet&gt;&gt; ListAsync(string manifestId, string periodId, params Func&lt;AdaptationsetsApi.ListQueryParams, AdaptationsetsApi.ListQueryParams&gt;[] queryParams)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">manifestId</span></td>
+        <td><p>Id of the manifest (required)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">periodId</span></td>
+        <td><p>Id of the adaptation set (required)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.AdaptationsetsApi.ListQueryParams.html">AdaptationsetsApi.ListQueryParams</a>, <a class="xref" href="Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.AdaptationsetsApi.ListQueryParams.html">AdaptationsetsApi.ListQueryParams</a>&gt;[]</td>
+        <td><span class="parametername">queryParams</span></td>
+        <td><p>The query parameters for sorting, filtering and paging options (optional)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Bitmovin.Api.Sdk.Models.PaginationResponse-1.html">PaginationResponse</a>&lt;<a class="xref" href="Bitmovin.Api.Sdk.Models.AdaptationSet.html">AdaptationSet</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>

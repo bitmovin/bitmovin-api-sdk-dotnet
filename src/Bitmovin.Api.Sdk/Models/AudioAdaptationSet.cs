@@ -15,6 +15,9 @@ namespace Bitmovin.Api.Sdk.Models
     /// </summary>
     public class AudioAdaptationSet : AdaptationSet
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "AUDIO";
+
         /// <summary>
         /// ISO 639-1 (Alpha-2) code identifying the language of the audio adaptation set (required)
         /// </summary>

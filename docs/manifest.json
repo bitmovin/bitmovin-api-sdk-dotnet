@@ -12,7 +12,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "xBD+n1h3uA82GQ5/+E3+6A=="
+          "hash": "Nrt1hdJc5RliY7aUu+ZPgg=="
         }
       },
       "is_incremental": false,
@@ -3204,7 +3204,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Encoding.EncodingApi.html",
-          "hash": "WUdn/87fMhNgb6PrQZ1C5w=="
+          "hash": "MGfVGyQoMta2ZA5zoDJHeA=="
         }
       },
       "is_incremental": false,
@@ -10892,11 +10892,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.AdaptationsetsApi.ListQueryParams.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.AdaptationsetsApi.ListQueryParams.html",
+          "hash": "VyPg8TfgorRji1rKDtf6Ug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.AdaptationsetsApi.yml",
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.AdaptationsetsApi.html",
-          "hash": "6oOSSP0NIzTkavQsa7khNQ=="
+          "hash": "1DnZJVr/WuEOdwiAIv+sVw=="
         }
       },
       "is_incremental": false,
@@ -11612,6 +11624,30 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Type.TypeApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Type.TypeApi.html",
+          "hash": "jok8Ure9p0lOfSuUtBCVtQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Type.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Type.html",
+          "hash": "uOVz9q12jLcaBSvHplOeTQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Video.VideoApi.ListQueryParams.yml",
       "output": {
         ".html": {
@@ -11652,7 +11688,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.html",
-          "hash": "5k4NYt7RgtjbhC71Xfsr9w=="
+          "hash": "xl2iBMjN7sQxsl+tEAnvEw=="
         }
       },
       "is_incremental": false,
@@ -13220,6 +13256,90 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Simple.Jobs.JobsApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Simple.Jobs.JobsApi.html",
+          "hash": "5ftf5LD6/xakj6pSPSobtw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Simple.Jobs.Vod.VodApi.ListQueryParams.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Simple.Jobs.Vod.VodApi.ListQueryParams.html",
+          "hash": "vkfBIaCNzYpLCGOaguc5Hg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Simple.Jobs.Vod.VodApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Simple.Jobs.Vod.VodApi.html",
+          "hash": "lqZ/Q/O5AgtdMr9uUtpBAQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Simple.Jobs.Vod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Simple.Jobs.Vod.html",
+          "hash": "/fy84WvbSwuTcD9DWOzDzg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Simple.Jobs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Simple.Jobs.html",
+          "hash": "MmjrNlCoq08DpxytLhXhWQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Simple.SimpleApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Simple.SimpleApi.html",
+          "hash": "5/Tx2Uoy6DRUL/52Y05HWQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Simple.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Encoding.Simple.html",
+          "hash": "+ggo4TF2smsokAj+ToQ0YA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Bitmovin.Api.Sdk.Encoding.Statistics.Daily.DailyApi.ListByDateRangeQueryParams.yml",
       "output": {
         ".html": {
@@ -14240,6 +14360,30 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.AdaptationSetType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.AdaptationSetType.html",
+          "hash": "2xk9b99IqLXJR2C3+f0DMg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.AdaptationSetTypeResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.AdaptationSetTypeResponse.html",
+          "hash": "EHvJNGl+iBRSJLlEciP8lA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Bitmovin.Api.Sdk.Models.AdaptiveQuantMode.yml",
       "output": {
         ".html": {
@@ -14784,7 +14928,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.AnalyticsLicenseCustomDataFieldLabels.html",
-          "hash": "BWEQVDIqKaVpMQMTP6uYuA=="
+          "hash": "i+A06rWh1G2+xop5cwiyTw=="
         }
       },
       "is_incremental": false,
@@ -15096,7 +15240,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.AnalyticsVirtualLicense.html",
-          "hash": "b92EAo9Jjx0aC6QHMF035w=="
+          "hash": "AunQGoA69tk+nWlBlzSahQ=="
         }
       },
       "is_incremental": false,
@@ -15120,7 +15264,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.AnalyticsVirtualLicenseRequest.html",
-          "hash": "U3d6//07t0s3EcbVIkh+8A=="
+          "hash": "gDynfPxjYxXQEiCAJEuCgA=="
         }
       },
       "is_incremental": false,
@@ -20876,6 +21020,162 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.SimpleEncodingVodJobAccessKeyCredentials.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.SimpleEncodingVodJobAccessKeyCredentials.html",
+          "hash": "7iFYxR/5LUwoR/323U6DHA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.SimpleEncodingVodJobAzureCredentials.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.SimpleEncodingVodJobAzureCredentials.html",
+          "hash": "8nS5zOWRX5ZvlVdvp1EocQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.SimpleEncodingVodJobCredentials.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.SimpleEncodingVodJobCredentials.html",
+          "hash": "yGO5vNtNp4n2UFySLxqPyA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.SimpleEncodingVodJobErrors.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.SimpleEncodingVodJobErrors.html",
+          "hash": "4O6Es0hEm1Hd8UlS1eryVw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.SimpleEncodingVodJobGcsServiceAccountCredentials.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.SimpleEncodingVodJobGcsServiceAccountCredentials.html",
+          "hash": "KU4SmYMBVNpMqGG+0Tvinw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.SimpleEncodingVodJobInputType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.SimpleEncodingVodJobInputType.html",
+          "hash": "YE+o1TEeHSuS6XQljGYhJg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.SimpleEncodingVodJobRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.SimpleEncodingVodJobRequest.html",
+          "hash": "0CIy6UUJV8BH8ME62Ii6CA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.SimpleEncodingVodJobResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.SimpleEncodingVodJobResponse.html",
+          "hash": "UcURA7VlME2xvDgQFEzUTQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.SimpleEncodingVodJobS3RoleBasedCredentials.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.SimpleEncodingVodJobS3RoleBasedCredentials.html",
+          "hash": "Gc7GD0VDWngSGrfdnfPCVw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.SimpleEncodingVodJobStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.SimpleEncodingVodJobStatus.html",
+          "hash": "o8Q2v3Z/WGSFc1ySEJJ2Ag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.SimpleEncodingVodJobUrlInput.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.SimpleEncodingVodJobUrlInput.html",
+          "hash": "PowN/I1vqfrEAL2Hl4jegg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.SimpleEncodingVodJobUrlOutput.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.SimpleEncodingVodJobUrlOutput.html",
+          "hash": "hjXoceViKRNTZVLAzhjnMg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.SimpleEncodingVodJobUsernamePasswordCredentials.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bitmovin.Api.Sdk.Models.SimpleEncodingVodJobUsernamePasswordCredentials.html",
+          "hash": "pp9M9H7cnOWz87oZaLSLJg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Bitmovin.Api.Sdk.Models.SmoothManifestContentProtection.yml",
       "output": {
         ".html": {
@@ -22404,7 +22704,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.html",
-          "hash": "CYNPZBMQ9N8tKANZ4FoZiw=="
+          "hash": "s1RXbWJKLFWR5Ic4E/pZCQ=="
         }
       },
       "is_incremental": false,
@@ -23448,7 +23748,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "VccbxAfKY3bN53gkRUvE6Q=="
+          "hash": "TrPGNi7FnIXOLlybdNEdFA=="
         }
       },
       "is_incremental": false,
@@ -23463,7 +23763,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "O5zNG/OZJq4JhGxwyYe9Rg=="
+          "hash": "RkYlsi1I+zsNDTwNKcNpGA=="
         }
       },
       "is_incremental": false,
@@ -23493,10 +23793,11 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "ManagedReferenceDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
-          "total_file_count": 1952,
+          "total_file_count": 0,
           "skipped_file_count": 0
         },
         "ConceptualDocumentProcessor": {
@@ -23505,11 +23806,10 @@
           "total_file_count": 2,
           "skipped_file_count": 0
         },
-        "TocDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
-          "total_file_count": 0,
+          "total_file_count": 1977,
           "skipped_file_count": 0
         }
       }

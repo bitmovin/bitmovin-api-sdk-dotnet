@@ -38,5 +38,17 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "licenses")]
         public List<AnalyticsVirtualLicenseLicensesListItem> Licenses { get; set; } = new List<AnalyticsVirtualLicenseLicensesListItem>();
+
+        /// <summary>
+        /// The number of customData fields available
+        /// </summary>
+        [JsonProperty(PropertyName = "customDataFieldsCount")]
+        public int? CustomDataFieldsCount { get; internal set; }
+
+        /// <summary>
+        /// Labels for Custom Data fields
+        /// </summary>
+        [JsonProperty(PropertyName = "customDataFieldLabels")]
+        public AnalyticsLicenseCustomDataFieldLabels CustomDataFieldLabels { get; set; }
     }
 }

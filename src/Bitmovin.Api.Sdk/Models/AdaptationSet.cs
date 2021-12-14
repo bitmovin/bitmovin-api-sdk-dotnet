@@ -13,6 +13,12 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// AdaptationSet
     /// </summary>
+    [JsonConverter(typeof(JsonSubtypes), "type")]
+    [JsonSubtypes.KnownSubType(typeof(VideoAdaptationSet), "VIDEO")]
+    [JsonSubtypes.KnownSubType(typeof(AudioAdaptationSet), "AUDIO")]
+    [JsonSubtypes.KnownSubType(typeof(ImageAdaptationSet), "IMAGE")]
+    [JsonSubtypes.KnownSubType(typeof(SubtitleAdaptationSet), "SUBTITLE")]
+
     public class AdaptationSet : BitmovinResponse
     {
         /// <summary>

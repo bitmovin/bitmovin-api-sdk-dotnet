@@ -15,5 +15,8 @@ namespace Bitmovin.Api.Sdk.Models
     /// </summary>
     public class VideoAdaptationSet : AdaptationSet
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "VIDEO";
+
     }
 }
