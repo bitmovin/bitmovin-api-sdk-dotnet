@@ -46,8 +46,8 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets
         /// <summary>
         /// List all AdaptationSets
         /// </summary>
-        /// <param name="manifestId">Id of the manifest (required)</param>
-        /// <param name="periodId">Id of the adaptation set (required)</param>
+        /// <param name="manifestId">Id of the Manifest (required)</param>
+        /// <param name="periodId">Id of the Period (required)</param>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>
         public async Task<Models.PaginationResponse<Models.AdaptationSet>> ListAsync(string manifestId, string periodId, params Func<ListQueryParams, ListQueryParams>[] queryParams)
         {

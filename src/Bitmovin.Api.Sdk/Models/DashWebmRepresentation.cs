@@ -15,5 +15,8 @@ namespace Bitmovin.Api.Sdk.Models
     /// </summary>
     public class DashWebmRepresentation : DashSegmentedRepresentation
     {
+        [JsonProperty(PropertyName = "typeDiscriminator")]
+        private readonly string _typeDiscriminator = "WEBM";
+
     }
 }

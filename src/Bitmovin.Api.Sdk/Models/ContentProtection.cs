@@ -13,8 +13,11 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// ContentProtection
     /// </summary>
-    public class ContentProtection : DashRepresentation
+    public class ContentProtection : DashMuxingRepresentation
     {
+        [JsonProperty(PropertyName = "typeDiscriminator")]
+        private readonly string _typeDiscriminator = "CONTENT_PROTECTION";
+
         /// <summary>
         /// DRM Id (required)
         /// </summary>

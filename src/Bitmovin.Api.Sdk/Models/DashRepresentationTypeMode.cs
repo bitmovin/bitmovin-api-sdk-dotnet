@@ -8,7 +8,7 @@ namespace Bitmovin.Api.Sdk.Models
     public enum DashRepresentationTypeMode
     {
         /// <summary>
-        /// Generates representations containing segment templates. This is the default.
+        /// Generates representations containing segment templates.
         /// </summary>
         [EnumMember(Value = "TEMPLATE_REPRESENTATION")]
         TEMPLATE_REPRESENTATION,

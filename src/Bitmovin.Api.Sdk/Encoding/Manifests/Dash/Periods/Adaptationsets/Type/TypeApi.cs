@@ -22,11 +22,11 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Type
         public static BitmovinApiBuilder<TypeApi> Builder => new BitmovinApiBuilder<TypeApi>();
 
         /// <summary>
-        /// Get Input Type
+        /// Get adaptation set type
         /// </summary>
         /// <param name="manifestId">Id of the manifest (required)</param>
         /// <param name="periodId">Id of the period (required)</param>
-        /// <param name="adaptationsetId">Id of the input (required)</param>
+        /// <param name="adaptationsetId">Id of the adaptation set (required)</param>
         public async Task<Models.AdaptationSetTypeResponse> GetAsync(string manifestId, string periodId, string adaptationsetId)
         {
             return await _apiClient.GetAsync(manifestId, periodId, adaptationsetId);

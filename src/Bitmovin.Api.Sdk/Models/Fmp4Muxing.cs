@@ -59,5 +59,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "segmentsMuxed")]
         public int? SegmentsMuxed { get; internal set; }
+
+        /// <summary>
+        /// Alignment mode for composition / presentation timestamps (CTS/PTS). Only applies to h.264 and h.265
+        /// </summary>
+        [JsonProperty(PropertyName = "ptsAlignMode")]
+        public PTSAlignMode? PtsAlignMode { get; set; }
     }
 }

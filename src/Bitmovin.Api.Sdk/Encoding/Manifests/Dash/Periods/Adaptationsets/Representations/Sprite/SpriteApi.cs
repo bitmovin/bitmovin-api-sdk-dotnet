@@ -26,7 +26,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Repres
         /// </summary>
         /// <param name="manifestId">Id of the manifest (required)</param>
         /// <param name="periodId">Id of the period (required)</param>
-        /// <param name="adaptationsetId">Id of the adaptation set (required)</param>
+        /// <param name="adaptationsetId">Id of the image adaptation set (required)</param>
         /// <param name="spriteRepresentation">The Sprite representation to be added to the adaptation set. Note that the adaptation set has to be an image adaptation set.  Only supported for sprites generated with encoder version &#x60;2.76.0&#x60; or above. </param>
         public async Task<Models.SpriteRepresentation> CreateAsync(string manifestId, string periodId, string adaptationsetId, Models.SpriteRepresentation spriteRepresentation)
         {

@@ -15,5 +15,8 @@ namespace Bitmovin.Api.Sdk.Models
     /// </summary>
     public class DashFmp4Representation : DashSegmentedRepresentation
     {
+        [JsonProperty(PropertyName = "typeDiscriminator")]
+        private readonly string _typeDiscriminator = "FMP4";
+
     }
 }

@@ -26,8 +26,8 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Repres
         /// </summary>
         /// <param name="manifestId">Id of the manifest (required)</param>
         /// <param name="periodId">Id of the period (required)</param>
-        /// <param name="adaptationsetId">Id of the adaptation set (required)</param>
-        /// <param name="dashImscRepresentation">The IMSC representation to be added to the adaptation set</param>
+        /// <param name="adaptationsetId">Id of the subtitle adaptation set (required)</param>
+        /// <param name="dashImscRepresentation">The IMSC representation to be added to the adaptation set. Note that the adaptation set has to be a subtitle adaptation set. </param>
         public async Task<Models.DashImscRepresentation> CreateAsync(string manifestId, string periodId, string adaptationsetId, Models.DashImscRepresentation dashImscRepresentation)
         {
             return await _apiClient.CreateAsync(manifestId, periodId, adaptationsetId, dashImscRepresentation);

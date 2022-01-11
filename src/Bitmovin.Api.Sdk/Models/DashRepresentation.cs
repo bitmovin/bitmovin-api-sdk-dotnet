@@ -13,24 +13,21 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// DashRepresentation
     /// </summary>
+    [JsonConverter(typeof(JsonSubtypes), "typeDiscriminator")]
+    [JsonSubtypes.KnownSubType(typeof(DashFmp4DrmRepresentation), "DRM_FMP4")]
+    [JsonSubtypes.KnownSubType(typeof(DashFmp4Representation), "FMP4")]
+    [JsonSubtypes.KnownSubType(typeof(DashWebmRepresentation), "WEBM")]
+    [JsonSubtypes.KnownSubType(typeof(DashCmafRepresentation), "CMAF")]
+    [JsonSubtypes.KnownSubType(typeof(DashChunkedTextRepresentation), "CHUNKED_TEXT")]
+    [JsonSubtypes.KnownSubType(typeof(DashMp4Representation), "MP4")]
+    [JsonSubtypes.KnownSubType(typeof(DashMp4DrmRepresentation), "DRM_MP4")]
+    [JsonSubtypes.KnownSubType(typeof(DashProgressiveWebmRepresentation), "PROGRESSIVE_WEBM")]
+    [JsonSubtypes.KnownSubType(typeof(DashVttRepresentation), "VTT")]
+    [JsonSubtypes.KnownSubType(typeof(SpriteRepresentation), "SPRITE")]
+    [JsonSubtypes.KnownSubType(typeof(DashImscRepresentation), "IMSC")]
+    [JsonSubtypes.KnownSubType(typeof(ContentProtection), "CONTENT_PROTECTION")]
+
     public class DashRepresentation : BitmovinResponse
     {
-        /// <summary>
-        /// UUID of an encoding (required)
-        /// </summary>
-        [JsonProperty(PropertyName = "encodingId")]
-        public string EncodingId { get; set; }
-
-        /// <summary>
-        /// UUID of a muxing (required)
-        /// </summary>
-        [JsonProperty(PropertyName = "muxingId")]
-        public string MuxingId { get; set; }
-
-        /// <summary>
-        /// Used to signal a dependency with another representation. The representation may belong to a different adaptation set
-        /// </summary>
-        [JsonProperty(PropertyName = "dependencyId")]
-        public string DependencyId { get; set; }
     }
 }

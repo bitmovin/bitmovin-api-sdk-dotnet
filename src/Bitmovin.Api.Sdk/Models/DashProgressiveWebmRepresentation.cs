@@ -13,8 +13,11 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// DashProgressiveWebmRepresentation
     /// </summary>
-    public class DashProgressiveWebmRepresentation : DashRepresentation
+    public class DashProgressiveWebmRepresentation : DashMuxingRepresentation
     {
+        [JsonProperty(PropertyName = "typeDiscriminator")]
+        private readonly string _typeDiscriminator = "PROGRESSIVE_WEBM";
+
         /// <summary>
         /// Path to the Progressive WebM file (required)
         /// </summary>

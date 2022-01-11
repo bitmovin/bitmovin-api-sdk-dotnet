@@ -13,8 +13,11 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// DashImscRepresentation
     /// </summary>
-    public class DashImscRepresentation : BitmovinResource
+    public class DashImscRepresentation : DashRepresentation
     {
+        [JsonProperty(PropertyName = "typeDiscriminator")]
+        private readonly string _typeDiscriminator = "IMSC";
+
         /// <summary>
         /// URL of the referenced IMSC file (required)
         /// </summary>

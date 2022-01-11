@@ -13,8 +13,11 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// DashVttRepresentation
     /// </summary>
-    public class DashVttRepresentation : BitmovinResource
+    public class DashVttRepresentation : DashRepresentation
     {
+        [JsonProperty(PropertyName = "typeDiscriminator")]
+        private readonly string _typeDiscriminator = "VTT";
+
         /// <summary>
         /// URL of the referenced VTT file (required)
         /// </summary>

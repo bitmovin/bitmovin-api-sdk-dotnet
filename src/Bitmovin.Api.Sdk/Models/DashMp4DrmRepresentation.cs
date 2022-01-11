@@ -15,6 +15,9 @@ namespace Bitmovin.Api.Sdk.Models
     /// </summary>
     public class DashMp4DrmRepresentation : DashMp4Representation
     {
+        [JsonProperty(PropertyName = "typeDiscriminator")]
+        private readonly string _typeDiscriminator = "DRM_MP4";
+
         /// <summary>
         /// DRM Id (required)
         /// </summary>

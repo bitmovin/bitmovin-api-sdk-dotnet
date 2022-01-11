@@ -13,8 +13,11 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// DashMp4Representation
     /// </summary>
-    public class DashMp4Representation : DashRepresentation
+    public class DashMp4Representation : DashMuxingRepresentation
     {
+        [JsonProperty(PropertyName = "typeDiscriminator")]
+        private readonly string _typeDiscriminator = "MP4";
+
         /// <summary>
         /// Path to the MP4 file (required)
         /// </summary>

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using RestEase;
 using Bitmovin.Api.Sdk.Common;
+using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Type;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ChunkedText;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Cmaf;
@@ -29,6 +30,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings
         public MuxingsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IMuxingsApiClient>();
+            Type = new TypeApi(apiClientFactory);
             Fmp4 = new Fmp4Api(apiClientFactory);
             ChunkedText = new ChunkedTextApi(apiClientFactory);
             Cmaf = new CmafApi(apiClientFactory);
@@ -51,6 +53,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings
         /// </summary>
         public static BitmovinApiBuilder<MuxingsApi> Builder => new BitmovinApiBuilder<MuxingsApi>();
 
+        public TypeApi Type { get; }
         public Fmp4Api Fmp4 { get; }
         public ChunkedTextApi ChunkedText { get; }
         public CmafApi Cmaf { get; }

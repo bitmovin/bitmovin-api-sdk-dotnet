@@ -13,8 +13,11 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// SpriteRepresentation
     /// </summary>
-    public class SpriteRepresentation : BitmovinResponse
+    public class SpriteRepresentation : DashRepresentation
     {
+        [JsonProperty(PropertyName = "typeDiscriminator")]
+        private readonly string _typeDiscriminator = "SPRITE";
+
         /// <summary>
         /// UUID of an encoding (required)
         /// </summary>
