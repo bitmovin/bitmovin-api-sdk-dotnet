@@ -86,5 +86,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "columns")]
         public List<string> Columns { get; set; } = new List<string>();
+
+        /// <summary>
+        /// File format of export file
+        /// </summary>
+        [JsonProperty(PropertyName = "fileFormat")]
+        public AnalyticsExportFileFormat? FileFormat { get; set; }
     }
 }

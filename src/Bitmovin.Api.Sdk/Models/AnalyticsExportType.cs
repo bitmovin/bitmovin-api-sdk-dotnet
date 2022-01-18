@@ -8,13 +8,13 @@ namespace Bitmovin.Api.Sdk.Models
     public enum AnalyticsExportType
     {
         /// <summary>
-        /// ADS
+        /// Export ads sessions
         /// </summary>
         [EnumMember(Value = "ADS")]
         ADS,
 
         /// <summary>
-        /// SESSIONS
+        /// Export sessions
         /// </summary>
         [EnumMember(Value = "SESSIONS")]
         SESSIONS

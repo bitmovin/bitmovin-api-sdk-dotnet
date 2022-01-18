@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using RestEase;
 using Bitmovin.Api.Sdk.Common;
+using Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.Vod.Daily;
 
 namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.Vod
 {
@@ -14,12 +15,15 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.Vod
         public VodApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IVodApiClient>();
+            Daily = new DailyApi(apiClientFactory);
         }
 
         /// <summary>
         /// Fluent builder for creating an instance of VodApi
         /// </summary>
         public static BitmovinApiBuilder<VodApi> Builder => new BitmovinApiBuilder<VodApi>();
+
+        public DailyApi Daily { get; }
 
         /// <summary>
         /// List VOD Encoding Statistics

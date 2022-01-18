@@ -8,25 +8,25 @@ namespace Bitmovin.Api.Sdk.Models
     public enum AnalyticsExportStatus
     {
         /// <summary>
-        /// STARTED
+        /// Export has started
         /// </summary>
         [EnumMember(Value = "STARTED")]
         STARTED,
 
         /// <summary>
-        /// FINISHED
+        /// Export has finished
         /// </summary>
         [EnumMember(Value = "FINISHED")]
         FINISHED,
 
         /// <summary>
-        /// QUEUED
+        /// Export is queued and will be stared soon
         /// </summary>
         [EnumMember(Value = "QUEUED")]
         QUEUED,
 
         /// <summary>
-        /// ERROR
+        /// Error has happened during export
         /// </summary>
         [EnumMember(Value = "ERROR")]
         ERROR

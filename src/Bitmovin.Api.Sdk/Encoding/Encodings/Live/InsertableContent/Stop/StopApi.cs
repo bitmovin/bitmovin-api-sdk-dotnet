@@ -22,7 +22,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live.InsertableContent.Stop
         public static BitmovinApiBuilder<StopApi> Builder => new BitmovinApiBuilder<StopApi>();
 
         /// <summary>
-        /// Stops Currently Running Inserted Content
+        /// Stops currently running Inserted Content
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         public async Task CreateAsync(string encodingId)
