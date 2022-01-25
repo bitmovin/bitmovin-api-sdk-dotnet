@@ -32,13 +32,13 @@ namespace Bitmovin.Api.Sdk.Models
         US_WEST_2,
 
         /// <summary>
-        /// EU (Ireland)
+        /// Europe (Ireland)
         /// </summary>
         [EnumMember(Value = "EU_WEST_1")]
         EU_WEST_1,
 
         /// <summary>
-        /// EU (Frankfurt)
+        /// Europe (Frankfurt)
         /// </summary>
         [EnumMember(Value = "EU_CENTRAL_1")]
         EU_CENTRAL_1,
@@ -80,13 +80,13 @@ namespace Bitmovin.Api.Sdk.Models
         SA_EAST_1,
 
         /// <summary>
-        /// EU (London)
+        /// Europe (London)
         /// </summary>
         [EnumMember(Value = "EU_WEST_2")]
         EU_WEST_2,
 
         /// <summary>
-        /// EU (Paris)
+        /// Europe (Paris)
         /// </summary>
         [EnumMember(Value = "EU_WEST_3")]
         EU_WEST_3,
@@ -95,6 +95,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// Canada (Central)
         /// </summary>
         [EnumMember(Value = "CA_CENTRAL_1")]
-        CA_CENTRAL_1
+        CA_CENTRAL_1,
+
+        /// <summary>
+        /// Europe (Stockholm)
+        /// </summary>
+        [EnumMember(Value = "EU_NORTH_1")]
+        EU_NORTH_1
     }
 }

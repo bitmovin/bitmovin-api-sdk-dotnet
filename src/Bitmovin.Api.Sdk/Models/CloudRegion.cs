@@ -32,13 +32,13 @@ namespace Bitmovin.Api.Sdk.Models
         AWS_US_WEST_2,
 
         /// <summary>
-        /// AWS EU (Ireland)
+        /// AWS Europe (Ireland)
         /// </summary>
         [EnumMember(Value = "AWS_EU_WEST_1")]
         AWS_EU_WEST_1,
 
         /// <summary>
-        /// AWS EU (Frankfurt)
+        /// AWS Europe (Frankfurt)
         /// </summary>
         [EnumMember(Value = "AWS_EU_CENTRAL_1")]
         AWS_EU_CENTRAL_1,
@@ -80,13 +80,13 @@ namespace Bitmovin.Api.Sdk.Models
         AWS_SA_EAST_1,
 
         /// <summary>
-        /// AWS EU (London)
+        /// AWS Europe (London)
         /// </summary>
         [EnumMember(Value = "AWS_EU_WEST_2")]
         AWS_EU_WEST_2,
 
         /// <summary>
-        /// AWS EU (Paris)
+        /// AWS Europe (Paris)
         /// </summary>
         [EnumMember(Value = "AWS_EU_WEST_3")]
         AWS_EU_WEST_3,
@@ -96,6 +96,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [EnumMember(Value = "AWS_CA_CENTRAL_1")]
         AWS_CA_CENTRAL_1,
+
+        /// <summary>
+        /// AWS Europe (Stockholm)
+        /// </summary>
+        [EnumMember(Value = "AWS_EU_NORTH_1")]
+        AWS_EU_NORTH_1,
 
         /// <summary>
         /// Google Council Bluffs, Iowa, USA
