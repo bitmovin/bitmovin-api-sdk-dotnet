@@ -81,10 +81,10 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls
         /// Start HLS Manifest Creation
         /// </summary>
         /// <param name="manifestId">Id of the HLS manifest. (required)</param>
-        /// <param name="body">Manifest Startup Options</param>
-        public async Task<Models.BitmovinResponse> StartAsync(string manifestId, Object body = null)
+        /// <param name="startManifestRequest">Manifest Startup Options</param>
+        public async Task<Models.BitmovinResponse> StartAsync(string manifestId, Models.StartManifestRequest startManifestRequest = null)
         {
-            return await _apiClient.StartAsync(manifestId, body);
+            return await _apiClient.StartAsync(manifestId, startManifestRequest);
         }
 
         /// <summary>
@@ -125,7 +125,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls
 
             [Post("/encoding/manifests/hls/{manifest_id}/start")]
             [AllowAnyStatusCode]
-            Task<Models.BitmovinResponse> StartAsync([Path("manifest_id")] string manifestId, [Body] Object body);
+            Task<Models.BitmovinResponse> StartAsync([Path("manifest_id")] string manifestId, [Body] Models.StartManifestRequest startManifestRequest);
 
             [Get("/encoding/manifests/hls/{manifest_id}/status")]
             [AllowAnyStatusCode]
