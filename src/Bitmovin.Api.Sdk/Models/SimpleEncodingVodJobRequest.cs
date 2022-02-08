@@ -16,6 +16,12 @@ namespace Bitmovin.Api.Sdk.Models
     public class SimpleEncodingVodJobRequest
     {
         /// <summary>
+        /// The template that will be used for the encoding.
+        /// </summary>
+        [JsonProperty(PropertyName = "encodingTemplate")]
+        public EncodingTemplate? EncodingTemplate { get; set; }
+
+        /// <summary>
         /// Inputs
         /// </summary>
         [JsonProperty(PropertyName = "inputs")]

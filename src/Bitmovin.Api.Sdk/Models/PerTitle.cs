@@ -32,5 +32,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "vp9Configuration")]
         public Vp9PerTitleConfiguration Vp9Configuration { get; set; }
+
+        /// <summary>
+        /// Per-Title configuration for AV1
+        /// </summary>
+        [JsonProperty(PropertyName = "av1Configuration")]
+        public Av1PerTitleConfiguration Av1Configuration { get; set; }
     }
 }
