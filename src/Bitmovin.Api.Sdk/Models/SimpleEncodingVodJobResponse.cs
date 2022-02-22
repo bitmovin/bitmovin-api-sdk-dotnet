@@ -28,6 +28,12 @@ namespace Bitmovin.Api.Sdk.Models
         public SimpleEncodingVodJobStatus? Status { get; internal set; }
 
         /// <summary>
+        /// The template that has been used for the encoding.
+        /// </summary>
+        [JsonProperty(PropertyName = "encodingTemplate")]
+        public EncodingTemplate? EncodingTemplate { get; set; }
+
+        /// <summary>
         /// The identifier of the encoding that has been created based on the job request. This is only returned once the job execution has been successful and the encoding could be started. 
         /// </summary>
         [JsonProperty(PropertyName = "encodingId")]

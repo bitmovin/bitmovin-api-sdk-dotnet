@@ -18,5 +18,10 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "type")]
         private readonly string _type = "AV1";
 
+        /// <summary>
+        /// Use a set of well defined configurations preset to support certain use cases. Can be overwritten with more specific values.
+        /// </summary>
+        [JsonProperty(PropertyName = "presetConfiguration")]
+        public Av1PresetConfiguration? PresetConfiguration { get; set; }
     }
 }
