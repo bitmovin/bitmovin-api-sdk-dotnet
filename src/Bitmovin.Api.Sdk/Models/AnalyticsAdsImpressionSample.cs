@@ -772,18 +772,6 @@ namespace Bitmovin.Api.Sdk.Models
         public long? Time { get; set; }
 
         /// <summary>
-        /// Time from content
-        /// </summary>
-        [JsonProperty(PropertyName = "time_from_content")]
-        public long? TimeFromContent { get; set; }
-
-        /// <summary>
-        /// Time hovered
-        /// </summary>
-        [JsonProperty(PropertyName = "time_hovered")]
-        public long? TimeHovered { get; set; }
-
-        /// <summary>
         /// Time in viewport
         /// </summary>
         [JsonProperty(PropertyName = "time_in_viewport")]
@@ -794,18 +782,6 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "time_played")]
         public long? TimePlayed { get; set; }
-
-        /// <summary>
-        /// Time to content
-        /// </summary>
-        [JsonProperty(PropertyName = "time_to_content")]
-        public long? TimeToContent { get; set; }
-
-        /// <summary>
-        /// Time to hover
-        /// </summary>
-        [JsonProperty(PropertyName = "time_to_hover")]
-        public long? TimeToHover { get; set; }
 
         /// <summary>
         /// Universal ad id registry

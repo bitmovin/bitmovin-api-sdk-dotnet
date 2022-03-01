@@ -12,7 +12,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "YLTa8x/Seg3vrndTj6ujdA=="
+          "hash": "8nfhZiVrwhwEDHS5RErRsQ=="
         }
       },
       "is_incremental": false,
@@ -14160,7 +14160,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.AdAnalyticsAttribute.html",
-          "hash": "vpPZ33+cKTQH0xxY/8lSXw=="
+          "hash": "I2nOfGc6FgVtJGykbiQCiw=="
         }
       },
       "is_incremental": false,
@@ -14568,7 +14568,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.AnalyticsAdsImpressionSample.html",
-          "hash": "EmFFHQZOhVvY0zjgRYdkEQ=="
+          "hash": "Laugr5vYahUT3D7tQRKFOg=="
         }
       },
       "is_incremental": false,
@@ -17048,18 +17048,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Bitmovin.Api.Sdk.Models.DirectFileUploadInput.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Bitmovin.Api.Sdk.Models.DirectFileUploadInput.html",
-          "hash": "SXCDEi5my+JQKO6enmjJYQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Bitmovin.Api.Sdk.Models.DisplayAspectRatio.yml",
       "output": {
         ".html": {
@@ -18948,7 +18936,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.Input.html",
-          "hash": "Q7CXjWIVrrfta1OpumeF4w=="
+          "hash": "O7pqMgX6rXisICOOEpPSkQ=="
         }
       },
       "is_incremental": false,
@@ -19068,7 +19056,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.InputType.html",
-          "hash": "I7cb1ar77Gk3zySIgOR1fw=="
+          "hash": "9kAvUmx3wZufcz0sDfpgfQ=="
         }
       },
       "is_incremental": false,
@@ -22896,7 +22884,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bitmovin.Api.Sdk.Models.html",
-          "hash": "Q2za/kxRH2mw7Y3SsZWy6w=="
+          "hash": "Wko29lOsWQlLQ9jnJx+xjw=="
         }
       },
       "is_incremental": false,
@@ -23940,7 +23928,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "nno9lTzTSPtYpBEv8Qv7yA=="
+          "hash": "YkCXX2dQaR37sr6KxmEnYA=="
         }
       },
       "is_incremental": false,
@@ -23955,7 +23943,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "AZQJOo8zytpA3+G4eQqCEg=="
+          "hash": "FblGceqRja+D/0kStpl4dA=="
         }
       },
       "is_incremental": false,
@@ -23995,7 +23983,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 1993,
+          "total_file_count": 1992,
           "skipped_file_count": 0
         },
         "ConceptualDocumentProcessor": {

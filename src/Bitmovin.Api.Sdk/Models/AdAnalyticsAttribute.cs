@@ -758,12 +758,6 @@ namespace Bitmovin.Api.Sdk.Models
         TIME,
 
         /// <summary>
-        /// TIME_FROM_CONTENT
-        /// </summary>
-        [EnumMember(Value = "TIME_FROM_CONTENT")]
-        TIME_FROM_CONTENT,
-
-        /// <summary>
         /// TIME_IN_VIEWPORT
         /// </summary>
         [EnumMember(Value = "TIME_IN_VIEWPORT")]
@@ -774,12 +768,6 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [EnumMember(Value = "TIME_PLAYED")]
         TIME_PLAYED,
-
-        /// <summary>
-        /// TIME_TO_CONTENT
-        /// </summary>
-        [EnumMember(Value = "TIME_TO_CONTENT")]
-        TIME_TO_CONTENT,
 
         /// <summary>
         /// UNIVERSAL_AD_ID_REGISTRY

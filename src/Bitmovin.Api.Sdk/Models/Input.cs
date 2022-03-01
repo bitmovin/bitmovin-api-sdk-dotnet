@@ -34,7 +34,6 @@ namespace Bitmovin.Api.Sdk.Models
     [JsonSubtypes.KnownSubType(typeof(ZixiInput), "ZIXI")]
     [JsonSubtypes.KnownSubType(typeof(SrtInput), "SRT")]
     [JsonSubtypes.KnownSubType(typeof(GcsServiceAccountInput), "GCS_SERVICE_ACCOUNT")]
-    [JsonSubtypes.KnownSubType(typeof(DirectFileUploadInput), "DIRECT_FILE_UPLOAD")]
 
     public class Input : BitmovinResource
     {

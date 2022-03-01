@@ -125,12 +125,6 @@ namespace Bitmovin.Api.Sdk.Models
         /// GCS_SERVICE_ACCOUNT
         /// </summary>
         [EnumMember(Value = "GCS_SERVICE_ACCOUNT")]
-        GCS_SERVICE_ACCOUNT,
-
-        /// <summary>
-        /// DIRECT_FILE_UPLOAD
-        /// </summary>
-        [EnumMember(Value = "DIRECT_FILE_UPLOAD")]
-        DIRECT_FILE_UPLOAD
+        GCS_SERVICE_ACCOUNT
     }
 }
