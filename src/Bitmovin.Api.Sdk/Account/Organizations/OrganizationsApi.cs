@@ -31,7 +31,7 @@ namespace Bitmovin.Api.Sdk.Account.Organizations
         /// <summary>
         /// Add Organization
         /// </summary>
-        /// <param name="organization">Orgnaization Details</param>
+        /// <param name="organization">Organization Details</param>
         public async Task<Models.Organization> CreateAsync(Models.Organization organization)
         {
             return await _apiClient.CreateAsync(organization);
