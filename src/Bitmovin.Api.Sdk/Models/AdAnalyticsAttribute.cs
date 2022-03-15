@@ -446,6 +446,36 @@ namespace Bitmovin.Api.Sdk.Models
         CUSTOM_DATA_25,
 
         /// <summary>
+        /// CUSTOM_DATA_26
+        /// </summary>
+        [EnumMember(Value = "CUSTOM_DATA_26")]
+        CUSTOM_DATA_26,
+
+        /// <summary>
+        /// CUSTOM_DATA_27
+        /// </summary>
+        [EnumMember(Value = "CUSTOM_DATA_27")]
+        CUSTOM_DATA_27,
+
+        /// <summary>
+        /// CUSTOM_DATA_28
+        /// </summary>
+        [EnumMember(Value = "CUSTOM_DATA_28")]
+        CUSTOM_DATA_28,
+
+        /// <summary>
+        /// CUSTOM_DATA_29
+        /// </summary>
+        [EnumMember(Value = "CUSTOM_DATA_29")]
+        CUSTOM_DATA_29,
+
+        /// <summary>
+        /// CUSTOM_DATA_30
+        /// </summary>
+        [EnumMember(Value = "CUSTOM_DATA_30")]
+        CUSTOM_DATA_30,
+
+        /// <summary>
         /// CUSTOM_USER_ID
         /// </summary>
         [EnumMember(Value = "CUSTOM_USER_ID")]

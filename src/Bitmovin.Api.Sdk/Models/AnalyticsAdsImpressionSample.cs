@@ -478,6 +478,36 @@ namespace Bitmovin.Api.Sdk.Models
         public string CustomData25 { get; set; }
 
         /// <summary>
+        /// Free form data set via the customData26 field in the analytics collector configuration
+        /// </summary>
+        [JsonProperty(PropertyName = "custom_data_26")]
+        public string CustomData26 { get; set; }
+
+        /// <summary>
+        /// Free form data set via the customData27 field in the analytics collector configuration
+        /// </summary>
+        [JsonProperty(PropertyName = "custom_data_27")]
+        public string CustomData27 { get; set; }
+
+        /// <summary>
+        /// Free form data set via the customData28 field in the analytics collector configuration
+        /// </summary>
+        [JsonProperty(PropertyName = "custom_data_28")]
+        public string CustomData28 { get; set; }
+
+        /// <summary>
+        /// Free form data set via the customData29 field in the analytics collector configuration
+        /// </summary>
+        [JsonProperty(PropertyName = "custom_data_29")]
+        public string CustomData29 { get; set; }
+
+        /// <summary>
+        /// Free form data set via the customData30 field in the analytics collector configuration
+        /// </summary>
+        [JsonProperty(PropertyName = "custom_data_30")]
+        public string CustomData30 { get; set; }
+
+        /// <summary>
         /// Custom user ID
         /// </summary>
         [JsonProperty(PropertyName = "custom_user_id")]
