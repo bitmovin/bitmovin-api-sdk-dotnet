@@ -32,5 +32,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "cloudRegion")]
         public SimpleEncodingLiveCloudRegion? CloudRegion { get; set; }
+
+        /// <summary>
+        /// This property will be used for naming the encoding.
+        /// </summary>
+        [JsonProperty(PropertyName = "name")]
+        public string Name { get; set; }
     }
 }
