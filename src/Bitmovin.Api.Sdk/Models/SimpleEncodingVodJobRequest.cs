@@ -28,10 +28,10 @@ namespace Bitmovin.Api.Sdk.Models
         public List<SimpleEncodingVodJobUrlInput> Inputs { get; set; } = new List<SimpleEncodingVodJobUrlInput>();
 
         /// <summary>
-        /// Outputs
+        /// Please take a look at the [documentation](https://bitmovin.com/docs/encoding/articles/simple-encoding-api) (required)
         /// </summary>
         [JsonProperty(PropertyName = "outputs")]
-        public List<SimpleEncodingVodJobUrlOutput> Outputs { get; set; } = new List<SimpleEncodingVodJobUrlOutput>();
+        public List<SimpleEncodingVodJobOutput> Outputs { get; set; } = new List<SimpleEncodingVodJobOutput>();
 
         /// <summary>
         /// This property will be used for naming the encoding and the manifests.

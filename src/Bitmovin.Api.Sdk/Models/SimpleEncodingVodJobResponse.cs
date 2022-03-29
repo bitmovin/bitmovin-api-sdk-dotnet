@@ -49,7 +49,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Outputs
         /// </summary>
         [JsonProperty(PropertyName = "outputs")]
-        public List<SimpleEncodingVodJobUrlOutput> Outputs { get; set; } = new List<SimpleEncodingVodJobUrlOutput>();
+        public List<SimpleEncodingVodJobOutput> Outputs { get; set; } = new List<SimpleEncodingVodJobOutput>();
 
         /// <summary>
         /// Describes all the errors in cases the status of the job is &#39;error&#39;. 
