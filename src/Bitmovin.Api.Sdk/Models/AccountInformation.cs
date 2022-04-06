@@ -52,9 +52,9 @@ namespace Bitmovin.Api.Sdk.Models
         public string Company { get; set; }
 
         /// <summary>
-        /// IsVerified
+        /// Verified
         /// </summary>
-        [JsonProperty(PropertyName = "isVerified")]
-        public bool? IsVerified { get; internal set; }
+        [JsonProperty(PropertyName = "verified")]
+        public bool? Verified { get; internal set; }
     }
 }

@@ -16,6 +16,7 @@ namespace Bitmovin.Api.Sdk.Models
     [JsonConverter(typeof(JsonSubtypes), "type")]
     [JsonSubtypes.KnownSubType(typeof(AkamaiNetStorageOutput), "AKAMAI_NETSTORAGE")]
     [JsonSubtypes.KnownSubType(typeof(AzureOutput), "AZURE")]
+    [JsonSubtypes.KnownSubType(typeof(CdnOutput), "CDN")]
     [JsonSubtypes.KnownSubType(typeof(GenericS3Output), "GENERIC_S3")]
     [JsonSubtypes.KnownSubType(typeof(GcsOutput), "GCS")]
     [JsonSubtypes.KnownSubType(typeof(FtpOutput), "FTP")]

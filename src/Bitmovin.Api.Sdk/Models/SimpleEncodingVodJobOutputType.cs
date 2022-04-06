@@ -11,6 +11,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// Output type
         /// </summary>
         [EnumMember(Value = "URL")]
-        URL
+        URL,
+
+        /// <summary>
+        /// Output type
+        /// </summary>
+        [EnumMember(Value = "CDN")]
+        CDN
     }
 }
