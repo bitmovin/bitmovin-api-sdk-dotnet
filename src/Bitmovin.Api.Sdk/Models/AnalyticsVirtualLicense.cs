@@ -34,6 +34,12 @@ namespace Bitmovin.Api.Sdk.Models
         public string Timezone { get; set; }
 
         /// <summary>
+        /// Retention time of impressions, returned as ISO 8601 duration format: P(n)Y(n)M(n)DT(n)H(n)M(n)S
+        /// </summary>
+        [JsonProperty(PropertyName = "retentionTime")]
+        public string RetentionTime { get; internal set; }
+
+        /// <summary>
         /// List of Analytics Licenses
         /// </summary>
         [JsonProperty(PropertyName = "licenses")]
