@@ -22,10 +22,10 @@ namespace Bitmovin.Api.Sdk.Models
         public SimpleEncodingLiveJobInput Input { get; set; }
 
         /// <summary>
-        /// output of the live encoding job (required)
+        /// Please take a look at the [documentation](https://bitmovin.com/docs/encoding/articles/simple-encoding-api-live#outputs) (required)
         /// </summary>
         [JsonProperty(PropertyName = "outputs")]
-        public List<SimpleEncodingLiveJobUrlOutput> Outputs { get; set; } = new List<SimpleEncodingLiveJobUrlOutput>();
+        public List<SimpleEncodingLiveJobOutput> Outputs { get; set; } = new List<SimpleEncodingLiveJobOutput>();
 
         /// <summary>
         /// The cloud region that will be used for the live encoding. This value has to be set.

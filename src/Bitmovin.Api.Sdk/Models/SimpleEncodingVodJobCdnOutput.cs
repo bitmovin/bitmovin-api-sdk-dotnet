@@ -18,5 +18,10 @@ namespace Bitmovin.Api.Sdk.Models
         [JsonProperty(PropertyName = "type")]
         private readonly string _type = "CDN";
 
+        /// <summary>
+        /// This sets the maximum output resolution that will be generated.
+        /// </summary>
+        [JsonProperty(PropertyName = "maxResolution")]
+        public SimpleEncodingLiveMaxResolution? MaxResolution { get; set; }
     }
 }

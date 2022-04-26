@@ -20,11 +20,5 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "inputType")]
         public SimpleEncodingLiveJobInputType? InputType { get; set; }
-
-        /// <summary>
-        /// The aspect ratio of the input video stream
-        /// </summary>
-        [JsonProperty(PropertyName = "inputAspectRatio")]
-        public SimpleEncodingLiveInputAspectRatio? InputAspectRatio { get; set; }
     }
 }

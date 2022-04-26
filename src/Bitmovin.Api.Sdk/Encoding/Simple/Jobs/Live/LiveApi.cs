@@ -24,7 +24,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Simple.Jobs.Live
         /// <summary>
         /// Create a Simple Encoding Live Job
         /// </summary>
-        /// <param name="simpleEncodingLiveJobRequest">The Simple Encoding Live Job to be created. </param>
+        /// <param name="simpleEncodingLiveJobRequest">The Simple Encoding Live Job to be created.  Check out our [Simple Encoding API Live Documentation](https://bitmovin.com/docs/encoding/articles/simple-encoding-api-live) for additional information about the Simple Encoding API Live. </param>
         public async Task<Models.SimpleEncodingLiveJobResponse> CreateAsync(Models.SimpleEncodingLiveJobRequest simpleEncodingLiveJobRequest)
         {
             return await _apiClient.CreateAsync(simpleEncodingLiveJobRequest);
