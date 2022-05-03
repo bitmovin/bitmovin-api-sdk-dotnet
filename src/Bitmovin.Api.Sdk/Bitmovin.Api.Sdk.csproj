@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>net461;netstandard2.0</TargetFrameworks>
-    <PackageVersion>1.113.0</PackageVersion>
+    <PackageVersion>1.114.0</PackageVersion>
     <Title>Bitmovin C# API Client</Title>
     <Authors>Bitmovin Inc</Authors>
     <Description>C#-Client which enables you to seamlessly integrate the Bitmovin API into your projects. Using this API client requires an active account.</Description>
