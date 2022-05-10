@@ -8,31 +8,31 @@ namespace Bitmovin.Api.Sdk.Models
     public enum StreamSelectionMode
     {
         /// <summary>
-        /// Automatically select a stream that fits the codec
+        /// Automatically select the first stream that fits the Stream&#39;s codec configuration
         /// </summary>
         [EnumMember(Value = "AUTO")]
         AUTO,
 
         /// <summary>
-        /// Use the stream specified by the position attribute
+        /// Use the stream specified by &#39;position&#39;
         /// </summary>
         [EnumMember(Value = "POSITION_ABSOLUTE")]
         POSITION_ABSOLUTE,
 
         /// <summary>
-        /// Use the stream specified by position but count only video streams
+        /// Use the stream specified by &#39;position&#39;, counting video streams only
         /// </summary>
         [EnumMember(Value = "VIDEO_RELATIVE")]
         VIDEO_RELATIVE,
 
         /// <summary>
-        /// Use the stream specified by position but count only audio streams
+        /// Use the stream specified by &#39;position&#39;, counting audio streams only
         /// </summary>
         [EnumMember(Value = "AUDIO_RELATIVE")]
         AUDIO_RELATIVE,
 
         /// <summary>
-        /// Use the stream specified by position but count only subtitle streams
+        /// Use the stream specified by &#39;position&#39;, counting subtitle streams only
         /// </summary>
         [EnumMember(Value = "SUBTITLE_RELATIVE")]
         SUBTITLE_RELATIVE

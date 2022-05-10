@@ -16,7 +16,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class AnalyticsImpressionListItem
     {
         /// <summary>
-        /// Impression ID (required)
+        /// Random UUID that is used to identify a session (required)
         /// </summary>
         [JsonProperty(PropertyName = "impressionId")]
         public string ImpressionId { get; set; }

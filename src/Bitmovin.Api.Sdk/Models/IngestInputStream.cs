@@ -19,25 +19,25 @@ namespace Bitmovin.Api.Sdk.Models
         private readonly string _type = "INGEST";
 
         /// <summary>
-        /// Id of input
+        /// ID of an Input resource defining the input storage (required)
         /// </summary>
         [JsonProperty(PropertyName = "inputId")]
         public string InputId { get; set; }
 
         /// <summary>
-        /// Path to media file
+        /// Path to an input media file (required)
         /// </summary>
         [JsonProperty(PropertyName = "inputPath")]
         public string InputPath { get; set; }
 
         /// <summary>
-        /// Specifies the algorithm how the stream in the input file will be selected
+        /// Specifies the strategy for selecting a stream from the input file
         /// </summary>
         [JsonProperty(PropertyName = "selectionMode")]
         public StreamSelectionMode? SelectionMode { get; set; }
 
         /// <summary>
-        /// Position of the stream, starting from 0.
+        /// Position of the stream to be selected from the input file (zero-based). Must not be set in combination with selectionMode &#39;AUTO&#39;, defaults to 0 for any other selectionMode.
         /// </summary>
         [JsonProperty(PropertyName = "position")]
         public int? Position { get; set; }

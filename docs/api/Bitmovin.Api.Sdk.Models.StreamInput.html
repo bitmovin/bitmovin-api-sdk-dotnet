@@ -143,7 +143,7 @@
   
   <a id="Bitmovin_Api_Sdk_Models_StreamInput_InputId_" data-uid="Bitmovin.Api.Sdk.Models.StreamInput.InputId*"></a>
   <h4 id="Bitmovin_Api_Sdk_Models_StreamInput_InputId" data-uid="Bitmovin.Api.Sdk.Models.StreamInput.InputId">InputId</h4>
-  <div class="markdown level1 summary"><p>Id of input</p>
+  <div class="markdown level1 summary"><p>ID of an Input resource defining the input storage. Required if 'inputStreamId' is not set.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -169,7 +169,7 @@
   
   <a id="Bitmovin_Api_Sdk_Models_StreamInput_InputPath_" data-uid="Bitmovin.Api.Sdk.Models.StreamInput.InputPath*"></a>
   <h4 id="Bitmovin_Api_Sdk_Models_StreamInput_InputPath" data-uid="Bitmovin.Api.Sdk.Models.StreamInput.InputPath">InputPath</h4>
-  <div class="markdown level1 summary"><p>Path to media file</p>
+  <div class="markdown level1 summary"><p>Path to an input media file. Required if 'inputStreamId' is not set.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -195,7 +195,7 @@
   
   <a id="Bitmovin_Api_Sdk_Models_StreamInput_InputStreamId_" data-uid="Bitmovin.Api.Sdk.Models.StreamInput.InputStreamId*"></a>
   <h4 id="Bitmovin_Api_Sdk_Models_StreamInput_InputStreamId" data-uid="Bitmovin.Api.Sdk.Models.StreamInput.InputStreamId">InputStreamId</h4>
-  <div class="markdown level1 summary"><p>Set this property instead of all others to reference an ingest, trimming or concatenation input stream</p>
+  <div class="markdown level1 summary"><p>Set this property instead of all others to reference an InputStream resource (e.g. an Ingest-, Trimming- or ConcatenationInputStream)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -221,7 +221,7 @@
   
   <a id="Bitmovin_Api_Sdk_Models_StreamInput_Position_" data-uid="Bitmovin.Api.Sdk.Models.StreamInput.Position*"></a>
   <h4 id="Bitmovin_Api_Sdk_Models_StreamInput_Position" data-uid="Bitmovin.Api.Sdk.Models.StreamInput.Position">Position</h4>
-  <div class="markdown level1 summary"><p>Position of the stream, starting from 0.</p>
+  <div class="markdown level1 summary"><p>Position of the stream to be selected from the input file (zero-based). Must not be set in combination with selectionMode 'AUTO', defaults to 0 for any other selectionMode.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -247,7 +247,7 @@
   
   <a id="Bitmovin_Api_Sdk_Models_StreamInput_SelectionMode_" data-uid="Bitmovin.Api.Sdk.Models.StreamInput.SelectionMode*"></a>
   <h4 id="Bitmovin_Api_Sdk_Models_StreamInput_SelectionMode" data-uid="Bitmovin.Api.Sdk.Models.StreamInput.SelectionMode">SelectionMode</h4>
-  <div class="markdown level1 summary"><p>Specifies the algorithm how the stream in the input file will be selected</p>
+  <div class="markdown level1 summary"><p>Specifies the strategy for selecting a stream from the input file. Must not be set when 'inputStreamId' is set.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
