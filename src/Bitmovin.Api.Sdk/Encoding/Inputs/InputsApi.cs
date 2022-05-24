@@ -21,9 +21,6 @@ using Bitmovin.Api.Sdk.Encoding.Inputs.Https;
 using Bitmovin.Api.Sdk.Encoding.Inputs.Aspera;
 using Bitmovin.Api.Sdk.Encoding.Inputs.AkamaiNetstorage;
 using Bitmovin.Api.Sdk.Encoding.Inputs.Srt;
-using Bitmovin.Api.Sdk.Encoding.Inputs.Tcp;
-using Bitmovin.Api.Sdk.Encoding.Inputs.Udp;
-using Bitmovin.Api.Sdk.Encoding.Inputs.UdpMulticast;
 using Bitmovin.Api.Sdk.Encoding.Inputs.Zixi;
 
 namespace Bitmovin.Api.Sdk.Encoding.Inputs
@@ -52,9 +49,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs
             Aspera = new AsperaApi(apiClientFactory);
             AkamaiNetstorage = new AkamaiNetstorageApi(apiClientFactory);
             Srt = new SrtApi(apiClientFactory);
-            Tcp = new TcpApi(apiClientFactory);
-            Udp = new UdpApi(apiClientFactory);
-            UdpMulticast = new UdpMulticastApi(apiClientFactory);
             Zixi = new ZixiApi(apiClientFactory);
         }
 
@@ -80,9 +74,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs
         public AsperaApi Aspera { get; }
         public AkamaiNetstorageApi AkamaiNetstorage { get; }
         public SrtApi Srt { get; }
-        public TcpApi Tcp { get; }
-        public UdpApi Udp { get; }
-        public UdpMulticastApi UdpMulticast { get; }
         public ZixiApi Zixi { get; }
 
         /// <summary>

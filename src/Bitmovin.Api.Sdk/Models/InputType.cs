@@ -92,24 +92,6 @@ namespace Bitmovin.Api.Sdk.Models
         SFTP,
 
         /// <summary>
-        /// TCP
-        /// </summary>
-        [EnumMember(Value = "TCP")]
-        TCP,
-
-        /// <summary>
-        /// UDP
-        /// </summary>
-        [EnumMember(Value = "UDP")]
-        UDP,
-
-        /// <summary>
-        /// UDP_MULTICAST
-        /// </summary>
-        [EnumMember(Value = "UDP_MULTICAST")]
-        UDP_MULTICAST,
-
-        /// <summary>
         /// ZIXI
         /// </summary>
         [EnumMember(Value = "ZIXI")]
