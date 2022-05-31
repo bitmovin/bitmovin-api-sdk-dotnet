@@ -22,13 +22,13 @@ namespace Bitmovin.Api.Sdk.Models
         public double? Offset { get; set; }
 
         /// <summary>
-        /// Defines how many seconds from the input will be encoded.
+        /// Defines how many seconds from the input will be encoded. If not set, the input will be encoded until its end.
         /// </summary>
         [JsonProperty(PropertyName = "duration")]
         public double? Duration { get; set; }
 
         /// <summary>
-        /// If set, \&quot;duration\&quot; will be interpreted as a maximum and not cause an error if the input is too short
+        /// When true, \&quot;duration\&quot; will be interpreted as a maximum and not cause an error if the input is too short
         /// </summary>
         [JsonProperty(PropertyName = "ignoreDurationIfInputTooShort")]
         public bool? IgnoreDurationIfInputTooShort { get; set; }

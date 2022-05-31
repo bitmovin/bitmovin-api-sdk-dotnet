@@ -544,7 +544,7 @@ namespace Bitmovin.Api.Sdk.Models
         public int? SegmentDownloadTime { get; set; }
 
         /// <summary>
-        /// Sequence number of the sample in which it occured in the session
+        /// Sequence number of the sample in which it occurred in the session
         /// </summary>
         [JsonProperty(PropertyName = "sequence_number")]
         public long? SequenceNumber { get; set; }

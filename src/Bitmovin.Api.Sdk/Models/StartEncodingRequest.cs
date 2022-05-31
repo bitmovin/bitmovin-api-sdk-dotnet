@@ -16,7 +16,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class StartEncodingRequest
     {
         /// <summary>
-        /// Allows to encode only part of the input. Defines start (offset) and duration of the desired section.
+        /// Allows to encode only part of the input. Defines start (offset) and duration of the desired section. This is not allowed when the Encoding uses any kind of Input Stream resource.
         /// </summary>
         [JsonProperty(PropertyName = "trimming")]
         public Trimming Trimming { get; set; }

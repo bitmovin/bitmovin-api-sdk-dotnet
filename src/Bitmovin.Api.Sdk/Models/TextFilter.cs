@@ -103,7 +103,7 @@ namespace Bitmovin.Api.Sdk.Models
         public int? ShadowY { get; set; }
 
         /// <summary>
-        /// If set, the timecode representation in \&quot;hh:mm:ss[:;.]ff\&quot; format will be applied
+        /// If set, the timecode representation in \&quot;hh:mm:ss[:;.]ff\&quot; format will be applied. Drop-frame timecodes (containing \&quot;;\&quot; or \&quot;.\&quot;) must only be used with video frame rates of 29.97, 30, 59.94 or 60 FPS, according to the SMPTE standard
         /// </summary>
         [JsonProperty(PropertyName = "timecode")]
         public string Timecode { get; set; }
@@ -127,7 +127,7 @@ namespace Bitmovin.Api.Sdk.Models
         public string Y { get; set; }
 
         /// <summary>
-        /// Rate
+        /// Video frame rate
         /// </summary>
         [JsonProperty(PropertyName = "rate")]
         public string Rate { get; set; }
