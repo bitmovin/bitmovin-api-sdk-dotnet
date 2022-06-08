@@ -43,7 +43,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Inputs
         /// </summary>
         [JsonProperty(PropertyName = "inputs")]
-        public List<SimpleEncodingVodJobUrlInput> Inputs { get; set; } = new List<SimpleEncodingVodJobUrlInput>();
+        public List<SimpleEncodingVodJobInput> Inputs { get; set; } = new List<SimpleEncodingVodJobInput>();
 
         /// <summary>
         /// Outputs

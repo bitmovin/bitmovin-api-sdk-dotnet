@@ -13,8 +13,11 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// SimpleEncodingVodJobUrlInput
     /// </summary>
-    public class SimpleEncodingVodJobUrlInput
+    public class SimpleEncodingVodJobUrlInput : SimpleEncodingVodJobInput
     {
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "URL";
+
         /// <summary>
         /// Define a URL pointing to the asset that should be encoded. The URL has to point to a file.  Currently the following protocols/storages systems are supported: HTTP(S), (S)FTP, S3, GCS, Azure Blob Storage, Akamai NetStorage. Note that most protocols will require &#x60;credentials&#x60; to access the asset. Check the description below which ones are applicable. See below how to construct the URLs for the individual protocols/storage systems.  - --  **HTTP** and **HTTPS**: * &#x60;http://&lt;host&gt;[:&lt;port&gt;]/path/file.mp4&#x60; * &#x60;https://&lt;host&gt;[:&lt;port&gt;]/path/file.mp4&#x60;  The port is defaulted to 80 if it&#39;s not provided. If the content is secured by Basic Authentication please provide corresponding credentials.  **FTP** and **SFTP**: * &#x60;ftp://&lt;host&gt;[:&lt;port&gt;]/path/file.mp4&#x60; * &#x60;sftp://&lt;host&gt;[:&lt;port&gt;]/path/file.mp4&#x60;  The port is defaulted to 21 (ftp) or  22 (sftp) if it&#39;s not provided. If the content is secured please provide corresponding credentials.  **S3**: * &#x60;s3://&lt;my-bucket&gt;/path/file.mp4&#x60;  Authentication can be done via accesskey/secretkey or role-based authentication. Generic S3 is currently NOT supported.  **GCS**: * &#x60;gcs://&lt;my-bucket&gt;/path/file.mp4&#x60;  Authentication can be done via accesskey/secretkey or a service account  **Azure Blob Storage (ABS)**: * &#x60;https://&lt;account&gt;.blob.core.windows.net/&lt;container&gt;/path/file.mp4&#x60;  It is required to provide the Azure key credentials for authentication.  **Akamai NetStorage**: * &#x60;https://&lt;host&gt;-nsu.akamaihd.net/&lt;CP-code&gt;/path/file.mp4&#x60;  It is required to provide username/password credentials for authentication. (required)
         /// </summary>
