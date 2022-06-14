@@ -11,6 +11,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// Input source type
         /// </summary>
         [EnumMember(Value = "URL")]
-        URL
+        URL,
+
+        /// <summary>
+        /// Input source type
+        /// </summary>
+        [EnumMember(Value = "DIRECT_FILE_UPLOAD")]
+        DIRECT_FILE_UPLOAD
     }
 }

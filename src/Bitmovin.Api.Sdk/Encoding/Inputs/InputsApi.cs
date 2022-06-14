@@ -22,6 +22,7 @@ using Bitmovin.Api.Sdk.Encoding.Inputs.Aspera;
 using Bitmovin.Api.Sdk.Encoding.Inputs.AkamaiNetstorage;
 using Bitmovin.Api.Sdk.Encoding.Inputs.Srt;
 using Bitmovin.Api.Sdk.Encoding.Inputs.Zixi;
+using Bitmovin.Api.Sdk.Encoding.Inputs.DirectFileUpload;
 
 namespace Bitmovin.Api.Sdk.Encoding.Inputs
 {
@@ -50,6 +51,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs
             AkamaiNetstorage = new AkamaiNetstorageApi(apiClientFactory);
             Srt = new SrtApi(apiClientFactory);
             Zixi = new ZixiApi(apiClientFactory);
+            DirectFileUpload = new DirectFileUploadApi(apiClientFactory);
         }
 
         /// <summary>
@@ -75,6 +77,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs
         public AkamaiNetstorageApi AkamaiNetstorage { get; }
         public SrtApi Srt { get; }
         public ZixiApi Zixi { get; }
+        public DirectFileUploadApi DirectFileUpload { get; }
 
         /// <summary>
         /// Get Input Details

@@ -15,6 +15,7 @@ namespace Bitmovin.Api.Sdk.Models
     /// </summary>
     [JsonConverter(typeof(JsonSubtypes), "type")]
     [JsonSubtypes.KnownSubType(typeof(SimpleEncodingVodJobUrlInput), "URL")]
+    [JsonSubtypes.KnownSubType(typeof(SimpleEncodingVodJobDirectFileUploadInput), "DIRECT_FILE_UPLOAD")]
 
     public class SimpleEncodingVodJobInput
     {
