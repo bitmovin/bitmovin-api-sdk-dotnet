@@ -22,7 +22,7 @@ namespace Bitmovin.Api.Sdk.Models
         public string LicenseKey { get; set; }
 
         /// <summary>
-        /// Filters
+        /// Analytics Query Filters  Each filter requires 3 properties: name, operator and value.   Valid operators are [IN, EQ, NE, LT, LTE, GT, GTE, CONTAINS, NOTCONTAINS] 
         /// </summary>
         [JsonProperty(PropertyName = "filters")]
         public List<AdAnalyticsAbstractFilter> Filters { get; set; } = new List<AdAnalyticsAbstractFilter>();

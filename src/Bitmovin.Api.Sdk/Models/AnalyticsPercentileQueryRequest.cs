@@ -16,7 +16,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class AnalyticsPercentileQueryRequest : AnalyticsQueryRequest
     {
         /// <summary>
-        /// The percentage (0-99) used for percentile queries.
+        /// The percentage (0-99) used for percentile queries. (required)
         /// </summary>
         [JsonProperty(PropertyName = "percentile")]
         public long? Percentile { get; set; }
