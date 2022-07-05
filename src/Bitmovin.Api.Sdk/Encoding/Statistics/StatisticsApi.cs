@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using RestEase;
 using Bitmovin.Api.Sdk.Common;
+using Bitmovin.Api.Sdk.Encoding.Statistics.Cdn;
 using Bitmovin.Api.Sdk.Encoding.Statistics.Daily;
 using Bitmovin.Api.Sdk.Encoding.Statistics.Encodings;
 using Bitmovin.Api.Sdk.Encoding.Statistics.Labels;
@@ -17,6 +18,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics
         public StatisticsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IStatisticsApiClient>();
+            Cdn = new CdnApi(apiClientFactory);
             Daily = new DailyApi(apiClientFactory);
             Encodings = new EncodingsApi(apiClientFactory);
             Labels = new LabelsApi(apiClientFactory);
@@ -27,6 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics
         /// </summary>
         public static BitmovinApiBuilder<StatisticsApi> Builder => new BitmovinApiBuilder<StatisticsApi>();
 
+        public CdnApi Cdn { get; }
         public DailyApi Daily { get; }
         public EncodingsApi Encodings { get; }
         public LabelsApi Labels { get; }
