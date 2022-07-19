@@ -55,7 +55,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// If this is set and contains objects, then this stream has been ignored during the encoding process
         /// </summary>
         [JsonProperty(PropertyName = "ignoredBy")]
-        public List<Ignoring> IgnoredBy { get; set; } = new List<Ignoring>();
+        public List<Ignoring> IgnoredBy { get; internal set; } = new List<Ignoring>();
 
         /// <summary>
         /// Mode of the stream

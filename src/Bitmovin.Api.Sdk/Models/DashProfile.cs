@@ -8,13 +8,13 @@ namespace Bitmovin.Api.Sdk.Models
     public enum DashProfile
     {
         /// <summary>
-        /// LIVE can only use fMP4 muxing
+        /// The profile to be used for fMP4 muxings
         /// </summary>
         [EnumMember(Value = "LIVE")]
         LIVE,
 
         /// <summary>
-        /// ON_DEMAND can only use MP4 muxing
+        /// The profile to be used for MP4 muxings
         /// </summary>
         [EnumMember(Value = "ON_DEMAND")]
         ON_DEMAND
