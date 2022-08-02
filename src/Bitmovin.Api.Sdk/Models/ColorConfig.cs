@@ -86,5 +86,17 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "inputColorRange")]
         public InputColorRange? InputColorRange { get; set; }
+
+        /// <summary>
+        /// Override the color primaries detected in the input file. If not set the input color primaries will be automatically detected if possible.
+        /// </summary>
+        [JsonProperty(PropertyName = "inputColorPrimaries")]
+        public InputColorPrimaries? InputColorPrimaries { get; set; }
+
+        /// <summary>
+        /// Override the color transfer detected in the input file. If not set the input color transfer will be automatically detected if possible.
+        /// </summary>
+        [JsonProperty(PropertyName = "inputColorTransfer")]
+        public InputColorTransfer? InputColorTransfer { get; set; }
     }
 }

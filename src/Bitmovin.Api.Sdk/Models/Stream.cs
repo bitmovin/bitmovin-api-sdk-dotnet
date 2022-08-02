@@ -46,13 +46,13 @@ namespace Bitmovin.Api.Sdk.Models
         public int? SegmentsEncoded { get; internal set; }
 
         /// <summary>
-        /// Conditions to evaluate before creating the stream. If this evaluation fails, the stream won&#39;t be created. All muxings that depend on the stream will also not be created.
+        /// Defines a condition that is evaluated against the input of the Stream. If the condition is not fulfilled, the Stream will be ignored during the encoding process. The &#39;streamConditionMode&#39; of a Muxing allows to control how ignored Streams affect the Muxing. When retrieving the resource after the analysis step of the encoding has finished, &#39;ignoredBy&#39; will indicate if and why it has been ignored. See [Stream Conditions](https://bitmovin.com/docs/encoding/articles/stream-conditions) for more information
         /// </summary>
         [JsonProperty(PropertyName = "conditions")]
         public AbstractCondition Conditions { get; set; }
 
         /// <summary>
-        /// If this is set and contains objects, then this stream has been ignored during the encoding process
+        /// This read-only property is set during the analysis step of the encoding. If it contains items, the Stream has been ignored during the encoding process due to its &#39;conditions&#39;
         /// </summary>
         [JsonProperty(PropertyName = "ignoredBy")]
         public List<Ignoring> IgnoredBy { get; internal set; } = new List<Ignoring>();

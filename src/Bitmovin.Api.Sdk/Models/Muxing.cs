@@ -63,13 +63,13 @@ namespace Bitmovin.Api.Sdk.Models
         public long? MaxBitrate { get; internal set; }
 
         /// <summary>
-        /// If this is set and contains objects, then this muxing has been ignored during the encoding process
+        /// This read-only property is set during the analysis step of the encoding. If it contains items, the Muxing has been ignored during the encoding process according to its &#39;streamConditionsMode&#39;
         /// </summary>
         [JsonProperty(PropertyName = "ignoredBy")]
         public List<Ignoring> IgnoredBy { get; internal set; } = new List<Ignoring>();
 
         /// <summary>
-        /// Specifies how to handle streams that don&#39;t fulfill stream conditions
+        /// Specifies how to proceed with the Muxing when some of its Streams are ignored (see &#39;condition&#39; property of the Stream resource). The settings only make a difference for Muxings with more than one Stream. When retrieving the resource after the analysis step of the encoding has finished, &#39;ignoredBy&#39; will indicate if and why it has been ignored.
         /// </summary>
         [JsonProperty(PropertyName = "streamConditionsMode")]
         public StreamConditionsMode? StreamConditionsMode { get; set; }

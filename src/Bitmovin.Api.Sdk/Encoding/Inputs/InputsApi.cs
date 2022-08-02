@@ -132,6 +132,11 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs
             /// </summary>
             public ListQueryParams Name(string name) => SetQueryParam("name", name);
 
+            /// <summary>
+            /// Order list result according an input resource attribute.  The fields that can be used for sorting are: + &#x60;id&#x60; + &#x60;createdAt&#x60; + &#x60;modifiedAt&#x60; + &#x60;type&#x60; + &#x60;name&#x60; 
+            /// </summary>
+            public ListQueryParams Sort(string sort) => SetQueryParam("sort", sort);
+
             private ListQueryParams SetQueryParam<T>(string key, T value)
             {
                 if (value != null)
