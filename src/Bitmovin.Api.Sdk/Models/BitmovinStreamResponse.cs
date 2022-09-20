@@ -52,15 +52,21 @@ namespace Bitmovin.Api.Sdk.Models
         public BitmovinStreamStatus? Status { get; internal set; }
 
         /// <summary>
-        /// The target quality of the Stream
+        /// The target quality of the Stream (OBSOLETE!)
         /// </summary>
         [JsonProperty(PropertyName = "targetQuality")]
         public BitmovinStreamQuality? TargetQuality { get; internal set; }
 
         /// <summary>
-        /// List of available stream qualities
+        /// List of available stream qualities (OBSOLETE!)
         /// </summary>
         [JsonProperty(PropertyName = "availableQualities")]
         public List<BitmovinStreamQuality> AvailableQualities { get; internal set; } = new List<BitmovinStreamQuality>();
+
+        /// <summary>
+        /// List of encoding status information
+        /// </summary>
+        [JsonProperty(PropertyName = "encodingTasks")]
+        public List<BitmovinStreamEncodingTask> EncodingTasks { get; internal set; } = new List<BitmovinStreamEncodingTask>();
     }
 }
