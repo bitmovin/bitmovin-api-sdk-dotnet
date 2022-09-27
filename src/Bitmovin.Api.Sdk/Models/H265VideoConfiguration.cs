@@ -217,7 +217,7 @@ namespace Bitmovin.Api.Sdk.Models
         public AdaptiveQuantMode? AdaptiveQuantizationMode { get; set; }
 
         /// <summary>
-        /// By enabling this video stream will be signaled as HLG
+        /// Enable SDR compatible HLG signaling. The container and bitstream will indicate BT.2020 but ARIB STD-B67 will be signaled in the alternative transfer characteristics SEI message.
         /// </summary>
         [JsonProperty(PropertyName = "enableHlgSignaling")]
         public bool? EnableHlgSignaling { get; set; }
