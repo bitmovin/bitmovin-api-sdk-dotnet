@@ -113,9 +113,14 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs
             public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
 
             /// <summary>
-            /// Filter output by name
+            /// Filter outputs by name
             /// </summary>
             public ListQueryParams Name(string name) => SetQueryParam("name", name);
+
+            /// <summary>
+            /// Filter outputs by type
+            /// </summary>
+            public ListQueryParams Type(Models.OutputType type) => SetQueryParam("type", type);
 
             private ListQueryParams SetQueryParam<T>(string key, T value)
             {
