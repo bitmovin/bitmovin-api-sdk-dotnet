@@ -86,5 +86,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "cloudRegion")]
         public SimpleEncodingLiveCloudRegion? CloudRegion { get; set; }
+
+        /// <summary>
+        /// The profile that will be used for the live encoding.
+        /// </summary>
+        [JsonProperty(PropertyName = "encodingProfile")]
+        public SimpleEncodingLiveProfile? EncodingProfile { get; set; }
     }
 }

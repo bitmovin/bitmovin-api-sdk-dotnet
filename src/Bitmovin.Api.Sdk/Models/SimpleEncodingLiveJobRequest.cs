@@ -16,6 +16,12 @@ namespace Bitmovin.Api.Sdk.Models
     public class SimpleEncodingLiveJobRequest
     {
         /// <summary>
+        /// The profile that will be used for the live encoding.
+        /// </summary>
+        [JsonProperty(PropertyName = "encodingProfile")]
+        public SimpleEncodingLiveProfile? EncodingProfile { get; set; }
+
+        /// <summary>
         /// Input
         /// </summary>
         [JsonProperty(PropertyName = "input")]
