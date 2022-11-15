@@ -19,5 +19,10 @@ namespace Bitmovin.Api.Sdk.Models
 
     public class SimpleEncodingVodJobOutput
     {
+        /// <summary>
+        /// List of artifacts created by the encoding job. Artifacts are files essential for playback of the generated content, e.g. manifests. 
+        /// </summary>
+        [JsonProperty(PropertyName = "artifacts")]
+        public List<SimpleEncodingVodJobOutputArtifact> Artifacts { get; internal set; } = new List<SimpleEncodingVodJobOutputArtifact>();
     }
 }

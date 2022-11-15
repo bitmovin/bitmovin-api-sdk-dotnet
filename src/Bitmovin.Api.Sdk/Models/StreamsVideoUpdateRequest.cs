@@ -11,24 +11,24 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// CreateBitmovinStreamRequest
+    /// StreamsVideoUpdateRequest
     /// </summary>
-    public class CreateBitmovinStreamRequest
+    public class StreamsVideoUpdateRequest
     {
         /// <summary>
-        /// The Streams input asset URL
+        /// The new status of the stream
         /// </summary>
-        [JsonProperty(PropertyName = "assetUrl")]
-        public string AssetUrl { get; set; }
+        [JsonProperty(PropertyName = "status")]
+        public StreamsVideoStatus? Status { get; set; }
 
         /// <summary>
-        /// Title of the Stream
+        /// The new title of the stream
         /// </summary>
         [JsonProperty(PropertyName = "title")]
         public string Title { get; set; }
 
         /// <summary>
-        /// Description of the Stream
+        /// The new description of the stream
         /// </summary>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }

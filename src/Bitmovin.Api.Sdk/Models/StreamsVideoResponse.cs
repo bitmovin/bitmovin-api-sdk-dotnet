@@ -11,30 +11,30 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// BitmovinStreamResponse
+    /// StreamsVideoResponse
     /// </summary>
-    public class BitmovinStreamResponse
+    public class StreamsVideoResponse
     {
         /// <summary>
-        /// The identifier of the Stream
+        /// The identifier of the stream
         /// </summary>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; internal set; }
 
         /// <summary>
-        /// The asset URL of the Stream
+        /// The asset URL of the stream
         /// </summary>
         [JsonProperty(PropertyName = "assetUrl")]
         public string AssetUrl { get; internal set; }
 
         /// <summary>
-        /// The title of the Stream
+        /// The title of the stream
         /// </summary>
         [JsonProperty(PropertyName = "title")]
         public string Title { get; internal set; }
 
         /// <summary>
-        /// The description of the Stream
+        /// The description of the stream
         /// </summary>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; internal set; }
@@ -46,27 +46,15 @@ namespace Bitmovin.Api.Sdk.Models
         public DateTime? CreatedAt { get; internal set; }
 
         /// <summary>
-        /// The status of the Stream
+        /// The status of the stream
         /// </summary>
         [JsonProperty(PropertyName = "status")]
-        public BitmovinStreamStatus? Status { get; internal set; }
-
-        /// <summary>
-        /// The target quality of the Stream (OBSOLETE!)
-        /// </summary>
-        [JsonProperty(PropertyName = "targetQuality")]
-        public BitmovinStreamQuality? TargetQuality { get; internal set; }
-
-        /// <summary>
-        /// List of available stream qualities (OBSOLETE!)
-        /// </summary>
-        [JsonProperty(PropertyName = "availableQualities")]
-        public List<BitmovinStreamQuality> AvailableQualities { get; internal set; } = new List<BitmovinStreamQuality>();
+        public StreamsVideoStatus? Status { get; internal set; }
 
         /// <summary>
         /// List of encoding status information
         /// </summary>
         [JsonProperty(PropertyName = "encodingTasks")]
-        public List<BitmovinStreamEncodingTask> EncodingTasks { get; internal set; } = new List<BitmovinStreamEncodingTask>();
+        public List<StreamsVideoEncodingTask> EncodingTasks { get; internal set; } = new List<StreamsVideoEncodingTask>();
     }
 }

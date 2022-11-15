@@ -3,9 +3,9 @@ using System.Runtime.Serialization;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// BitmovinStreamEncodingStatus
+    /// StreamsVideoEncodingStatus
     /// </summary>
-    public enum BitmovinStreamEncodingStatus
+    public enum StreamsVideoEncodingStatus
     {
         /// <summary>
         /// The encoding has been started and is in progress

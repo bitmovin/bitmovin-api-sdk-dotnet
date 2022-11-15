@@ -11,20 +11,20 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// BitmovinStreamEncodingTask
+    /// StreamsVideoEncodingTask
     /// </summary>
-    public class BitmovinStreamEncodingTask
+    public class StreamsVideoEncodingTask
     {
         /// <summary>
         /// Quality of the encoding
         /// </summary>
         [JsonProperty(PropertyName = "quality")]
-        public BitmovinStreamQuality? Quality { get; internal set; }
+        public StreamsVideoQuality? Quality { get; internal set; }
 
         /// <summary>
         /// Current state of the encoding
         /// </summary>
         [JsonProperty(PropertyName = "status")]
-        public BitmovinStreamEncodingStatus? Status { get; internal set; }
+        public StreamsVideoEncodingStatus? Status { get; internal set; }
     }
 }

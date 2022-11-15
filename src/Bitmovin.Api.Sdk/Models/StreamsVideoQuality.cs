@@ -3,9 +3,9 @@ using System.Runtime.Serialization;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// BitmovinStreamQuality
+    /// StreamsVideoQuality
     /// </summary>
-    public enum BitmovinStreamQuality
+    public enum StreamsVideoQuality
     {
         /// <summary>
         /// The loading placeholder displayed until the first encoding is done

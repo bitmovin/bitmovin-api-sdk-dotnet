@@ -3,18 +3,18 @@ using System.Runtime.Serialization;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// BitmovinStreamStatus
+    /// StreamsVideoStatus
     /// </summary>
-    public enum BitmovinStreamStatus
+    public enum StreamsVideoStatus
     {
         /// <summary>
-        /// The Stream is published and can be accessed
+        /// The stream is published and can be accessed
         /// </summary>
         [EnumMember(Value = "PUBLISHED")]
         PUBLISHED,
 
         /// <summary>
-        /// The Stream can&#39;t be accessed
+        /// The stream cannot be accessed
         /// </summary>
         [EnumMember(Value = "UNPUBLISHED")]
         UNPUBLISHED
