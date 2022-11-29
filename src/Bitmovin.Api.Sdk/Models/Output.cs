@@ -31,7 +31,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class Output : BitmovinResource
     {
         /// <summary>
-        /// Acl
+        /// Deprecation notice: This property does not have any effect and will not be returned by GET endpoints
         /// </summary>
         [JsonProperty(PropertyName = "acl")]
         public List<AclEntry> Acl { get; set; } = new List<AclEntry>();
