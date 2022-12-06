@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// Sets the Dolby Vision track&#39;s sample entry name
+    /// Dolby Vision track&#39;s sample entry name
     /// </summary>
     public enum DolbyVisionTrackSampleEntryName
     {

@@ -22,13 +22,13 @@ namespace Bitmovin.Api.Sdk.Models
         public Trimming Trimming { get; set; }
 
         /// <summary>
-        /// Set scheduling parameters of the encoding.
+        /// Scheduling parameters of the encoding.
         /// </summary>
         [JsonProperty(PropertyName = "scheduling")]
         public Scheduling Scheduling { get; set; }
 
         /// <summary>
-        /// Set special tweaks for your encoding job.
+        /// Special tweaks for your encoding job.
         /// </summary>
         [JsonProperty(PropertyName = "tweaks")]
         public Tweaks Tweaks { get; set; }
@@ -76,7 +76,7 @@ namespace Bitmovin.Api.Sdk.Models
         public List<ManifestResource> VodSmoothManifests { get; set; } = new List<ManifestResource>();
 
         /// <summary>
-        /// Sets the version of the manifest generation engine
+        /// Version of the manifest generation engine to be used
         /// </summary>
         [JsonProperty(PropertyName = "manifestGenerator")]
         public ManifestGenerator? ManifestGenerator { get; set; }

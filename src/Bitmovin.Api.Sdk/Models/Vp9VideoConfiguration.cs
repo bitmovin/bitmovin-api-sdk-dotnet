@@ -31,7 +31,7 @@ namespace Bitmovin.Api.Sdk.Models
         public Vp9DynamicRangeFormat? DynamicRangeFormat { get; set; }
 
         /// <summary>
-        /// Sets the constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.
+        /// Constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.
         /// </summary>
         [JsonProperty(PropertyName = "crf")]
         public int? Crf { get; set; }
@@ -73,13 +73,13 @@ namespace Bitmovin.Api.Sdk.Models
         public long? MaxIntraRate { get; set; }
 
         /// <summary>
-        /// Sets the minimum of quantization factor.
+        /// Minimum quantization factor.
         /// </summary>
         [JsonProperty(PropertyName = "qpMin")]
         public int? QpMin { get; set; }
 
         /// <summary>
-        /// Sets the maximum of quantization factor.
+        /// Maximum quantization factor.
         /// </summary>
         [JsonProperty(PropertyName = "qpMax")]
         public int? QpMax { get; set; }

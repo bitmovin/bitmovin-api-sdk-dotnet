@@ -52,13 +52,13 @@ namespace Bitmovin.Api.Sdk.Models
         public bool? VariableMuxRate { get; set; }
 
         /// <summary>
-        /// Sets the presentation time stamp value for the first video frame. The timestamp is specified in the timescale of 90000
+        /// Presentation time stamp value for the first video frame. The timestamp is specified in the timescale of 90000
         /// </summary>
         [JsonProperty(PropertyName = "initialPresentationTimeStamp")]
         public double? InitialPresentationTimeStamp { get; set; }
 
         /// <summary>
-        /// Sets the Program Clock Reference value at the beginning of the first packet for the transport stream. The PCR is specified in the timescale of 90000
+        /// Program Clock Reference value at the beginning of the first packet for the transport stream. The PCR is specified in the timescale of 90000
         /// </summary>
         [JsonProperty(PropertyName = "initialProgramClockReference")]
         public double? InitialProgramClockReference { get; set; }

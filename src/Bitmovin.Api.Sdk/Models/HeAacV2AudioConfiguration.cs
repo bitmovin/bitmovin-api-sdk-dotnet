@@ -25,7 +25,7 @@ namespace Bitmovin.Api.Sdk.Models
         public AacChannelLayout? ChannelLayout { get; set; }
 
         /// <summary>
-        /// Sets the Spectral Band Replication (SBR) and Parameteric Stereo (PS) signaling style.
+        /// Spectral Band Replication (SBR) and Parameteric Stereo (PS) signaling style.
         /// </summary>
         [JsonProperty(PropertyName = "signaling")]
         public HeAacV2Signaling? Signaling { get; set; }

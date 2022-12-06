@@ -31,7 +31,7 @@ namespace Bitmovin.Api.Sdk.Models
         public H265DynamicRangeFormat? DynamicRangeFormat { get; set; }
 
         /// <summary>
-        /// Sets the constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.
+        /// Constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.
         /// </summary>
         [JsonProperty(PropertyName = "crf")]
         public double? Crf { get; set; }
@@ -43,19 +43,19 @@ namespace Bitmovin.Api.Sdk.Models
         public ProfileH265? Profile { get; set; }
 
         /// <summary>
-        /// Sets the amount of b frames
+        /// Amount of b frames
         /// </summary>
         [JsonProperty(PropertyName = "bframes")]
         public int? Bframes { get; set; }
 
         /// <summary>
-        /// Sets the amount of reference frames
+        /// Amount of reference frames
         /// </summary>
         [JsonProperty(PropertyName = "refFrames")]
         public int? RefFrames { get; set; }
 
         /// <summary>
-        /// Sets the quantization factor
+        /// Quantization factor
         /// </summary>
         [JsonProperty(PropertyName = "qp")]
         public int? Qp { get; set; }
@@ -337,13 +337,13 @@ namespace Bitmovin.Api.Sdk.Models
         public RateDistortionLevelForQuantization? RateDistortionLevelForQuantization { get; set; }
 
         /// <summary>
-        /// Sets the minimum of quantization factor. Valid value range: 0 - 69
+        /// Minimum quantization factor. Valid value range: 0 - 69
         /// </summary>
         [JsonProperty(PropertyName = "qpMin")]
         public int? QpMin { get; set; }
 
         /// <summary>
-        /// Sets the maximum of quantization factor. Valid value range: 0 - 69
+        /// Maximum quantization factor. Valid value range: 0 - 69
         /// </summary>
         [JsonProperty(PropertyName = "qpMax")]
         public int? QpMax { get; set; }
@@ -541,7 +541,7 @@ namespace Bitmovin.Api.Sdk.Models
         public double? PbRatio { get; set; }
 
         /// <summary>
-        /// Sets the quantizer curve compression factor. It weights the frame quantizer based on the complexity of residual (measured by lookahead). Default 0.6
+        /// Quantizer curve compression factor. It weights the frame quantizer based on the complexity of residual (measured by lookahead). Default 0.6
         /// </summary>
         [JsonProperty(PropertyName = "quantizerCurveCompressionFactor")]
         public double? QuantizerCurveCompressionFactor { get; set; }

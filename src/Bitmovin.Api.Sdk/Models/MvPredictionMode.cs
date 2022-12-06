@@ -3,30 +3,30 @@ using System.Runtime.Serialization;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// Sets the Motion Vector Prediction Mode.
+    /// Motion vector prediction mode
     /// </summary>
     public enum MvPredictionMode
     {
         /// <summary>
-        /// Sets the Motion Vector Prediction Mode.
+        /// Motion vector prediction mode
         /// </summary>
         [EnumMember(Value = "NONE")]
         NONE,
 
         /// <summary>
-        /// Sets the Motion Vector Prediction Mode.
+        /// Motion vector prediction mode
         /// </summary>
         [EnumMember(Value = "SPATIAL")]
         SPATIAL,
 
         /// <summary>
-        /// Sets the Motion Vector Prediction Mode.
+        /// Motion vector prediction mode
         /// </summary>
         [EnumMember(Value = "TEMPORAL")]
         TEMPORAL,
 
         /// <summary>
-        /// Sets the Motion Vector Prediction Mode.
+        /// Motion vector prediction mode
         /// </summary>
         [EnumMember(Value = "AUTO")]
         AUTO

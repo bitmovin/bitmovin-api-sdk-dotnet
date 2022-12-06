@@ -31,7 +31,7 @@ namespace Bitmovin.Api.Sdk.Models
         public H264DynamicRangeFormat? DynamicRangeFormat { get; set; }
 
         /// <summary>
-        /// Sets the constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.
+        /// Constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.
         /// </summary>
         [JsonProperty(PropertyName = "crf")]
         public double? Crf { get; set; }
@@ -43,25 +43,25 @@ namespace Bitmovin.Api.Sdk.Models
         public ProfileH264? Profile { get; set; }
 
         /// <summary>
-        /// Sets the amount of b frames.
+        /// Amount of b frames
         /// </summary>
         [JsonProperty(PropertyName = "bframes")]
         public int? Bframes { get; set; }
 
         /// <summary>
-        /// Sets the amount of reference frames.
+        /// Amount of reference frames.
         /// </summary>
         [JsonProperty(PropertyName = "refFrames")]
         public int? RefFrames { get; set; }
 
         /// <summary>
-        /// Sets the minimum of quantization factor.
+        /// Minimum quantization factor
         /// </summary>
         [JsonProperty(PropertyName = "qpMin")]
         public int? QpMin { get; set; }
 
         /// <summary>
-        /// Sets the maximum of quantization factor.
+        /// Maximum quantization factor
         /// </summary>
         [JsonProperty(PropertyName = "qpMax")]
         public int? QpMax { get; set; }
@@ -73,7 +73,7 @@ namespace Bitmovin.Api.Sdk.Models
         public MvPredictionMode? MvPredictionMode { get; set; }
 
         /// <summary>
-        /// Sets the maximum Motion-Vector-Search-Range
+        /// Maximum motion vector search range
         /// </summary>
         [JsonProperty(PropertyName = "mvSearchRangeMax")]
         public int? MvSearchRangeMax { get; set; }

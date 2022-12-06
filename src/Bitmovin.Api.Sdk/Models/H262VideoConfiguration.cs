@@ -31,7 +31,7 @@ namespace Bitmovin.Api.Sdk.Models
         public ProfileH262? Profile { get; set; }
 
         /// <summary>
-        /// Sets the amount of b frames.
+        /// Amount of b frames.
         /// </summary>
         [JsonProperty(PropertyName = "bframes")]
         public int? Bframes { get; set; }
