@@ -26,7 +26,7 @@ namespace Bitmovin.Api.Sdk.Models
         LIVE_HIGH_QUALITY,
 
         /// <summary>
-        /// supported for H264
+        /// supported for H264, H265
         /// </summary>
         [EnumMember(Value = "LIVE_STANDARD")]
         LIVE_STANDARD,

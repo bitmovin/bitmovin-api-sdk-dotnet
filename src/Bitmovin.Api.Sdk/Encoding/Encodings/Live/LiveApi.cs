@@ -49,7 +49,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live
         /// <summary>
         /// Re-Start Live Encoding
         /// </summary>
-        /// <param name="encodingId">Id of the encoding (required)</param>
+        /// <param name="encodingId">Id of the encoding.  **Important:** Only live encodings with the status &#x60;RUNNING&#x60;, &#x60;FINISHED&#x60;, &#x60;CANCELED&#x60; or &#x60;ERROR&#x60; can be restarted.  (required)</param>
         public async Task<Models.BitmovinResponse> RestartAsync(string encodingId)
         {
             return await _apiClient.RestartAsync(encodingId);
