@@ -19,7 +19,7 @@ namespace Bitmovin.Api.Sdk.Models
         private readonly string _type = "PROGRESSIVE_MOV";
 
         /// <summary>
-        /// The output file name
+        /// Name of the output file
         /// </summary>
         [JsonProperty(PropertyName = "filename")]
         public string Filename { get; set; }

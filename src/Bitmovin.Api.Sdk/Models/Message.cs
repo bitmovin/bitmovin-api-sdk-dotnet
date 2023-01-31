@@ -46,7 +46,7 @@ namespace Bitmovin.Api.Sdk.Models
         public Object More { get; set; }
 
         /// <summary>
-        /// Timestamp when the message occured
+        /// Timestamp when the message occurred
         /// </summary>
         [JsonProperty(PropertyName = "date")]
         public DateTime? Date { get; set; }

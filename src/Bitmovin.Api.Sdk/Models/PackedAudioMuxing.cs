@@ -25,13 +25,13 @@ namespace Bitmovin.Api.Sdk.Models
         public double? SegmentLength { get; set; }
 
         /// <summary>
-        /// Segment naming policy. The required filename extension depends on the codec (e.g. &#39;.aac&#39; for AAC).
+        /// Segment naming policy. The required filename extension depends on the codec (e.g. &#39;.aac&#39; for AAC). Either this or *segmentNamingTemplate* must be set.
         /// </summary>
         [JsonProperty(PropertyName = "segmentNaming")]
         public string SegmentNaming { get; set; }
 
         /// <summary>
-        /// Segment naming policy containing a placeholder of the format &#39;{rand_chars:x}&#39;, which will be replaced by a random alphanumeric string of length x (default 32) on each (re)start of the encoding. The resulting string will be copied to the segmentNaming property. Intended to avoid re-use of segment names after restarting a live encoding. If segmentNamingTemplate is set, segmentNaming must not be set. The required filename extension depends on the codec (e.g. &#39;.aac&#39; for AAC).
+        /// Segment naming policy containing a placeholder of the format &#39;{rand_chars:x}&#39;, which will be replaced by a random alphanumeric string of length x (default 32) on each (re)start of the encoding. The resulting string will be copied to the segmentNaming property. Intended to avoid re-use of segment names after restarting a live encoding. Either this or *segmentNaming* must be set. The required filename extension depends on the codec (e.g. &#39;.aac&#39; for AAC).
         /// </summary>
         [JsonProperty(PropertyName = "segmentNamingTemplate")]
         public string SegmentNamingTemplate { get; set; }

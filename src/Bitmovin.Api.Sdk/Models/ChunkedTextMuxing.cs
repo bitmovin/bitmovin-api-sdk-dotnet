@@ -25,7 +25,7 @@ namespace Bitmovin.Api.Sdk.Models
         public double? SegmentLength { get; set; }
 
         /// <summary>
-        /// Segment naming template
+        /// Segment naming policy
         /// </summary>
         [JsonProperty(PropertyName = "segmentNaming")]
         public string SegmentNaming { get; set; }

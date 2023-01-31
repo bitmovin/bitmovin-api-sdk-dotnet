@@ -65,6 +65,16 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs
         public CdnApi Cdn { get; }
 
         /// <summary>
+        /// Check output permissions (S3 only)
+        /// </summary>
+        /// <param name="outputId">Id of the output to be checked. Currently limited to S3 outputs. The access credentials that have been provided for this Output still need to be valid, otherwise the request will fail. If they are not valid any more, create a new Output with new credentials (resources are immutable). (required)</param>
+        /// <param name="checkOutputPermissionsRequest">Additional parameters for the permissions check</param>
+        public async Task<Models.CheckOutputPermissionsResponse> CheckPermissionsAsync(string outputId, Models.CheckOutputPermissionsRequest checkOutputPermissionsRequest = null)
+        {
+            return await _apiClient.CheckPermissionsAsync(outputId, checkOutputPermissionsRequest);
+        }
+
+        /// <summary>
         /// Get Output Details
         /// </summary>
         /// <param name="outputId">Id of the wanted output (required)</param>
@@ -91,6 +101,10 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs
 
         internal interface IOutputsApiClient
         {
+            [Post("/encoding/outputs/{output_id}/check-permissions")]
+            [AllowAnyStatusCode]
+            Task<Models.CheckOutputPermissionsResponse> CheckPermissionsAsync([Path("output_id")] string outputId, [Body] Models.CheckOutputPermissionsRequest checkOutputPermissionsRequest);
+
             [Get("/encoding/outputs/{output_id}")]
             [AllowAnyStatusCode]
             Task<Models.Output> GetAsync([Path("output_id")] string outputId);

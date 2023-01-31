@@ -19,7 +19,7 @@ namespace Bitmovin.Api.Sdk.Models
         private readonly string _type = "TEXT";
 
         /// <summary>
-        /// The output file name (required)
+        /// Name of the output file (required)
         /// </summary>
         [JsonProperty(PropertyName = "filename")]
         public string Filename { get; set; }

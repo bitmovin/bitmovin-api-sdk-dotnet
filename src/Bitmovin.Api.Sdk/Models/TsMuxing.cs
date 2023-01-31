@@ -19,7 +19,7 @@ namespace Bitmovin.Api.Sdk.Models
         private readonly string _type = "TS";
 
         /// <summary>
-        /// Length of the fragments in seconds (required)
+        /// Length of the fragments in seconds
         /// </summary>
         [JsonProperty(PropertyName = "segmentLength")]
         public double? SegmentLength { get; set; }
