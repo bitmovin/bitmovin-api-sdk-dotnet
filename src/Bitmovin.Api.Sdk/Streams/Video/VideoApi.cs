@@ -22,7 +22,7 @@ namespace Bitmovin.Api.Sdk.Streams.Video
         public static BitmovinApiBuilder<VideoApi> Builder => new BitmovinApiBuilder<VideoApi>();
 
         /// <summary>
-        /// Create new Stream
+        /// Create new Streams video
         /// </summary>
         /// <param name="streamsVideoCreateRequest">Create a new stream.</param>
         public async Task<Models.StreamsVideoResponse> CreateAsync(Models.StreamsVideoCreateRequest streamsVideoCreateRequest)
@@ -31,7 +31,7 @@ namespace Bitmovin.Api.Sdk.Streams.Video
         }
 
         /// <summary>
-        /// Get stream by id
+        /// Get Streams video by id
         /// </summary>
         /// <param name="streamId">Id of the stream. (required)</param>
         public async Task<Models.StreamsVideoResponse> GetAsync(string streamId)
@@ -40,7 +40,7 @@ namespace Bitmovin.Api.Sdk.Streams.Video
         }
 
         /// <summary>
-        /// Get paginated list of streams
+        /// Get paginated list of Streams videos
         /// </summary>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>
         public async Task<Models.PaginationResponse<Models.StreamsVideoResponse>> ListAsync(params Func<ListQueryParams, ListQueryParams>[] queryParams)
@@ -56,7 +56,7 @@ namespace Bitmovin.Api.Sdk.Streams.Video
         }
 
         /// <summary>
-        /// Update stream by id
+        /// Update Streams video by id
         /// </summary>
         /// <param name="streamId">Id of the stream. (required)</param>
         /// <param name="streamsVideoUpdateRequest">Stream fields to update.</param>

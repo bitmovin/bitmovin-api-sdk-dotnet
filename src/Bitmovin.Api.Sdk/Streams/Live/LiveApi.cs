@@ -22,7 +22,7 @@ namespace Bitmovin.Api.Sdk.Streams.Live
         public static BitmovinApiBuilder<LiveApi> Builder => new BitmovinApiBuilder<LiveApi>();
 
         /// <summary>
-        /// Update stream by id
+        /// Update live stream by id
         /// </summary>
         /// <param name="streamId">Id of the stream. (required)</param>
         /// <param name="streamsLiveUpdateRequest">Stream fields to update.</param>
