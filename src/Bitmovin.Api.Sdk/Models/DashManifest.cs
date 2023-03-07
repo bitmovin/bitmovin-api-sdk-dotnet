@@ -16,7 +16,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class DashManifest : Manifest
     {
         /// <summary>
-        /// Profile
+        /// Determines if segmented or progressive representations can appear in the manifest
         /// </summary>
         [JsonProperty(PropertyName = "profile")]
         public DashProfile? Profile { get; set; }

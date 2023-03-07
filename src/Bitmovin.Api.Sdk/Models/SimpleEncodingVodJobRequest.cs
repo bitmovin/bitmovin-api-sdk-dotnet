@@ -22,7 +22,7 @@ namespace Bitmovin.Api.Sdk.Models
         public EncodingTemplate? EncodingTemplate { get; set; }
 
         /// <summary>
-        /// Inputs
+        /// Please take a look at the [documentation](https://bitmovin.com/docs/encoding/articles/simple-encoding-api#inputs-outputs) (required)
         /// </summary>
         [JsonProperty(PropertyName = "inputs")]
         public List<SimpleEncodingVodJobInput> Inputs { get; set; } = new List<SimpleEncodingVodJobInput>();

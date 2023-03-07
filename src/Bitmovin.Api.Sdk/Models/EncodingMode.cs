@@ -8,7 +8,7 @@ namespace Bitmovin.Api.Sdk.Models
     public enum EncodingMode
     {
         /// <summary>
-        /// The standard encoding mode is currently TWO_PASS
+        /// The standard encoding mode is ONE_PASS for LIVE encodings and TWO_PASS for VOD encodings
         /// </summary>
         [EnumMember(Value = "STANDARD")]
         STANDARD,

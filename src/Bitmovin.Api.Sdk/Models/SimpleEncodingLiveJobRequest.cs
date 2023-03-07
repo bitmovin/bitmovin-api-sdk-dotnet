@@ -22,7 +22,7 @@ namespace Bitmovin.Api.Sdk.Models
         public SimpleEncodingLiveProfile? EncodingProfile { get; set; }
 
         /// <summary>
-        /// Input
+        /// Please take a look at the [documentation](https://bitmovin.com/docs/encoding/articles/simple-encoding-api-live#inputs) (required)
         /// </summary>
         [JsonProperty(PropertyName = "input")]
         public SimpleEncodingLiveJobInput Input { get; set; }
