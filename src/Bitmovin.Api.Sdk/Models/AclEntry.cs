@@ -16,7 +16,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class AclEntry
     {
         /// <summary>
-        /// Scope
+        /// Deprecation notice: The value of this property is not being used. It can be chosen arbitrarily or not set at all
         /// </summary>
         [JsonProperty(PropertyName = "scope")]
         public string Scope { get; set; }

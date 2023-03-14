@@ -28,7 +28,7 @@ namespace Bitmovin.Api.Sdk.Models
         public string OutputPath { get; set; }
 
         /// <summary>
-        /// Acl
+        /// Determines accessibility of files written to this output. Only applies to output types that support ACLs. Defaults to PUBLIC_READ if the list is empty. The destination (e.g. cloud storage bucket) needs to allow the configured ACL
         /// </summary>
         [JsonProperty(PropertyName = "acl")]
         public List<AclEntry> Acl { get; set; } = new List<AclEntry>();

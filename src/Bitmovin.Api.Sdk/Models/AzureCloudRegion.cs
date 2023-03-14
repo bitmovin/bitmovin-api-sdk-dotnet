@@ -8,16 +8,16 @@ namespace Bitmovin.Api.Sdk.Models
     public enum AzureCloudRegion
     {
         /// <summary>
-        /// Washington
+        /// New South Wales
         /// </summary>
         [EnumMember(Value = "AUSTRALIA_EAST")]
-        US_WEST2,
+        AUSTRALIA_EAST,
 
         /// <summary>
-        /// Virginia
+        /// Victoria
         /// </summary>
         [EnumMember(Value = "AUSTRALIA_SOUTHEAST")]
-        US_EAST,
+        AUSTRALIA_SOUTHEAST,
 
         /// <summary>
         /// Ireland
@@ -38,21 +38,21 @@ namespace Bitmovin.Api.Sdk.Models
         GERMANY_WESTCENTRAL,
 
         /// <summary>
-        /// New South Wales
-        /// </summary>
-        [EnumMember(Value = "UAE_NORTH")]
-        AUSTRALIA_EAST,
-
-        /// <summary>
-        /// Victoria
-        /// </summary>
-        [EnumMember(Value = "US_EAST")]
-        AUSTRALIA_SOUTHEAST,
-
-        /// <summary>
         /// Dubai
         /// </summary>
+        [EnumMember(Value = "UAE_NORTH")]
+        UAE_NORTH,
+
+        /// <summary>
+        /// Virginia
+        /// </summary>
+        [EnumMember(Value = "US_EAST")]
+        US_EAST,
+
+        /// <summary>
+        /// Washington
+        /// </summary>
         [EnumMember(Value = "US_WEST2")]
-        UAE_NORTH
+        US_WEST2
     }
 }
