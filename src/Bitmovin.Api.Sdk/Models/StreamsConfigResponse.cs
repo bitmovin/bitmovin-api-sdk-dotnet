@@ -1,0 +1,36 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Runtime.Serialization;
+using JsonSubTypes;
+using Newtonsoft.Json;
+
+using Bitmovin.Api.Sdk.Common;
+using Bitmovin.Api.Sdk.Models;
+
+namespace Bitmovin.Api.Sdk.Models
+{
+    /// <summary>
+    /// StreamsConfigResponse
+    /// </summary>
+    public class StreamsConfigResponse
+    {
+        /// <summary>
+        /// The identifier of the stream config
+        /// </summary>
+        [JsonProperty(PropertyName = "id")]
+        public string Id { get; internal set; }
+
+        /// <summary>
+        /// UUID of the associated organization
+        /// </summary>
+        [JsonProperty(PropertyName = "orgId")]
+        public string OrgId { get; set; }
+
+        /// <summary>
+        /// Player style config
+        /// </summary>
+        [JsonProperty(PropertyName = "playerStyle")]
+        public Object PlayerStyle { get; set; }
+    }
+}

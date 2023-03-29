@@ -94,7 +94,7 @@ namespace Bitmovin.Api.Sdk.Common
             var headers = new Dictionary<string, string>
             {
                 {"X-Api-Client", "bitmovin-api-sdk-dotnet"},
-                {"X-Api-Client-Version", "1.153.0"}
+                {"X-Api-Client-Version", "1.154.0"}
             };
 
             if (!string.IsNullOrEmpty(ApiKey))

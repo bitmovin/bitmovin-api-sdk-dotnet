@@ -26,5 +26,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
+
+        /// <summary>
+        /// Id of the stream config to use
+        /// </summary>
+        [JsonProperty(PropertyName = "configId")]
+        public string ConfigId { get; set; }
     }
 }
