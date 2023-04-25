@@ -32,5 +32,17 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "playerStyle")]
         public Object PlayerStyle { get; set; }
+
+        /// <summary>
+        /// URL of the watermark image
+        /// </summary>
+        [JsonProperty(PropertyName = "watermarkUrl")]
+        public string WatermarkUrl { get; set; }
+
+        /// <summary>
+        /// Target link of the watermark image
+        /// </summary>
+        [JsonProperty(PropertyName = "watermarkTargetLink")]
+        public string WatermarkTargetLink { get; set; }
     }
 }
