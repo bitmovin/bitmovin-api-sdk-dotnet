@@ -215,5 +215,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "arnrType")]
         public Vp9ArnrType? ArnrType { get; set; }
+
+        /// <summary>
+        /// Enable/disable automatic calculation of level, maxBitrate, and bufsize based on the least level that satisfies maximum property values for picture resolution, frame rate, and bit rate. Explicitly setting targetLevel, rateOvershootPct, or clientBufferSize properties will automatically disable the calculation.
+        /// </summary>
+        [JsonProperty(PropertyName = "autoLevelSetup")]
+        public AutoLevelSetup? AutoLevelSetup { get; set; }
     }
 }

@@ -23,5 +23,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "presetConfiguration")]
         public Av1PresetConfiguration? PresetConfiguration { get; set; }
+
+        /// <summary>
+        /// Enable/disable automatic calculation of level, maxBitrate, and bufsize based on the least level that satisfies maximum property values for picture resolution, frame rate, and bit rate.
+        /// </summary>
+        [JsonProperty(PropertyName = "autoLevelSetup")]
+        public AutoLevelSetup? AutoLevelSetup { get; set; }
     }
 }

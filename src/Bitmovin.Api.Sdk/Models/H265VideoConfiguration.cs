@@ -593,5 +593,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "cea608708SubtitleConfig")]
         public Cea608708SubtitleConfiguration Cea608708SubtitleConfig { get; set; }
+
+        /// <summary>
+        /// Enable/disable automatic calculation of level, maxBitrate, and bufsize based on the least level that satisfies maximum property values for picture resolution, frame rate, and bit rate. Explicitly setting level, maxBitrate, or bufsize properties will automatically disable the calculation.
+        /// </summary>
+        [JsonProperty(PropertyName = "autoLevelSetup")]
+        public AutoLevelSetup? AutoLevelSetup { get; set; }
     }
 }

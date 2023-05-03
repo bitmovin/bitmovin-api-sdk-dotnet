@@ -56,7 +56,7 @@ namespace Bitmovin.Api.Sdk.Streams.Video
         }
 
         /// <summary>
-        /// Update Streams video by id
+        /// Partially update stream config by id
         /// </summary>
         /// <param name="streamId">Id of the stream. (required)</param>
         /// <param name="streamsVideoUpdateRequest">Stream fields to update.</param>

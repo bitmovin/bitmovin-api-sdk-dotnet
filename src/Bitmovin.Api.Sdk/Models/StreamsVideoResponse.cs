@@ -62,5 +62,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "encodingTasks")]
         public List<StreamsVideoEncodingTask> EncodingTasks { get; internal set; } = new List<StreamsVideoEncodingTask>();
+
+        /// <summary>
+        /// Poster URL
+        /// </summary>
+        [JsonProperty(PropertyName = "posterUrl")]
+        public string PosterUrl { get; internal set; }
     }
 }

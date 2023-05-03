@@ -38,5 +38,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "configId")]
         public string ConfigId { get; set; }
+
+        /// <summary>
+        /// URL to hosted poster image
+        /// </summary>
+        [JsonProperty(PropertyName = "posterUrl")]
+        public string PosterUrl { get; set; }
     }
 }
