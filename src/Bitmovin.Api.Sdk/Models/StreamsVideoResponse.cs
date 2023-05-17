@@ -68,5 +68,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "posterUrl")]
         public string PosterUrl { get; internal set; }
+
+        /// <summary>
+        /// AdConfig
+        /// </summary>
+        [JsonProperty(PropertyName = "adConfig")]
+        public StreamsAdConfigResponse AdConfig { get; set; }
     }
 }

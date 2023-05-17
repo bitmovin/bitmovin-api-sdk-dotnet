@@ -38,5 +38,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "insertProgramDateTime")]
         public bool? InsertProgramDateTime { get; set; }
+
+        /// <summary>
+        /// Configuration for the EXT-X-PROGRAM-DATETIME tag
+        /// </summary>
+        [JsonProperty(PropertyName = "programDateTimeSettings")]
+        public ProgramDateTimeSettings ProgramDateTimeSettings { get; set; }
     }
 }

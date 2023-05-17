@@ -32,5 +32,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "configId")]
         public string ConfigId { get; set; }
+
+        /// <summary>
+        /// Id of the advertisement config to use
+        /// </summary>
+        [JsonProperty(PropertyName = "adConfigId")]
+        public string AdConfigId { get; set; }
     }
 }
