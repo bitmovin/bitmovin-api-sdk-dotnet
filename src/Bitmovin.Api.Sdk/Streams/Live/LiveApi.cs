@@ -67,7 +67,7 @@ namespace Bitmovin.Api.Sdk.Streams.Live
         /// </summary>
         /// <param name="streamId">Id of the stream. (required)</param>
         /// <param name="streamsLiveUpdateRequest">Stream fields to update.</param>
-        public async Task<Models.StreamsLiveUpdateRequest> PatchStreamsLiveAsync(string streamId, Models.StreamsLiveUpdateRequest streamsLiveUpdateRequest)
+        public async Task<Models.StreamsLiveResponse> PatchStreamsLiveAsync(string streamId, Models.StreamsLiveUpdateRequest streamsLiveUpdateRequest)
         {
             return await _apiClient.PatchStreamsLiveAsync(streamId, streamsLiveUpdateRequest);
         }
@@ -77,7 +77,7 @@ namespace Bitmovin.Api.Sdk.Streams.Live
         /// </summary>
         /// <param name="streamId">Id of the stream. (required)</param>
         /// <param name="streamsLiveUpdateRequest">The updated stream config object.</param>
-        public async Task<Models.StreamsLiveUpdateRequest> UpdateAsync(string streamId, Models.StreamsLiveUpdateRequest streamsLiveUpdateRequest)
+        public async Task<Models.StreamsLiveResponse> UpdateAsync(string streamId, Models.StreamsLiveUpdateRequest streamsLiveUpdateRequest)
         {
             return await _apiClient.UpdateAsync(streamId, streamsLiveUpdateRequest);
         }
@@ -98,11 +98,11 @@ namespace Bitmovin.Api.Sdk.Streams.Live
 
             [Patch("/streams/live/{stream_id}")]
             [AllowAnyStatusCode]
-            Task<Models.StreamsLiveUpdateRequest> PatchStreamsLiveAsync([Path("stream_id")] string streamId, [Body] Models.StreamsLiveUpdateRequest streamsLiveUpdateRequest);
+            Task<Models.StreamsLiveResponse> PatchStreamsLiveAsync([Path("stream_id")] string streamId, [Body] Models.StreamsLiveUpdateRequest streamsLiveUpdateRequest);
 
             [Put("/streams/live/{stream_id}")]
             [AllowAnyStatusCode]
-            Task<Models.StreamsLiveUpdateRequest> UpdateAsync([Path("stream_id")] string streamId, [Body] Models.StreamsLiveUpdateRequest streamsLiveUpdateRequest);
+            Task<Models.StreamsLiveResponse> UpdateAsync([Path("stream_id")] string streamId, [Body] Models.StreamsLiveUpdateRequest streamsLiveUpdateRequest);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

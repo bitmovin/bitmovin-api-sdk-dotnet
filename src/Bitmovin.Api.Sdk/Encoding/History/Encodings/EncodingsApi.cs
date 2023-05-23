@@ -4,18 +4,8 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using RestEase;
 using Bitmovin.Api.Sdk.Common;
-using Bitmovin.Api.Sdk.Encoding.Encodings.Live;
-using Bitmovin.Api.Sdk.Encoding.Encodings.Customdata;
-using Bitmovin.Api.Sdk.Encoding.Encodings.Streams;
-using Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams;
-using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings;
-using Bitmovin.Api.Sdk.Encoding.Encodings.TransferRetries;
-using Bitmovin.Api.Sdk.Encoding.Encodings.OutputPaths;
-using Bitmovin.Api.Sdk.Encoding.Encodings.Captions;
-using Bitmovin.Api.Sdk.Encoding.Encodings.Sidecars;
-using Bitmovin.Api.Sdk.Encoding.Encodings.Keyframes;
 
-namespace Bitmovin.Api.Sdk.Encoding.Encodings
+namespace Bitmovin.Api.Sdk.Encoding.History.Encodings
 {
     public class EncodingsApi
     {
@@ -24,16 +14,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings
         public EncodingsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IEncodingsApiClient>();
-            Live = new LiveApi(apiClientFactory);
-            Customdata = new CustomdataApi(apiClientFactory);
-            Streams = new StreamsApi(apiClientFactory);
-            InputStreams = new InputStreamsApi(apiClientFactory);
-            Muxings = new MuxingsApi(apiClientFactory);
-            TransferRetries = new TransferRetriesApi(apiClientFactory);
-            OutputPaths = new OutputPathsApi(apiClientFactory);
-            Captions = new CaptionsApi(apiClientFactory);
-            Sidecars = new SidecarsApi(apiClientFactory);
-            Keyframes = new KeyframesApi(apiClientFactory);
         }
 
         /// <summary>
@@ -41,55 +21,17 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings
         /// </summary>
         public static BitmovinApiBuilder<EncodingsApi> Builder => new BitmovinApiBuilder<EncodingsApi>();
 
-        public LiveApi Live { get; }
-        public CustomdataApi Customdata { get; }
-        public StreamsApi Streams { get; }
-        public InputStreamsApi InputStreams { get; }
-        public MuxingsApi Muxings { get; }
-        public TransferRetriesApi TransferRetries { get; }
-        public OutputPathsApi OutputPaths { get; }
-        public CaptionsApi Captions { get; }
-        public SidecarsApi Sidecars { get; }
-        public KeyframesApi Keyframes { get; }
-
         /// <summary>
-        /// Create Encoding
-        /// </summary>
-        /// <param name="encoding">The Encoding to be created</param>
-        public async Task<Models.Encoding> CreateAsync(Models.Encoding encoding)
-        {
-            return await _apiClient.CreateAsync(encoding);
-        }
-
-        /// <summary>
-        /// Delete Encoding
+        /// (Experimental) History Encoding Details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
-        public async Task<Models.BitmovinResponse> DeleteAsync(string encodingId)
-        {
-            return await _apiClient.DeleteAsync(encodingId);
-        }
-
-        /// <summary>
-        /// Encoding Details
-        /// </summary>
-        /// <param name="encodingId">Id of the encoding. (required)</param>
-        public async Task<Models.Encoding> GetAsync(string encodingId)
+        public async Task<Models.HistoryEncoding> GetAsync(string encodingId)
         {
             return await _apiClient.GetAsync(encodingId);
         }
 
         /// <summary>
-        /// Encoding Start Details
-        /// </summary>
-        /// <param name="encodingId">Id of the encoding (required)</param>
-        public async Task<Models.StartEncodingRequest> GetStartRequestAsync(string encodingId)
-        {
-            return await _apiClient.GetStartRequestAsync(encodingId);
-        }
-
-        /// <summary>
-        /// List all Encodings
+        /// (Experimental) List all History Encodings
         /// </summary>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>
         public async Task<Models.PaginationResponse<Models.Encoding>> ListAsync(params Func<ListQueryParams, ListQueryParams>[] queryParams)
@@ -104,95 +46,15 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings
             return await _apiClient.ListAsync(q);
         }
 
-        /// <summary>
-        /// Reprioritize Encoding
-        /// </summary>
-        /// <param name="encodingId">Id of the encoding. (required)</param>
-        /// <param name="reprioritizeEncodingRequest">Reprioritization options</param>
-        public async Task<Models.BitmovinResponse> ReprioritizeAsync(string encodingId, Models.ReprioritizeEncodingRequest reprioritizeEncodingRequest)
-        {
-            return await _apiClient.ReprioritizeAsync(encodingId, reprioritizeEncodingRequest);
-        }
-
-        /// <summary>
-        /// Reschedule Encoding
-        /// </summary>
-        /// <param name="encodingId">Id of the encoding. (required)</param>
-        /// <param name="rescheduleEncodingRequest">Rescheduling options</param>
-        public async Task<Models.BitmovinResponse> RescheduleAsync(string encodingId, Models.RescheduleEncodingRequest rescheduleEncodingRequest)
-        {
-            return await _apiClient.RescheduleAsync(encodingId, rescheduleEncodingRequest);
-        }
-
-        /// <summary>
-        /// Start Encoding
-        /// </summary>
-        /// <param name="encodingId">Id of the encoding (required)</param>
-        /// <param name="startEncodingRequest">Encoding Startup Options</param>
-        public async Task<Models.BitmovinResponse> StartAsync(string encodingId, Models.StartEncodingRequest startEncodingRequest = null)
-        {
-            return await _apiClient.StartAsync(encodingId, startEncodingRequest);
-        }
-
-        /// <summary>
-        /// Encoding Status
-        /// </summary>
-        /// <param name="encodingId">Id of the encoding (required)</param>
-        public async Task<Models.ServiceTaskStatus> StatusAsync(string encodingId)
-        {
-            return await _apiClient.StatusAsync(encodingId);
-        }
-
-        /// <summary>
-        /// Stop Encoding
-        /// </summary>
-        /// <param name="encodingId">Id of the encoding (required)</param>
-        public async Task<Models.BitmovinResponse> StopAsync(string encodingId)
-        {
-            return await _apiClient.StopAsync(encodingId);
-        }
-
         internal interface IEncodingsApiClient
         {
-            [Post("/encoding/encodings")]
+            [Get("/encoding/history/encodings/{encoding_id}")]
             [AllowAnyStatusCode]
-            Task<Models.Encoding> CreateAsync([Body] Models.Encoding encoding);
+            Task<Models.HistoryEncoding> GetAsync([Path("encoding_id")] string encodingId);
 
-            [Delete("/encoding/encodings/{encoding_id}")]
-            [AllowAnyStatusCode]
-            Task<Models.BitmovinResponse> DeleteAsync([Path("encoding_id")] string encodingId);
-
-            [Get("/encoding/encodings/{encoding_id}")]
-            [AllowAnyStatusCode]
-            Task<Models.Encoding> GetAsync([Path("encoding_id")] string encodingId);
-
-            [Get("/encoding/encodings/{encoding_id}/start")]
-            [AllowAnyStatusCode]
-            Task<Models.StartEncodingRequest> GetStartRequestAsync([Path("encoding_id")] string encodingId);
-
-            [Get("/encoding/encodings")]
+            [Get("/encoding/history/encodings")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.Encoding>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
-
-            [Post("/encoding/encodings/{encoding_id}/reprioritize")]
-            [AllowAnyStatusCode]
-            Task<Models.BitmovinResponse> ReprioritizeAsync([Path("encoding_id")] string encodingId, [Body] Models.ReprioritizeEncodingRequest reprioritizeEncodingRequest);
-
-            [Post("/encoding/encodings/{encoding_id}/reschedule")]
-            [AllowAnyStatusCode]
-            Task<Models.BitmovinResponse> RescheduleAsync([Path("encoding_id")] string encodingId, [Body] Models.RescheduleEncodingRequest rescheduleEncodingRequest);
-
-            [Post("/encoding/encodings/{encoding_id}/start")]
-            [AllowAnyStatusCode]
-            Task<Models.BitmovinResponse> StartAsync([Path("encoding_id")] string encodingId, [Body] Models.StartEncodingRequest startEncodingRequest);
-
-            [Get("/encoding/encodings/{encoding_id}/status")]
-            [AllowAnyStatusCode]
-            Task<Models.ServiceTaskStatus> StatusAsync([Path("encoding_id")] string encodingId);
-
-            [Post("/encoding/encodings/{encoding_id}/stop")]
-            [AllowAnyStatusCode]
-            Task<Models.BitmovinResponse> StopAsync([Path("encoding_id")] string encodingId);
         }
 
         public class ListQueryParams : Dictionary<string,Object>
@@ -206,11 +68,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings
             /// Maximum number of items to return. Default is 25, maximum is 100
             /// </summary>
             public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
-
-            /// <summary>
-            /// A boolean indicating whether the total count should be returned as well. Default is true
-            /// </summary>
-            public ListQueryParams IncludeTotalCount(bool? includeTotalCount) => SetQueryParam("includeTotalCount", includeTotalCount);
 
             /// <summary>
             /// Order list result according an encoding resource attribute.  The fields that can be used for sorting are: + &#x60;id&#x60; + &#x60;startedAt&#x60; + &#x60;createdAt&#x60; + &#x60;modifiedAt&#x60; + &#x60;finishedAt&#x60; + &#x60;type&#x60; + &#x60;name&#x60; + &#x60;status&#x60; + &#x60;cloudRegion&#x60; + &#x60;encoderVersion&#x60; 
