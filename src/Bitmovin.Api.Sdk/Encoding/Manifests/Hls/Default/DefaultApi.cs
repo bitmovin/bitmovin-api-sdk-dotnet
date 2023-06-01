@@ -22,9 +22,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Default
         public static BitmovinApiBuilder<DefaultApi> Builder => new BitmovinApiBuilder<DefaultApi>();
 
         /// <summary>
-        /// Create HLS Manifest Default
+        /// Create Default HLS Manifest
         /// </summary>
-        /// <param name="hlsManifestDefault">The HLS Manifest to be created</param>
+        /// <param name="hlsManifestDefault">A Default Manifest is the easiest way to create a manifest file. Its contents will be configured automatically, depending on what output your encoding creates (muxings, thumbnails, sprites, subtitles, DRM information). If you need more control, create a Custom Manifest instead. See TODO: link</param>
         public async Task<Models.HlsManifestDefault> CreateAsync(Models.HlsManifestDefault hlsManifestDefault)
         {
             return await _apiClient.CreateAsync(hlsManifestDefault);

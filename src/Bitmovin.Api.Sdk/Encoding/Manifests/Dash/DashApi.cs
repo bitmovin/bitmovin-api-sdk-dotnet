@@ -32,9 +32,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash
         public PeriodsApi Periods { get; }
 
         /// <summary>
-        /// Create DASH Manifest
+        /// Create Custom DASH Manifest
         /// </summary>
-        /// <param name="dashManifest">The DASH manifest to be created</param>
+        /// <param name="dashManifest">A Custom DASH Manifest gives you full control over its contents. Add Periods, Adaptation Sets, Representations, Content Protections or Custom XML Elements via the respective endpoints. If you need a simpler solution, create a Default Manifest instead. See TODO: link</param>
         public async Task<Models.DashManifest> CreateAsync(Models.DashManifest dashManifest)
         {
             return await _apiClient.CreateAsync(dashManifest);
@@ -43,7 +43,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash
         /// <summary>
         /// Delete DASH Manifest
         /// </summary>
-        /// <param name="manifestId">UUID of the DASH manifest to be deleted (required)</param>
+        /// <param name="manifestId">UUID of the DASH Manifest to be deleted (required)</param>
         public async Task<Models.BitmovinResponse> DeleteAsync(string manifestId)
         {
             return await _apiClient.DeleteAsync(manifestId);
@@ -52,10 +52,19 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash
         /// <summary>
         /// DASH Manifest Details
         /// </summary>
-        /// <param name="manifestId">UUID of the dash manifest (required)</param>
+        /// <param name="manifestId">UUID of the DASH Manifest (required)</param>
         public async Task<Models.DashManifest> GetAsync(string manifestId)
         {
             return await _apiClient.GetAsync(manifestId);
+        }
+
+        /// <summary>
+        /// Manifest Start Details
+        /// </summary>
+        /// <param name="manifestId">Id of the manifest (required)</param>
+        public async Task<Models.StartManifestRequest> GetStartRequestAsync(string manifestId)
+        {
+            return await _apiClient.GetStartRequestAsync(manifestId);
         }
 
         /// <summary>
@@ -77,7 +86,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash
         /// <summary>
         /// Start DASH Manifest Creation
         /// </summary>
-        /// <param name="manifestId">Id of the DASH manifest. (required)</param>
+        /// <param name="manifestId">Id of the DASH Manifest. (required)</param>
         /// <param name="startManifestRequest">Manifest Startup Options</param>
         public async Task<Models.BitmovinResponse> StartAsync(string manifestId, Models.StartManifestRequest startManifestRequest = null)
         {
@@ -87,7 +96,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash
         /// <summary>
         /// DASH Manifest Creation Status
         /// </summary>
-        /// <param name="manifestId">Id of the DASH manifest. (required)</param>
+        /// <param name="manifestId">Id of the DASH Manifest. (required)</param>
         public async Task<Models.ServiceTaskStatus> StatusAsync(string manifestId)
         {
             return await _apiClient.StatusAsync(manifestId);
@@ -96,7 +105,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash
         /// <summary>
         /// Stop DASH Manifest Creation
         /// </summary>
-        /// <param name="manifestId">Id of the DASH manifest. (required)</param>
+        /// <param name="manifestId">Id of the DASH Manifest. (required)</param>
         public async Task<Models.BitmovinResponse> StopAsync(string manifestId)
         {
             return await _apiClient.StopAsync(manifestId);
@@ -115,6 +124,10 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash
             [Get("/encoding/manifests/dash/{manifest_id}")]
             [AllowAnyStatusCode]
             Task<Models.DashManifest> GetAsync([Path("manifest_id")] string manifestId);
+
+            [Get("/encoding/manifests/dash/{manifest_id}/start")]
+            [AllowAnyStatusCode]
+            Task<Models.StartManifestRequest> GetStartRequestAsync([Path("manifest_id")] string manifestId);
 
             [Get("/encoding/manifests/dash")]
             [AllowAnyStatusCode]

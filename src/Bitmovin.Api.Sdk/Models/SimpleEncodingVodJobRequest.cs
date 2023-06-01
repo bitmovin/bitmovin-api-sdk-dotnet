@@ -34,6 +34,12 @@ namespace Bitmovin.Api.Sdk.Models
         public List<SimpleEncodingVodJobOutput> Outputs { get; set; } = new List<SimpleEncodingVodJobOutput>();
 
         /// <summary>
+        /// Options to customize the Simple Encoding Job
+        /// </summary>
+        [JsonProperty(PropertyName = "options")]
+        public SimpleEncodingVodJobOptions Options { get; set; }
+
+        /// <summary>
         /// This property will be used for naming the encoding and the manifests.
         /// </summary>
         [JsonProperty(PropertyName = "name")]

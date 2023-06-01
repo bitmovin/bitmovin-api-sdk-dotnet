@@ -22,7 +22,7 @@ namespace Bitmovin.Api.Sdk.Models
         public string EncodingId { get; set; }
 
         /// <summary>
-        /// The version of the default manifest generator
+        /// Specifies the algorithm that determines which output of the given encoding is included into the manifest. Note that this is not related to the \&quot;manifestGenerator\&quot; version of the \&quot;Start\&quot; request.
         /// </summary>
         [JsonProperty(PropertyName = "version")]
         public HlsManifestDefaultVersion? Version { get; set; }

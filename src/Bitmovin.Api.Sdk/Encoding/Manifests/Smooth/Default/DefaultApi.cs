@@ -22,9 +22,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Smooth.Default
         public static BitmovinApiBuilder<DefaultApi> Builder => new BitmovinApiBuilder<DefaultApi>();
 
         /// <summary>
-        /// Create Smooth Streaming Manifest Default
+        /// Create Default Smooth Streaming Manifest
         /// </summary>
-        /// <param name="smoothManifestDefault">The Smooth Streaming Default Manifest to be created</param>
+        /// <param name="smoothManifestDefault">A Default Manifest is the easiest way to create a manifest file. Its contents will be configured automatically, depending on what output your encoding creates (muxings, thumbnails, sprites, subtitles, DRM information). If you need more control, create a Custom Manifest instead. See TODO: link</param>
         public async Task<Models.SmoothManifestDefault> CreateAsync(Models.SmoothManifestDefault smoothManifestDefault)
         {
             return await _apiClient.CreateAsync(smoothManifestDefault);

@@ -37,7 +37,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Smooth
         /// <summary>
         /// Create Smooth Streaming Manifest
         /// </summary>
-        /// <param name="smoothStreamingManifest">The Smooth Streaming Manifest to be created</param>
+        /// <param name="smoothStreamingManifest">A Custom Smooth Streaming Manifest gives you full control over its contents. Add Representations and Content Protections via the respective endpoints. If you need a simpler solution, create a Default Manifest instead. See TODO: link</param>
         public async Task<Models.SmoothStreamingManifest> CreateAsync(Models.SmoothStreamingManifest smoothStreamingManifest)
         {
             return await _apiClient.CreateAsync(smoothStreamingManifest);
@@ -46,7 +46,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Smooth
         /// <summary>
         /// Delete Smooth Streaming Manifest
         /// </summary>
-        /// <param name="manifestId">Id of the Smooth Streaming manifest. (required)</param>
+        /// <param name="manifestId">Id of the Smooth Streaming Manifest. (required)</param>
         public async Task<Models.BitmovinResponse> DeleteAsync(string manifestId)
         {
             return await _apiClient.DeleteAsync(manifestId);
@@ -55,10 +55,19 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Smooth
         /// <summary>
         /// Smooth Streaming Manifest Details
         /// </summary>
-        /// <param name="manifestId">Id of the Smooth Streaming manifest. (required)</param>
+        /// <param name="manifestId">Id of the Smooth Streaming Manifest. (required)</param>
         public async Task<Models.SmoothStreamingManifest> GetAsync(string manifestId)
         {
             return await _apiClient.GetAsync(manifestId);
+        }
+
+        /// <summary>
+        /// Manifest Start Details
+        /// </summary>
+        /// <param name="manifestId">Id of the manifest (required)</param>
+        public async Task<Models.StartManifestRequest> GetStartRequestAsync(string manifestId)
+        {
+            return await _apiClient.GetStartRequestAsync(manifestId);
         }
 
         /// <summary>
@@ -80,7 +89,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Smooth
         /// <summary>
         /// Start Smooth Streaming Manifest Creation
         /// </summary>
-        /// <param name="manifestId">Id of the Smooth Streaming manifest. (required)</param>
+        /// <param name="manifestId">Id of the Smooth Streaming Manifest. (required)</param>
         /// <param name="startManifestRequest">Manifest Startup Options</param>
         public async Task<Models.BitmovinResponse> StartAsync(string manifestId, Models.StartManifestRequest startManifestRequest = null)
         {
@@ -90,7 +99,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Smooth
         /// <summary>
         /// Smooth Streaming Manifest Creation Status
         /// </summary>
-        /// <param name="manifestId">Id of the Smooth Streaming manifest. (required)</param>
+        /// <param name="manifestId">Id of the Smooth Streaming Manifest. (required)</param>
         public async Task<Models.ServiceTaskStatus> StatusAsync(string manifestId)
         {
             return await _apiClient.StatusAsync(manifestId);
@@ -99,7 +108,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Smooth
         /// <summary>
         /// Stop Smooth Streaming Manifest Creation
         /// </summary>
-        /// <param name="manifestId">Id of the Smooth Streaming manifest. (required)</param>
+        /// <param name="manifestId">Id of the Smooth Streaming Manifest. (required)</param>
         public async Task<Models.BitmovinResponse> StopAsync(string manifestId)
         {
             return await _apiClient.StopAsync(manifestId);
@@ -118,6 +127,10 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Smooth
             [Get("/encoding/manifests/smooth/{manifest_id}")]
             [AllowAnyStatusCode]
             Task<Models.SmoothStreamingManifest> GetAsync([Path("manifest_id")] string manifestId);
+
+            [Get("/encoding/manifests/smooth/{manifest_id}/start")]
+            [AllowAnyStatusCode]
+            Task<Models.StartManifestRequest> GetStartRequestAsync([Path("manifest_id")] string manifestId);
 
             [Get("/encoding/manifests/smooth")]
             [AllowAnyStatusCode]

@@ -35,9 +35,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls
         public MediaApi Media { get; }
 
         /// <summary>
-        /// Create HLS Manifest
+        /// Create Custom HLS Manifest
         /// </summary>
-        /// <param name="hlsManifest">The HLS Manifest to be created</param>
+        /// <param name="hlsManifest">A Custom HLS Manifest gives you full control over its contents. Add Variant Streams and Media elements via the respective endpoints. If you need a simpler solution, create a Default Manifest instead. See TODO: link</param>
         public async Task<Models.HlsManifest> CreateAsync(Models.HlsManifest hlsManifest)
         {
             return await _apiClient.CreateAsync(hlsManifest);
@@ -46,7 +46,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls
         /// <summary>
         /// Delete HLS Manifest
         /// </summary>
-        /// <param name="manifestId">Id of the hls manifest. (required)</param>
+        /// <param name="manifestId">Id of the HLS Manifest. (required)</param>
         public async Task<Models.BitmovinResponse> DeleteAsync(string manifestId)
         {
             return await _apiClient.DeleteAsync(manifestId);
@@ -55,10 +55,19 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls
         /// <summary>
         /// HLS Manifest Details
         /// </summary>
-        /// <param name="manifestId">Id of the hls manifest. (required)</param>
+        /// <param name="manifestId">Id of the HLS Manifest. (required)</param>
         public async Task<Models.HlsManifest> GetAsync(string manifestId)
         {
             return await _apiClient.GetAsync(manifestId);
+        }
+
+        /// <summary>
+        /// Manifest Start Details
+        /// </summary>
+        /// <param name="manifestId">ID of the manifest (required)</param>
+        public async Task<Models.StartManifestRequest> GetStartRequestAsync(string manifestId)
+        {
+            return await _apiClient.GetStartRequestAsync(manifestId);
         }
 
         /// <summary>
@@ -80,7 +89,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls
         /// <summary>
         /// Start HLS Manifest Creation
         /// </summary>
-        /// <param name="manifestId">Id of the HLS manifest. (required)</param>
+        /// <param name="manifestId">Id of the HLS Manifest. (required)</param>
         /// <param name="startManifestRequest">Manifest Startup Options</param>
         public async Task<Models.BitmovinResponse> StartAsync(string manifestId, Models.StartManifestRequest startManifestRequest = null)
         {
@@ -90,7 +99,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls
         /// <summary>
         /// HLS Manifest Creation Status
         /// </summary>
-        /// <param name="manifestId">Id of the HLS manifest. (required)</param>
+        /// <param name="manifestId">Id of the HLS Manifest. (required)</param>
         public async Task<Models.ServiceTaskStatus> StatusAsync(string manifestId)
         {
             return await _apiClient.StatusAsync(manifestId);
@@ -99,7 +108,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls
         /// <summary>
         /// Stop HLS Manifest Creation
         /// </summary>
-        /// <param name="manifestId">Id of the HLS manifest. (required)</param>
+        /// <param name="manifestId">Id of the HLS Manifest. (required)</param>
         public async Task<Models.BitmovinResponse> StopAsync(string manifestId)
         {
             return await _apiClient.StopAsync(manifestId);
@@ -118,6 +127,10 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls
             [Get("/encoding/manifests/hls/{manifest_id}")]
             [AllowAnyStatusCode]
             Task<Models.HlsManifest> GetAsync([Path("manifest_id")] string manifestId);
+
+            [Get("/encoding/manifests/hls/{manifest_id}/start")]
+            [AllowAnyStatusCode]
+            Task<Models.StartManifestRequest> GetStartRequestAsync([Path("manifest_id")] string manifestId);
 
             [Get("/encoding/manifests/hls")]
             [AllowAnyStatusCode]

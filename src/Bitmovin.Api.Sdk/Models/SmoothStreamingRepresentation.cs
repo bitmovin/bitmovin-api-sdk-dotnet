@@ -46,7 +46,7 @@ namespace Bitmovin.Api.Sdk.Models
         public string TrackName { get; set; }
 
         /// <summary>
-        /// Specify the priority of this representation. Representations with higher priority will be listed first in the manifest.
+        /// Specifies the priority of this representation. In the manifest, representations will appear ordered by descending priority values.
         /// </summary>
         [JsonProperty(PropertyName = "priority")]
         public int? Priority { get; set; }

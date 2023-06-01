@@ -73,7 +73,7 @@ namespace Bitmovin.Api.Sdk.Models
         public long? MinBitrate { get; set; }
 
         /// <summary>
-        /// Specify the size of the VBV buffer (kbits)
+        /// Size of the VBV buffer (kbits)
         /// </summary>
         [JsonProperty(PropertyName = "bufsize")]
         public long? Bufsize { get; set; }
@@ -331,7 +331,7 @@ namespace Bitmovin.Api.Sdk.Models
         public int? RateDistortionLevelForModeDecision { get; set; }
 
         /// <summary>
-        /// Specify the amount of rate-distortion analysis to use within quantization.
+        /// Specifies the amount of rate-distortion analysis to use within quantization.
         /// </summary>
         [JsonProperty(PropertyName = "rateDistortionLevelForQuantization")]
         public RateDistortionLevelForQuantization? RateDistortionLevelForQuantization { get; set; }

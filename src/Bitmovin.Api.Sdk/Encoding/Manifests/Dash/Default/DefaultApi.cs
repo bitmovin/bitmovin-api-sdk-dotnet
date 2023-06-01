@@ -22,9 +22,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Default
         public static BitmovinApiBuilder<DefaultApi> Builder => new BitmovinApiBuilder<DefaultApi>();
 
         /// <summary>
-        /// Create DASH Manifest Default
+        /// Create Default DASH Manifest
         /// </summary>
-        /// <param name="dashManifestDefault">The DASH Manifest Default to be created</param>
+        /// <param name="dashManifestDefault">A Default Manifest is the easiest way to create a manifest file. Its contents will be configured automatically, depending on what output your encoding creates (muxings, thumbnails, sprites, subtitles, DRM information). If you need more control, create a Custom Manifest instead. See TODO: link</param>
         public async Task<Models.DashManifestDefault> CreateAsync(Models.DashManifestDefault dashManifestDefault)
         {
             return await _apiClient.CreateAsync(dashManifestDefault);
