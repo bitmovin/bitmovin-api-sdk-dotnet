@@ -46,7 +46,7 @@ namespace Bitmovin.Api.Sdk.Models
         public ReuploadSettings ReuploadSettings { get; set; }
 
         /// <summary>
-        /// Version of the manifest generation engine to be used
+        /// Major version of the manifest generator to be used for manifests referenced in this request (by properties dashManifests, dashManifests). &#x60;V2&#x60; is available for encoder versions 2.70.0 and above and is the recommended option. The default value depends on the sign-up date of your organization. See [documentation](https://developer.bitmovin.com/encoding/docs/manifest-generator-v2) page for a detailed explanation. 
         /// </summary>
         [JsonProperty(PropertyName = "manifestGenerator")]
         public ManifestGenerator? ManifestGenerator { get; set; }

@@ -37,7 +37,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Smooth
         /// <summary>
         /// Create Smooth Streaming Manifest
         /// </summary>
-        /// <param name="smoothStreamingManifest">A Custom Smooth Streaming Manifest gives you full control over its contents. Add Representations and Content Protections via the respective endpoints. If you need a simpler solution, create a Default Manifest instead. See TODO: link</param>
+        /// <param name="smoothStreamingManifest">A Custom Smooth Streaming Manifest gives you full control over its contents. Add Representations and Content Protections via the respective endpoints. If you need a simpler solution, create a Default Manifest resource instead. See [documentation](https://developer.bitmovin.com/encoding/docs/default-vs-custom-manifest) page for a comparison</param>
         public async Task<Models.SmoothStreamingManifest> CreateAsync(Models.SmoothStreamingManifest smoothStreamingManifest)
         {
             return await _apiClient.CreateAsync(smoothStreamingManifest);
