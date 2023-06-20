@@ -22,13 +22,13 @@ namespace Bitmovin.Api.Sdk.Models
         public string StreamKey { get; set; }
 
         /// <summary>
-        /// List of Hls manifests to use for this live encoding
+        /// HLS manifests to be generated during the encoding. See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
         /// </summary>
         [JsonProperty(PropertyName = "hlsManifests")]
         public List<LiveHlsManifest> HlsManifests { get; set; } = new List<LiveHlsManifest>();
 
         /// <summary>
-        /// List of Dash manifests to use for this live encoding
+        /// DASH manifests to be generated during the encoding. See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
         /// </summary>
         [JsonProperty(PropertyName = "dashManifests")]
         public List<LiveDashManifest> DashManifests { get; set; } = new List<LiveDashManifest>();

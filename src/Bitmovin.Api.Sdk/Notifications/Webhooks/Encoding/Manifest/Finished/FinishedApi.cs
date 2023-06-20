@@ -24,7 +24,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Manifest.Finished
         /// <summary>
         /// Add &#39;Manifest Finished Successfully&#39; Webhook (All Manifests)
         /// </summary>
-        /// <param name="webhook">Add a new webhook notification if a manifest creation finished successfully. A maximum number of 5 webhooks is allowed</param>
+        /// <param name="webhook">Add a new webhook notification if a manifest generation finished successfully. A maximum number of 5 webhooks is allowed</param>
         public async Task<Models.Webhook> CreateAsync(Models.Webhook webhook)
         {
             return await _apiClient.CreateAsync(webhook);

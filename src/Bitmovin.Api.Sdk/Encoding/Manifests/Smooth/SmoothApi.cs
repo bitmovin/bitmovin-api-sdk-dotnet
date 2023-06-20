@@ -87,7 +87,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Smooth
         }
 
         /// <summary>
-        /// Start Smooth Streaming Manifest Creation
+        /// Start Smooth Streaming manifest generation
         /// </summary>
         /// <param name="manifestId">Id of the Smooth Streaming Manifest. (required)</param>
         /// <param name="startManifestRequest">Manifest Startup Options</param>
@@ -97,7 +97,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Smooth
         }
 
         /// <summary>
-        /// Smooth Streaming Manifest Creation Status
+        /// Smooth Streaming manifest generation status
         /// </summary>
         /// <param name="manifestId">Id of the Smooth Streaming Manifest. (required)</param>
         public async Task<Models.ServiceTaskStatus> StatusAsync(string manifestId)
@@ -106,7 +106,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Smooth
         }
 
         /// <summary>
-        /// Stop Smooth Streaming Manifest Creation
+        /// Stop Smooth Streaming manifest generation
         /// </summary>
         /// <param name="manifestId">Id of the Smooth Streaming Manifest. (required)</param>
         public async Task<Models.BitmovinResponse> StopAsync(string manifestId)

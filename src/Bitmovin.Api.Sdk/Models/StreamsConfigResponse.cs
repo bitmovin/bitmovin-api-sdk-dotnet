@@ -28,10 +28,10 @@ namespace Bitmovin.Api.Sdk.Models
         public string OrgId { get; set; }
 
         /// <summary>
-        /// Player style config
+        /// PlayerStyle
         /// </summary>
         [JsonProperty(PropertyName = "playerStyle")]
-        public Object PlayerStyle { get; set; }
+        public StreamsConfigPlayerStyle PlayerStyle { get; set; }
 
         /// <summary>
         /// URL of the watermark image

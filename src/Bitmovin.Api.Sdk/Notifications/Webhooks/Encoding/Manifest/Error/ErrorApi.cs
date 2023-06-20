@@ -24,7 +24,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Manifest.Error
         /// <summary>
         /// Add &#39;Manifest Error&#39; Webhook (All Manifests)
         /// </summary>
-        /// <param name="webhook">Add a new webhook notification if a manifest creation failed with an error. A maximum number of 5 webhooks is allowed</param>
+        /// <param name="webhook">Add a new webhook notification if a manifest generation failed with an error. A maximum number of 5 webhooks is allowed</param>
         public async Task<Models.Webhook> CreateAsync(Models.Webhook webhook)
         {
             return await _apiClient.CreateAsync(webhook);

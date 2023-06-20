@@ -125,7 +125,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings
         }
 
         /// <summary>
-        /// Start Encoding
+        /// Start VoD Encoding
         /// </summary>
         /// <param name="encodingId">Id of the encoding (required)</param>
         /// <param name="startEncodingRequest">Encoding Startup Options</param>

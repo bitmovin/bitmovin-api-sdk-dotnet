@@ -46,31 +46,31 @@ namespace Bitmovin.Api.Sdk.Models
         public EncodingMode? EncodingMode { get; set; }
 
         /// <summary>
-        /// List of preview DASH manifests to be created
+        /// DASH manifests to be generated for previewing while the encoding is still running. See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
         /// </summary>
         [JsonProperty(PropertyName = "previewDashManifests")]
         public List<ManifestResource> PreviewDashManifests { get; set; } = new List<ManifestResource>();
 
         /// <summary>
-        /// List of preview HLS manifests to be created
+        /// HLS manifests to be generated for previewing while the encoding is still running. See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
         /// </summary>
         [JsonProperty(PropertyName = "previewHlsManifests")]
         public List<ManifestResource> PreviewHlsManifests { get; set; } = new List<ManifestResource>();
 
         /// <summary>
-        /// List of VoD DASH manifests to be created after encoding finished successfully
+        /// DASH manifests to be generated right after encoding (just-in-time). See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
         /// </summary>
         [JsonProperty(PropertyName = "vodDashManifests")]
         public List<ManifestResource> VodDashManifests { get; set; } = new List<ManifestResource>();
 
         /// <summary>
-        /// List of VoD HLS manifests to be created after encoding finished successfully
+        /// HLS manifests to be generated right after encoding (just-in-time). See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
         /// </summary>
         [JsonProperty(PropertyName = "vodHlsManifests")]
         public List<ManifestResource> VodHlsManifests { get; set; } = new List<ManifestResource>();
 
         /// <summary>
-        /// List of VoD SMOOTH manifests to be created after encoding finished successfully
+        /// Smooth Streaming manifests to be generated right after encoding (just-in-time). See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
         /// </summary>
         [JsonProperty(PropertyName = "vodSmoothManifests")]
         public List<ManifestResource> VodSmoothManifests { get; set; } = new List<ManifestResource>();

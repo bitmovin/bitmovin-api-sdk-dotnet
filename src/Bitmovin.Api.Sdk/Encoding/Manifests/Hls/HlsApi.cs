@@ -87,7 +87,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls
         }
 
         /// <summary>
-        /// Start HLS Manifest Creation
+        /// Start HLS manifest generation
         /// </summary>
         /// <param name="manifestId">Id of the HLS Manifest. (required)</param>
         /// <param name="startManifestRequest">Manifest Startup Options</param>
@@ -97,7 +97,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls
         }
 
         /// <summary>
-        /// HLS Manifest Creation Status
+        /// HLS manifest generation status
         /// </summary>
         /// <param name="manifestId">Id of the HLS Manifest. (required)</param>
         public async Task<Models.ServiceTaskStatus> StatusAsync(string manifestId)
@@ -106,7 +106,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls
         }
 
         /// <summary>
-        /// Stop HLS Manifest Creation
+        /// Stop HLS manifest generation
         /// </summary>
         /// <param name="manifestId">Id of the HLS Manifest. (required)</param>
         public async Task<Models.BitmovinResponse> StopAsync(string manifestId)

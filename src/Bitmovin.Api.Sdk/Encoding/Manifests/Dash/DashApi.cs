@@ -84,7 +84,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash
         }
 
         /// <summary>
-        /// Start DASH Manifest Creation
+        /// Start DASH manifest generation
         /// </summary>
         /// <param name="manifestId">Id of the DASH Manifest. (required)</param>
         /// <param name="startManifestRequest">Manifest Startup Options</param>
@@ -94,7 +94,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash
         }
 
         /// <summary>
-        /// DASH Manifest Creation Status
+        /// DASH manifest generation status
         /// </summary>
         /// <param name="manifestId">Id of the DASH Manifest. (required)</param>
         public async Task<Models.ServiceTaskStatus> StatusAsync(string manifestId)
@@ -103,7 +103,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash
         }
 
         /// <summary>
-        /// Stop DASH Manifest Creation
+        /// Stop DASH manifest generation
         /// </summary>
         /// <param name="manifestId">Id of the DASH Manifest. (required)</param>
         public async Task<Models.BitmovinResponse> StopAsync(string manifestId)
