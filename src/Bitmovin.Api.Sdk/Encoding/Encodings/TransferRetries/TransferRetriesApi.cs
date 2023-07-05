@@ -22,7 +22,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.TransferRetries
         public static BitmovinApiBuilder<TransferRetriesApi> Builder => new BitmovinApiBuilder<TransferRetriesApi>();
 
         /// <summary>
-        /// Starts transfer retry. A transfer retry is only possible within 72 hours.
+        /// Transfer retry
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         public async Task<Models.TransferRetry> CreateAsync(string encodingId)

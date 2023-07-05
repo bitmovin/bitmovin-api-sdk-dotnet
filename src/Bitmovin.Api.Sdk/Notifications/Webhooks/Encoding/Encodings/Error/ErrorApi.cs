@@ -28,7 +28,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.Error
         /// <summary>
         /// Add &#39;Encoding Error&#39; Webhook
         /// </summary>
-        /// <param name="webhook">The &#39;Encoding Error&#39; Webhook to be added. A maximum number of 5 webhooks is allowed</param>
+        /// <param name="webhook">The &#39;Encoding Error&#39; Webhook to be added.</param>
         public async Task<Models.Webhook> CreateAsync(Models.Webhook webhook)
         {
             return await _apiClient.CreateAsync(webhook);

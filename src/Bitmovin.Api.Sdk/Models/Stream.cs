@@ -64,7 +64,7 @@ namespace Bitmovin.Api.Sdk.Models
         public StreamMode? Mode { get; set; }
 
         /// <summary>
-        /// The encoding mode of the stream which was applied by the assigned codec configuration
+        /// The encoding mode that was used for this stream. This is derived from &#x60;encodingMode&#x60;, which can be specified in the codec configuration or in the encoding start request. Note that all streams of an encoding need to use the same encoding mode. This will therefore always match &#x60;selectedEncodingMode&#x60; of the related Encoding resource. Especially useful when &#x60;encodingMode&#x60; was not set explicitly or set to STANDARD (which translates to one of the other possible values on encoding start).
         /// </summary>
         [JsonProperty(PropertyName = "selectedEncodingMode")]
         public EncodingMode? SelectedEncodingMode { get; internal set; }

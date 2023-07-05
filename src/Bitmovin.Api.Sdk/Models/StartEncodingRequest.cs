@@ -40,7 +40,7 @@ namespace Bitmovin.Api.Sdk.Models
         public bool? HandleVariableInputFps { get; set; }
 
         /// <summary>
-        /// The pass mode of the encoding
+        /// The pass mode of the encoding. Must only be set when &#x60;encodingMode&#x60; is not set on any codec configuration used by this encoding.
         /// </summary>
         [JsonProperty(PropertyName = "encodingMode")]
         public EncodingMode? EncodingMode { get; set; }

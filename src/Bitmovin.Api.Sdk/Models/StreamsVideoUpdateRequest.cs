@@ -50,5 +50,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "adConfigId")]
         public string AdConfigId { get; set; }
+
+        /// <summary>
+        /// Id of the content protection config to use
+        /// </summary>
+        [JsonProperty(PropertyName = "contentProtectionId")]
+        public string ContentProtectionId { get; set; }
     }
 }

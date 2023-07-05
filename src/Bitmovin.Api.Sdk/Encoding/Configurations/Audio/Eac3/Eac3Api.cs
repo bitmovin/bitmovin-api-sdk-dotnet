@@ -26,7 +26,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Eac3
         public CustomdataApi Customdata { get; }
 
         /// <summary>
-        /// Create E-AC3 Codec Configuration.  Deprecation notice: use Dolby Digital Plus instead. For more information check out our tutorial here: https://bitmovin.com/docs/encoding/tutorials/how-to-create-dolby-digital-plus-encodings 
+        /// Create E-AC3 Codec Configuration
         /// </summary>
         /// <param name="eac3AudioConfiguration">The E-AC3 Codec Configuration to be created</param>
         public async Task<Models.Eac3AudioConfiguration> CreateAsync(Models.Eac3AudioConfiguration eac3AudioConfiguration)
@@ -35,7 +35,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Eac3
         }
 
         /// <summary>
-        /// Delete E-AC3 Codec Configuration.  Deprecation notice: use Dolby Digital Plus instead. For more information check out our tutorial here: https://bitmovin.com/docs/encoding/tutorials/how-to-create-dolby-digital-plus-encodings 
+        /// Delete E-AC3 Codec Configuration
         /// </summary>
         /// <param name="configurationId">Id of the codec configuration (required)</param>
         public async Task<Models.BitmovinResponse> DeleteAsync(string configurationId)
@@ -44,7 +44,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Eac3
         }
 
         /// <summary>
-        /// E-AC3 Codec Configuration Details.  Deprecation notice: use Dolby Digital Plus instead. For more information check out our tutorial here: https://bitmovin.com/docs/encoding/tutorials/how-to-create-dolby-digital-plus-encodings 
+        /// E-AC3 Codec Configuration Details
         /// </summary>
         /// <param name="configurationId">Id of the codec configuration (required)</param>
         public async Task<Models.Eac3AudioConfiguration> GetAsync(string configurationId)
@@ -53,7 +53,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Eac3
         }
 
         /// <summary>
-        /// List E-AC3 Configurations.  Deprecation notice: use Dolby Digital Plus instead. For more information check out our tutorial here: https://bitmovin.com/docs/encoding/tutorials/how-to-create-dolby-digital-plus-encodings 
+        /// List E-AC3 Configurations
         /// </summary>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>
         public async Task<Models.PaginationResponse<Models.Eac3AudioConfiguration>> ListAsync(params Func<ListQueryParams, ListQueryParams>[] queryParams)

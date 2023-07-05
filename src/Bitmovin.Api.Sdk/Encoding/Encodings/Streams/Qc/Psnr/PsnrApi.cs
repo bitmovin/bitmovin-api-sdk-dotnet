@@ -22,7 +22,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Qc.Psnr
         public static BitmovinApiBuilder<PsnrApi> Builder => new BitmovinApiBuilder<PsnrApi>();
 
         /// <summary>
-        /// Activate PSNR quality metrics for the selected stream
+        /// PSNR quality metrics
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="streamId">Id of the stream. (required)</param>

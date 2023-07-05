@@ -22,7 +22,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live.InsertableContent.Scheduled
         public static BitmovinApiBuilder<ScheduledApi> Builder => new BitmovinApiBuilder<ScheduledApi>();
 
         /// <summary>
-        /// List All Scheduled Insertable Content For A Live Encoding
+        /// List Scheduled Insertable Content
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>

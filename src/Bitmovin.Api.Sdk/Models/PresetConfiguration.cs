@@ -101,6 +101,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// supported for H264, H265
         /// </summary>
         [EnumMember(Value = "VOD_ULTRAHIGH_SPEED")]
-        VOD_ULTRAHIGH_SPEED
+        VOD_ULTRAHIGH_SPEED,
+
+        /// <summary>
+        /// supported for H264, H265
+        /// </summary>
+        [EnumMember(Value = "VOD_HARDWARE_SHORTFORM")]
+        VOD_HARDWARE_SHORTFORM
     }
 }

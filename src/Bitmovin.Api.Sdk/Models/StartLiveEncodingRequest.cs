@@ -34,7 +34,7 @@ namespace Bitmovin.Api.Sdk.Models
         public List<LiveDashManifest> DashManifests { get; set; } = new List<LiveDashManifest>();
 
         /// <summary>
-        /// The pass mode of the encoding
+        /// The pass mode of the encoding. Must only be set when &#x60;encodingMode&#x60; is not set on any codec configuration used by this encoding.
         /// </summary>
         [JsonProperty(PropertyName = "liveEncodingMode")]
         public EncodingMode? LiveEncodingMode { get; set; }

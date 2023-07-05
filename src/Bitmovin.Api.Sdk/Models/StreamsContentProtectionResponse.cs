@@ -32,5 +32,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "allowNoReferer")]
         public bool? AllowNoReferer { get; set; }
+
+        /// <summary>
+        /// Controls if Stream is accessible via sharing URL or not
+        /// </summary>
+        [JsonProperty(PropertyName = "allowShare")]
+        public bool? AllowShare { get; set; }
     }
 }

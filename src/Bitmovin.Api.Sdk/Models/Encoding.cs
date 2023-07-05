@@ -94,7 +94,7 @@ namespace Bitmovin.Api.Sdk.Models
         public string SelectedEncoderVersion { get; internal set; }
 
         /// <summary>
-        /// After the encoding has been started, this will contain the encoding mode that was actually used. Especially useful when starting an encoding with encoding mode STANDARD.
+        /// After the encoding has been started, this will contain the encoding mode that was actually used. Especially useful when &#x60;encodingMode&#x60; was not set explicitly or set to STANDARD (which translates to one of the other possible values on encoding start).
         /// </summary>
         [JsonProperty(PropertyName = "selectedEncodingMode")]
         public EncodingMode? SelectedEncodingMode { get; internal set; }
@@ -116,5 +116,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "labels")]
         public List<string> Labels { get; set; } = new List<string>();
+
+        /// <summary>
+        /// The chosen live option type of the live encoding
+        /// </summary>
+        [JsonProperty(PropertyName = "liveOptionsType")]
+        public LiveOptionsType? LiveOptionsType { get; internal set; }
     }
 }

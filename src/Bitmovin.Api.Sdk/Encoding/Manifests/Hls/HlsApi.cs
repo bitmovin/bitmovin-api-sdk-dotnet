@@ -37,7 +37,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls
         /// <summary>
         /// Create Custom HLS Manifest
         /// </summary>
-        /// <param name="hlsManifest">A Custom HLS Manifest gives you full control over its contents. Add Variant Streams and Media elements via the respective endpoints. If you need a simpler solution, create a Default Manifest resource instead. See [documentation](https://developer.bitmovin.com/encoding/docs/default-vs-custom-manifest) page for a comparison</param>
+        /// <param name="hlsManifest">The Custom HLS Manifest to be created.</param>
         public async Task<Models.HlsManifest> CreateAsync(Models.HlsManifest hlsManifest)
         {
             return await _apiClient.CreateAsync(hlsManifest);

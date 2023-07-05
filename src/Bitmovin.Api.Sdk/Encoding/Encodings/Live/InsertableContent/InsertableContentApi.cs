@@ -32,7 +32,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live.InsertableContent
         public StopApi Stop { get; }
 
         /// <summary>
-        /// Make Insertable Content Available For A Live Encoding
+        /// Create Insertable Content
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="insertableContent">The insertable content to be created</param>
@@ -42,7 +42,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live.InsertableContent
         }
 
         /// <summary>
-        /// List All Insertable Content Available For A Live Encoding
+        /// List Insertable Content
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>

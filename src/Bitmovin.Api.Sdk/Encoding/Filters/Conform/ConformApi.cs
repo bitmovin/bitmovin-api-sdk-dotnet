@@ -26,7 +26,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Conform
         public CustomdataApi Customdata { get; }
 
         /// <summary>
-        /// Create Conform Filter. Keeps all the frames of the input. The playback time of the output will be slower or faster.
+        /// Create Conform Filter
         /// </summary>
         /// <param name="conformFilter">The Conform Filter to be created</param>
         public async Task<Models.ConformFilter> CreateAsync(Models.ConformFilter conformFilter)

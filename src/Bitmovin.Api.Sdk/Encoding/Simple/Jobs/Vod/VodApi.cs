@@ -24,7 +24,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Simple.Jobs.Vod
         /// <summary>
         /// Create a Simple Encoding VOD Job
         /// </summary>
-        /// <param name="simpleEncodingVodJobRequest">The Simple Encoding VOD Job to be created.  Check out our [Simple Encoding API Documentation](https://bitmovin.com/docs/encoding/articles/simple-encoding-api) for additional information about the Simple Encoding API. </param>
+        /// <param name="simpleEncodingVodJobRequest">The Simple Encoding VOD Job to be created.</param>
         public async Task<Models.SimpleEncodingVodJobResponse> CreateAsync(Models.SimpleEncodingVodJobRequest simpleEncodingVodJobRequest)
         {
             return await _apiClient.CreateAsync(simpleEncodingVodJobRequest);
