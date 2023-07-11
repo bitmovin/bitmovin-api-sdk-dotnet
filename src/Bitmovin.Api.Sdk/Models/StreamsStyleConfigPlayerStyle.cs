@@ -13,7 +13,7 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// Player style config
     /// </summary>
-    public class StreamsConfigPlayerStyle
+    public class StreamsStyleConfigPlayerStyle
     {
         /// <summary>
         /// Playback marker background color

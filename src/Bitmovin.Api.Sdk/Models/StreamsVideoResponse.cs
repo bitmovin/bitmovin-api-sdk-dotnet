@@ -52,10 +52,10 @@ namespace Bitmovin.Api.Sdk.Models
         public StreamsVideoStatus? Status { get; internal set; }
 
         /// <summary>
-        /// Config
+        /// StyleConfig
         /// </summary>
-        [JsonProperty(PropertyName = "config")]
-        public StreamsConfigResponse Config { get; set; }
+        [JsonProperty(PropertyName = "styleConfig")]
+        public StreamsStyleConfigResponse StyleConfig { get; set; }
 
         /// <summary>
         /// List of encoding status information

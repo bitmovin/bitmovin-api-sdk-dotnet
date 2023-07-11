@@ -76,7 +76,7 @@ namespace Bitmovin.Api.Sdk.Streams.Live
         /// Update live stream by id
         /// </summary>
         /// <param name="streamId">Id of the stream. (required)</param>
-        /// <param name="streamsLiveUpdateRequest">The updated stream config object.</param>
+        /// <param name="streamsLiveUpdateRequest">The updated Streams live object.</param>
         public async Task<Models.StreamsLiveResponse> UpdateAsync(string streamId, Models.StreamsLiveUpdateRequest streamsLiveUpdateRequest)
         {
             return await _apiClient.UpdateAsync(streamId, streamsLiveUpdateRequest);

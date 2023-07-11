@@ -22,7 +22,7 @@ namespace Bitmovin.Api.Sdk.Models
         public string Id { get; internal set; }
 
         /// <summary>
-        /// Creation date of the Analytics License in UTC format
+        /// Creation date of the Analytics License, returned as ISO 8601 date-time format
         /// </summary>
         [JsonProperty(PropertyName = "createdAt")]
         public DateTime? CreatedAt { get; internal set; }
@@ -128,5 +128,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "features")]
         public AnalyticsLicenseFeatures Features { get; set; }
+
+        /// <summary>
+        /// The expiration date of the license if applicable, returned as ISO 8601 date-time format
+        /// </summary>
+        [JsonProperty(PropertyName = "planExpiredAt")]
+        public DateTime? PlanExpiredAt { get; internal set; }
     }
 }

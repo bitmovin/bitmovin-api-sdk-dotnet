@@ -208,12 +208,12 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings
             public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
 
             /// <summary>
-            /// A boolean indicating whether the total count should be returned as well. Default is true
+            /// A boolean indicating whether the total count should be returned as well. Default is false. Setting this flag to true is discouraged.
             /// </summary>
             public ListQueryParams IncludeTotalCount(bool? includeTotalCount) => SetQueryParam("includeTotalCount", includeTotalCount);
 
             /// <summary>
-            /// Order list result according an encoding resource attribute.  The fields that can be used for sorting are: + &#x60;id&#x60; + &#x60;startedAt&#x60; + &#x60;createdAt&#x60; + &#x60;modifiedAt&#x60; + &#x60;finishedAt&#x60; + &#x60;type&#x60; + &#x60;name&#x60; + &#x60;status&#x60; + &#x60;cloudRegion&#x60; + &#x60;encoderVersion&#x60; 
+            /// Order list result according an encoding resource attribute. The fields that can be used for sorting are: + &#x60;id&#x60; + &#x60;startedAt&#x60; + &#x60;createdAt&#x60; + &#x60;modifiedAt&#x60; + &#x60;finishedAt&#x60; + &#x60;type&#x60; + &#x60;name&#x60; + &#x60;status&#x60; + &#x60;cloudRegion&#x60; + &#x60;encoderVersion&#x60; 
             /// </summary>
             public ListQueryParams Sort(string sort) => SetQueryParam("sort", sort);
 

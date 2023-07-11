@@ -56,5 +56,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "customDataFieldLabels")]
         public AnalyticsLicenseCustomDataFieldLabels CustomDataFieldLabels { get; set; }
+
+        /// <summary>
+        /// The expiration date of the license if applicable, returned as ISO 8601 date-time format
+        /// </summary>
+        [JsonProperty(PropertyName = "planExpiredAt")]
+        public DateTime? PlanExpiredAt { get; internal set; }
     }
 }

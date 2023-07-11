@@ -35,7 +35,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4
         /// Add MP4 muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
-        /// <param name="mp4Muxing">The MP4 muxing to be created</param>
+        /// <param name="mp4Muxing">The progressive MP4 muxing to be created</param>
         public async Task<Models.Mp4Muxing> CreateAsync(string encodingId, Models.Mp4Muxing mp4Muxing)
         {
             return await _apiClient.CreateAsync(encodingId, mp4Muxing);

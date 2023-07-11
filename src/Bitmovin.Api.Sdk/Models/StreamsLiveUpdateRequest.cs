@@ -28,10 +28,10 @@ namespace Bitmovin.Api.Sdk.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// Id of the stream config to use
+        /// Id of the style config to use
         /// </summary>
-        [JsonProperty(PropertyName = "configId")]
-        public string ConfigId { get; set; }
+        [JsonProperty(PropertyName = "styleConfigId")]
+        public string StyleConfigId { get; set; }
 
         /// <summary>
         /// URL to hosted poster image

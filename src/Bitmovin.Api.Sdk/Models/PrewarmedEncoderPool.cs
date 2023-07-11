@@ -46,6 +46,12 @@ namespace Bitmovin.Api.Sdk.Models
         public int? TargetPoolSize { get; set; }
 
         /// <summary>
+        /// Create pool with GPU instances for hardware encoding presets (e.g., VOD_HARDWARE_SHORTFORM).
+        /// </summary>
+        [JsonProperty(PropertyName = "gpuEnabled")]
+        public bool? GpuEnabled { get; set; }
+
+        /// <summary>
         /// Current status of the pool.
         /// </summary>
         [JsonProperty(PropertyName = "status")]

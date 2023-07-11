@@ -11,12 +11,12 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// StreamsConfigResponse
+    /// StreamsStyleConfigResponse
     /// </summary>
-    public class StreamsConfigResponse
+    public class StreamsStyleConfigResponse
     {
         /// <summary>
-        /// The identifier of the stream config
+        /// The identifier of the style config
         /// </summary>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; internal set; }
@@ -31,7 +31,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// PlayerStyle
         /// </summary>
         [JsonProperty(PropertyName = "playerStyle")]
-        public StreamsConfigPlayerStyle PlayerStyle { get; set; }
+        public StreamsStyleConfigPlayerStyle PlayerStyle { get; set; }
 
         /// <summary>
         /// URL of the watermark image

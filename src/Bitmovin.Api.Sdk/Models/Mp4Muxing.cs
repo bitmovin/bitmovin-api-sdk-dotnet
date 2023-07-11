@@ -19,7 +19,7 @@ namespace Bitmovin.Api.Sdk.Models
         private readonly string _type = "MP4";
 
         /// <summary>
-        /// Name of the output file
+        /// Name of the output file (either &#x60;filename&#x60; or &#x60;name&#x60; is required, prefer &#x60;filename&#x60;)
         /// </summary>
         [JsonProperty(PropertyName = "filename")]
         public string Filename { get; set; }

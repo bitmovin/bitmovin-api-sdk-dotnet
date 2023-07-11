@@ -52,10 +52,10 @@ namespace Bitmovin.Api.Sdk.Models
         public StreamsLiveLifeCycle? LifeCycle { get; internal set; }
 
         /// <summary>
-        /// Config
+        /// StyleConfig
         /// </summary>
-        [JsonProperty(PropertyName = "config")]
-        public StreamsConfigResponse Config { get; set; }
+        [JsonProperty(PropertyName = "styleConfig")]
+        public StreamsStyleConfigResponse StyleConfig { get; set; }
 
         /// <summary>
         /// Poster URL
