@@ -520,6 +520,12 @@ namespace Bitmovin.Api.Sdk.Models
         public int? ScreenWidth { get; set; }
 
         /// <summary>
+        /// Screen orientation (PORTRAIT, LANDSCAPE OR UNKNOWN)
+        /// </summary>
+        [JsonProperty(PropertyName = "screen_orientation")]
+        public string ScreenOrientation { get; set; }
+
+        /// <summary>
         /// Milliseconds it took the player to seek
         /// </summary>
         [JsonProperty(PropertyName = "seeked")]

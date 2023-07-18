@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using RestEase;
 using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.Live.Daily;
+using Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.Live.Options;
 
 namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.Live
 {
@@ -16,6 +17,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.Live
         {
             _apiClient = apiClientFactory.CreateClient<ILiveApiClient>();
             Daily = new DailyApi(apiClientFactory);
+            Options = new OptionsApi(apiClientFactory);
         }
 
         /// <summary>
@@ -24,6 +26,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.Live
         public static BitmovinApiBuilder<LiveApi> Builder => new BitmovinApiBuilder<LiveApi>();
 
         public DailyApi Daily { get; }
+        public OptionsApi Options { get; }
 
         /// <summary>
         /// List Live Encoding Statistics

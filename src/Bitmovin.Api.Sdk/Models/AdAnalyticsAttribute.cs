@@ -740,6 +740,12 @@ namespace Bitmovin.Api.Sdk.Models
         SCREEN_WIDTH,
 
         /// <summary>
+        /// SCREEN_ORIENTATION
+        /// </summary>
+        [EnumMember(Value = "SCREEN_ORIENTATION")]
+        SCREEN_ORIENTATION,
+
+        /// <summary>
         /// SIZE
         /// </summary>
         [EnumMember(Value = "SIZE")]
