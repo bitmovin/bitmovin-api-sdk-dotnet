@@ -31,7 +31,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live.Hd
         }
 
         /// <summary>
-        /// Start Live Encoding
+        /// Start HD Options Live Encoding
         /// </summary>
         /// <param name="encodingId">Id of the encoding (required)</param>
         /// <param name="startLiveChannelEncodingRequest">Live Encoding startup options</param>
