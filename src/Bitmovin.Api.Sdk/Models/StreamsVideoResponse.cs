@@ -80,5 +80,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "contentProtection")]
         public StreamsContentProtectionResponse ContentProtection { get; set; }
+
+        /// <summary>
+        /// Stream trimming information
+        /// </summary>
+        [JsonProperty(PropertyName = "trimming")]
+        public StreamsTrimmingStatus? Trimming { get; internal set; }
     }
 }

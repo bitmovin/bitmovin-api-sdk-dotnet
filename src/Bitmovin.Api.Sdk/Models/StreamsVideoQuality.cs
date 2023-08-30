@@ -23,12 +23,6 @@ namespace Bitmovin.Api.Sdk.Models
         /// The default Per-title encoding
         /// </summary>
         [EnumMember(Value = "DEFAULT")]
-        DEFAULT,
-
-        /// <summary>
-        /// The trimmed Video
-        /// </summary>
-        [EnumMember(Value = "TRIMMED")]
-        TRIMMED
+        DEFAULT
     }
 }

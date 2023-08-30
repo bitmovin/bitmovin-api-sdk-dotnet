@@ -22,7 +22,7 @@ namespace Bitmovin.Api.Sdk.Models
         public string License { get; set; }
 
         /// <summary>
-        /// The type of watermarking to be used. Usually, OTT is the one recommended in production.
+        /// The type of watermarking to be used: * &#x60;OTT&#x60; - A/B watermarking (for video streams only) * &#x60;DUPLICATED&#x60; - Stream duplication to match A/B video streams in CDN delivery (for audio streams only) 
         /// </summary>
         [JsonProperty(PropertyName = "watermarkType")]
         public NexGuardWatermarkingType? WatermarkType { get; set; }
