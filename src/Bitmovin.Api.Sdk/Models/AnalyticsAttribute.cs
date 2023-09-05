@@ -356,6 +356,12 @@ namespace Bitmovin.Api.Sdk.Models
         ERROR_RATE,
 
         /// <summary>
+        /// ERROR_PERCENTAGE
+        /// </summary>
+        [EnumMember(Value = "ERROR_PERCENTAGE")]
+        ERROR_PERCENTAGE,
+
+        /// <summary>
         /// EXPERIMENT_NAME
         /// </summary>
         [EnumMember(Value = "EXPERIMENT_NAME")]

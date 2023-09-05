@@ -56,5 +56,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "verified")]
         public bool? Verified { get; internal set; }
+
+        /// <summary>
+        /// Marketplace
+        /// </summary>
+        [JsonProperty(PropertyName = "marketplace")]
+        public Marketplace? Marketplace { get; internal set; }
     }
 }
