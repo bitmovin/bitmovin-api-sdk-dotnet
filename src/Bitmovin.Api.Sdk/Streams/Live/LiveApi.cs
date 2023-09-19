@@ -38,6 +38,15 @@ namespace Bitmovin.Api.Sdk.Streams.Live
         }
 
         /// <summary>
+        /// Delete Stream
+        /// </summary>
+        /// <param name="streamId">Id of the stream. (required)</param>
+        public async Task DeleteAsync(string streamId)
+        {
+            await _apiClient.DeleteAsync(streamId);
+        }
+
+        /// <summary>
         /// Get live stream by id
         /// </summary>
         /// <param name="streamId">Id of the stream. (required)</param>
@@ -87,6 +96,10 @@ namespace Bitmovin.Api.Sdk.Streams.Live
             [Post("/streams/live")]
             [AllowAnyStatusCode]
             Task<Models.StreamsLiveResponse> CreateAsync([Body] Models.StreamsLiveCreateRequest streamsLiveCreateRequest);
+
+            [Delete("/streams/live/{stream_id}")]
+            [AllowAnyStatusCode]
+            Task DeleteAsync([Path("stream_id")] string streamId);
 
             [Get("/streams/live/{stream_id}")]
             [AllowAnyStatusCode]
