@@ -14,6 +14,12 @@ namespace Bitmovin.Api.Sdk.Models
         H264,
 
         /// <summary>
+        /// H264_FIXED_RESOLUTIONS
+        /// </summary>
+        [EnumMember(Value = "H264_FIXED_RESOLUTIONS")]
+        H264_FIXED_RESOLUTIONS,
+
+        /// <summary>
         /// AV1
         /// </summary>
         [EnumMember(Value = "AV1")]

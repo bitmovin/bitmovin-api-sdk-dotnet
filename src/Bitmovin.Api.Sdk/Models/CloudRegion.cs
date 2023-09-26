@@ -212,52 +212,136 @@ namespace Bitmovin.Api.Sdk.Models
         GOOGLE_US_WEST_2,
 
         /// <summary>
-        /// Azure Netherlands
+        /// Azure East Asia, Hong Kong
         /// </summary>
-        [EnumMember(Value = "AZURE_EUROPE_WEST")]
-        AZURE_EUROPE_WEST,
+        [EnumMember(Value = "AZURE_ASIA_EAST")]
+        AZURE_ASIA_EAST,
 
         /// <summary>
-        /// Azure Ireland
+        /// Azure Southeast Asia, Singapore
         /// </summary>
-        [EnumMember(Value = "AZURE_EUROPE_NORTH")]
-        AZURE_EUROPE_NORTH,
+        [EnumMember(Value = "AZURE_ASIA_SOUTHEAST")]
+        AZURE_ASIA_SOUTHEAST,
 
         /// <summary>
-        /// Azure Washington, USA
-        /// </summary>
-        [EnumMember(Value = "AZURE_US_WEST2")]
-        AZURE_US_WEST2,
-
-        /// <summary>
-        /// Azure Virginia, USA
-        /// </summary>
-        [EnumMember(Value = "AZURE_US_EAST")]
-        AZURE_US_EAST,
-
-        /// <summary>
-        /// Azure Victoria, Australia
-        /// </summary>
-        [EnumMember(Value = "AZURE_AUSTRALIA_SOUTHEAST")]
-        AZURE_AUSTRALIA_SOUTHEAST,
-
-        /// <summary>
-        /// Azure New South Wales, Australia
+        /// Azure Australia East, Canberra
         /// </summary>
         [EnumMember(Value = "AZURE_AUSTRALIA_EAST")]
         AZURE_AUSTRALIA_EAST,
 
         /// <summary>
-        /// Azure Frankfurt, Germany
+        /// Azure Australia Southeast, Victoria
+        /// </summary>
+        [EnumMember(Value = "AZURE_AUSTRALIA_SOUTHEAST")]
+        AZURE_AUSTRALIA_SOUTHEAST,
+
+        /// <summary>
+        /// Azure Brazil South, São Paulo
+        /// </summary>
+        [EnumMember(Value = "AZURE_BRAZIL_SOUTH")]
+        AZURE_BRAZIL_SOUTH,
+
+        /// <summary>
+        /// Azure Canada Central, Toronto
+        /// </summary>
+        [EnumMember(Value = "AZURE_CANADA_CENTRAL")]
+        AZURE_CANADA_CENTRAL,
+
+        /// <summary>
+        /// Azure North Europe, Ireland
+        /// </summary>
+        [EnumMember(Value = "AZURE_EUROPE_NORTH")]
+        AZURE_EUROPE_NORTH,
+
+        /// <summary>
+        /// Azure West Europe, Netherlands
+        /// </summary>
+        [EnumMember(Value = "AZURE_EUROPE_WEST")]
+        AZURE_EUROPE_WEST,
+
+        /// <summary>
+        /// Azure France Central, Paris
+        /// </summary>
+        [EnumMember(Value = "AZURE_FRANCE_CENTRAL")]
+        AZURE_FRANCE_CENTRAL,
+
+        /// <summary>
+        /// Azure Germany West Central, Frankfurt
         /// </summary>
         [EnumMember(Value = "AZURE_GERMANY_WESTCENTRAL")]
         AZURE_GERMANY_WESTCENTRAL,
 
         /// <summary>
-        /// Azure Dubai, United Arab Emirates
+        /// Azure Central India, Pune
+        /// </summary>
+        [EnumMember(Value = "AZURE_INDIA_CENTRAL")]
+        AZURE_INDIA_CENTRAL,
+
+        /// <summary>
+        /// Azure South India, Chennai
+        /// </summary>
+        [EnumMember(Value = "AZURE_INDIA_SOUTH")]
+        AZURE_INDIA_SOUTH,
+
+        /// <summary>
+        /// Azure Japan East, Tokyo, Saitama
+        /// </summary>
+        [EnumMember(Value = "AZURE_JAPAN_EAST")]
+        AZURE_JAPAN_EAST,
+
+        /// <summary>
+        /// Azure Japan West, Osaka
+        /// </summary>
+        [EnumMember(Value = "AZURE_JAPAN_WEST")]
+        AZURE_JAPAN_WEST,
+
+        /// <summary>
+        /// Azure Korea Central, Seoul
+        /// </summary>
+        [EnumMember(Value = "AZURE_KOREA_CENTRAL")]
+        AZURE_KOREA_CENTRAL,
+
+        /// <summary>
+        /// Azure UAE North, Dubai, United Arab Emirates
         /// </summary>
         [EnumMember(Value = "AZURE_UAE_NORTH")]
         AZURE_UAE_NORTH,
+
+        /// <summary>
+        /// Azure Central US, Iowa, USA
+        /// </summary>
+        [EnumMember(Value = "AZURE_US_CENTRAL")]
+        AZURE_US_CENTRAL,
+
+        /// <summary>
+        /// Azure East US, Virginia, USA
+        /// </summary>
+        [EnumMember(Value = "AZURE_US_EAST")]
+        AZURE_US_EAST,
+
+        /// <summary>
+        /// Azure East US 2, Virginia, USA
+        /// </summary>
+        [EnumMember(Value = "AZURE_US_EAST2")]
+        AZURE_US_EAST2,
+
+        /// <summary>
+        /// Azure West US, California, USA
+        /// </summary>
+        [EnumMember(Value = "AZURE_US_WEST")]
+        AZURE_US_WEST,
+
+        /// <summary>
+        /// Azure West US 2, Washington, USA
+        /// </summary>
+        [EnumMember(Value = "AZURE_US_WEST2")]
+        AZURE_US_WEST2,
+
+        /// <summary>
+        /// Azure South Central US, Texas, USA
+        /// </summary>
+        [EnumMember(Value = "AZURE_US_SOUTH_CENTRAL")]
+        AZURE_US_SOUTH_CENTRAL,
 
         /// <summary>
         /// NORTH_AMERICA
