@@ -44,5 +44,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "adConfigId")]
         public string AdConfigId { get; set; }
+
+        /// <summary>
+        /// Profile to be used in encoding
+        /// </summary>
+        [JsonProperty(PropertyName = "encodingProfile")]
+        public StreamsEncodingProfile? EncodingProfile { get; set; }
     }
 }

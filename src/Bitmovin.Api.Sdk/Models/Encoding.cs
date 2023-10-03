@@ -106,6 +106,12 @@ namespace Bitmovin.Api.Sdk.Models
         public CloudRegion? SelectedCloudRegion { get; internal set; }
 
         /// <summary>
+        /// After the encoding has been started, this will contain the fallback cloud regions that were actually used. This will differ from fallbackCloudRegions if any of the fallbackCloudRegions were set to an unspecific region (e.g. &#39;AUTO&#39;)
+        /// </summary>
+        [JsonProperty(PropertyName = "selectedFallbackCloudRegions")]
+        public List<CloudRegion> SelectedFallbackCloudRegions { get; internal set; } = new List<CloudRegion>();
+
+        /// <summary>
         /// The current status of the encoding.
         /// </summary>
         [JsonProperty(PropertyName = "status")]

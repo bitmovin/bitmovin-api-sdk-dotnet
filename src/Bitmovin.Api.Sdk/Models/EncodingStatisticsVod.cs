@@ -24,7 +24,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// <summary>
         /// The realtime factor. (required)
         /// </summary>
-        [JsonProperty(PropertyName = "realTimeFactor")]
-        public double? RealTimeFactor { get; set; }
+        [JsonProperty(PropertyName = "realtimeFactor")]
+        public double? RealtimeFactor { get; set; }
     }
 }
