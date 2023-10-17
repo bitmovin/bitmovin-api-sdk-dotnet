@@ -34,18 +34,6 @@ namespace Bitmovin.Api.Sdk.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// Id of the style config to use
-        /// </summary>
-        [JsonProperty(PropertyName = "styleConfigId")]
-        public string StyleConfigId { get; set; }
-
-        /// <summary>
-        /// Id of the advertisement config to use
-        /// </summary>
-        [JsonProperty(PropertyName = "adConfigId")]
-        public string AdConfigId { get; set; }
-
-        /// <summary>
         /// Profile to be used in encoding
         /// </summary>
         [JsonProperty(PropertyName = "encodingProfile")]

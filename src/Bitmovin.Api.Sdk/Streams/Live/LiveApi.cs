@@ -81,16 +81,6 @@ namespace Bitmovin.Api.Sdk.Streams.Live
             return await _apiClient.PatchStreamsLiveAsync(streamId, streamsLiveUpdateRequest);
         }
 
-        /// <summary>
-        /// Update live stream by id
-        /// </summary>
-        /// <param name="streamId">Id of the stream. (required)</param>
-        /// <param name="streamsLiveUpdateRequest">The updated Streams live object.</param>
-        public async Task<Models.StreamsLiveResponse> UpdateAsync(string streamId, Models.StreamsLiveUpdateRequest streamsLiveUpdateRequest)
-        {
-            return await _apiClient.UpdateAsync(streamId, streamsLiveUpdateRequest);
-        }
-
         internal interface ILiveApiClient
         {
             [Post("/streams/live")]
@@ -112,10 +102,6 @@ namespace Bitmovin.Api.Sdk.Streams.Live
             [Patch("/streams/live/{stream_id}")]
             [AllowAnyStatusCode]
             Task<Models.StreamsLiveResponse> PatchStreamsLiveAsync([Path("stream_id")] string streamId, [Body] Models.StreamsLiveUpdateRequest streamsLiveUpdateRequest);
-
-            [Put("/streams/live/{stream_id}")]
-            [AllowAnyStatusCode]
-            Task<Models.StreamsLiveResponse> UpdateAsync([Path("stream_id")] string streamId, [Body] Models.StreamsLiveUpdateRequest streamsLiveUpdateRequest);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

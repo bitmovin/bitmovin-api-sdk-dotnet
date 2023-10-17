@@ -38,5 +38,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "limitsPerResource")]
         public List<ResourceLimitContainer> LimitsPerResource { get; set; } = new List<ResourceLimitContainer>();
+
+        /// <summary>
+        /// which platform initiated organisation creation
+        /// </summary>
+        [JsonProperty(PropertyName = "signupSource")]
+        public SignupSource? SignupSource { get; internal set; }
     }
 }

@@ -34,27 +34,9 @@ namespace Bitmovin.Api.Sdk.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// Id of the style config to use
-        /// </summary>
-        [JsonProperty(PropertyName = "styleConfigId")]
-        public string StyleConfigId { get; set; }
-
-        /// <summary>
         /// URL to hosted poster image
         /// </summary>
         [JsonProperty(PropertyName = "posterUrl")]
         public string PosterUrl { get; set; }
-
-        /// <summary>
-        /// Id of the advertisement config to use
-        /// </summary>
-        [JsonProperty(PropertyName = "adConfigId")]
-        public string AdConfigId { get; set; }
-
-        /// <summary>
-        /// Id of the content protection config to use
-        /// </summary>
-        [JsonProperty(PropertyName = "contentProtectionId")]
-        public string ContentProtectionId { get; set; }
     }
 }
