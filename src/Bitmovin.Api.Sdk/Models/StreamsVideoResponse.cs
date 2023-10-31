@@ -86,5 +86,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "trimming")]
         public StreamsTrimmingStatus? Trimming { get; internal set; }
+
+        /// <summary>
+        /// Single-file download URL of the unaltered video in the best available quality
+        /// </summary>
+        [JsonProperty(PropertyName = "downloadUrl")]
+        public string DownloadUrl { get; internal set; }
     }
 }

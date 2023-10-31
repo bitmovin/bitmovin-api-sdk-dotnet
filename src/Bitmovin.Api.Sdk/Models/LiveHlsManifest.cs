@@ -22,7 +22,7 @@ namespace Bitmovin.Api.Sdk.Models
         public string ManifestId { get; set; }
 
         /// <summary>
-        /// Timeshift in seconds
+        /// Timeshift in seconds. We recommend to use a timeshift value not greater than 3 hours (10800.0 seconds). Longer values could negatively impact the manifest update frequency. 
         /// </summary>
         [JsonProperty(PropertyName = "timeshift")]
         public double? Timeshift { get; set; }
