@@ -92,5 +92,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "downloadUrl")]
         public string DownloadUrl { get; internal set; }
+
+        /// <summary>
+        /// True if the stream is signature protected
+        /// </summary>
+        [JsonProperty(PropertyName = "signed")]
+        public bool? Signed { get; internal set; }
     }
 }

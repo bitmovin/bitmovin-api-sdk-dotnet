@@ -2,6 +2,7 @@ using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Streams.Search;
 using Bitmovin.Api.Sdk.Streams.Video;
 using Bitmovin.Api.Sdk.Streams.Live;
+using Bitmovin.Api.Sdk.Streams.SigningKeys;
 
 namespace Bitmovin.Api.Sdk.Streams
 {
@@ -12,6 +13,7 @@ namespace Bitmovin.Api.Sdk.Streams
             Search = new SearchApi(apiClientFactory);
             Video = new VideoApi(apiClientFactory);
             Live = new LiveApi(apiClientFactory);
+            SigningKeys = new SigningKeysApi(apiClientFactory);
         }
 
         /// <summary>
@@ -22,5 +24,6 @@ namespace Bitmovin.Api.Sdk.Streams
         public SearchApi Search { get; }
         public VideoApi Video { get; }
         public LiveApi Live { get; }
+        public SigningKeysApi SigningKeys { get; }
     }
 }

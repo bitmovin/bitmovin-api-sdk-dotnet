@@ -62,5 +62,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "marketplace")]
         public Marketplace? Marketplace { get; internal set; }
+
+        /// <summary>
+        /// MfaEnabled
+        /// </summary>
+        [JsonProperty(PropertyName = "mfaEnabled")]
+        public bool? MfaEnabled { get; internal set; }
     }
 }

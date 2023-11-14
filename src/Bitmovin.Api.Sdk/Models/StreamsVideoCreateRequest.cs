@@ -38,5 +38,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "encodingProfile")]
         public StreamsEncodingProfile? EncodingProfile { get; set; }
+
+        /// <summary>
+        /// If set to true the Stream is only accessible via a token
+        /// </summary>
+        [JsonProperty(PropertyName = "signed")]
+        public bool? Signed { get; set; }
     }
 }
