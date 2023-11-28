@@ -344,6 +344,30 @@ namespace Bitmovin.Api.Sdk.Models
         AZURE_US_SOUTH_CENTRAL,
 
         /// <summary>
+        /// Akamai São Paulo, Brazil
+        /// </summary>
+        [EnumMember(Value = "AKAMAI_BR_GRU")]
+        AKAMAI_BR_GRU,
+
+        /// <summary>
+        /// Akamai Paris, France
+        /// </summary>
+        [EnumMember(Value = "AKAMAI_FR_PAR")]
+        AKAMAI_FR_PAR,
+
+        /// <summary>
+        /// Akamai Osaka, Japan
+        /// </summary>
+        [EnumMember(Value = "AKAMAI_JP_OSA")]
+        AKAMAI_JP_OSA,
+
+        /// <summary>
+        /// Akamai Seattle, USA
+        /// </summary>
+        [EnumMember(Value = "AKAMAI_US_SEA")]
+        AKAMAI_US_SEA,
+
+        /// <summary>
         /// NORTH_AMERICA
         /// </summary>
         [EnumMember(Value = "NORTH_AMERICA")]

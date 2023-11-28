@@ -23,6 +23,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// High profile
         /// </summary>
         [EnumMember(Value = "HIGH")]
-        HIGH
+        HIGH,
+
+        /// <summary>
+        /// High profile 422
+        /// </summary>
+        [EnumMember(Value = "HIGH422")]
+        HIGH422
     }
 }

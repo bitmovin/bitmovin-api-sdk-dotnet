@@ -16,25 +16,19 @@ namespace Bitmovin.Api.Sdk.Models
     public class TenantWithGroups
     {
         /// <summary>
-        /// Id of Tenant
+        /// Id of Tenant (required)
         /// </summary>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
 
         /// <summary>
-        /// Email of Tenant
+        /// Email of Tenant (required)
         /// </summary>
         [JsonProperty(PropertyName = "email")]
         public string Email { get; set; }
 
         /// <summary>
-        /// InvitationStatus
-        /// </summary>
-        [JsonProperty(PropertyName = "invitationStatus")]
-        public InvitationStatus? InvitationStatus { get; set; }
-
-        /// <summary>
-        /// List of all groups of Tenant
+        /// List of all groups of Tenant (required)
         /// </summary>
         [JsonProperty(PropertyName = "groups")]
         public List<TenantGroupDetail> Groups { get; set; } = new List<TenantGroupDetail>();
