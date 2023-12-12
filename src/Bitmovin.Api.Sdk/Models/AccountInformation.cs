@@ -68,5 +68,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "mfaEnabled")]
         public bool? MfaEnabled { get; internal set; }
+
+        /// <summary>
+        /// IntercomIdVerification
+        /// </summary>
+        [JsonProperty(PropertyName = "intercomIdVerification")]
+        public string IntercomIdVerification { get; internal set; }
     }
 }
