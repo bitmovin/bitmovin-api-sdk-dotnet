@@ -25,7 +25,7 @@ namespace Bitmovin.Api.Sdk.Streams.Search
         /// Get paginated search results of VOD and Live streams
         /// </summary>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>
-        public async Task<Models.PaginationResponse<Models.StreamsSearchResponse>> ListAsync(params Func<ListQueryParams, ListQueryParams>[] queryParams)
+        public async Task<Models.PaginationResponse<Models.StreamsResponse>> ListAsync(params Func<ListQueryParams, ListQueryParams>[] queryParams)
         {
             ListQueryParams q = new ListQueryParams();
 
@@ -41,7 +41,7 @@ namespace Bitmovin.Api.Sdk.Streams.Search
         {
             [Get("/streams/search")]
             [AllowAnyStatusCode]
-            Task<Models.PaginationResponse<Models.StreamsSearchResponse>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
+            Task<Models.PaginationResponse<Models.StreamsResponse>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
         public class ListQueryParams : Dictionary<string,Object>
@@ -57,9 +57,39 @@ namespace Bitmovin.Api.Sdk.Streams.Search
             public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
 
             /// <summary>
-            /// Query to search against
+            /// Query to search for in a streams&#39; title, description and ID
             /// </summary>
             public ListQueryParams Query(string query) => SetQueryParam("query", query);
+
+            /// <summary>
+            /// Type of stream to search for
+            /// </summary>
+            public ListQueryParams Type(Models.StreamsType type) => SetQueryParam("type", type);
+
+            /// <summary>
+            /// Status of the streams to search for
+            /// </summary>
+            public ListQueryParams Status(Models.StreamsVideoStatus status) => SetQueryParam("status", status);
+
+            /// <summary>
+            /// Upper limit for the creation date of found streams as UTC in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
+            /// </summary>
+            public ListQueryParams CreatedBefore(string createdBefore) => SetQueryParam("createdBefore", createdBefore);
+
+            /// <summary>
+            /// Lower limit for the creation date of found streams as UTC in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
+            /// </summary>
+            public ListQueryParams CreatedAfter(string createdAfter) => SetQueryParam("createdAfter", createdAfter);
+
+            /// <summary>
+            /// Filter for token-protected/signed streams
+            /// </summary>
+            public ListQueryParams Signed(bool? signed) => SetQueryParam("signed", signed);
+
+            /// <summary>
+            /// Filter for domain-restricted streams
+            /// </summary>
+            public ListQueryParams DomainRestricted(bool? domainRestricted) => SetQueryParam("domainRestricted", domainRestricted);
 
             private ListQueryParams SetQueryParam<T>(string key, T value)
             {

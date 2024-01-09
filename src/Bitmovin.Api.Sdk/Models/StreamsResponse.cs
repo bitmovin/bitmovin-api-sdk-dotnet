@@ -11,9 +11,13 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// StreamsSearchResponse
+    /// StreamsResponse
     /// </summary>
-    public class StreamsSearchResponse
+    [JsonConverter(typeof(JsonSubtypes), "type")]
+    [JsonSubtypes.KnownSubType(typeof(StreamsVideoResponse), "VIDEO")]
+    [JsonSubtypes.KnownSubType(typeof(StreamsLiveResponse), "LIVE")]
+
+    public class StreamsResponse
     {
         /// <summary>
         /// The identifier of the stream
@@ -40,7 +44,7 @@ namespace Bitmovin.Api.Sdk.Models
         public DateTime? CreatedAt { get; internal set; }
 
         /// <summary>
-        /// The type the stream
+        /// Type of the Stream contained in the StreamsResponse
         /// </summary>
         [JsonProperty(PropertyName = "type")]
         public StreamsType? Type { get; internal set; }

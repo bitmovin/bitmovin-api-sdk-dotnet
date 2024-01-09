@@ -13,37 +13,16 @@ namespace Bitmovin.Api.Sdk.Models
     /// <summary>
     /// StreamsVideoResponse
     /// </summary>
-    public class StreamsVideoResponse
+    public class StreamsVideoResponse : StreamsResponse
     {
-        /// <summary>
-        /// The identifier of the stream
-        /// </summary>
-        [JsonProperty(PropertyName = "id")]
-        public string Id { get; internal set; }
+        [JsonProperty(PropertyName = "type")]
+        private readonly string _type = "VIDEO";
 
         /// <summary>
         /// The asset URL of the stream
         /// </summary>
         [JsonProperty(PropertyName = "assetUrl")]
         public string AssetUrl { get; internal set; }
-
-        /// <summary>
-        /// The title of the stream
-        /// </summary>
-        [JsonProperty(PropertyName = "title")]
-        public string Title { get; internal set; }
-
-        /// <summary>
-        /// The description of the stream
-        /// </summary>
-        [JsonProperty(PropertyName = "description")]
-        public string Description { get; internal set; }
-
-        /// <summary>
-        /// Creation timestamp, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
-        /// </summary>
-        [JsonProperty(PropertyName = "createdAt")]
-        public DateTime? CreatedAt { get; internal set; }
 
         /// <summary>
         /// The status of the stream

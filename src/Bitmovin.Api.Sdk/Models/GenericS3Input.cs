@@ -43,6 +43,12 @@ namespace Bitmovin.Api.Sdk.Models
         public bool? Ssl { get; set; }
 
         /// <summary>
+        /// The signing region to use
+        /// </summary>
+        [JsonProperty(PropertyName = "signingRegion")]
+        public string SigningRegion { get; set; }
+
+        /// <summary>
         /// Specifies the method used for authentication
         /// </summary>
         [JsonProperty(PropertyName = "signatureVersion")]
@@ -59,5 +65,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "secretKey")]
         public string SecretKey { get; set; }
+
+        /// <summary>
+        /// Specifies the URL access style to use
+        /// </summary>
+        [JsonProperty(PropertyName = "accessStyle")]
+        public S3AccessStyle? AccessStyle { get; set; }
     }
 }

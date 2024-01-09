@@ -162,6 +162,11 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls
             public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
 
             /// <summary>
+            /// Order list result according to a filter resource attribute. The fields that can be used for sorting are: + &#x60;id&#x60; + &#x60;createdAt&#x60; + &#x60;modifiedAt&#x60; + &#x60;type&#x60; + &#x60;name&#x60; 
+            /// </summary>
+            public ListQueryParams Sort(string sort) => SetQueryParam("sort", sort);
+
+            /// <summary>
             /// Get the manifests that belong to that encoding id
             /// </summary>
             public ListQueryParams EncodingId(string encodingId) => SetQueryParam("encodingId", encodingId);

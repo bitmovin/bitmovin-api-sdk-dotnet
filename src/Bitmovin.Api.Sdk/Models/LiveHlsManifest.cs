@@ -44,5 +44,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "programDateTimeSettings")]
         public ProgramDateTimeSettings ProgramDateTimeSettings { get; set; }
+
+        /// <summary>
+        /// Configuration for tags related to ad markers (e.g. Scte35)
+        /// </summary>
+        [JsonProperty(PropertyName = "adMarkerSettings")]
+        public HlsManifestAdMarkerSettings AdMarkerSettings { get; set; }
     }
 }
