@@ -25,9 +25,15 @@ namespace Bitmovin.Api.Sdk.Models
         public int? DelayThreshold { get; set; }
 
         /// <summary>
-        /// IngestPoints
+        /// Configuration for ingest points that use a dynamic IP based endpoint to stream to e.g.: rtmp://41.167.11.21/live Either ingestPoints **or** staticIngestPoints can be set 
         /// </summary>
         [JsonProperty(PropertyName = "ingestPoints")]
         public List<RtmpIngestPoint> IngestPoints { get; set; } = new List<RtmpIngestPoint>();
+
+        /// <summary>
+        /// Configuration for static ingest points. These ingest points use a consistent endpoint to stream to e.g.: rtmps://live-ingest.bitmovin.com/live Either ingestPoints **or** staticIngestPoints can be set 
+        /// </summary>
+        [JsonProperty(PropertyName = "staticIngestPoints")]
+        public List<StaticRtmpIngestPoint> StaticIngestPoints { get; set; } = new List<StaticRtmpIngestPoint>();
     }
 }
