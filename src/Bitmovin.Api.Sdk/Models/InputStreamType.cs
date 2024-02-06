@@ -74,12 +74,6 @@ namespace Bitmovin.Api.Sdk.Models
         DVB_SUBTITLE,
 
         /// <summary>
-        /// DVB_TELETEXT
-        /// </summary>
-        [EnumMember(Value = "DVB_TELETEXT")]
-        DVB_TELETEXT,
-
-        /// <summary>
         /// DOLBY_ATMOS
         /// </summary>
         [EnumMember(Value = "DOLBY_ATMOS")]
