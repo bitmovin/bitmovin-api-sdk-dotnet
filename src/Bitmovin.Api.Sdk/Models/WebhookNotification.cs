@@ -20,5 +20,23 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "url")]
         public string Url { get; set; }
+
+        /// <summary>
+        /// HTTP method used for the webhook
+        /// </summary>
+        [JsonProperty(PropertyName = "method")]
+        public WebhookHttpMethod? Method { get; set; }
+
+        /// <summary>
+        /// Skip verification of the SSL certificate
+        /// </summary>
+        [JsonProperty(PropertyName = "insecureSsl")]
+        public bool? InsecureSsl { get; set; }
+
+        /// <summary>
+        /// Signature used for the webhook
+        /// </summary>
+        [JsonProperty(PropertyName = "signature")]
+        public WebhookSignature Signature { get; set; }
     }
 }

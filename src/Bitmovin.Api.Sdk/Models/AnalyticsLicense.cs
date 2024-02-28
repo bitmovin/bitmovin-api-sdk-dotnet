@@ -88,6 +88,12 @@ namespace Bitmovin.Api.Sdk.Models
         public string RetentionTime { get; internal set; }
 
         /// <summary>
+        /// Retention time for compressed data, returned as ISO 8601 duration format: P(n)Y(n)M(n)DT(n)H(n)M(n)S
+        /// </summary>
+        [JsonProperty(PropertyName = "compressedRetentionTime")]
+        public string CompressedRetentionTime { get; internal set; }
+
+        /// <summary>
         /// Whitelisted domains
         /// </summary>
         [JsonProperty(PropertyName = "domains")]
