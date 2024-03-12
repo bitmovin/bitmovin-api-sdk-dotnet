@@ -49,10 +49,10 @@ namespace Bitmovin.Api.Sdk.Models
         public StreamsAdConfigResponse AdConfig { get; set; }
 
         /// <summary>
-        /// ContentProtection
+        /// DomainRestriction
         /// </summary>
-        [JsonProperty(PropertyName = "contentProtection")]
-        public StreamsContentProtectionResponse ContentProtection { get; set; }
+        [JsonProperty(PropertyName = "domainRestriction")]
+        public StreamsDomainRestrictionResponse DomainRestriction { get; set; }
 
         /// <summary>
         /// Stream trimming information

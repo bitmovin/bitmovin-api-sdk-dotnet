@@ -11,12 +11,12 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// StreamsContentProtectionResponse
+    /// StreamsDomainRestrictionResponse
     /// </summary>
-    public class StreamsContentProtectionResponse
+    public class StreamsDomainRestrictionResponse
     {
         /// <summary>
-        /// The identifier of the streams content protection entity
+        /// The identifier of the streams domain restriction entity
         /// </summary>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; internal set; }
@@ -28,7 +28,7 @@ namespace Bitmovin.Api.Sdk.Models
         public List<string> AllowedDomains { get; set; } = new List<string>();
 
         /// <summary>
-        /// Controls if requests to content protected streams without referer header should be allowed or denied
+        /// Controls if requests to domain restricted streams without referer header should be allowed or denied
         /// </summary>
         [JsonProperty(PropertyName = "allowNoReferer")]
         public bool? AllowNoReferer { get; set; }

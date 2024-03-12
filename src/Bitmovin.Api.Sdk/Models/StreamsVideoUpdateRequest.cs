@@ -38,5 +38,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "posterUrl")]
         public string PosterUrl { get; set; }
+
+        /// <summary>
+        /// Id of the domain restriction config to use
+        /// </summary>
+        [JsonProperty(PropertyName = "domainRestrictionId")]
+        public string DomainRestrictionId { get; set; }
     }
 }

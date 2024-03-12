@@ -34,6 +34,12 @@ namespace Bitmovin.Api.Sdk.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// Id of the domain restriction config to use
+        /// </summary>
+        [JsonProperty(PropertyName = "domainRestrictionId")]
+        public string DomainRestrictionId { get; set; }
+
+        /// <summary>
         /// Profile to be used in encoding
         /// </summary>
         [JsonProperty(PropertyName = "encodingProfile")]
