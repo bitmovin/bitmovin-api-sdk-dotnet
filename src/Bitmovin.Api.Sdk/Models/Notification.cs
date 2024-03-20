@@ -43,19 +43,19 @@ namespace Bitmovin.Api.Sdk.Models
         /// EventType
         /// </summary>
         [JsonProperty(PropertyName = "eventType")]
-        public string EventType { get; set; }
+        public string EventType { get; internal set; }
 
         /// <summary>
         /// Category
         /// </summary>
         [JsonProperty(PropertyName = "category")]
-        public string Category { get; set; }
+        public string Category { get; internal set; }
 
         /// <summary>
         /// ResourceType
         /// </summary>
         [JsonProperty(PropertyName = "resourceType")]
-        public string ResourceType { get; set; }
+        public string ResourceType { get; internal set; }
 
         /// <summary>
         /// Muted
