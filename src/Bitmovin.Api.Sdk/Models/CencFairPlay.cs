@@ -22,7 +22,7 @@ namespace Bitmovin.Api.Sdk.Models
         public string Iv { get; set; }
 
         /// <summary>
-        /// URL of the licensing server
+        /// URL of the licensing server. Typically starts with a skd://. Please check with your DRM provider on their required format.
         /// </summary>
         [JsonProperty(PropertyName = "uri")]
         public string Uri { get; set; }

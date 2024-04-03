@@ -50,6 +50,14 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Manifest.Finished
         }
 
         /// <summary>
+        /// Get &#39;Manifest Finished&#39; Webhooks (All Manifests)
+        /// </summary>
+        public async Task<Models.PaginationResponse<Models.Webhook>> ListAsync()
+        {
+            return await _apiClient.ListAsync();
+        }
+
+        /// <summary>
         /// Replace Manifest Finished Webhook Notification
         /// </summary>
         /// <param name="notificationId">Id of the webhook notification (required)</param>
@@ -72,6 +80,10 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Manifest.Finished
             [Delete("/notifications/webhooks/encoding/manifest/finished/{notification_id}")]
             [AllowAnyStatusCode]
             Task<Models.BitmovinResponse> DeleteAsync([Path("notification_id")] string notificationId);
+
+            [Get("/notifications/webhooks/encoding/manifest/finished")]
+            [AllowAnyStatusCode]
+            Task<Models.PaginationResponse<Models.Webhook>> ListAsync();
 
             [Put("/notifications/webhooks/encoding/manifest/finished/{notification_id}")]
             [AllowAnyStatusCode]

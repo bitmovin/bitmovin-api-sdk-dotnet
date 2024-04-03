@@ -50,6 +50,14 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Manifest.Error
         }
 
         /// <summary>
+        /// Get &#39;Manifest Error&#39; Webhooks (All Manifests)
+        /// </summary>
+        public async Task<Models.PaginationResponse<Models.Webhook>> ListAsync()
+        {
+            return await _apiClient.ListAsync();
+        }
+
+        /// <summary>
         /// Replace &#39;Manifest Error&#39; Webhook Notification
         /// </summary>
         /// <param name="notificationId">Id of the webhook notification (required)</param>
@@ -72,6 +80,10 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Manifest.Error
             [Delete("/notifications/webhooks/encoding/manifest/error/{notification_id}")]
             [AllowAnyStatusCode]
             Task<Models.BitmovinResponse> DeleteAsync([Path("notification_id")] string notificationId);
+
+            [Get("/notifications/webhooks/encoding/manifest/error")]
+            [AllowAnyStatusCode]
+            Task<Models.PaginationResponse<Models.Webhook>> ListAsync();
 
             [Put("/notifications/webhooks/encoding/manifest/error/{notification_id}")]
             [AllowAnyStatusCode]
