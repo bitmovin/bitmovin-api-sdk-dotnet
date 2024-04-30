@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using RestEase;
 using Bitmovin.Api.Sdk.Common;
+using Bitmovin.Api.Sdk.Encoding.Live.StreamKeys.Actions;
 
 namespace Bitmovin.Api.Sdk.Encoding.Live.StreamKeys
 {
@@ -14,12 +15,15 @@ namespace Bitmovin.Api.Sdk.Encoding.Live.StreamKeys
         public StreamKeysApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IStreamKeysApiClient>();
+            Actions = new ActionsApi(apiClientFactory);
         }
 
         /// <summary>
         /// Fluent builder for creating an instance of StreamKeysApi
         /// </summary>
         public static BitmovinApiBuilder<StreamKeysApi> Builder => new BitmovinApiBuilder<StreamKeysApi>();
+
+        public ActionsApi Actions { get; }
 
         /// <summary>
         /// Create new stream key

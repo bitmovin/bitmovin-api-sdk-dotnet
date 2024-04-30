@@ -44,5 +44,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "signupSource")]
         public SignupSource? SignupSource { get; internal set; }
+
+        /// <summary>
+        /// Flag indicating if MFA is required for the organization
+        /// </summary>
+        [JsonProperty(PropertyName = "mfaRequired")]
+        public bool? MfaRequired { get; internal set; }
     }
 }
