@@ -344,6 +344,18 @@ namespace Bitmovin.Api.Sdk.Models
         AZURE_US_SOUTH_CENTRAL,
 
         /// <summary>
+        /// Azure North Central US, Illinois, USA
+        /// </summary>
+        [EnumMember(Value = "AZURE_US_NORTH_CENTRAL")]
+        AZURE_US_NORTH_CENTRAL,
+
+        /// <summary>
+        /// Azure UK South, London, UK
+        /// </summary>
+        [EnumMember(Value = "AZURE_UK_SOUTH")]
+        AZURE_UK_SOUTH,
+
+        /// <summary>
         /// Akamai São Paulo, Brazil
         /// </summary>
         [EnumMember(Value = "AKAMAI_BR_GRU")]

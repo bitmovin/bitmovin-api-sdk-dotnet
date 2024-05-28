@@ -15,6 +15,7 @@ namespace Bitmovin.Api.Sdk.Models
     /// </summary>
     [JsonConverter(typeof(JsonSubtypes), "type")]
     [JsonSubtypes.KnownSubType(typeof(AacAudioConfiguration), "AAC")]
+    [JsonSubtypes.KnownSubType(typeof(PassthroughAudioConfiguration), "AUDIO_PASSTHROUGH")]
     [JsonSubtypes.KnownSubType(typeof(DtsPassthroughAudioConfiguration), "DTS_PASSTHROUGH")]
     [JsonSubtypes.KnownSubType(typeof(DtsAudioConfiguration), "DTS")]
     [JsonSubtypes.KnownSubType(typeof(DtsXAudioConfiguration), "DTSX")]

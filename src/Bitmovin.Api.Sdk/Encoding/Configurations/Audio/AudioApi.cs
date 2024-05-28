@@ -6,6 +6,7 @@ using Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Dtsx;
 using Bitmovin.Api.Sdk.Encoding.Configurations.Audio.DolbyAtmos;
 using Bitmovin.Api.Sdk.Encoding.Configurations.Audio.HeAacV1;
 using Bitmovin.Api.Sdk.Encoding.Configurations.Audio.HeAacV2;
+using Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Passthrough;
 using Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Vorbis;
 using Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Opus;
 using Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Pcm;
@@ -29,6 +30,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio
             DolbyAtmos = new DolbyAtmosApi(apiClientFactory);
             HeAacV1 = new HeAacV1Api(apiClientFactory);
             HeAacV2 = new HeAacV2Api(apiClientFactory);
+            Passthrough = new PassthroughApi(apiClientFactory);
             Vorbis = new VorbisApi(apiClientFactory);
             Opus = new OpusApi(apiClientFactory);
             Pcm = new PcmApi(apiClientFactory);
@@ -52,6 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio
         public DolbyAtmosApi DolbyAtmos { get; }
         public HeAacV1Api HeAacV1 { get; }
         public HeAacV2Api HeAacV2 { get; }
+        public PassthroughApi Passthrough { get; }
         public VorbisApi Vorbis { get; }
         public OpusApi Opus { get; }
         public PcmApi Pcm { get; }

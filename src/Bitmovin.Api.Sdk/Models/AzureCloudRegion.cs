@@ -137,6 +137,18 @@ namespace Bitmovin.Api.Sdk.Models
         /// Texas
         /// </summary>
         [EnumMember(Value = "US_SOUTH_CENTRAL")]
-        US_SOUTH_CENTRAL
+        US_SOUTH_CENTRAL,
+
+        /// <summary>
+        /// Illinois
+        /// </summary>
+        [EnumMember(Value = "US_NORTH_CENTRAL")]
+        US_NORTH_CENTRAL,
+
+        /// <summary>
+        /// London
+        /// </summary>
+        [EnumMember(Value = "UK_SOUTH")]
+        UK_SOUTH
     }
 }
