@@ -380,6 +380,18 @@ namespace Bitmovin.Api.Sdk.Models
         AKAMAI_US_SEA,
 
         /// <summary>
+        /// OCI Frankfurt, Germany.  The Oracle Cloud integration is in beta and still undergoing testing.  Some issues or limitations may be present.
+        /// </summary>
+        [EnumMember(Value = "OCI_EU_FRANKFURT_1")]
+        OCI_EU_FRANKFURT_1,
+
+        /// <summary>
+        /// OCI Ashburn, VA, USA.  The Oracle Cloud integration is in beta and still undergoing testing. Some issues or limitations may be present.
+        /// </summary>
+        [EnumMember(Value = "OCI_US_ASHBURN_1")]
+        OCI_US_ASHBURN_1,
+
+        /// <summary>
         /// NORTH_AMERICA
         /// </summary>
         [EnumMember(Value = "NORTH_AMERICA")]
