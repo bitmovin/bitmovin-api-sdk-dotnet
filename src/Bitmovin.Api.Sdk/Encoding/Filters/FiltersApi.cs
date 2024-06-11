@@ -8,6 +8,7 @@ using Bitmovin.Api.Sdk.Encoding.Filters.Type;
 using Bitmovin.Api.Sdk.Encoding.Filters.Conform;
 using Bitmovin.Api.Sdk.Encoding.Filters.Watermark;
 using Bitmovin.Api.Sdk.Encoding.Filters.AudioVolume;
+using Bitmovin.Api.Sdk.Encoding.Filters.AzureSpeechToCaptions;
 using Bitmovin.Api.Sdk.Encoding.Filters.EnhancedWatermark;
 using Bitmovin.Api.Sdk.Encoding.Filters.Crop;
 using Bitmovin.Api.Sdk.Encoding.Filters.Rotate;
@@ -34,6 +35,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters
             Conform = new ConformApi(apiClientFactory);
             Watermark = new WatermarkApi(apiClientFactory);
             AudioVolume = new AudioVolumeApi(apiClientFactory);
+            AzureSpeechToCaptions = new AzureSpeechToCaptionsApi(apiClientFactory);
             EnhancedWatermark = new EnhancedWatermarkApi(apiClientFactory);
             Crop = new CropApi(apiClientFactory);
             Rotate = new RotateApi(apiClientFactory);
@@ -57,6 +59,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters
         public ConformApi Conform { get; }
         public WatermarkApi Watermark { get; }
         public AudioVolumeApi AudioVolume { get; }
+        public AzureSpeechToCaptionsApi AzureSpeechToCaptions { get; }
         public EnhancedWatermarkApi EnhancedWatermark { get; }
         public CropApi Crop { get; }
         public RotateApi Rotate { get; }

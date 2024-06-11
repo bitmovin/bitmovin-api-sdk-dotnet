@@ -95,6 +95,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// EBU_R128_SINGLE_PASS
         /// </summary>
         [EnumMember(Value = "EBU_R128_SINGLE_PASS")]
-        EBU_R128_SINGLE_PASS
+        EBU_R128_SINGLE_PASS,
+
+        /// <summary>
+        /// AZURE_SPEECH_TO_CAPTIONS
+        /// </summary>
+        [EnumMember(Value = "AZURE_SPEECH_TO_CAPTIONS")]
+        AZURE_SPEECH_TO_CAPTIONS
     }
 }

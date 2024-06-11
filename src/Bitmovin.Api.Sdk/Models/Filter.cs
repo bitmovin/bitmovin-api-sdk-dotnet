@@ -29,6 +29,7 @@ namespace Bitmovin.Api.Sdk.Models
     [JsonSubtypes.KnownSubType(typeof(InterlaceFilter), "INTERLACE")]
     [JsonSubtypes.KnownSubType(typeof(AudioVolumeFilter), "AUDIO_VOLUME")]
     [JsonSubtypes.KnownSubType(typeof(EbuR128SinglePassFilter), "EBU_R128_SINGLE_PASS")]
+    [JsonSubtypes.KnownSubType(typeof(AzureSpeechToCaptionsFilter), "AZURE_SPEECH_TO_CAPTIONS")]
 
     public class Filter : BitmovinResource
     {
