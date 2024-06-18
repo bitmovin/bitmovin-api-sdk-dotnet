@@ -46,13 +46,13 @@ namespace Bitmovin.Api.Sdk.Models
         public long? EndSegmentNumber { get; set; }
 
         /// <summary>
-        /// Id of the Keyframe to start with
+        /// Id of the keyframe to start with. It takes precedence over startSegmentNumber
         /// </summary>
         [JsonProperty(PropertyName = "startKeyframeId")]
         public string StartKeyframeId { get; set; }
 
         /// <summary>
-        /// Id of the Keyframe to end with
+        /// Id of the keyframe to end with. It takes precedence over endSegmentNumber. The segment containing the end keyframe is not included in the representation.
         /// </summary>
         [JsonProperty(PropertyName = "endKeyframeId")]
         public string EndKeyframeId { get; set; }
