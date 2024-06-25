@@ -21,6 +21,7 @@ namespace Bitmovin.Api.Sdk.Models
     [JsonSubtypes.KnownSubType(typeof(WebmMuxing), "WEBM")]
     [JsonSubtypes.KnownSubType(typeof(Mp3Muxing), "MP3")]
     [JsonSubtypes.KnownSubType(typeof(MxfMuxing), "MXF")]
+    [JsonSubtypes.KnownSubType(typeof(ProgressiveWavMuxing), "PROGRESSIVE_WAV")]
     [JsonSubtypes.KnownSubType(typeof(ProgressiveWebmMuxing), "PROGRESSIVE_WEBM")]
     [JsonSubtypes.KnownSubType(typeof(ProgressiveMovMuxing), "PROGRESSIVE_MOV")]
     [JsonSubtypes.KnownSubType(typeof(ProgressiveTsMuxing), "PROGRESSIVE_TS")]

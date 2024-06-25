@@ -1,6 +1,7 @@
 using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.Finished;
 using Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.Error;
+using Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.LiveEncodingHeartbeat;
 using Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.TransferError;
 using Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.LiveInputStreamChanged;
 using Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.EncodingStatusChanged;
@@ -13,6 +14,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings
         {
             Finished = new FinishedApi(apiClientFactory);
             Error = new ErrorApi(apiClientFactory);
+            LiveEncodingHeartbeat = new LiveEncodingHeartbeatApi(apiClientFactory);
             TransferError = new TransferErrorApi(apiClientFactory);
             LiveInputStreamChanged = new LiveInputStreamChangedApi(apiClientFactory);
             EncodingStatusChanged = new EncodingStatusChangedApi(apiClientFactory);
@@ -25,6 +27,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings
 
         public FinishedApi Finished { get; }
         public ErrorApi Error { get; }
+        public LiveEncodingHeartbeatApi LiveEncodingHeartbeat { get; }
         public TransferErrorApi TransferError { get; }
         public LiveInputStreamChangedApi LiveInputStreamChanged { get; }
         public EncodingStatusChangedApi EncodingStatusChanged { get; }

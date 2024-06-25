@@ -50,6 +50,12 @@ namespace Bitmovin.Api.Sdk.Models
         MXF,
 
         /// <summary>
+        /// Single file output as Waveform Audio File Format containing a single PCM audio stream
+        /// </summary>
+        [EnumMember(Value = "PROGRESSIVE_WAV")]
+        PROGRESSIVE_WAV,
+
+        /// <summary>
         /// PROGRESSIVE_WEBM
         /// </summary>
         [EnumMember(Value = "PROGRESSIVE_WEBM")]
