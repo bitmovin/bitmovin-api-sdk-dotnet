@@ -8,9 +8,15 @@ namespace Bitmovin.Api.Sdk.Models
     public enum PcmChannelLayout
     {
         /// <summary>
-        /// Channel layout Mono
+        /// Channel layout with single channel
         /// </summary>
         [EnumMember(Value = "MONO")]
-        MONO
+        MONO,
+
+        /// <summary>
+        /// Channel layout with left and right channel
+        /// </summary>
+        [EnumMember(Value = "STEREO")]
+        STEREO
     }
 }

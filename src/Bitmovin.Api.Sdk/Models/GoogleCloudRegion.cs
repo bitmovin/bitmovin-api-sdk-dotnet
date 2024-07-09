@@ -113,6 +113,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// Los Angeles, California, USA
         /// </summary>
         [EnumMember(Value = "US_WEST_2")]
-        US_WEST_2
+        US_WEST_2,
+
+        /// <summary>
+        /// Dammam, Saudi Arabia
+        /// </summary>
+        [EnumMember(Value = "ME_CENTRAL_2")]
+        ME_CENTRAL_2
     }
 }

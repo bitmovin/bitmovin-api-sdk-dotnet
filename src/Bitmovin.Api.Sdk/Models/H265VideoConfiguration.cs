@@ -61,19 +61,19 @@ namespace Bitmovin.Api.Sdk.Models
         public int? Qp { get; set; }
 
         /// <summary>
-        /// Maximum Bitrate
+        /// Maximum Bitrate (bps)
         /// </summary>
         [JsonProperty(PropertyName = "maxBitrate")]
         public long? MaxBitrate { get; set; }
 
         /// <summary>
-        /// Minimum Bitrate
+        /// Minimum Bitrate (bps)
         /// </summary>
         [JsonProperty(PropertyName = "minBitrate")]
         public long? MinBitrate { get; set; }
 
         /// <summary>
-        /// Size of the VBV buffer (kbits)
+        /// Size of the VBV buffer (bits)
         /// </summary>
         [JsonProperty(PropertyName = "bufsize")]
         public long? Bufsize { get; set; }

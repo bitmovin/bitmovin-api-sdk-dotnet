@@ -212,6 +212,12 @@ namespace Bitmovin.Api.Sdk.Models
         GOOGLE_US_WEST_2,
 
         /// <summary>
+        /// Google Dammam, Saudi Arabia
+        /// </summary>
+        [EnumMember(Value = "GOOGLE_ME_CENTRAL_2")]
+        GOOGLE_ME_CENTRAL_2,
+
+        /// <summary>
         /// Azure East Asia, Hong Kong
         /// </summary>
         [EnumMember(Value = "AZURE_ASIA_EAST")]

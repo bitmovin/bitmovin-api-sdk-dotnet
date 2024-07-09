@@ -85,19 +85,19 @@ namespace Bitmovin.Api.Sdk.Models
         public bool? Cabac { get; set; }
 
         /// <summary>
-        /// Maximum Bitrate
+        /// Maximum Bitrate (bps)
         /// </summary>
         [JsonProperty(PropertyName = "maxBitrate")]
         public long? MaxBitrate { get; set; }
 
         /// <summary>
-        /// Minimum Bitrate
+        /// Minimum Bitrate (bps)
         /// </summary>
         [JsonProperty(PropertyName = "minBitrate")]
         public long? MinBitrate { get; set; }
 
         /// <summary>
-        /// Playback device buffer size
+        /// Playback device buffer size (bits)
         /// </summary>
         [JsonProperty(PropertyName = "bufsize")]
         public long? Bufsize { get; set; }
