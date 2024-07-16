@@ -26,5 +26,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "manifestIds")]
         public List<string> ManifestIds { get; set; } = new List<string>();
+
+        /// <summary>
+        /// If set to true, the Progressive muxing start position will be shifted to the start of the first remaining segment after the removal.  NOTE: This only works for Progressive MP4 muxings.
+        /// </summary>
+        [JsonProperty(PropertyName = "shiftProgressiveMuxingStartPosition")]
+        public bool? ShiftProgressiveMuxingStartPosition { get; set; }
     }
 }
