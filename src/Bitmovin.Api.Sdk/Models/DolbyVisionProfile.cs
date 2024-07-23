@@ -26,6 +26,12 @@ namespace Bitmovin.Api.Sdk.Models
         DVHE_07,
 
         /// <summary>
+        /// Dolby Vision Profile 8.1 (HDR10 cross-compatibility)
+        /// </summary>
+        [EnumMember(Value = "DVHE_08_1")]
+        DVHE_08_1,
+
+        /// <summary>
         /// hev1.08
         /// </summary>
         [EnumMember(Value = "HEV1_08")]
