@@ -8,10 +8,22 @@ namespace Bitmovin.Api.Sdk.Models
     public enum H265DynamicRangeFormat
     {
         /// <summary>
-        /// Configures what kind of dynamic range the output should conform to. Can be used to convert from SDR to HDR, from HDR to SDR or between different HDR formats
+        /// Configure the Output to be Dolby Vision Profile 5.
         /// </summary>
         [EnumMember(Value = "DOLBY_VISION")]
         DOLBY_VISION,
+
+        /// <summary>
+        /// Configure the Output to be Dolby Vision Profile 5
+        /// </summary>
+        [EnumMember(Value = "DOLBY_VISION_PROFILE_5")]
+        DOLBY_VISION_PROFILE_5,
+
+        /// <summary>
+        /// Configure the Output to be Dolby Vision Profile 8.1 (HDR10 cross-compatibility)
+        /// </summary>
+        [EnumMember(Value = "DOLBY_VISION_PROFILE_8_1")]
+        DOLBY_VISION_PROFILE_8_1,
 
         /// <summary>
         /// Configures what kind of dynamic range the output should conform to. Can be used to convert from SDR to HDR, from HDR to SDR or between different HDR formats
