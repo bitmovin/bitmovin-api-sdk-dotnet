@@ -16,12 +16,6 @@ namespace Bitmovin.Api.Sdk.Models
     public class H265PerTitleConfiguration : PerTitleConfiguration
     {
         /// <summary>
-        /// Desired target quality of the highest representation expressed as CRF value
-        /// </summary>
-        [JsonProperty(PropertyName = "targetQualityCrf")]
-        public double? TargetQualityCrf { get; set; }
-
-        /// <summary>
         /// This factor is used to calculate the minBitrate of the codec configuration for the generated representations as a multiple of the targetBitrate
         /// </summary>
         [JsonProperty(PropertyName = "codecMinBitrateFactor")]
