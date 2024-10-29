@@ -368,16 +368,70 @@ namespace Bitmovin.Api.Sdk.Models
         AKAMAI_BR_GRU,
 
         /// <summary>
+        /// Akamai Madrid, Spain
+        /// </summary>
+        [EnumMember(Value = "AKAMAI_ES_MAD")]
+        AKAMAI_ES_MAD,
+
+        /// <summary>
         /// Akamai Paris, France
         /// </summary>
         [EnumMember(Value = "AKAMAI_FR_PAR")]
         AKAMAI_FR_PAR,
 
         /// <summary>
+        /// Akamai Jakarta, Indonesia
+        /// </summary>
+        [EnumMember(Value = "AKAMAI_ID_CGK")]
+        AKAMAI_ID_CGK,
+
+        /// <summary>
+        /// Akamai Chennai, India
+        /// </summary>
+        [EnumMember(Value = "AKAMAI_IN_MAA")]
+        AKAMAI_IN_MAA,
+
+        /// <summary>
+        /// Akamai Milan, Italy
+        /// </summary>
+        [EnumMember(Value = "AKAMAI_IT_MIL")]
+        AKAMAI_IT_MIL,
+
+        /// <summary>
         /// Akamai Osaka, Japan
         /// </summary>
         [EnumMember(Value = "AKAMAI_JP_OSA")]
         AKAMAI_JP_OSA,
+
+        /// <summary>
+        /// Akamai Amsterdam, Netherlands
+        /// </summary>
+        [EnumMember(Value = "AKAMAI_NL_AMS")]
+        AKAMAI_NL_AMS,
+
+        /// <summary>
+        /// Akamai Stockholm, Sweden
+        /// </summary>
+        [EnumMember(Value = "AKAMAI_SE_STO")]
+        AKAMAI_SE_STO,
+
+        /// <summary>
+        /// Akamai Los Angeles, USA
+        /// </summary>
+        [EnumMember(Value = "AKAMAI_US_LAX")]
+        AKAMAI_US_LAX,
+
+        /// <summary>
+        /// Akamai Miami, USA
+        /// </summary>
+        [EnumMember(Value = "AKAMAI_US_MIA")]
+        AKAMAI_US_MIA,
+
+        /// <summary>
+        /// Akamai Chicago, USA
+        /// </summary>
+        [EnumMember(Value = "AKAMAI_US_ORD")]
+        AKAMAI_US_ORD,
 
         /// <summary>
         /// Akamai Seattle, USA

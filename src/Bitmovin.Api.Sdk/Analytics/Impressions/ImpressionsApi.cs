@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using RestEase;
 using Bitmovin.Api.Sdk.Common;
-using Bitmovin.Api.Sdk.Analytics.Impressions.Ads;
 using Bitmovin.Api.Sdk.Analytics.Impressions.Errors;
 
 namespace Bitmovin.Api.Sdk.Analytics.Impressions
@@ -16,7 +15,6 @@ namespace Bitmovin.Api.Sdk.Analytics.Impressions
         public ImpressionsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IImpressionsApiClient>();
-            Ads = new AdsApi(apiClientFactory);
             Errors = new ErrorsApi(apiClientFactory);
         }
 
@@ -25,7 +23,6 @@ namespace Bitmovin.Api.Sdk.Analytics.Impressions
         /// </summary>
         public static BitmovinApiBuilder<ImpressionsApi> Builder => new BitmovinApiBuilder<ImpressionsApi>();
 
-        public AdsApi Ads { get; }
         public ErrorsApi Errors { get; }
 
         /// <summary>

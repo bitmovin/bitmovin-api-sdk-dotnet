@@ -26,5 +26,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "streamTimeoutMinutes")]
         public long? StreamTimeoutMinutes { get; set; }
+
+        /// <summary>
+        /// Automatically shutdown the live stream if input is never connected for a predefined number of minutes.
+        /// </summary>
+        [JsonProperty(PropertyName = "waitingForFirstConnectTimeoutMinutes")]
+        public long? WaitingForFirstConnectTimeoutMinutes { get; set; }
     }
 }
