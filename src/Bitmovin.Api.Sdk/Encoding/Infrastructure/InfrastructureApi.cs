@@ -3,6 +3,7 @@ using Bitmovin.Api.Sdk.Encoding.Infrastructure.Aws;
 using Bitmovin.Api.Sdk.Encoding.Infrastructure.StaticIps;
 using Bitmovin.Api.Sdk.Encoding.Infrastructure.Azure;
 using Bitmovin.Api.Sdk.Encoding.Infrastructure.Gce;
+using Bitmovin.Api.Sdk.Encoding.Infrastructure.Akamai;
 using Bitmovin.Api.Sdk.Encoding.Infrastructure.PrewarmedEncoderPools;
 
 namespace Bitmovin.Api.Sdk.Encoding.Infrastructure
@@ -15,6 +16,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure
             StaticIps = new StaticIpsApi(apiClientFactory);
             Azure = new AzureApi(apiClientFactory);
             Gce = new GceApi(apiClientFactory);
+            Akamai = new AkamaiApi(apiClientFactory);
             PrewarmedEncoderPools = new PrewarmedEncoderPoolsApi(apiClientFactory);
         }
 
@@ -27,6 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure
         public StaticIpsApi StaticIps { get; }
         public AzureApi Azure { get; }
         public GceApi Gce { get; }
+        public AkamaiApi Akamai { get; }
         public PrewarmedEncoderPoolsApi PrewarmedEncoderPools { get; }
     }
 }
