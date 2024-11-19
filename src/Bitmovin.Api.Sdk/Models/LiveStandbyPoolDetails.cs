@@ -11,14 +11,14 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// TimeCode
+    /// LiveStandbyPoolDetails
     /// </summary>
-    public class TimeCode
+    public class LiveStandbyPoolDetails : LiveStandbyPoolResponse
     {
         /// <summary>
-        /// Specify start timecode for writing.
+        /// Base64 encoded template used to start the encodings in the pool
         /// </summary>
-        [JsonProperty(PropertyName = "timeCodeStart")]
-        public string TimeCodeStart { get; set; }
+        [JsonProperty(PropertyName = "encodingTemplate")]
+        public string EncodingTemplate { get; internal set; }
     }
 }

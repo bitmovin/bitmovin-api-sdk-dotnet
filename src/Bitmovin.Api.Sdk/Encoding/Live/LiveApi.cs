@@ -1,5 +1,6 @@
 using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Encoding.Live.StreamKeys;
+using Bitmovin.Api.Sdk.Encoding.Live.StandbyPools;
 
 namespace Bitmovin.Api.Sdk.Encoding.Live
 {
@@ -8,6 +9,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Live
         public LiveApi(IBitmovinApiClientFactory apiClientFactory)
         {
             StreamKeys = new StreamKeysApi(apiClientFactory);
+            StandbyPools = new StandbyPoolsApi(apiClientFactory);
         }
 
         /// <summary>
@@ -16,5 +18,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Live
         public static BitmovinApiBuilder<LiveApi> Builder => new BitmovinApiBuilder<LiveApi>();
 
         public StreamKeysApi StreamKeys { get; }
+        public StandbyPoolsApi StandbyPools { get; }
     }
 }

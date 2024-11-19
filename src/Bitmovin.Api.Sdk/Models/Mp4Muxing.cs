@@ -31,12 +31,6 @@ namespace Bitmovin.Api.Sdk.Models
         public int? FragmentDuration { get; set; }
 
         /// <summary>
-        /// TimeCode
-        /// </summary>
-        [JsonProperty(PropertyName = "timeCode")]
-        public TimeCode TimeCode { get; set; }
-
-        /// <summary>
         /// FragmentedMP4MuxingManifestType
         /// </summary>
         [JsonProperty(PropertyName = "fragmentedMP4MuxingManifestType")]
