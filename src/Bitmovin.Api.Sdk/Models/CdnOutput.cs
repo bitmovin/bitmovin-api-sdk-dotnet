@@ -23,5 +23,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "domainName")]
         public string DomainName { get; internal set; }
+
+        /// <summary>
+        /// CDN Provider of the Output
+        /// </summary>
+        [JsonProperty(PropertyName = "cdnProvider")]
+        public CdnProvider? CdnProvider { get; set; }
     }
 }

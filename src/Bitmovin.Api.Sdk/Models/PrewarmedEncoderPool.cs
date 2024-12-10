@@ -46,7 +46,7 @@ namespace Bitmovin.Api.Sdk.Models
         public int? TargetPoolSize { get; set; }
 
         /// <summary>
-        /// Activate dynamic pool behaviour. Pool will increase/decrease based on usage. Minimum pool size is set by targetPoolSize.
+        /// Activate dynamic pool behaviour. Pool will increase/decrease based on usage up until a size of 10 instances. Minimum pool size is set by targetPoolSize
         /// </summary>
         [JsonProperty(PropertyName = "dynamicPool")]
         public bool? DynamicPool { get; set; }
