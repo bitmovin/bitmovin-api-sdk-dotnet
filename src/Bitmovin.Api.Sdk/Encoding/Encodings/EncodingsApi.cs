@@ -14,6 +14,7 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.OutputPaths;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Captions;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Sidecars;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Keyframes;
+using Bitmovin.Api.Sdk.Encoding.Encodings.Scte35Triggers;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings
 {
@@ -34,6 +35,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings
             Captions = new CaptionsApi(apiClientFactory);
             Sidecars = new SidecarsApi(apiClientFactory);
             Keyframes = new KeyframesApi(apiClientFactory);
+            Scte35Triggers = new Scte35TriggersApi(apiClientFactory);
         }
 
         /// <summary>
@@ -51,6 +53,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings
         public CaptionsApi Captions { get; }
         public SidecarsApi Sidecars { get; }
         public KeyframesApi Keyframes { get; }
+        public Scte35TriggersApi Scte35Triggers { get; }
 
         /// <summary>
         /// Create Encoding
