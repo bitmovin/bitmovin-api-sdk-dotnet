@@ -16,7 +16,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class H264PerTitleConfiguration : PerTitleConfiguration
     {
         /// <summary>
-        /// This factor is used to calculate the minBitrate of the codec configuration for the generated representations as a multiple of the targetBitrate
+        /// This factor doesn&#39;t have any impact!
         /// </summary>
         [JsonProperty(PropertyName = "codecMinBitrateFactor")]
         public double? CodecMinBitrateFactor { get; set; }
