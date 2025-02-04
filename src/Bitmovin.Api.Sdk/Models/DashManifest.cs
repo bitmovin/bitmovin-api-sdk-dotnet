@@ -44,5 +44,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "dashEditionCompatibility")]
         public DashEditionCompatibility? DashEditionCompatibility { get; set; }
+
+        /// <summary>
+        /// Determines how timestamps should appear in the manifest
+        /// </summary>
+        [JsonProperty(PropertyName = "iso8601TimestampFormat")]
+        public DashISO8601TimestampFormat? Iso8601TimestampFormat { get; set; }
     }
 }

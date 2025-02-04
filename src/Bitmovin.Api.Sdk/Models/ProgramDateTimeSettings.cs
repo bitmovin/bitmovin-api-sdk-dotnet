@@ -20,5 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "programDateTimeSource")]
         public ProgramDateTimeSource? ProgramDateTimeSource { get; set; }
+
+        /// <summary>
+        /// ProgramDateTimePlacement
+        /// </summary>
+        [JsonProperty(PropertyName = "programDateTimePlacement")]
+        public ProgramDateTimePlacement ProgramDateTimePlacement { get; set; }
     }
 }
