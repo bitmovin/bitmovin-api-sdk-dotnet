@@ -34,7 +34,7 @@ namespace Bitmovin.Api.Sdk.Models
         public double? MinBitrateStepSize { get; set; }
 
         /// <summary>
-        /// The maximum ratio between the bitrates of neighbouring renditions, e.g., if the first bitrate is 240,000, a maximum ratio of 1.5 will require the next higher bitrate to be at most 360,000
+        /// The maximum ratio between the bitrates of neighbouring renditions, e.g., if the first bitrate is 240,000, a maximum ratio of 1.9 will require the next higher bitrate to be at most 456,000
         /// </summary>
         [JsonProperty(PropertyName = "maxBitrateStepSize")]
         public double? MaxBitrateStepSize { get; set; }
@@ -56,12 +56,6 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "fixedResolutionAndBitrateConfiguration")]
         public PerTitleFixedResolutionAndBitrateConfiguration FixedResolutionAndBitrateConfiguration { get; set; }
-
-        /// <summary>
-        /// Desired target quality of the highest representation expressed as CRF value
-        /// </summary>
-        [JsonProperty(PropertyName = "targetQualityCrf")]
-        public double? TargetQualityCrf { get; set; }
 
         /// <summary>
         /// This factor influences the resolution selection of the per-title algorithm. The default value is 0.0. negative values will lead to results where the algorithm will choose lower resolutions for given bitrates. A positive value will result in higher resolutions to be selected. The range of the factor is -5.0 to +5.0. Please note that changing this factor might also lead to slightly different bitrate selection by the algorithm.
