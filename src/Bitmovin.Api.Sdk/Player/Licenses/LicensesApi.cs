@@ -65,6 +65,16 @@ namespace Bitmovin.Api.Sdk.Player.Licenses
             return await _apiClient.ListAsync(q);
         }
 
+        /// <summary>
+        /// Update License
+        /// </summary>
+        /// <param name="licenseId">License id (required)</param>
+        /// <param name="playerLicenseUpdateRequest">Player License details to be updated</param>
+        public async Task<Models.PlayerLicense> UpdateAsync(string licenseId, Models.PlayerLicenseUpdateRequest playerLicenseUpdateRequest)
+        {
+            return await _apiClient.UpdateAsync(licenseId, playerLicenseUpdateRequest);
+        }
+
         internal interface ILicensesApiClient
         {
             [Post("/player/licenses")]
@@ -78,6 +88,10 @@ namespace Bitmovin.Api.Sdk.Player.Licenses
             [Get("/player/licenses")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.PlayerLicense>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
+
+            [Put("/player/licenses/{license_id}")]
+            [AllowAnyStatusCode]
+            Task<Models.PlayerLicense> UpdateAsync([Path("license_id")] string licenseId, [Body] Models.PlayerLicenseUpdateRequest playerLicenseUpdateRequest);
         }
 
         public class ListQueryParams : Dictionary<string,Object>

@@ -62,5 +62,17 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "autoShutdownConfiguration")]
         public LiveAutoShutdownConfiguration AutoShutdownConfiguration { get; set; }
+
+        /// <summary>
+        /// Configuration for Event Signaling and Management (ESAM) system,  allowing the encoder to communicate with an ESAM server for signal processing and dynamic ad insertion update.&#39; 
+        /// </summary>
+        [JsonProperty(PropertyName = "esamSettings")]
+        public EsamSettings EsamSettings { get; set; }
+
+        /// <summary>
+        /// Configuration of cache control policies for media segments, HLS, and DASH manifests.  You can set caching for the HLS multivariant playlist, HLS media playlist, DASH timeline manifest,  DASH template manifest, initialization segment, and media segment. 
+        /// </summary>
+        [JsonProperty(PropertyName = "cacheControlSettings")]
+        public CacheControlSettings CacheControlSettings { get; set; }
     }
 }
