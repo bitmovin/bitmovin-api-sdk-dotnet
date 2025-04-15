@@ -57,6 +57,11 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.LiveStatistics.Events
             /// </summary>
             public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
 
+            /// <summary>
+            /// Sort events by time in DESC order
+            /// </summary>
+            public ListQueryParams SortByTime(bool? sortByTime) => SetQueryParam("sortByTime", sortByTime);
+
             private ListQueryParams SetQueryParam<T>(string key, T value)
             {
                 if (value != null)

@@ -11,14 +11,20 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// SimpleEncodingVodJobGcsServiceAccountCredentials
+    /// Location
     /// </summary>
-    public class SimpleEncodingVodJobGcsServiceAccountCredentials : SimpleEncodingVodJobCredentials
+    public class Location
     {
         /// <summary>
-        /// Service account credentials for Google (required)
+        /// Name
         /// </summary>
-        [JsonProperty(PropertyName = "serviceAccountCredentials")]
-        public string ServiceAccountCredentials { get; set; }
+        [JsonProperty(PropertyName = "name")]
+        public string Name { get; set; }
+
+        /// <summary>
+        /// Description
+        /// </summary>
+        [JsonProperty(PropertyName = "description")]
+        public string Description { get; set; }
     }
 }

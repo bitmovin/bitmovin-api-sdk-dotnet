@@ -1,5 +1,6 @@
 using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Account;
+using Bitmovin.Api.Sdk.AiSceneAnalysis;
 using Bitmovin.Api.Sdk.Analytics;
 using Bitmovin.Api.Sdk.Encoding;
 using Bitmovin.Api.Sdk.General;
@@ -14,6 +15,7 @@ namespace Bitmovin.Api.Sdk
         public BitmovinApi(IBitmovinApiClientFactory apiClientFactory)
         {
             Account = new AccountApi(apiClientFactory);
+            AiSceneAnalysis = new AiSceneAnalysisApi(apiClientFactory);
             Analytics = new AnalyticsApi(apiClientFactory);
             Encoding = new EncodingApi(apiClientFactory);
             General = new GeneralApi(apiClientFactory);
@@ -28,6 +30,7 @@ namespace Bitmovin.Api.Sdk
         public static BitmovinApiBuilder<BitmovinApi> Builder => new BitmovinApiBuilder<BitmovinApi>();
 
         public AccountApi Account { get; }
+        public AiSceneAnalysisApi AiSceneAnalysis { get; }
         public AnalyticsApi Analytics { get; }
         public EncodingApi Encoding { get; }
         public GeneralApi General { get; }

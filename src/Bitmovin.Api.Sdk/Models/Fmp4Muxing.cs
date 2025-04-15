@@ -55,6 +55,12 @@ namespace Bitmovin.Api.Sdk.Models
         public bool? WriteDurationPerSample { get; set; }
 
         /// <summary>
+        /// Insert scte35 triggers as emsg boxes into the fMP4 segments.
+        /// </summary>
+        [JsonProperty(PropertyName = "signalScte35AsEmsg")]
+        public bool? SignalScte35AsEmsg { get; set; }
+
+        /// <summary>
         /// Number of segments which have been encoded
         /// </summary>
         [JsonProperty(PropertyName = "segmentsMuxed")]

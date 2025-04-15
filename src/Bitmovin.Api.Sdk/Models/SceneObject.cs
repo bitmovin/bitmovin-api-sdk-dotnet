@@ -11,14 +11,20 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// SimpleEncodingLiveJobInput
+    /// SceneObject
     /// </summary>
-    public class SimpleEncodingLiveJobInput
+    public class SceneObject
     {
         /// <summary>
-        /// Defines which protocol is being used as input of the live stream. 
+        /// Description
         /// </summary>
-        [JsonProperty(PropertyName = "inputType")]
-        public SimpleEncodingLiveJobInputType? InputType { get; set; }
+        [JsonProperty(PropertyName = "description")]
+        public string Description { get; set; }
+
+        /// <summary>
+        /// Category
+        /// </summary>
+        [JsonProperty(PropertyName = "category")]
+        public string Category { get; set; }
     }
 }
