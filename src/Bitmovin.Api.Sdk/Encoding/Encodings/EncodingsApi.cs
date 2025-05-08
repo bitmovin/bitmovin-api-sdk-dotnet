@@ -9,6 +9,7 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Customdata;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Streams;
 using Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings;
+using Bitmovin.Api.Sdk.Encoding.Encodings.Template;
 using Bitmovin.Api.Sdk.Encoding.Encodings.TransferRetries;
 using Bitmovin.Api.Sdk.Encoding.Encodings.OutputPaths;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Captions;
@@ -30,6 +31,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings
             Streams = new StreamsApi(apiClientFactory);
             InputStreams = new InputStreamsApi(apiClientFactory);
             Muxings = new MuxingsApi(apiClientFactory);
+            Template = new TemplateApi(apiClientFactory);
             TransferRetries = new TransferRetriesApi(apiClientFactory);
             OutputPaths = new OutputPathsApi(apiClientFactory);
             Captions = new CaptionsApi(apiClientFactory);
@@ -48,6 +50,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings
         public StreamsApi Streams { get; }
         public InputStreamsApi InputStreams { get; }
         public MuxingsApi Muxings { get; }
+        public TemplateApi Template { get; }
         public TransferRetriesApi TransferRetries { get; }
         public OutputPathsApi OutputPaths { get; }
         public CaptionsApi Captions { get; }

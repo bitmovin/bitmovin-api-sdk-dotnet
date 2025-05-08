@@ -11,9 +11,9 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// AiContentAnalysisAssetDescription
+    /// AiSceneAnalysisAssetDescription
     /// </summary>
-    public class AiContentAnalysisAssetDescription
+    public class AiSceneAnalysisAssetDescription
     {
         /// <summary>
         /// Name of the output json file

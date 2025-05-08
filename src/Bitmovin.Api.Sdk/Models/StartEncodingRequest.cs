@@ -88,9 +88,9 @@ namespace Bitmovin.Api.Sdk.Models
         public PerTitle PerTitle { get; set; }
 
         /// <summary>
-        /// AI content analysis settings
+        /// AI scene analysis settings
         /// </summary>
-        [JsonProperty(PropertyName = "aiContentAnalysis")]
-        public AiContentAnalysis AiContentAnalysis { get; set; }
+        [JsonProperty(PropertyName = "aiSceneAnalysis")]
+        public AiSceneAnalysis AiSceneAnalysis { get; set; }
     }
 }

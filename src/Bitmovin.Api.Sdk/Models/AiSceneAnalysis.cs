@@ -11,9 +11,9 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// AiContentAnalysis
+    /// AiSceneAnalysis
     /// </summary>
-    public class AiContentAnalysis
+    public class AiSceneAnalysis
     {
         /// <summary>
         /// AI service settings
@@ -22,9 +22,9 @@ namespace Bitmovin.Api.Sdk.Models
         public AiService AiService { get; set; }
 
         /// <summary>
-        /// Features of the AI content analysis
+        /// Features of the AI scene analysis
         /// </summary>
         [JsonProperty(PropertyName = "features")]
-        public AiContentAnalysisFeatures Features { get; set; }
+        public AiSceneAnalysisFeatures Features { get; set; }
     }
 }

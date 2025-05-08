@@ -11,14 +11,14 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// AiContentAnalysisAutomaticAdPlacement
+    /// EncodingTemplateUrlResponse
     /// </summary>
-    public class AiContentAnalysisAutomaticAdPlacement
+    public class EncodingTemplateUrlResponse
     {
         /// <summary>
-        /// Ad placements schedule 
+        /// The download URL of the encoding template. (required)
         /// </summary>
-        [JsonProperty(PropertyName = "schedule")]
-        public List<AutomaticAdPlacementPosition> Schedule { get; set; } = new List<AutomaticAdPlacementPosition>();
+        [JsonProperty(PropertyName = "url")]
+        public string Url { get; internal set; }
     }
 }
