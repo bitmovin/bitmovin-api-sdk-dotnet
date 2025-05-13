@@ -50,5 +50,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "iabSensitiveTopicTaxonomies")]
         public List<string> IabSensitiveTopicTaxonomies { get; set; } = new List<string>();
+
+        /// <summary>
+        /// Metadata
+        /// </summary>
+        [JsonProperty(PropertyName = "metadata")]
+        public Metadata Metadata { get; set; }
     }
 }

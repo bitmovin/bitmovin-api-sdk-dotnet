@@ -16,6 +16,12 @@ namespace Bitmovin.Api.Sdk.Models
     public class Scene
     {
         /// <summary>
+        /// Title
+        /// </summary>
+        [JsonProperty(PropertyName = "title")]
+        public string Title { get; set; }
+
+        /// <summary>
         /// StartInSeconds
         /// </summary>
         [JsonProperty(PropertyName = "startInSeconds")]
