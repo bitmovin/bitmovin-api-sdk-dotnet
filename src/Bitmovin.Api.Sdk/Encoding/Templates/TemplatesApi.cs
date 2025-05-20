@@ -65,7 +65,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Templates
         }
 
         /// <summary>
-        /// BETA: Start an Encoding defined with an Encoding Template
+        /// Start an Encoding defined with an Encoding Template
         /// </summary>
         /// <param name="encodingTemplateRequest">The Encoding Template to start an Encoding from</param>
         public async Task<Models.EncodingTemplateStartResponse> StartAsync(object encodingTemplateRequest)

@@ -74,5 +74,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "intercomIdVerification")]
         public string IntercomIdVerification { get; internal set; }
+
+        /// <summary>
+        /// The Saml Domain of this Account
+        /// </summary>
+        [JsonProperty(PropertyName = "samlDomain")]
+        public string SamlDomain { get; internal set; }
     }
 }
