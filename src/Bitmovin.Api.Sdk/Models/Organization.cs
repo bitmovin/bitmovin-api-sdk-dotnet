@@ -50,5 +50,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "mfaRequired")]
         public bool? MfaRequired { get; internal set; }
+
+        /// <summary>
+        /// ID of the user who owns the organization
+        /// </summary>
+        [JsonProperty(PropertyName = "ownerUserId")]
+        public string OwnerUserId { get; internal set; }
     }
 }
