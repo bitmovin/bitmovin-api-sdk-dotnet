@@ -38,6 +38,12 @@ namespace Bitmovin.Api.Sdk.Models
         FTP,
 
         /// <summary>
+        /// HLS
+        /// </summary>
+        [EnumMember(Value = "HLS")]
+        HLS,
+
+        /// <summary>
         /// GENERIC_S3
         /// </summary>
         [EnumMember(Value = "GENERIC_S3")]

@@ -23,6 +23,7 @@ namespace Bitmovin.Api.Sdk.Models
     [JsonSubtypes.KnownSubType(typeof(GcsInput), "GCS")]
     [JsonSubtypes.KnownSubType(typeof(HttpInput), "HTTP")]
     [JsonSubtypes.KnownSubType(typeof(HttpsInput), "HTTPS")]
+    [JsonSubtypes.KnownSubType(typeof(HlsInput), "HLS")]
     [JsonSubtypes.KnownSubType(typeof(LocalInput), "LOCAL")]
     [JsonSubtypes.KnownSubType(typeof(RtmpInput), "RTMP")]
     [JsonSubtypes.KnownSubType(typeof(S3Input), "S3")]
