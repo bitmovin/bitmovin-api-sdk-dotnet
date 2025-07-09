@@ -16,13 +16,13 @@ namespace Bitmovin.Api.Sdk.Models
     public class AutomaticAdPlacementPosition
     {
         /// <summary>
-        /// Position of the ad placement in seconds.
+        /// Position of the ad placement in seconds. (required)
         /// </summary>
         [JsonProperty(PropertyName = "position")]
         public double? Position { get; set; }
 
         /// <summary>
-        /// Maximum deviation in seconds to the ad placement position.
+        /// Maximum deviation in seconds to the ad placement position. (required)
         /// </summary>
         [JsonProperty(PropertyName = "maxDeviation")]
         public double? MaxDeviation { get; set; }

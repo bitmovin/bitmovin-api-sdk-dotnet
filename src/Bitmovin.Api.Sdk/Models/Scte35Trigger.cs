@@ -16,12 +16,6 @@ namespace Bitmovin.Api.Sdk.Models
     public class Scte35Trigger : BitmovinResponse
     {
         /// <summary>
-        /// Time in seconds where the SCTE 35 trigger should be inserted (required)
-        /// </summary>
-        [JsonProperty(PropertyName = "time")]
-        public double? Time { get; set; }
-
-        /// <summary>
         /// The base 64 encoded data for the SCTE trigger (required)
         /// </summary>
         [JsonProperty(PropertyName = "base64EncodedMetadata")]
