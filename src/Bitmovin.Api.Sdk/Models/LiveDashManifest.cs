@@ -50,5 +50,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "availabilityStartTimeMode")]
         public AvailabilityStartTimeMode? AvailabilityStartTimeMode { get; set; }
+
+        /// <summary>
+        /// AdMarkerSettings
+        /// </summary>
+        [JsonProperty(PropertyName = "adMarkerSettings")]
+        public DashManifestAdMarkerSettings AdMarkerSettings { get; set; }
     }
 }

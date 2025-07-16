@@ -52,6 +52,12 @@ namespace Bitmovin.Api.Sdk.Models
         public string Summary { get; set; }
 
         /// <summary>
+        /// VerboseSummary
+        /// </summary>
+        [JsonProperty(PropertyName = "verboseSummary")]
+        public string VerboseSummary { get; set; }
+
+        /// <summary>
         /// SensitiveTopics
         /// </summary>
         [JsonProperty(PropertyName = "sensitiveTopics")]

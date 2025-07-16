@@ -15,6 +15,7 @@ using Bitmovin.Api.Sdk.Encoding.Inputs.Gcs;
 using Bitmovin.Api.Sdk.Encoding.Inputs.GcsServiceAccount;
 using Bitmovin.Api.Sdk.Encoding.Inputs.Azure;
 using Bitmovin.Api.Sdk.Encoding.Inputs.Ftp;
+using Bitmovin.Api.Sdk.Encoding.Inputs.Hls;
 using Bitmovin.Api.Sdk.Encoding.Inputs.Sftp;
 using Bitmovin.Api.Sdk.Encoding.Inputs.Http;
 using Bitmovin.Api.Sdk.Encoding.Inputs.Https;
@@ -44,6 +45,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs
             GcsServiceAccount = new GcsServiceAccountApi(apiClientFactory);
             Azure = new AzureApi(apiClientFactory);
             Ftp = new FtpApi(apiClientFactory);
+            Hls = new HlsApi(apiClientFactory);
             Sftp = new SftpApi(apiClientFactory);
             Http = new HttpApi(apiClientFactory);
             Https = new HttpsApi(apiClientFactory);
@@ -70,6 +72,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs
         public GcsServiceAccountApi GcsServiceAccount { get; }
         public AzureApi Azure { get; }
         public FtpApi Ftp { get; }
+        public HlsApi Hls { get; }
         public SftpApi Sftp { get; }
         public HttpApi Http { get; }
         public HttpsApi Https { get; }
