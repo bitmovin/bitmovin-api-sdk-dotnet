@@ -20,5 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "enabledMarkerTypes")]
         public List<HlsManifestAdMarkerType> EnabledMarkerTypes { get; set; } = new List<HlsManifestAdMarkerType>();
+
+        /// <summary>
+        /// Certain tags, such as EXT_X_DATERANGE, may be preannounced in the HLS manifest. This means they are inserted as early as possible, before the actual ad break begins or ends. Preannouncing helps clients anticipate upcoming splice points, but may cause compatibility issues with some downstream consumers (e.g., AWS MediaTailor SSAI). When this setting is enabled, preannouncing of tags is disabled, and tags are inserted at the segment corresponding to the event&#39;s splice time. 
+        /// </summary>
+        [JsonProperty(PropertyName = "disablePreannouncing")]
+        public bool? DisablePreannouncing { get; set; }
     }
 }
