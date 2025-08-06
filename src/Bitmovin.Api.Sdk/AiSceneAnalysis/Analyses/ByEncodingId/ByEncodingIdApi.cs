@@ -1,5 +1,6 @@
 using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.AiSceneAnalysis.Analyses.ByEncodingId.Details;
+using Bitmovin.Api.Sdk.AiSceneAnalysis.Analyses.ByEncodingId.Languages;
 
 namespace Bitmovin.Api.Sdk.AiSceneAnalysis.Analyses.ByEncodingId
 {
@@ -8,6 +9,7 @@ namespace Bitmovin.Api.Sdk.AiSceneAnalysis.Analyses.ByEncodingId
         public ByEncodingIdApi(IBitmovinApiClientFactory apiClientFactory)
         {
             Details = new DetailsApi(apiClientFactory);
+            Languages = new LanguagesApi(apiClientFactory);
         }
 
         /// <summary>
@@ -16,5 +18,6 @@ namespace Bitmovin.Api.Sdk.AiSceneAnalysis.Analyses.ByEncodingId
         public static BitmovinApiBuilder<ByEncodingIdApi> Builder => new BitmovinApiBuilder<ByEncodingIdApi>();
 
         public DetailsApi Details { get; }
+        public LanguagesApi Languages { get; }
     }
 }

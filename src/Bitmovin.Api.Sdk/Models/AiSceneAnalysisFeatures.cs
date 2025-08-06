@@ -26,5 +26,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "automaticAdPlacement")]
         public AiSceneAnalysisAutomaticAdPlacement AutomaticAdPlacement { get; set; }
+
+        /// <summary>
+        /// AI scene analysis will create translated asset description files for the language codes. 
+        /// </summary>
+        [JsonProperty(PropertyName = "outputLanguageCodes")]
+        public AiSceneAnalysisOutputLanguageCodes OutputLanguageCodes { get; set; }
     }
 }
