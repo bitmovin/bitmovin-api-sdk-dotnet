@@ -74,5 +74,17 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "iab")]
         public IABTaxonomy Iab { get; set; }
+
+        /// <summary>
+        /// The detected type of scene based on content analysis
+        /// </summary>
+        [JsonProperty(PropertyName = "type")]
+        public SceneType? Type { get; set; }
+
+        /// <summary>
+        /// Confidence score for the detected scene type (0.0 to 1.0)
+        /// </summary>
+        [JsonProperty(PropertyName = "typeConfidence")]
+        public double? TypeConfidence { get; set; }
     }
 }

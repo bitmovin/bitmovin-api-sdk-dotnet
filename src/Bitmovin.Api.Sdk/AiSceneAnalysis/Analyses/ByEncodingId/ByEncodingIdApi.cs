@@ -1,6 +1,7 @@
 using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.AiSceneAnalysis.Analyses.ByEncodingId.Details;
 using Bitmovin.Api.Sdk.AiSceneAnalysis.Analyses.ByEncodingId.Languages;
+using Bitmovin.Api.Sdk.AiSceneAnalysis.Analyses.ByEncodingId.AdPlacements;
 
 namespace Bitmovin.Api.Sdk.AiSceneAnalysis.Analyses.ByEncodingId
 {
@@ -10,6 +11,7 @@ namespace Bitmovin.Api.Sdk.AiSceneAnalysis.Analyses.ByEncodingId
         {
             Details = new DetailsApi(apiClientFactory);
             Languages = new LanguagesApi(apiClientFactory);
+            AdPlacements = new AdPlacementsApi(apiClientFactory);
         }
 
         /// <summary>
@@ -19,5 +21,6 @@ namespace Bitmovin.Api.Sdk.AiSceneAnalysis.Analyses.ByEncodingId
 
         public DetailsApi Details { get; }
         public LanguagesApi Languages { get; }
+        public AdPlacementsApi AdPlacements { get; }
     }
 }
