@@ -31,6 +31,12 @@ namespace Bitmovin.Api.Sdk.Models
         public int? FragmentDuration { get; set; }
 
         /// <summary>
+        /// Prevents creation of very short fragments (in seconds). If the last fragment is shorter than minimumFragmentDuration or there is a custom keyframe too close to a fragment boundary, short fragments will be omitted by removing fragment boundaries, resulting in a fragment of a size up to fragmentDuration + minimumFragmentDuration.
+        /// </summary>
+        [JsonProperty(PropertyName = "minimumFragmentDuration")]
+        public double? MinimumFragmentDuration { get; set; }
+
+        /// <summary>
         /// FragmentedMP4MuxingManifestType
         /// </summary>
         [JsonProperty(PropertyName = "fragmentedMP4MuxingManifestType")]

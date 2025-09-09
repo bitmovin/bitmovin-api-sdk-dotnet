@@ -23,5 +23,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "url")]
         public string Url { get; set; }
+
+        /// <summary>
+        /// Specifies the source for ad markers messages: - MANIFEST: Ad marker messages are read from tags in the HLS manifest - SEGMENTS: Ad marker messages are read from the content segments from the data stream 
+        /// </summary>
+        [JsonProperty(PropertyName = "adMarkersSource")]
+        public AdMarkersSource? AdMarkersSource { get; set; }
     }
 }
