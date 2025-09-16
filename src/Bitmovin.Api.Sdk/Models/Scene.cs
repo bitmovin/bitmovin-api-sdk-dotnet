@@ -80,11 +80,5 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "type")]
         public SceneType? Type { get; set; }
-
-        /// <summary>
-        /// Confidence score for the detected scene type (0.0 to 1.0)
-        /// </summary>
-        [JsonProperty(PropertyName = "typeConfidence")]
-        public double? TypeConfidence { get; set; }
     }
 }
