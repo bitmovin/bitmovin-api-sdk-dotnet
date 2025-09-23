@@ -100,6 +100,12 @@ namespace Bitmovin.Api.Sdk.Models
         public List<AnalyticsLicenseDomain> Domains { get; internal set; } = new List<AnalyticsLicenseDomain>();
 
         /// <summary>
+        /// Allowlisted player domains
+        /// </summary>
+        [JsonProperty(PropertyName = "playerDomains")]
+        public List<string> PlayerDomains { get; internal set; } = new List<string>();
+
+        /// <summary>
         /// Whether the data of this license should be included in the industry insights or not
         /// </summary>
         [JsonProperty(PropertyName = "includeInInsights")]
