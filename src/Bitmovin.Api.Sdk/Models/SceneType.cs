@@ -8,52 +8,46 @@ namespace Bitmovin.Api.Sdk.Models
     public enum SceneType
     {
         /// <summary>
-        /// Opening sequence presenting title, credits, and/or thematic elements; no in-world character dialogue
+        /// Network, studio, or platform identification bumpers
         /// </summary>
-        [EnumMember(Value = "OPENING_TITLES")]
-        OPENING_TITLES,
+        [EnumMember(Value = "LOGO_IDENT")]
+        LOGO_IDENT,
 
         /// <summary>
-        /// Episode-specific title/chapter card (e.g., &quot;S02E04 — The Pact&quot;)
+        /// Opening sequence presenting title, credits, or thematic elements without in-world dialogue
         /// </summary>
-        [EnumMember(Value = "EPISODE_TITLE_CARD")]
-        EPISODE_TITLE_CARD,
+        [EnumMember(Value = "OPENING_CREDITS")]
+        OPENING_CREDITS,
 
         /// <summary>
-        /// Production/distributor logo stingers (e.g., MGM, WB, New Line)
-        /// </summary>
-        [EnumMember(Value = "STUDIO_LOGO_BUMPER")]
-        STUDIO_LOGO_BUMPER,
-
-        /// <summary>
-        /// Network/platform idents/slates (e.g., &quot;A Netflix Original&quot;, channel idents)
-        /// </summary>
-        [EnumMember(Value = "NETWORK_OR_PLATFORM_IDENT")]
-        NETWORK_OR_PLATFORM_IDENT,
-
-        /// <summary>
-        /// &quot;Previously on …&quot; montage sequences from previous episodes
+        /// &quot;Previously on …&quot; montage sequences from prior episodes
         /// </summary>
         [EnumMember(Value = "RECAP")]
         RECAP,
 
         /// <summary>
-        /// Teaser for this or the next episode of the same title
+        /// Teaser or preview for this title or its upcoming episode
         /// </summary>
         [EnumMember(Value = "PREVIEW_THIS_TITLE")]
         PREVIEW_THIS_TITLE,
 
         /// <summary>
-        /// Network promo for a different show on the same network/platform (schedule-centric)
+        /// Promotion or trailer for a different title or programming
         /// </summary>
-        [EnumMember(Value = "PROMO_OTHER_TITLE")]
-        PROMO_OTHER_TITLE,
+        [EnumMember(Value = "PROMOTION_OTHER_TITLE")]
+        PROMOTION_OTHER_TITLE,
 
         /// <summary>
-        /// Full/standard trailer for a different title (cinematic style, not schedule-centric)
+        /// Short bumper marking an act or advertising break
         /// </summary>
-        [EnumMember(Value = "TRAILER_OTHER_TITLE")]
-        TRAILER_OTHER_TITLE,
+        [EnumMember(Value = "BREAK_BUMPER")]
+        BREAK_BUMPER,
+
+        /// <summary>
+        /// Closing credits, acknowledgments, or copyright notices
+        /// </summary>
+        [EnumMember(Value = "END_CREDITS")]
+        END_CREDITS,
 
         /// <summary>
         /// Commercial advertisements with promotional intent and call-to-action
@@ -62,43 +56,13 @@ namespace Bitmovin.Api.Sdk.Models
         ADS,
 
         /// <summary>
-        /// Short bumpers marking act/ad breaks (incl. anime eyecatches)
-        /// </summary>
-        [EnumMember(Value = "ACT_BREAK_EYECATCH")]
-        ACT_BREAK_EYECATCH,
-
-        /// <summary>
-        /// Technical/packaging: test bars, countdowns, black/slates, legal-only cards
-        /// </summary>
-        [EnumMember(Value = "TECHNICAL_SLATE_OR_TEST")]
-        TECHNICAL_SLATE_OR_TEST,
-
-        /// <summary>
-        /// Main narrative, dialogue, or educational material (default)
+        /// Main narrative, dialogue, or educational material
         /// </summary>
         [EnumMember(Value = "MAIN_CONTENT")]
         MAIN_CONTENT,
 
         /// <summary>
-        /// Narrative content interspersed within end credits
-        /// </summary>
-        [EnumMember(Value = "MID_CREDIT_SCENE")]
-        MID_CREDIT_SCENE,
-
-        /// <summary>
-        /// Narrative content appearing after all credits finish
-        /// </summary>
-        [EnumMember(Value = "POST_CREDIT_SCENE")]
-        POST_CREDIT_SCENE,
-
-        /// <summary>
-        /// Closing credits, copyright notices, staff acknowledgments
-        /// </summary>
-        [EnumMember(Value = "END_CREDITS")]
-        END_CREDITS,
-
-        /// <summary>
-        /// Fallback when AI confidence below minimum threshold
+        /// Fallback when AI confidence is below minimum threshold
         /// </summary>
         [EnumMember(Value = "UNKNOWN")]
         UNKNOWN
