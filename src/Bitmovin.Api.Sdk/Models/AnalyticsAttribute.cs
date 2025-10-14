@@ -464,6 +464,12 @@ namespace Bitmovin.Api.Sdk.Models
         ERROR_CODE,
 
         /// <summary>
+        /// ERROR_SEVERITY
+        /// </summary>
+        [EnumMember(Value = "ERROR_SEVERITY")]
+        ERROR_SEVERITY,
+
+        /// <summary>
         /// ERROR_MESSAGE
         /// </summary>
         [EnumMember(Value = "ERROR_MESSAGE")]
