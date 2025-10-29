@@ -40,6 +40,12 @@ namespace Bitmovin.Api.Sdk.Models
         public List<Message> Messages { get; set; } = new List<Message>();
 
         /// <summary>
+        /// Task specific metadata
+        /// </summary>
+        [JsonProperty(PropertyName = "metadata")]
+        public List<SubtaskMetadata> Metadata { get; set; } = new List<SubtaskMetadata>();
+
+        /// <summary>
         /// Timestamp when the subtask was created, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ 
         /// </summary>
         [JsonProperty(PropertyName = "createdAt")]

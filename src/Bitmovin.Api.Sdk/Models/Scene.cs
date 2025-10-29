@@ -80,5 +80,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "type")]
         public SceneType? Type { get; set; }
+
+        /// <summary>
+        /// A detailed breakdown of individual camera shots within this scene, providing granular analysis of visual content and subjects
+        /// </summary>
+        [JsonProperty(PropertyName = "shots")]
+        public List<Shot> Shots { get; set; } = new List<Shot>();
     }
 }

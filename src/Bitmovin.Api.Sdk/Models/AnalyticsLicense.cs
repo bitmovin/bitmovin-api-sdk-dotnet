@@ -94,6 +94,12 @@ namespace Bitmovin.Api.Sdk.Models
         public string CompressedRetentionTime { get; internal set; }
 
         /// <summary>
+        /// The date and time up until which the compressed data is available. Returned as ISO 8601 date-time format
+        /// </summary>
+        [JsonProperty(PropertyName = "compressionAvailableTo")]
+        public DateTime? CompressionAvailableTo { get; internal set; }
+
+        /// <summary>
         /// Whitelisted domains
         /// </summary>
         [JsonProperty(PropertyName = "domains")]
