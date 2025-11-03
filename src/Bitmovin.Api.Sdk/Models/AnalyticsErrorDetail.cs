@@ -52,6 +52,12 @@ namespace Bitmovin.Api.Sdk.Models
         public AnalyticsErrorData ErrorData { get; set; }
 
         /// <summary>
+        /// Severity of the error
+        /// </summary>
+        [JsonProperty(PropertyName = "severity")]
+        public string Severity { get; set; }
+
+        /// <summary>
         /// HttpRequests
         /// </summary>
         [JsonProperty(PropertyName = "httpRequests")]
