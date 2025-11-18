@@ -16,7 +16,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class EsamSettings
     {
         /// <summary>
-        /// The URL of the Placement Opportunity Information System (POIS) signal processing endpoint.  The encoder transmits SignalProcessingEvents to this endpoint whenever SCTE-35 messages are detected. 
+        /// The URL of the Placement Opportunity Information System (POIS) signal processing endpoint. The encoder transmits SignalProcessingEvents to this endpoint whenever SCTE-35 messages are detected. 
         /// </summary>
         [JsonProperty(PropertyName = "poisEndpoint")]
         public string PoisEndpoint { get; set; }
@@ -34,7 +34,7 @@ namespace Bitmovin.Api.Sdk.Models
         public string ZoneIdentity { get; set; }
 
         /// <summary>
-        /// Defines an offset (in milliseconds) to be applied to the stream event timestamp.  This offset adjusts the &#x60;StreamTime&#x60; values (such as PTS) associated with ad opportunities  or content insertions. It is used to fine-tune timing for embedded SCTE-104/35 messages  to ensure precise frame alignment in the transport stream. 
+        /// Defines an offset (in milliseconds) to be applied to the stream event timestamp. This offset adjusts the &#x60;StreamTime&#x60; values (such as PTS) associated with ad opportunities or content insertions. It is used to fine-tune timing for embedded SCTE-104/35 messages to ensure precise frame alignment in the transport stream. 
         /// </summary>
         [JsonProperty(PropertyName = "adAvailOffset")]
         public int? AdAvailOffset { get; set; }
