@@ -50,5 +50,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "iso8601TimestampFormat")]
         public DashISO8601TimestampFormat? Iso8601TimestampFormat { get; set; }
+
+        /// <summary>
+        /// The minimum buffer time in seconds that the client should maintain to ensure uninterrupted playback. Default is 2 seconds. Note: For VOD ON_DEMAND dash manifests, the default value may differ from 2.0 seconds if not explicitly set. 
+        /// </summary>
+        [JsonProperty(PropertyName = "minBufferTime")]
+        public double? MinBufferTime { get; set; }
     }
 }

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using RestEase;
 using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Live.ResetLiveManifestTimeshift;
+using Bitmovin.Api.Sdk.Encoding.Encodings.Live.Heartbeat;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Live.Hd;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Live.InsertableContent;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Live.Scte35Cue;
@@ -19,6 +20,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live
         {
             _apiClient = apiClientFactory.CreateClient<ILiveApiClient>();
             ResetLiveManifestTimeshift = new ResetLiveManifestTimeshiftApi(apiClientFactory);
+            Heartbeat = new HeartbeatApi(apiClientFactory);
             Hd = new HdApi(apiClientFactory);
             InsertableContent = new InsertableContentApi(apiClientFactory);
             Scte35Cue = new Scte35CueApi(apiClientFactory);
@@ -30,6 +32,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live
         public static BitmovinApiBuilder<LiveApi> Builder => new BitmovinApiBuilder<LiveApi>();
 
         public ResetLiveManifestTimeshiftApi ResetLiveManifestTimeshift { get; }
+        public HeartbeatApi Heartbeat { get; }
         public HdApi Hd { get; }
         public InsertableContentApi InsertableContent { get; }
         public Scte35CueApi Scte35Cue { get; }

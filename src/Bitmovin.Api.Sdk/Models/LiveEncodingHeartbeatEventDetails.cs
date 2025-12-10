@@ -11,26 +11,20 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// LiveEncodingStatsEventDetails
+    /// LiveEncodingHeartbeatEventDetails
     /// </summary>
-    public class LiveEncodingStatsEventDetails
+    public class LiveEncodingHeartbeatEventDetails
     {
         /// <summary>
         /// EventType
         /// </summary>
         [JsonProperty(PropertyName = "eventType")]
-        public LiveEncodingEventName? EventType { get; set; }
+        public LiveEncodingHeartbeatEventType? EventType { get; set; }
 
         /// <summary>
         /// Short description of the event
         /// </summary>
         [JsonProperty(PropertyName = "message")]
-        public string Message { get; internal set; }
-
-        /// <summary>
-        /// Additional event details as key-value pairs
-        /// </summary>
-        [JsonProperty(PropertyName = "additionalProperties")]
-        public string AdditionalProperties { get; set; }
+        public string Message { get; set; }
     }
 }

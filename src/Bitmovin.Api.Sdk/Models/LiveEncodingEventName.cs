@@ -41,6 +41,24 @@ namespace Bitmovin.Api.Sdk.Models
         /// Error occurred, please see the errorMessage for further details
         /// </summary>
         [EnumMember(Value = "ERROR")]
-        ERROR
+        ERROR,
+
+        /// <summary>
+        /// Warning message
+        /// </summary>
+        [EnumMember(Value = "WARNING")]
+        WARNING,
+
+        /// <summary>
+        /// Picture timing was found in respective source
+        /// </summary>
+        [EnumMember(Value = "PICTURE_TIMING")]
+        PICTURE_TIMING,
+
+        /// <summary>
+        /// Information message
+        /// </summary>
+        [EnumMember(Value = "INFO")]
+        INFO
     }
 }
