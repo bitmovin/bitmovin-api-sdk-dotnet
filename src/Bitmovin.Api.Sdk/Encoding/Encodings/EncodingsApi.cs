@@ -14,6 +14,7 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.TransferRetries;
 using Bitmovin.Api.Sdk.Encoding.Encodings.OutputPaths;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Captions;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Sidecars;
+using Bitmovin.Api.Sdk.Encoding.Encodings.KantarWatermark;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Keyframes;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Scte35Triggers;
 
@@ -36,6 +37,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings
             OutputPaths = new OutputPathsApi(apiClientFactory);
             Captions = new CaptionsApi(apiClientFactory);
             Sidecars = new SidecarsApi(apiClientFactory);
+            KantarWatermark = new KantarWatermarkApi(apiClientFactory);
             Keyframes = new KeyframesApi(apiClientFactory);
             Scte35Triggers = new Scte35TriggersApi(apiClientFactory);
         }
@@ -55,6 +57,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings
         public OutputPathsApi OutputPaths { get; }
         public CaptionsApi Captions { get; }
         public SidecarsApi Sidecars { get; }
+        public KantarWatermarkApi KantarWatermark { get; }
         public KeyframesApi Keyframes { get; }
         public Scte35TriggersApi Scte35Triggers { get; }
 

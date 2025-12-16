@@ -16,10 +16,16 @@ namespace Bitmovin.Api.Sdk.Models
     public class IABTaxonomy
     {
         /// <summary>
-        /// Version
+        /// ContentVersion
         /// </summary>
-        [JsonProperty(PropertyName = "version")]
-        public string Version { get; set; }
+        [JsonProperty(PropertyName = "contentVersion")]
+        public string ContentVersion { get; set; }
+
+        /// <summary>
+        /// AdProductVersion
+        /// </summary>
+        [JsonProperty(PropertyName = "adProductVersion")]
+        public string AdProductVersion { get; set; }
 
         /// <summary>
         /// ContentTaxonomies
