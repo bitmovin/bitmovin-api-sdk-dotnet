@@ -23,5 +23,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "publishingPoint")]
         public string PublishingPoint { get; set; }
+
+        /// <summary>
+        /// Enable passthrough of SCTE-35 messages from input to output. Default is false.
+        /// </summary>
+        [JsonProperty(PropertyName = "scte35Passthrough")]
+        public bool? Scte35Passthrough { get; set; }
     }
 }

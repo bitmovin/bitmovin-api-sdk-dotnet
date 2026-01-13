@@ -74,5 +74,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "cacheControlSettings")]
         public CacheControlSettings CacheControlSettings { get; set; }
+
+        /// <summary>
+        /// Configuration for ad insertion features like ESAM MediaPoint insertion
+        /// </summary>
+        [JsonProperty(PropertyName = "adInsertionSettings")]
+        public AdInsertionSettings AdInsertionSettings { get; set; }
     }
 }

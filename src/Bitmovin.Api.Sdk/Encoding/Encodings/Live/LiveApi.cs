@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using RestEase;
 using Bitmovin.Api.Sdk.Common;
+using Bitmovin.Api.Sdk.Encoding.Encodings.Live.Esam;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Live.ResetLiveManifestTimeshift;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Live.Heartbeat;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Live.Hd;
@@ -19,6 +20,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live
         public LiveApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ILiveApiClient>();
+            Esam = new EsamApi(apiClientFactory);
             ResetLiveManifestTimeshift = new ResetLiveManifestTimeshiftApi(apiClientFactory);
             Heartbeat = new HeartbeatApi(apiClientFactory);
             Hd = new HdApi(apiClientFactory);
@@ -31,6 +33,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live
         /// </summary>
         public static BitmovinApiBuilder<LiveApi> Builder => new BitmovinApiBuilder<LiveApi>();
 
+        public EsamApi Esam { get; }
         public ResetLiveManifestTimeshiftApi ResetLiveManifestTimeshift { get; }
         public HeartbeatApi Heartbeat { get; }
         public HdApi Hd { get; }
