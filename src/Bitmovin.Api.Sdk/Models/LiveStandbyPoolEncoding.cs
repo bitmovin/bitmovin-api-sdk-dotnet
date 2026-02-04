@@ -49,7 +49,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// IngestPoints
         /// </summary>
         [JsonProperty(PropertyName = "ingestPoints")]
-        public List<LiveStandbyPoolEncodingIngestPoint> IngestPoints { get; set; } = new List<LiveStandbyPoolEncodingIngestPoint>();
+        public List<LiveStandbyPoolEncodingIngestPoint> IngestPoints { get; internal set; } = new List<LiveStandbyPoolEncodingIngestPoint>();
 
         /// <summary>
         /// Status

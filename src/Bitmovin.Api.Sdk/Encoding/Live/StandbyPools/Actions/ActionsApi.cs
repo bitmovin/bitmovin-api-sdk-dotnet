@@ -25,9 +25,10 @@ namespace Bitmovin.Api.Sdk.Encoding.Live.StandbyPools.Actions
         /// Acquire an encoding from a standby pool
         /// </summary>
         /// <param name="poolId">Id of the standby pool (required)</param>
-        public async Task<Models.LiveStandbyPoolEncoding> AcquireEncodingAsync(string poolId)
+        /// <param name="liveStandbyPoolAcquireEncoding">The optionally provided payload for acquiring an encoding</param>
+        public async Task<Models.LiveStandbyPoolEncoding> AcquireEncodingAsync(string poolId, Models.LiveStandbyPoolAcquireEncoding liveStandbyPoolAcquireEncoding = null)
         {
-            return await _apiClient.AcquireEncodingAsync(poolId);
+            return await _apiClient.AcquireEncodingAsync(poolId, liveStandbyPoolAcquireEncoding);
         }
 
         /// <summary>
@@ -43,7 +44,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Live.StandbyPools.Actions
         {
             [Post("/encoding/live/standby-pools/{pool_id}/actions/acquire-encoding")]
             [AllowAnyStatusCode]
-            Task<Models.LiveStandbyPoolEncoding> AcquireEncodingAsync([Path("pool_id")] string poolId);
+            Task<Models.LiveStandbyPoolEncoding> AcquireEncodingAsync([Path("pool_id")] string poolId, [Body] Models.LiveStandbyPoolAcquireEncoding liveStandbyPoolAcquireEncoding);
 
             [Post("/encoding/live/standby-pools/{pool_id}/actions/delete-error-encodings")]
             [AllowAnyStatusCode]

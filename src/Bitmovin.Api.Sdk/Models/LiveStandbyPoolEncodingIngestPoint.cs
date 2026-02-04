@@ -19,12 +19,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// URL to the RTMP/RTMPS endpoint for this live encoding
         /// </summary>
         [JsonProperty(PropertyName = "streamBaseUrl")]
-        public string StreamBaseUrl { get; internal set; }
+        public string StreamBaseUrl { get; set; }
 
         /// <summary>
         /// Stream key value of this live encoding
         /// </summary>
         [JsonProperty(PropertyName = "streamKey")]
-        public string StreamKey { get; internal set; }
+        public string StreamKey { get; set; }
     }
 }
