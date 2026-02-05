@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.AudioMix
 {
+    /// <summary>
+    /// API for AudioMixApi
+    /// </summary>
     public class AudioMixApi
     {
         private readonly IAudioMixApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the AudioMixApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public AudioMixApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IAudioMixApiClient>();
@@ -87,6 +94,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.AudioMix
             Task<Models.PaginationResponse<Models.AudioMixInputStream>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

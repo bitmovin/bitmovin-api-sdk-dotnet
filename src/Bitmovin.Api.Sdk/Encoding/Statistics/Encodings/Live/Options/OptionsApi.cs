@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.Live.Options
 {
+    /// <summary>
+    /// API for OptionsApi
+    /// </summary>
     public class OptionsApi
     {
         private readonly IOptionsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the OptionsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public OptionsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IOptionsApiClient>();
@@ -57,6 +64,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.Live.Options
             Task<Models.LiveOptionsStatistics> ListByDateRangeAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for ListByDateRange
+        /// </summary>
         public class ListByDateRangeQueryParams : Dictionary<string,Object>
         {
             /// <summary>

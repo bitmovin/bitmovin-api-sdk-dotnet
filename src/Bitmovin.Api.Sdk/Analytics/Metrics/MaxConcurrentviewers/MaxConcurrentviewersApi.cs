@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Analytics.Metrics.MaxConcurrentviewers
 {
+    /// <summary>
+    /// API for MaxConcurrentviewersApi
+    /// </summary>
     public class MaxConcurrentviewersApi
     {
         private readonly IMaxConcurrentviewersApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the MaxConcurrentviewersApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public MaxConcurrentviewersApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IMaxConcurrentviewersApiClient>();

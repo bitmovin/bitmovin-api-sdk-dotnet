@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.Finished.Custom
 
 namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.Finished
 {
+    /// <summary>
+    /// API for FinishedApi
+    /// </summary>
     public class FinishedApi
     {
         private readonly IFinishedApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the FinishedApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public FinishedApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IFinishedApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.Finished
         /// </summary>
         public static BitmovinApiBuilder<FinishedApi> Builder => new BitmovinApiBuilder<FinishedApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -150,6 +160,9 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.Finished
             Task<Models.PaginationResponse<Models.Webhook>> ListByEncodingIdAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>
@@ -173,6 +186,9 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.Finished
             }
         }
 
+        /// <summary>
+        /// Query parameters for ListByEncodingId
+        /// </summary>
         public class ListByEncodingIdQueryParams : Dictionary<string,Object>
         {
             /// <summary>

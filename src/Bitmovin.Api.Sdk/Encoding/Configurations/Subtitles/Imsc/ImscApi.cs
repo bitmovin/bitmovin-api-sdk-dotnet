@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Configurations.Subtitles.Imsc.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Configurations.Subtitles.Imsc
 {
+    /// <summary>
+    /// API for ImscApi
+    /// </summary>
     public class ImscApi
     {
         private readonly IImscApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the ImscApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public ImscApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IImscApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Subtitles.Imsc
         /// </summary>
         public static BitmovinApiBuilder<ImscApi> Builder => new BitmovinApiBuilder<ImscApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Subtitles.Imsc
             Task<Models.PaginationResponse<Models.ImscConfiguration>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

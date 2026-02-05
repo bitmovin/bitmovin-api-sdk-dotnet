@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Inputs.GcsServiceAccount.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Inputs.GcsServiceAccount
 {
+    /// <summary>
+    /// API for GcsServiceAccountApi
+    /// </summary>
     public class GcsServiceAccountApi
     {
         private readonly IGcsServiceAccountApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the GcsServiceAccountApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public GcsServiceAccountApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IGcsServiceAccountApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.GcsServiceAccount
         /// </summary>
         public static BitmovinApiBuilder<GcsServiceAccountApi> Builder => new BitmovinApiBuilder<GcsServiceAccountApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.GcsServiceAccount
             Task<Models.PaginationResponse<Models.GcsServiceAccountInput>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

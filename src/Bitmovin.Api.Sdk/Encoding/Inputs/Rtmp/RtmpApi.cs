@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Inputs.Rtmp
 {
+    /// <summary>
+    /// API for RtmpApi
+    /// </summary>
     public class RtmpApi
     {
         private readonly IRtmpApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the RtmpApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public RtmpApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IRtmpApiClient>();
@@ -57,6 +64,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Rtmp
             Task<Models.PaginationResponse<Models.RtmpInput>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

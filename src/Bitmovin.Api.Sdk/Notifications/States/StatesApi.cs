@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Notifications.States
 {
+    /// <summary>
+    /// API for StatesApi
+    /// </summary>
     public class StatesApi
     {
         private readonly IStatesApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the StatesApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public StatesApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IStatesApiClient>();
@@ -46,6 +53,9 @@ namespace Bitmovin.Api.Sdk.Notifications.States
             Task<Models.PaginationResponse<Models.NotificationStateEntry>> ListAsync([Path("notification_id")] string notificationId, [Path("resource_id")] string resourceId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

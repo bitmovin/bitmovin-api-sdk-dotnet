@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Drm.Fairplay.Cus
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Drm.Fairplay
 {
+    /// <summary>
+    /// API for FairplayApi
+    /// </summary>
     public class FairplayApi
     {
         private readonly IFairplayApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the FairplayApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public FairplayApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IFairplayApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Drm.Fairplay
         /// </summary>
         public static BitmovinApiBuilder<FairplayApi> Builder => new BitmovinApiBuilder<FairplayApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -95,6 +105,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Drm.Fairplay
             Task<Models.PaginationResponse<Models.FairPlayDrm>> ListAsync([Path("encoding_id")] string encodingId, [Path("muxing_id")] string muxingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

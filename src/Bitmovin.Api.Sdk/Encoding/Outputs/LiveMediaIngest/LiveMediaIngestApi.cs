@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Outputs.LiveMediaIngest.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Outputs.LiveMediaIngest
 {
+    /// <summary>
+    /// API for LiveMediaIngestApi
+    /// </summary>
     public class LiveMediaIngestApi
     {
         private readonly ILiveMediaIngestApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the LiveMediaIngestApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public LiveMediaIngestApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ILiveMediaIngestApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.LiveMediaIngest
         /// </summary>
         public static BitmovinApiBuilder<LiveMediaIngestApi> Builder => new BitmovinApiBuilder<LiveMediaIngestApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.LiveMediaIngest
             Task<Models.PaginationResponse<Models.LiveMediaIngestOutput>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

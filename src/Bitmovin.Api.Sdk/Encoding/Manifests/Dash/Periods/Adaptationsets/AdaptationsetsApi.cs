@@ -14,10 +14,17 @@ using Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Contentpro
 
 namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets
 {
+    /// <summary>
+    /// API for AdaptationsetsApi
+    /// </summary>
     public class AdaptationsetsApi
     {
         private readonly IAdaptationsetsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the AdaptationsetsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public AdaptationsetsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IAdaptationsetsApiClient>();
@@ -35,12 +42,33 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets
         /// </summary>
         public static BitmovinApiBuilder<AdaptationsetsApi> Builder => new BitmovinApiBuilder<AdaptationsetsApi>();
 
+        /// <summary>
+        /// Gets the Type API
+        /// </summary>
         public TypeApi Type { get; }
+        /// <summary>
+        /// Gets the Audio API
+        /// </summary>
         public AudioApi Audio { get; }
+        /// <summary>
+        /// Gets the Video API
+        /// </summary>
         public VideoApi Video { get; }
+        /// <summary>
+        /// Gets the Subtitle API
+        /// </summary>
         public SubtitleApi Subtitle { get; }
+        /// <summary>
+        /// Gets the Image API
+        /// </summary>
         public ImageApi Image { get; }
+        /// <summary>
+        /// Gets the Representations API
+        /// </summary>
         public RepresentationsApi Representations { get; }
+        /// <summary>
+        /// Gets the Contentprotection API
+        /// </summary>
         public ContentprotectionApi Contentprotection { get; }
 
         /// <summary>
@@ -68,6 +96,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets
             Task<Models.PaginationResponse<Models.AdaptationSet>> ListAsync([Path("manifest_id")] string manifestId, [Path("period_id")] string periodId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

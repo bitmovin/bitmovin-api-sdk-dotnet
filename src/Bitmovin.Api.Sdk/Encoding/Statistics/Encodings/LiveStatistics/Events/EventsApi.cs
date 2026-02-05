@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.LiveStatistics.Events
 {
+    /// <summary>
+    /// API for EventsApi
+    /// </summary>
     public class EventsApi
     {
         private readonly IEventsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the EventsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public EventsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IEventsApiClient>();
@@ -45,6 +52,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.LiveStatistics.Events
             Task<Models.PaginationResponse<Models.LiveEncodingStatsEvent>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

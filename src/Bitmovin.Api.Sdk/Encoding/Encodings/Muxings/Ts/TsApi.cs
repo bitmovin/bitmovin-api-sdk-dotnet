@@ -9,10 +9,17 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Ts.Drm;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Ts
 {
+    /// <summary>
+    /// API for TsApi
+    /// </summary>
     public class TsApi
     {
         private readonly ITsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the TsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public TsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ITsApiClient>();
@@ -25,7 +32,13 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Ts
         /// </summary>
         public static BitmovinApiBuilder<TsApi> Builder => new BitmovinApiBuilder<TsApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
+        /// <summary>
+        /// Gets the Drm API
+        /// </summary>
         public DrmApi Drm { get; }
 
         /// <summary>
@@ -94,6 +107,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Ts
             Task<Models.PaginationResponse<Models.TsMuxing>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

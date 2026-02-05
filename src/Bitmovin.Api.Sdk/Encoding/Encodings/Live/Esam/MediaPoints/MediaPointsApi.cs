@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live.Esam.MediaPoints
 {
+    /// <summary>
+    /// API for MediaPointsApi
+    /// </summary>
     public class MediaPointsApi
     {
         private readonly IMediaPointsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the MediaPointsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public MediaPointsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IMediaPointsApiClient>();

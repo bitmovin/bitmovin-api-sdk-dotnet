@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Inputs.AkamaiNetstorage.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Inputs.AkamaiNetstorage
 {
+    /// <summary>
+    /// API for AkamaiNetstorageApi
+    /// </summary>
     public class AkamaiNetstorageApi
     {
         private readonly IAkamaiNetstorageApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the AkamaiNetstorageApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public AkamaiNetstorageApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IAkamaiNetstorageApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.AkamaiNetstorage
         /// </summary>
         public static BitmovinApiBuilder<AkamaiNetstorageApi> Builder => new BitmovinApiBuilder<AkamaiNetstorageApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.AkamaiNetstorage
             Task<Models.PaginationResponse<Models.AkamaiNetStorageInput>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

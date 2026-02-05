@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Passthrough
 {
+    /// <summary>
+    /// API for PassthroughApi
+    /// </summary>
     public class PassthroughApi
     {
         private readonly IPassthroughApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the PassthroughApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public PassthroughApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IPassthroughApiClient>();
@@ -83,6 +90,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Passthrough
             Task<Models.PaginationResponse<Models.PassthroughAudioConfiguration>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

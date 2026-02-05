@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Pcm.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Pcm
 {
+    /// <summary>
+    /// API for PcmApi
+    /// </summary>
     public class PcmApi
     {
         private readonly IPcmApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the PcmApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public PcmApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IPcmApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Pcm
         /// </summary>
         public static BitmovinApiBuilder<PcmApi> Builder => new BitmovinApiBuilder<PcmApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Pcm
             Task<Models.PaginationResponse<Models.PcmAudioConfiguration>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

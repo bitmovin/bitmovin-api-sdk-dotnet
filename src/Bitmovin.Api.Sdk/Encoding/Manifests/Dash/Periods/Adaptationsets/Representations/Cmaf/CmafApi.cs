@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Representa
 
 namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Representations.Cmaf
 {
+    /// <summary>
+    /// API for CmafApi
+    /// </summary>
     public class CmafApi
     {
         private readonly ICmafApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the CmafApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public CmafApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ICmafApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Repres
         /// </summary>
         public static BitmovinApiBuilder<CmafApi> Builder => new BitmovinApiBuilder<CmafApi>();
 
+        /// <summary>
+        /// Gets the Contentprotection API
+        /// </summary>
         public ContentprotectionApi Contentprotection { get; }
 
         /// <summary>
@@ -99,6 +109,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Repres
             Task<Models.PaginationResponse<Models.DashCmafRepresentation>> ListAsync([Path("manifest_id")] string manifestId, [Path("period_id")] string periodId, [Path("adaptationset_id")] string adaptationsetId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

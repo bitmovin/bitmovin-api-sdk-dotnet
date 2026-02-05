@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Oci.Regions
 {
+    /// <summary>
+    /// API for RegionsApi
+    /// </summary>
     public class RegionsApi
     {
         private readonly IRegionsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the RegionsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public RegionsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IRegionsApiClient>();
@@ -88,6 +95,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Oci.Regions
             Task<Models.PaginationResponse<Models.OciAccountRegionSettings>> ListAsync([Path("infrastructure_id")] string infrastructureId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

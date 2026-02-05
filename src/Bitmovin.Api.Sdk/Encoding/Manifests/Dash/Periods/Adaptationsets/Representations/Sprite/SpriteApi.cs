@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Representations.Sprite
 {
+    /// <summary>
+    /// API for SpriteApi
+    /// </summary>
     public class SpriteApi
     {
         private readonly ISpriteApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the SpriteApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public SpriteApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ISpriteApiClient>();
@@ -95,6 +102,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Repres
             Task<Models.PaginationResponse<Models.SpriteRepresentation>> ListAsync([Path("manifest_id")] string manifestId, [Path("period_id")] string periodId, [Path("adaptationset_id")] string adaptationsetId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

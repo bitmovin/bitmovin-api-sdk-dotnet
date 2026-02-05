@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class H262VideoConfiguration : VideoConfiguration
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "H262";
+#pragma warning restore CS0414
 
         /// <summary>
         /// Use a set of well defined configurations preset to support certain use cases. Can be overwritten with more specific values.

@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class WebVttConfiguration : SubtitleConfiguration
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "WEBVTT";
+#pragma warning restore CS0414
 
         /// <summary>
         /// If set to true, the hours section on webvtt timestamp values will explicitely have zeroes instead of being omitted for values where hours &#x3D; 0.

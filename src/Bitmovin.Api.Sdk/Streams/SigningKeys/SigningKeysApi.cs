@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Streams.SigningKeys
 {
+    /// <summary>
+    /// API for SigningKeysApi
+    /// </summary>
     public class SigningKeysApi
     {
         private readonly ISigningKeysApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the SigningKeysApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public SigningKeysApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ISigningKeysApiClient>();

@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Filters.Rotate.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Filters.Rotate
 {
+    /// <summary>
+    /// API for RotateApi
+    /// </summary>
     public class RotateApi
     {
         private readonly IRotateApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the RotateApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public RotateApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IRotateApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Rotate
         /// </summary>
         public static BitmovinApiBuilder<RotateApi> Builder => new BitmovinApiBuilder<RotateApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Rotate
             Task<Models.PaginationResponse<Models.RotateFilter>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

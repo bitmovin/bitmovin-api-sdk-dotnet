@@ -32,5 +32,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "settings")]
         public List<Setting> Settings { get; set; } = new List<Setting>();
+
+        /// <summary>
+        /// Dynamics
+        /// </summary>
+        [JsonProperty(PropertyName = "dynamics")]
+        public SceneDynamics Dynamics { get; set; }
     }
 }

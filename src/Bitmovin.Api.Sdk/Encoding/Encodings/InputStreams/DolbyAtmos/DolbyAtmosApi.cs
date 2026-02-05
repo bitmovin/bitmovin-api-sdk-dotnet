@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.DolbyAtmos
 {
+    /// <summary>
+    /// API for DolbyAtmosApi
+    /// </summary>
     public class DolbyAtmosApi
     {
         private readonly IDolbyAtmosApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the DolbyAtmosApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public DolbyAtmosApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IDolbyAtmosApiClient>();
@@ -87,6 +94,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.DolbyAtmos
             Task<Models.PaginationResponse<Models.DolbyAtmosIngestInputStream>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Configurations.Audio.DolbyDigitalPlus.Customdata
 
 namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.DolbyDigitalPlus
 {
+    /// <summary>
+    /// API for DolbyDigitalPlusApi
+    /// </summary>
     public class DolbyDigitalPlusApi
     {
         private readonly IDolbyDigitalPlusApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the DolbyDigitalPlusApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public DolbyDigitalPlusApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IDolbyDigitalPlusApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.DolbyDigitalPlus
         /// </summary>
         public static BitmovinApiBuilder<DolbyDigitalPlusApi> Builder => new BitmovinApiBuilder<DolbyDigitalPlusApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.DolbyDigitalPlus
             Task<Models.PaginationResponse<Models.DolbyDigitalPlusAudioConfiguration>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

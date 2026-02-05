@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Captions.Cea.Scc.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Captions.Cea.Scc
 {
+    /// <summary>
+    /// API for SccApi
+    /// </summary>
     public class SccApi
     {
         private readonly ISccApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the SccApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public SccApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ISccApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Captions.Cea.Scc
         /// </summary>
         public static BitmovinApiBuilder<SccApi> Builder => new BitmovinApiBuilder<SccApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -95,6 +105,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Captions.Cea.Scc
             Task<Models.PaginationResponse<Models.SccCaption>> ListAsync([Path("encoding_id")] string encodingId, [Path("stream_id")] string streamId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Sidecars.Webvtt
 {
+    /// <summary>
+    /// API for WebvttApi
+    /// </summary>
     public class WebvttApi
     {
         private readonly IWebvttApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the WebvttApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public WebvttApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IWebvttApiClient>();
@@ -87,6 +94,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Sidecars.Webvtt
             Task<Models.PaginationResponse<Models.WebVttSidecarFile>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

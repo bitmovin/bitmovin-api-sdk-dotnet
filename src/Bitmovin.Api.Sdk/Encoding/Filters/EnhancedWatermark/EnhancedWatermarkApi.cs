@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Filters.EnhancedWatermark.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Filters.EnhancedWatermark
 {
+    /// <summary>
+    /// API for EnhancedWatermarkApi
+    /// </summary>
     public class EnhancedWatermarkApi
     {
         private readonly IEnhancedWatermarkApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the EnhancedWatermarkApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public EnhancedWatermarkApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IEnhancedWatermarkApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.EnhancedWatermark
         /// </summary>
         public static BitmovinApiBuilder<EnhancedWatermarkApi> Builder => new BitmovinApiBuilder<EnhancedWatermarkApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.EnhancedWatermark
             Task<Models.PaginationResponse<Models.EnhancedWatermarkFilter>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Infrastructure.PrewarmedEncoderPools.Schedules;
 
 namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.PrewarmedEncoderPools
 {
+    /// <summary>
+    /// API for PrewarmedEncoderPoolsApi
+    /// </summary>
     public class PrewarmedEncoderPoolsApi
     {
         private readonly IPrewarmedEncoderPoolsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the PrewarmedEncoderPoolsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public PrewarmedEncoderPoolsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IPrewarmedEncoderPoolsApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.PrewarmedEncoderPools
         /// </summary>
         public static BitmovinApiBuilder<PrewarmedEncoderPoolsApi> Builder => new BitmovinApiBuilder<PrewarmedEncoderPoolsApi>();
 
+        /// <summary>
+        /// Gets the Schedules API
+        /// </summary>
         public SchedulesApi Schedules { get; }
 
         /// <summary>
@@ -113,6 +123,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.PrewarmedEncoderPools
             Task<Models.BitmovinResponse> StopAsync([Path("pool_id")] string poolId);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

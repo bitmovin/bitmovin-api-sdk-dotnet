@@ -9,10 +9,17 @@ using Bitmovin.Api.Sdk.Streams.Live.Start;
 
 namespace Bitmovin.Api.Sdk.Streams.Live
 {
+    /// <summary>
+    /// API for LiveApi
+    /// </summary>
     public class LiveApi
     {
         private readonly ILiveApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the LiveApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public LiveApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ILiveApiClient>();
@@ -25,7 +32,13 @@ namespace Bitmovin.Api.Sdk.Streams.Live
         /// </summary>
         public static BitmovinApiBuilder<LiveApi> Builder => new BitmovinApiBuilder<LiveApi>();
 
+        /// <summary>
+        /// Gets the Stop API
+        /// </summary>
         public StopApi Stop { get; }
+        /// <summary>
+        /// Gets the Start API
+        /// </summary>
         public StartApi Start { get; }
 
         /// <summary>
@@ -104,6 +117,9 @@ namespace Bitmovin.Api.Sdk.Streams.Live
             Task<Models.StreamsLiveResponse> PatchStreamsLiveAsync([Path("stream_id")] string streamId, [Body] Models.StreamsLiveUpdateRequest streamsLiveUpdateRequest);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

@@ -11,10 +11,17 @@ using Bitmovin.Api.Sdk.Encoding.Configurations.Subtitles;
 
 namespace Bitmovin.Api.Sdk.Encoding.Configurations
 {
+    /// <summary>
+    /// API for ConfigurationsApi
+    /// </summary>
     public class ConfigurationsApi
     {
         private readonly IConfigurationsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the ConfigurationsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public ConfigurationsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IConfigurationsApiClient>();
@@ -29,9 +36,21 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations
         /// </summary>
         public static BitmovinApiBuilder<ConfigurationsApi> Builder => new BitmovinApiBuilder<ConfigurationsApi>();
 
+        /// <summary>
+        /// Gets the Type API
+        /// </summary>
         public TypeApi Type { get; }
+        /// <summary>
+        /// Gets the Video API
+        /// </summary>
         public VideoApi Video { get; }
+        /// <summary>
+        /// Gets the Audio API
+        /// </summary>
         public AudioApi Audio { get; }
+        /// <summary>
+        /// Gets the Subtitles API
+        /// </summary>
         public SubtitlesApi Subtitles { get; }
 
         /// <summary>
@@ -70,6 +89,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations
             Task<Models.PaginationResponse<Models.CodecConfiguration>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

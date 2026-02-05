@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Analytics.VirtualLicenses
 {
+    /// <summary>
+    /// API for VirtualLicensesApi
+    /// </summary>
     public class VirtualLicensesApi
     {
         private readonly IVirtualLicensesApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the VirtualLicensesApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public VirtualLicensesApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IVirtualLicensesApiClient>();
@@ -97,6 +104,9 @@ namespace Bitmovin.Api.Sdk.Analytics.VirtualLicenses
             Task<Models.AnalyticsVirtualLicense> UpdateAsync([Path("virtual_license_id")] string virtualLicenseId, [Body] Models.AnalyticsVirtualLicenseRequest analyticsVirtualLicenseRequest);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

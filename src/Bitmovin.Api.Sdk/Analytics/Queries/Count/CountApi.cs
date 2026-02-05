@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Analytics.Queries.Count
 {
+    /// <summary>
+    /// API for CountApi
+    /// </summary>
     public class CountApi
     {
         private readonly ICountApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the CountApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public CountApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ICountApiClient>();

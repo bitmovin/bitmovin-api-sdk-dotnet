@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class CdnOutput : Output
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "CDN";
+#pragma warning restore CS0414
 
         /// <summary>
         /// Domain name for public access to CDN content

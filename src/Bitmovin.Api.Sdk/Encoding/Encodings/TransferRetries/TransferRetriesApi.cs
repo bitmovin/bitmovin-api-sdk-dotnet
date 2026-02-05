@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.TransferRetries
 {
+    /// <summary>
+    /// API for TransferRetriesApi
+    /// </summary>
     public class TransferRetriesApi
     {
         private readonly ITransferRetriesApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the TransferRetriesApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public TransferRetriesApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ITransferRetriesApiClient>();
@@ -72,6 +79,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.TransferRetries
             Task<Models.PaginationResponse<Models.TransferRetry>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

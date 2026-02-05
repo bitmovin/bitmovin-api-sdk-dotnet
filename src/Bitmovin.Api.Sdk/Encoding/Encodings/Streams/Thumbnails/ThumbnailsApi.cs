@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Thumbnails.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Thumbnails
 {
+    /// <summary>
+    /// API for ThumbnailsApi
+    /// </summary>
     public class ThumbnailsApi
     {
         private readonly IThumbnailsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the ThumbnailsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public ThumbnailsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IThumbnailsApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Thumbnails
         /// </summary>
         public static BitmovinApiBuilder<ThumbnailsApi> Builder => new BitmovinApiBuilder<ThumbnailsApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -95,6 +105,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Thumbnails
             Task<Models.PaginationResponse<Models.Thumbnail>> ListAsync([Path("encoding_id")] string encodingId, [Path("stream_id")] string streamId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

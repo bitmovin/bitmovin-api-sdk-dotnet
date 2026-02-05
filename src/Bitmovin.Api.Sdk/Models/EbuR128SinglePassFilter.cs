@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class EbuR128SinglePassFilter : Filter
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "EBU_R128_SINGLE_PASS";
+#pragma warning restore CS0414
 
         /// <summary>
         /// Set the targeted integrated loudness value. Range is from &#39;-70.0&#39; to &#39;-5.0&#39;. Default value is &#39;-24.0&#39;. Value is measured in LUFS (Loudness Units, referenced to Full Scale)

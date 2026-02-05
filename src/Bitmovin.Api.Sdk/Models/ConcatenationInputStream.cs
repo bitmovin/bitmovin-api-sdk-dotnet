@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class ConcatenationInputStream : InputStream
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "CONCATENATION";
+#pragma warning restore CS0414
 
         /// <summary>
         /// Concatenation configuration for the output of this stream

@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live.InsertableContent.Scheduled
 {
+    /// <summary>
+    /// API for ScheduledApi
+    /// </summary>
     public class ScheduledApi
     {
         private readonly IScheduledApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the ScheduledApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public ScheduledApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IScheduledApiClient>();
@@ -45,6 +52,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live.InsertableContent.Scheduled
             Task<Models.PaginationResponse<Models.ScheduledInsertableContent>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

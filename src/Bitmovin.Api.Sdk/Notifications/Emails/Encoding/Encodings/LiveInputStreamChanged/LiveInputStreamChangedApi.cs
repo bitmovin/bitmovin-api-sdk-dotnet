@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Notifications.Emails.Encoding.Encodings.LiveInputStreamChanged
 {
+    /// <summary>
+    /// API for LiveInputStreamChangedApi
+    /// </summary>
     public class LiveInputStreamChangedApi
     {
         private readonly ILiveInputStreamChangedApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the LiveInputStreamChangedApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public LiveInputStreamChangedApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ILiveInputStreamChangedApiClient>();

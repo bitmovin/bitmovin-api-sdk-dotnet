@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ChunkedText.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ChunkedText
 {
+    /// <summary>
+    /// API for ChunkedTextApi
+    /// </summary>
     public class ChunkedTextApi
     {
         private readonly IChunkedTextApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the ChunkedTextApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public ChunkedTextApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IChunkedTextApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ChunkedText
         /// </summary>
         public static BitmovinApiBuilder<ChunkedTextApi> Builder => new BitmovinApiBuilder<ChunkedTextApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -91,6 +101,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ChunkedText
             Task<Models.PaginationResponse<Models.ChunkedTextMuxing>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

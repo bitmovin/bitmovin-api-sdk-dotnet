@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Configurations.Subtitles.Webvtt.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Configurations.Subtitles.Webvtt
 {
+    /// <summary>
+    /// API for WebvttApi
+    /// </summary>
     public class WebvttApi
     {
         private readonly IWebvttApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the WebvttApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public WebvttApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IWebvttApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Subtitles.Webvtt
         /// </summary>
         public static BitmovinApiBuilder<WebvttApi> Builder => new BitmovinApiBuilder<WebvttApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Subtitles.Webvtt
             Task<Models.PaginationResponse<Models.WebVttConfiguration>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

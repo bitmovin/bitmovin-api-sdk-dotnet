@@ -11,10 +11,17 @@ using Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media;
 
 namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls
 {
+    /// <summary>
+    /// API for HlsApi
+    /// </summary>
     public class HlsApi
     {
         private readonly IHlsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the HlsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public HlsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IHlsApiClient>();
@@ -29,9 +36,21 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls
         /// </summary>
         public static BitmovinApiBuilder<HlsApi> Builder => new BitmovinApiBuilder<HlsApi>();
 
+        /// <summary>
+        /// Gets the Default API
+        /// </summary>
         public DefaultApi Default { get; }
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
+        /// <summary>
+        /// Gets the Streams API
+        /// </summary>
         public StreamsApi Streams { get; }
+        /// <summary>
+        /// Gets the Media API
+        /// </summary>
         public MediaApi Media { get; }
 
         /// <summary>
@@ -149,6 +168,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls
             Task<Models.BitmovinResponse> StopAsync([Path("manifest_id")] string manifestId);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

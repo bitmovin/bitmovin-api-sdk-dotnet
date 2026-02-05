@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class SpekeDrm : Drm
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "SPEKE";
+#pragma warning restore CS0414
 
         /// <summary>
         /// Unique Identifier of the content, will be generated if not set

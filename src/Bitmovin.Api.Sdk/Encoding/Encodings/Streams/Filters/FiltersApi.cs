@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Filters
 {
+    /// <summary>
+    /// API for FiltersApi
+    /// </summary>
     public class FiltersApi
     {
         private readonly IFiltersApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the FiltersApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public FiltersApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IFiltersApiClient>();
@@ -90,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Filters
             Task<Models.StreamFilterList> ListAsync([Path("encoding_id")] string encodingId, [Path("stream_id")] string streamId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

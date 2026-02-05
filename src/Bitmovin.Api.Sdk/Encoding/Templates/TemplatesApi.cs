@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Templates
 {
+    /// <summary>
+    /// API for TemplatesApi
+    /// </summary>
     public class TemplatesApi
     {
         private readonly ITemplatesApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the TemplatesApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public TemplatesApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ITemplatesApiClient>();
@@ -96,6 +103,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Templates
             Task<Models.EncodingTemplateStartResponse> StartAsync([Body] object encodingTemplateRequest);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

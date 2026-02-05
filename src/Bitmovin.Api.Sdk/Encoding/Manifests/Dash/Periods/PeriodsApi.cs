@@ -9,10 +9,17 @@ using Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets;
 
 namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods
 {
+    /// <summary>
+    /// API for PeriodsApi
+    /// </summary>
     public class PeriodsApi
     {
         private readonly IPeriodsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the PeriodsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public PeriodsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IPeriodsApiClient>();
@@ -25,7 +32,13 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods
         /// </summary>
         public static BitmovinApiBuilder<PeriodsApi> Builder => new BitmovinApiBuilder<PeriodsApi>();
 
+        /// <summary>
+        /// Gets the CustomXmlElements API
+        /// </summary>
         public CustomXmlElementsApi CustomXmlElements { get; }
+        /// <summary>
+        /// Gets the Adaptationsets API
+        /// </summary>
         public AdaptationsetsApi Adaptationsets { get; }
 
         /// <summary>
@@ -94,6 +107,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods
             Task<Models.PaginationResponse<Models.Period>> ListAsync([Path("manifest_id")] string manifestId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

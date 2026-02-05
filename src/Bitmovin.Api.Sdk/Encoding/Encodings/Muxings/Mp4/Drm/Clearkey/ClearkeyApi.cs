@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Clearkey.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Clearkey
 {
+    /// <summary>
+    /// API for ClearkeyApi
+    /// </summary>
     public class ClearkeyApi
     {
         private readonly IClearkeyApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the ClearkeyApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public ClearkeyApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IClearkeyApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Clearkey
         /// </summary>
         public static BitmovinApiBuilder<ClearkeyApi> Builder => new BitmovinApiBuilder<ClearkeyApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -95,6 +105,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Clearkey
             Task<Models.PaginationResponse<Models.ClearKeyDrm>> ListAsync([Path("encoding_id")] string encodingId, [Path("muxing_id")] string muxingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

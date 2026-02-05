@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Statistics.Labels.Daily
 {
+    /// <summary>
+    /// API for DailyApi
+    /// </summary>
     public class DailyApi
     {
         private readonly IDailyApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the DailyApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public DailyApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IDailyApiClient>();
@@ -66,6 +73,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Labels.Daily
             Task<Models.PaginationResponse<Models.DailyStatisticsPerLabel>> ListByDateRangeAsync([Path("from", Format = "yyyy-MM-dd")] DateTime? from, [Path("to", Format = "yyyy-MM-dd")] DateTime? to, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>
@@ -94,6 +104,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Labels.Daily
             }
         }
 
+        /// <summary>
+        /// Query parameters for ListByDateRange
+        /// </summary>
         public class ListByDateRangeQueryParams : Dictionary<string,Object>
         {
             /// <summary>

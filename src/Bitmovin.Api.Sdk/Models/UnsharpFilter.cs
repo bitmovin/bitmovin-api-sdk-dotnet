@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class UnsharpFilter : Filter
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "UNSHARP";
+#pragma warning restore CS0414
 
         /// <summary>
         /// Must be an odd integer between 3 and 23

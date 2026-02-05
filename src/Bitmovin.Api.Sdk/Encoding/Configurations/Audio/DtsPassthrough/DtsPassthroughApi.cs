@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Configurations.Audio.DtsPassthrough.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.DtsPassthrough
 {
+    /// <summary>
+    /// API for DtsPassthroughApi
+    /// </summary>
     public class DtsPassthroughApi
     {
         private readonly IDtsPassthroughApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the DtsPassthroughApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public DtsPassthroughApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IDtsPassthroughApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.DtsPassthrough
         /// </summary>
         public static BitmovinApiBuilder<DtsPassthroughApi> Builder => new BitmovinApiBuilder<DtsPassthroughApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.DtsPassthrough
             Task<Models.PaginationResponse<Models.DtsPassthroughAudioConfiguration>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class DolbyVisionInputStream : InputStream
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "DOLBY_VISION";
+#pragma warning restore CS0414
 
         /// <summary>
         /// Id of input (required)

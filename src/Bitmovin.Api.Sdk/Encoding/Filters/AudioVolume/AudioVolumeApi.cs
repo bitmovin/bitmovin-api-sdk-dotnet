@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Filters.AudioVolume.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Filters.AudioVolume
 {
+    /// <summary>
+    /// API for AudioVolumeApi
+    /// </summary>
     public class AudioVolumeApi
     {
         private readonly IAudioVolumeApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the AudioVolumeApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public AudioVolumeApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IAudioVolumeApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.AudioVolume
         /// </summary>
         public static BitmovinApiBuilder<AudioVolumeApi> Builder => new BitmovinApiBuilder<AudioVolumeApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.AudioVolume
             Task<Models.PaginationResponse<Models.AudioVolumeFilter>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

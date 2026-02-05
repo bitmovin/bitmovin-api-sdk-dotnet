@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Statistics.Labels.Daily;
 
 namespace Bitmovin.Api.Sdk.Encoding.Statistics.Labels
 {
+    /// <summary>
+    /// API for LabelsApi
+    /// </summary>
     public class LabelsApi
     {
         private readonly ILabelsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the LabelsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public LabelsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ILabelsApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Labels
         /// </summary>
         public static BitmovinApiBuilder<LabelsApi> Builder => new BitmovinApiBuilder<LabelsApi>();
 
+        /// <summary>
+        /// Gets the Daily API
+        /// </summary>
         public DailyApi Daily { get; }
 
         /// <summary>
@@ -70,6 +80,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Labels
             Task<Models.PaginationResponse<Models.StatisticsPerLabel>> ListByDateRangeAsync([Path("from", Format = "yyyy-MM-dd")] DateTime? from, [Path("to", Format = "yyyy-MM-dd")] DateTime? to, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>
@@ -98,6 +111,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Labels
             }
         }
 
+        /// <summary>
+        /// Query parameters for ListByDateRange
+        /// </summary>
         public class ListByDateRangeQueryParams : Dictionary<string,Object>
         {
             /// <summary>

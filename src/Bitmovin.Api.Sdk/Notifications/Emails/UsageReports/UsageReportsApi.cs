@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Notifications.Emails.UsageReports
 {
+    /// <summary>
+    /// API for UsageReportsApi
+    /// </summary>
     public class UsageReportsApi
     {
         private readonly IUsageReportsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the UsageReportsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public UsageReportsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IUsageReportsApiClient>();
@@ -44,6 +51,9 @@ namespace Bitmovin.Api.Sdk.Notifications.Emails.UsageReports
             Task<Models.PaginationResponse<Models.EmailNotification>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

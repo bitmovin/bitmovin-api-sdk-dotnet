@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class AkamaiNetStorageOutput : Output
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "AKAMAI_NETSTORAGE";
+#pragma warning restore CS0414
 
         /// <summary>
         /// Host to use for Akamai NetStorage transfers (required)

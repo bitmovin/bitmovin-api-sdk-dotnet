@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Analytics.Metrics.AvgDroppedFrames
 {
+    /// <summary>
+    /// API for AvgDroppedFramesApi
+    /// </summary>
     public class AvgDroppedFramesApi
     {
         private readonly IAvgDroppedFramesApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the AvgDroppedFramesApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public AvgDroppedFramesApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IAvgDroppedFramesApiClient>();

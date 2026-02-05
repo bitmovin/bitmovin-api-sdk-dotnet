@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.KantarWatermark
 {
+    /// <summary>
+    /// API for KantarWatermarkApi
+    /// </summary>
     public class KantarWatermarkApi
     {
         private readonly IKantarWatermarkApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the KantarWatermarkApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public KantarWatermarkApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IKantarWatermarkApiClient>();

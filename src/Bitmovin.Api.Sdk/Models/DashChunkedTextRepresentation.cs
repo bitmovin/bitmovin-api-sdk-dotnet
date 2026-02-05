@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class DashChunkedTextRepresentation : DashSegmentedRepresentation
     {
         [JsonProperty(PropertyName = "typeDiscriminator")]
+#pragma warning disable CS0414
         private readonly string _typeDiscriminator = "CHUNKED_TEXT";
+#pragma warning restore CS0414
 
     }
 }

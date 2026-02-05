@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Notifications.Emails.Encoding.Encodings;
 
 namespace Bitmovin.Api.Sdk.Notifications.Emails.Encoding
 {
+    /// <summary>
+    /// API for EncodingApi
+    /// </summary>
     public class EncodingApi
     {
         private readonly IEncodingApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the EncodingApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public EncodingApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IEncodingApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Notifications.Emails.Encoding
         /// </summary>
         public static BitmovinApiBuilder<EncodingApi> Builder => new BitmovinApiBuilder<EncodingApi>();
 
+        /// <summary>
+        /// Gets the Encodings API
+        /// </summary>
         public EncodingsApi Encodings { get; }
 
         /// <summary>
@@ -48,6 +58,9 @@ namespace Bitmovin.Api.Sdk.Notifications.Emails.Encoding
             Task<Models.PaginationResponse<Models.EmailNotification>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

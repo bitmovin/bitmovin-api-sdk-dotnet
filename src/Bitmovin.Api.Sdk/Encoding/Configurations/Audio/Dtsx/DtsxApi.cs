@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Dtsx.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Dtsx
 {
+    /// <summary>
+    /// API for DtsxApi
+    /// </summary>
     public class DtsxApi
     {
         private readonly IDtsxApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the DtsxApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public DtsxApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IDtsxApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Dtsx
         /// </summary>
         public static BitmovinApiBuilder<DtsxApi> Builder => new BitmovinApiBuilder<DtsxApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Dtsx
             Task<Models.PaginationResponse<Models.DtsXAudioConfiguration>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Configurations.Audio.HeAacV2.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.HeAacV2
 {
+    /// <summary>
+    /// API for HeAacV2Api
+    /// </summary>
     public class HeAacV2Api
     {
         private readonly IHeAacV2ApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the HeAacV2Api class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public HeAacV2Api(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IHeAacV2ApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.HeAacV2
         /// </summary>
         public static BitmovinApiBuilder<HeAacV2Api> Builder => new BitmovinApiBuilder<HeAacV2Api>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.HeAacV2
             Task<Models.PaginationResponse<Models.HeAacV2AudioConfiguration>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

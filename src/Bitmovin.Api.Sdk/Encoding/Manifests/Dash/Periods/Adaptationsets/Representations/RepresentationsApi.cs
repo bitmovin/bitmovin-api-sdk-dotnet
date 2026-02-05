@@ -17,10 +17,17 @@ using Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Representa
 
 namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Representations
 {
+    /// <summary>
+    /// API for RepresentationsApi
+    /// </summary>
     public class RepresentationsApi
     {
         private readonly IRepresentationsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the RepresentationsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public RepresentationsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IRepresentationsApiClient>();
@@ -41,15 +48,45 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Repres
         /// </summary>
         public static BitmovinApiBuilder<RepresentationsApi> Builder => new BitmovinApiBuilder<RepresentationsApi>();
 
+        /// <summary>
+        /// Gets the Type API
+        /// </summary>
         public TypeApi Type { get; }
+        /// <summary>
+        /// Gets the Vtt API
+        /// </summary>
         public VttApi Vtt { get; }
+        /// <summary>
+        /// Gets the Imsc API
+        /// </summary>
         public ImscApi Imsc { get; }
+        /// <summary>
+        /// Gets the Sprite API
+        /// </summary>
         public SpriteApi Sprite { get; }
+        /// <summary>
+        /// Gets the Fmp4 API
+        /// </summary>
         public Fmp4Api Fmp4 { get; }
+        /// <summary>
+        /// Gets the ChunkedText API
+        /// </summary>
         public ChunkedTextApi ChunkedText { get; }
+        /// <summary>
+        /// Gets the Cmaf API
+        /// </summary>
         public CmafApi Cmaf { get; }
+        /// <summary>
+        /// Gets the Mp4 API
+        /// </summary>
         public Mp4Api Mp4 { get; }
+        /// <summary>
+        /// Gets the Webm API
+        /// </summary>
         public WebmApi Webm { get; }
+        /// <summary>
+        /// Gets the ProgressiveWebm API
+        /// </summary>
         public ProgressiveWebmApi ProgressiveWebm { get; }
 
         /// <summary>
@@ -78,6 +115,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Repres
             Task<Models.PaginationResponse<Models.DashRepresentation>> ListAsync([Path("manifest_id")] string manifestId, [Path("period_id")] string periodId, [Path("adaptationset_id")] string adaptationsetId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

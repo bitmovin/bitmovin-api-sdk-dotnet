@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live.Heartbeat
 {
+    /// <summary>
+    /// API for HeartbeatApi
+    /// </summary>
     public class HeartbeatApi
     {
         private readonly IHeartbeatApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the HeartbeatApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public HeartbeatApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IHeartbeatApiClient>();

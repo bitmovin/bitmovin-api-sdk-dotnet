@@ -9,10 +9,17 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveWav.Information;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveWav
 {
+    /// <summary>
+    /// API for ProgressiveWavApi
+    /// </summary>
     public class ProgressiveWavApi
     {
         private readonly IProgressiveWavApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the ProgressiveWavApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public ProgressiveWavApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IProgressiveWavApiClient>();
@@ -25,7 +32,13 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveWav
         /// </summary>
         public static BitmovinApiBuilder<ProgressiveWavApi> Builder => new BitmovinApiBuilder<ProgressiveWavApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
+        /// <summary>
+        /// Gets the Information API
+        /// </summary>
         public InformationApi Information { get; }
 
         /// <summary>
@@ -94,6 +107,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveWav
             Task<Models.PaginationResponse<Models.ProgressiveWavMuxing>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

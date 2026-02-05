@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class DenoiseHqdn3dFilter : Filter
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "DENOISE_HQDN3D";
+#pragma warning restore CS0414
 
         /// <summary>
         /// A non-negative floating point number which specifies spatial luma strength. It defaults to 4.0.

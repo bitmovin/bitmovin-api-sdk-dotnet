@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Filters.DenoiseHqdn3d.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Filters.DenoiseHqdn3d
 {
+    /// <summary>
+    /// API for DenoiseHqdn3dApi
+    /// </summary>
     public class DenoiseHqdn3dApi
     {
         private readonly IDenoiseHqdn3dApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the DenoiseHqdn3dApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public DenoiseHqdn3dApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IDenoiseHqdn3dApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.DenoiseHqdn3d
         /// </summary>
         public static BitmovinApiBuilder<DenoiseHqdn3dApi> Builder => new BitmovinApiBuilder<DenoiseHqdn3dApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.DenoiseHqdn3d
             Task<Models.PaginationResponse<Models.DenoiseHqdn3dFilter>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

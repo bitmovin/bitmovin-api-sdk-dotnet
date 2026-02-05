@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class LocalInput : Input
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "LOCAL";
+#pragma warning restore CS0414
 
         /// <summary>
         /// Path to your local storage (required)

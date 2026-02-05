@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.AiSceneAnalysis.Analyses.ByEncodingId.Details.Language;
 
 namespace Bitmovin.Api.Sdk.AiSceneAnalysis.Analyses.ByEncodingId.Details
 {
+    /// <summary>
+    /// API for DetailsApi
+    /// </summary>
     public class DetailsApi
     {
         private readonly IDetailsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the DetailsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public DetailsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IDetailsApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.AiSceneAnalysis.Analyses.ByEncodingId.Details
         /// </summary>
         public static BitmovinApiBuilder<DetailsApi> Builder => new BitmovinApiBuilder<DetailsApi>();
 
+        /// <summary>
+        /// Gets the Language API
+        /// </summary>
         public LanguageApi Language { get; }
 
         /// <summary>

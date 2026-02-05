@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class ZixiInput : Input
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "ZIXI";
+#pragma warning restore CS0414
 
         /// <summary>
         /// Host

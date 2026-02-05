@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Configurations.Audio.DolbyDigital.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.DolbyDigital
 {
+    /// <summary>
+    /// API for DolbyDigitalApi
+    /// </summary>
     public class DolbyDigitalApi
     {
         private readonly IDolbyDigitalApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the DolbyDigitalApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public DolbyDigitalApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IDolbyDigitalApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.DolbyDigital
         /// </summary>
         public static BitmovinApiBuilder<DolbyDigitalApi> Builder => new BitmovinApiBuilder<DolbyDigitalApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.DolbyDigital
             Task<Models.PaginationResponse<Models.DolbyDigitalAudioConfiguration>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

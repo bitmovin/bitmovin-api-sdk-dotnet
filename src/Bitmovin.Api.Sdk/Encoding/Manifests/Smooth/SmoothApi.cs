@@ -11,10 +11,17 @@ using Bitmovin.Api.Sdk.Encoding.Manifests.Smooth.Contentprotection;
 
 namespace Bitmovin.Api.Sdk.Encoding.Manifests.Smooth
 {
+    /// <summary>
+    /// API for SmoothApi
+    /// </summary>
     public class SmoothApi
     {
         private readonly ISmoothApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the SmoothApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public SmoothApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ISmoothApiClient>();
@@ -29,9 +36,21 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Smooth
         /// </summary>
         public static BitmovinApiBuilder<SmoothApi> Builder => new BitmovinApiBuilder<SmoothApi>();
 
+        /// <summary>
+        /// Gets the Default API
+        /// </summary>
         public DefaultApi Default { get; }
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
+        /// <summary>
+        /// Gets the Representations API
+        /// </summary>
         public RepresentationsApi Representations { get; }
+        /// <summary>
+        /// Gets the Contentprotection API
+        /// </summary>
         public ContentprotectionApi Contentprotection { get; }
 
         /// <summary>
@@ -149,6 +168,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Smooth
             Task<Models.BitmovinResponse> StopAsync([Path("manifest_id")] string manifestId);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

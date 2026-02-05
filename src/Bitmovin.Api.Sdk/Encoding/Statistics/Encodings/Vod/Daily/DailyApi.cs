@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.Vod.Daily
 {
+    /// <summary>
+    /// API for DailyApi
+    /// </summary>
     public class DailyApi
     {
         private readonly IDailyApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the DailyApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public DailyApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IDailyApiClient>();

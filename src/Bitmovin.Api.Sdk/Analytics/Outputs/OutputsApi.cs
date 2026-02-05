@@ -5,8 +5,15 @@ using Bitmovin.Api.Sdk.Analytics.Outputs.GcsServiceAccount;
 
 namespace Bitmovin.Api.Sdk.Analytics.Outputs
 {
+    /// <summary>
+    /// API for OutputsApi
+    /// </summary>
     public class OutputsApi
     {
+        /// <summary>
+        /// Initializes a new instance of the OutputsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public OutputsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             Azure = new AzureApi(apiClientFactory);
@@ -19,8 +26,17 @@ namespace Bitmovin.Api.Sdk.Analytics.Outputs
         /// </summary>
         public static BitmovinApiBuilder<OutputsApi> Builder => new BitmovinApiBuilder<OutputsApi>();
 
+        /// <summary>
+        /// Gets the Azure API
+        /// </summary>
         public AzureApi Azure { get; }
+        /// <summary>
+        /// Gets the S3RoleBased API
+        /// </summary>
         public S3RoleBasedApi S3RoleBased { get; }
+        /// <summary>
+        /// Gets the GcsServiceAccount API
+        /// </summary>
         public GcsServiceAccountApi GcsServiceAccount { get; }
     }
 }

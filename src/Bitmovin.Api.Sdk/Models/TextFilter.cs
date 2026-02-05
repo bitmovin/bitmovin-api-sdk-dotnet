@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class TextFilter : Filter
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "TEXT";
+#pragma warning restore CS0414
 
         /// <summary>
         /// Font

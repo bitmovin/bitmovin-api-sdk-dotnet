@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Live.StreamKeys.Actions
 {
+    /// <summary>
+    /// API for ActionsApi
+    /// </summary>
     public class ActionsApi
     {
         private readonly IActionsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the ActionsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public ActionsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IActionsApiClient>();

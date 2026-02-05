@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Filters.Deinterlace.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Filters.Deinterlace
 {
+    /// <summary>
+    /// API for DeinterlaceApi
+    /// </summary>
     public class DeinterlaceApi
     {
         private readonly IDeinterlaceApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the DeinterlaceApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public DeinterlaceApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IDeinterlaceApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Deinterlace
         /// </summary>
         public static BitmovinApiBuilder<DeinterlaceApi> Builder => new BitmovinApiBuilder<DeinterlaceApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Deinterlace
             Task<Models.PaginationResponse<Models.DeinterlaceFilter>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

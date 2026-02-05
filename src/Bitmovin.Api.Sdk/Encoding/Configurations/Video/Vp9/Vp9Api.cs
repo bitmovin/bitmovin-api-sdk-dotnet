@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Configurations.Video.Vp9.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Configurations.Video.Vp9
 {
+    /// <summary>
+    /// API for Vp9Api
+    /// </summary>
     public class Vp9Api
     {
         private readonly IVp9ApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the Vp9Api class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public Vp9Api(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IVp9ApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Video.Vp9
         /// </summary>
         public static BitmovinApiBuilder<Vp9Api> Builder => new BitmovinApiBuilder<Vp9Api>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Video.Vp9
             Task<Models.PaginationResponse<Models.Vp9VideoConfiguration>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

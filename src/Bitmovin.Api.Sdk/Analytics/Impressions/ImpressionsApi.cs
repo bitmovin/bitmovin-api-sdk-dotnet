@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Analytics.Impressions.Errors;
 
 namespace Bitmovin.Api.Sdk.Analytics.Impressions
 {
+    /// <summary>
+    /// API for ImpressionsApi
+    /// </summary>
     public class ImpressionsApi
     {
         private readonly IImpressionsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the ImpressionsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public ImpressionsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IImpressionsApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Analytics.Impressions
         /// </summary>
         public static BitmovinApiBuilder<ImpressionsApi> Builder => new BitmovinApiBuilder<ImpressionsApi>();
 
+        /// <summary>
+        /// Gets the Errors API
+        /// </summary>
         public ErrorsApi Errors { get; }
 
         /// <summary>

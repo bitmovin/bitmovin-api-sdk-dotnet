@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class DolbyDigitalPlusAudioConfiguration : AudioConfiguration
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "DDPLUS";
+#pragma warning restore CS0414
 
         /// <summary>
         /// BitstreamInfo defines metadata parameters contained in the Dolby Digital Plus audio bitstream

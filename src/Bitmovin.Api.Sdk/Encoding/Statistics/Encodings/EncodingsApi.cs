@@ -10,10 +10,17 @@ using Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.LiveStatistics;
 
 namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings
 {
+    /// <summary>
+    /// API for EncodingsApi
+    /// </summary>
     public class EncodingsApi
     {
         private readonly IEncodingsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the EncodingsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public EncodingsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IEncodingsApiClient>();
@@ -27,8 +34,17 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings
         /// </summary>
         public static BitmovinApiBuilder<EncodingsApi> Builder => new BitmovinApiBuilder<EncodingsApi>();
 
+        /// <summary>
+        /// Gets the Live API
+        /// </summary>
         public LiveApi Live { get; }
+        /// <summary>
+        /// Gets the Vod API
+        /// </summary>
         public VodApi Vod { get; }
+        /// <summary>
+        /// Gets the LiveStatistics API
+        /// </summary>
         public LiveStatisticsApi LiveStatistics { get; }
 
         /// <summary>

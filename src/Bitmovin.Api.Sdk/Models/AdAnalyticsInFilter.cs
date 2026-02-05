@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class AdAnalyticsInFilter : AdAnalyticsAbstractFilter
     {
         [JsonProperty(PropertyName = "operator")]
+#pragma warning disable CS0414
         private readonly string _operator = "IN";
+#pragma warning restore CS0414
 
         /// <summary>
         /// Value

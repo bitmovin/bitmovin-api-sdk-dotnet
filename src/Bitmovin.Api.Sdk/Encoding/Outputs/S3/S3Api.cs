@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Outputs.S3.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Outputs.S3
 {
+    /// <summary>
+    /// API for S3Api
+    /// </summary>
     public class S3Api
     {
         private readonly IS3ApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the S3Api class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public S3Api(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IS3ApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.S3
         /// </summary>
         public static BitmovinApiBuilder<S3Api> Builder => new BitmovinApiBuilder<S3Api>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.S3
             Task<Models.PaginationResponse<Models.S3Output>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

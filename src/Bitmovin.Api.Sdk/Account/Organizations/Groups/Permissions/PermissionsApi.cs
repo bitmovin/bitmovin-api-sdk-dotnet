@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Account.Organizations.Groups.Permissions
 {
+    /// <summary>
+    /// API for PermissionsApi
+    /// </summary>
     public class PermissionsApi
     {
         private readonly IPermissionsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the PermissionsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public PermissionsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IPermissionsApiClient>();

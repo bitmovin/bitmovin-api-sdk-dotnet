@@ -10,10 +10,17 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4
 {
+    /// <summary>
+    /// API for Mp4Api
+    /// </summary>
     public class Mp4Api
     {
         private readonly IMp4ApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the Mp4Api class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public Mp4Api(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IMp4ApiClient>();
@@ -27,8 +34,17 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4
         /// </summary>
         public static BitmovinApiBuilder<Mp4Api> Builder => new BitmovinApiBuilder<Mp4Api>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
+        /// <summary>
+        /// Gets the Information API
+        /// </summary>
         public InformationApi Information { get; }
+        /// <summary>
+        /// Gets the Drm API
+        /// </summary>
         public DrmApi Drm { get; }
 
         /// <summary>
@@ -97,6 +113,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4
             Task<Models.PaginationResponse<Models.Mp4Muxing>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

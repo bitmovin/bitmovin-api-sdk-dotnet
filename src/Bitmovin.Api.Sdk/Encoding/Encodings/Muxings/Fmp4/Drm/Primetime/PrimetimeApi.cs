@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm.Primetime.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm.Primetime
 {
+    /// <summary>
+    /// API for PrimetimeApi
+    /// </summary>
     public class PrimetimeApi
     {
         private readonly IPrimetimeApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the PrimetimeApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public PrimetimeApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IPrimetimeApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm.Primetime
         /// </summary>
         public static BitmovinApiBuilder<PrimetimeApi> Builder => new BitmovinApiBuilder<PrimetimeApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -95,6 +105,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm.Primetime
             Task<Models.PaginationResponse<Models.PrimeTimeDrm>> ListAsync([Path("encoding_id")] string encodingId, [Path("muxing_id")] string muxingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Id3.FrameId.Cust
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Id3.FrameId
 {
+    /// <summary>
+    /// API for FrameIdApi
+    /// </summary>
     public class FrameIdApi
     {
         private readonly IFrameIdApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the FrameIdApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public FrameIdApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IFrameIdApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Id3.FrameId
         /// </summary>
         public static BitmovinApiBuilder<FrameIdApi> Builder => new BitmovinApiBuilder<FrameIdApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -95,6 +105,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Id3.FrameId
             Task<Models.PaginationResponse<Models.FrameIdId3Tag>> ListAsync([Path("encoding_id")] string encodingId, [Path("muxing_id")] string muxingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

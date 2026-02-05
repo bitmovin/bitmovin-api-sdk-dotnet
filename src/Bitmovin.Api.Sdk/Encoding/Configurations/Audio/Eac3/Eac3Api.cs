@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Eac3.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Eac3
 {
+    /// <summary>
+    /// API for Eac3Api
+    /// </summary>
     public class Eac3Api
     {
         private readonly IEac3ApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the Eac3Api class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public Eac3Api(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IEac3ApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Eac3
         /// </summary>
         public static BitmovinApiBuilder<Eac3Api> Builder => new BitmovinApiBuilder<Eac3Api>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Eac3
             Task<Models.PaginationResponse<Models.Eac3AudioConfiguration>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

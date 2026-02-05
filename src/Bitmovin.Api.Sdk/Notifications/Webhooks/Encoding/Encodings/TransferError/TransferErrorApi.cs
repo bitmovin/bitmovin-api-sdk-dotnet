@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.TransferError.C
 
 namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.TransferError
 {
+    /// <summary>
+    /// API for TransferErrorApi
+    /// </summary>
     public class TransferErrorApi
     {
         private readonly ITransferErrorApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the TransferErrorApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public TransferErrorApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ITransferErrorApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.TransferErr
         /// </summary>
         public static BitmovinApiBuilder<TransferErrorApi> Builder => new BitmovinApiBuilder<TransferErrorApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -150,6 +160,9 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.TransferErr
             Task<Models.PaginationResponse<Models.Webhook>> ListByEncodingIdAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>
@@ -173,6 +186,9 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.TransferErr
             }
         }
 
+        /// <summary>
+        /// Query parameters for ListByEncodingId
+        /// </summary>
         public class ListByEncodingIdQueryParams : Dictionary<string,Object>
         {
             /// <summary>

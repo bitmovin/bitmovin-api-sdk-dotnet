@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Configurations.Video.H264.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Configurations.Video.H264
 {
+    /// <summary>
+    /// API for H264Api
+    /// </summary>
     public class H264Api
     {
         private readonly IH264ApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the H264Api class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public H264Api(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IH264ApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Video.H264
         /// </summary>
         public static BitmovinApiBuilder<H264Api> Builder => new BitmovinApiBuilder<H264Api>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Video.H264
             Task<Models.PaginationResponse<Models.H264VideoConfiguration>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

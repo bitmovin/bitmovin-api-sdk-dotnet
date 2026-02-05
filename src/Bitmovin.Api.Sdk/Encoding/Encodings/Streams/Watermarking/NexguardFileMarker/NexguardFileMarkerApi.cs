@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Watermarking.NexguardFileMarke
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Watermarking.NexguardFileMarker
 {
+    /// <summary>
+    /// API for NexguardFileMarkerApi
+    /// </summary>
     public class NexguardFileMarkerApi
     {
         private readonly INexguardFileMarkerApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the NexguardFileMarkerApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public NexguardFileMarkerApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<INexguardFileMarkerApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Watermarking.NexguardFileM
         /// </summary>
         public static BitmovinApiBuilder<NexguardFileMarkerApi> Builder => new BitmovinApiBuilder<NexguardFileMarkerApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -95,6 +105,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Watermarking.NexguardFileM
             Task<Models.PaginationResponse<Models.NexGuardFileMarker>> ListAsync([Path("encoding_id")] string encodingId, [Path("stream_id")] string streamId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

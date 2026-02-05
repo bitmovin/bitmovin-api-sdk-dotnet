@@ -9,10 +9,17 @@ using Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.Live.Options;
 
 namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.Live
 {
+    /// <summary>
+    /// API for LiveApi
+    /// </summary>
     public class LiveApi
     {
         private readonly ILiveApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the LiveApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public LiveApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ILiveApiClient>();
@@ -25,7 +32,13 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.Live
         /// </summary>
         public static BitmovinApiBuilder<LiveApi> Builder => new BitmovinApiBuilder<LiveApi>();
 
+        /// <summary>
+        /// Gets the Daily API
+        /// </summary>
         public DailyApi Daily { get; }
+        /// <summary>
+        /// Gets the Options API
+        /// </summary>
         public OptionsApi Options { get; }
 
         /// <summary>
@@ -73,6 +86,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.Live
             Task<Models.PaginationResponse<Models.EncodingStatisticsLive>> ListByDateRangeAsync([Path("from", Format = "yyyy-MM-dd")] DateTime? from, [Path("to", Format = "yyyy-MM-dd")] DateTime? to, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>
@@ -96,6 +112,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.Live
             }
         }
 
+        /// <summary>
+        /// Query parameters for ListByDateRange
+        /// </summary>
         public class ListByDateRangeQueryParams : Dictionary<string,Object>
         {
             /// <summary>

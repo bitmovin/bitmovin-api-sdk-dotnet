@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class TsMuxing : Muxing
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "TS";
+#pragma warning restore CS0414
 
         /// <summary>
         /// Length of the fragments in seconds

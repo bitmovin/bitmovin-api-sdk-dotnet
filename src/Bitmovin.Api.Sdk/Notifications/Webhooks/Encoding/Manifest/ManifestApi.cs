@@ -9,10 +9,17 @@ using Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Manifest.Finished;
 
 namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Manifest
 {
+    /// <summary>
+    /// API for ManifestApi
+    /// </summary>
     public class ManifestApi
     {
         private readonly IManifestApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the ManifestApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public ManifestApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IManifestApiClient>();
@@ -25,7 +32,13 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Manifest
         /// </summary>
         public static BitmovinApiBuilder<ManifestApi> Builder => new BitmovinApiBuilder<ManifestApi>();
 
+        /// <summary>
+        /// Gets the Error API
+        /// </summary>
         public ErrorApi Error { get; }
+        /// <summary>
+        /// Gets the Finished API
+        /// </summary>
         public FinishedApi Finished { get; }
 
         /// <summary>
@@ -52,6 +65,9 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Manifest
             Task<Models.PaginationResponse<Models.Notification>> ListAsync([Path("manifest_id")] string manifestId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

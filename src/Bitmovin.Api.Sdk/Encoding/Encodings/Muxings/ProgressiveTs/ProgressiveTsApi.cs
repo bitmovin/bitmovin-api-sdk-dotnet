@@ -11,10 +11,17 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Drm;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs
 {
+    /// <summary>
+    /// API for ProgressiveTsApi
+    /// </summary>
     public class ProgressiveTsApi
     {
         private readonly IProgressiveTsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the ProgressiveTsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public ProgressiveTsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IProgressiveTsApiClient>();
@@ -29,9 +36,21 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs
         /// </summary>
         public static BitmovinApiBuilder<ProgressiveTsApi> Builder => new BitmovinApiBuilder<ProgressiveTsApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
+        /// <summary>
+        /// Gets the Information API
+        /// </summary>
         public InformationApi Information { get; }
+        /// <summary>
+        /// Gets the Id3 API
+        /// </summary>
         public Id3Api Id3 { get; }
+        /// <summary>
+        /// Gets the Drm API
+        /// </summary>
         public DrmApi Drm { get; }
 
         /// <summary>
@@ -100,6 +119,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs
             Task<Models.PaginationResponse<Models.ProgressiveTsMuxing>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

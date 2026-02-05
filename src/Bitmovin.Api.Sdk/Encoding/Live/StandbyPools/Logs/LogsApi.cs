@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Live.StandbyPools.Logs
 {
+    /// <summary>
+    /// API for LogsApi
+    /// </summary>
     public class LogsApi
     {
         private readonly ILogsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the LogsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public LogsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ILogsApiClient>();
@@ -45,6 +52,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Live.StandbyPools.Logs
             Task<Models.PaginationResponse<Models.LiveStandbyPoolEventLog>> ListAsync([Path("pool_id")] string poolId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

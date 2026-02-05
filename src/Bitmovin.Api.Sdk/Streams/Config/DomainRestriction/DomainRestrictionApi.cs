@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Streams.Config.DomainRestriction
 {
+    /// <summary>
+    /// API for DomainRestrictionApi
+    /// </summary>
     public class DomainRestrictionApi
     {
         private readonly IDomainRestrictionApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the DomainRestrictionApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public DomainRestrictionApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IDomainRestrictionApiClient>();
@@ -76,7 +83,7 @@ namespace Bitmovin.Api.Sdk.Streams.Config.DomainRestriction
 
         internal interface IDomainRestrictionApiClient
         {
-            [Post("/streams/config/domain-restriction/")]
+            [Post("/streams/config/domain-restriction")]
             [AllowAnyStatusCode]
             Task<Models.StreamsDomainRestrictionResponse> CreateAsync([Body] Models.StreamsDomainRestrictionCreateRequest streamsDomainRestrictionCreateRequest);
 
@@ -88,7 +95,7 @@ namespace Bitmovin.Api.Sdk.Streams.Config.DomainRestriction
             [AllowAnyStatusCode]
             Task<Models.StreamsDomainRestrictionResponse> GetAsync([Path("domain_restriction_id")] string domainRestrictionId);
 
-            [Get("/streams/config/domain-restriction/")]
+            [Get("/streams/config/domain-restriction")]
             [AllowAnyStatusCode]
             Task<Models.PaginationResponse<Models.StreamsDomainRestrictionResponse>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
 
@@ -97,6 +104,9 @@ namespace Bitmovin.Api.Sdk.Streams.Config.DomainRestriction
             Task<Models.StreamsDomainRestrictionResponse> PatchStreamsDomainRestrictionAsync([Path("domain_restriction_id")] string domainRestrictionId, [Body] Models.StreamsDomainRestrictionUpdateRequest streamsDomainRestrictionUpdateRequest);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Representa
 
 namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Representations.Mp4
 {
+    /// <summary>
+    /// API for Mp4Api
+    /// </summary>
     public class Mp4Api
     {
         private readonly IMp4ApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the Mp4Api class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public Mp4Api(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IMp4ApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Repres
         /// </summary>
         public static BitmovinApiBuilder<Mp4Api> Builder => new BitmovinApiBuilder<Mp4Api>();
 
+        /// <summary>
+        /// Gets the Drm API
+        /// </summary>
         public DrmApi Drm { get; }
 
         /// <summary>
@@ -99,6 +109,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Repres
             Task<Models.PaginationResponse<Models.DashMp4Representation>> ListAsync([Path("manifest_id")] string manifestId, [Path("period_id")] string periodId, [Path("adaptationset_id")] string adaptationsetId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

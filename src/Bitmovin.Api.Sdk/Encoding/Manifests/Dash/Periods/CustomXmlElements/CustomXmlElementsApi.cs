@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.CustomXmlElements
 {
+    /// <summary>
+    /// API for CustomXmlElementsApi
+    /// </summary>
     public class CustomXmlElementsApi
     {
         private readonly ICustomXmlElementsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the CustomXmlElementsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public CustomXmlElementsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ICustomXmlElementsApiClient>();
@@ -91,6 +98,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.CustomXmlElements
             Task<Models.PaginationResponse<Models.CustomXmlElement>> ListAsync([Path("manifest_id")] string manifestId, [Path("period_id")] string periodId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

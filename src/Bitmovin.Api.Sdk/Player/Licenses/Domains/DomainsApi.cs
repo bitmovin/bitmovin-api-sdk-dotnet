@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Player.Licenses.Domains
 {
+    /// <summary>
+    /// API for DomainsApi
+    /// </summary>
     public class DomainsApi
     {
         private readonly IDomainsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the DomainsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public DomainsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IDomainsApiClient>();

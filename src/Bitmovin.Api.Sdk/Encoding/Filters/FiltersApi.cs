@@ -24,10 +24,17 @@ using Bitmovin.Api.Sdk.Encoding.Filters.Scale;
 
 namespace Bitmovin.Api.Sdk.Encoding.Filters
 {
+    /// <summary>
+    /// API for FiltersApi
+    /// </summary>
     public class FiltersApi
     {
         private readonly IFiltersApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the FiltersApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public FiltersApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IFiltersApiClient>();
@@ -55,22 +62,73 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters
         /// </summary>
         public static BitmovinApiBuilder<FiltersApi> Builder => new BitmovinApiBuilder<FiltersApi>();
 
+        /// <summary>
+        /// Gets the Type API
+        /// </summary>
         public TypeApi Type { get; }
+        /// <summary>
+        /// Gets the Conform API
+        /// </summary>
         public ConformApi Conform { get; }
+        /// <summary>
+        /// Gets the Watermark API
+        /// </summary>
         public WatermarkApi Watermark { get; }
+        /// <summary>
+        /// Gets the AudioVolume API
+        /// </summary>
         public AudioVolumeApi AudioVolume { get; }
+        /// <summary>
+        /// Gets the AzureSpeechToCaptions API
+        /// </summary>
         public AzureSpeechToCaptionsApi AzureSpeechToCaptions { get; }
+        /// <summary>
+        /// Gets the EnhancedWatermark API
+        /// </summary>
         public EnhancedWatermarkApi EnhancedWatermark { get; }
+        /// <summary>
+        /// Gets the Crop API
+        /// </summary>
         public CropApi Crop { get; }
+        /// <summary>
+        /// Gets the Rotate API
+        /// </summary>
         public RotateApi Rotate { get; }
+        /// <summary>
+        /// Gets the Deinterlace API
+        /// </summary>
         public DeinterlaceApi Deinterlace { get; }
+        /// <summary>
+        /// Gets the EnhancedDeinterlace API
+        /// </summary>
         public EnhancedDeinterlaceApi EnhancedDeinterlace { get; }
+        /// <summary>
+        /// Gets the AudioMix API
+        /// </summary>
         public AudioMixApi AudioMix { get; }
+        /// <summary>
+        /// Gets the DenoiseHqdn3d API
+        /// </summary>
         public DenoiseHqdn3dApi DenoiseHqdn3d { get; }
+        /// <summary>
+        /// Gets the EbuR128SinglePass API
+        /// </summary>
         public EbuR128SinglePassApi EbuR128SinglePass { get; }
+        /// <summary>
+        /// Gets the Text API
+        /// </summary>
         public TextApi Text { get; }
+        /// <summary>
+        /// Gets the Interlace API
+        /// </summary>
         public InterlaceApi Interlace { get; }
+        /// <summary>
+        /// Gets the Unsharp API
+        /// </summary>
         public UnsharpApi Unsharp { get; }
+        /// <summary>
+        /// Gets the Scale API
+        /// </summary>
         public ScaleApi Scale { get; }
 
         /// <summary>
@@ -109,6 +167,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters
             Task<Models.PaginationResponse<Models.Filter>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

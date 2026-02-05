@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Audio
 {
+    /// <summary>
+    /// API for AudioApi
+    /// </summary>
     public class AudioApi
     {
         private readonly IAudioApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the AudioApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public AudioApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IAudioApiClient>();
@@ -91,6 +98,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Audio
             Task<Models.PaginationResponse<Models.AudioAdaptationSet>> ListAsync([Path("manifest_id")] string manifestId, [Path("period_id")] string periodId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

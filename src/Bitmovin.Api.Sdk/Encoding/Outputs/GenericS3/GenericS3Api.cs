@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Outputs.GenericS3.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Outputs.GenericS3
 {
+    /// <summary>
+    /// API for GenericS3Api
+    /// </summary>
     public class GenericS3Api
     {
         private readonly IGenericS3ApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the GenericS3Api class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public GenericS3Api(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IGenericS3ApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.GenericS3
         /// </summary>
         public static BitmovinApiBuilder<GenericS3Api> Builder => new BitmovinApiBuilder<GenericS3Api>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.GenericS3
             Task<Models.PaginationResponse<Models.GenericS3Output>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

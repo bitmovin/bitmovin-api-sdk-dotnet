@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Configurations.Subtitles.DvbSubtitle.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Configurations.Subtitles.DvbSubtitle
 {
+    /// <summary>
+    /// API for DvbSubtitleApi
+    /// </summary>
     public class DvbSubtitleApi
     {
         private readonly IDvbSubtitleApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the DvbSubtitleApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public DvbSubtitleApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IDvbSubtitleApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Subtitles.DvbSubtitle
         /// </summary>
         public static BitmovinApiBuilder<DvbSubtitleApi> Builder => new BitmovinApiBuilder<DvbSubtitleApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Subtitles.DvbSubtitle
             Task<Models.PaginationResponse<Models.DvbSubtitleConfiguration>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

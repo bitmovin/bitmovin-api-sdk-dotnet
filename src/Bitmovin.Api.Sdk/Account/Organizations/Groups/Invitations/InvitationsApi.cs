@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Account.Organizations.Groups.Invitations
 {
+    /// <summary>
+    /// API for InvitationsApi
+    /// </summary>
     public class InvitationsApi
     {
         private readonly IInvitationsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the InvitationsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public InvitationsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IInvitationsApiClient>();
@@ -91,6 +98,9 @@ namespace Bitmovin.Api.Sdk.Account.Organizations.Groups.Invitations
             Task<Models.PaginationResponse<Models.Invitation>> ListAsync([Path("organization_id")] string organizationId, [Path("group_id")] string groupId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

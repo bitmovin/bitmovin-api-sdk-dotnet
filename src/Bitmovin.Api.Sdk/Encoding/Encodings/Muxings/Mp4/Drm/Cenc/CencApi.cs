@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Cenc.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Cenc
 {
+    /// <summary>
+    /// API for CencApi
+    /// </summary>
     public class CencApi
     {
         private readonly ICencApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the CencApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public CencApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ICencApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Cenc
         /// </summary>
         public static BitmovinApiBuilder<CencApi> Builder => new BitmovinApiBuilder<CencApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -95,6 +105,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Cenc
             Task<Models.PaginationResponse<Models.CencDrm>> ListAsync([Path("encoding_id")] string encodingId, [Path("muxing_id")] string muxingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

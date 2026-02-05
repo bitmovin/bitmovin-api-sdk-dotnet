@@ -9,10 +9,17 @@ using Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Representa
 
 namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Representations.Fmp4
 {
+    /// <summary>
+    /// API for Fmp4Api
+    /// </summary>
     public class Fmp4Api
     {
         private readonly IFmp4ApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the Fmp4Api class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public Fmp4Api(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IFmp4ApiClient>();
@@ -25,7 +32,13 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Repres
         /// </summary>
         public static BitmovinApiBuilder<Fmp4Api> Builder => new BitmovinApiBuilder<Fmp4Api>();
 
+        /// <summary>
+        /// Gets the Drm API
+        /// </summary>
         public DrmApi Drm { get; }
+        /// <summary>
+        /// Gets the Contentprotection API
+        /// </summary>
         public ContentprotectionApi Contentprotection { get; }
 
         /// <summary>
@@ -102,6 +115,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Repres
             Task<Models.PaginationResponse<Models.DashFmp4Representation>> ListAsync([Path("manifest_id")] string manifestId, [Path("period_id")] string periodId, [Path("adaptationset_id")] string adaptationsetId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

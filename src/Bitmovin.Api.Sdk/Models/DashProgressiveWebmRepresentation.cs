@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class DashProgressiveWebmRepresentation : DashMuxingRepresentation
     {
         [JsonProperty(PropertyName = "typeDiscriminator")]
+#pragma warning disable CS0414
         private readonly string _typeDiscriminator = "PROGRESSIVE_WEBM";
+#pragma warning restore CS0414
 
         /// <summary>
         /// Path to the Progressive WebM file (required)

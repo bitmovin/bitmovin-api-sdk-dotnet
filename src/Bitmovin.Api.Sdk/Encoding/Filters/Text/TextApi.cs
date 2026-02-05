@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Filters.Text.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Filters.Text
 {
+    /// <summary>
+    /// API for TextApi
+    /// </summary>
     public class TextApi
     {
         private readonly ITextApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the TextApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public TextApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ITextApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Text
         /// </summary>
         public static BitmovinApiBuilder<TextApi> Builder => new BitmovinApiBuilder<TextApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Text
             Task<Models.PaginationResponse<Models.TextFilter>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

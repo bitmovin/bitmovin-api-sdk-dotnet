@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Inputs.Azure.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Inputs.Azure
 {
+    /// <summary>
+    /// API for AzureApi
+    /// </summary>
     public class AzureApi
     {
         private readonly IAzureApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the AzureApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public AzureApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IAzureApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Azure
         /// </summary>
         public static BitmovinApiBuilder<AzureApi> Builder => new BitmovinApiBuilder<AzureApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Azure
             Task<Models.PaginationResponse<Models.AzureInput>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class DashImscRepresentation : DashRepresentation
     {
         [JsonProperty(PropertyName = "typeDiscriminator")]
+#pragma warning disable CS0414
         private readonly string _typeDiscriminator = "IMSC";
+#pragma warning restore CS0414
 
         /// <summary>
         /// URL of the referenced IMSC file (required)

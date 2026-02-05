@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Notifications.Emails.Encoding.Encodings.Error
 {
+    /// <summary>
+    /// API for ErrorApi
+    /// </summary>
     public class ErrorApi
     {
         private readonly IErrorApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the ErrorApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public ErrorApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IErrorApiClient>();

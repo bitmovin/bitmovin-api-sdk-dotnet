@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Playready.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Playready
 {
+    /// <summary>
+    /// API for PlayreadyApi
+    /// </summary>
     public class PlayreadyApi
     {
         private readonly IPlayreadyApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the PlayreadyApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public PlayreadyApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IPlayreadyApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Playready
         /// </summary>
         public static BitmovinApiBuilder<PlayreadyApi> Builder => new BitmovinApiBuilder<PlayreadyApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -95,6 +105,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Playready
             Task<Models.PaginationResponse<Models.PlayReadyDrm>> ListAsync([Path("encoding_id")] string encodingId, [Path("muxing_id")] string muxingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

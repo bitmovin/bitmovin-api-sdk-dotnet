@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class PackedAudioMuxing : Muxing
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "PACKED_AUDIO";
+#pragma warning restore CS0414
 
         /// <summary>
         /// Duration of a segment, given in seconds (required)

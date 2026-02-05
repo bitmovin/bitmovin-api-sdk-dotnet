@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class FtpOutput : Output
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "FTP";
+#pragma warning restore CS0414
 
         /// <summary>
         /// Host URL or IP of the FTP server (required)

@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Filters.Interlace.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Filters.Interlace
 {
+    /// <summary>
+    /// API for InterlaceApi
+    /// </summary>
     public class InterlaceApi
     {
         private readonly IInterlaceApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the InterlaceApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public InterlaceApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IInterlaceApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Interlace
         /// </summary>
         public static BitmovinApiBuilder<InterlaceApi> Builder => new BitmovinApiBuilder<InterlaceApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Interlace
             Task<Models.PaginationResponse<Models.InterlaceFilter>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Outputs.Cdn
 {
+    /// <summary>
+    /// API for CdnApi
+    /// </summary>
     public class CdnApi
     {
         private readonly ICdnApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the CdnApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public CdnApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ICdnApiClient>();
@@ -57,6 +64,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.Cdn
             Task<Models.PaginationResponse<Models.CdnOutput>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live.InsertableContent.Stop
 {
+    /// <summary>
+    /// API for StopApi
+    /// </summary>
     public class StopApi
     {
         private readonly IStopApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the StopApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public StopApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IStopApiClient>();

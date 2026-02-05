@@ -86,5 +86,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "shots")]
         public List<Shot> Shots { get; set; } = new List<Shot>();
+
+        /// <summary>
+        /// AdOpportunityInformation
+        /// </summary>
+        [JsonProperty(PropertyName = "adOpportunityInformation")]
+        public AdOpportunity AdOpportunityInformation { get; set; }
     }
 }

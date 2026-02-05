@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class AsperaInput : Input
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "ASPERA";
+#pragma warning restore CS0414
 
         /// <summary>
         /// Minimal download bandwidth. Examples: 100k, 100m, 100g

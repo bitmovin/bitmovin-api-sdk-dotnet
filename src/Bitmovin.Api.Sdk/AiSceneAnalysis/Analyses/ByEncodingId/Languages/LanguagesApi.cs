@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.AiSceneAnalysis.Analyses.ByEncodingId.Languages
 {
+    /// <summary>
+    /// API for LanguagesApi
+    /// </summary>
     public class LanguagesApi
     {
         private readonly ILanguagesApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the LanguagesApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public LanguagesApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ILanguagesApiClient>();

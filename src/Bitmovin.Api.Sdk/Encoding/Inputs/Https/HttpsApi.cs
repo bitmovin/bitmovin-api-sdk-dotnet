@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Inputs.Https.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Inputs.Https
 {
+    /// <summary>
+    /// API for HttpsApi
+    /// </summary>
     public class HttpsApi
     {
         private readonly IHttpsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the HttpsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public HttpsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IHttpsApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Https
         /// </summary>
         public static BitmovinApiBuilder<HttpsApi> Builder => new BitmovinApiBuilder<HttpsApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Https
             Task<Models.PaginationResponse<Models.HttpsInput>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

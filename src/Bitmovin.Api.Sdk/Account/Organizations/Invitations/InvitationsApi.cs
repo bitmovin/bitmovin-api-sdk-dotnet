@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Account.Organizations.Invitations
 {
+    /// <summary>
+    /// API for InvitationsApi
+    /// </summary>
     public class InvitationsApi
     {
         private readonly IInvitationsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the InvitationsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public InvitationsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IInvitationsApiClient>();

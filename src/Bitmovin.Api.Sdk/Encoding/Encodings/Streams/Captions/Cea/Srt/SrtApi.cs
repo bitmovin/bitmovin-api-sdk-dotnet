@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Captions.Cea.Srt.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Captions.Cea.Srt
 {
+    /// <summary>
+    /// API for SrtApi
+    /// </summary>
     public class SrtApi
     {
         private readonly ISrtApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the SrtApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public SrtApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ISrtApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Captions.Cea.Srt
         /// </summary>
         public static BitmovinApiBuilder<SrtApi> Builder => new BitmovinApiBuilder<SrtApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -95,6 +105,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Captions.Cea.Srt
             Task<Models.PaginationResponse<Models.SrtToCea608708Caption>> ListAsync([Path("encoding_id")] string encodingId, [Path("stream_id")] string streamId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

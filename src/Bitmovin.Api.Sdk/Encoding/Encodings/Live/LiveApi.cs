@@ -13,10 +13,17 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Live.Scte35Cue;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live
 {
+    /// <summary>
+    /// API for LiveApi
+    /// </summary>
     public class LiveApi
     {
         private readonly ILiveApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the LiveApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public LiveApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ILiveApiClient>();
@@ -33,11 +40,29 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live
         /// </summary>
         public static BitmovinApiBuilder<LiveApi> Builder => new BitmovinApiBuilder<LiveApi>();
 
+        /// <summary>
+        /// Gets the Esam API
+        /// </summary>
         public EsamApi Esam { get; }
+        /// <summary>
+        /// Gets the ResetLiveManifestTimeshift API
+        /// </summary>
         public ResetLiveManifestTimeshiftApi ResetLiveManifestTimeshift { get; }
+        /// <summary>
+        /// Gets the Heartbeat API
+        /// </summary>
         public HeartbeatApi Heartbeat { get; }
+        /// <summary>
+        /// Gets the Hd API
+        /// </summary>
         public HdApi Hd { get; }
+        /// <summary>
+        /// Gets the InsertableContent API
+        /// </summary>
         public InsertableContentApi InsertableContent { get; }
+        /// <summary>
+        /// Gets the Scte35Cue API
+        /// </summary>
         public Scte35CueApi Scte35Cue { get; }
 
         /// <summary>

@@ -10,10 +10,17 @@ using Bitmovin.Api.Sdk.Notifications.Emails;
 
 namespace Bitmovin.Api.Sdk.Notifications
 {
+    /// <summary>
+    /// API for NotificationsApi
+    /// </summary>
     public class NotificationsApi
     {
         private readonly INotificationsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the NotificationsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public NotificationsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<INotificationsApiClient>();
@@ -27,8 +34,17 @@ namespace Bitmovin.Api.Sdk.Notifications
         /// </summary>
         public static BitmovinApiBuilder<NotificationsApi> Builder => new BitmovinApiBuilder<NotificationsApi>();
 
+        /// <summary>
+        /// Gets the Webhooks API
+        /// </summary>
         public WebhooksApi Webhooks { get; }
+        /// <summary>
+        /// Gets the States API
+        /// </summary>
         public StatesApi States { get; }
+        /// <summary>
+        /// Gets the Emails API
+        /// </summary>
         public EmailsApi Emails { get; }
 
         /// <summary>
@@ -127,6 +143,9 @@ namespace Bitmovin.Api.Sdk.Notifications
             Task<Models.BitmovinResponse> UnmuteAsync([Path("notification_id")] string notificationId);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>
@@ -150,6 +169,9 @@ namespace Bitmovin.Api.Sdk.Notifications
             }
         }
 
+        /// <summary>
+        /// Query parameters for ListByNotificationId
+        /// </summary>
         public class ListByNotificationIdQueryParams : Dictionary<string,Object>
         {
             /// <summary>

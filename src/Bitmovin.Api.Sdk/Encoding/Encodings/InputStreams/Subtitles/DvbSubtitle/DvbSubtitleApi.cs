@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Subtitles.DvbSubtitle
 {
+    /// <summary>
+    /// API for DvbSubtitleApi
+    /// </summary>
     public class DvbSubtitleApi
     {
         private readonly IDvbSubtitleApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the DvbSubtitleApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public DvbSubtitleApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IDvbSubtitleApiClient>();
@@ -87,6 +94,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Subtitles.DvbSubtitle
             Task<Models.PaginationResponse<Models.DvbSubtitleInputStream>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

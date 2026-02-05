@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class VideoAdaptationSet : AdaptationSet
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "VIDEO";
+#pragma warning restore CS0414
 
     }
 }

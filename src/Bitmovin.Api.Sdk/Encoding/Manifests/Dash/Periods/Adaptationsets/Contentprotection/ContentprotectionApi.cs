@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Contentprotection
 {
+    /// <summary>
+    /// API for ContentprotectionApi
+    /// </summary>
     public class ContentprotectionApi
     {
         private readonly IContentprotectionApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the ContentprotectionApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public ContentprotectionApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IContentprotectionApiClient>();
@@ -95,6 +102,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Conten
             Task<Models.PaginationResponse<Models.ContentProtection>> ListAsync([Path("manifest_id")] string manifestId, [Path("period_id")] string periodId, [Path("adaptationset_id")] string adaptationsetId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Analytics.Insights.Organizations.Settings
 {
+    /// <summary>
+    /// API for SettingsApi
+    /// </summary>
     public class SettingsApi
     {
         private readonly ISettingsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the SettingsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public SettingsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ISettingsApiClient>();

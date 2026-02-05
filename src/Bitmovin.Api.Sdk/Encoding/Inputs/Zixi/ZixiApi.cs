@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Inputs.Zixi.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Inputs.Zixi
 {
+    /// <summary>
+    /// API for ZixiApi
+    /// </summary>
     public class ZixiApi
     {
         private readonly IZixiApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the ZixiApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public ZixiApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IZixiApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Zixi
         /// </summary>
         public static BitmovinApiBuilder<ZixiApi> Builder => new BitmovinApiBuilder<ZixiApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Zixi
             Task<Models.PaginationResponse<Models.ZixiInput>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

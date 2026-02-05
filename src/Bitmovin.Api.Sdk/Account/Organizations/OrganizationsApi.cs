@@ -11,10 +11,17 @@ using Bitmovin.Api.Sdk.Account.Organizations.Groups;
 
 namespace Bitmovin.Api.Sdk.Account.Organizations
 {
+    /// <summary>
+    /// API for OrganizationsApi
+    /// </summary>
     public class OrganizationsApi
     {
         private readonly IOrganizationsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the OrganizationsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public OrganizationsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IOrganizationsApiClient>();
@@ -29,9 +36,21 @@ namespace Bitmovin.Api.Sdk.Account.Organizations
         /// </summary>
         public static BitmovinApiBuilder<OrganizationsApi> Builder => new BitmovinApiBuilder<OrganizationsApi>();
 
+        /// <summary>
+        /// Gets the SubOrganizations API
+        /// </summary>
         public SubOrganizationsApi SubOrganizations { get; }
+        /// <summary>
+        /// Gets the Tenants API
+        /// </summary>
         public TenantsApi Tenants { get; }
+        /// <summary>
+        /// Gets the Invitations API
+        /// </summary>
         public InvitationsApi Invitations { get; }
+        /// <summary>
+        /// Gets the Groups API
+        /// </summary>
         public GroupsApi Groups { get; }
 
         /// <summary>

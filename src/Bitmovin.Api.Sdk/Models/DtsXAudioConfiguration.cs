@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class DtsXAudioConfiguration : AudioConfiguration
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "DTSX";
+#pragma warning restore CS0414
 
         /// <summary>
         /// ChannelLayout

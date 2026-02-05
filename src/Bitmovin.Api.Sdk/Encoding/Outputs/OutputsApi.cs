@@ -21,10 +21,17 @@ using Bitmovin.Api.Sdk.Encoding.Outputs.Cdn;
 
 namespace Bitmovin.Api.Sdk.Encoding.Outputs
 {
+    /// <summary>
+    /// API for OutputsApi
+    /// </summary>
     public class OutputsApi
     {
         private readonly IOutputsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the OutputsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public OutputsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IOutputsApiClient>();
@@ -49,19 +56,61 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs
         /// </summary>
         public static BitmovinApiBuilder<OutputsApi> Builder => new BitmovinApiBuilder<OutputsApi>();
 
+        /// <summary>
+        /// Gets the Type API
+        /// </summary>
         public TypeApi Type { get; }
+        /// <summary>
+        /// Gets the S3 API
+        /// </summary>
         public S3Api S3 { get; }
+        /// <summary>
+        /// Gets the S3RoleBased API
+        /// </summary>
         public S3RoleBasedApi S3RoleBased { get; }
+        /// <summary>
+        /// Gets the GenericS3 API
+        /// </summary>
         public GenericS3Api GenericS3 { get; }
+        /// <summary>
+        /// Gets the Local API
+        /// </summary>
         public LocalApi Local { get; }
+        /// <summary>
+        /// Gets the Gcs API
+        /// </summary>
         public GcsApi Gcs { get; }
+        /// <summary>
+        /// Gets the GcsServiceAccount API
+        /// </summary>
         public GcsServiceAccountApi GcsServiceAccount { get; }
+        /// <summary>
+        /// Gets the Azure API
+        /// </summary>
         public AzureApi Azure { get; }
+        /// <summary>
+        /// Gets the Ftp API
+        /// </summary>
         public FtpApi Ftp { get; }
+        /// <summary>
+        /// Gets the Sftp API
+        /// </summary>
         public SftpApi Sftp { get; }
+        /// <summary>
+        /// Gets the AkamaiMsl API
+        /// </summary>
         public AkamaiMslApi AkamaiMsl { get; }
+        /// <summary>
+        /// Gets the AkamaiNetstorage API
+        /// </summary>
         public AkamaiNetstorageApi AkamaiNetstorage { get; }
+        /// <summary>
+        /// Gets the LiveMediaIngest API
+        /// </summary>
         public LiveMediaIngestApi LiveMediaIngest { get; }
+        /// <summary>
+        /// Gets the Cdn API
+        /// </summary>
         public CdnApi Cdn { get; }
 
         /// <summary>
@@ -114,6 +163,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs
             Task<Models.PaginationResponse<Models.Output>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

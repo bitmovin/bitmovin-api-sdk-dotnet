@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Player.Licenses.Analytics
 {
+    /// <summary>
+    /// API for AnalyticsApi
+    /// </summary>
     public class AnalyticsApi
     {
         private readonly IAnalyticsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the AnalyticsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public AnalyticsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IAnalyticsApiClient>();

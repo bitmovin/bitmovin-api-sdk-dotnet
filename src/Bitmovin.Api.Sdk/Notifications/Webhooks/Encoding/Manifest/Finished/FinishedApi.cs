@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Manifest.Finished
 {
+    /// <summary>
+    /// API for FinishedApi
+    /// </summary>
     public class FinishedApi
     {
         private readonly IFinishedApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the FinishedApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public FinishedApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IFinishedApiClient>();

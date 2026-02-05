@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class SrtInput : Input
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "SRT";
+#pragma warning restore CS0414
 
         /// <summary>
         /// The SRT mode to use (required)

@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Representations.ChunkedText
 {
+    /// <summary>
+    /// API for ChunkedTextApi
+    /// </summary>
     public class ChunkedTextApi
     {
         private readonly IChunkedTextApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the ChunkedTextApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public ChunkedTextApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IChunkedTextApiClient>();
@@ -95,6 +102,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Repres
             Task<Models.PaginationResponse<Models.DashChunkedTextRepresentation>> ListAsync([Path("manifest_id")] string manifestId, [Path("period_id")] string periodId, [Path("adaptationset_id")] string adaptationsetId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

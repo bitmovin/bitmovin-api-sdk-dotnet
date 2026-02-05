@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Inputs.Gcs.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Inputs.Gcs
 {
+    /// <summary>
+    /// API for GcsApi
+    /// </summary>
     public class GcsApi
     {
         private readonly IGcsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the GcsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public GcsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IGcsApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Gcs
         /// </summary>
         public static BitmovinApiBuilder<GcsApi> Builder => new BitmovinApiBuilder<GcsApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Gcs
             Task<Models.PaginationResponse<Models.GcsInput>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

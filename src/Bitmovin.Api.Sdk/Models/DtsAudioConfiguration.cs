@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class DtsAudioConfiguration : AudioConfiguration
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "DTS";
+#pragma warning restore CS0414
 
         /// <summary>
         /// There are two DTS modes available: DTS Express Audio (EXPRESS_AUDIO) and DTS Digital Surround (DIGITAL_SURROUND)

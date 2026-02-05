@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Live.StandbyPools.Encodings
 {
+    /// <summary>
+    /// API for EncodingsApi
+    /// </summary>
     public class EncodingsApi
     {
         private readonly IEncodingsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the EncodingsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public EncodingsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IEncodingsApiClient>();
@@ -59,6 +66,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Live.StandbyPools.Encodings
             Task<Models.PaginationResponse<Models.LiveStandbyPoolEncoding>> ListAsync([Path("pool_id")] string poolId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

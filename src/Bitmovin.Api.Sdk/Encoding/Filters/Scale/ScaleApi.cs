@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Filters.Scale.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Filters.Scale
 {
+    /// <summary>
+    /// API for ScaleApi
+    /// </summary>
     public class ScaleApi
     {
         private readonly IScaleApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the ScaleApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public ScaleApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IScaleApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Scale
         /// </summary>
         public static BitmovinApiBuilder<ScaleApi> Builder => new BitmovinApiBuilder<ScaleApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Scale
             Task<Models.PaginationResponse<Models.ScaleFilter>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

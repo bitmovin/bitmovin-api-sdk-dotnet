@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Analytics.Ads.Queries.Sum
 {
+    /// <summary>
+    /// API for SumApi
+    /// </summary>
     public class SumApi
     {
         private readonly ISumApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the SumApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public SumApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ISumApiClient>();

@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Manifests.Smooth.Default
 {
+    /// <summary>
+    /// API for DefaultApi
+    /// </summary>
     public class DefaultApi
     {
         private readonly IDefaultApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the DefaultApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public DefaultApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IDefaultApiClient>();

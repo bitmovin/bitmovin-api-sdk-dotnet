@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.LiveStatistics.Srt
 {
+    /// <summary>
+    /// API for SrtApi
+    /// </summary>
     public class SrtApi
     {
         private readonly ISrtApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the SrtApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public SrtApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ISrtApiClient>();
@@ -67,6 +74,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.LiveStatistics.Srt
             Task<Models.PaginationResponse<Models.SrtStatistics>> ListBySrtInputIdAsync([Path("encoding_id")] string encodingId, [Path("srt_input_id")] string srtInputId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>
@@ -90,6 +100,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.LiveStatistics.Srt
             }
         }
 
+        /// <summary>
+        /// Query parameters for ListBySrtInputId
+        /// </summary>
         public class ListBySrtInputIdQueryParams : Dictionary<string,Object>
         {
             /// <summary>

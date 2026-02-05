@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Bifs.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Bifs
 {
+    /// <summary>
+    /// API for BifsApi
+    /// </summary>
     public class BifsApi
     {
         private readonly IBifsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the BifsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public BifsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IBifsApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Bifs
         /// </summary>
         public static BitmovinApiBuilder<BifsApi> Builder => new BitmovinApiBuilder<BifsApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -95,6 +105,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Bifs
             Task<Models.PaginationResponse<Models.Bif>> ListAsync([Path("encoding_id")] string encodingId, [Path("stream_id")] string streamId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

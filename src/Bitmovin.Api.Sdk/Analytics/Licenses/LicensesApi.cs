@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Analytics.Licenses.Domains;
 
 namespace Bitmovin.Api.Sdk.Analytics.Licenses
 {
+    /// <summary>
+    /// API for LicensesApi
+    /// </summary>
     public class LicensesApi
     {
         private readonly ILicensesApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the LicensesApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public LicensesApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ILicensesApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Analytics.Licenses
         /// </summary>
         public static BitmovinApiBuilder<LicensesApi> Builder => new BitmovinApiBuilder<LicensesApi>();
 
+        /// <summary>
+        /// Gets the Domains API
+        /// </summary>
         public DomainsApi Domains { get; }
 
         /// <summary>
@@ -88,6 +98,9 @@ namespace Bitmovin.Api.Sdk.Analytics.Licenses
             Task<Models.AnalyticsLicense> UpdateAsync([Path("license_id")] string licenseId, [Body] Models.AnalyticsLicense analyticsLicense);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

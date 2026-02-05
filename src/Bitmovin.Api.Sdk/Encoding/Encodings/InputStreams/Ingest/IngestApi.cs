@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Ingest
 {
+    /// <summary>
+    /// API for IngestApi
+    /// </summary>
     public class IngestApi
     {
         private readonly IIngestApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the IngestApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public IngestApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IIngestApiClient>();
@@ -87,6 +94,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Ingest
             Task<Models.PaginationResponse<Models.IngestInputStream>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

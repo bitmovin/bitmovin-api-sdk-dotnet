@@ -10,10 +10,17 @@ using Bitmovin.Api.Sdk.Account.Organizations.Groups.Permissions;
 
 namespace Bitmovin.Api.Sdk.Account.Organizations.Groups
 {
+    /// <summary>
+    /// API for GroupsApi
+    /// </summary>
     public class GroupsApi
     {
         private readonly IGroupsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the GroupsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public GroupsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IGroupsApiClient>();
@@ -27,8 +34,17 @@ namespace Bitmovin.Api.Sdk.Account.Organizations.Groups
         /// </summary>
         public static BitmovinApiBuilder<GroupsApi> Builder => new BitmovinApiBuilder<GroupsApi>();
 
+        /// <summary>
+        /// Gets the Tenants API
+        /// </summary>
         public TenantsApi Tenants { get; }
+        /// <summary>
+        /// Gets the Invitations API
+        /// </summary>
         public InvitationsApi Invitations { get; }
+        /// <summary>
+        /// Gets the Permissions API
+        /// </summary>
         public PermissionsApi Permissions { get; }
 
         /// <summary>
@@ -97,6 +113,9 @@ namespace Bitmovin.Api.Sdk.Account.Organizations.Groups
             Task<Models.PaginationResponse<Models.Group>> ListAsync([Path("organization_id")] string organizationId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

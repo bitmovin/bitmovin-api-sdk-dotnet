@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Analytics.Impressions.Errors
 {
+    /// <summary>
+    /// API for ErrorsApi
+    /// </summary>
     public class ErrorsApi
     {
         private readonly IErrorsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the ErrorsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public ErrorsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IErrorsApiClient>();

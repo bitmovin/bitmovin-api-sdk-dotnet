@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Statistics.Cdn.Usage
 {
+    /// <summary>
+    /// API for UsageApi
+    /// </summary>
     public class UsageApi
     {
         private readonly IUsageApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the UsageApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public UsageApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IUsageApiClient>();
@@ -44,6 +51,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Cdn.Usage
             Task<Models.CdnUsageStatistics> GetAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for Get
+        /// </summary>
         public class GetQueryParams : Dictionary<string,Object>
         {
             /// <summary>

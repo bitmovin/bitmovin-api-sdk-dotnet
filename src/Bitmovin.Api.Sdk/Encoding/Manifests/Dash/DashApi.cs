@@ -10,10 +10,17 @@ using Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods;
 
 namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash
 {
+    /// <summary>
+    /// API for DashApi
+    /// </summary>
     public class DashApi
     {
         private readonly IDashApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the DashApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public DashApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IDashApiClient>();
@@ -27,8 +34,17 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash
         /// </summary>
         public static BitmovinApiBuilder<DashApi> Builder => new BitmovinApiBuilder<DashApi>();
 
+        /// <summary>
+        /// Gets the Default API
+        /// </summary>
         public DefaultApi Default { get; }
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
+        /// <summary>
+        /// Gets the Periods API
+        /// </summary>
         public PeriodsApi Periods { get; }
 
         /// <summary>
@@ -146,6 +162,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash
             Task<Models.BitmovinResponse> StopAsync([Path("manifest_id")] string manifestId);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

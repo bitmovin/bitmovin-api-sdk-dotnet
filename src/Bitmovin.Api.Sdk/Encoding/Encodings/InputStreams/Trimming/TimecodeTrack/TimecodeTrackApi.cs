@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Trimming.TimecodeTrack
 {
+    /// <summary>
+    /// API for TimecodeTrackApi
+    /// </summary>
     public class TimecodeTrackApi
     {
         private readonly ITimecodeTrackApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the TimecodeTrackApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public TimecodeTrackApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ITimecodeTrackApiClient>();
@@ -87,6 +94,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Trimming.TimecodeTrac
             Task<Models.PaginationResponse<Models.TimecodeTrackTrimmingInputStream>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

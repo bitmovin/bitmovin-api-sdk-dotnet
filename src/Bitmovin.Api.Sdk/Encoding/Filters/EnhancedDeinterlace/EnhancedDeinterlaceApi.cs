@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Filters.EnhancedDeinterlace.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Filters.EnhancedDeinterlace
 {
+    /// <summary>
+    /// API for EnhancedDeinterlaceApi
+    /// </summary>
     public class EnhancedDeinterlaceApi
     {
         private readonly IEnhancedDeinterlaceApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the EnhancedDeinterlaceApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public EnhancedDeinterlaceApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IEnhancedDeinterlaceApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.EnhancedDeinterlace
         /// </summary>
         public static BitmovinApiBuilder<EnhancedDeinterlaceApi> Builder => new BitmovinApiBuilder<EnhancedDeinterlaceApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.EnhancedDeinterlace
             Task<Models.PaginationResponse<Models.EnhancedDeinterlaceFilter>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

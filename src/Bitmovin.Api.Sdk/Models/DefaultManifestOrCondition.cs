@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class DefaultManifestOrCondition : DefaultManifestCondition
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "OR";
+#pragma warning restore CS0414
 
         /// <summary>
         /// Array to perform the OR evaluation on. This conditions evaluates to true if at least one sub condition evaluates to true. 

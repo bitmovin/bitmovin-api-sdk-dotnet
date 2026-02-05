@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class ContentProtection : DashMuxingRepresentation
     {
         [JsonProperty(PropertyName = "typeDiscriminator")]
+#pragma warning disable CS0414
         private readonly string _typeDiscriminator = "CONTENT_PROTECTION";
+#pragma warning restore CS0414
 
         /// <summary>
         /// DRM Id (required)

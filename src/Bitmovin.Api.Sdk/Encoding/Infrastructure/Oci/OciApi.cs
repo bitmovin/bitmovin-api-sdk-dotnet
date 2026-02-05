@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Infrastructure.Oci.Regions;
 
 namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Oci
 {
+    /// <summary>
+    /// API for OciApi
+    /// </summary>
     public class OciApi
     {
         private readonly IOciApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the OciApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public OciApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IOciApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Oci
         /// </summary>
         public static BitmovinApiBuilder<OciApi> Builder => new BitmovinApiBuilder<OciApi>();
 
+        /// <summary>
+        /// Gets the Regions API
+        /// </summary>
         public RegionsApi Regions { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Oci
             Task<Models.PaginationResponse<Models.OciAccount>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

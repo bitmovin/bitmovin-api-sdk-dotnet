@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class DashCmafRepresentation : DashSegmentedRepresentation
     {
         [JsonProperty(PropertyName = "typeDiscriminator")]
+#pragma warning disable CS0414
         private readonly string _typeDiscriminator = "CMAF";
+#pragma warning restore CS0414
 
     }
 }

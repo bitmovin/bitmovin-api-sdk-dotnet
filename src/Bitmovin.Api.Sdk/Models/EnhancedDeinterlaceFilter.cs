@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class EnhancedDeinterlaceFilter : Filter
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "ENHANCED_DEINTERLACE";
+#pragma warning restore CS0414
 
         /// <summary>
         /// Parity

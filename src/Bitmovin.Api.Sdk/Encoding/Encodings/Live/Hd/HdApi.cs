@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live.Hd
 {
+    /// <summary>
+    /// API for HdApi
+    /// </summary>
     public class HdApi
     {
         private readonly IHdApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the HdApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public HdApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IHdApiClient>();

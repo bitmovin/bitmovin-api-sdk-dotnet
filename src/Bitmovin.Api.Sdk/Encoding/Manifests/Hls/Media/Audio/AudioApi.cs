@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media.Audio
 {
+    /// <summary>
+    /// API for AudioApi
+    /// </summary>
     public class AudioApi
     {
         private readonly IAudioApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the AudioApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public AudioApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IAudioApiClient>();
@@ -87,6 +94,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media.Audio
             Task<Models.PaginationResponse<Models.AudioMediaInfo>> ListAsync([Path("manifest_id")] string manifestId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

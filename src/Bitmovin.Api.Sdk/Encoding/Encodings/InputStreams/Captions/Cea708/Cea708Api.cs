@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Captions.Cea708
 {
+    /// <summary>
+    /// API for Cea708Api
+    /// </summary>
     public class Cea708Api
     {
         private readonly ICea708ApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the Cea708Api class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public Cea708Api(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ICea708ApiClient>();
@@ -87,6 +94,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Captions.Cea708
             Task<Models.PaginationResponse<Models.Cea708CaptionInputStream>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

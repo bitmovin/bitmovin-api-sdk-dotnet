@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class Vp8VideoConfiguration : VideoConfiguration
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "VP8";
+#pragma warning restore CS0414
 
         /// <summary>
         /// Constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.

@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class DefaultManifestAttributeCondition : DefaultManifestCondition
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "CONDITION";
+#pragma warning restore CS0414
 
         /// <summary>
         /// The attribute that should be used for the evaluation: - audio.codec - audio.language - audio.bitrate - subtitle.format - subtitle.language - video.height - video.width - video.codec - video.bitrate - drm.type - muxing.type (required)

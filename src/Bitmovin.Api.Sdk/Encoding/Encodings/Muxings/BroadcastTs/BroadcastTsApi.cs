@@ -9,10 +9,17 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.BroadcastTs.Information;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.BroadcastTs
 {
+    /// <summary>
+    /// API for BroadcastTsApi
+    /// </summary>
     public class BroadcastTsApi
     {
         private readonly IBroadcastTsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the BroadcastTsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public BroadcastTsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IBroadcastTsApiClient>();
@@ -25,7 +32,13 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.BroadcastTs
         /// </summary>
         public static BitmovinApiBuilder<BroadcastTsApi> Builder => new BitmovinApiBuilder<BroadcastTsApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
+        /// <summary>
+        /// Gets the Information API
+        /// </summary>
         public InformationApi Information { get; }
 
         /// <summary>
@@ -94,6 +107,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.BroadcastTs
             Task<Models.PaginationResponse<Models.BroadcastTsMuxing>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

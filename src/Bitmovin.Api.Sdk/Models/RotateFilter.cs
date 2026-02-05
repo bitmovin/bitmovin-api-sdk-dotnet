@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class RotateFilter : Filter
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "ROTATE";
+#pragma warning restore CS0414
 
         /// <summary>
         /// Rotation of the video in degrees. A positive value will rotate the video clockwise and a negative one counter clockwise. (required)

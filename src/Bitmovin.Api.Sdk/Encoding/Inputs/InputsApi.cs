@@ -27,10 +27,17 @@ using Bitmovin.Api.Sdk.Encoding.Inputs.DirectFileUpload;
 
 namespace Bitmovin.Api.Sdk.Encoding.Inputs
 {
+    /// <summary>
+    /// API for InputsApi
+    /// </summary>
     public class InputsApi
     {
         private readonly IInputsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the InputsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public InputsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IInputsApiClient>();
@@ -61,25 +68,85 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs
         /// </summary>
         public static BitmovinApiBuilder<InputsApi> Builder => new BitmovinApiBuilder<InputsApi>();
 
+        /// <summary>
+        /// Gets the Type API
+        /// </summary>
         public TypeApi Type { get; }
+        /// <summary>
+        /// Gets the Rtmp API
+        /// </summary>
         public RtmpApi Rtmp { get; }
+        /// <summary>
+        /// Gets the RedundantRtmp API
+        /// </summary>
         public RedundantRtmpApi RedundantRtmp { get; }
+        /// <summary>
+        /// Gets the S3 API
+        /// </summary>
         public S3Api S3 { get; }
+        /// <summary>
+        /// Gets the S3RoleBased API
+        /// </summary>
         public S3RoleBasedApi S3RoleBased { get; }
+        /// <summary>
+        /// Gets the GenericS3 API
+        /// </summary>
         public GenericS3Api GenericS3 { get; }
+        /// <summary>
+        /// Gets the Local API
+        /// </summary>
         public LocalApi Local { get; }
+        /// <summary>
+        /// Gets the Gcs API
+        /// </summary>
         public GcsApi Gcs { get; }
+        /// <summary>
+        /// Gets the GcsServiceAccount API
+        /// </summary>
         public GcsServiceAccountApi GcsServiceAccount { get; }
+        /// <summary>
+        /// Gets the Azure API
+        /// </summary>
         public AzureApi Azure { get; }
+        /// <summary>
+        /// Gets the Ftp API
+        /// </summary>
         public FtpApi Ftp { get; }
+        /// <summary>
+        /// Gets the Hls API
+        /// </summary>
         public HlsApi Hls { get; }
+        /// <summary>
+        /// Gets the Sftp API
+        /// </summary>
         public SftpApi Sftp { get; }
+        /// <summary>
+        /// Gets the Http API
+        /// </summary>
         public HttpApi Http { get; }
+        /// <summary>
+        /// Gets the Https API
+        /// </summary>
         public HttpsApi Https { get; }
+        /// <summary>
+        /// Gets the Aspera API
+        /// </summary>
         public AsperaApi Aspera { get; }
+        /// <summary>
+        /// Gets the AkamaiNetstorage API
+        /// </summary>
         public AkamaiNetstorageApi AkamaiNetstorage { get; }
+        /// <summary>
+        /// Gets the Srt API
+        /// </summary>
         public SrtApi Srt { get; }
+        /// <summary>
+        /// Gets the Zixi API
+        /// </summary>
         public ZixiApi Zixi { get; }
+        /// <summary>
+        /// Gets the DirectFileUpload API
+        /// </summary>
         public DirectFileUploadApi DirectFileUpload { get; }
 
         /// <summary>
@@ -118,6 +185,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs
             Task<Models.PaginationResponse<Models.Input>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

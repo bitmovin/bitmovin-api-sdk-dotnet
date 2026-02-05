@@ -20,10 +20,17 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Scte35Triggers;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings
 {
+    /// <summary>
+    /// API for EncodingsApi
+    /// </summary>
     public class EncodingsApi
     {
         private readonly IEncodingsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the EncodingsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public EncodingsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IEncodingsApiClient>();
@@ -47,18 +54,57 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings
         /// </summary>
         public static BitmovinApiBuilder<EncodingsApi> Builder => new BitmovinApiBuilder<EncodingsApi>();
 
+        /// <summary>
+        /// Gets the Live API
+        /// </summary>
         public LiveApi Live { get; }
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
+        /// <summary>
+        /// Gets the Streams API
+        /// </summary>
         public StreamsApi Streams { get; }
+        /// <summary>
+        /// Gets the InputStreams API
+        /// </summary>
         public InputStreamsApi InputStreams { get; }
+        /// <summary>
+        /// Gets the Muxings API
+        /// </summary>
         public MuxingsApi Muxings { get; }
+        /// <summary>
+        /// Gets the Template API
+        /// </summary>
         public TemplateApi Template { get; }
+        /// <summary>
+        /// Gets the TransferRetries API
+        /// </summary>
         public TransferRetriesApi TransferRetries { get; }
+        /// <summary>
+        /// Gets the OutputPaths API
+        /// </summary>
         public OutputPathsApi OutputPaths { get; }
+        /// <summary>
+        /// Gets the Captions API
+        /// </summary>
         public CaptionsApi Captions { get; }
+        /// <summary>
+        /// Gets the Sidecars API
+        /// </summary>
         public SidecarsApi Sidecars { get; }
+        /// <summary>
+        /// Gets the KantarWatermark API
+        /// </summary>
         public KantarWatermarkApi KantarWatermark { get; }
+        /// <summary>
+        /// Gets the Keyframes API
+        /// </summary>
         public KeyframesApi Keyframes { get; }
+        /// <summary>
+        /// Gets the Scte35Triggers API
+        /// </summary>
         public Scte35TriggersApi Scte35Triggers { get; }
 
         /// <summary>
@@ -204,6 +250,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings
             Task<Models.BitmovinResponse> StopAsync([Path("encoding_id")] string encodingId);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

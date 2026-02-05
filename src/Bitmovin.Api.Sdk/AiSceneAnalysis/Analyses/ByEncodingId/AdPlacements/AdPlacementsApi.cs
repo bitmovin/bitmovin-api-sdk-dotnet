@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.AiSceneAnalysis.Analyses.ByEncodingId.AdPlacements
 {
+    /// <summary>
+    /// API for AdPlacementsApi
+    /// </summary>
     public class AdPlacementsApi
     {
         private readonly IAdPlacementsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the AdPlacementsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public AdPlacementsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IAdPlacementsApiClient>();

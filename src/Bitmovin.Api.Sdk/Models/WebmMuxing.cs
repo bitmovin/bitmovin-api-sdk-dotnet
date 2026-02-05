@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class WebmMuxing : Muxing
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "WEBM";
+#pragma warning restore CS0414
 
         /// <summary>
         /// Length of the fragments in seconds (required)

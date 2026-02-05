@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Trimming.H264PictureTiming
 {
+    /// <summary>
+    /// API for H264PictureTimingApi
+    /// </summary>
     public class H264PictureTimingApi
     {
         private readonly IH264PictureTimingApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the H264PictureTimingApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public H264PictureTimingApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IH264PictureTimingApiClient>();
@@ -87,6 +94,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Trimming.H264PictureT
             Task<Models.PaginationResponse<Models.H264PictureTimingTrimmingInputStream>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.WatchFolders
 {
+    /// <summary>
+    /// API for WatchFoldersApi
+    /// </summary>
     public class WatchFoldersApi
     {
         private readonly IWatchFoldersApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the WatchFoldersApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public WatchFoldersApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IWatchFoldersApiClient>();
@@ -109,6 +116,9 @@ namespace Bitmovin.Api.Sdk.Encoding.WatchFolders
             Task<Models.BitmovinResponse> StopAsync([Path("watch_folder_id")] string watchFolderId);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

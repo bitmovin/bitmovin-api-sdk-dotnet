@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Inputs.Local.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Inputs.Local
 {
+    /// <summary>
+    /// API for LocalApi
+    /// </summary>
     public class LocalApi
     {
         private readonly ILocalApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the LocalApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public LocalApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ILocalApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Local
         /// </summary>
         public static BitmovinApiBuilder<LocalApi> Builder => new BitmovinApiBuilder<LocalApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Local
             Task<Models.PaginationResponse<Models.LocalInput>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

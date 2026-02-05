@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Analytics.Ads.Queries.Median
 {
+    /// <summary>
+    /// API for MedianApi
+    /// </summary>
     public class MedianApi
     {
         private readonly IMedianApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the MedianApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public MedianApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IMedianApiClient>();

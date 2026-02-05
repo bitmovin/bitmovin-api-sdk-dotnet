@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Streams.Video
 {
+    /// <summary>
+    /// API for VideoApi
+    /// </summary>
     public class VideoApi
     {
         private readonly IVideoApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the VideoApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public VideoApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IVideoApiClient>();
@@ -97,6 +104,9 @@ namespace Bitmovin.Api.Sdk.Streams.Video
             Task<Models.StreamsVideoResponse> PatchStreamsVideoAsync([Path("stream_id")] string streamId, [Body] Models.StreamsVideoUpdateRequest streamsVideoUpdateRequest);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

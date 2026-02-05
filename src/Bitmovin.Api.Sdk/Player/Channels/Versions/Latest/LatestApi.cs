@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Player.Channels.Versions.Latest
 {
+    /// <summary>
+    /// API for LatestApi
+    /// </summary>
     public class LatestApi
     {
         private readonly ILatestApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the LatestApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public LatestApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ILatestApiClient>();

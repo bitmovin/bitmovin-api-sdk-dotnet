@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Mp2.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Mp2
 {
+    /// <summary>
+    /// API for Mp2Api
+    /// </summary>
     public class Mp2Api
     {
         private readonly IMp2ApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the Mp2Api class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public Mp2Api(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IMp2ApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Mp2
         /// </summary>
         public static BitmovinApiBuilder<Mp2Api> Builder => new BitmovinApiBuilder<Mp2Api>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Mp2
             Task<Models.PaginationResponse<Models.Mp2AudioConfiguration>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

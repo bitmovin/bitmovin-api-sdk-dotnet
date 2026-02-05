@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.OutputPaths
 {
+    /// <summary>
+    /// API for OutputPathsApi
+    /// </summary>
     public class OutputPathsApi
     {
         private readonly IOutputPathsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the OutputPathsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public OutputPathsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IOutputPathsApiClient>();

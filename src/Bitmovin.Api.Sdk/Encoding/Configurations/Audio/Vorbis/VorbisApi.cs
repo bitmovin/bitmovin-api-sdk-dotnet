@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Vorbis.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Vorbis
 {
+    /// <summary>
+    /// API for VorbisApi
+    /// </summary>
     public class VorbisApi
     {
         private readonly IVorbisApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the VorbisApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public VorbisApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IVorbisApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Vorbis
         /// </summary>
         public static BitmovinApiBuilder<VorbisApi> Builder => new BitmovinApiBuilder<VorbisApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Vorbis
             Task<Models.PaginationResponse<Models.VorbisAudioConfiguration>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live.InsertableContent.Schedule
 {
+    /// <summary>
+    /// API for ScheduleApi
+    /// </summary>
     public class ScheduleApi
     {
         private readonly IScheduleApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the ScheduleApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public ScheduleApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IScheduleApiClient>();

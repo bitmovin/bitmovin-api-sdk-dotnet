@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Filters.Unsharp.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Filters.Unsharp
 {
+    /// <summary>
+    /// API for UnsharpApi
+    /// </summary>
     public class UnsharpApi
     {
         private readonly IUnsharpApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the UnsharpApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public UnsharpApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IUnsharpApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Unsharp
         /// </summary>
         public static BitmovinApiBuilder<UnsharpApi> Builder => new BitmovinApiBuilder<UnsharpApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Unsharp
             Task<Models.PaginationResponse<Models.UnsharpFilter>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

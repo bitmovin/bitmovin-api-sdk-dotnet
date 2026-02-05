@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.General.ErrorDefinitions
 {
+    /// <summary>
+    /// API for ErrorDefinitionsApi
+    /// </summary>
     public class ErrorDefinitionsApi
     {
         private readonly IErrorDefinitionsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the ErrorDefinitionsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public ErrorDefinitionsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IErrorDefinitionsApiClient>();
@@ -44,6 +51,9 @@ namespace Bitmovin.Api.Sdk.General.ErrorDefinitions
             Task<Models.PaginationResponse<Models.ApiErrorDefinition>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

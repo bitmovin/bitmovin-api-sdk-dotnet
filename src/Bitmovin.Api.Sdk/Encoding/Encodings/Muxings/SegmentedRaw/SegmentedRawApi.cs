@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.SegmentedRaw.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.SegmentedRaw
 {
+    /// <summary>
+    /// API for SegmentedRawApi
+    /// </summary>
     public class SegmentedRawApi
     {
         private readonly ISegmentedRawApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the SegmentedRawApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public SegmentedRawApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ISegmentedRawApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.SegmentedRaw
         /// </summary>
         public static BitmovinApiBuilder<SegmentedRawApi> Builder => new BitmovinApiBuilder<SegmentedRawApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -91,6 +101,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.SegmentedRaw
             Task<Models.PaginationResponse<Models.SegmentedRawMuxing>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

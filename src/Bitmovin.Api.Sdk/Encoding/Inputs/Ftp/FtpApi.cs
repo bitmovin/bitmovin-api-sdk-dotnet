@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Inputs.Ftp.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Inputs.Ftp
 {
+    /// <summary>
+    /// API for FtpApi
+    /// </summary>
     public class FtpApi
     {
         private readonly IFtpApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the FtpApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public FtpApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IFtpApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Ftp
         /// </summary>
         public static BitmovinApiBuilder<FtpApi> Builder => new BitmovinApiBuilder<FtpApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Ftp
             Task<Models.PaginationResponse<Models.FtpInput>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

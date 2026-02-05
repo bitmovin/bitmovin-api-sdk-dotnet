@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Template
 {
+    /// <summary>
+    /// API for TemplateApi
+    /// </summary>
     public class TemplateApi
     {
         private readonly ITemplateApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the TemplateApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public TemplateApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ITemplateApiClient>();

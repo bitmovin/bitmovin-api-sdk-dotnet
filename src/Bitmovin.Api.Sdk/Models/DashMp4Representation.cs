@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class DashMp4Representation : DashMuxingRepresentation
     {
         [JsonProperty(PropertyName = "typeDiscriminator")]
+#pragma warning disable CS0414
         private readonly string _typeDiscriminator = "MP4";
+#pragma warning restore CS0414
 
         /// <summary>
         /// Path to the MP4 file (required)

@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.LiveStatistics.Streams
 {
+    /// <summary>
+    /// API for StreamsApi
+    /// </summary>
     public class StreamsApi
     {
         private readonly IStreamsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the StreamsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public StreamsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IStreamsApiClient>();
@@ -45,6 +52,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.LiveStatistics.Streams
             Task<Models.PaginationResponse<Models.StreamInfos>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

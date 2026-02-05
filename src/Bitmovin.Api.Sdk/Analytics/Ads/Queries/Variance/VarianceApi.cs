@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Analytics.Ads.Queries.Variance
 {
+    /// <summary>
+    /// API for VarianceApi
+    /// </summary>
     public class VarianceApi
     {
         private readonly IVarianceApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the VarianceApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public VarianceApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IVarianceApiClient>();

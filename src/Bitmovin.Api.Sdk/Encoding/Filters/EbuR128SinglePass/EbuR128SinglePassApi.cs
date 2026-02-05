@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Filters.EbuR128SinglePass.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Filters.EbuR128SinglePass
 {
+    /// <summary>
+    /// API for EbuR128SinglePassApi
+    /// </summary>
     public class EbuR128SinglePassApi
     {
         private readonly IEbuR128SinglePassApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the EbuR128SinglePassApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public EbuR128SinglePassApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IEbuR128SinglePassApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.EbuR128SinglePass
         /// </summary>
         public static BitmovinApiBuilder<EbuR128SinglePassApi> Builder => new BitmovinApiBuilder<EbuR128SinglePassApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.EbuR128SinglePass
             Task<Models.PaginationResponse<Models.EbuR128SinglePassFilter>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

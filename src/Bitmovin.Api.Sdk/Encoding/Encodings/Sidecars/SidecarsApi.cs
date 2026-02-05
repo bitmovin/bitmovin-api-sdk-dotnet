@@ -9,10 +9,17 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Sidecars.Webvtt;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Sidecars
 {
+    /// <summary>
+    /// API for SidecarsApi
+    /// </summary>
     public class SidecarsApi
     {
         private readonly ISidecarsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the SidecarsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public SidecarsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ISidecarsApiClient>();
@@ -25,7 +32,13 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Sidecars
         /// </summary>
         public static BitmovinApiBuilder<SidecarsApi> Builder => new BitmovinApiBuilder<SidecarsApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
+        /// <summary>
+        /// Gets the Webvtt API
+        /// </summary>
         public WebvttApi Webvtt { get; }
 
         /// <summary>
@@ -94,6 +107,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Sidecars
             Task<Models.PaginationResponse<Models.SidecarFile>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

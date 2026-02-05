@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class AnalyticsS3RoleBasedOutput : AnalyticsOutput
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "S3_ROLE_BASED";
+#pragma warning restore CS0414
 
         /// <summary>
         /// Amazon S3 bucket name (required)

@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Infrastructure.Aws.Regions;
 
 namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Aws
 {
+    /// <summary>
+    /// API for AwsApi
+    /// </summary>
     public class AwsApi
     {
         private readonly IAwsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the AwsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public AwsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IAwsApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Aws
         /// </summary>
         public static BitmovinApiBuilder<AwsApi> Builder => new BitmovinApiBuilder<AwsApi>();
 
+        /// <summary>
+        /// Gets the Regions API
+        /// </summary>
         public RegionsApi Regions { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Aws
             Task<Models.PaginationResponse<Models.AwsAccount>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

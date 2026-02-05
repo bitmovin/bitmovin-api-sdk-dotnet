@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Aac.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Aac
 {
+    /// <summary>
+    /// API for AacApi
+    /// </summary>
     public class AacApi
     {
         private readonly IAacApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the AacApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public AacApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IAacApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Aac
         /// </summary>
         public static BitmovinApiBuilder<AacApi> Builder => new BitmovinApiBuilder<AacApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Aac
             Task<Models.PaginationResponse<Models.AacAudioConfiguration>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

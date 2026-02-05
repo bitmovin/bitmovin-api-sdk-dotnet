@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Account.Organizations.Tenants
 {
+    /// <summary>
+    /// API for TenantsApi
+    /// </summary>
     public class TenantsApi
     {
         private readonly ITenantsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the TenantsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public TenantsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ITenantsApiClient>();

@@ -10,10 +10,17 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Ts.Drm.Speke;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Ts.Drm
 {
+    /// <summary>
+    /// API for DrmApi
+    /// </summary>
     public class DrmApi
     {
         private readonly IDrmApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the DrmApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public DrmApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IDrmApiClient>();
@@ -27,8 +34,17 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Ts.Drm
         /// </summary>
         public static BitmovinApiBuilder<DrmApi> Builder => new BitmovinApiBuilder<DrmApi>();
 
+        /// <summary>
+        /// Gets the Fairplay API
+        /// </summary>
         public FairplayApi Fairplay { get; }
+        /// <summary>
+        /// Gets the Aes API
+        /// </summary>
         public AesApi Aes { get; }
+        /// <summary>
+        /// Gets the Speke API
+        /// </summary>
         public SpekeApi Speke { get; }
 
         /// <summary>

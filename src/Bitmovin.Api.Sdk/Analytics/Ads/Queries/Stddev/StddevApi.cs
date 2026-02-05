@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Analytics.Ads.Queries.Stddev
 {
+    /// <summary>
+    /// API for StddevApi
+    /// </summary>
     public class StddevApi
     {
         private readonly IStddevApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the StddevApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public StddevApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IStddevApiClient>();

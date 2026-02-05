@@ -10,10 +10,17 @@ using Bitmovin.Api.Sdk.Player.Licenses.ThirdPartyLicensing;
 
 namespace Bitmovin.Api.Sdk.Player.Licenses
 {
+    /// <summary>
+    /// API for LicensesApi
+    /// </summary>
     public class LicensesApi
     {
         private readonly ILicensesApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the LicensesApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public LicensesApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ILicensesApiClient>();
@@ -27,8 +34,17 @@ namespace Bitmovin.Api.Sdk.Player.Licenses
         /// </summary>
         public static BitmovinApiBuilder<LicensesApi> Builder => new BitmovinApiBuilder<LicensesApi>();
 
+        /// <summary>
+        /// Gets the Analytics API
+        /// </summary>
         public AnalyticsApi Analytics { get; }
+        /// <summary>
+        /// Gets the Domains API
+        /// </summary>
         public DomainsApi Domains { get; }
+        /// <summary>
+        /// Gets the ThirdPartyLicensing API
+        /// </summary>
         public ThirdPartyLicensingApi ThirdPartyLicensing { get; }
 
         /// <summary>
@@ -94,6 +110,9 @@ namespace Bitmovin.Api.Sdk.Player.Licenses
             Task<Models.PlayerLicense> UpdateAsync([Path("license_id")] string licenseId, [Body] Models.PlayerLicenseUpdateRequest playerLicenseUpdateRequest);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Opus.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Opus
 {
+    /// <summary>
+    /// API for OpusApi
+    /// </summary>
     public class OpusApi
     {
         private readonly IOpusApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the OpusApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public OpusApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IOpusApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Opus
         /// </summary>
         public static BitmovinApiBuilder<OpusApi> Builder => new BitmovinApiBuilder<OpusApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Opus
             Task<Models.PaginationResponse<Models.OpusAudioConfiguration>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

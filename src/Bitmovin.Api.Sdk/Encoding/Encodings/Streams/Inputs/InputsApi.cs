@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Inputs
 {
+    /// <summary>
+    /// API for InputsApi
+    /// </summary>
     public class InputsApi
     {
         private readonly IInputsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the InputsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public InputsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IInputsApiClient>();

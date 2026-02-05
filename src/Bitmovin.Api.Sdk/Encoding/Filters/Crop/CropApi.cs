@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Filters.Crop.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Filters.Crop
 {
+    /// <summary>
+    /// API for CropApi
+    /// </summary>
     public class CropApi
     {
         private readonly ICropApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the CropApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public CropApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ICropApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Crop
         /// </summary>
         public static BitmovinApiBuilder<CropApi> Builder => new BitmovinApiBuilder<CropApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Crop
             Task<Models.PaginationResponse<Models.CropFilter>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

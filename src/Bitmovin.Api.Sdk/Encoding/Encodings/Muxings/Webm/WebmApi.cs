@@ -9,10 +9,17 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Webm.Drm;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Webm
 {
+    /// <summary>
+    /// API for WebmApi
+    /// </summary>
     public class WebmApi
     {
         private readonly IWebmApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the WebmApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public WebmApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IWebmApiClient>();
@@ -25,7 +32,13 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Webm
         /// </summary>
         public static BitmovinApiBuilder<WebmApi> Builder => new BitmovinApiBuilder<WebmApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
+        /// <summary>
+        /// Gets the Drm API
+        /// </summary>
         public DrmApi Drm { get; }
 
         /// <summary>
@@ -94,6 +107,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Webm
             Task<Models.PaginationResponse<Models.WebmMuxing>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

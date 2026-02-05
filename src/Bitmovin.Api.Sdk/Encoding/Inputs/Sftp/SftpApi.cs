@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Inputs.Sftp.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Inputs.Sftp
 {
+    /// <summary>
+    /// API for SftpApi
+    /// </summary>
     public class SftpApi
     {
         private readonly ISftpApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the SftpApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public SftpApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ISftpApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Sftp
         /// </summary>
         public static BitmovinApiBuilder<SftpApi> Builder => new BitmovinApiBuilder<SftpApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Sftp
             Task<Models.PaginationResponse<Models.SftpInput>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

@@ -10,10 +10,17 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveWebm.Drm;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveWebm
 {
+    /// <summary>
+    /// API for ProgressiveWebmApi
+    /// </summary>
     public class ProgressiveWebmApi
     {
         private readonly IProgressiveWebmApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the ProgressiveWebmApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public ProgressiveWebmApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IProgressiveWebmApiClient>();
@@ -27,8 +34,17 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveWebm
         /// </summary>
         public static BitmovinApiBuilder<ProgressiveWebmApi> Builder => new BitmovinApiBuilder<ProgressiveWebmApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
+        /// <summary>
+        /// Gets the Information API
+        /// </summary>
         public InformationApi Information { get; }
+        /// <summary>
+        /// Gets the Drm API
+        /// </summary>
         public DrmApi Drm { get; }
 
         /// <summary>
@@ -97,6 +113,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveWebm
             Task<Models.PaginationResponse<Models.ProgressiveWebmMuxing>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

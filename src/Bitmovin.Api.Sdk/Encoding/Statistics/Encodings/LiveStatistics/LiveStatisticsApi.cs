@@ -10,10 +10,17 @@ using Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.LiveStatistics.Srt;
 
 namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.LiveStatistics
 {
+    /// <summary>
+    /// API for LiveStatisticsApi
+    /// </summary>
     public class LiveStatisticsApi
     {
         private readonly ILiveStatisticsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the LiveStatisticsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public LiveStatisticsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ILiveStatisticsApiClient>();
@@ -27,8 +34,17 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.LiveStatistics
         /// </summary>
         public static BitmovinApiBuilder<LiveStatisticsApi> Builder => new BitmovinApiBuilder<LiveStatisticsApi>();
 
+        /// <summary>
+        /// Gets the Events API
+        /// </summary>
         public EventsApi Events { get; }
+        /// <summary>
+        /// Gets the Streams API
+        /// </summary>
         public StreamsApi Streams { get; }
+        /// <summary>
+        /// Gets the Srt API
+        /// </summary>
         public SrtApi Srt { get; }
 
         /// <summary>

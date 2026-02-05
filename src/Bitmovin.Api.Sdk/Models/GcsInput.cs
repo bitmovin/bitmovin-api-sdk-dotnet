@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class GcsInput : Input
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "GCS";
+#pragma warning restore CS0414
 
         /// <summary>
         /// Name of the bucket (required)

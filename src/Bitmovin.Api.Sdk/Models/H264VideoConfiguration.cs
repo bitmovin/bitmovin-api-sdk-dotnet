@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class H264VideoConfiguration : VideoConfiguration
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "H264";
+#pragma warning restore CS0414
 
         /// <summary>
         /// Choose from a set of preset configurations tailored for common use cases. Check out [H264 Presets](https://bitmovin.com/docs/encoding/tutorials/h264-presets) to see which values get applied by each preset. Explicitly setting a property to a different value will override the preset&#39;s value for that property.

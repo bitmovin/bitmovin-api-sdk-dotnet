@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class GcsServiceAccountInput : Input
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "GCS_SERVICE_ACCOUNT";
+#pragma warning restore CS0414
 
         /// <summary>
         /// GCS projectId (required)

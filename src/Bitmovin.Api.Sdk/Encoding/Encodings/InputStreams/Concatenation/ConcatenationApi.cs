@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Concatenation
 {
+    /// <summary>
+    /// API for ConcatenationApi
+    /// </summary>
     public class ConcatenationApi
     {
         private readonly IConcatenationApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the ConcatenationApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public ConcatenationApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IConcatenationApiClient>();
@@ -87,6 +94,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Concatenation
             Task<Models.PaginationResponse<Models.ConcatenationInputStream>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

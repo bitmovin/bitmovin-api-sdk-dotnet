@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.BurnInSubtitles.Srt
 {
+    /// <summary>
+    /// API for SrtApi
+    /// </summary>
     public class SrtApi
     {
         private readonly ISrtApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the SrtApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public SrtApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ISrtApiClient>();
@@ -91,6 +98,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.BurnInSubtitles.Srt
             Task<Models.PaginationResponse<Models.BurnInSubtitleSrt>> ListAsync([Path("encoding_id")] string encodingId, [Path("stream_id")] string streamId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

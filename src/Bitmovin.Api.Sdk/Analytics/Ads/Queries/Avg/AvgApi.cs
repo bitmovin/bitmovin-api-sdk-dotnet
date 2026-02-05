@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Analytics.Ads.Queries.Avg
 {
+    /// <summary>
+    /// API for AvgApi
+    /// </summary>
     public class AvgApi
     {
         private readonly IAvgApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the AvgApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public AvgApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IAvgApiClient>();

@@ -10,10 +10,17 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Live.InsertableContent.Stop;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live.InsertableContent
 {
+    /// <summary>
+    /// API for InsertableContentApi
+    /// </summary>
     public class InsertableContentApi
     {
         private readonly IInsertableContentApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the InsertableContentApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public InsertableContentApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IInsertableContentApiClient>();
@@ -27,8 +34,17 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live.InsertableContent
         /// </summary>
         public static BitmovinApiBuilder<InsertableContentApi> Builder => new BitmovinApiBuilder<InsertableContentApi>();
 
+        /// <summary>
+        /// Gets the Schedule API
+        /// </summary>
         public ScheduleApi Schedule { get; }
+        /// <summary>
+        /// Gets the Scheduled API
+        /// </summary>
         public ScheduledApi Scheduled { get; }
+        /// <summary>
+        /// Gets the Stop API
+        /// </summary>
         public StopApi Stop { get; }
 
         /// <summary>
@@ -69,6 +85,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live.InsertableContent
             Task<Models.PaginationResponse<Models.InsertableContent>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

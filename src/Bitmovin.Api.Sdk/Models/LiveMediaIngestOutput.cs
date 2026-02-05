@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class LiveMediaIngestOutput : Output
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "LIVE_MEDIA_INGEST";
+#pragma warning restore CS0414
 
         /// <summary>
         /// URL specifying the publishing point for the output. Can use either http or https. (required)

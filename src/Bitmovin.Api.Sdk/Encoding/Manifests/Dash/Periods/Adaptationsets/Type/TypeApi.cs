@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Type
 {
+    /// <summary>
+    /// API for TypeApi
+    /// </summary>
     public class TypeApi
     {
         private readonly ITypeApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the TypeApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public TypeApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ITypeApiClient>();

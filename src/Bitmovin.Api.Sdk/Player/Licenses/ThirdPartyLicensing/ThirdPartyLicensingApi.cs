@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Player.Licenses.ThirdPartyLicensing
 {
+    /// <summary>
+    /// API for ThirdPartyLicensingApi
+    /// </summary>
     public class ThirdPartyLicensingApi
     {
         private readonly IThirdPartyLicensingApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the ThirdPartyLicensingApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public ThirdPartyLicensingApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IThirdPartyLicensingApiClient>();

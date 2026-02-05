@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.EncodingStatusChanged
 {
+    /// <summary>
+    /// API for EncodingStatusChangedApi
+    /// </summary>
     public class EncodingStatusChangedApi
     {
         private readonly IEncodingStatusChangedApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the EncodingStatusChangedApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public EncodingStatusChangedApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IEncodingStatusChangedApiClient>();

@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Scte35Triggers
 {
+    /// <summary>
+    /// API for Scte35TriggersApi
+    /// </summary>
     public class Scte35TriggersApi
     {
         private readonly IScte35TriggersApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the Scte35TriggersApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public Scte35TriggersApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IScte35TriggersApiClient>();
@@ -87,6 +94,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Scte35Triggers
             Task<Models.PaginationResponse<Models.Scte35Trigger>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

@@ -24,10 +24,17 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveMov;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings
 {
+    /// <summary>
+    /// API for MuxingsApi
+    /// </summary>
     public class MuxingsApi
     {
         private readonly IMuxingsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the MuxingsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public MuxingsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IMuxingsApiClient>();
@@ -55,22 +62,73 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings
         /// </summary>
         public static BitmovinApiBuilder<MuxingsApi> Builder => new BitmovinApiBuilder<MuxingsApi>();
 
+        /// <summary>
+        /// Gets the Type API
+        /// </summary>
         public TypeApi Type { get; }
+        /// <summary>
+        /// Gets the Fmp4 API
+        /// </summary>
         public Fmp4Api Fmp4 { get; }
+        /// <summary>
+        /// Gets the ChunkedText API
+        /// </summary>
         public ChunkedTextApi ChunkedText { get; }
+        /// <summary>
+        /// Gets the Cmaf API
+        /// </summary>
         public CmafApi Cmaf { get; }
+        /// <summary>
+        /// Gets the SegmentedRaw API
+        /// </summary>
         public SegmentedRawApi SegmentedRaw { get; }
+        /// <summary>
+        /// Gets the PackedAudio API
+        /// </summary>
         public PackedAudioApi PackedAudio { get; }
+        /// <summary>
+        /// Gets the Text API
+        /// </summary>
         public TextApi Text { get; }
+        /// <summary>
+        /// Gets the Ts API
+        /// </summary>
         public TsApi Ts { get; }
+        /// <summary>
+        /// Gets the Webm API
+        /// </summary>
         public WebmApi Webm { get; }
+        /// <summary>
+        /// Gets the Mp3 API
+        /// </summary>
         public Mp3Api Mp3 { get; }
+        /// <summary>
+        /// Gets the Mp4 API
+        /// </summary>
         public Mp4Api Mp4 { get; }
+        /// <summary>
+        /// Gets the Mxf API
+        /// </summary>
         public MxfApi Mxf { get; }
+        /// <summary>
+        /// Gets the ProgressiveTs API
+        /// </summary>
         public ProgressiveTsApi ProgressiveTs { get; }
+        /// <summary>
+        /// Gets the BroadcastTs API
+        /// </summary>
         public BroadcastTsApi BroadcastTs { get; }
+        /// <summary>
+        /// Gets the ProgressiveWav API
+        /// </summary>
         public ProgressiveWavApi ProgressiveWav { get; }
+        /// <summary>
+        /// Gets the ProgressiveWebm API
+        /// </summary>
         public ProgressiveWebmApi ProgressiveWebm { get; }
+        /// <summary>
+        /// Gets the ProgressiveMov API
+        /// </summary>
         public ProgressiveMovApi ProgressiveMov { get; }
 
         /// <summary>
@@ -111,6 +169,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings
             Task<Models.PaginationResponse<Models.Muxing>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

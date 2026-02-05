@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Infrastructure.Akamai.Regions;
 
 namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Akamai
 {
+    /// <summary>
+    /// API for AkamaiApi
+    /// </summary>
     public class AkamaiApi
     {
         private readonly IAkamaiApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the AkamaiApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public AkamaiApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IAkamaiApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Akamai
         /// </summary>
         public static BitmovinApiBuilder<AkamaiApi> Builder => new BitmovinApiBuilder<AkamaiApi>();
 
+        /// <summary>
+        /// Gets the Regions API
+        /// </summary>
         public RegionsApi Regions { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Akamai
             Task<Models.PaginationResponse<Models.AkamaiAccount>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

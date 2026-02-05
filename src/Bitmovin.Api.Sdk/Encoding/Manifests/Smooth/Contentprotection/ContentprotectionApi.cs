@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Manifests.Smooth.Contentprotection
 {
+    /// <summary>
+    /// API for ContentprotectionApi
+    /// </summary>
     public class ContentprotectionApi
     {
         private readonly IContentprotectionApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the ContentprotectionApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public ContentprotectionApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IContentprotectionApiClient>();
@@ -87,6 +94,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Smooth.Contentprotection
             Task<Models.PaginationResponse<Models.SmoothManifestContentProtection>> ListAsync([Path("manifest_id")] string manifestId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

@@ -10,10 +10,17 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.PackedAudio.Drm;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.PackedAudio
 {
+    /// <summary>
+    /// API for PackedAudioApi
+    /// </summary>
     public class PackedAudioApi
     {
         private readonly IPackedAudioApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the PackedAudioApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public PackedAudioApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IPackedAudioApiClient>();
@@ -27,8 +34,17 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.PackedAudio
         /// </summary>
         public static BitmovinApiBuilder<PackedAudioApi> Builder => new BitmovinApiBuilder<PackedAudioApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
+        /// <summary>
+        /// Gets the Information API
+        /// </summary>
         public InformationApi Information { get; }
+        /// <summary>
+        /// Gets the Drm API
+        /// </summary>
         public DrmApi Drm { get; }
 
         /// <summary>
@@ -97,6 +113,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.PackedAudio
             Task<Models.PaginationResponse<Models.PackedAudioMuxing>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

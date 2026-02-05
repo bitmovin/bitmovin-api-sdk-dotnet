@@ -9,10 +9,17 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveMov.Information;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveMov
 {
+    /// <summary>
+    /// API for ProgressiveMovApi
+    /// </summary>
     public class ProgressiveMovApi
     {
         private readonly IProgressiveMovApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the ProgressiveMovApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public ProgressiveMovApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IProgressiveMovApiClient>();
@@ -25,7 +32,13 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveMov
         /// </summary>
         public static BitmovinApiBuilder<ProgressiveMovApi> Builder => new BitmovinApiBuilder<ProgressiveMovApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
+        /// <summary>
+        /// Gets the Information API
+        /// </summary>
         public InformationApi Information { get; }
 
         /// <summary>
@@ -94,6 +107,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveMov
             Task<Models.PaginationResponse<Models.ProgressiveMovMuxing>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

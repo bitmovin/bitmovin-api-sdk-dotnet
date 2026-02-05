@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Image
 {
+    /// <summary>
+    /// API for ImageApi
+    /// </summary>
     public class ImageApi
     {
         private readonly IImageApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the ImageApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public ImageApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IImageApiClient>();
@@ -91,6 +98,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Image
             Task<Models.PaginationResponse<Models.ImageAdaptationSet>> ListAsync([Path("manifest_id")] string manifestId, [Path("period_id")] string periodId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

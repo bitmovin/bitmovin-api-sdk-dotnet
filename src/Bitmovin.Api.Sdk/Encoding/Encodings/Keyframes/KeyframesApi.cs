@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Keyframes
 {
+    /// <summary>
+    /// API for KeyframesApi
+    /// </summary>
     public class KeyframesApi
     {
         private readonly IKeyframesApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the KeyframesApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public KeyframesApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IKeyframesApiClient>();
@@ -87,6 +94,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Keyframes
             Task<Models.PaginationResponse<Models.Keyframe>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

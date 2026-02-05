@@ -9,8 +9,15 @@ using Bitmovin.Api.Sdk.Encoding.Infrastructure.PrewarmedEncoderPools;
 
 namespace Bitmovin.Api.Sdk.Encoding.Infrastructure
 {
+    /// <summary>
+    /// API for InfrastructureApi
+    /// </summary>
     public class InfrastructureApi
     {
+        /// <summary>
+        /// Initializes a new instance of the InfrastructureApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public InfrastructureApi(IBitmovinApiClientFactory apiClientFactory)
         {
             Aws = new AwsApi(apiClientFactory);
@@ -27,12 +34,33 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure
         /// </summary>
         public static BitmovinApiBuilder<InfrastructureApi> Builder => new BitmovinApiBuilder<InfrastructureApi>();
 
+        /// <summary>
+        /// Gets the Aws API
+        /// </summary>
         public AwsApi Aws { get; }
+        /// <summary>
+        /// Gets the StaticIps API
+        /// </summary>
         public StaticIpsApi StaticIps { get; }
+        /// <summary>
+        /// Gets the Azure API
+        /// </summary>
         public AzureApi Azure { get; }
+        /// <summary>
+        /// Gets the Gce API
+        /// </summary>
         public GceApi Gce { get; }
+        /// <summary>
+        /// Gets the Akamai API
+        /// </summary>
         public AkamaiApi Akamai { get; }
+        /// <summary>
+        /// Gets the Oci API
+        /// </summary>
         public OciApi Oci { get; }
+        /// <summary>
+        /// Gets the PrewarmedEncoderPools API
+        /// </summary>
         public PrewarmedEncoderPoolsApi PrewarmedEncoderPools { get; }
     }
 }

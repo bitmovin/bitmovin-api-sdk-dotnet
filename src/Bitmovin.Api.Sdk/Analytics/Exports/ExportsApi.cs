@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Analytics.Exports
 {
+    /// <summary>
+    /// API for ExportsApi
+    /// </summary>
     public class ExportsApi
     {
         private readonly IExportsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the ExportsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public ExportsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IExportsApiClient>();
@@ -70,6 +77,9 @@ namespace Bitmovin.Api.Sdk.Analytics.Exports
             Task<Models.PaginationResponse<Models.AnalyticsExportTask>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

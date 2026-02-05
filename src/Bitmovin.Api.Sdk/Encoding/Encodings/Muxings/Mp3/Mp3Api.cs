@@ -9,10 +9,17 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp3.Information;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp3
 {
+    /// <summary>
+    /// API for Mp3Api
+    /// </summary>
     public class Mp3Api
     {
         private readonly IMp3ApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the Mp3Api class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public Mp3Api(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IMp3ApiClient>();
@@ -25,7 +32,13 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp3
         /// </summary>
         public static BitmovinApiBuilder<Mp3Api> Builder => new BitmovinApiBuilder<Mp3Api>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
+        /// <summary>
+        /// Gets the Information API
+        /// </summary>
         public InformationApi Information { get; }
 
         /// <summary>
@@ -94,6 +107,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp3
             Task<Models.PaginationResponse<Models.Mp3Muxing>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

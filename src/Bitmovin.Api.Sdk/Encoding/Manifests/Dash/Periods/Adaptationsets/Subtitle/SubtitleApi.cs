@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Subtitle
 {
+    /// <summary>
+    /// API for SubtitleApi
+    /// </summary>
     public class SubtitleApi
     {
         private readonly ISubtitleApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the SubtitleApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public SubtitleApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ISubtitleApiClient>();
@@ -91,6 +98,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Subtit
             Task<Models.PaginationResponse<Models.SubtitleAdaptationSet>> ListAsync([Path("manifest_id")] string manifestId, [Path("period_id")] string periodId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

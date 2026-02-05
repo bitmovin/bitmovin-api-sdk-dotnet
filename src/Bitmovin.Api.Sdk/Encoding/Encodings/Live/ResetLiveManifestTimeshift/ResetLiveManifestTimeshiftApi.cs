@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live.ResetLiveManifestTimeshift
 {
+    /// <summary>
+    /// API for ResetLiveManifestTimeshiftApi
+    /// </summary>
     public class ResetLiveManifestTimeshiftApi
     {
         private readonly IResetLiveManifestTimeshiftApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the ResetLiveManifestTimeshiftApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public ResetLiveManifestTimeshiftApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IResetLiveManifestTimeshiftApiClient>();

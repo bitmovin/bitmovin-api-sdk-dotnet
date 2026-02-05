@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Player.Channels.Versions.Latest;
 
 namespace Bitmovin.Api.Sdk.Player.Channels.Versions
 {
+    /// <summary>
+    /// API for VersionsApi
+    /// </summary>
     public class VersionsApi
     {
         private readonly IVersionsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the VersionsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public VersionsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IVersionsApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Player.Channels.Versions
         /// </summary>
         public static BitmovinApiBuilder<VersionsApi> Builder => new BitmovinApiBuilder<VersionsApi>();
 
+        /// <summary>
+        /// Gets the Latest API
+        /// </summary>
         public LatestApi Latest { get; }
 
         /// <summary>

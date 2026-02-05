@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Inputs.Aspera.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Inputs.Aspera
 {
+    /// <summary>
+    /// API for AsperaApi
+    /// </summary>
     public class AsperaApi
     {
         private readonly IAsperaApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the AsperaApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public AsperaApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IAsperaApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Aspera
         /// </summary>
         public static BitmovinApiBuilder<AsperaApi> Builder => new BitmovinApiBuilder<AsperaApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Aspera
             Task<Models.PaginationResponse<Models.AsperaInput>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

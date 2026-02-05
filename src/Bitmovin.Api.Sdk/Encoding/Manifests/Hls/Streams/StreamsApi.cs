@@ -9,10 +9,17 @@ using Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Streams.Iframe;
 
 namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Streams
 {
+    /// <summary>
+    /// API for StreamsApi
+    /// </summary>
     public class StreamsApi
     {
         private readonly IStreamsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the StreamsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public StreamsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IStreamsApiClient>();
@@ -25,7 +32,13 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Streams
         /// </summary>
         public static BitmovinApiBuilder<StreamsApi> Builder => new BitmovinApiBuilder<StreamsApi>();
 
+        /// <summary>
+        /// Gets the CustomTags API
+        /// </summary>
         public CustomTagsApi CustomTags { get; }
+        /// <summary>
+        /// Gets the Iframe API
+        /// </summary>
         public IframeApi Iframe { get; }
 
         /// <summary>
@@ -94,6 +107,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Streams
             Task<Models.PaginationResponse<Models.StreamInfo>> ListAsync([Path("manifest_id")] string manifestId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

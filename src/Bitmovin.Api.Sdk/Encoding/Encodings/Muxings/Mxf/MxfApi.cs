@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mxf.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mxf
 {
+    /// <summary>
+    /// API for MxfApi
+    /// </summary>
     public class MxfApi
     {
         private readonly IMxfApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the MxfApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public MxfApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IMxfApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mxf
         /// </summary>
         public static BitmovinApiBuilder<MxfApi> Builder => new BitmovinApiBuilder<MxfApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -91,6 +101,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mxf
             Task<Models.PaginationResponse<Models.MxfMuxing>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

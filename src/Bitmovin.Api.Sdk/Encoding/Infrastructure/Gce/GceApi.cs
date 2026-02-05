@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Infrastructure.Gce.Regions;
 
 namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Gce
 {
+    /// <summary>
+    /// API for GceApi
+    /// </summary>
     public class GceApi
     {
         private readonly IGceApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the GceApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public GceApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IGceApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Gce
         /// </summary>
         public static BitmovinApiBuilder<GceApi> Builder => new BitmovinApiBuilder<GceApi>();
 
+        /// <summary>
+        /// Gets the Regions API
+        /// </summary>
         public RegionsApi Regions { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Gce
             Task<Models.PaginationResponse<Models.GceAccount>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

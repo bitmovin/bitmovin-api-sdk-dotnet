@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Sprites.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Sprites
 {
+    /// <summary>
+    /// API for SpritesApi
+    /// </summary>
     public class SpritesApi
     {
         private readonly ISpritesApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the SpritesApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public SpritesApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ISpritesApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Sprites
         /// </summary>
         public static BitmovinApiBuilder<SpritesApi> Builder => new BitmovinApiBuilder<SpritesApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -95,6 +105,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Sprites
             Task<Models.PaginationResponse<Models.Sprite>> ListAsync([Path("encoding_id")] string encodingId, [Path("stream_id")] string streamId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

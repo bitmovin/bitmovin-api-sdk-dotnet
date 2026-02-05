@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class DefaultManifestAndCondition : DefaultManifestCondition
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "AND";
+#pragma warning restore CS0414
 
         /// <summary>
         /// Array to perform the AND evaluation on. This conditions evaluates to true if all sub conditions evaluate to true. 

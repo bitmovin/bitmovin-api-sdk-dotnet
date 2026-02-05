@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Filters.AudioMix.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Filters.AudioMix
 {
+    /// <summary>
+    /// API for AudioMixApi
+    /// </summary>
     public class AudioMixApi
     {
         private readonly IAudioMixApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the AudioMixApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public AudioMixApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IAudioMixApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.AudioMix
         /// </summary>
         public static BitmovinApiBuilder<AudioMixApi> Builder => new BitmovinApiBuilder<AudioMixApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.AudioMix
             Task<Models.PaginationResponse<Models.AudioMixFilter>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Configurations.Video.Av1.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Configurations.Video.Av1
 {
+    /// <summary>
+    /// API for Av1Api
+    /// </summary>
     public class Av1Api
     {
         private readonly IAv1ApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the Av1Api class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public Av1Api(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IAv1ApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Video.Av1
         /// </summary>
         public static BitmovinApiBuilder<Av1Api> Builder => new BitmovinApiBuilder<Av1Api>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Video.Av1
             Task<Models.PaginationResponse<Models.Av1VideoConfiguration>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class MarlinDrm : Drm
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "MARLIN";
+#pragma warning restore CS0414
 
         /// <summary>
         /// 16 byte key in hex (32 characters) (required)

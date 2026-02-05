@@ -10,10 +10,17 @@ using Bitmovin.Api.Sdk.Player.CustomBuilds.Web.Download;
 
 namespace Bitmovin.Api.Sdk.Player.CustomBuilds.Web
 {
+    /// <summary>
+    /// API for WebApi
+    /// </summary>
     public class WebApi
     {
         private readonly IWebApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the WebApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public WebApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IWebApiClient>();
@@ -27,8 +34,17 @@ namespace Bitmovin.Api.Sdk.Player.CustomBuilds.Web
         /// </summary>
         public static BitmovinApiBuilder<WebApi> Builder => new BitmovinApiBuilder<WebApi>();
 
+        /// <summary>
+        /// Gets the Domains API
+        /// </summary>
         public DomainsApi Domains { get; }
+        /// <summary>
+        /// Gets the Status API
+        /// </summary>
         public StatusApi Status { get; }
+        /// <summary>
+        /// Gets the Download API
+        /// </summary>
         public DownloadApi Download { get; }
 
         /// <summary>

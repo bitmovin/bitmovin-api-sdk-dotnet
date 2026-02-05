@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Player.CustomBuilds.Web.Status
 {
+    /// <summary>
+    /// API for StatusApi
+    /// </summary>
     public class StatusApi
     {
         private readonly IStatusApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the StatusApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public StatusApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IStatusApiClient>();

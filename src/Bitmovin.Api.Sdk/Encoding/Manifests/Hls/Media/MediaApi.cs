@@ -9,8 +9,15 @@ using Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media.ClosedCaptions;
 
 namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media
 {
+    /// <summary>
+    /// API for MediaApi
+    /// </summary>
     public class MediaApi
     {
+        /// <summary>
+        /// Initializes a new instance of the MediaApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public MediaApi(IBitmovinApiClientFactory apiClientFactory)
         {
             CustomTags = new CustomTagsApi(apiClientFactory);
@@ -27,12 +34,33 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media
         /// </summary>
         public static BitmovinApiBuilder<MediaApi> Builder => new BitmovinApiBuilder<MediaApi>();
 
+        /// <summary>
+        /// Gets the CustomTags API
+        /// </summary>
         public CustomTagsApi CustomTags { get; }
+        /// <summary>
+        /// Gets the Type API
+        /// </summary>
         public TypeApi Type { get; }
+        /// <summary>
+        /// Gets the Video API
+        /// </summary>
         public VideoApi Video { get; }
+        /// <summary>
+        /// Gets the Audio API
+        /// </summary>
         public AudioApi Audio { get; }
+        /// <summary>
+        /// Gets the Subtitles API
+        /// </summary>
         public SubtitlesApi Subtitles { get; }
+        /// <summary>
+        /// Gets the Vtt API
+        /// </summary>
         public VttApi Vtt { get; }
+        /// <summary>
+        /// Gets the ClosedCaptions API
+        /// </summary>
         public ClosedCaptionsApi ClosedCaptions { get; }
     }
 }

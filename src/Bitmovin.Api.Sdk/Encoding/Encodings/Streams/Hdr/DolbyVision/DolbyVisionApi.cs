@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Hdr.DolbyVision
 {
+    /// <summary>
+    /// API for DolbyVisionApi
+    /// </summary>
     public class DolbyVisionApi
     {
         private readonly IDolbyVisionApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the DolbyVisionApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public DolbyVisionApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IDolbyVisionApiClient>();
@@ -91,6 +98,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Hdr.DolbyVision
             Task<Models.PaginationResponse<Models.DolbyVisionMetadata>> ListAsync([Path("encoding_id")] string encodingId, [Path("stream_id")] string streamId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class MjpegVideoConfiguration : CodecConfiguration
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "MJPEG";
+#pragma warning restore CS0414
 
         /// <summary>
         /// Width of the encoded video

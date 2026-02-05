@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Video
 {
+    /// <summary>
+    /// API for VideoApi
+    /// </summary>
     public class VideoApi
     {
         private readonly IVideoApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the VideoApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public VideoApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IVideoApiClient>();
@@ -91,6 +98,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Video
             Task<Models.PaginationResponse<Models.VideoAdaptationSet>> ListAsync([Path("manifest_id")] string manifestId, [Path("period_id")] string periodId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

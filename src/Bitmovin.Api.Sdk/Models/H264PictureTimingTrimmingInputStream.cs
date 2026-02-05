@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class H264PictureTimingTrimmingInputStream : InputStream
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "TRIMMING_H264_PICTURE_TIMING";
+#pragma warning restore CS0414
 
         /// <summary>
         /// The id of the ingest input stream that should be trimmed

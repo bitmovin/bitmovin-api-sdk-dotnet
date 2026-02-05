@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Streams.Live.Start
 {
+    /// <summary>
+    /// API for StartApi
+    /// </summary>
     public class StartApi
     {
         private readonly IStartApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the StartApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public StartApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IStartApiClient>();

@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Live.StreamKeys.Actions;
 
 namespace Bitmovin.Api.Sdk.Encoding.Live.StreamKeys
 {
+    /// <summary>
+    /// API for StreamKeysApi
+    /// </summary>
     public class StreamKeysApi
     {
         private readonly IStreamKeysApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the StreamKeysApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public StreamKeysApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IStreamKeysApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Live.StreamKeys
         /// </summary>
         public static BitmovinApiBuilder<StreamKeysApi> Builder => new BitmovinApiBuilder<StreamKeysApi>();
 
+        /// <summary>
+        /// Gets the Actions API
+        /// </summary>
         public ActionsApi Actions { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Live.StreamKeys
             Task<Models.PaginationResponse<Models.StreamKey>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

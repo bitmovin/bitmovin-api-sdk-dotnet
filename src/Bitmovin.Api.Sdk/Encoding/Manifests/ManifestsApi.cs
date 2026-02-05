@@ -11,10 +11,17 @@ using Bitmovin.Api.Sdk.Encoding.Manifests.Smooth;
 
 namespace Bitmovin.Api.Sdk.Encoding.Manifests
 {
+    /// <summary>
+    /// API for ManifestsApi
+    /// </summary>
     public class ManifestsApi
     {
         private readonly IManifestsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the ManifestsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public ManifestsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IManifestsApiClient>();
@@ -29,9 +36,21 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests
         /// </summary>
         public static BitmovinApiBuilder<ManifestsApi> Builder => new BitmovinApiBuilder<ManifestsApi>();
 
+        /// <summary>
+        /// Gets the Type API
+        /// </summary>
         public TypeApi Type { get; }
+        /// <summary>
+        /// Gets the Dash API
+        /// </summary>
         public DashApi Dash { get; }
+        /// <summary>
+        /// Gets the Hls API
+        /// </summary>
         public HlsApi Hls { get; }
+        /// <summary>
+        /// Gets the Smooth API
+        /// </summary>
         public SmoothApi Smooth { get; }
 
         /// <summary>
@@ -57,6 +76,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests
             Task<Models.PaginationResponse<Models.Manifest>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

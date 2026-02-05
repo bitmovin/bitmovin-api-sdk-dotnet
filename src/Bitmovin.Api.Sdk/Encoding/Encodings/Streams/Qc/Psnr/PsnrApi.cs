@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Qc.Psnr
 {
+    /// <summary>
+    /// API for PsnrApi
+    /// </summary>
     public class PsnrApi
     {
         private readonly IPsnrApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the PsnrApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public PsnrApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IPsnrApiClient>();
@@ -60,6 +67,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Qc.Psnr
             Task<Models.PaginationResponse<Models.PsnrQualityMetric>> ListAsync([Path("encoding_id")] string encodingId, [Path("stream_id")] string streamId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

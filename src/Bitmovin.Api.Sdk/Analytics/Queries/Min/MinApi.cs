@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Analytics.Queries.Min
 {
+    /// <summary>
+    /// API for MinApi
+    /// </summary>
     public class MinApi
     {
         private readonly IMinApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the MinApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public MinApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IMinApiClient>();

@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class AesEncryptionDrm : Drm
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "AES";
+#pragma warning restore CS0414
 
         /// <summary>
         /// 16 byte Encryption key, 32 hexadecimal characters (required)

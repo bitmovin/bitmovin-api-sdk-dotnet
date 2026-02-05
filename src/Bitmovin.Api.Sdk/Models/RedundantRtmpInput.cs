@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class RedundantRtmpInput : Input
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "REDUNDANT_RTMP";
+#pragma warning restore CS0414
 
         /// <summary>
         /// When there is no input signal present and this threshold in seconds is reached it will switch to another ingest point

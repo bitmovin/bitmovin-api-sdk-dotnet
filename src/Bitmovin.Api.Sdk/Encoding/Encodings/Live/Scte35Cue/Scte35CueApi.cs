@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live.Scte35Cue
 {
+    /// <summary>
+    /// API for Scte35CueApi
+    /// </summary>
     public class Scte35CueApi
     {
         private readonly IScte35CueApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the Scte35CueApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public Scte35CueApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IScte35CueApiClient>();

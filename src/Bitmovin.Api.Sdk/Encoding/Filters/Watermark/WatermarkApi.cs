@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Filters.Watermark.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Filters.Watermark
 {
+    /// <summary>
+    /// API for WatermarkApi
+    /// </summary>
     public class WatermarkApi
     {
         private readonly IWatermarkApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the WatermarkApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public WatermarkApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IWatermarkApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Watermark
         /// </summary>
         public static BitmovinApiBuilder<WatermarkApi> Builder => new BitmovinApiBuilder<WatermarkApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Watermark
             Task<Models.PaginationResponse<Models.WatermarkFilter>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

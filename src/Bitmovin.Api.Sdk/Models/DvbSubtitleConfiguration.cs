@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class DvbSubtitleConfiguration : SubtitleConfiguration
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "DVB_SUBTITLE";
+#pragma warning restore CS0414
 
     }
 }

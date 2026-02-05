@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Representa
 
 namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Representations.Webm
 {
+    /// <summary>
+    /// API for WebmApi
+    /// </summary>
     public class WebmApi
     {
         private readonly IWebmApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the WebmApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public WebmApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IWebmApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Repres
         /// </summary>
         public static BitmovinApiBuilder<WebmApi> Builder => new BitmovinApiBuilder<WebmApi>();
 
+        /// <summary>
+        /// Gets the Contentprotection API
+        /// </summary>
         public ContentprotectionApi Contentprotection { get; }
 
         /// <summary>
@@ -99,6 +109,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Repres
             Task<Models.PaginationResponse<Models.DashWebmRepresentation>> ListAsync([Path("manifest_id")] string manifestId, [Path("period_id")] string periodId, [Path("adaptationset_id")] string adaptationsetId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

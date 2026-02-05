@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Account.Organizations.Groups.Tenants
 {
+    /// <summary>
+    /// API for TenantsApi
+    /// </summary>
     public class TenantsApi
     {
         private readonly ITenantsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the TenantsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public TenantsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ITenantsApiClient>();
@@ -91,6 +98,9 @@ namespace Bitmovin.Api.Sdk.Account.Organizations.Groups.Tenants
             Task<Models.PaginationResponse<Models.Tenant>> ListAsync([Path("organization_id")] string organizationId, [Path("group_id")] string groupId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Analytics.Metrics.AvgConcurrentviewers
 {
+    /// <summary>
+    /// API for AvgConcurrentviewersApi
+    /// </summary>
     public class AvgConcurrentviewersApi
     {
         private readonly IAvgConcurrentviewersApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the AvgConcurrentviewersApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public AvgConcurrentviewersApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IAvgConcurrentviewersApiClient>();

@@ -3,8 +3,15 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Qc.Psnr;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Qc
 {
+    /// <summary>
+    /// API for QcApi
+    /// </summary>
     public class QcApi
     {
+        /// <summary>
+        /// Initializes a new instance of the QcApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public QcApi(IBitmovinApiClientFactory apiClientFactory)
         {
             Psnr = new PsnrApi(apiClientFactory);
@@ -15,6 +22,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Qc
         /// </summary>
         public static BitmovinApiBuilder<QcApi> Builder => new BitmovinApiBuilder<QcApi>();
 
+        /// <summary>
+        /// Gets the Psnr API
+        /// </summary>
         public PsnrApi Psnr { get; }
     }
 }

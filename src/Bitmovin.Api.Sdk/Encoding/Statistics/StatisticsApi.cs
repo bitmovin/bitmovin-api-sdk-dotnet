@@ -11,10 +11,17 @@ using Bitmovin.Api.Sdk.Encoding.Statistics.Labels;
 
 namespace Bitmovin.Api.Sdk.Encoding.Statistics
 {
+    /// <summary>
+    /// API for StatisticsApi
+    /// </summary>
     public class StatisticsApi
     {
         private readonly IStatisticsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the StatisticsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public StatisticsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IStatisticsApiClient>();
@@ -29,9 +36,21 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics
         /// </summary>
         public static BitmovinApiBuilder<StatisticsApi> Builder => new BitmovinApiBuilder<StatisticsApi>();
 
+        /// <summary>
+        /// Gets the Cdn API
+        /// </summary>
         public CdnApi Cdn { get; }
+        /// <summary>
+        /// Gets the Daily API
+        /// </summary>
         public DailyApi Daily { get; }
+        /// <summary>
+        /// Gets the Encodings API
+        /// </summary>
         public EncodingsApi Encodings { get; }
+        /// <summary>
+        /// Gets the Labels API
+        /// </summary>
         public LabelsApi Labels { get; }
 
         /// <summary>
@@ -71,6 +90,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics
             Task<Models.PaginationResponse<Models.Statistics>> ListAsync([Path("from", Format = "yyyy-MM-dd")] DateTime? from, [Path("to", Format = "yyyy-MM-dd")] DateTime? to, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

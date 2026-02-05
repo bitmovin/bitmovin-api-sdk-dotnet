@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Speke.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Speke
 {
+    /// <summary>
+    /// API for SpekeApi
+    /// </summary>
     public class SpekeApi
     {
         private readonly ISpekeApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the SpekeApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public SpekeApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ISpekeApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Speke
         /// </summary>
         public static BitmovinApiBuilder<SpekeApi> Builder => new BitmovinApiBuilder<SpekeApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -95,6 +105,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Speke
             Task<Models.PaginationResponse<Models.SpekeDrm>> ListAsync([Path("encoding_id")] string encodingId, [Path("muxing_id")] string muxingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

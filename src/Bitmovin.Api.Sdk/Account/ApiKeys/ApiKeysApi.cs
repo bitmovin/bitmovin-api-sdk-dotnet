@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Account.ApiKeys
 {
+    /// <summary>
+    /// API for ApiKeysApi
+    /// </summary>
     public class ApiKeysApi
     {
         private readonly IApiKeysApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the ApiKeysApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public ApiKeysApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IApiKeysApiClient>();

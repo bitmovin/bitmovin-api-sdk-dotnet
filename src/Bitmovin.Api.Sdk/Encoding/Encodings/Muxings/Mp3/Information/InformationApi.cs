@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp3.Information
 {
+    /// <summary>
+    /// API for InformationApi
+    /// </summary>
     public class InformationApi
     {
         private readonly IInformationApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the InformationApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public InformationApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IInformationApiClient>();

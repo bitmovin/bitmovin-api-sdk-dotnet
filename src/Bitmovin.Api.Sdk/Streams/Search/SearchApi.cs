@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Streams.Search
 {
+    /// <summary>
+    /// API for SearchApi
+    /// </summary>
     public class SearchApi
     {
         private readonly ISearchApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the SearchApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public SearchApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ISearchApiClient>();
@@ -44,6 +51,9 @@ namespace Bitmovin.Api.Sdk.Streams.Search
             Task<Models.PaginationResponse<Models.StreamsResponse>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

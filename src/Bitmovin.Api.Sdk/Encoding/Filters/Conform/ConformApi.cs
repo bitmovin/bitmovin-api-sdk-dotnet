@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Filters.Conform.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Filters.Conform
 {
+    /// <summary>
+    /// API for ConformApi
+    /// </summary>
     public class ConformApi
     {
         private readonly IConformApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the ConformApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public ConformApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IConformApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Conform
         /// </summary>
         public static BitmovinApiBuilder<ConformApi> Builder => new BitmovinApiBuilder<ConformApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Conform
             Task<Models.PaginationResponse<Models.ConformFilter>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

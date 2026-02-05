@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Outputs.S3RoleBased.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Outputs.S3RoleBased
 {
+    /// <summary>
+    /// API for S3RoleBasedApi
+    /// </summary>
     public class S3RoleBasedApi
     {
         private readonly IS3RoleBasedApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the S3RoleBasedApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public S3RoleBasedApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IS3RoleBasedApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.S3RoleBased
         /// </summary>
         public static BitmovinApiBuilder<S3RoleBasedApi> Builder => new BitmovinApiBuilder<S3RoleBasedApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.S3RoleBased
             Task<Models.PaginationResponse<Models.S3RoleBasedOutput>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

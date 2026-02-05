@@ -6,8 +6,17 @@ using Newtonsoft.Json.Serialization;
 
 namespace Bitmovin.Api.Sdk.Common
 {
+    /// <summary>
+    /// Contract resolver that excludes empty collections from serialization
+    /// </summary>
     public class EmptyCollectionContractResolver : CamelCasePropertyNamesContractResolver
     {
+        /// <summary>
+        /// Creates a JSON property with custom serialization logic for empty collections
+        /// </summary>
+        /// <param name="member">The member info</param>
+        /// <param name="memberSerialization">The member serialization type</param>
+        /// <returns>The JSON property</returns>
         protected override JsonProperty CreateProperty(MemberInfo member, MemberSerialization memberSerialization) {
             JsonProperty property = base.CreateProperty(member, memberSerialization);
 

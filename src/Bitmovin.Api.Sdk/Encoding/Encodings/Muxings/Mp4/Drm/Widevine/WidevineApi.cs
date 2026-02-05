@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Widevine.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Widevine
 {
+    /// <summary>
+    /// API for WidevineApi
+    /// </summary>
     public class WidevineApi
     {
         private readonly IWidevineApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the WidevineApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public WidevineApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IWidevineApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Widevine
         /// </summary>
         public static BitmovinApiBuilder<WidevineApi> Builder => new BitmovinApiBuilder<WidevineApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -95,6 +105,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Widevine
             Task<Models.PaginationResponse<Models.WidevineDrm>> ListAsync([Path("encoding_id")] string encodingId, [Path("muxing_id")] string muxingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

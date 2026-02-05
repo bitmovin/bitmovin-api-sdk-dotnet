@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.PrewarmedEncoderPools.Schedules
 {
+    /// <summary>
+    /// API for SchedulesApi
+    /// </summary>
     public class SchedulesApi
     {
         private readonly ISchedulesApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the SchedulesApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public SchedulesApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ISchedulesApiClient>();
@@ -87,6 +94,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.PrewarmedEncoderPools.Schedul
             Task<Models.PaginationResponse<Models.PrewarmedEncoderPoolSchedule>> ListAsync([Path("pool_id")] string poolId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

@@ -10,10 +10,17 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4
 {
+    /// <summary>
+    /// API for Fmp4Api
+    /// </summary>
     public class Fmp4Api
     {
         private readonly IFmp4ApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the Fmp4Api class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public Fmp4Api(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IFmp4ApiClient>();
@@ -27,8 +34,17 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4
         /// </summary>
         public static BitmovinApiBuilder<Fmp4Api> Builder => new BitmovinApiBuilder<Fmp4Api>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
+        /// <summary>
+        /// Gets the Information API
+        /// </summary>
         public InformationApi Information { get; }
+        /// <summary>
+        /// Gets the Drm API
+        /// </summary>
         public DrmApi Drm { get; }
 
         /// <summary>
@@ -97,6 +113,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4
             Task<Models.PaginationResponse<Models.Fmp4Muxing>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Analytics.Ads.Queries.Percentile
 {
+    /// <summary>
+    /// API for PercentileApi
+    /// </summary>
     public class PercentileApi
     {
         private readonly IPercentileApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the PercentileApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public PercentileApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IPercentileApiClient>();

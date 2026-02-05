@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Webm.Customdata
 {
+    /// <summary>
+    /// API for CustomdataApi
+    /// </summary>
     public class CustomdataApi
     {
         private readonly ICustomdataApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the CustomdataApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public CustomdataApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ICustomdataApiClient>();

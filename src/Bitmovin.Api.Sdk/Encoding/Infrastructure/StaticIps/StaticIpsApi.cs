@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.StaticIps
 {
+    /// <summary>
+    /// API for StaticIpsApi
+    /// </summary>
     public class StaticIpsApi
     {
         private readonly IStaticIpsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the StaticIpsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public StaticIpsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IStaticIpsApiClient>();
@@ -83,6 +90,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.StaticIps
             Task<Models.PaginationResponse<Models.StaticIp>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

@@ -18,10 +18,17 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.DolbyVision;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams
 {
+    /// <summary>
+    /// API for InputStreamsApi
+    /// </summary>
     public class InputStreamsApi
     {
         private readonly IInputStreamsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the InputStreamsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public InputStreamsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IInputStreamsApiClient>();
@@ -43,16 +50,49 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams
         /// </summary>
         public static BitmovinApiBuilder<InputStreamsApi> Builder => new BitmovinApiBuilder<InputStreamsApi>();
 
+        /// <summary>
+        /// Gets the Type API
+        /// </summary>
         public TypeApi Type { get; }
+        /// <summary>
+        /// Gets the AudioMix API
+        /// </summary>
         public AudioMixApi AudioMix { get; }
+        /// <summary>
+        /// Gets the Ingest API
+        /// </summary>
         public IngestApi Ingest { get; }
+        /// <summary>
+        /// Gets the Sidecar API
+        /// </summary>
         public SidecarApi Sidecar { get; }
+        /// <summary>
+        /// Gets the Concatenation API
+        /// </summary>
         public ConcatenationApi Concatenation { get; }
+        /// <summary>
+        /// Gets the File API
+        /// </summary>
         public FileApi File { get; }
+        /// <summary>
+        /// Gets the Trimming API
+        /// </summary>
         public TrimmingApi Trimming { get; }
+        /// <summary>
+        /// Gets the Subtitles API
+        /// </summary>
         public SubtitlesApi Subtitles { get; }
+        /// <summary>
+        /// Gets the Captions API
+        /// </summary>
         public CaptionsApi Captions { get; }
+        /// <summary>
+        /// Gets the DolbyAtmos API
+        /// </summary>
         public DolbyAtmosApi DolbyAtmos { get; }
+        /// <summary>
+        /// Gets the DolbyVision API
+        /// </summary>
         public DolbyVisionApi DolbyVision { get; }
 
         /// <summary>
@@ -93,6 +133,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams
             Task<Models.PaginationResponse<Models.InputStream>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

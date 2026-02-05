@@ -9,10 +9,17 @@ using Bitmovin.Api.Sdk.Notifications.Emails.Encoding.Encodings.Error;
 
 namespace Bitmovin.Api.Sdk.Notifications.Emails.Encoding.Encodings
 {
+    /// <summary>
+    /// API for EncodingsApi
+    /// </summary>
     public class EncodingsApi
     {
         private readonly IEncodingsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the EncodingsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public EncodingsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IEncodingsApiClient>();
@@ -25,7 +32,13 @@ namespace Bitmovin.Api.Sdk.Notifications.Emails.Encoding.Encodings
         /// </summary>
         public static BitmovinApiBuilder<EncodingsApi> Builder => new BitmovinApiBuilder<EncodingsApi>();
 
+        /// <summary>
+        /// Gets the LiveInputStreamChanged API
+        /// </summary>
         public LiveInputStreamChangedApi LiveInputStreamChanged { get; }
+        /// <summary>
+        /// Gets the Error API
+        /// </summary>
         public ErrorApi Error { get; }
 
         /// <summary>
@@ -52,6 +65,9 @@ namespace Bitmovin.Api.Sdk.Notifications.Emails.Encoding.Encodings
             Task<Models.PaginationResponse<Models.EmailNotificationWithStreamConditions>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

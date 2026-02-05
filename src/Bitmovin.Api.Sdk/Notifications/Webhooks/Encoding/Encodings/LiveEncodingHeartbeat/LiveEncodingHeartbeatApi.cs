@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.LiveEncodingHeartbeat
 {
+    /// <summary>
+    /// API for LiveEncodingHeartbeatApi
+    /// </summary>
     public class LiveEncodingHeartbeatApi
     {
         private readonly ILiveEncodingHeartbeatApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the LiveEncodingHeartbeatApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public LiveEncodingHeartbeatApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<ILiveEncodingHeartbeatApiClient>();
@@ -83,6 +90,9 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.LiveEncodin
             Task<Models.PaginationResponse<Models.LiveEncodingHeartbeatWebhook>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

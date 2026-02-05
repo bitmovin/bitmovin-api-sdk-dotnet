@@ -5,8 +5,15 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Streams.BurnInSubtitles.Assa;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.BurnInSubtitles
 {
+    /// <summary>
+    /// API for BurnInSubtitlesApi
+    /// </summary>
     public class BurnInSubtitlesApi
     {
+        /// <summary>
+        /// Initializes a new instance of the BurnInSubtitlesApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public BurnInSubtitlesApi(IBitmovinApiClientFactory apiClientFactory)
         {
             Dvbsub = new DvbsubApi(apiClientFactory);
@@ -19,8 +26,17 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.BurnInSubtitles
         /// </summary>
         public static BitmovinApiBuilder<BurnInSubtitlesApi> Builder => new BitmovinApiBuilder<BurnInSubtitlesApi>();
 
+        /// <summary>
+        /// Gets the Dvbsub API
+        /// </summary>
         public DvbsubApi Dvbsub { get; }
+        /// <summary>
+        /// Gets the Srt API
+        /// </summary>
         public SrtApi Srt { get; }
+        /// <summary>
+        /// Gets the Assa API
+        /// </summary>
         public AssaApi Assa { get; }
     }
 }

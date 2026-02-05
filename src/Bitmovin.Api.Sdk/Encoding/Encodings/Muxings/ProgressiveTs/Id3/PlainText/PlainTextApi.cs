@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Id3.PlainText.Cu
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Id3.PlainText
 {
+    /// <summary>
+    /// API for PlainTextApi
+    /// </summary>
     public class PlainTextApi
     {
         private readonly IPlainTextApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the PlainTextApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public PlainTextApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IPlainTextApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Id3.PlainTex
         /// </summary>
         public static BitmovinApiBuilder<PlainTextApi> Builder => new BitmovinApiBuilder<PlainTextApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -95,6 +105,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Id3.PlainTex
             Task<Models.PaginationResponse<Models.PlaintextId3Tag>> ListAsync([Path("encoding_id")] string encodingId, [Path("muxing_id")] string muxingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

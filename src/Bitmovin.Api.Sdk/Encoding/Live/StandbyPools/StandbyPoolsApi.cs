@@ -10,10 +10,17 @@ using Bitmovin.Api.Sdk.Encoding.Live.StandbyPools.Logs;
 
 namespace Bitmovin.Api.Sdk.Encoding.Live.StandbyPools
 {
+    /// <summary>
+    /// API for StandbyPoolsApi
+    /// </summary>
     public class StandbyPoolsApi
     {
         private readonly IStandbyPoolsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the StandbyPoolsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public StandbyPoolsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IStandbyPoolsApiClient>();
@@ -27,8 +34,17 @@ namespace Bitmovin.Api.Sdk.Encoding.Live.StandbyPools
         /// </summary>
         public static BitmovinApiBuilder<StandbyPoolsApi> Builder => new BitmovinApiBuilder<StandbyPoolsApi>();
 
+        /// <summary>
+        /// Gets the Actions API
+        /// </summary>
         public ActionsApi Actions { get; }
+        /// <summary>
+        /// Gets the Encodings API
+        /// </summary>
         public EncodingsApi Encodings { get; }
+        /// <summary>
+        /// Gets the Logs API
+        /// </summary>
         public LogsApi Logs { get; }
 
         /// <summary>

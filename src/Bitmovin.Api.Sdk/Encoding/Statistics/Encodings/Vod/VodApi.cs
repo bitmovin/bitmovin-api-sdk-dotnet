@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.Vod.Daily;
 
 namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.Vod
 {
+    /// <summary>
+    /// API for VodApi
+    /// </summary>
     public class VodApi
     {
         private readonly IVodApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the VodApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public VodApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IVodApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.Vod
         /// </summary>
         public static BitmovinApiBuilder<VodApi> Builder => new BitmovinApiBuilder<VodApi>();
 
+        /// <summary>
+        /// Gets the Daily API
+        /// </summary>
         public DailyApi Daily { get; }
 
         /// <summary>
@@ -70,6 +80,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.Vod
             Task<Models.PaginationResponse<Models.EncodingStatisticsVod>> ListByDateRangeAsync([Path("from", Format = "yyyy-MM-dd")] DateTime? from, [Path("to", Format = "yyyy-MM-dd")] DateTime? to, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>
@@ -93,6 +106,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.Vod
             }
         }
 
+        /// <summary>
+        /// Query parameters for ListByDateRange
+        /// </summary>
         public class ListByDateRangeQueryParams : Dictionary<string,Object>
         {
             /// <summary>

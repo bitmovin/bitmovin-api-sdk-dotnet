@@ -19,10 +19,17 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Qc;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams
 {
+    /// <summary>
+    /// API for StreamsApi
+    /// </summary>
     public class StreamsApi
     {
         private readonly IStreamsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the StreamsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public StreamsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IStreamsApiClient>();
@@ -45,17 +52,53 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams
         /// </summary>
         public static BitmovinApiBuilder<StreamsApi> Builder => new BitmovinApiBuilder<StreamsApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
+        /// <summary>
+        /// Gets the Input API
+        /// </summary>
         public InputApi Input { get; }
+        /// <summary>
+        /// Gets the Inputs API
+        /// </summary>
         public InputsApi Inputs { get; }
+        /// <summary>
+        /// Gets the Filters API
+        /// </summary>
         public FiltersApi Filters { get; }
+        /// <summary>
+        /// Gets the BurnInSubtitles API
+        /// </summary>
         public BurnInSubtitlesApi BurnInSubtitles { get; }
+        /// <summary>
+        /// Gets the Watermarking API
+        /// </summary>
         public WatermarkingApi Watermarking { get; }
+        /// <summary>
+        /// Gets the Captions API
+        /// </summary>
         public CaptionsApi Captions { get; }
+        /// <summary>
+        /// Gets the Bifs API
+        /// </summary>
         public BifsApi Bifs { get; }
+        /// <summary>
+        /// Gets the Hdr API
+        /// </summary>
         public HdrApi Hdr { get; }
+        /// <summary>
+        /// Gets the Thumbnails API
+        /// </summary>
         public ThumbnailsApi Thumbnails { get; }
+        /// <summary>
+        /// Gets the Sprites API
+        /// </summary>
         public SpritesApi Sprites { get; }
+        /// <summary>
+        /// Gets the Qc API
+        /// </summary>
         public QcApi Qc { get; }
 
         /// <summary>
@@ -124,6 +167,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams
             Task<Models.PaginationResponse<Models.Stream>> ListAsync([Path("encoding_id")] string encodingId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

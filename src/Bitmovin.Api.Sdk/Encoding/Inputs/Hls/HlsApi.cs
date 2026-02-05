@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Inputs.Hls
 {
+    /// <summary>
+    /// API for HlsApi
+    /// </summary>
     public class HlsApi
     {
         private readonly IHlsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the HlsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public HlsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IHlsApiClient>();
@@ -83,6 +90,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Hls
             Task<Models.PaginationResponse<Models.HlsInput>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

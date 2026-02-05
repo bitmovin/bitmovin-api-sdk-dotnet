@@ -16,7 +16,9 @@ namespace Bitmovin.Api.Sdk.Models
     public class ImscConfiguration : SubtitleConfiguration
     {
         [JsonProperty(PropertyName = "type")]
+#pragma warning disable CS0414
         private readonly string _type = "IMSC";
+#pragma warning restore CS0414
 
         /// <summary>
         /// Styling

@@ -7,10 +7,17 @@ using Bitmovin.Api.Sdk.Common;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.BurnInSubtitles.Dvbsub
 {
+    /// <summary>
+    /// API for DvbsubApi
+    /// </summary>
     public class DvbsubApi
     {
         private readonly IDvbsubApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the DvbsubApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public DvbsubApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IDvbsubApiClient>();
@@ -91,6 +98,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.BurnInSubtitles.Dvbsub
             Task<Models.PaginationResponse<Models.BurnInSubtitleDvbSub>> ListAsync([Path("encoding_id")] string encodingId, [Path("stream_id")] string streamId, [QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>

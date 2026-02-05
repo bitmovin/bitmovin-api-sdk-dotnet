@@ -13,10 +13,17 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Speke;
 
 namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm
 {
+    /// <summary>
+    /// API for DrmApi
+    /// </summary>
     public class DrmApi
     {
         private readonly IDrmApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the DrmApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public DrmApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IDrmApiClient>();
@@ -33,11 +40,29 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm
         /// </summary>
         public static BitmovinApiBuilder<DrmApi> Builder => new BitmovinApiBuilder<DrmApi>();
 
+        /// <summary>
+        /// Gets the Playready API
+        /// </summary>
         public PlayreadyApi Playready { get; }
+        /// <summary>
+        /// Gets the Clearkey API
+        /// </summary>
         public ClearkeyApi Clearkey { get; }
+        /// <summary>
+        /// Gets the Widevine API
+        /// </summary>
         public WidevineApi Widevine { get; }
+        /// <summary>
+        /// Gets the Marlin API
+        /// </summary>
         public MarlinApi Marlin { get; }
+        /// <summary>
+        /// Gets the Cenc API
+        /// </summary>
         public CencApi Cenc { get; }
+        /// <summary>
+        /// Gets the Speke API
+        /// </summary>
         public SpekeApi Speke { get; }
 
         /// <summary>

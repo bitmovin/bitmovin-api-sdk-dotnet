@@ -8,10 +8,17 @@ using Bitmovin.Api.Sdk.Encoding.Filters.AzureSpeechToCaptions.Customdata;
 
 namespace Bitmovin.Api.Sdk.Encoding.Filters.AzureSpeechToCaptions
 {
+    /// <summary>
+    /// API for AzureSpeechToCaptionsApi
+    /// </summary>
     public class AzureSpeechToCaptionsApi
     {
         private readonly IAzureSpeechToCaptionsApiClient _apiClient;
 
+        /// <summary>
+        /// Initializes a new instance of the AzureSpeechToCaptionsApi class
+        /// </summary>
+        /// <param name="apiClientFactory">The API client factory</param>
         public AzureSpeechToCaptionsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             _apiClient = apiClientFactory.CreateClient<IAzureSpeechToCaptionsApiClient>();
@@ -23,6 +30,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.AzureSpeechToCaptions
         /// </summary>
         public static BitmovinApiBuilder<AzureSpeechToCaptionsApi> Builder => new BitmovinApiBuilder<AzureSpeechToCaptionsApi>();
 
+        /// <summary>
+        /// Gets the Customdata API
+        /// </summary>
         public CustomdataApi Customdata { get; }
 
         /// <summary>
@@ -87,6 +97,9 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.AzureSpeechToCaptions
             Task<Models.PaginationResponse<Models.AzureSpeechToCaptionsFilter>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
         }
 
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
         public class ListQueryParams : Dictionary<string,Object>
         {
             /// <summary>
