@@ -1,4 +1,6 @@
 using Bitmovin.Api.Sdk.Common;
+using Bitmovin.Api.Sdk.Encoding.Live.Encodings;
+using Bitmovin.Api.Sdk.Encoding.Live.DnsMappings;
 using Bitmovin.Api.Sdk.Encoding.Live.StreamKeys;
 using Bitmovin.Api.Sdk.Encoding.Live.StandbyPools;
 
@@ -15,6 +17,8 @@ namespace Bitmovin.Api.Sdk.Encoding.Live
         /// <param name="apiClientFactory">The API client factory</param>
         public LiveApi(IBitmovinApiClientFactory apiClientFactory)
         {
+            Encodings = new EncodingsApi(apiClientFactory);
+            DnsMappings = new DnsMappingsApi(apiClientFactory);
             StreamKeys = new StreamKeysApi(apiClientFactory);
             StandbyPools = new StandbyPoolsApi(apiClientFactory);
         }
@@ -24,6 +28,14 @@ namespace Bitmovin.Api.Sdk.Encoding.Live
         /// </summary>
         public static BitmovinApiBuilder<LiveApi> Builder => new BitmovinApiBuilder<LiveApi>();
 
+        /// <summary>
+        /// Gets the Encodings API
+        /// </summary>
+        public EncodingsApi Encodings { get; }
+        /// <summary>
+        /// Gets the DnsMappings API
+        /// </summary>
+        public DnsMappingsApi DnsMappings { get; }
         /// <summary>
         /// Gets the StreamKeys API
         /// </summary>
