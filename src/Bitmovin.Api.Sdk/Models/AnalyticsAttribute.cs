@@ -404,6 +404,66 @@ namespace Bitmovin.Api.Sdk.Models
         CUSTOM_DATA_50,
 
         /// <summary>
+        /// CUSTOM_DATA_51
+        /// </summary>
+        [EnumMember(Value = "CUSTOM_DATA_51")]
+        CUSTOM_DATA_51,
+
+        /// <summary>
+        /// CUSTOM_DATA_52
+        /// </summary>
+        [EnumMember(Value = "CUSTOM_DATA_52")]
+        CUSTOM_DATA_52,
+
+        /// <summary>
+        /// CUSTOM_DATA_53
+        /// </summary>
+        [EnumMember(Value = "CUSTOM_DATA_53")]
+        CUSTOM_DATA_53,
+
+        /// <summary>
+        /// CUSTOM_DATA_54
+        /// </summary>
+        [EnumMember(Value = "CUSTOM_DATA_54")]
+        CUSTOM_DATA_54,
+
+        /// <summary>
+        /// CUSTOM_DATA_55
+        /// </summary>
+        [EnumMember(Value = "CUSTOM_DATA_55")]
+        CUSTOM_DATA_55,
+
+        /// <summary>
+        /// CUSTOM_DATA_56
+        /// </summary>
+        [EnumMember(Value = "CUSTOM_DATA_56")]
+        CUSTOM_DATA_56,
+
+        /// <summary>
+        /// CUSTOM_DATA_57
+        /// </summary>
+        [EnumMember(Value = "CUSTOM_DATA_57")]
+        CUSTOM_DATA_57,
+
+        /// <summary>
+        /// CUSTOM_DATA_58
+        /// </summary>
+        [EnumMember(Value = "CUSTOM_DATA_58")]
+        CUSTOM_DATA_58,
+
+        /// <summary>
+        /// CUSTOM_DATA_59
+        /// </summary>
+        [EnumMember(Value = "CUSTOM_DATA_59")]
+        CUSTOM_DATA_59,
+
+        /// <summary>
+        /// CUSTOM_DATA_60
+        /// </summary>
+        [EnumMember(Value = "CUSTOM_DATA_60")]
+        CUSTOM_DATA_60,
+
+        /// <summary>
         /// CUSTOM_USER_ID
         /// </summary>
         [EnumMember(Value = "CUSTOM_USER_ID")]
@@ -540,6 +600,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [EnumMember(Value = "IS_MUTED")]
         IS_MUTED,
+
+        /// <summary>
+        /// IS_PROGRAM_CHANGE
+        /// </summary>
+        [EnumMember(Value = "IS_PROGRAM_CHANGE")]
+        IS_PROGRAM_CHANGE,
 
         /// <summary>
         /// ISP

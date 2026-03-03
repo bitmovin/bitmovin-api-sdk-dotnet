@@ -17,6 +17,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// Dolby Atmos input format is ADM (Audio Definition Model), usually a .wav file
         /// </summary>
         [EnumMember(Value = "ADM")]
-        ADM
+        ADM,
+
+        /// <summary>
+        /// MXF
+        /// </summary>
+        [EnumMember(Value = "MXF")]
+        MXF
     }
 }

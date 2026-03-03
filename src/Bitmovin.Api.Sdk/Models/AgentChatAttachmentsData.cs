@@ -11,20 +11,14 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// AdPosition
+    /// AgentChatAttachmentsData
     /// </summary>
-    public class AdPosition
+    public class AgentChatAttachmentsData
     {
         /// <summary>
-        /// Position
+        /// Attachment list (required)
         /// </summary>
-        [JsonProperty(PropertyName = "position")]
-        public double? Position { get; set; }
-
-        /// <summary>
-        /// Duration
-        /// </summary>
-        [JsonProperty(PropertyName = "duration")]
-        public double? Duration { get; set; }
+        [JsonProperty(PropertyName = "attachments")]
+        public List<AgentChatAttachment> Attachments { get; set; } = new List<AgentChatAttachment>();
     }
 }
