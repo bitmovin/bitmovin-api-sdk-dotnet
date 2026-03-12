@@ -26,17 +26,5 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "binary")]
         public string Binary { get; set; }
-
-        /// <summary>
-        /// Interval in ISO 8601 duration format for which the signal should be repeated.  A signal may be specified as repeating when the interval and end attributes are present.  In this case, the signal is executed at the time specified by offset and again at the time  specified by adding interval to offset. This should be continued until reaching the duration  of offset + end. 
-        /// </summary>
-        [JsonProperty(PropertyName = "interval")]
-        public string Interval { get; set; }
-
-        /// <summary>
-        /// End duration in ISO 8601 duration format when a repeated signal should stop being repeated
-        /// </summary>
-        [JsonProperty(PropertyName = "end")]
-        public string End { get; set; }
     }
 }

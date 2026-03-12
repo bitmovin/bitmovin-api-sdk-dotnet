@@ -26,11 +26,5 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "signals")]
         public List<EsamSignal> Signals { get; set; } = new List<EsamSignal>();
-
-        /// <summary>
-        /// Optional array of ESAM conditions with timing offsets and directional markers (OUT/IN) for signaling content boundaries
-        /// </summary>
-        [JsonProperty(PropertyName = "conditions")]
-        public List<EsamCondition> Conditions { get; set; } = new List<EsamCondition>();
     }
 }
