@@ -55,5 +55,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "signatureVersion")]
         public S3SignatureVersion? SignatureVersion { get; set; }
+
+        /// <summary>
+        /// Specifies the storage class used for the bucket. This depends on the requirements of workloads, like performance, data access, resiliency, and cost.
+        /// </summary>
+        [JsonProperty(PropertyName = "storageClass")]
+        public S3StorageClass? StorageClass { get; set; }
     }
 }

@@ -16,6 +16,7 @@ namespace Bitmovin.Api.Sdk.Models
     [JsonConverter(typeof(JsonSubtypes), "type")]
     [JsonSubtypes.KnownSubType(typeof(AgentChatTextPart), "text")]
     [JsonSubtypes.KnownSubType(typeof(AgentChatAttachmentsPart), "data-attachments")]
+    [JsonSubtypes.KnownSubType(typeof(AgentChatDynamicToolPart), "dynamic-tool")]
 
     public class AgentChatMessagePart
     {

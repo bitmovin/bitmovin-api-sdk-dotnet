@@ -17,6 +17,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// DATA_ATTACHMENTS
         /// </summary>
         [EnumMember(Value = "data-attachments")]
-        DATA_ATTACHMENTS
+        DATA_ATTACHMENTS,
+
+        /// <summary>
+        /// DYNAMIC_TOOL
+        /// </summary>
+        [EnumMember(Value = "dynamic-tool")]
+        DYNAMIC_TOOL
     }
 }
