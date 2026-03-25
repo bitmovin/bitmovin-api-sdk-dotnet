@@ -20,5 +20,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "schedule")]
         public List<AutomaticAdPlacementPosition> Schedule { get; set; } = new List<AutomaticAdPlacementPosition>();
+
+        /// <summary>
+        /// Configuration for placing keyframes and optional cue tags at every detected scene boundary. 
+        /// </summary>
+        [JsonProperty(PropertyName = "allSceneBoundaries")]
+        public AllSceneBoundaries AllSceneBoundaries { get; set; }
     }
 }
