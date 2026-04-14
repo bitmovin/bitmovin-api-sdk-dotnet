@@ -1,5 +1,6 @@
 using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Agents.Aisa;
+using Bitmovin.Api.Sdk.Agents.Assistant;
 
 namespace Bitmovin.Api.Sdk.Agents
 {
@@ -15,6 +16,7 @@ namespace Bitmovin.Api.Sdk.Agents
         public AgentsApi(IBitmovinApiClientFactory apiClientFactory)
         {
             Aisa = new AisaApi(apiClientFactory);
+            Assistant = new AssistantApi(apiClientFactory);
         }
 
         /// <summary>
@@ -26,5 +28,9 @@ namespace Bitmovin.Api.Sdk.Agents
         /// Gets the Aisa API
         /// </summary>
         public AisaApi Aisa { get; }
+        /// <summary>
+        /// Gets the Assistant API
+        /// </summary>
+        public AssistantApi Assistant { get; }
     }
 }

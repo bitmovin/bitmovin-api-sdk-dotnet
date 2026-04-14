@@ -22,6 +22,12 @@ namespace Bitmovin.Api.Sdk.Models
         public List<Scene> Scenes { get; set; } = new List<Scene>();
 
         /// <summary>
+        /// Duration
+        /// </summary>
+        [JsonProperty(PropertyName = "duration")]
+        public decimal? Duration { get; set; }
+
+        /// <summary>
         /// Description
         /// </summary>
         [JsonProperty(PropertyName = "description")]
@@ -50,6 +56,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "iabSensitiveTopicTaxonomies")]
         public List<string> IabSensitiveTopicTaxonomies { get; set; } = new List<string>();
+
+        /// <summary>
+        /// InputLanguageCodes
+        /// </summary>
+        [JsonProperty(PropertyName = "inputLanguageCodes")]
+        public List<string> InputLanguageCodes { get; set; } = new List<string>();
 
         /// <summary>
         /// Metadata
