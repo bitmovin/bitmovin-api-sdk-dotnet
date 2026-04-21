@@ -88,6 +88,18 @@ namespace Bitmovin.Api.Sdk.Models
         public double? KeyFrameIntervalAvg { get; set; }
 
         /// <summary>
+        /// Largest key-frame interval observed over the last minute, in milliseconds. Absent until the rolling window has at least one sample.
+        /// </summary>
+        [JsonProperty(PropertyName = "keyFrameIntervalMaxLastMinute")]
+        public int? KeyFrameIntervalMaxLastMinute { get; set; }
+
+        /// <summary>
+        /// Average key-frame interval over the last minute, in milliseconds. Absent until the rolling window has at least one sample.
+        /// </summary>
+        [JsonProperty(PropertyName = "keyFrameIntervalAvgLastMinute")]
+        public double? KeyFrameIntervalAvgLastMinute { get; set; }
+
+        /// <summary>
         /// Last presentation timestamp (PTS) of the stream.
         /// </summary>
         [JsonProperty(PropertyName = "lastTimestamp")]
