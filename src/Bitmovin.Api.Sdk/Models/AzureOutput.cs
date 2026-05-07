@@ -27,10 +27,16 @@ namespace Bitmovin.Api.Sdk.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// Azure Account Key (required)
+        /// Azure Account Key
         /// </summary>
         [JsonProperty(PropertyName = "accountKey")]
         public string AccountKey { get; set; }
+
+        /// <summary>
+        /// ServicePrincipal
+        /// </summary>
+        [JsonProperty(PropertyName = "servicePrincipal")]
+        public AzureServicePrincipal ServicePrincipal { get; set; }
 
         /// <summary>
         /// Name of the bucket (required)

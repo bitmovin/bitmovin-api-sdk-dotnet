@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// Alignmet mode for PTS
+    /// Alignment mode for PTS
     /// </summary>
     public enum PTSAlignMode
     {

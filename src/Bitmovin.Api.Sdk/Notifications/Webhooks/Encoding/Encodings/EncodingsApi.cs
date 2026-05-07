@@ -2,6 +2,7 @@ using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.Finished;
 using Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.Error;
 using Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.LiveEncodingHeartbeat;
+using Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.LiveManifestReady;
 using Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.TransferError;
 using Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.LiveInputStreamChanged;
 using Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.EncodingStatusChanged;
@@ -22,6 +23,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings
             Finished = new FinishedApi(apiClientFactory);
             Error = new ErrorApi(apiClientFactory);
             LiveEncodingHeartbeat = new LiveEncodingHeartbeatApi(apiClientFactory);
+            LiveManifestReady = new LiveManifestReadyApi(apiClientFactory);
             TransferError = new TransferErrorApi(apiClientFactory);
             LiveInputStreamChanged = new LiveInputStreamChangedApi(apiClientFactory);
             EncodingStatusChanged = new EncodingStatusChangedApi(apiClientFactory);
@@ -44,6 +46,10 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings
         /// Gets the LiveEncodingHeartbeat API
         /// </summary>
         public LiveEncodingHeartbeatApi LiveEncodingHeartbeat { get; }
+        /// <summary>
+        /// Gets the LiveManifestReady API
+        /// </summary>
+        public LiveManifestReadyApi LiveManifestReady { get; }
         /// <summary>
         /// Gets the TransferError API
         /// </summary>
