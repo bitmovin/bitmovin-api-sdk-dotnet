@@ -836,6 +836,12 @@ namespace Bitmovin.Api.Sdk.Models
         IS_LINEAR,
 
         /// <summary>
+        /// IS_SLATE
+        /// </summary>
+        [EnumMember(Value = "IS_SLATE")]
+        IS_SLATE,
+
+        /// <summary>
         /// ISP
         /// </summary>
         [EnumMember(Value = "ISP")]

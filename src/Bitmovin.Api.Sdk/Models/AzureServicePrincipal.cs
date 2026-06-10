@@ -11,7 +11,7 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// Azure service principal credentials for Microsoft Entra ID authentication
+    /// Azure service principal credentials for Microsoft Entra ID authentication. This authentication method is usable from encoder version 2.273.0 onwards.
     /// </summary>
     public class AzureServicePrincipal
     {

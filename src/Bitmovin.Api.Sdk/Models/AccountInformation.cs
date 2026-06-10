@@ -80,5 +80,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "samlDomain")]
         public string SamlDomain { get; internal set; }
+
+        /// <summary>
+        /// Whether the user has accepted the Terms of Service. Users created via SAML SSO start as &#x60;false&#x60; because the SAML flow bypasses the registration form that normally captures TOS acceptance; all other signup paths default to &#x60;true&#x60;. Acceptance is one-way: sending &#x60;true&#x60; accepts the TOS, sending &#x60;false&#x60; is ignored.
+        /// </summary>
+        [JsonProperty(PropertyName = "tosAccepted")]
+        public bool? TosAccepted { get; set; }
     }
 }

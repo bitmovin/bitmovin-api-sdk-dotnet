@@ -44,5 +44,29 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "rtmpUserIngestInfo")]
         public RtmpUserIngestInfo RtmpUserIngestInfo { get; set; }
+
+        /// <summary>
+        /// Total number of dropped video packets since the live encoding started. 
+        /// </summary>
+        [JsonProperty(PropertyName = "droppedPacketsVideo")]
+        public long? DroppedPacketsVideo { get; set; }
+
+        /// <summary>
+        /// Total number of dropped audio packets since the live encoding started. 
+        /// </summary>
+        [JsonProperty(PropertyName = "droppedPacketsAudio")]
+        public long? DroppedPacketsAudio { get; set; }
+
+        /// <summary>
+        /// Total number of corrupt video packets since the live encoding started. 
+        /// </summary>
+        [JsonProperty(PropertyName = "corruptPacketsVideo")]
+        public long? CorruptPacketsVideo { get; set; }
+
+        /// <summary>
+        /// Total number of corrupt audio packets since the live encoding started. 
+        /// </summary>
+        [JsonProperty(PropertyName = "corruptPacketsAudio")]
+        public long? CorruptPacketsAudio { get; set; }
     }
 }
