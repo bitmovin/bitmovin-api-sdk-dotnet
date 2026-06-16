@@ -7,6 +7,7 @@ using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Live.Esam;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Live.ResetLiveManifestTimeshift;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Live.Heartbeat;
+using Bitmovin.Api.Sdk.Encoding.Encodings.Live.HeartbeatFinal;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Live.Hd;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Live.InsertableContent;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Live.Scte35Cue;
@@ -30,6 +31,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live
             Esam = new EsamApi(apiClientFactory);
             ResetLiveManifestTimeshift = new ResetLiveManifestTimeshiftApi(apiClientFactory);
             Heartbeat = new HeartbeatApi(apiClientFactory);
+            HeartbeatFinal = new HeartbeatFinalApi(apiClientFactory);
             Hd = new HdApi(apiClientFactory);
             InsertableContent = new InsertableContentApi(apiClientFactory);
             Scte35Cue = new Scte35CueApi(apiClientFactory);
@@ -52,6 +54,10 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live
         /// Gets the Heartbeat API
         /// </summary>
         public HeartbeatApi Heartbeat { get; }
+        /// <summary>
+        /// Gets the HeartbeatFinal API
+        /// </summary>
+        public HeartbeatFinalApi HeartbeatFinal { get; }
         /// <summary>
         /// Gets the Hd API
         /// </summary>
