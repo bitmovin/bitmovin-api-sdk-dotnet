@@ -113,12 +113,12 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Webm.Drm.Cenc
             /// <summary>
             /// Index of the first item to return, starting at 0. Default is 0
             /// </summary>
-            public ListQueryParams Offset(string offset) => SetQueryParam("offset", offset);
+            public ListQueryParams Offset(int? offset) => SetQueryParam("offset", offset);
 
             /// <summary>
             /// Maximum number of items to return. Default is 25, maximum is 100
             /// </summary>
-            public ListQueryParams Limit(string limit) => SetQueryParam("limit", limit);
+            public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
 
             private ListQueryParams SetQueryParam<T>(string key, T value)
             {

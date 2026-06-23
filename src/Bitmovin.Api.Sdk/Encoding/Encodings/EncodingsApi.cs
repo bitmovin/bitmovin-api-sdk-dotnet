@@ -10,7 +10,6 @@ using Bitmovin.Api.Sdk.Encoding.Encodings.Streams;
 using Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Muxings;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Template;
-using Bitmovin.Api.Sdk.Encoding.Encodings.TransferRetries;
 using Bitmovin.Api.Sdk.Encoding.Encodings.OutputPaths;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Captions;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Sidecars;
@@ -40,7 +39,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings
             InputStreams = new InputStreamsApi(apiClientFactory);
             Muxings = new MuxingsApi(apiClientFactory);
             Template = new TemplateApi(apiClientFactory);
-            TransferRetries = new TransferRetriesApi(apiClientFactory);
             OutputPaths = new OutputPathsApi(apiClientFactory);
             Captions = new CaptionsApi(apiClientFactory);
             Sidecars = new SidecarsApi(apiClientFactory);
@@ -78,10 +76,6 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings
         /// Gets the Template API
         /// </summary>
         public TemplateApi Template { get; }
-        /// <summary>
-        /// Gets the TransferRetries API
-        /// </summary>
-        public TransferRetriesApi TransferRetries { get; }
         /// <summary>
         /// Gets the OutputPaths API
         /// </summary>
