@@ -29,6 +29,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// Three pass encoding for best quality (this only works for VoD workflows)
         /// </summary>
         [EnumMember(Value = "THREE_PASS")]
-        THREE_PASS
+        THREE_PASS,
+
+        /// <summary>
+        /// Smart pass encoding
+        /// </summary>
+        [EnumMember(Value = "SMART_PASS")]
+        SMART_PASS
     }
 }

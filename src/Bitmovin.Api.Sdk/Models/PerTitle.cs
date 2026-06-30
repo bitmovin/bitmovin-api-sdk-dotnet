@@ -38,5 +38,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "av1Configuration")]
         public Av1PerTitleConfiguration Av1Configuration { get; set; }
+
+        /// <summary>
+        /// Per-Title configuration for H265 V2
+        /// </summary>
+        [JsonProperty(PropertyName = "h265V2Configuration")]
+        public H265V2PerTitleConfiguration H265V2Configuration { get; set; }
     }
 }
