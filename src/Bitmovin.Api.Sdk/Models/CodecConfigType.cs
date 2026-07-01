@@ -167,6 +167,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// DVB_SUBTITLE
         /// </summary>
         [EnumMember(Value = "DVB_SUBTITLE")]
-        DVB_SUBTITLE
+        DVB_SUBTITLE,
+
+        /// <summary>
+        /// H265V2
+        /// </summary>
+        [EnumMember(Value = "H265V2")]
+        H265V2
     }
 }

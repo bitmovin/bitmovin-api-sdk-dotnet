@@ -2,6 +2,7 @@ using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Encoding.Configurations.Video.H262;
 using Bitmovin.Api.Sdk.Encoding.Configurations.Video.H264;
 using Bitmovin.Api.Sdk.Encoding.Configurations.Video.H265;
+using Bitmovin.Api.Sdk.Encoding.Configurations.Video.H265v2;
 using Bitmovin.Api.Sdk.Encoding.Configurations.Video.Vp8;
 using Bitmovin.Api.Sdk.Encoding.Configurations.Video.Vp9;
 using Bitmovin.Api.Sdk.Encoding.Configurations.Video.Av1;
@@ -23,6 +24,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Video
             H262 = new H262Api(apiClientFactory);
             H264 = new H264Api(apiClientFactory);
             H265 = new H265Api(apiClientFactory);
+            H265v2 = new H265v2Api(apiClientFactory);
             Vp8 = new Vp8Api(apiClientFactory);
             Vp9 = new Vp9Api(apiClientFactory);
             Av1 = new Av1Api(apiClientFactory);
@@ -46,6 +48,10 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Video
         /// Gets the H265 API
         /// </summary>
         public H265Api H265 { get; }
+        /// <summary>
+        /// Gets the H265v2 API
+        /// </summary>
+        public H265v2Api H265v2 { get; }
         /// <summary>
         /// Gets the Vp8 API
         /// </summary>

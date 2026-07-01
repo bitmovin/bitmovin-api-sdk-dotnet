@@ -32,5 +32,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "events")]
         public List<LiveEncodingHeartbeatEvent> Events { get; set; } = new List<LiveEncodingHeartbeatEvent>();
+
+        /// <summary>
+        /// Output statistics for the live encoding 
+        /// </summary>
+        [JsonProperty(PropertyName = "output")]
+        public LiveEncodingHeartbeatOutput Output { get; set; }
     }
 }
