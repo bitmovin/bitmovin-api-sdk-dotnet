@@ -21,34 +21,34 @@ namespace Bitmovin.Api.Sdk.Models
 #pragma warning restore CS0414
 
         /// <summary>
-        /// HVS-based perceptual encoding mode (0:off 1:cudqp 2:+quant).
+        /// HVS-based perceptual encoding mode.
         /// </summary>
-        [JsonProperty(PropertyName = "percept")]
-        public int? Percept { get; set; }
+        [JsonProperty(PropertyName = "perceptualEncodingMode")]
+        public H265V2PerceptualEncodingMode? PerceptualEncodingMode { get; set; }
 
         /// <summary>
         /// Overall strength of perceptual model (0.0-1.0).
         /// </summary>
-        [JsonProperty(PropertyName = "percStr")]
-        public double? PercStr { get; set; }
+        [JsonProperty(PropertyName = "perceptualStrength")]
+        public double? PerceptualStrength { get; set; }
 
         /// <summary>
         /// Strength of penalties from perceptual model (0.0-1.0).
         /// </summary>
-        [JsonProperty(PropertyName = "percPenaltyStr")]
-        public double? PercPenaltyStr { get; set; }
+        [JsonProperty(PropertyName = "perceptualPenaltyStrength")]
+        public double? PerceptualPenaltyStrength { get; set; }
 
         /// <summary>
         /// Knee point of penalty strength modulation (0.0-1.0).
         /// </summary>
-        [JsonProperty(PropertyName = "percPenaltyKnee")]
-        public double? PercPenaltyKnee { get; set; }
+        [JsonProperty(PropertyName = "perceptualPenaltyKnee")]
+        public double? PerceptualPenaltyKnee { get; set; }
 
         /// <summary>
         /// Strength of temporal component of perceptual model (0.0-1.0).
         /// </summary>
-        [JsonProperty(PropertyName = "percTemporalStr")]
-        public double? PercTemporalStr { get; set; }
+        [JsonProperty(PropertyName = "perceptualTemporalStrength")]
+        public double? PerceptualTemporalStrength { get; set; }
 
         /// <summary>
         /// Pixels per degree (horizontal), i.e. width / FOV.
