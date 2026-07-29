@@ -11,20 +11,20 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// InputFactorCodec
+    /// Song
     /// </summary>
-    public class InputFactorCodec
+    public class Song
     {
         /// <summary>
-        /// Value
+        /// Name
         /// </summary>
-        [JsonProperty(PropertyName = "value")]
-        public string Value { get; set; }
+        [JsonProperty(PropertyName = "name")]
+        public string Name { get; set; }
 
         /// <summary>
-        /// Factor
+        /// Artist
         /// </summary>
-        [JsonProperty(PropertyName = "factor")]
-        public double? Factor { get; set; }
+        [JsonProperty(PropertyName = "artist")]
+        public string Artist { get; set; }
     }
 }

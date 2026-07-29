@@ -25,6 +25,6 @@ namespace Bitmovin.Api.Sdk.Models
         /// Factor
         /// </summary>
         [JsonProperty(PropertyName = "factor")]
-        public decimal? Factor { get; set; }
+        public double? Factor { get; set; }
     }
 }

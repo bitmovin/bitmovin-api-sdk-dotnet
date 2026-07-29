@@ -25,13 +25,19 @@ namespace Bitmovin.Api.Sdk.Models
         /// Duration
         /// </summary>
         [JsonProperty(PropertyName = "duration")]
-        public decimal? Duration { get; set; }
+        public double? Duration { get; set; }
 
         /// <summary>
         /// Description
         /// </summary>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
+
+        /// <summary>
+        /// Inferred title representing the analyzed content as a whole. If omitted or null, the title is not available.
+        /// </summary>
+        [JsonProperty(PropertyName = "title")]
+        public string Title { get; set; }
 
         /// <summary>
         /// Keywords
@@ -62,6 +68,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "inputLanguageCodes")]
         public List<string> InputLanguageCodes { get; set; } = new List<string>();
+
+        /// <summary>
+        /// Credits
+        /// </summary>
+        [JsonProperty(PropertyName = "credits")]
+        public Credits Credits { get; set; }
 
         /// <summary>
         /// Metadata

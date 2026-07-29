@@ -61,7 +61,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Container format&#39;s bitrate of the stream, in bits per second.
         /// </summary>
         [JsonProperty(PropertyName = "bitrate")]
-        public int? Bitrate { get; set; }
+        public long? Bitrate { get; set; }
 
         /// <summary>
         /// Average number of samples/frames read per second.
@@ -103,7 +103,7 @@ namespace Bitmovin.Api.Sdk.Models
         /// Last presentation timestamp (PTS) of the stream.
         /// </summary>
         [JsonProperty(PropertyName = "lastTimestamp")]
-        public int? LastTimestamp { get; set; }
+        public long? LastTimestamp { get; set; }
 
         /// <summary>
         /// Timescale of lastTimestamp

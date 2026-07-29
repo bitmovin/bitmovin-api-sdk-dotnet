@@ -25,13 +25,13 @@ namespace Bitmovin.Api.Sdk.Models
         /// StartInSeconds
         /// </summary>
         [JsonProperty(PropertyName = "startInSeconds")]
-        public decimal? StartInSeconds { get; set; }
+        public double? StartInSeconds { get; set; }
 
         /// <summary>
         /// EndInSeconds
         /// </summary>
         [JsonProperty(PropertyName = "endInSeconds")]
-        public decimal? EndInSeconds { get; set; }
+        public double? EndInSeconds { get; set; }
 
         /// <summary>
         /// Id

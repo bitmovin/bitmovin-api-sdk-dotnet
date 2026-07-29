@@ -19,13 +19,13 @@ namespace Bitmovin.Api.Sdk.Models
         /// The start time of the shot in seconds from the beginning of the video (required)
         /// </summary>
         [JsonProperty(PropertyName = "startInSeconds")]
-        public decimal? StartInSeconds { get; set; }
+        public double? StartInSeconds { get; set; }
 
         /// <summary>
         /// The end time of the shot in seconds from the beginning of the video (required)
         /// </summary>
         [JsonProperty(PropertyName = "endInSeconds")]
-        public decimal? EndInSeconds { get; set; }
+        public double? EndInSeconds { get; set; }
 
         /// <summary>
         /// A comprehensive textual description of the visual content, action, and context within this shot

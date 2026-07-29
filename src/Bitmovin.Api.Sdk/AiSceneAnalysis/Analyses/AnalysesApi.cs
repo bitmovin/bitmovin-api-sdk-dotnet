@@ -1,3 +1,8 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using RestEase;
 using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.AiSceneAnalysis.Analyses.ByEncodingId;
 
@@ -8,12 +13,15 @@ namespace Bitmovin.Api.Sdk.AiSceneAnalysis.Analyses
     /// </summary>
     public class AnalysesApi
     {
+        private readonly IAnalysesApiClient _apiClient;
+
         /// <summary>
         /// Initializes a new instance of the AnalysesApi class
         /// </summary>
         /// <param name="apiClientFactory">The API client factory</param>
         public AnalysesApi(IBitmovinApiClientFactory apiClientFactory)
         {
+            _apiClient = apiClientFactory.CreateClient<IAnalysesApiClient>();
             ByEncodingId = new ByEncodingIdApi(apiClientFactory);
         }
 
@@ -26,5 +34,69 @@ namespace Bitmovin.Api.Sdk.AiSceneAnalysis.Analyses
         /// Gets the ByEncodingId API
         /// </summary>
         public ByEncodingIdApi ByEncodingId { get; }
+
+        /// <summary>
+        /// List AI scene analyses
+        /// </summary>
+        /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>
+        public async Task<Models.PaginationResponse<Models.SceneAnalysisListItem>> ListAsync(params Func<ListQueryParams, ListQueryParams>[] queryParams)
+        {
+            ListQueryParams q = new ListQueryParams();
+
+            foreach (var builderFunc in queryParams)
+            {
+                builderFunc(q);
+            }
+
+            return await _apiClient.ListAsync(q);
+        }
+
+        internal interface IAnalysesApiClient
+        {
+            [Get("/ai-scene-analysis/analyses")]
+            [AllowAnyStatusCode]
+            Task<Models.PaginationResponse<Models.SceneAnalysisListItem>> ListAsync([QueryMap(SerializationMethod = QuerySerializationMethod.Serialized)] IDictionary<String, Object> queryParams);
+        }
+
+        /// <summary>
+        /// Query parameters for List
+        /// </summary>
+        public class ListQueryParams : Dictionary<string,Object>
+        {
+            /// <summary>
+            /// Index of the first item to return, starting at 0. Default is 0
+            /// </summary>
+            public ListQueryParams Offset(int? offset) => SetQueryParam("offset", offset);
+
+            /// <summary>
+            /// Maximum number of items to return. Default is 15, maximum is 100
+            /// </summary>
+            public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
+
+            /// <summary>
+            /// Order the result by creation date. Default is createdAt:DESC
+            /// </summary>
+            public ListQueryParams Sort(Models.SceneAnalysisListSort sort) => SetQueryParam("sort", sort);
+
+            /// <summary>
+            /// Inclusive lower creation-date bound in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
+            /// </summary>
+            public ListQueryParams CreatedAtFrom(DateTime? createdAtFrom) => SetQueryParam("createdAtFrom", createdAtFrom);
+
+            /// <summary>
+            /// Inclusive upper creation-date bound in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
+            /// </summary>
+            public ListQueryParams CreatedAtTo(DateTime? createdAtTo) => SetQueryParam("createdAtTo", createdAtTo);
+
+            private ListQueryParams SetQueryParam<T>(string key, T value)
+            {
+                if (value != null)
+                {
+                    this[key] = value;
+                }
+
+                return this;
+            }
+        }
     }
 }

@@ -11,16 +11,10 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// Character
+    /// Person
     /// </summary>
-    public class Character
+    public class Person
     {
-        /// <summary>
-        /// CharacterAppearance
-        /// </summary>
-        [JsonProperty(PropertyName = "characterAppearance")]
-        public CharacterAppearance CharacterAppearance { get; set; }
-
         /// <summary>
         /// Name
         /// </summary>
@@ -28,15 +22,15 @@ namespace Bitmovin.Api.Sdk.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// PlayedBy
+        /// Role
         /// </summary>
-        [JsonProperty(PropertyName = "playedBy")]
-        public string PlayedBy { get; set; }
+        [JsonProperty(PropertyName = "role")]
+        public string Role { get; set; }
 
         /// <summary>
-        /// Description
+        /// The detected department of a person
         /// </summary>
-        [JsonProperty(PropertyName = "description")]
-        public string Description { get; set; }
+        [JsonProperty(PropertyName = "department")]
+        public Department? Department { get; set; }
     }
 }

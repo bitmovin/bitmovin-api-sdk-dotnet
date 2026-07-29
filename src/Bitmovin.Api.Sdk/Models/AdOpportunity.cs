@@ -25,6 +25,6 @@ namespace Bitmovin.Api.Sdk.Models
         /// Score from 0.0 to 1.0 rating the ad placement suitability at the end of a scene based on content analysis
         /// </summary>
         [JsonProperty(PropertyName = "score")]
-        public decimal? Score { get; set; }
+        public double? Score { get; set; }
     }
 }
