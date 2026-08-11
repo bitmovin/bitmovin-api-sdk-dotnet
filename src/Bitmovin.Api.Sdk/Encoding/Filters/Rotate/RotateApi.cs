@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Rotate
         }
 
         /// <summary>
-        /// Rotate Filter Details
+        /// Get Rotate Filter details
         /// </summary>
         /// <param name="filterId">Id of the Rotate Filter. (required)</param>
         public async Task<Models.RotateFilter> GetAsync(string filterId)

@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Mp2
         }
 
         /// <summary>
-        /// MP2 Codec Configuration Details
+        /// Get MP2 Codec Configuration details
         /// </summary>
         /// <param name="configurationId">Id of the codec configuration (required)</param>
         public async Task<Models.Mp2AudioConfiguration> GetAsync(string configurationId)

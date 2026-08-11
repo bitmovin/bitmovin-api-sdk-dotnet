@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.AiSceneAnalysis.Analyses.ByEncodingId.Languages
         public static BitmovinApiBuilder<LanguagesApi> Builder => new BitmovinApiBuilder<LanguagesApi>();
 
         /// <summary>
-        /// Get AI scene analysis languages by encoding ID
+        /// Get AI Scene Analysis languages
         /// </summary>
         /// <param name="encodingId">The encoding ID (required)</param>
         public async Task<Models.SceneAnalysisLanguagesResponse> GetAsync(string encodingId)

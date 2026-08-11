@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.KantarWatermark
         public static BitmovinApiBuilder<KantarWatermarkApi> Builder => new BitmovinApiBuilder<KantarWatermarkApi>();
 
         /// <summary>
-        /// Create or replace the Kantar Watermark for an encoding
+        /// Create or replace Kantar Watermark
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="kantarWatermark">The Kantar Watermark to be created</param>
@@ -39,7 +39,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.KantarWatermark
         }
 
         /// <summary>
-        /// Delete the Kantar Watermark for an encoding
+        /// Delete Kantar Watermark
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         public async Task<Models.BitmovinResponse> DeleteAsync(string encodingId)
@@ -48,7 +48,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.KantarWatermark
         }
 
         /// <summary>
-        /// Get the Kantar Watermark for an encoding
+        /// Get Kantar Watermark
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         public async Task<Models.KantarWatermark> GetAsync(string encodingId)

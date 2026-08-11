@@ -42,7 +42,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Repres
         public ContentprotectionApi Contentprotection { get; }
 
         /// <summary>
-        /// Add fMP4 Representation
+        /// Create fMP4 Representation
         /// </summary>
         /// <param name="manifestId">Id of the manifest (required)</param>
         /// <param name="periodId">Id of the period (required)</param>
@@ -66,7 +66,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Repres
         }
 
         /// <summary>
-        /// fMP4 Representation Details
+        /// Get fMP4 Representation details
         /// </summary>
         /// <param name="manifestId">Id of the manifest (required)</param>
         /// <param name="periodId">Id of the period (required)</param>
@@ -78,7 +78,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Repres
         }
 
         /// <summary>
-        /// List all fMP4 Representations
+        /// List fMP4 Representations
         /// </summary>
         /// <param name="manifestId">Id of the manifest (required)</param>
         /// <param name="periodId">Id of the period (required)</param>

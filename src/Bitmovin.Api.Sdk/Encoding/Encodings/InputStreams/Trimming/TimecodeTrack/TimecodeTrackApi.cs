@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Trimming.TimecodeTrac
         public static BitmovinApiBuilder<TimecodeTrackApi> Builder => new BitmovinApiBuilder<TimecodeTrackApi>();
 
         /// <summary>
-        /// Add Timecode Track Trimming Input Stream
+        /// Create Timecode Track Trimming Input Stream
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="timecodeTrackTrimmingInputStream">The Timecode Track Trimming Input Stream to be created</param>
@@ -49,7 +49,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Trimming.TimecodeTrac
         }
 
         /// <summary>
-        /// Timecode Track Trimming Input Stream Details
+        /// Get Timecode Track Trimming Input Stream details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="inputStreamId">Id of the Timecode Track Trimming Input Stream. (required)</param>

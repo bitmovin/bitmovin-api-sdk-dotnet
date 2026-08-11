@@ -47,7 +47,7 @@ namespace Bitmovin.Api.Sdk.Encoding.WatchFolders
         }
 
         /// <summary>
-        /// Watch Folder details
+        /// Get Watch Folder details
         /// </summary>
         /// <param name="watchFolderId">Id of the Watch Folder (required)</param>
         public async Task<Models.WatchFolder> GetAsync(string watchFolderId)
@@ -56,7 +56,7 @@ namespace Bitmovin.Api.Sdk.Encoding.WatchFolders
         }
 
         /// <summary>
-        /// List all Watch Folders
+        /// List Watch Folders
         /// </summary>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>
         public async Task<Models.PaginationResponse<Models.WatchFolder>> ListAsync(params Func<ListQueryParams, ListQueryParams>[] queryParams)

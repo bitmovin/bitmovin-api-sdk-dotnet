@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media.Vtt
         public static BitmovinApiBuilder<VttApi> Builder => new BitmovinApiBuilder<VttApi>();
 
         /// <summary>
-        /// Add VTT Media
+        /// Create VTT Media
         /// </summary>
         /// <param name="manifestId">Id of the hls manifest. (required)</param>
         /// <param name="vttMediaInfo">The VTT Media to be added</param>
@@ -49,7 +49,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media.Vtt
         }
 
         /// <summary>
-        /// VTT Media Details
+        /// Get VTT Media details
         /// </summary>
         /// <param name="manifestId">Id of the hls manifest. (required)</param>
         /// <param name="mediaId">Id of the VTT media. (required)</param>
@@ -59,7 +59,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media.Vtt
         }
 
         /// <summary>
-        /// List all VTT Media
+        /// List VTT Media
         /// </summary>
         /// <param name="manifestId">Id of the hls manifest. (required)</param>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>

@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.LiveMediaIngest
         }
 
         /// <summary>
-        /// Live Media Ingest Output Details
+        /// Get Live Media Ingest Output details
         /// </summary>
         /// <param name="outputId">Id of the output (required)</param>
         public async Task<Models.LiveMediaIngestOutput> GetAsync(string outputId)

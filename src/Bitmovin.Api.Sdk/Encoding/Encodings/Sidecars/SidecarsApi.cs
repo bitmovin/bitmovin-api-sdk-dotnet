@@ -42,7 +42,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Sidecars
         public WebvttApi Webvtt { get; }
 
         /// <summary>
-        /// Add Sidecar
+        /// Create Sidecar
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="sidecarFile">The Sidecar to be added</param>
@@ -62,7 +62,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Sidecars
         }
 
         /// <summary>
-        /// Sidecar Details
+        /// Get Sidecar details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="sidecarId">Id of the sidecar. (required)</param>

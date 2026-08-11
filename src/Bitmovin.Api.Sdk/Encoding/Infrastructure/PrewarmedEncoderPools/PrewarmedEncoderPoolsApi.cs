@@ -45,7 +45,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.PrewarmedEncoderPools
         }
 
         /// <summary>
-        /// Delete prewarmed encoder pool
+        /// Delete Prewarmed encoder pool
         /// </summary>
         /// <param name="poolId">Id of the prewarmed encoder pool (required)</param>
         public async Task<Models.BitmovinResponse> DeleteAsync(string poolId)
@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.PrewarmedEncoderPools
         }
 
         /// <summary>
-        /// Prewarmed encoder pool details
+        /// Get Prewarmed encoder pool details
         /// </summary>
         /// <param name="poolId">Id of the prewarmed encoder pool (required)</param>
         public async Task<Models.PrewarmedEncoderPool> GetAsync(string poolId)

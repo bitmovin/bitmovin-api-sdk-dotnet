@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Repres
         public static BitmovinApiBuilder<DrmApi> Builder => new BitmovinApiBuilder<DrmApi>();
 
         /// <summary>
-        /// Add DRM MP4 Representation
+        /// Create DRM MP4 Representation
         /// </summary>
         /// <param name="manifestId">Id of the manifest (required)</param>
         /// <param name="periodId">Id of the period (required)</param>
@@ -53,7 +53,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Repres
         }
 
         /// <summary>
-        /// DRM MP4 Representation Details
+        /// Get DRM MP4 Representation details
         /// </summary>
         /// <param name="manifestId">Id of the manifest (required)</param>
         /// <param name="periodId">Id of the period (required)</param>
@@ -65,7 +65,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Repres
         }
 
         /// <summary>
-        /// List all DRM MP4 Representations
+        /// List DRM MP4 Representations
         /// </summary>
         /// <param name="manifestId">Id of the manifest (required)</param>
         /// <param name="periodId">Id of the period (required)</param>

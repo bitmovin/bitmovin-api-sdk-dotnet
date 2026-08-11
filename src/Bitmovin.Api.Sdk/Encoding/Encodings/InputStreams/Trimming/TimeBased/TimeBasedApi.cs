@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Trimming.TimeBased
         public static BitmovinApiBuilder<TimeBasedApi> Builder => new BitmovinApiBuilder<TimeBasedApi>();
 
         /// <summary>
-        /// Add Time-Based Trimming Input Stream
+        /// Create Time-Based Trimming Input Stream
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="timeBasedTrimmingInputStream">The Time-Based Trimming Input Stream to be created</param>
@@ -49,7 +49,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Trimming.TimeBased
         }
 
         /// <summary>
-        /// Time-Based Trimming Input Stream Details
+        /// Get Time-Based Trimming Input Stream details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="inputStreamId">Id of the Time-Based Trimming Input Stream. (required)</param>

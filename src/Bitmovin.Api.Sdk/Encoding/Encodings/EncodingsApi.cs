@@ -120,7 +120,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings
         }
 
         /// <summary>
-        /// Encoding Details
+        /// Get Encoding details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         public async Task<Models.Encoding> GetAsync(string encodingId)
@@ -129,7 +129,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings
         }
 
         /// <summary>
-        /// Encoding Start Details
+        /// Get Encoding Start Details
         /// </summary>
         /// <param name="encodingId">Id of the encoding (required)</param>
         public async Task<Models.StartEncodingRequest> GetStartRequestAsync(string encodingId)
@@ -138,7 +138,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings
         }
 
         /// <summary>
-        /// List all Encodings
+        /// List Encodings
         /// </summary>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>
         public async Task<Models.PaginationResponse<Models.Encoding>> ListAsync(params Func<ListQueryParams, ListQueryParams>[] queryParams)
@@ -174,7 +174,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings
         }
 
         /// <summary>
-        /// Start VoD Encoding
+        /// Start VOD Encoding
         /// </summary>
         /// <param name="encodingId">Id of the encoding (required)</param>
         /// <param name="startEncodingRequest">Encoding Startup Options</param>
@@ -184,7 +184,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings
         }
 
         /// <summary>
-        /// Encoding Status
+        /// Get Encoding Status
         /// </summary>
         /// <param name="encodingId">Id of the encoding (required)</param>
         public async Task<Models.ServiceTaskStatus> StatusAsync(string encodingId)
@@ -193,7 +193,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings
         }
 
         /// <summary>
-        /// Stop Encoding
+        /// Stop VOD Encoding
         /// </summary>
         /// <param name="encodingId">Id of the encoding (required)</param>
         public async Task<Models.BitmovinResponse> StopAsync(string encodingId)

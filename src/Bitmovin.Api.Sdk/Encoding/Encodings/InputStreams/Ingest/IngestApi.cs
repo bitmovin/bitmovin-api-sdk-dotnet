@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Ingest
         public static BitmovinApiBuilder<IngestApi> Builder => new BitmovinApiBuilder<IngestApi>();
 
         /// <summary>
-        /// Add Ingest Input Stream
+        /// Create Ingest Input Stream
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="ingestInputStream">The Ingest Input Stream to be created</param>
@@ -49,7 +49,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Ingest
         }
 
         /// <summary>
-        /// Ingest Input Stream Details
+        /// Get Ingest Input Stream details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="inputStreamId">Id of the ingest input stream. (required)</param>

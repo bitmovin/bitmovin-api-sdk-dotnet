@@ -49,7 +49,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Keyframes
         }
 
         /// <summary>
-        /// Keyframe Details
+        /// Get Keyframe details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="keyframeId">Id of the keyframe. (required)</param>
@@ -59,7 +59,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Keyframes
         }
 
         /// <summary>
-        /// List all Keyframes
+        /// List Keyframes
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>

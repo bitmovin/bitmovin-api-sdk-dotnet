@@ -36,7 +36,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ChunkedText
         public CustomdataApi Customdata { get; }
 
         /// <summary>
-        /// Add Chunked Text muxing
+        /// Create Chunked Text muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="chunkedTextMuxing">The Chunked Text muxing to be created</param>
@@ -56,7 +56,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ChunkedText
         }
 
         /// <summary>
-        /// Chunked Text muxing details
+        /// Get Chunked Text muxing details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the Chunked Text muxing (required)</param>

@@ -40,7 +40,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Streams.CustomTags
         }
 
         /// <summary>
-        /// Delete Custom Tag
+        /// Delete Stream Custom Tag
         /// </summary>
         /// <param name="manifestId">Id of the hls manifest. (required)</param>
         /// <param name="streamId">Id of the variant stream. (required)</param>
@@ -51,7 +51,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Streams.CustomTags
         }
 
         /// <summary>
-        /// Custom Tag Details
+        /// Stream Custom Tag Details
         /// </summary>
         /// <param name="manifestId">Id of the hls manifest. (required)</param>
         /// <param name="streamId">Id of the variant stream. (required)</param>

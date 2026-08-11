@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveWav.Customdata
         public static BitmovinApiBuilder<CustomdataApi> Builder => new BitmovinApiBuilder<CustomdataApi>();
 
         /// <summary>
-        /// Progressive Wav muxing Custom Data
+        /// Get Progressive WAV muxing Custom Data
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the Progressive WAV muxing (required)</param>

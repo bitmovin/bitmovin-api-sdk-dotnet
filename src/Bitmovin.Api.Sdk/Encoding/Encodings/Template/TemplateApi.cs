@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Template
         public static BitmovinApiBuilder<TemplateApi> Builder => new BitmovinApiBuilder<TemplateApi>();
 
         /// <summary>
-        /// Encoding Template URL
+        /// Get Encoding Template URL
         /// </summary>
         /// <param name="encodingId">Id of the Encoding (required)</param>
         public async Task<Models.EncodingTemplateUrlResponse> GetAsync(string encodingId)

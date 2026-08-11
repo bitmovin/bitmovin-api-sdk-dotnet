@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media.Video
         public static BitmovinApiBuilder<VideoApi> Builder => new BitmovinApiBuilder<VideoApi>();
 
         /// <summary>
-        /// Add Video Media
+        /// Create Video Media
         /// </summary>
         /// <param name="manifestId">Id of the hls manifest. (required)</param>
         /// <param name="videoMediaInfo">The Video Media to be added</param>
@@ -49,7 +49,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media.Video
         }
 
         /// <summary>
-        /// Video Media Details
+        /// Get Video Media details
         /// </summary>
         /// <param name="manifestId">Id of the hls manifest. (required)</param>
         /// <param name="mediaId">Id of the video media. (required)</param>
@@ -59,7 +59,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media.Video
         }
 
         /// <summary>
-        /// List all Video Media
+        /// List Video Media
         /// </summary>
         /// <param name="manifestId">Id of the hls manifest. (required)</param>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>

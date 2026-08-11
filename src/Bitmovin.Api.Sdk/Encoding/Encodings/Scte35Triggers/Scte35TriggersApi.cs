@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Scte35Triggers
         public static BitmovinApiBuilder<Scte35TriggersApi> Builder => new BitmovinApiBuilder<Scte35TriggersApi>();
 
         /// <summary>
-        /// Create SCTE 35 trigger
+        /// Create SCTE 35 Trigger
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="scte35Trigger">The SCTE 35 trigger to be created</param>
@@ -59,7 +59,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Scte35Triggers
         }
 
         /// <summary>
-        /// List all SCTE 35 triggers for an encoding
+        /// List SCTE 35 Triggers
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>

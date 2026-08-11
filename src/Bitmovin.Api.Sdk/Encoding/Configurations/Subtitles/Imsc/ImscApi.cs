@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Subtitles.Imsc
         }
 
         /// <summary>
-        /// IMSC subtitle configuration details
+        /// Get IMSC subtitle configuration details
         /// </summary>
         /// <param name="configurationId">Id of the codec configuration (required)</param>
         public async Task<Models.ImscConfiguration> GetAsync(string configurationId)

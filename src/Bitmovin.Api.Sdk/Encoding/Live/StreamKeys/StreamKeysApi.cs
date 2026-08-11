@@ -36,7 +36,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Live.StreamKeys
         public ActionsApi Actions { get; }
 
         /// <summary>
-        /// Create new stream key
+        /// Create Stream Key
         /// </summary>
         /// <param name="streamKey">The stream key to be created</param>
         public async Task<Models.StreamKey> CreateAsync(Models.StreamKey streamKey)
@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Live.StreamKeys
         }
 
         /// <summary>
-        /// Stream Key details
+        /// Get Stream Key details
         /// </summary>
         /// <param name="streamKeyId">Id of the stream key (required)</param>
         public async Task<Models.StreamKey> GetAsync(string streamKeyId)

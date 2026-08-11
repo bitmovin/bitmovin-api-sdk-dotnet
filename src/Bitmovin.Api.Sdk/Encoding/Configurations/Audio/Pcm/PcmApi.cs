@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Pcm
         }
 
         /// <summary>
-        /// PCM Codec Configuration Details
+        /// Get PCM Codec Configuration details
         /// </summary>
         /// <param name="configurationId">Id of the codec configuration (required)</param>
         public async Task<Models.PcmAudioConfiguration> GetAsync(string configurationId)

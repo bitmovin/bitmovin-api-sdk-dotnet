@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Ts.Customdata
         public static BitmovinApiBuilder<CustomdataApi> Builder => new BitmovinApiBuilder<CustomdataApi>();
 
         /// <summary>
-        /// TS muxing Custom Data
+        /// Get TS muxing Custom Data
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the TS muxing (required)</param>

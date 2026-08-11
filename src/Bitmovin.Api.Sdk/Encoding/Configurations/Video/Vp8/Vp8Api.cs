@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Video.Vp8
         }
 
         /// <summary>
-        /// VP8 Codec Configuration Details
+        /// Get VP8 Codec Configuration details
         /// </summary>
         /// <param name="configurationId">Id of the codec configuration (required)</param>
         public async Task<Models.Vp8VideoConfiguration> GetAsync(string configurationId)
@@ -63,7 +63,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Video.Vp8
         }
 
         /// <summary>
-        /// 
+        /// List VP8 Codec Configurations
         /// </summary>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>
         public async Task<Models.PaginationResponse<Models.Vp8VideoConfiguration>> ListAsync(params Func<ListQueryParams, ListQueryParams>[] queryParams)

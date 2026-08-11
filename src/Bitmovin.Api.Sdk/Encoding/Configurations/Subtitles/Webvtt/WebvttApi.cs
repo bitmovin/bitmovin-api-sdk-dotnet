@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Subtitles.Webvtt
         }
 
         /// <summary>
-        /// WebVtt subtitle configuration details
+        /// Get WebVtt subtitle configuration details
         /// </summary>
         /// <param name="configurationId">Id of the codec configuration (required)</param>
         public async Task<Models.WebVttConfiguration> GetAsync(string configurationId)

@@ -36,7 +36,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.PackedAudio.Drm.Aes
         public CustomdataApi Customdata { get; }
 
         /// <summary>
-        /// Add AES encryption configuration to the Packed Audio muxing
+        /// Create AES encryption configuration to a Packed Audio muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the packed audio muxing. (required)</param>
@@ -58,7 +58,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.PackedAudio.Drm.Aes
         }
 
         /// <summary>
-        /// AES encryption Details of a Packed Audio muxing
+        /// Get AES encryption configuration from a Packed Audio muxing details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the Packed Audio muxing. (required)</param>

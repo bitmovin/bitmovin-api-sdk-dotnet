@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media.ClosedCaptions
         public static BitmovinApiBuilder<ClosedCaptionsApi> Builder => new BitmovinApiBuilder<ClosedCaptionsApi>();
 
         /// <summary>
-        /// Add Closed Captions Media
+        /// Create Closed Captions Media
         /// </summary>
         /// <param name="manifestId">Id of the hls manifest. (required)</param>
         /// <param name="closedCaptionsMediaInfo">The Closed Captions Media to be added</param>
@@ -49,7 +49,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media.ClosedCaptions
         }
 
         /// <summary>
-        /// Closed Captions Media Details
+        /// Get Closed Captions Media details
         /// </summary>
         /// <param name="manifestId">Id of the hls manifest. (required)</param>
         /// <param name="mediaId">Id of the closed captions media. (required)</param>
@@ -59,7 +59,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media.ClosedCaptions
         }
 
         /// <summary>
-        /// List all Closed Captions Media
+        /// List Closed Captions Media
         /// </summary>
         /// <param name="manifestId">Id of the hls manifest. (required)</param>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>

@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Local
         }
 
         /// <summary>
-        /// Local Input Details
+        /// Get Local Input details
         /// </summary>
         /// <param name="inputId">Id of the input (required)</param>
         public async Task<Models.LocalInput> GetAsync(string inputId)

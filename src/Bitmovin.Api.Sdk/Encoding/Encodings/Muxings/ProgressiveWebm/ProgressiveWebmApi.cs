@@ -48,7 +48,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveWebm
         public DrmApi Drm { get; }
 
         /// <summary>
-        /// Add Progressive WebM muxing
+        /// Create Progressive WebM muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="progressiveWebmMuxing">The Progressive WebM muxing to be created</param>
@@ -68,7 +68,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveWebm
         }
 
         /// <summary>
-        /// Progressive WebM muxing details
+        /// Get Progressive WebM muxing details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the Progressive WebM muxing (required)</param>

@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.BurnInSubtitles.Assa
         public static BitmovinApiBuilder<AssaApi> Builder => new BitmovinApiBuilder<AssaApi>();
 
         /// <summary>
-        /// Burn-In ASSA Subtitle into Stream
+        /// Create Burn-In ASSA Subtitle
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="streamId">Id of the stream. (required)</param>
@@ -40,7 +40,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.BurnInSubtitles.Assa
         }
 
         /// <summary>
-        /// Delete Burn-In ASSA Subtitle from Stream
+        /// Delete Burn-In ASSA Subtitle
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="streamId">Id of the stream. (required)</param>
@@ -51,7 +51,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.BurnInSubtitles.Assa
         }
 
         /// <summary>
-        /// Get Burn-In ASSA Subtitle Details
+        /// Get Burn-In ASSA Subtitle details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="streamId">Id of the stream. (required)</param>
@@ -62,7 +62,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.BurnInSubtitles.Assa
         }
 
         /// <summary>
-        /// List the Burn-In ASSA subtitles of a stream
+        /// List Burn-In ASSA Subtitles
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="streamId">Id of the stream. (required)</param>

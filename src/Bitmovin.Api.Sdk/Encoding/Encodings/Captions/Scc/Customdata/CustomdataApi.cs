@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Captions.Scc.Customdata
         public static BitmovinApiBuilder<CustomdataApi> Builder => new BitmovinApiBuilder<CustomdataApi>();
 
         /// <summary>
-        /// Convert SCC captions Custom Data
+        /// Get SCC Caption Conversion Custom Data
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="captionsId">Id of the caption. (required)</param>

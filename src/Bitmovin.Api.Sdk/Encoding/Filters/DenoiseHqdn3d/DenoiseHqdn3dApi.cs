@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.DenoiseHqdn3d
         }
 
         /// <summary>
-        /// Denoise hqdn3d Filter Details
+        /// Get Denoise hqdn3d Filter details
         /// </summary>
         /// <param name="filterId">Id of the denoise hqdn3d filter (required)</param>
         public async Task<Models.DenoiseHqdn3dFilter> GetAsync(string filterId)

@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.Gcs.Customdata
         public static BitmovinApiBuilder<CustomdataApi> Builder => new BitmovinApiBuilder<CustomdataApi>();
 
         /// <summary>
-        /// GCS Output Custom Data
+        /// Get GCS Output Custom Data
         /// </summary>
         /// <param name="outputId">Id of the output (required)</param>
         public async Task<Models.CustomData> GetAsync(string outputId)

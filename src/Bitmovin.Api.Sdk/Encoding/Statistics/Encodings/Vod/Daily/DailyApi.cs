@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.Vod.Daily
         public static BitmovinApiBuilder<DailyApi> Builder => new BitmovinApiBuilder<DailyApi>();
 
         /// <summary>
-        /// List daily VoD encoding statistics within specific dates
+        /// List daily VOD encoding statistics within specific dates
         /// </summary>
         /// <param name="from">Start date, format: yyyy-MM-dd (required)</param>
         /// <param name="to">End date, format: yyyy-MM-dd (required)</param>

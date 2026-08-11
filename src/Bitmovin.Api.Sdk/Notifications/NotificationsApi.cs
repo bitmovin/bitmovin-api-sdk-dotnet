@@ -57,7 +57,7 @@ namespace Bitmovin.Api.Sdk.Notifications
         }
 
         /// <summary>
-        /// Get Notification
+        /// Get Notification details
         /// </summary>
         /// <param name="notificationId">Id of the notification (required)</param>
         public async Task<Models.Notification> GetAsync(string notificationId)
@@ -82,7 +82,7 @@ namespace Bitmovin.Api.Sdk.Notifications
         }
 
         /// <summary>
-        /// List Notification State History (All Resources)
+        /// List Notification State History
         /// </summary>
         /// <param name="notificationId">Id of the notification (required)</param>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>

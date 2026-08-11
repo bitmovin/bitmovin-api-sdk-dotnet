@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.S3RoleBased.Customdata
         public static BitmovinApiBuilder<CustomdataApi> Builder => new BitmovinApiBuilder<CustomdataApi>();
 
         /// <summary>
-        /// S3 Role-based Output Custom Data
+        /// Get S3 Role-based Output Custom Data
         /// </summary>
         /// <param name="outputId">Id of the output (required)</param>
         public async Task<Models.CustomData> GetAsync(string outputId)

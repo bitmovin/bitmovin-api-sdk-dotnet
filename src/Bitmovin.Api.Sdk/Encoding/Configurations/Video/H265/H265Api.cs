@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Video.H265
         }
 
         /// <summary>
-        /// H265/HEVC Codec Configuration Details
+        /// Get H265/HEVC Codec Configuration details
         /// </summary>
         /// <param name="configurationId">Id of the codec configuration (required)</param>
         public async Task<Models.H265VideoConfiguration> GetAsync(string configurationId)

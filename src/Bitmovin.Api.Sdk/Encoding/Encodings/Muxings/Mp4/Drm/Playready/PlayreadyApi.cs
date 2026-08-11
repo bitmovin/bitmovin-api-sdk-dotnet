@@ -36,7 +36,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Playready
         public CustomdataApi Customdata { get; }
 
         /// <summary>
-        /// Add PlayReady DRM to an MP4 muxing
+        /// Create PlayReady DRM to an MP4 muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the MP4 muxing. (required)</param>
@@ -58,7 +58,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Playready
         }
 
         /// <summary>
-        /// PlayReady DRM Details of an MP4 muxing
+        /// Get PlayReady DRM from an MP4 muxing details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the MP4 muxing. (required)</param>

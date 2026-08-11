@@ -36,7 +36,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Repres
         public DrmApi Drm { get; }
 
         /// <summary>
-        /// Add MP4 Representation
+        /// Create MP4 Representation
         /// </summary>
         /// <param name="manifestId">Id of the manifest (required)</param>
         /// <param name="periodId">Id of the period (required)</param>
@@ -60,7 +60,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Repres
         }
 
         /// <summary>
-        /// MP4 Representation Details
+        /// Get MP4 Representation details
         /// </summary>
         /// <param name="manifestId">Id of the manifest (required)</param>
         /// <param name="periodId">Id of the period (required)</param>
@@ -72,7 +72,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Repres
         }
 
         /// <summary>
-        /// List all MP4 Representations
+        /// List MP4 Representations
         /// </summary>
         /// <param name="manifestId">Id of the manifest (required)</param>
         /// <param name="periodId">Id of the period (required)</param>

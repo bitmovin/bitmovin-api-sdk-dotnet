@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Scale
         }
 
         /// <summary>
-        /// Scale Filter Details
+        /// Get Scale Filter details
         /// </summary>
         /// <param name="filterId">Id of the scale filter (required)</param>
         public async Task<Models.ScaleFilter> GetAsync(string filterId)

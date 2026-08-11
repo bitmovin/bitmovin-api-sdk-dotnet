@@ -42,7 +42,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Manifest
         public FinishedApi Finished { get; }
 
         /// <summary>
-        /// List Webhook Notifications (Specific Manifest)
+        /// List Webhooks for a specific Manifest
         /// </summary>
         /// <param name="manifestId">Id of the manifest resource (required)</param>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>

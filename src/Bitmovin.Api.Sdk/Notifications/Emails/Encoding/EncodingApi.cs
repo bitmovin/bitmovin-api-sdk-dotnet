@@ -36,7 +36,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Emails.Encoding
         public EncodingsApi Encodings { get; }
 
         /// <summary>
-        /// List Email Notifications (All Encodings)
+        /// List Encoding Email Notifications
         /// </summary>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>
         public async Task<Models.PaginationResponse<Models.EmailNotification>> ListAsync(params Func<ListQueryParams, ListQueryParams>[] queryParams)

@@ -42,7 +42,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Webm
         public DrmApi Drm { get; }
 
         /// <summary>
-        /// Add WebM muxing
+        /// Create WebM muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="webmMuxing">The WebM muxing to be created</param>
@@ -62,7 +62,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Webm
         }
 
         /// <summary>
-        /// WebM muxing details
+        /// Get WebM muxing details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the WebM muxing (required)</param>

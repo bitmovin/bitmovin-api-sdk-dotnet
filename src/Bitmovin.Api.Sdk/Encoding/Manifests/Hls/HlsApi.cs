@@ -72,7 +72,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls
         }
 
         /// <summary>
-        /// HLS Manifest Details
+        /// Get HLS Manifest details
         /// </summary>
         /// <param name="manifestId">Id of the HLS Manifest. (required)</param>
         public async Task<Models.HlsManifest> GetAsync(string manifestId)
@@ -81,7 +81,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls
         }
 
         /// <summary>
-        /// Manifest Start Details
+        /// HLS Manifest Start Details
         /// </summary>
         /// <param name="manifestId">ID of the manifest (required)</param>
         public async Task<Models.StartManifestRequest> GetStartRequestAsync(string manifestId)

@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Local.Customdata
         public static BitmovinApiBuilder<CustomdataApi> Builder => new BitmovinApiBuilder<CustomdataApi>();
 
         /// <summary>
-        /// Local Input Custom Data
+        /// Get Local Input Custom Data
         /// </summary>
         /// <param name="inputId">Id of the input (required)</param>
         public async Task<Models.CustomData> GetAsync(string inputId)

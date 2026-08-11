@@ -36,7 +36,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Webm.Drm.Cenc
         public CustomdataApi Customdata { get; }
 
         /// <summary>
-        /// Add CENC DRM to a WebM muxing
+        /// Create CENC DRM to a WebM muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the WebM muxing. (required)</param>
@@ -58,7 +58,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Webm.Drm.Cenc
         }
 
         /// <summary>
-        /// CENC DRM Details of a WebM muxing
+        /// Get CENC DRM from a WebM muxing details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the WebM muxing. (required)</param>

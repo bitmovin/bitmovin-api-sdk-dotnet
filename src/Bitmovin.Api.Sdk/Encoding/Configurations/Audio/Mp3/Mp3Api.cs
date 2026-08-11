@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Mp3
         }
 
         /// <summary>
-        /// MP3 Codec Configuration Details
+        /// Get MP3 Codec Configuration details
         /// </summary>
         /// <param name="configurationId">Id of the codec configuration (required)</param>
         public async Task<Models.Mp3AudioConfiguration> GetAsync(string configurationId)

@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Opus
         }
 
         /// <summary>
-        /// Opus Codec Configuration Details
+        /// Get Opus Codec Configuration details
         /// </summary>
         /// <param name="configurationId">Id of the codec configuration (required)</param>
         public async Task<Models.OpusAudioConfiguration> GetAsync(string configurationId)

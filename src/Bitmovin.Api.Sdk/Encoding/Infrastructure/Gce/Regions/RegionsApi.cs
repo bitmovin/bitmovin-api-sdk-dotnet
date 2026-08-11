@@ -50,7 +50,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Gce.Regions
         }
 
         /// <summary>
-        /// Google Cloud Region Settings Details
+        /// Get Google Cloud Region Settings details
         /// </summary>
         /// <param name="infrastructureId">Id of the Google Cloud Connect infrastructure resource (required)</param>
         /// <param name="region">Google Cloud region. (required)</param>

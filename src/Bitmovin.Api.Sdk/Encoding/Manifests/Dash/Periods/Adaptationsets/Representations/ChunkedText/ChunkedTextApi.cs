@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Repres
         public static BitmovinApiBuilder<ChunkedTextApi> Builder => new BitmovinApiBuilder<ChunkedTextApi>();
 
         /// <summary>
-        /// Add Chunked Text Representation
+        /// Create Chunked Text Representation
         /// </summary>
         /// <param name="manifestId">Id of the manifest (required)</param>
         /// <param name="periodId">Id of the period (required)</param>
@@ -53,7 +53,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Repres
         }
 
         /// <summary>
-        /// Chunked Text Representation Details
+        /// Get Chunked Text Representation details
         /// </summary>
         /// <param name="manifestId">Id of the manifest (required)</param>
         /// <param name="periodId">Id of the period (required)</param>
@@ -65,7 +65,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Repres
         }
 
         /// <summary>
-        /// List all Chunked Text Representations
+        /// List Chunked Text Representations
         /// </summary>
         /// <param name="manifestId">Id of the manifest (required)</param>
         /// <param name="periodId">Id of the period (required)</param>

@@ -50,7 +50,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Oci.Regions
         }
 
         /// <summary>
-        /// OCI account region settings details
+        /// Get OCI account region settings details
         /// </summary>
         /// <param name="infrastructureId">Id of the OCI account (required)</param>
         /// <param name="region">OCI region (required)</param>

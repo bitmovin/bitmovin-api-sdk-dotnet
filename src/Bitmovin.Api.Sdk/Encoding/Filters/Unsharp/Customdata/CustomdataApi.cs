@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Unsharp.Customdata
         public static BitmovinApiBuilder<CustomdataApi> Builder => new BitmovinApiBuilder<CustomdataApi>();
 
         /// <summary>
-        /// Unsharp Filter Custom Data
+        /// Get Unsharp Filter Custom Data
         /// </summary>
         /// <param name="filterId">Id of the unsharp filter (required)</param>
         public async Task<Models.CustomData> GetAsync(string filterId)

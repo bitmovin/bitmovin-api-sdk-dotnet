@@ -36,7 +36,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.Error
         public CustomdataApi Customdata { get; }
 
         /// <summary>
-        /// Add &#39;Encoding Error&#39; Webhook
+        /// Create &#39;Encoding Error&#39; Webhook
         /// </summary>
         /// <param name="webhook">The &#39;Encoding Error&#39; Webhook to be added.</param>
         public async Task<Models.Webhook> CreateAsync(Models.Webhook webhook)
@@ -45,7 +45,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.Error
         }
 
         /// <summary>
-        /// Add Error Webhook for a specific Encoding
+        /// Create &#39;Encoding Error&#39; Webhook for a specific Encoding
         /// </summary>
         /// <param name="encodingId">Id of the encoding (required)</param>
         /// <param name="webhook">The &#39;Encoding Error&#39; Webhook to be added. A maximum number of 5 webhooks per Encoding is allowed</param>
@@ -74,7 +74,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.Error
         }
 
         /// <summary>
-        /// &#39;Encoding Error&#39; Webhook Details for a specific Encoding
+        /// Get &#39;Encoding Error&#39; Webhook details for a specific Encoding
         /// </summary>
         /// <param name="encodingId">Id of the encoding (required)</param>
         /// <param name="webhookId">Id of the webhook (required)</param>
@@ -84,7 +84,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.Error
         }
 
         /// <summary>
-        /// &#39;Encoding Error&#39; Webhook Details
+        /// Get &#39;Encoding Error&#39; Webhook details
         /// </summary>
         /// <param name="webhookId">Id of the webhook (required)</param>
         public async Task<Models.Webhook> GetByWebhookIdAsync(string webhookId)

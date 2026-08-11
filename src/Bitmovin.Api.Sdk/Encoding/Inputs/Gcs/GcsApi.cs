@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Gcs
         }
 
         /// <summary>
-        /// GCS Input Details
+        /// Get GCS Input details
         /// </summary>
         /// <param name="inputId">Id of the input (required)</param>
         public async Task<Models.GcsInput> GetAsync(string inputId)

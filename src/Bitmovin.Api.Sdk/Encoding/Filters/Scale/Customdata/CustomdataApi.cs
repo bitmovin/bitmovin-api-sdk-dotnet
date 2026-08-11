@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Scale.Customdata
         public static BitmovinApiBuilder<CustomdataApi> Builder => new BitmovinApiBuilder<CustomdataApi>();
 
         /// <summary>
-        /// Scale Filter Custom Data
+        /// Get Scale Filter Custom Data
         /// </summary>
         /// <param name="filterId">Id of the scale filter (required)</param>
         public async Task<Models.CustomData> GetAsync(string filterId)

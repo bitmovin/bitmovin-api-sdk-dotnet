@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Hdr.DolbyVision
         public static BitmovinApiBuilder<DolbyVisionApi> Builder => new BitmovinApiBuilder<DolbyVisionApi>();
 
         /// <summary>
-        /// Add Dolby Vision Metadata
+        /// Create Dolby Vision Metadata
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="streamId">Id of the stream. (required)</param>
@@ -51,7 +51,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Hdr.DolbyVision
         }
 
         /// <summary>
-        /// Dolby Vision Metadata Details
+        /// Get Dolby Vision Metadata details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="streamId">Id of the stream. (required)</param>

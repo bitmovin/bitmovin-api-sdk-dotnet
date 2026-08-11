@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.AzureSpeechToCaptions
         }
 
         /// <summary>
-        /// Azure Speech to captions Filter details
+        /// Get Azure Speech to captions Filter details
         /// </summary>
         /// <param name="filterId">Id of the Azure Speech to captions Filter. (required)</param>
         public async Task<Models.AzureSpeechToCaptionsFilter> GetAsync(string filterId)

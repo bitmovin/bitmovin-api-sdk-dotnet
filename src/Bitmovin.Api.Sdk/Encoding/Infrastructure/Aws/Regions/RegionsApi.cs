@@ -50,7 +50,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Aws.Regions
         }
 
         /// <summary>
-        /// AWS Region Settings Details
+        /// Get AWS Region Settings details
         /// </summary>
         /// <param name="infrastructureId">Id of the AWS account (required)</param>
         /// <param name="region">AWS region. (required)</param>

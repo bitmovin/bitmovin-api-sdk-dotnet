@@ -36,7 +36,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Drm.Speke
         public CustomdataApi Customdata { get; }
 
         /// <summary>
-        /// Add SPEKE DRM key provider to Progressive TS
+        /// Create SPEKE DRM key provider to Progressive TS
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the Progressive TS muxing (required)</param>
@@ -58,7 +58,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Drm.Speke
         }
 
         /// <summary>
-        /// SPEKE DRM Details of a Progressive TS muxing
+        /// Get SPEKE DRM from a Progressive TS muxing details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the Progressive TS muxing (required)</param>

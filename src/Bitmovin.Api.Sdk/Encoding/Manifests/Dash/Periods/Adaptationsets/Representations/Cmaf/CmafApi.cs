@@ -36,7 +36,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Repres
         public ContentprotectionApi Contentprotection { get; }
 
         /// <summary>
-        /// Add CMAF Representation
+        /// Create CMAF Representation
         /// </summary>
         /// <param name="manifestId">Id of the manifest (required)</param>
         /// <param name="periodId">Id of the period (required)</param>
@@ -60,7 +60,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Repres
         }
 
         /// <summary>
-        /// CMAF Representation Details
+        /// Get CMAF Representation details
         /// </summary>
         /// <param name="manifestId">Id of the manifest (required)</param>
         /// <param name="periodId">Id of the period (required)</param>
@@ -72,7 +72,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Repres
         }
 
         /// <summary>
-        /// List all CMAF Representations
+        /// List CMAF Representations
         /// </summary>
         /// <param name="manifestId">Id of the manifest (required)</param>
         /// <param name="periodId">Id of the period (required)</param>

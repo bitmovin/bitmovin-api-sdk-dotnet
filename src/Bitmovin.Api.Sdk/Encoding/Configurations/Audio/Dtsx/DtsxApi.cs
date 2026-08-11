@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Dtsx
         }
 
         /// <summary>
-        /// DTS:X Codec Configuration Details
+        /// Get DTS:X Codec Configuration details
         /// </summary>
         /// <param name="configurationId">Id of the codec configuration (required)</param>
         public async Task<Models.DtsXAudioConfiguration> GetAsync(string configurationId)

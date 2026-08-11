@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.EnhancedWatermark
         }
 
         /// <summary>
-        /// Enhanced Watermark Filter Details
+        /// Get Enhanced Watermark Filter details
         /// </summary>
         /// <param name="filterId">Id of the enhanced Watermark Filter. (required)</param>
         public async Task<Models.EnhancedWatermarkFilter> GetAsync(string filterId)

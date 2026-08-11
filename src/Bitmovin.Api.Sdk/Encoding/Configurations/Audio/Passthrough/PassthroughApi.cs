@@ -47,7 +47,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Passthrough
         }
 
         /// <summary>
-        /// Audio Passthrough Configuration Details
+        /// Get Audio Passthrough Codec Configuration details
         /// </summary>
         /// <param name="configurationId">Id of the audio configuration (required)</param>
         public async Task<Models.PassthroughAudioConfiguration> GetAsync(string configurationId)

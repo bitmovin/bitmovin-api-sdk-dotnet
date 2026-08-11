@@ -42,7 +42,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Ts
         public DrmApi Drm { get; }
 
         /// <summary>
-        /// Add TS muxing
+        /// Create TS muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="tsMuxing">The TS muxing to be created</param>
@@ -62,7 +62,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Ts
         }
 
         /// <summary>
-        /// TS muxing details
+        /// Get TS muxing details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the TS muxing (required)</param>

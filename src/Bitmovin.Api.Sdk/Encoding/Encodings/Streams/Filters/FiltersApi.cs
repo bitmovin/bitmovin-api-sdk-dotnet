@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Filters
         public static BitmovinApiBuilder<FiltersApi> Builder => new BitmovinApiBuilder<FiltersApi>();
 
         /// <summary>
-        /// Add Filters to Stream
+        /// Create Filters to Stream
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="streamId">Id of the stream. (required)</param>
@@ -61,7 +61,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Filters
         }
 
         /// <summary>
-        /// List the filters of a stream
+        /// List Filters of a Stream
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="streamId">Id of the stream. (required)</param>

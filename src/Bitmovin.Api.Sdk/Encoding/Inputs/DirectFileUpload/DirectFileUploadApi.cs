@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.DirectFileUpload
         }
 
         /// <summary>
-        /// Direct File Upload Input Details
+        /// Get Direct File Upload Input details
         /// </summary>
         /// <param name="inputId">Id of the input (required)</param>
         public async Task<Models.DirectFileUploadInput> GetAsync(string inputId)

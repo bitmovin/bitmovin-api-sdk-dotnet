@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Notifications.States
         public static BitmovinApiBuilder<StatesApi> Builder => new BitmovinApiBuilder<StatesApi>();
 
         /// <summary>
-        /// List Notification State History (Specific Resource)
+        /// List Notification State History for a specific Resource
         /// </summary>
         /// <param name="notificationId">Id of the notification (required)</param>
         /// <param name="resourceId">Id of the resource, e.g. encoding id (required)</param>

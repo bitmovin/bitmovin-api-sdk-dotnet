@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Interlace.Customdata
         public static BitmovinApiBuilder<CustomdataApi> Builder => new BitmovinApiBuilder<CustomdataApi>();
 
         /// <summary>
-        /// Interlace Filter Custom Data
+        /// Get Interlace Filter Custom Data
         /// </summary>
         /// <param name="filterId">Id of the Interlace Filter (required)</param>
         public async Task<Models.CustomData> GetAsync(string filterId)

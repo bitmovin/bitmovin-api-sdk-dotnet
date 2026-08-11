@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.EnhancedWatermark.Customdata
         public static BitmovinApiBuilder<CustomdataApi> Builder => new BitmovinApiBuilder<CustomdataApi>();
 
         /// <summary>
-        /// Enhanced Watermark Filter Custom Data
+        /// Get Enhanced Watermark Filter Custom Data
         /// </summary>
         /// <param name="filterId">Id of the enhanced Watermark Filter. (required)</param>
         public async Task<Models.CustomData> GetAsync(string filterId)

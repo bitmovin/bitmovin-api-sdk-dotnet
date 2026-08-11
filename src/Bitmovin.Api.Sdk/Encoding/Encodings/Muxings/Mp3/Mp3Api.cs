@@ -42,7 +42,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp3
         public InformationApi Information { get; }
 
         /// <summary>
-        /// Add MP3 muxing
+        /// Create MP3 muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="mp3Muxing">The MP3 muxing to be created</param>
@@ -62,7 +62,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp3
         }
 
         /// <summary>
-        /// MP3 muxing details
+        /// Get MP3 muxing details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the MP3 muxing (required)</param>

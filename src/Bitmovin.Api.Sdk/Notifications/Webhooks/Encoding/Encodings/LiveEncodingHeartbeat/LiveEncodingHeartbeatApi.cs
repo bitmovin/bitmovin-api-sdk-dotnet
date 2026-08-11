@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.LiveEncodin
         public static BitmovinApiBuilder<LiveEncodingHeartbeatApi> Builder => new BitmovinApiBuilder<LiveEncodingHeartbeatApi>();
 
         /// <summary>
-        /// Add &#39;Live Encoding Heartbeat&#39; Webhook
+        /// Create &#39;Live Encoding Heartbeat&#39; Webhook
         /// </summary>
         /// <param name="liveEncodingHeartbeatWebhook">The &#39;Live Encoding Heartbeat&#39; Webhook to be added.</param>
         public async Task<Models.LiveEncodingHeartbeatWebhook> CreateAsync(Models.LiveEncodingHeartbeatWebhook liveEncodingHeartbeatWebhook)
@@ -47,7 +47,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.LiveEncodin
         }
 
         /// <summary>
-        /// &#39;Live Encoding Heartbeat&#39; Webhook Details
+        /// Get &#39;Live Encoding Heartbeat&#39; Webhook details
         /// </summary>
         /// <param name="webhookId">Id of the webhook (required)</param>
         public async Task<Models.LiveEncodingHeartbeatWebhook> GetByWebhookIdAsync(string webhookId)

@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Interlace
         }
 
         /// <summary>
-        /// Interlace Filter Details
+        /// Get Interlace Filter details
         /// </summary>
         /// <param name="filterId">Id of the Interlace Filter (required)</param>
         public async Task<Models.InterlaceFilter> GetAsync(string filterId)

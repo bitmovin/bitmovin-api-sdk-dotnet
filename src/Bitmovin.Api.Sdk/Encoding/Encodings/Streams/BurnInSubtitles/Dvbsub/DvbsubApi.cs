@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.BurnInSubtitles.Dvbsub
         public static BitmovinApiBuilder<DvbsubApi> Builder => new BitmovinApiBuilder<DvbsubApi>();
 
         /// <summary>
-        /// Burn-In DVB-SUB Subtitle into Stream
+        /// Create Burn-In DVB-SUB Subtitle
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="streamId">Id of the stream. (required)</param>
@@ -40,7 +40,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.BurnInSubtitles.Dvbsub
         }
 
         /// <summary>
-        /// Delete Burn-In DVB-SUB Subtitle from Stream
+        /// Delete Burn-In DVB-SUB Subtitle
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="streamId">Id of the stream. (required)</param>
@@ -51,7 +51,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.BurnInSubtitles.Dvbsub
         }
 
         /// <summary>
-        /// Get Burn-In DVB-SUB Subtitle Details
+        /// Get Burn-In DVB-SUB Subtitle details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="streamId">Id of the stream. (required)</param>
@@ -62,7 +62,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.BurnInSubtitles.Dvbsub
         }
 
         /// <summary>
-        /// List the Burn-In DVB-SUB subtitles of a stream
+        /// List Burn-In DVB-SUB Subtitles
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="streamId">Id of the stream. (required)</param>

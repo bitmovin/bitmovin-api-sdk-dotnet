@@ -36,7 +36,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Captions.Cea.Srt
         public CustomdataApi Customdata { get; }
 
         /// <summary>
-        /// Embed SRT captions as 608/708 into Stream
+        /// Create SRT captions as 608/708
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="streamId">Id of the stream. (required)</param>
@@ -47,7 +47,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Captions.Cea.Srt
         }
 
         /// <summary>
-        /// Delete SRT captions as 608/708 from Stream
+        /// Delete SRT captions as 608/708
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="streamId">Id of the stream. (required)</param>
@@ -58,7 +58,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Captions.Cea.Srt
         }
 
         /// <summary>
-        /// Embed SRT captions as 608/708 Details
+        /// Get SRT captions as 608/708 details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="streamId">Id of the stream. (required)</param>
@@ -69,7 +69,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Captions.Cea.Srt
         }
 
         /// <summary>
-        /// List SRT captions as 608/708 from Stream
+        /// List SRT captions as 608/708
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="streamId">Id of the stream. (required)</param>

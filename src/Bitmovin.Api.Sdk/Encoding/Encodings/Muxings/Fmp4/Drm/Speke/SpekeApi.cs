@@ -36,7 +36,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm.Speke
         public CustomdataApi Customdata { get; }
 
         /// <summary>
-        /// Add SPEKE DRM key provider to fMP4
+        /// Create SPEKE DRM key provider to fMP4
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the fMP4 muxing (required)</param>
@@ -58,7 +58,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm.Speke
         }
 
         /// <summary>
-        /// SPEKE DRM Details of an fMP4 muxing
+        /// Get SPEKE DRM from an fMP4 muxing details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the fMP4 muxing (required)</param>

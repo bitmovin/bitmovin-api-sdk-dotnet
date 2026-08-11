@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Ftp
         }
 
         /// <summary>
-        /// FTP Input Details
+        /// Get FTP Input details
         /// </summary>
         /// <param name="inputId">Id of the input (required)</param>
         public async Task<Models.FtpInput> GetAsync(string inputId)

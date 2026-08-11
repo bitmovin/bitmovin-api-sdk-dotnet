@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Deinterlace
         }
 
         /// <summary>
-        /// Deinterlace Filter Details
+        /// Get Deinterlace Filter details
         /// </summary>
         /// <param name="filterId">Id of the Deinterlace Filter (required)</param>
         public async Task<Models.DeinterlaceFilter> GetAsync(string filterId)

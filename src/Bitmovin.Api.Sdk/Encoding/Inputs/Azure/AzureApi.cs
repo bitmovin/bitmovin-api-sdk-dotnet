@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Azure
         }
 
         /// <summary>
-        /// Azure Input Details
+        /// Get Azure Input details
         /// </summary>
         /// <param name="inputId">Id of the input (required)</param>
         public async Task<Models.AzureInput> GetAsync(string inputId)

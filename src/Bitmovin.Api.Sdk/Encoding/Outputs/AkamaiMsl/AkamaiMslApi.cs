@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.AkamaiMsl
         }
 
         /// <summary>
-        /// Akamai MSL Output Details
+        /// Get Akamai MSL Output details
         /// </summary>
         /// <param name="outputId">Id of the output (required)</param>
         public async Task<Models.AkamaiMslOutput> GetAsync(string outputId)

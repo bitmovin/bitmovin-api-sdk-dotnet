@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Live.StreamKeys.Actions
         public static BitmovinApiBuilder<ActionsApi> Builder => new BitmovinApiBuilder<ActionsApi>();
 
         /// <summary>
-        /// Unassign stream keys
+        /// Unassign Stream Keys
         /// </summary>
         /// <param name="streamKeysUnassignAction">The action payload for unassigning stream keys</param>
         public async Task<Models.StreamKeysUnassignAction> UnassignAsync(Models.StreamKeysUnassignAction streamKeysUnassignAction)

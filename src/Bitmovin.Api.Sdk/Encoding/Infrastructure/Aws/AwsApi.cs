@@ -36,7 +36,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Aws
         public RegionsApi Regions { get; }
 
         /// <summary>
-        /// Add AWS Account
+        /// Create AWS Account
         /// </summary>
         /// <param name="awsAccount">The AWS Account to be added</param>
         public async Task<Models.AwsAccount> CreateAsync(Models.AwsAccount awsAccount)
@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Aws
         }
 
         /// <summary>
-        /// AWS Account Details
+        /// Get AWS Account details
         /// </summary>
         /// <param name="infrastructureId">Id of the AWS account (required)</param>
         public async Task<Models.AwsAccount> GetAsync(string infrastructureId)

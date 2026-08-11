@@ -17,6 +17,7 @@ using Bitmovin.Api.Sdk.Encoding.Filters.EnhancedDeinterlace;
 using Bitmovin.Api.Sdk.Encoding.Filters.AudioMix;
 using Bitmovin.Api.Sdk.Encoding.Filters.DenoiseHqdn3d;
 using Bitmovin.Api.Sdk.Encoding.Filters.EbuR128SinglePass;
+using Bitmovin.Api.Sdk.Encoding.Filters.DolbyLoudness;
 using Bitmovin.Api.Sdk.Encoding.Filters.Text;
 using Bitmovin.Api.Sdk.Encoding.Filters.Interlace;
 using Bitmovin.Api.Sdk.Encoding.Filters.Unsharp;
@@ -51,6 +52,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters
             AudioMix = new AudioMixApi(apiClientFactory);
             DenoiseHqdn3d = new DenoiseHqdn3dApi(apiClientFactory);
             EbuR128SinglePass = new EbuR128SinglePassApi(apiClientFactory);
+            DolbyLoudness = new DolbyLoudnessApi(apiClientFactory);
             Text = new TextApi(apiClientFactory);
             Interlace = new InterlaceApi(apiClientFactory);
             Unsharp = new UnsharpApi(apiClientFactory);
@@ -114,6 +116,10 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters
         /// Gets the EbuR128SinglePass API
         /// </summary>
         public EbuR128SinglePassApi EbuR128SinglePass { get; }
+        /// <summary>
+        /// Gets the DolbyLoudness API
+        /// </summary>
+        public DolbyLoudnessApi DolbyLoudness { get; }
         /// <summary>
         /// Gets the Text API
         /// </summary>

@@ -36,7 +36,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Watermarking.NexguardFileM
         public CustomdataApi Customdata { get; }
 
         /// <summary>
-        /// Add a nexguard file marker watermarking configurations
+        /// Create a nexguard file marker watermarking configurations
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="streamId">Id of the stream. (required)</param>
@@ -47,7 +47,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Watermarking.NexguardFileM
         }
 
         /// <summary>
-        /// Delete nexguard file marker watermarking configurations
+        /// Delete Nexguard file marker watermarking configurations
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="streamId">Id of the stream. (required)</param>
@@ -58,7 +58,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Watermarking.NexguardFileM
         }
 
         /// <summary>
-        /// Nexguard file marker watermarking configurations details
+        /// Get Nexguard file marker watermarking configurations details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="streamId">Id of the stream. (required)</param>

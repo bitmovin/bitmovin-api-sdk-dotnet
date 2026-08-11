@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.EnhancedDeinterlace.Customdata
         public static BitmovinApiBuilder<CustomdataApi> Builder => new BitmovinApiBuilder<CustomdataApi>();
 
         /// <summary>
-        /// Enhanced Deinterlace Filter Custom Data
+        /// Get Enhanced Deinterlace Filter Custom Data
         /// </summary>
         /// <param name="filterId">Id of the Enhanced Deinterlace Filter (required)</param>
         public async Task<Models.CustomData> GetAsync(string filterId)

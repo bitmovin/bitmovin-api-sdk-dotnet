@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.Azure
         }
 
         /// <summary>
-        /// Azure Output Details
+        /// Get Azure Output details
         /// </summary>
         /// <param name="outputId">Id of the output (required)</param>
         public async Task<Models.AzureOutput> GetAsync(string outputId)

@@ -101,6 +101,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// AZURE_SPEECH_TO_CAPTIONS
         /// </summary>
         [EnumMember(Value = "AZURE_SPEECH_TO_CAPTIONS")]
-        AZURE_SPEECH_TO_CAPTIONS
+        AZURE_SPEECH_TO_CAPTIONS,
+
+        /// <summary>
+        /// DOLBY_LOUDNESS
+        /// </summary>
+        [EnumMember(Value = "DOLBY_LOUDNESS")]
+        DOLBY_LOUDNESS
     }
 }

@@ -36,7 +36,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Akamai
         public RegionsApi Regions { get; }
 
         /// <summary>
-        /// Add Akamai account
+        /// Create Akamai account
         /// </summary>
         /// <param name="akamaiAccount">The Akamai account to be added</param>
         public async Task<Models.AkamaiAccount> CreateAsync(Models.AkamaiAccount akamaiAccount)
@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Akamai
         }
 
         /// <summary>
-        /// Akamai account details
+        /// Get Akamai account details
         /// </summary>
         /// <param name="infrastructureId">Id of the Akamai account (required)</param>
         public async Task<Models.AkamaiAccount> GetAsync(string infrastructureId)

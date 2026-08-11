@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Crop
         }
 
         /// <summary>
-        /// Crop Filter Details
+        /// Get Crop Filter details
         /// </summary>
         /// <param name="filterId">Id of the Crop Filter. (required)</param>
         public async Task<Models.CropFilter> GetAsync(string filterId)

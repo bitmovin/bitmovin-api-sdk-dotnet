@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.Cdn
         public static BitmovinApiBuilder<CdnApi> Builder => new BitmovinApiBuilder<CdnApi>();
 
         /// <summary>
-        /// CDN Output Details
+        /// Get CDN Output details
         /// </summary>
         /// <param name="outputId">Id of the output (required)</param>
         public async Task<Models.CdnOutput> GetAsync(string outputId)

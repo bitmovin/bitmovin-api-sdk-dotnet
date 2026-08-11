@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Live.Encodings.Actions
         public static BitmovinApiBuilder<ActionsApi> Builder => new BitmovinApiBuilder<ActionsApi>();
 
         /// <summary>
-        /// Update the ingest points of a Redundant RTMP Input
+        /// Update Ingest Points of a Redundant RTMP Input
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="updateEncodingRtmpIngestPointRequest">The list of the RTMP ingest points to update.</param>

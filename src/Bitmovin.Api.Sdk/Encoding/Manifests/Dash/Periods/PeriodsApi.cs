@@ -42,7 +42,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods
         public AdaptationsetsApi Adaptationsets { get; }
 
         /// <summary>
-        /// Add Period
+        /// Create Period
         /// </summary>
         /// <param name="manifestId">Id of the manifest (required)</param>
         /// <param name="period">The Period to be added to the manifest</param>
@@ -62,7 +62,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods
         }
 
         /// <summary>
-        /// Period Details
+        /// Get Period details
         /// </summary>
         /// <param name="manifestId">Id of the manifest (required)</param>
         /// <param name="periodId">Id of the period (required)</param>
@@ -72,7 +72,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods
         }
 
         /// <summary>
-        /// List all Periods
+        /// List Periods
         /// </summary>
         /// <param name="manifestId">Id of the manifest (required)</param>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>

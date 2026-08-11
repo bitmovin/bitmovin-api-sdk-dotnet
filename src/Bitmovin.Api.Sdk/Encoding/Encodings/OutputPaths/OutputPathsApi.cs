@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.OutputPaths
         public static BitmovinApiBuilder<OutputPathsApi> Builder => new BitmovinApiBuilder<OutputPathsApi>();
 
         /// <summary>
-        /// Encoding Output Paths Retrieval
+        /// Get Encoding Output Paths
         /// </summary>
         /// <param name="encodingId">Id of the encoding (required)</param>
         public async Task<List<Models.EncodingOutputPaths>> GetAsync(string encodingId)

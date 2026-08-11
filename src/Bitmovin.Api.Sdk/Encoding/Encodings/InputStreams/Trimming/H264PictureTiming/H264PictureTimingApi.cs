@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Trimming.H264PictureT
         public static BitmovinApiBuilder<H264PictureTimingApi> Builder => new BitmovinApiBuilder<H264PictureTimingApi>();
 
         /// <summary>
-        /// Add H264 Picture Timing Trimming Input Stream
+        /// Create H264 Picture Timing Trimming Input Stream
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="h264PictureTimingTrimmingInputStream">The H264 Picture Timing Trimming Input Stream to be created</param>
@@ -49,7 +49,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Trimming.H264PictureT
         }
 
         /// <summary>
-        /// H264 Picture Timing Trimming Input Stream Details
+        /// Get H264 Picture Timing Trimming Input Stream details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="inputStreamId">Id of the H264 Picture Timing Trimming Input Stream. (required)</param>

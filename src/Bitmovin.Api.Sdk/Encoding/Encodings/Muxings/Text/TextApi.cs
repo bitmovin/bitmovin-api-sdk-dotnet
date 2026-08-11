@@ -36,7 +36,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Text
         public CustomdataApi Customdata { get; }
 
         /// <summary>
-        /// Add Text muxing
+        /// Create Text muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="textMuxing">The Text muxing to be created</param>
@@ -56,7 +56,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Text
         }
 
         /// <summary>
-        /// Text muxing details
+        /// Get Text muxing details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the Text muxing (required)</param>

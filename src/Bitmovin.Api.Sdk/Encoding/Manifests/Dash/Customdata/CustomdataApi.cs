@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Customdata
         public static BitmovinApiBuilder<CustomdataApi> Builder => new BitmovinApiBuilder<CustomdataApi>();
 
         /// <summary>
-        /// DASH Manifest Custom Data
+        /// Get DASH Manifest Custom Data
         /// </summary>
         /// <param name="manifestId">UUID of the DASH manifest (required)</param>
         public async Task<Models.CustomData> GetAsync(string manifestId)

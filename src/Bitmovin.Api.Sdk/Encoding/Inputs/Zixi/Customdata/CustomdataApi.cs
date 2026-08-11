@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Zixi.Customdata
         public static BitmovinApiBuilder<CustomdataApi> Builder => new BitmovinApiBuilder<CustomdataApi>();
 
         /// <summary>
-        /// Zixi input Custom Data
+        /// Get Zixi Input Custom Data
         /// </summary>
         /// <param name="inputId">Id of the input (required)</param>
         public async Task<Models.CustomData> GetAsync(string inputId)

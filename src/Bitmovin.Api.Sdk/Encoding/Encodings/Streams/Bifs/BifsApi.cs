@@ -36,7 +36,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Bifs
         public CustomdataApi Customdata { get; }
 
         /// <summary>
-        /// Add a Roku Bif file
+        /// Create a Roku Bif file
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="streamId">Id of the stream. (required)</param>
@@ -58,7 +58,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Bifs
         }
 
         /// <summary>
-        /// Bif Details
+        /// Get Bif details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="streamId">Id of the stream. (required)</param>

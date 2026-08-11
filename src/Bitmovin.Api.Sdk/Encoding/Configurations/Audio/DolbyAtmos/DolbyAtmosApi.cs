@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.DolbyAtmos
         }
 
         /// <summary>
-        /// Dolby Atmos Codec Configuration Details
+        /// Get Dolby Atmos Codec Configuration details
         /// </summary>
         /// <param name="configurationId">Id of the codec configuration (required)</param>
         public async Task<Models.DolbyAtmosAudioConfiguration> GetAsync(string configurationId)

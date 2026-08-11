@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.S3RoleBased
         }
 
         /// <summary>
-        /// S3 Role-based Input Details
+        /// Get S3 Role-based Input details
         /// </summary>
         /// <param name="inputId">Id of the input (required)</param>
         public async Task<Models.S3RoleBasedInput> GetAsync(string inputId)

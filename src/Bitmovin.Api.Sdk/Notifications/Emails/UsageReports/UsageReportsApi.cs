@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Emails.UsageReports
         public static BitmovinApiBuilder<UsageReportsApi> Builder => new BitmovinApiBuilder<UsageReportsApi>();
 
         /// <summary>
-        /// List Email Notifications (All Usage Reports)
+        /// List Usage Report Email Notifications
         /// </summary>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>
         public async Task<Models.PaginationResponse<Models.EmailNotification>> ListAsync(params Func<ListQueryParams, ListQueryParams>[] queryParams)

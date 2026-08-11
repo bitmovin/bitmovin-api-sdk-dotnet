@@ -36,7 +36,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm.Cenc
         public CustomdataApi Customdata { get; }
 
         /// <summary>
-        /// Add CENC DRM to an fMP4 muxing
+        /// Create CENC DRM to an fMP4 muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the fMP4 muxing. (required)</param>
@@ -58,7 +58,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm.Cenc
         }
 
         /// <summary>
-        /// CENC DRM Details of an fMP4 muxing
+        /// Get CENC DRM from an fMP4 muxing details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the fMP4 muxing. (required)</param>

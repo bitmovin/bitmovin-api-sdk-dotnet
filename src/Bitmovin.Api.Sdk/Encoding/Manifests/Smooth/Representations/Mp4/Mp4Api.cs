@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Smooth.Representations.Mp4
         public static BitmovinApiBuilder<Mp4Api> Builder => new BitmovinApiBuilder<Mp4Api>();
 
         /// <summary>
-        /// Add MP4 Representation to Smooth Streaming Manifest
+        /// Create MP4 Representation to Smooth Streaming Manifest
         /// </summary>
         /// <param name="manifestId">Id of the Smooth Streaming manifest. (required)</param>
         /// <param name="smoothStreamingRepresentation">The MP4 Representation to be added</param>
@@ -49,7 +49,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Smooth.Representations.Mp4
         }
 
         /// <summary>
-        /// Smooth Streaming MP4 Representation Details
+        /// Get Smooth Streaming MP4 Representation details
         /// </summary>
         /// <param name="manifestId">Id of the Smooth Streaming manifest. (required)</param>
         /// <param name="representationId">Id of the MP4 representation. (required)</param>

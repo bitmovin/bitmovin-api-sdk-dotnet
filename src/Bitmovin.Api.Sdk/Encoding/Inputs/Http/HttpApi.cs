@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Http
         }
 
         /// <summary>
-        /// HTTP Input Details
+        /// Get HTTP Input details
         /// </summary>
         /// <param name="inputId">Id of the input (required)</param>
         public async Task<Models.HttpInput> GetAsync(string inputId)

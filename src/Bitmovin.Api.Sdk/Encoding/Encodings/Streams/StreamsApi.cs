@@ -102,7 +102,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams
         public QcApi Qc { get; }
 
         /// <summary>
-        /// Add Stream
+        /// Create Stream
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="stream">The Stream to be created</param>
@@ -122,7 +122,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams
         }
 
         /// <summary>
-        /// Stream Details
+        /// Get Stream details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="streamId">Id of the stream. (required)</param>

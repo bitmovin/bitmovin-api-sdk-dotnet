@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mp4.Drm.Clearkey.Customdat
         public static BitmovinApiBuilder<CustomdataApi> Builder => new BitmovinApiBuilder<CustomdataApi>();
 
         /// <summary>
-        /// ClearKey DRM Custom Data of an MP4 muxing
+        /// Get ClearKey DRM from an MP4 muxing Custom Data
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the mp4. (required)</param>

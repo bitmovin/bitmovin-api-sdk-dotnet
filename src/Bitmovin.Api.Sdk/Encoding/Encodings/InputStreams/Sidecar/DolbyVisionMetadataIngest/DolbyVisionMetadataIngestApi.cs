@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Sidecar.DolbyVisionMe
         public static BitmovinApiBuilder<DolbyVisionMetadataIngestApi> Builder => new BitmovinApiBuilder<DolbyVisionMetadataIngestApi>();
 
         /// <summary>
-        /// Add Dolby Vision Metadata Ingest Input Stream
+        /// Create Dolby Vision Metadata Ingest Input Stream
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="dolbyVisionMetadataIngestInputStream">The Dolby Vision Metadata Ingest Input Stream to be created</param>
@@ -49,7 +49,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Sidecar.DolbyVisionMe
         }
 
         /// <summary>
-        /// Dolby Vision Metadata Ingest Input Stream Details
+        /// Get Dolby Vision Metadata Ingest Input Stream details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="inputStreamId">Id of the Dolby Vision Metadata Ingest input stream. (required)</param>

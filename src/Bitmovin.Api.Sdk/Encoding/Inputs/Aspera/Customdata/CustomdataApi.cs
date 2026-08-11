@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Aspera.Customdata
         public static BitmovinApiBuilder<CustomdataApi> Builder => new BitmovinApiBuilder<CustomdataApi>();
 
         /// <summary>
-        /// Aspera Custom Data
+        /// Get Aspera Input Custom Data
         /// </summary>
         /// <param name="inputId">Id of the input (required)</param>
         public async Task<Models.CustomData> GetAsync(string inputId)

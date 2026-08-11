@@ -36,7 +36,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Thumbnails
         public CustomdataApi Customdata { get; }
 
         /// <summary>
-        /// Add Thumbnail
+        /// Create Thumbnail
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="streamId">Id of the stream. (required)</param>
@@ -58,7 +58,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Thumbnails
         }
 
         /// <summary>
-        /// Thumbnail Details
+        /// Get Thumbnail details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="streamId">Id of the stream. (required)</param>

@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Eac3.Customdata
         public static BitmovinApiBuilder<CustomdataApi> Builder => new BitmovinApiBuilder<CustomdataApi>();
 
         /// <summary>
-        /// E-AC3 Codec Configuration Custom Data
+        /// Get E-AC3 Codec Configuration Custom Data
         /// </summary>
         /// <param name="configurationId">Id of the codec configuration (required)</param>
         public async Task<Models.CustomData> GetAsync(string configurationId)

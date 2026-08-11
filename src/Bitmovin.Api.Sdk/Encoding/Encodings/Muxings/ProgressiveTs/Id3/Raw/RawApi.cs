@@ -36,7 +36,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Id3.Raw
         public CustomdataApi Customdata { get; }
 
         /// <summary>
-        /// Add Raw ID3 Tag to a Progressive TS muxing
+        /// Create Raw ID3 Tag to a Progressive TS muxing
         /// </summary>
         /// <param name="encodingId">ID of the Encoding. (required)</param>
         /// <param name="muxingId">ID of the Progressive TS muxing (required)</param>
@@ -58,7 +58,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Id3.Raw
         }
 
         /// <summary>
-        /// Raw ID3 Tag Details of a Progressive TS muxing
+        /// Get Raw ID3 Tag of a Progressive TS muxing details
         /// </summary>
         /// <param name="encodingId">ID of the Encoding. (required)</param>
         /// <param name="muxingId">ID of the Progressive TS muxing (required)</param>

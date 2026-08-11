@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.File
         public static BitmovinApiBuilder<FileApi> Builder => new BitmovinApiBuilder<FileApi>();
 
         /// <summary>
-        /// Add File input stream
+        /// Create File input stream
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="fileInputStream">The File input stream to be created</param>
@@ -39,7 +39,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.File
         }
 
         /// <summary>
-        /// Delete File stream
+        /// Delete File Input Stream
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="inputStreamId">Id of the File input stream. (required)</param>
@@ -49,7 +49,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.File
         }
 
         /// <summary>
-        /// File input stream details
+        /// Get File Input Stream details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="inputStreamId">Id of the File input stream. (required)</param>

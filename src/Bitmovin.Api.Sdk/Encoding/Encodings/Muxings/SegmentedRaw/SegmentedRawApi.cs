@@ -36,7 +36,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.SegmentedRaw
         public CustomdataApi Customdata { get; }
 
         /// <summary>
-        /// Add Segmented RAW muxing
+        /// Create Segmented RAW muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="segmentedRawMuxing">The Segmented RAW muxing to be created</param>
@@ -56,7 +56,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.SegmentedRaw
         }
 
         /// <summary>
-        /// Segmented RAW muxing details
+        /// Get Segmented RAW muxing details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the Segmented RAW muxing (required)</param>

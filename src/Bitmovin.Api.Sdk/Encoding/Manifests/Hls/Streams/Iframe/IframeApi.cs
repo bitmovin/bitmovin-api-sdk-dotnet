@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Streams.Iframe
         public static BitmovinApiBuilder<IframeApi> Builder => new BitmovinApiBuilder<IframeApi>();
 
         /// <summary>
-        /// Add I-frame playlist to variant stream
+        /// Create I-frame playlist to variant stream
         /// </summary>
         /// <param name="manifestId">Id of the hls manifest. (required)</param>
         /// <param name="streamId">Id of the variant stream. (required)</param>
@@ -51,7 +51,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Streams.Iframe
         }
 
         /// <summary>
-        /// I-frame playlist Details
+        /// Get I-frame playlist details
         /// </summary>
         /// <param name="manifestId">Id of the hls manifest. (required)</param>
         /// <param name="streamId">Id of the variant stream. (required)</param>
@@ -62,7 +62,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Streams.Iframe
         }
 
         /// <summary>
-        /// List all I-frame playlists of a variant stream
+        /// List I-frame playlists of a variant stream
         /// </summary>
         /// <param name="manifestId">Id of the hls manifest. (required)</param>
         /// <param name="streamId">Id of the variant stream. (required)</param>

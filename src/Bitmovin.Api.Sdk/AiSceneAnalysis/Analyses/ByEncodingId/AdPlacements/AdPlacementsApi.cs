@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.AiSceneAnalysis.Analyses.ByEncodingId.AdPlacements
         public static BitmovinApiBuilder<AdPlacementsApi> Builder => new BitmovinApiBuilder<AdPlacementsApi>();
 
         /// <summary>
-        /// Get AI scene analysis ad placements by encoding ID
+        /// Get AI Scene Analysis ad placements
         /// </summary>
         /// <param name="encodingId">The encoding ID (required)</param>
         public async Task<Models.SceneAnalysisAdPlacementMetadataResponse> GetAsync(string encodingId)

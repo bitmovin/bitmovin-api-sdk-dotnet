@@ -40,7 +40,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media.CustomTags
         }
 
         /// <summary>
-        /// Delete Custom Tag
+        /// Delete Media Custom Tag
         /// </summary>
         /// <param name="manifestId">Id of the hls manifest. (required)</param>
         /// <param name="mediaId">Id of the media. (required)</param>
@@ -51,7 +51,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media.CustomTags
         }
 
         /// <summary>
-        /// Custom Tag Details
+        /// Media Custom Tag Details
         /// </summary>
         /// <param name="manifestId">Id of the hls manifest. (required)</param>
         /// <param name="mediaId">Id of the media (required)</param>

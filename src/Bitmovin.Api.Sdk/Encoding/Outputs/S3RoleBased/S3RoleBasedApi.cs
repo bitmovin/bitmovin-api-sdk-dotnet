@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.S3RoleBased
         }
 
         /// <summary>
-        /// S3 Role-based Output Details
+        /// Get S3 Role-based Output details
         /// </summary>
         /// <param name="outputId">Id of the input (required)</param>
         public async Task<Models.S3RoleBasedOutput> GetAsync(string outputId)

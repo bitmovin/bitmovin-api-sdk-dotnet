@@ -36,7 +36,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Oci
         public RegionsApi Regions { get; }
 
         /// <summary>
-        /// Add OCI account
+        /// Create OCI account
         /// </summary>
         /// <param name="ociAccount">The OCI account to be added</param>
         public async Task<Models.OciAccount> CreateAsync(Models.OciAccount ociAccount)
@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Oci
         }
 
         /// <summary>
-        /// OCI account details
+        /// Get OCI account details
         /// </summary>
         /// <param name="infrastructureId">Id of the OCI account (required)</param>
         public async Task<Models.OciAccount> GetAsync(string infrastructureId)

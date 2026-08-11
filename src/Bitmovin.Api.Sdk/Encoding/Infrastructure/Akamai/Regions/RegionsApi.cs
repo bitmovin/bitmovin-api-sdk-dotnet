@@ -50,7 +50,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Akamai.Regions
         }
 
         /// <summary>
-        /// Akamai account region settings details
+        /// Get Akamai account region settings details
         /// </summary>
         /// <param name="infrastructureId">Id of the Akamai account (required)</param>
         /// <param name="region">Akamai region (required)</param>

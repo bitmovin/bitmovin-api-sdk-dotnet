@@ -42,7 +42,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.BroadcastTs
         public InformationApi Information { get; }
 
         /// <summary>
-        /// Add Broadcast TS muxing
+        /// Create Broadcast TS muxing
         /// </summary>
         /// <param name="encodingId">ID of the encoding. (required)</param>
         /// <param name="broadcastTsMuxing">The Broadcast TS muxing to be created</param>
@@ -62,7 +62,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.BroadcastTs
         }
 
         /// <summary>
-        /// Broadcast TS muxing details
+        /// Get Broadcast TS muxing details
         /// </summary>
         /// <param name="encodingId">ID of the Encoding. (required)</param>
         /// <param name="muxingId">ID of the Broadcast TS muxing (required)</param>

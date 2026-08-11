@@ -42,7 +42,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Emails.Encoding.Encodings
         public ErrorApi Error { get; }
 
         /// <summary>
-        /// List Email Notifications (Specific Encoding)
+        /// List Email Notifications for a specific Encoding
         /// </summary>
         /// <param name="encodingId">Id of the encoding resource (required)</param>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>

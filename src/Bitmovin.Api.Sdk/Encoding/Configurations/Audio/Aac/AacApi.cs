@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Aac
         }
 
         /// <summary>
-        /// AAC Codec Configuration Details
+        /// Get AAC Codec Configuration details
         /// </summary>
         /// <param name="configurationId">Id of the codec configuration (required)</param>
         public async Task<Models.AacAudioConfiguration> GetAsync(string configurationId)

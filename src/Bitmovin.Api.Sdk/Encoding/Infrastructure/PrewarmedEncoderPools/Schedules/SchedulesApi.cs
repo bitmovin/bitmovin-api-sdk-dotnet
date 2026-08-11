@@ -39,7 +39,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.PrewarmedEncoderPools.Schedul
         }
 
         /// <summary>
-        /// Delete prewarmed encoder pool schedule
+        /// Delete Prewarmed encoder pool schedule
         /// </summary>
         /// <param name="poolId">Id of the scheduled encoder pool (required)</param>
         /// <param name="scheduleId">Id of the prewarmed encoder pool schedule (required)</param>
@@ -49,7 +49,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.PrewarmedEncoderPools.Schedul
         }
 
         /// <summary>
-        /// Prewarmed encoder pool schedule details
+        /// Get Prewarmed encoder pool schedule details
         /// </summary>
         /// <param name="poolId">Id of the scheduled encoder pool (required)</param>
         /// <param name="scheduleId">Id of the prewarmed encoder pool schedule (required)</param>

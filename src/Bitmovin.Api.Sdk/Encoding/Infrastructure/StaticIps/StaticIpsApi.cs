@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.StaticIps
         public static BitmovinApiBuilder<StaticIpsApi> Builder => new BitmovinApiBuilder<StaticIpsApi>();
 
         /// <summary>
-        /// Add Static IP Address
+        /// Create Static IP Address
         /// </summary>
         /// <param name="staticIp">The static ip to be created</param>
         public async Task<Models.StaticIp> CreateAsync(Models.StaticIp staticIp)
@@ -47,7 +47,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.StaticIps
         }
 
         /// <summary>
-        /// Static IP Address Details
+        /// Get Static IP Address details
         /// </summary>
         /// <param name="id">Id of the Static IP Address (required)</param>
         public async Task<Models.StaticIp> GetAsync(string id)
@@ -56,7 +56,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.StaticIps
         }
 
         /// <summary>
-        /// List all Static IP Addresses
+        /// List Static IP Addresses
         /// </summary>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>
         public async Task<Models.PaginationResponse<Models.StaticIp>> ListAsync(params Func<ListQueryParams, ListQueryParams>[] queryParams)

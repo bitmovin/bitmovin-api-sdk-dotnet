@@ -36,7 +36,7 @@ namespace Bitmovin.Api.Sdk.AiSceneAnalysis.Analyses.ByEncodingId.Details
         public LanguageApi Language { get; }
 
         /// <summary>
-        /// Get AI scene analysis details by encoding ID
+        /// Get AI Scene Analysis details
         /// </summary>
         /// <param name="encodingId">The encoding ID (required)</param>
         public async Task<Models.SceneAnalysisDetailsResponse> GetAsync(string encodingId)

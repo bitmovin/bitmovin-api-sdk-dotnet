@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.GenericS3.Customdata
         public static BitmovinApiBuilder<CustomdataApi> Builder => new BitmovinApiBuilder<CustomdataApi>();
 
         /// <summary>
-        /// Generic S3 Output Custom Data
+        /// Get Generic S3 Output Custom Data
         /// </summary>
         /// <param name="outputId">Id of the Output (required)</param>
         public async Task<Models.CustomData> GetAsync(string outputId)

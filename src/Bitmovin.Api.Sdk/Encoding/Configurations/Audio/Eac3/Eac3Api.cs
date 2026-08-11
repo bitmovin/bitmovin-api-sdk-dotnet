@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.Eac3
         }
 
         /// <summary>
-        /// E-AC3 Codec Configuration Details
+        /// Get E-AC3 Codec Configuration details
         /// </summary>
         /// <param name="configurationId">Id of the codec configuration (required)</param>
         public async Task<Models.Eac3AudioConfiguration> GetAsync(string configurationId)

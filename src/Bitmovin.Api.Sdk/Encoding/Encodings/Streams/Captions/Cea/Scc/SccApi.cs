@@ -36,7 +36,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Captions.Cea.Scc
         public CustomdataApi Customdata { get; }
 
         /// <summary>
-        /// Embed SCC captions as 608/708 into Stream
+        /// Create SCC captions as 608/708
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="streamId">Id of the stream. (required)</param>
@@ -47,7 +47,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Captions.Cea.Scc
         }
 
         /// <summary>
-        /// Delete SCC captions as 608/708 from Stream
+        /// Delete SCC captions as 608/708
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="streamId">Id of the stream. (required)</param>
@@ -58,7 +58,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Captions.Cea.Scc
         }
 
         /// <summary>
-        /// Embed SCC captions as 608/708 Details
+        /// Get SCC captions as 608/708 details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="streamId">Id of the stream. (required)</param>
@@ -69,7 +69,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.Captions.Cea.Scc
         }
 
         /// <summary>
-        /// List SCC captions as 608/708 from Stream
+        /// List SCC captions as 608/708
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="streamId">Id of the stream. (required)</param>

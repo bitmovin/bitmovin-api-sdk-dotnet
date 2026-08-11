@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs
         public DrmApi Drm { get; }
 
         /// <summary>
-        /// Add Progressive TS muxing
+        /// Create Progressive TS muxing
         /// </summary>
         /// <param name="encodingId">ID of the encoding. (required)</param>
         /// <param name="progressiveTsMuxing">The Progressive TS muxing to be created</param>
@@ -74,7 +74,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs
         }
 
         /// <summary>
-        /// Progressive TS muxing details
+        /// Get Progressive TS muxing details
         /// </summary>
         /// <param name="encodingId">ID of the Encoding. (required)</param>
         /// <param name="muxingId">ID of the Progressive TS muxing (required)</param>

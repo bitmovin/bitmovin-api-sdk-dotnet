@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.AkamaiNetstorage
         }
 
         /// <summary>
-        /// Akamai NetStorage Output Details
+        /// Get Akamai NetStorage Output details
         /// </summary>
         /// <param name="outputId">Id of the output (required)</param>
         public async Task<Models.AkamaiNetStorageOutput> GetAsync(string outputId)

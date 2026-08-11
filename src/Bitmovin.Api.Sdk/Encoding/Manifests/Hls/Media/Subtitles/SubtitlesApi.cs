@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media.Subtitles
         public static BitmovinApiBuilder<SubtitlesApi> Builder => new BitmovinApiBuilder<SubtitlesApi>();
 
         /// <summary>
-        /// Add Subtitles Media
+        /// Create Subtitles Media
         /// </summary>
         /// <param name="manifestId">Id of the hls manifest. (required)</param>
         /// <param name="subtitlesMediaInfo">The Subtitles Media to be added</param>
@@ -49,7 +49,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media.Subtitles
         }
 
         /// <summary>
-        /// Subtitles Media Details
+        /// Get Subtitles Media details
         /// </summary>
         /// <param name="manifestId">Id of the hls manifest. (required)</param>
         /// <param name="mediaId">Id of the subtitles media. (required)</param>
@@ -59,7 +59,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media.Subtitles
         }
 
         /// <summary>
-        /// List all Subtitles Media
+        /// List Subtitles Media
         /// </summary>
         /// <param name="manifestId">Id of the hls manifest. (required)</param>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>

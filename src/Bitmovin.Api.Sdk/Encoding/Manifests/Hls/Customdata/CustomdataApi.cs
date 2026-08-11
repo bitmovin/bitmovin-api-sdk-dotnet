@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Customdata
         public static BitmovinApiBuilder<CustomdataApi> Builder => new BitmovinApiBuilder<CustomdataApi>();
 
         /// <summary>
-        /// HLS Manifest Custom Data
+        /// Get HLS Manifest Custom Data
         /// </summary>
         /// <param name="manifestId">UUID of the HLS manifest (required)</param>
         public async Task<Models.CustomData> GetAsync(string manifestId)

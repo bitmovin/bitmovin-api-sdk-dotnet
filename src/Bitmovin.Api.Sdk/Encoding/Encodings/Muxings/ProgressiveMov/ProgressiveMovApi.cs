@@ -42,7 +42,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveMov
         public InformationApi Information { get; }
 
         /// <summary>
-        /// Add Progressive MOV muxing
+        /// Create Progressive MOV muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="progressiveMovMuxing">The Progressive MOV muxing to be created</param>
@@ -62,7 +62,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveMov
         }
 
         /// <summary>
-        /// Progressive MOV muxing details
+        /// Get Progressive MOV muxing details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the Progressive MOV muxing (required)</param>

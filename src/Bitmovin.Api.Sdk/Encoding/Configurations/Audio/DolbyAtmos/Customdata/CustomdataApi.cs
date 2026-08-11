@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.DolbyAtmos.Customdata
         public static BitmovinApiBuilder<CustomdataApi> Builder => new BitmovinApiBuilder<CustomdataApi>();
 
         /// <summary>
-        /// Dolby Atmos Codec Configuration Custom Data
+        /// Get Dolby Atmos Codec Configuration Custom Data
         /// </summary>
         /// <param name="configurationId">Id of the codec configuration (required)</param>
         public async Task<Models.CustomData> GetAsync(string configurationId)

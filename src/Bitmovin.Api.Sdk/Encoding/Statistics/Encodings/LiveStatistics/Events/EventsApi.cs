@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.LiveStatistics.Events
         public static BitmovinApiBuilder<EventsApi> Builder => new BitmovinApiBuilder<EventsApi>();
 
         /// <summary>
-        /// List Events of Live Statistics from an Encoding
+        /// List Live Statistics Events
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>

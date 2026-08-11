@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.AudioMix
         public static BitmovinApiBuilder<AudioMixApi> Builder => new BitmovinApiBuilder<AudioMixApi>();
 
         /// <summary>
-        /// Add audio mix input stream
+        /// Create audio mix input stream
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="audioMixInputStream">The audio mix input stream to be created</param>
@@ -39,7 +39,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.AudioMix
         }
 
         /// <summary>
-        /// Delete audio mix input stream
+        /// Delete Audio mix input stream
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="inputStreamId">Id of the audio mix input stream. (required)</param>
@@ -49,7 +49,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.AudioMix
         }
 
         /// <summary>
-        /// Audio mix input stream details
+        /// Get Audio mix input stream details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="inputStreamId">Id of the audio mix input stream. (required)</param>

@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Image
         public static BitmovinApiBuilder<ImageApi> Builder => new BitmovinApiBuilder<ImageApi>();
 
         /// <summary>
-        /// Add Image AdaptationSet
+        /// Create Image AdaptationSet
         /// </summary>
         /// <param name="manifestId">Id of the manifest (required)</param>
         /// <param name="periodId">Id of the period (required)</param>
@@ -51,7 +51,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Image
         }
 
         /// <summary>
-        /// Image AdaptationSet Details
+        /// Get Image AdaptationSet details
         /// </summary>
         /// <param name="manifestId">Id of the manifest (required)</param>
         /// <param name="periodId">Id of the period (required)</param>
@@ -62,7 +62,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Image
         }
 
         /// <summary>
-        /// List all Image AdaptationSets
+        /// List Image AdaptationSets
         /// </summary>
         /// <param name="manifestId">Id of the manifest (required)</param>
         /// <param name="periodId">Id of the period (required)</param>

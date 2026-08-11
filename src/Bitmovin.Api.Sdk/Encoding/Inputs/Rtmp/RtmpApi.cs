@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Rtmp
         public static BitmovinApiBuilder<RtmpApi> Builder => new BitmovinApiBuilder<RtmpApi>();
 
         /// <summary>
-        /// RTMP Input Details
+        /// Get RTMP Input details
         /// </summary>
         /// <param name="inputId">Id of the input (required)</param>
         public async Task<Models.RtmpInput> GetAsync(string inputId)

@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.Ftp
         }
 
         /// <summary>
-        /// FTP Output Details
+        /// Get FTP Output details
         /// </summary>
         /// <param name="outputId">Id of the output (required)</param>
         public async Task<Models.FtpOutput> GetAsync(string outputId)

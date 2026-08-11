@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Subtit
         public static BitmovinApiBuilder<SubtitleApi> Builder => new BitmovinApiBuilder<SubtitleApi>();
 
         /// <summary>
-        /// Add Subtitle AdaptationSet
+        /// Create Subtitle AdaptationSet
         /// </summary>
         /// <param name="manifestId">Id of the manifest (required)</param>
         /// <param name="periodId">Id of the period (required)</param>
@@ -51,7 +51,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Subtit
         }
 
         /// <summary>
-        /// Subtitle AdaptationSet Details
+        /// Get Subtitle AdaptationSet details
         /// </summary>
         /// <param name="manifestId">Id of the manifest (required)</param>
         /// <param name="periodId">Id of the period (required)</param>
@@ -62,7 +62,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Subtit
         }
 
         /// <summary>
-        /// List all Subtitle AdaptationSets
+        /// List Subtitle AdaptationSets
         /// </summary>
         /// <param name="manifestId">Id of the manifest (required)</param>
         /// <param name="periodId">Id of the period (required)</param>

@@ -42,7 +42,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveWav
         public InformationApi Information { get; }
 
         /// <summary>
-        /// Add Progressive Wav muxing
+        /// Create Progressive Wav muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="progressiveWavMuxing">The Progressive WAV muxing to be created</param>
@@ -62,7 +62,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveWav
         }
 
         /// <summary>
-        /// Progressive WAV muxing details
+        /// Get Progressive WAV muxing details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the Progressive WAV muxing (required)</param>

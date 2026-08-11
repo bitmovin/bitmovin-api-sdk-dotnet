@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.LiveStatistics.Streams
         public static BitmovinApiBuilder<StreamsApi> Builder => new BitmovinApiBuilder<StreamsApi>();
 
         /// <summary>
-        /// List Stream Infos of Live Statistics from an Encoding
+        /// List Live Statistics Stream Infos
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>

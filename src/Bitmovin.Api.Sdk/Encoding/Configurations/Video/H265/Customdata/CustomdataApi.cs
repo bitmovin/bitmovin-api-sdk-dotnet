@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Video.H265.Customdata
         public static BitmovinApiBuilder<CustomdataApi> Builder => new BitmovinApiBuilder<CustomdataApi>();
 
         /// <summary>
-        /// H265/HEVC Codec Configuration Custom Data
+        /// Get H265/HEVC Codec Configuration Custom Data
         /// </summary>
         /// <param name="configurationId">Id of the codec configuration (required)</param>
         public async Task<Models.CustomData> GetAsync(string configurationId)

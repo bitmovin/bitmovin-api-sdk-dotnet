@@ -36,7 +36,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Cmaf
         public CustomdataApi Customdata { get; }
 
         /// <summary>
-        /// Add CMAF muxing
+        /// Create CMAF muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="cmafMuxing">The CMAF muxing to be created</param>
@@ -56,7 +56,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Cmaf
         }
 
         /// <summary>
-        /// CMAF muxing details
+        /// Get CMAF muxing details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the CMAF muxing (required)</param>

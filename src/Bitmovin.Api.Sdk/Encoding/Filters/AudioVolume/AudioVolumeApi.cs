@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.AudioVolume
         }
 
         /// <summary>
-        /// Audio Volume Filter Details
+        /// Get Audio Volume Filter details
         /// </summary>
         /// <param name="filterId">Id of the Audio Volume Filter. (required)</param>
         public async Task<Models.AudioVolumeFilter> GetAsync(string filterId)

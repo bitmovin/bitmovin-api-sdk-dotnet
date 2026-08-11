@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Conform
         }
 
         /// <summary>
-        /// Conform Filter Details
+        /// Get Conform Filter details
         /// </summary>
         /// <param name="filterId">Id of the conform filter (required)</param>
         public async Task<Models.ConformFilter> GetAsync(string filterId)

@@ -36,7 +36,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Captions.Scc
         public CustomdataApi Customdata { get; }
 
         /// <summary>
-        /// Convert SCC captions
+        /// Create SCC Caption Conversion
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="convertSccCaption">The SCC captions to be created</param>
@@ -46,7 +46,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Captions.Scc
         }
 
         /// <summary>
-        /// Delete Convert SCC captions
+        /// Delete SCC Caption Conversion
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="captionsId">Id of the caption. (required)</param>
@@ -56,7 +56,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Captions.Scc
         }
 
         /// <summary>
-        /// Convert SCC captions Details
+        /// Get SCC Caption Conversion details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="captionsId">Id of the caption. (required)</param>
@@ -66,7 +66,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Captions.Scc
         }
 
         /// <summary>
-        /// List Convert SCC captions
+        /// List SCC Caption Conversions
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>

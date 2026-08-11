@@ -36,7 +36,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm.Aes
         public CustomdataApi Customdata { get; }
 
         /// <summary>
-        /// Add AES encryption configuration to fMP4
+        /// Create AES encryption configuration to fMP4
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the fMP4 muxing. (required)</param>
@@ -58,7 +58,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm.Aes
         }
 
         /// <summary>
-        /// AES encryption Details of an fMP4 muxing
+        /// Get AES encryption configuration from an fMP4 muxing details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the fMP4 muxing. (required)</param>

@@ -36,7 +36,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Azure
         public RegionsApi Regions { get; }
 
         /// <summary>
-        /// Add Azure Account
+        /// Create Azure Account
         /// </summary>
         /// <param name="azureAccount">The Azure Account to be added</param>
         public async Task<Models.AzureAccount> CreateAsync(Models.AzureAccount azureAccount)
@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Azure
         }
 
         /// <summary>
-        /// Azure Account Details
+        /// Get Azure Account details
         /// </summary>
         /// <param name="infrastructureId">Id of the Azure account (required)</param>
         public async Task<Models.AzureAccount> GetAsync(string infrastructureId)

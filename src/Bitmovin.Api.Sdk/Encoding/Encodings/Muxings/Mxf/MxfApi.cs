@@ -36,7 +36,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mxf
         public CustomdataApi Customdata { get; }
 
         /// <summary>
-        /// Add MXF muxing
+        /// Create MXF muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="mxfMuxing">The MXF muxing to be created</param>
@@ -56,7 +56,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Mxf
         }
 
         /// <summary>
-        /// MXF muxing details
+        /// Get MXF muxing details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the MXF muxing (required)</param>

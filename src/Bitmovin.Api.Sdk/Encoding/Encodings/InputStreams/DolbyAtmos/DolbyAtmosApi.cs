@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.DolbyAtmos
         public static BitmovinApiBuilder<DolbyAtmosApi> Builder => new BitmovinApiBuilder<DolbyAtmosApi>();
 
         /// <summary>
-        /// Add Dolby Atmos input stream
+        /// Create Dolby Atmos input stream
         /// </summary>
         /// <param name="encodingId">Id of the encoding (required)</param>
         /// <param name="dolbyAtmosIngestInputStream">The Dolby Atmos input stream to be created</param>
@@ -49,7 +49,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.DolbyAtmos
         }
 
         /// <summary>
-        /// Dolby Atmos input stream details
+        /// Get Dolby Atmos input stream details
         /// </summary>
         /// <param name="encodingId">Id of the encoding (required)</param>
         /// <param name="inputStreamId">Id of the Dolby Atmos input stream (required)</param>

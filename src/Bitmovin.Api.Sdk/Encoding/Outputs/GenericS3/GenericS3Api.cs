@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.GenericS3
         }
 
         /// <summary>
-        /// Generic S3 Output Details
+        /// Get Generic S3 Output details
         /// </summary>
         /// <param name="outputId">Id of the output (required)</param>
         public async Task<Models.GenericS3Output> GetAsync(string outputId)

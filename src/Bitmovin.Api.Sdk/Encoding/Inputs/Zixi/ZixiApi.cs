@@ -45,7 +45,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Zixi
         }
 
         /// <summary>
-        /// Delete Zixi input
+        /// Delete Zixi Input
         /// </summary>
         /// <param name="inputId">Id of the input (required)</param>
         public async Task<Models.ZixiInput> DeleteAsync(string inputId)
@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Zixi
         }
 
         /// <summary>
-        /// Zixi Input Details
+        /// Get Zixi Input details
         /// </summary>
         /// <param name="inputId">Id of the input (required)</param>
         public async Task<Models.ZixiInput> GetAsync(string inputId)

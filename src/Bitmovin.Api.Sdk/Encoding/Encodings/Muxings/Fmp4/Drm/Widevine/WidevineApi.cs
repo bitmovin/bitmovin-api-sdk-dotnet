@@ -36,7 +36,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm.Widevine
         public CustomdataApi Customdata { get; }
 
         /// <summary>
-        /// Add Widevine DRM to an fMP4 muxing
+        /// Create Widevine DRM to an fMP4 muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the fMP4 muxing. (required)</param>
@@ -58,7 +58,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm.Widevine
         }
 
         /// <summary>
-        /// Widevine DRM Details of an fMP4 muxing
+        /// Get Widevine DRM from an fMP4 muxing details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the fMP4 muxing. (required)</param>

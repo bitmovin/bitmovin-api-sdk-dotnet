@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.CustomXmlElements
         public static BitmovinApiBuilder<CustomXmlElementsApi> Builder => new BitmovinApiBuilder<CustomXmlElementsApi>();
 
         /// <summary>
-        /// Add Custom XML Element to Period
+        /// Create Custom XML Element to Period
         /// </summary>
         /// <param name="manifestId">Id of the manifest (required)</param>
         /// <param name="periodId">Id of the period (required)</param>
@@ -51,7 +51,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.CustomXmlElements
         }
 
         /// <summary>
-        /// Custom XML Element Details
+        /// Get Custom XML Element details
         /// </summary>
         /// <param name="manifestId">Id of the manifest (required)</param>
         /// <param name="periodId">Id of the period (required)</param>
@@ -62,7 +62,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.CustomXmlElements
         }
 
         /// <summary>
-        /// List all Custom XML Elements of Period
+        /// List Custom XML Elements of Period
         /// </summary>
         /// <param name="manifestId">Id of the manifest (required)</param>
         /// <param name="periodId">Id of the period (required)</param>

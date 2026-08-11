@@ -48,7 +48,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.PackedAudio
         public DrmApi Drm { get; }
 
         /// <summary>
-        /// Add Packed Audio muxing
+        /// Create Packed Audio muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="packedAudioMuxing">The Packed Audio muxing to be created</param>
@@ -68,7 +68,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.PackedAudio
         }
 
         /// <summary>
-        /// Packed Audio muxing details
+        /// Get Packed Audio muxing details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the Packed Audio muxing (required)</param>

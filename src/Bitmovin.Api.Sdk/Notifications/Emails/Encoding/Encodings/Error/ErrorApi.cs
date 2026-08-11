@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Emails.Encoding.Encodings.Error
         public static BitmovinApiBuilder<ErrorApi> Builder => new BitmovinApiBuilder<ErrorApi>();
 
         /// <summary>
-        /// Add Encoding Error Email Notification (All Encodings)
+        /// Create &#39;Encoding Error&#39; Email Notification
         /// </summary>
         /// <param name="encodingErrorEmailNotification">Add a new email notification if an encoding received an error</param>
         public async Task<Models.PaginationResponse<Models.EncodingErrorEmailNotification>> CreateAsync(Models.EncodingErrorEmailNotification encodingErrorEmailNotification)
@@ -38,7 +38,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Emails.Encoding.Encodings.Error
         }
 
         /// <summary>
-        /// Add Encoding Error Email Notification (Specific Encoding)
+        /// Create &#39;Encoding Error&#39; Email Notification for a specific Encoding
         /// </summary>
         /// <param name="encodingId">Id of the encoding resource (required)</param>
         /// <param name="emailNotification">The email notifications object</param>
@@ -48,7 +48,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Emails.Encoding.Encodings.Error
         }
 
         /// <summary>
-        /// Replace Encoding Error Email Notification
+        /// Update &#39;Encoding Error&#39; Email Notification
         /// </summary>
         /// <param name="notificationId">Id of the email notification (required)</param>
         /// <param name="emailNotification">The email notification with the updated values</param>

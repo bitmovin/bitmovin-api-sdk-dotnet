@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Video
         public static BitmovinApiBuilder<VideoApi> Builder => new BitmovinApiBuilder<VideoApi>();
 
         /// <summary>
-        /// Add Video AdaptationSet
+        /// Create Video AdaptationSet
         /// </summary>
         /// <param name="manifestId">Id of the manifest (required)</param>
         /// <param name="periodId">Id of the period (required)</param>
@@ -51,7 +51,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Video
         }
 
         /// <summary>
-        /// Video AdaptationSet Details
+        /// Get Video AdaptationSet details
         /// </summary>
         /// <param name="manifestId">Id of the manifest (required)</param>
         /// <param name="periodId">Id of the period (required)</param>
@@ -62,7 +62,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Video
         }
 
         /// <summary>
-        /// List all Video AdaptationSets
+        /// List Video AdaptationSets
         /// </summary>
         /// <param name="manifestId">Id of the manifest (required)</param>
         /// <param name="periodId">Id of the period (required)</param>

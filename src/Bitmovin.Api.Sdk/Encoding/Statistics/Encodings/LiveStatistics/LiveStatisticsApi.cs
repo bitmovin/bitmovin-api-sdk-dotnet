@@ -48,7 +48,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.LiveStatistics
         public SrtApi Srt { get; }
 
         /// <summary>
-        /// List Live Statistics from an Encoding
+        /// List Live Statistics
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         public async Task<Models.LiveEncodingStats> GetAsync(string encodingId)

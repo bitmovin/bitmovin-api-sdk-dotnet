@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Statistics.Encodings.LiveStatistics.Srt
         public static BitmovinApiBuilder<SrtApi> Builder => new BitmovinApiBuilder<SrtApi>();
 
         /// <summary>
-        /// List Stream Infos of Live Statistics from an Encoding
+        /// List Live Statistics SRT
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>

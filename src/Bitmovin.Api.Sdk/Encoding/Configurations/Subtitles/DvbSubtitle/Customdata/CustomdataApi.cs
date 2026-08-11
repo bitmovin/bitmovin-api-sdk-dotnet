@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Subtitles.DvbSubtitle.Customd
         public static BitmovinApiBuilder<CustomdataApi> Builder => new BitmovinApiBuilder<CustomdataApi>();
 
         /// <summary>
-        /// DVB-SUB subtitle configuration custom data
+        /// Get DVB-SUB subtitle configuration Custom Data
         /// </summary>
         /// <param name="configurationId">Id of the codec configuration (required)</param>
         public async Task<Models.CustomData> GetAsync(string configurationId)

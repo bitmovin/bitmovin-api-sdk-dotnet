@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Concatenation
         public static BitmovinApiBuilder<ConcatenationApi> Builder => new BitmovinApiBuilder<ConcatenationApi>();
 
         /// <summary>
-        /// Add Concatenation Input Stream
+        /// Create Concatenation Input Stream
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="concatenationInputStream">The Concatenation Input Stream to be created</param>
@@ -49,7 +49,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Concatenation
         }
 
         /// <summary>
-        /// Concatenation Input Stream Details
+        /// Get Concatenation Input Stream details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="inputStreamId">Id of the concatenation input stream. (required)</param>

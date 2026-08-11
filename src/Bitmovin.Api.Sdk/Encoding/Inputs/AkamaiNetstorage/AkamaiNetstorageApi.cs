@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.AkamaiNetstorage
         }
 
         /// <summary>
-        /// Akamai NetStorage Input Details
+        /// Get Akamai NetStorage Input details
         /// </summary>
         /// <param name="inputId">Id of the input (required)</param>
         public async Task<Models.AkamaiNetStorageInput> GetAsync(string inputId)

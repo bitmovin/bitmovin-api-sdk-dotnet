@@ -72,7 +72,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Smooth
         }
 
         /// <summary>
-        /// Smooth Streaming Manifest Details
+        /// Get Smooth Streaming Manifest details
         /// </summary>
         /// <param name="manifestId">Id of the Smooth Streaming Manifest. (required)</param>
         public async Task<Models.SmoothStreamingManifest> GetAsync(string manifestId)
@@ -81,7 +81,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Smooth
         }
 
         /// <summary>
-        /// Manifest Start Details
+        /// Smooth Streaming Manifest Start Details
         /// </summary>
         /// <param name="manifestId">Id of the manifest (required)</param>
         public async Task<Models.StartManifestRequest> GetStartRequestAsync(string manifestId)

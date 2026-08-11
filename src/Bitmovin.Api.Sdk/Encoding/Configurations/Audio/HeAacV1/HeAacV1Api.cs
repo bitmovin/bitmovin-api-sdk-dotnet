@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.HeAacV1
         }
 
         /// <summary>
-        /// HE-AAC v1 Codec Configuration Details
+        /// Get HE-AAC v1 Codec Configuration details
         /// </summary>
         /// <param name="configurationId">Id of the codec configuration (required)</param>
         public async Task<Models.HeAacV1AudioConfiguration> GetAsync(string configurationId)

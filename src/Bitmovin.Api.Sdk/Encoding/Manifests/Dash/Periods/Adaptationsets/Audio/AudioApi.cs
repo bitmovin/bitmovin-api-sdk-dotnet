@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Audio
         public static BitmovinApiBuilder<AudioApi> Builder => new BitmovinApiBuilder<AudioApi>();
 
         /// <summary>
-        /// Add Audio AdaptationSet
+        /// Create Audio AdaptationSet
         /// </summary>
         /// <param name="manifestId">Id of the manifest (required)</param>
         /// <param name="periodId">Id of the period (required)</param>
@@ -51,7 +51,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Audio
         }
 
         /// <summary>
-        /// Audio AdaptationSet Details
+        /// Get Audio AdaptationSet details
         /// </summary>
         /// <param name="manifestId">Id of the manifest (required)</param>
         /// <param name="periodId">Id of the period (required)</param>
@@ -62,7 +62,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash.Periods.Adaptationsets.Audio
         }
 
         /// <summary>
-        /// List all Audio AdaptationSets
+        /// List Audio AdaptationSets
         /// </summary>
         /// <param name="manifestId">Id of the manifest (required)</param>
         /// <param name="periodId">Id of the period (required)</param>

@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Audio.DolbyDigital
         }
 
         /// <summary>
-        /// Dolby Digital Codec Configuration Details
+        /// Get Dolby Digital Codec Configuration details
         /// </summary>
         /// <param name="configurationId">Id of the codec configuration (required)</param>
         public async Task<Models.DolbyDigitalAudioConfiguration> GetAsync(string configurationId)

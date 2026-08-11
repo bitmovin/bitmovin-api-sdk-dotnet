@@ -36,7 +36,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Gce
         public RegionsApi Regions { get; }
 
         /// <summary>
-        /// Add GCE Account
+        /// Create GCE Account
         /// </summary>
         /// <param name="gceAccount">The GCE Account to be added</param>
         public async Task<Models.GceAccount> CreateAsync(Models.GceAccount gceAccount)
@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Gce
         }
 
         /// <summary>
-        /// GCE Account Details
+        /// Get GCE Account details
         /// </summary>
         /// <param name="infrastructureId">Id of the GCE account (required)</param>
         public async Task<Models.GceAccount> GetAsync(string infrastructureId)

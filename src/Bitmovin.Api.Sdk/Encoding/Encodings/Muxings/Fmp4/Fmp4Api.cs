@@ -48,7 +48,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4
         public DrmApi Drm { get; }
 
         /// <summary>
-        /// Add fMP4 muxing
+        /// Create fMP4 muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="fmp4Muxing">The fMP4 muxing to be created</param>
@@ -68,7 +68,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4
         }
 
         /// <summary>
-        /// fMP4 muxing details
+        /// Get fMP4 muxing details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the fMP4 muxing (required)</param>

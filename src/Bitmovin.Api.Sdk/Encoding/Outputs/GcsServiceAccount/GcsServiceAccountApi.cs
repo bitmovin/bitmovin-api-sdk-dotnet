@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.GcsServiceAccount
         }
 
         /// <summary>
-        /// Service Account based GCS Output Details
+        /// Get Service Account based GCS Output details
         /// </summary>
         /// <param name="outputId">Id of the output (required)</param>
         public async Task<Models.GcsServiceAccountOutput> GetAsync(string outputId)

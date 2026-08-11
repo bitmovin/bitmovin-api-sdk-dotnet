@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.EbuR128SinglePass
         }
 
         /// <summary>
-        /// EBU R128 Single Pass Filter Details
+        /// Get EBU R128 Single Pass Filter details
         /// </summary>
         /// <param name="filterId">Id of the EBU R128 Single Pass filter. (required)</param>
         public async Task<Models.EbuR128SinglePassFilter> GetAsync(string filterId)

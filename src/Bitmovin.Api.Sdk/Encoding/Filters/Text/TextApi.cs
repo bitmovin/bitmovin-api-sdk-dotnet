@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Text
         }
 
         /// <summary>
-        /// Text Filter Details
+        /// Get Text Filter details
         /// </summary>
         /// <param name="filterId">Id of the Text Filter (required)</param>
         public async Task<Models.TextFilter> GetAsync(string filterId)

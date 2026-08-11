@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Subtitles.DvbSubtitle
         public static BitmovinApiBuilder<DvbSubtitleApi> Builder => new BitmovinApiBuilder<DvbSubtitleApi>();
 
         /// <summary>
-        /// Add DVB Subtitle Input Stream
+        /// Create DVB Subtitle Input Stream
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="dvbSubtitleInputStream">The DVB Subtitle Input Stream to be created</param>
@@ -49,7 +49,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Subtitles.DvbSubtitle
         }
 
         /// <summary>
-        /// DVB Subtitle Input Stream Details
+        /// Get DVB Subtitle Input Stream details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="inputStreamId">Id of the DVB Subtitle Input Stream. (required)</param>

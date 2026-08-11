@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Smooth.Contentprotection
         public static BitmovinApiBuilder<ContentprotectionApi> Builder => new BitmovinApiBuilder<ContentprotectionApi>();
 
         /// <summary>
-        /// Add Content Protection to Smooth Streaming
+        /// Create Content Protection to Smooth Streaming
         /// </summary>
         /// <param name="manifestId">Id of the Smooth Streaming manifest. (required)</param>
         /// <param name="smoothManifestContentProtection">The Content Protection to be added</param>
@@ -39,7 +39,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Smooth.Contentprotection
         }
 
         /// <summary>
-        /// Delete Content Protection of Smooth Streaming
+        /// Delete Content Protection of Smooth Streaming Representation
         /// </summary>
         /// <param name="manifestId">Id of the Smooth Streaming manifest. (required)</param>
         /// <param name="protectionId">Id of the content protection. (required)</param>
@@ -49,7 +49,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Smooth.Contentprotection
         }
 
         /// <summary>
-        /// Content Protection of Smooth Streaming Representation Details
+        /// Get Content Protection of Smooth Streaming Representation details
         /// </summary>
         /// <param name="manifestId">Id of the Smooth Streaming manifest. (required)</param>
         /// <param name="protectionId">Id of the content protection. (required)</param>

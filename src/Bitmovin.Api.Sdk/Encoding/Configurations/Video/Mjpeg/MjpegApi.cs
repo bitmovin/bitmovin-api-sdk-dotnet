@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Video.Mjpeg
         }
 
         /// <summary>
-        /// MJPEG Codec Configuration Details
+        /// Get MJPEG Codec Configuration details
         /// </summary>
         /// <param name="configurationId">Id of the codec configuration (required)</param>
         public async Task<Models.MjpegVideoConfiguration> GetAsync(string configurationId)

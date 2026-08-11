@@ -36,7 +36,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm.Primetime
         public CustomdataApi Customdata { get; }
 
         /// <summary>
-        /// Add PrimeTime DRM to an fMP4 muxing
+        /// Create PrimeTime DRM to an fMP4 muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the fMP4 muxing. (required)</param>
@@ -58,7 +58,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Fmp4.Drm.Primetime
         }
 
         /// <summary>
-        /// PrimeTime DRM Details of an fMP4 muxing
+        /// Get PrimeTime DRM from an fMP4 muxing details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the fMP4 muxing (required)</param>

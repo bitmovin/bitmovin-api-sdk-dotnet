@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.Sftp
         }
 
         /// <summary>
-        /// SFTP Output Details
+        /// Get SFTP Output details
         /// </summary>
         /// <param name="outputId">Id of the output (required)</param>
         public async Task<Models.SftpOutput> GetAsync(string outputId)

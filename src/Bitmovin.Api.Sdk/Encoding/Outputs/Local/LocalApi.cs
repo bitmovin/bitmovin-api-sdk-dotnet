@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.Local
         }
 
         /// <summary>
-        /// Local Output Details
+        /// Get Local Output details
         /// </summary>
         /// <param name="outputId">Id of the output (required)</param>
         public async Task<Models.LocalOutput> GetAsync(string outputId)

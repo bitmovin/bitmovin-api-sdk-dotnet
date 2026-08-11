@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Video.Vp9
         }
 
         /// <summary>
-        /// VP9 Codec Configuration Details
+        /// Get VP9 Codec Configuration details
         /// </summary>
         /// <param name="configurationId">Id of the codec configuration (required)</param>
         public async Task<Models.Vp9VideoConfiguration> GetAsync(string configurationId)

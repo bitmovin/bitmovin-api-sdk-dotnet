@@ -36,7 +36,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Drm.Fairplay
         public CustomdataApi Customdata { get; }
 
         /// <summary>
-        /// Add FairPlay DRM to a Progressive TS muxing
+        /// Create FairPlay DRM to a Progressive TS muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the Progressive TS muxing. (required)</param>
@@ -58,7 +58,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Drm.Fairplay
         }
 
         /// <summary>
-        /// FairPlay DRM Details of a Progressive TS
+        /// Get FairPlay DRM from a Progressive TS muxing details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the Progressive TS muxing. (required)</param>

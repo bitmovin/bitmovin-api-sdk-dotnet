@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.AudioMix
         }
 
         /// <summary>
-        /// Audio Mix Filter Details
+        /// Get Audio Mix Filter details
         /// </summary>
         /// <param name="filterId">Id of the Audio Mix Filter. (required)</param>
         public async Task<Models.AudioMixFilter> GetAsync(string filterId)

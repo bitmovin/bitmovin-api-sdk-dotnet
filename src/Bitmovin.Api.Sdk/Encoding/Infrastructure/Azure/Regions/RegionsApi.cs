@@ -50,7 +50,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Infrastructure.Azure.Regions
         }
 
         /// <summary>
-        /// Azure Region Settings Details
+        /// Get Azure Region Settings details
         /// </summary>
         /// <param name="infrastructureId">Id of the Azure account (required)</param>
         /// <param name="region">Azure region. (required)</param>

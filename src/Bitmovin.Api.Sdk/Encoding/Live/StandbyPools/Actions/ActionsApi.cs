@@ -39,7 +39,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Live.StandbyPools.Actions
         }
 
         /// <summary>
-        /// Delete error encodings from the standby pool
+        /// Delete Error Encodings from Standby Pool
         /// </summary>
         /// <param name="poolId">Id of the standby pool (required)</param>
         public async Task<Models.LiveStandbyPoolEncoding> DeleteErrorEncodingsAsync(string poolId)

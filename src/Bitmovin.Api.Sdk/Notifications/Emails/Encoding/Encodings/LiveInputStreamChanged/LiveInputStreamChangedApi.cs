@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Emails.Encoding.Encodings.LiveInputStre
         public static BitmovinApiBuilder<LiveInputStreamChangedApi> Builder => new BitmovinApiBuilder<LiveInputStreamChangedApi>();
 
         /// <summary>
-        /// Add Live Input Stream Changed Email Notification (All Encodings)
+        /// Create &#39;Live Input Stream Changed&#39; Email Notification
         /// </summary>
         /// <param name="emailNotificationWithStreamConditionsRequest">The email notifications object</param>
         public async Task<Models.EmailNotificationWithStreamConditions> CreateAsync(Models.EmailNotificationWithStreamConditionsRequest emailNotificationWithStreamConditionsRequest)
@@ -38,7 +38,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Emails.Encoding.Encodings.LiveInputStre
         }
 
         /// <summary>
-        /// Add Live Input Stream Changed Email Notification (Specific Encoding)
+        /// Create &#39;Live Input Stream Changed&#39; Email Notification for a specific Encoding
         /// </summary>
         /// <param name="encodingId">Id of the encoding resource (required)</param>
         /// <param name="emailNotificationWithStreamConditionsRequest">The email notifications object</param>
@@ -48,7 +48,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Emails.Encoding.Encodings.LiveInputStre
         }
 
         /// <summary>
-        /// Replace Live Input Stream Changed Email Notification
+        /// Update &#39;Live Input Stream Changed&#39; Email Notification
         /// </summary>
         /// <param name="notificationId">Id of the email notification (required)</param>
         /// <param name="emailNotificationWithStreamConditionsRequest">The email notification with the updated values</param>

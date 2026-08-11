@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Manifest.Error
         public static BitmovinApiBuilder<ErrorApi> Builder => new BitmovinApiBuilder<ErrorApi>();
 
         /// <summary>
-        /// Add &#39;Manifest Error&#39; Webhook (All Manifests)
+        /// Create &#39;Manifest Error&#39; Webhook
         /// </summary>
         /// <param name="webhook">The &#39;Manifest Error&#39; Webhook to be added.</param>
         public async Task<Models.Webhook> CreateAsync(Models.Webhook webhook)
@@ -38,7 +38,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Manifest.Error
         }
 
         /// <summary>
-        /// Add &#39;Manifest Error&#39; Webhook Notification (Specific Manifest)
+        /// Create &#39;Manifest Error&#39; Webhook for a specific Manifest
         /// </summary>
         /// <param name="manifestId">Id of the manifest resource (required)</param>
         /// <param name="webhook">The webhook notifications object. A maximum number of 5 webhooks per Manifest is allowed</param>
@@ -57,7 +57,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Manifest.Error
         }
 
         /// <summary>
-        /// Get &#39;Manifest Error&#39; Webhooks (All Manifests)
+        /// List &#39;Manifest Error&#39; Webhooks
         /// </summary>
         public async Task<Models.PaginationResponse<Models.Webhook>> ListAsync()
         {
@@ -65,7 +65,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Manifest.Error
         }
 
         /// <summary>
-        /// Replace &#39;Manifest Error&#39; Webhook Notification
+        /// Update &#39;Manifest Error&#39; Webhook
         /// </summary>
         /// <param name="notificationId">Id of the webhook notification (required)</param>
         /// <param name="webhook">The webhook notification with the updated values</param>

@@ -36,7 +36,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Drm.Aes
         public CustomdataApi Customdata { get; }
 
         /// <summary>
-        /// Add AES encryption configuration to a Progressive TS muxing
+        /// Create AES encryption configuration to a Progressive TS muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding (required)</param>
         /// <param name="muxingId">Id of the Progressive TS muxing (required)</param>
@@ -58,7 +58,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Drm.Aes
         }
 
         /// <summary>
-        /// AES encryption Details of a Progressive TS muxing
+        /// Get AES encryption configuration from a Progressive TS muxing details
         /// </summary>
         /// <param name="encodingId">Id of the encoding (required)</param>
         /// <param name="muxingId">Id of the Progressive TS muxing (required)</param>

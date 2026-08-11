@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Manifest.Finished
         public static BitmovinApiBuilder<FinishedApi> Builder => new BitmovinApiBuilder<FinishedApi>();
 
         /// <summary>
-        /// Add &#39;Manifest Finished Successfully&#39; Webhook (All Manifests)
+        /// Create &#39;Manifest Finished&#39; Webhook
         /// </summary>
         /// <param name="webhook">Add a new webhook notification that triggers if a manifest generation finished successfully. A maximum number of 5 webhooks is allowed</param>
         public async Task<Models.Webhook> CreateAsync(Models.Webhook webhook)
@@ -38,7 +38,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Manifest.Finished
         }
 
         /// <summary>
-        /// Add &#39;Manifest Finished Successfully&#39; Webhook Notification (Specific Manifest)
+        /// Create &#39;Manifest Finished&#39; Webhook for a specific Manifest
         /// </summary>
         /// <param name="manifestId">Id of the manifest resource (required)</param>
         /// <param name="webhook">The webhook notifications object. A maximum number of 5 webhooks per Manifest is allowed</param>
@@ -48,7 +48,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Manifest.Finished
         }
 
         /// <summary>
-        /// Delete Manifest Finished Webhook
+        /// Delete &#39;Manifest Finished&#39; Webhook
         /// </summary>
         /// <param name="notificationId">Id of the webhook notification (required)</param>
         public async Task<Models.BitmovinResponse> DeleteAsync(string notificationId)
@@ -57,7 +57,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Manifest.Finished
         }
 
         /// <summary>
-        /// Get &#39;Manifest Finished&#39; Webhooks (All Manifests)
+        /// List &#39;Manifest Finished&#39; Webhooks
         /// </summary>
         public async Task<Models.PaginationResponse<Models.Webhook>> ListAsync()
         {
@@ -65,7 +65,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Manifest.Finished
         }
 
         /// <summary>
-        /// Replace Manifest Finished Webhook Notification
+        /// Update &#39;Manifest Finished&#39; Webhook
         /// </summary>
         /// <param name="notificationId">Id of the webhook notification (required)</param>
         /// <param name="webhook">The webhook notification with the updated values</param>

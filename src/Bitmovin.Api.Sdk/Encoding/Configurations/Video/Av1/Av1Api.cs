@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Video.Av1
         }
 
         /// <summary>
-        /// AV1 Codec Configuration Details
+        /// Get AV1 Codec Configuration details
         /// </summary>
         /// <param name="configurationId">Id of the codec configuration (required)</param>
         public async Task<Models.Av1VideoConfiguration> GetAsync(string configurationId)

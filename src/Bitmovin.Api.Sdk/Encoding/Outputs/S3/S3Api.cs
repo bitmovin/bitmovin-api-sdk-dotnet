@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs.S3
         }
 
         /// <summary>
-        /// S3 Output Details
+        /// Get S3 Output details
         /// </summary>
         /// <param name="outputId">Id of the input (required)</param>
         public async Task<Models.S3Output> GetAsync(string outputId)

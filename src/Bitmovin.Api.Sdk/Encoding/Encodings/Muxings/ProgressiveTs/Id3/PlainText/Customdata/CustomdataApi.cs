@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveTs.Id3.PlainTex
         public static BitmovinApiBuilder<CustomdataApi> Builder => new BitmovinApiBuilder<CustomdataApi>();
 
         /// <summary>
-        /// Plain Text ID3 Tag Custom Data of a Progressive TS muxing
+        /// Get Plain Text ID3 Tag of a Progressive TS muxing Custom Data
         /// </summary>
         /// <param name="encodingId">ID of the Encoding. (required)</param>
         /// <param name="muxingId">ID of the Progressive TS muxing (required)</param>

@@ -36,7 +36,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Ts.Drm.Fairplay
         public CustomdataApi Customdata { get; }
 
         /// <summary>
-        /// Add FairPlay DRM to a TS muxing
+        /// Create FairPlay DRM to a TS muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the TS muxing. (required)</param>
@@ -58,7 +58,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.Ts.Drm.Fairplay
         }
 
         /// <summary>
-        /// FairPlay DRM Details of a TS muxing
+        /// Get FairPlay DRM from a TS muxing details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the TS muxing. (required)</param>

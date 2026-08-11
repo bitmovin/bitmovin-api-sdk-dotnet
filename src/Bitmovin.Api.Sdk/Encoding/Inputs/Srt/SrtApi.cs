@@ -45,7 +45,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Srt
         }
 
         /// <summary>
-        /// Delete SRT input
+        /// Delete SRT Input
         /// </summary>
         /// <param name="inputId">Id of the input (required)</param>
         public async Task<Models.SrtInput> DeleteAsync(string inputId)
@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Inputs.Srt
         }
 
         /// <summary>
-        /// SRT Input Details
+        /// Get SRT Input details
         /// </summary>
         /// <param name="inputId">Id of the input (required)</param>
         public async Task<Models.SrtInput> GetAsync(string inputId)

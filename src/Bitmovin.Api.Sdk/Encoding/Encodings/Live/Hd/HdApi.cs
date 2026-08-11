@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live.Hd
         public static BitmovinApiBuilder<HdApi> Builder => new BitmovinApiBuilder<HdApi>();
 
         /// <summary>
-        /// Live Encoding Start Details
+        /// Get Live Encoding Channel Start Details
         /// </summary>
         /// <param name="encodingId">Id of the encoding (required)</param>
         public async Task<Models.StartLiveChannelEncodingRequest> GetStartRequestAsync(string encodingId)

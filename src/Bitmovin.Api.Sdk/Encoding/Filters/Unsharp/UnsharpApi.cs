@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Filters.Unsharp
         }
 
         /// <summary>
-        /// Unsharp Filter Details
+        /// Get Unsharp Filter details
         /// </summary>
         /// <param name="filterId">Id of the unsharp filter (required)</param>
         public async Task<Models.UnsharpFilter> GetAsync(string filterId)

@@ -66,7 +66,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash
         }
 
         /// <summary>
-        /// DASH Manifest Details
+        /// Get DASH Manifest details
         /// </summary>
         /// <param name="manifestId">UUID of the DASH Manifest (required)</param>
         public async Task<Models.DashManifest> GetAsync(string manifestId)
@@ -75,7 +75,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Dash
         }
 
         /// <summary>
-        /// Manifest Start Details
+        /// DASH Manifest Start Details
         /// </summary>
         /// <param name="manifestId">Id of the manifest (required)</param>
         public async Task<Models.StartManifestRequest> GetStartRequestAsync(string manifestId)

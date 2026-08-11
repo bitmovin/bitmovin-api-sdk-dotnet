@@ -54,7 +54,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Configurations.Subtitles.DvbSubtitle
         }
 
         /// <summary>
-        /// DVB-SUB subtitle configuration details
+        /// Get DVB-SUB subtitle configuration details
         /// </summary>
         /// <param name="configurationId">Id of the codec configuration (required)</param>
         public async Task<Models.DvbSubtitleConfiguration> GetAsync(string configurationId)

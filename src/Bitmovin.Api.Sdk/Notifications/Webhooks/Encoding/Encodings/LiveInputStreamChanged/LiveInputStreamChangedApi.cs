@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.LiveInputSt
         public static BitmovinApiBuilder<LiveInputStreamChangedApi> Builder => new BitmovinApiBuilder<LiveInputStreamChangedApi>();
 
         /// <summary>
-        /// Add Live Input Stream Changed Webhook Notification (All Encodings)
+        /// Create &#39;Live Input Stream Changed&#39; Webhook
         /// </summary>
         /// <param name="webhookNotificationWithStreamConditionsRequest">The webhook notifications object</param>
         public async Task<Models.WebhookNotificationWithStreamConditions> CreateAsync(Models.WebhookNotificationWithStreamConditionsRequest webhookNotificationWithStreamConditionsRequest)
@@ -38,7 +38,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.LiveInputSt
         }
 
         /// <summary>
-        /// Add Live Input Stream Changed Webhook Notification (Specific Encoding)
+        /// Create &#39;Live Input Stream Changed&#39; Webhook for a specific Encoding
         /// </summary>
         /// <param name="encodingId">Id of the encoding resource (required)</param>
         /// <param name="webhookNotificationWithStreamConditionsRequest">The webhook notifications object</param>
@@ -48,7 +48,7 @@ namespace Bitmovin.Api.Sdk.Notifications.Webhooks.Encoding.Encodings.LiveInputSt
         }
 
         /// <summary>
-        /// Replace Live Input Stream Changed Webhook Notification
+        /// Update &#39;Live Input Stream Changed&#39; Webhook
         /// </summary>
         /// <param name="notificationId">Id of the webhook notification (required)</param>
         /// <param name="webhookNotificationWithStreamConditionsRequest">The webhook notification with the updated values</param>

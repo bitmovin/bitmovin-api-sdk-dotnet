@@ -36,7 +36,7 @@ namespace Bitmovin.Api.Sdk.AiSceneAnalysis.Analyses
         public ByEncodingIdApi ByEncodingId { get; }
 
         /// <summary>
-        /// List AI scene analyses
+        /// List AI Scene Analyses
         /// </summary>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>
         public async Task<Models.PaginationResponse<Models.SceneAnalysisListItem>> ListAsync(params Func<ListQueryParams, ListQueryParams>[] queryParams)
@@ -74,7 +74,12 @@ namespace Bitmovin.Api.Sdk.AiSceneAnalysis.Analyses
             public ListQueryParams Limit(int? limit) => SetQueryParam("limit", limit);
 
             /// <summary>
-            /// Order the result by creation date. Default is createdAt:DESC
+            /// Natural-language text for semantic analysis search. A value containing at least one non-whitespace character enables semantic search and must contain at least 3 characters; omitted, empty, or whitespace-only values use ordinary list behavior
+            /// </summary>
+            public ListQueryParams SearchText(string searchText) => SetQueryParam("searchText", searchText);
+
+            /// <summary>
+            /// Order the results. When searchText is omitted, empty, or whitespace-only, the default is createdAt:DESC and the supported values are createdAt:DESC and createdAt:ASC. When searchText contains at least one non-whitespace character, relevance:DESC is the default and only supported value. Other combinations are rejected
             /// </summary>
             public ListQueryParams Sort(Models.SceneAnalysisListSort sort) => SetQueryParam("sort", sort);
 

@@ -39,7 +39,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Sidecars.Webvtt
         }
 
         /// <summary>
-        /// Delete Sidecar
+        /// Delete WebVTT Sidecar
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="sidecarId">Id of the sidecar. (required)</param>
@@ -49,7 +49,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Sidecars.Webvtt
         }
 
         /// <summary>
-        /// WebVTT Sidecar Details
+        /// Get WebVTT Sidecar details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="sidecarId">Id of the sidecar. (required)</param>

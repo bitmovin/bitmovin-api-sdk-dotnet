@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.BurnInSubtitles.Srt
         public static BitmovinApiBuilder<SrtApi> Builder => new BitmovinApiBuilder<SrtApi>();
 
         /// <summary>
-        /// Burn-In SRT Subtitle into Stream
+        /// Create Burn-In SRT Subtitle
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="streamId">Id of the stream. (required)</param>
@@ -40,7 +40,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.BurnInSubtitles.Srt
         }
 
         /// <summary>
-        /// Delete Burn-In SRT Subtitle from Stream
+        /// Delete Burn-In SRT Subtitle
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="streamId">Id of the stream. (required)</param>
@@ -51,7 +51,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.BurnInSubtitles.Srt
         }
 
         /// <summary>
-        /// Get Burn-In SRT Subtitle Details
+        /// Get Burn-In SRT Subtitle details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="streamId">Id of the stream. (required)</param>
@@ -62,7 +62,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Streams.BurnInSubtitles.Srt
         }
 
         /// <summary>
-        /// List the Burn-In SRT subtitles of a stream
+        /// List Burn-In SRT Subtitles
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="streamId">Id of the stream. (required)</param>

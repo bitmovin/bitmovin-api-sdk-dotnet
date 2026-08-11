@@ -81,7 +81,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live
         }
 
         /// <summary>
-        /// Live Encoding Start Details
+        /// Get Live Encoding Start Details
         /// </summary>
         /// <param name="encodingId">Id of the encoding (required)</param>
         public async Task<Models.StartLiveEncodingRequest> GetStartRequestAsync(string encodingId)

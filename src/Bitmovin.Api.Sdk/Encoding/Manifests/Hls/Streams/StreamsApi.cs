@@ -42,7 +42,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Streams
         public IframeApi Iframe { get; }
 
         /// <summary>
-        /// Add Variant Stream
+        /// Create Variant Stream
         /// </summary>
         /// <param name="manifestId">Id of the hls manifest. (required)</param>
         /// <param name="streamInfo">The Variant Stream to be added</param>
@@ -62,7 +62,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Streams
         }
 
         /// <summary>
-        /// Variant Stream Details
+        /// Get Variant Stream details
         /// </summary>
         /// <param name="manifestId">Id of the hls manifest. (required)</param>
         /// <param name="streamId">Id of the variant stream. (required)</param>
@@ -72,7 +72,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Streams
         }
 
         /// <summary>
-        /// List all Variant Streams
+        /// List Variant Streams
         /// </summary>
         /// <param name="manifestId">Id of the hls manifest. (required)</param>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>

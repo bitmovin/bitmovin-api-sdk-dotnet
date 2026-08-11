@@ -17,6 +17,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// Sort by analysis creation date in ascending order
         /// </summary>
         [EnumMember(Value = "createdAt:ASC")]
-        CREATED_AT_ASC
+        CREATED_AT_ASC,
+
+        /// <summary>
+        /// Sort by semantic relevance in descending order. Supported only when searchText contains at least one non-whitespace character
+        /// </summary>
+        [EnumMember(Value = "relevance:DESC")]
+        RELEVANCE_DESC
     }
 }

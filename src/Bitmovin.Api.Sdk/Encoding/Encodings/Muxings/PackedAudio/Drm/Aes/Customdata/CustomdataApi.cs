@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.PackedAudio.Drm.Aes.Custom
         public static BitmovinApiBuilder<CustomdataApi> Builder => new BitmovinApiBuilder<CustomdataApi>();
 
         /// <summary>
-        /// AES encryption Custom Data of a Packed Audio muxing
+        /// Get AES encryption configuration from a Packed Audio muxing Custom Data
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the Packed Audio muxing. (required)</param>

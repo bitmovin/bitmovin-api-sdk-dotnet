@@ -29,7 +29,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media.Audio
         public static BitmovinApiBuilder<AudioApi> Builder => new BitmovinApiBuilder<AudioApi>();
 
         /// <summary>
-        /// Add Audio Media
+        /// Create Audio Media
         /// </summary>
         /// <param name="manifestId">Id of the hls manifest. (required)</param>
         /// <param name="audioMediaInfo">The Audio Media to be added</param>
@@ -49,7 +49,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media.Audio
         }
 
         /// <summary>
-        /// Audio Media Details
+        /// Get Audio Media details
         /// </summary>
         /// <param name="manifestId">Id of the hls manifest. (required)</param>
         /// <param name="mediaId">Id of the audio media. (required)</param>
@@ -59,7 +59,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Manifests.Hls.Media.Audio
         }
 
         /// <summary>
-        /// List all Audio Media
+        /// List Audio Media
         /// </summary>
         /// <param name="manifestId">Id of the hls manifest. (required)</param>
         /// <param name="queryParams">The query parameters for sorting, filtering and paging options (optional)</param>

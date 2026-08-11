@@ -36,7 +36,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveWebm.Drm.Cenc
         public CustomdataApi Customdata { get; }
 
         /// <summary>
-        /// Add CENC DRM to a Progressive WebM muxing
+        /// Create CENC DRM to a Progressive WebM muxing
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the Progressive WebM muxing. (required)</param>
@@ -58,7 +58,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Muxings.ProgressiveWebm.Drm.Cenc
         }
 
         /// <summary>
-        /// CENC DRM Details of a Progressive WebM muxing
+        /// Get CENC DRM from a Progressive WebM muxing details
         /// </summary>
         /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="muxingId">Id of the Progressive WebM muxing. (required)</param>
