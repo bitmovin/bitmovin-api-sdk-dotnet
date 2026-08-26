@@ -44,5 +44,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "mainSubjects")]
         public List<MainSubject> MainSubjects { get; set; } = new List<MainSubject>();
+
+        /// <summary>
+        /// Content advisory detection results for this shot, such as tobacco or vaping imagery
+        /// </summary>
+        [JsonProperty(PropertyName = "shotAdvisories")]
+        public ShotAdvisories ShotAdvisories { get; set; }
     }
 }

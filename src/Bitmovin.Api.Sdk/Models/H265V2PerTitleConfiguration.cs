@@ -28,12 +28,6 @@ namespace Bitmovin.Api.Sdk.Models
         public double? CodecMaxBitrateFactor { get; set; }
 
         /// <summary>
-        /// This factor is used to calculate the bufsize of the codec configuration for the generated representations as a multiple of the targetBitrate
-        /// </summary>
-        [JsonProperty(PropertyName = "codecBufsizeFactor")]
-        public double? CodecBufsizeFactor { get; set; }
-
-        /// <summary>
         /// Desired target quality of the highest representation expressed as QP value used for the CQP probe encode
         /// </summary>
         [JsonProperty(PropertyName = "targetQualityQp")]

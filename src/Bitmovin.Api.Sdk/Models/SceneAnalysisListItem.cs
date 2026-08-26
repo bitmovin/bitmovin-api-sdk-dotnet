@@ -62,5 +62,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "outputLanguageCodes")]
         public List<string> OutputLanguageCodes { get; set; } = new List<string>();
+
+        /// <summary>
+        /// The scene segment that best matches searchText. Present only for semantic-search requests with a non-blank searchText; omitted from ordinary list results.
+        /// </summary>
+        [JsonProperty(PropertyName = "matchingSegment")]
+        public SceneAnalysisMatchingSegment MatchingSegment { get; set; }
     }
 }

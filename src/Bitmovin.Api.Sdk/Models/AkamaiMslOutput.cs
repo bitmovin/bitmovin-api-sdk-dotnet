@@ -39,9 +39,15 @@ namespace Bitmovin.Api.Sdk.Models
         public AkamaiMslStreamFormat? StreamFormat { get; set; }
 
         /// <summary>
-        /// The Akamai MSL Version. Only MSL4 is supported at the moment. (required)
+        /// The Akamai MSL Version. MSL4 and MSL5 are supported. (required)
         /// </summary>
         [JsonProperty(PropertyName = "mslVersion")]
         public AkamaiMslVersion? MslVersion { get; set; }
+
+        /// <summary>
+        /// MSL5 only. HTTP Digest publishing credentials. Sending this field with &#x60;mslVersion: MSL4&#x60; is rejected. Credentials (username, password) are write-only and not returned in responses. 
+        /// </summary>
+        [JsonProperty(PropertyName = "publishingAuthentication")]
+        public MslPublishingAuthentication PublishingAuthentication { get; set; }
     }
 }

@@ -11,6 +11,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// MSL4
         /// </summary>
         [EnumMember(Value = "MSL4")]
-        MSL4
+        MSL4,
+
+        /// <summary>
+        /// MSL5
+        /// </summary>
+        [EnumMember(Value = "MSL5")]
+        MSL5
     }
 }

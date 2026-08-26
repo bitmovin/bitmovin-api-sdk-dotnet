@@ -101,6 +101,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// Boolean value if the connection status changed
         /// </summary>
         [EnumMember(Value = "CONNECTION_STATUS_JUST_CHANGED")]
-        CONNECTION_STATUS_JUST_CHANGED
+        CONNECTION_STATUS_JUST_CHANGED,
+
+        /// <summary>
+        /// The container-native identifier of the stream (integer). Depending on the container format of the input file, this maps to: - MPEG-TS: the stream&#39;s PID (Packet ID) - ISOBMFF/MOV (e.g. MP4): the stream&#39;s Track ID  Tools such as &#x60;ffprobe&#x60; and &#x60;tsduck&#x60; display these identifiers in hexadecimal (for example, &#x60;Stream #0:0[0x101]&#x60;). The value used for this condition is matched in decimal: PID &#x60;0x101&#x60; corresponds to &#x60;STREAMID &#x3D;&#x3D; 257&#x60;. Hexadecimal values prefixed with &#x60;0x&#x60; are also accepted, so &#x60;STREAMID &#x3D;&#x3D; 0x101&#x60; matches the same stream.
+        /// </summary>
+        [EnumMember(Value = "STREAMID")]
+        STREAMID
     }
 }

@@ -32,5 +32,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "outputLanguageCodes")]
         public AiSceneAnalysisOutputLanguageCodes OutputLanguageCodes { get; set; }
+
+        /// <summary>
+        /// AI scene analysis will screen the asset for content requiring a statutory on-screen advisory and report the findings per shot in the asset description. Requires assetDescription. Contact support to enable this feature for your organization. 
+        /// </summary>
+        [JsonProperty(PropertyName = "regulatoryAdvisories")]
+        public AiSceneAnalysisRegulatoryAdvisories RegulatoryAdvisories { get; set; }
     }
 }
