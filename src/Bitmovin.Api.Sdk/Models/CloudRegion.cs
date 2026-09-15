@@ -362,6 +362,12 @@ namespace Bitmovin.Api.Sdk.Models
         AZURE_UK_SOUTH,
 
         /// <summary>
+        /// Akamai Melbourne, Australia
+        /// </summary>
+        [EnumMember(Value = "AKAMAI_AU_MEL")]
+        AKAMAI_AU_MEL,
+
+        /// <summary>
         /// Akamai São Paulo, Brazil
         /// </summary>
         [EnumMember(Value = "AKAMAI_BR_GRU")]

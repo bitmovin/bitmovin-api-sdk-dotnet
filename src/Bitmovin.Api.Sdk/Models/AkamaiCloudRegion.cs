@@ -8,6 +8,12 @@ namespace Bitmovin.Api.Sdk.Models
     public enum AkamaiCloudRegion
     {
         /// <summary>
+        /// Melbourne, Australia
+        /// </summary>
+        [EnumMember(Value = "AU_MEL")]
+        AU_MEL,
+
+        /// <summary>
         /// São Paulo, Brazil
         /// </summary>
         [EnumMember(Value = "BR_GRU")]

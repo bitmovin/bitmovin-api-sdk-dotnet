@@ -2,6 +2,7 @@ using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Player.Channels;
 using Bitmovin.Api.Sdk.Player.Licenses;
 using Bitmovin.Api.Sdk.Player.CustomBuilds;
+using Bitmovin.Api.Sdk.Player.Testing;
 
 namespace Bitmovin.Api.Sdk.Player
 {
@@ -19,6 +20,7 @@ namespace Bitmovin.Api.Sdk.Player
             Channels = new ChannelsApi(apiClientFactory);
             Licenses = new LicensesApi(apiClientFactory);
             CustomBuilds = new CustomBuildsApi(apiClientFactory);
+            Testing = new TestingApi(apiClientFactory);
         }
 
         /// <summary>
@@ -38,5 +40,9 @@ namespace Bitmovin.Api.Sdk.Player
         /// Gets the CustomBuilds API
         /// </summary>
         public CustomBuildsApi CustomBuilds { get; }
+        /// <summary>
+        /// Gets the Testing API
+        /// </summary>
+        public TestingApi Testing { get; }
     }
 }
