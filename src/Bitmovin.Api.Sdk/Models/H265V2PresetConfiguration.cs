@@ -8,6 +8,18 @@ namespace Bitmovin.Api.Sdk.Models
     public enum H265V2PresetConfiguration
     {
         /// <summary>
+        /// VOD_SPEED
+        /// </summary>
+        [EnumMember(Value = "VOD_SPEED")]
+        VOD_SPEED,
+
+        /// <summary>
+        /// VOD_STANDARD
+        /// </summary>
+        [EnumMember(Value = "VOD_STANDARD")]
+        VOD_STANDARD,
+
+        /// <summary>
         /// VOD_QUALITY
         /// </summary>
         [EnumMember(Value = "VOD_QUALITY")]
