@@ -6,6 +6,7 @@ using RestEase;
 using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Live.Esam;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Live.ResetLiveManifestTimeshift;
+using Bitmovin.Api.Sdk.Encoding.Encodings.Live.UpdateAutoshutdownConfig;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Live.Heartbeat;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Live.HeartbeatFinal;
 using Bitmovin.Api.Sdk.Encoding.Encodings.Live.Hd;
@@ -30,6 +31,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live
             _apiClient = apiClientFactory.CreateClient<ILiveApiClient>();
             Esam = new EsamApi(apiClientFactory);
             ResetLiveManifestTimeshift = new ResetLiveManifestTimeshiftApi(apiClientFactory);
+            UpdateAutoshutdownConfig = new UpdateAutoshutdownConfigApi(apiClientFactory);
             Heartbeat = new HeartbeatApi(apiClientFactory);
             HeartbeatFinal = new HeartbeatFinalApi(apiClientFactory);
             Hd = new HdApi(apiClientFactory);
@@ -50,6 +52,10 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.Live
         /// Gets the ResetLiveManifestTimeshift API
         /// </summary>
         public ResetLiveManifestTimeshiftApi ResetLiveManifestTimeshift { get; }
+        /// <summary>
+        /// Gets the UpdateAutoshutdownConfig API
+        /// </summary>
+        public UpdateAutoshutdownConfigApi UpdateAutoshutdownConfig { get; }
         /// <summary>
         /// Gets the Heartbeat API
         /// </summary>

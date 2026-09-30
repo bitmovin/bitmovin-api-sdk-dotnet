@@ -40,6 +40,12 @@ namespace Bitmovin.Api.Sdk.Models
         public DateTime? ProducedAt { get; set; }
 
         /// <summary>
+        /// UTC presentation-clock time in Unix milliseconds corresponding to media time zero. This origin is fixed for the Live Analysis; coverage, observation, and source-gap times remain relative to it. It is not the source capture time or result publication time. (required)
+        /// </summary>
+        [JsonProperty(PropertyName = "mediaTimeOriginUnixMs")]
+        public long? MediaTimeOriginUnixMs { get; set; }
+
+        /// <summary>
         /// Whether AI analysis produced this as the final result generation. This does not by itself imply that the Analysis completed successfully. (required)
         /// </summary>
         [JsonProperty(PropertyName = "isFinal")]
