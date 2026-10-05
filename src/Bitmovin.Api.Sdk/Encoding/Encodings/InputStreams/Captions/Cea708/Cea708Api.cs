@@ -41,7 +41,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Encodings.InputStreams.Captions.Cea708
         /// <summary>
         /// Delete CEA 708 Input Stream
         /// </summary>
-        /// <param name="encodingId">Id of the Encoding (required)</param>
+        /// <param name="encodingId">Id of the encoding. (required)</param>
         /// <param name="inputStreamId">Id of the CEA 708 input stream. (required)</param>
         public async Task<Models.BitmovinResponse> DeleteAsync(string encodingId, string inputStreamId)
         {

@@ -16,19 +16,19 @@ namespace Bitmovin.Api.Sdk.Models
     public class ResetLiveManifestTimeShift : BitmovinResponse
     {
         /// <summary>
-        /// Determines how many seconds will be left in the manifest after segments are removed. If this is not set, all but one segment will be removed. 
+        /// Specifies how many seconds of content remain in the manifest after older segments are removed. At least one segment is always retained. If neither &#x60;residualPeriodInSeconds&#x60; nor &#x60;offsetInSeconds&#x60; is set, all segments except the most recent are removed. For DASH manifests that use SegmentTemplate, the retained duration also includes the value configured for &#x60;liveEdgeOffset&#x60;. 
         /// </summary>
         [JsonProperty(PropertyName = "residualPeriodInSeconds")]
         public double? ResidualPeriodInSeconds { get; set; }
 
         /// <summary>
-        /// Offset in seconds from the start of the live event, defining the point from which all segments within that duration will be removed from the given manifests. E.g.: The segment length is 2 seconds and a timeshift of 120 seconds (2 minutes) is configured.  The manifest contains 60 segments with the last segment number being 80 (&#x60;segment_80.ts&#x60;).  This means the manifest contains &#x60;segment_20.ts&#x60; to &#x60;segment_80.ts&#x60; (timeshift of 2 minutes equals 60 segments in manifest) If you set &#x60;offsetInSeconds&#x60; to &#x60;120&#x60;, all segments below segment number 60 (&#x60;segment_60.ts&#x60;) will be removed. (&#x60;targetSegmentNumber &#x3D; offsetInSeconds / segmentLength&#x60;) The manifests will then contain &#x60;segment_60.ts&#x60; to &#x60;segment_80.ts&#x60; *Note:* Only &#x60;offsetInSeconds&#x60; or &#x60;residualPeriodInSeconds&#x60; can be set. 
+        /// Specifies an offset, in seconds, from the start of the live event. All segments before this position are removed from the affected manifests. For example, assume a segment length of 2 seconds and a configured &#x60;timeshift&#x60; of 120 seconds (2 minutes). If the most recent segment is &#x60;segment_80.ts&#x60;, the manifest contains 60 segments, from &#x60;segment_21.ts&#x60; through &#x60;segment_80.ts&#x60;. Setting &#x60;offsetInSeconds&#x60; to &#x60;120&#x60; sets the target segment number to 60 (&#x60;targetSegmentNumber &#x3D; offsetInSeconds / segmentLength&#x60;). All segments before &#x60;segment_60.ts&#x60; are removed. Each affected manifest then contains &#x60;segment_60.ts&#x60; through &#x60;segment_80.ts&#x60;.  *Note:* Do not set both &#x60;offsetInSeconds&#x60; and &#x60;residualPeriodInSeconds&#x60;. 
         /// </summary>
         [JsonProperty(PropertyName = "offsetInSeconds")]
         public double? OffsetInSeconds { get; set; }
 
         /// <summary>
-        /// The ids of the manifests to update. If this property is not set, all manifests tied to the encoding are updated.
+        /// The IDs of the manifests to update. If omitted, all supported manifests associated with the encoding are updated. HLS live manifests are supported. DASH live manifests require encoder version 2.235.0 or later.
         /// </summary>
         [JsonProperty(PropertyName = "manifestIds")]
         public List<string> ManifestIds { get; set; } = new List<string>();

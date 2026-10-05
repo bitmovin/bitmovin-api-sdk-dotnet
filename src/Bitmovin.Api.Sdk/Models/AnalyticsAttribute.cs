@@ -896,6 +896,12 @@ namespace Bitmovin.Api.Sdk.Models
         STARTUPTIME,
 
         /// <summary>
+        /// START_FAILURE_PERCENTAGE
+        /// </summary>
+        [EnumMember(Value = "START_FAILURE_PERCENTAGE")]
+        START_FAILURE_PERCENTAGE,
+
+        /// <summary>
         /// STREAM_FORMAT
         /// </summary>
         [EnumMember(Value = "STREAM_FORMAT")]
