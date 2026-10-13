@@ -716,6 +716,12 @@ namespace Bitmovin.Api.Sdk.Models
         LATENCY,
 
         /// <summary>
+        /// LATENCY_DELTA
+        /// </summary>
+        [EnumMember(Value = "LATENCY_DELTA")]
+        LATENCY_DELTA,
+
+        /// <summary>
         /// LICENSE_KEY
         /// </summary>
         [EnumMember(Value = "LICENSE_KEY")]

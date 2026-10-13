@@ -34,6 +34,12 @@ namespace Bitmovin.Api.Sdk.Models
         public CloudRegion? CloudRegion { get; set; }
 
         /// <summary>
+        /// Encoder release for the backing Live Encoding, using the same values and validation as &#x60;Encoding.encoderVersion&#x60; (for example, &#x60;LATEST&#x60; or a supported release version). Passed unchanged to the Encoding Resource Service. If omitted, the server default is used. Selects the full encoder release; component header overrides remain separate.
+        /// </summary>
+        [JsonProperty(PropertyName = "encoderVersion")]
+        public string EncoderVersion { get; set; }
+
+        /// <summary>
         /// Destinations for the stream recording (required)
         /// </summary>
         [JsonProperty(PropertyName = "recording")]
