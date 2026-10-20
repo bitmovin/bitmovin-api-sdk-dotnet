@@ -46,7 +46,7 @@ namespace Bitmovin.Api.Sdk.Models
         public AiSceneAnalysisLiveRecording Recording { get; internal set; }
 
         /// <summary>
-        /// Resolved Encoding Output ID references for cumulative AI analysis results (required)
+        /// Resolved Encoding Output ID references for incremental Live Analysis result batches (required)
         /// </summary>
         [JsonProperty(PropertyName = "outputs")]
         public List<EncodingOutput> Outputs { get; internal set; } = new List<EncodingOutput>();

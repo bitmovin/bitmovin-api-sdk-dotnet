@@ -16,7 +16,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class AiSceneAnalysisLiveObservation
     {
         /// <summary>
-        /// Stable opaque observation ID that remains unchanged across cumulative result generations (required)
+        /// Stable opaque observation ID that remains unchanged during the observation&#39;s lifetime and is never reused after removal (required)
         /// </summary>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }

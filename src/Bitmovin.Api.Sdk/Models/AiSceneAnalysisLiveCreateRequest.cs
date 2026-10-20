@@ -46,7 +46,7 @@ namespace Bitmovin.Api.Sdk.Models
         public AiSceneAnalysisLiveRecordingRequest Recording { get; set; }
 
         /// <summary>
-        /// Destinations for cumulative AI analysis results (required)
+        /// Destinations for incremental Live Analysis result batches (required)
         /// </summary>
         [JsonProperty(PropertyName = "outputs")]
         public List<AiSceneAnalysisLiveOutput> Outputs { get; set; } = new List<AiSceneAnalysisLiveOutput>();
