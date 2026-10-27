@@ -1,6 +1,5 @@
 using Bitmovin.Api.Sdk.Common;
 using Bitmovin.Api.Sdk.AiSceneAnalysis.Analyses;
-using Bitmovin.Api.Sdk.AiSceneAnalysis.LiveAnalyses;
 
 namespace Bitmovin.Api.Sdk.AiSceneAnalysis
 {
@@ -16,7 +15,6 @@ namespace Bitmovin.Api.Sdk.AiSceneAnalysis
         public AiSceneAnalysisApi(IBitmovinApiClientFactory apiClientFactory)
         {
             Analyses = new AnalysesApi(apiClientFactory);
-            LiveAnalyses = new LiveAnalysesApi(apiClientFactory);
         }
 
         /// <summary>
@@ -28,9 +26,5 @@ namespace Bitmovin.Api.Sdk.AiSceneAnalysis
         /// Gets the Analyses API
         /// </summary>
         public AnalysesApi Analyses { get; }
-        /// <summary>
-        /// Gets the LiveAnalyses API
-        /// </summary>
-        public LiveAnalysesApi LiveAnalyses { get; }
     }
 }

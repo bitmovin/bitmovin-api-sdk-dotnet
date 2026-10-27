@@ -39,6 +39,12 @@ namespace Bitmovin.Api.Sdk.Models
         public LevelAv1? MaxLevel { get; set; }
 
         /// <summary>
+        /// Tunes the encoder to preserve film grain and fine detail. Defaults to OFF.
+        /// </summary>
+        [JsonProperty(PropertyName = "detailPreservationMode")]
+        public Av1DetailPreservationMode? DetailPreservationMode { get; set; }
+
+        /// <summary>
         /// Configures what kind of dynamic range the output should conform to.
         /// </summary>
         [JsonProperty(PropertyName = "dynamicRangeFormat")]
