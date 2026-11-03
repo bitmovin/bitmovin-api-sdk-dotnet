@@ -11,12 +11,12 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// Represents a main subject or object detected within a shot, including its classification, spatial position, and appearance timing
+    /// A subject or object identified in a shot. Positions describe sampled appearances, not continuous tracking.
     /// </summary>
     public class MainSubject
     {
         /// <summary>
-        /// The category or type of the detected subject based on the YOLOv8 OIv7 (Open Images V7) object detection model (e.g., &#39;person&#39;, &#39;vehicle&#39;, &#39;building&#39;) (required)
+        /// Category of the subject, usually an Open Images V7 class name such as Person or Vehicle. Other values can occur. Retains its original value in language-specific results. (required)
         /// </summary>
         [JsonProperty(PropertyName = "classification")]
         public string Classification { get; set; }
@@ -28,7 +28,7 @@ namespace Bitmovin.Api.Sdk.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// The timestamp in seconds when this subject first appears or is most prominently visible in the shot (required)
+        /// Time in seconds from the start of this shot when the subject first appears. (required)
         /// </summary>
         [JsonProperty(PropertyName = "appearanceTimeInSeconds")]
         public double? AppearanceTimeInSeconds { get; set; }
@@ -44,5 +44,11 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [JsonProperty(PropertyName = "centerY")]
         public double? CenterY { get; set; }
+
+        /// <summary>
+        /// Bounding box at the subject&#39;s sampled appearance, in [ymin, xmin, ymax, xmax] order. Coordinates use a 0-1000 scale with a top-left origin, normalized independently against the full frame height and width. Omitted when no bounding box is available; the center coordinates remain valid.
+        /// </summary>
+        [JsonProperty(PropertyName = "box2d")]
+        public List<int?> Box2d { get; set; } = new List<int?>();
     }
 }

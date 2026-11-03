@@ -32,7 +32,7 @@ namespace Bitmovin.Api.Sdk.AiSceneAnalysis.Analyses.ByEncodingId.Details.Languag
         /// Get AI Scene Analysis details in a specific language
         /// </summary>
         /// <param name="encodingId">The encoding ID (required)</param>
-        /// <param name="languageCode">The language code (required)</param>
+        /// <param name="languageCode">Language code of an available result returned by Get AI Scene Analysis languages (required)</param>
         public async Task<Models.SceneAnalysisDetailsResponse> GetAsync(string encodingId, string languageCode)
         {
             return await _apiClient.GetAsync(encodingId, languageCode);

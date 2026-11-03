@@ -11,12 +11,12 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// SceneAnalysisLanguagesResponse
+    /// Available language variants of an analysis result.
     /// </summary>
     public class SceneAnalysisLanguagesResponse
     {
         /// <summary>
-        /// OutputLanguageCodes
+        /// Language codes registered for available analysis details. The base English result can be included even when no translations were requested; this is not the list of detected input languages.
         /// </summary>
         [JsonProperty(PropertyName = "outputLanguageCodes")]
         public List<string> OutputLanguageCodes { get; set; } = new List<string>();

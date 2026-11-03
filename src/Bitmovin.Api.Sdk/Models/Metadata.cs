@@ -11,18 +11,18 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// Metadata
+    /// Analysis metadata. Retains its original values in language-specific results.
     /// </summary>
     public class Metadata
     {
         /// <summary>
-        /// Version
+        /// Version of the analysis software used to generate this result.
         /// </summary>
         [JsonProperty(PropertyName = "version")]
         public string Version { get; set; }
 
         /// <summary>
-        /// Disclaimer
+        /// Attribution or disclaimer attached to the generated analysis.
         /// </summary>
         [JsonProperty(PropertyName = "disclaimer")]
         public string Disclaimer { get; set; }

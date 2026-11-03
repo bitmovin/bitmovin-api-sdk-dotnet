@@ -22,7 +22,7 @@ namespace Bitmovin.Api.Sdk.Models
         public string Filename { get; set; }
 
         /// <summary>
-        /// Outputs
+        /// Output destinations in which the generated asset-description JSON files are stored.
         /// </summary>
         [JsonProperty(PropertyName = "outputs")]
         public List<EncodingOutput> Outputs { get; set; } = new List<EncodingOutput>();

@@ -11,18 +11,18 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// CharacterAppearance
+    /// Visible appearance of a character. Text fields use an open vocabulary; spelling, case and unknown-value wording can vary.
     /// </summary>
     public class CharacterAppearance
     {
         /// <summary>
-        /// Summary
+        /// Summary of the character&#39;s visible appearance.
         /// </summary>
         [JsonProperty(PropertyName = "summary")]
         public string Summary { get; set; }
 
         /// <summary>
-        /// Gender
+        /// Apparent gender, described in free text.
         /// </summary>
         [JsonProperty(PropertyName = "gender")]
         public string Gender { get; set; }
@@ -34,43 +34,43 @@ namespace Bitmovin.Api.Sdk.Models
         public AgeRange? ApproximateAge { get; set; }
 
         /// <summary>
-        /// HairColor
+        /// Hair color.
         /// </summary>
         [JsonProperty(PropertyName = "hairColor")]
         public string HairColor { get; set; }
 
         /// <summary>
-        /// HairStyle
+        /// Hairstyle.
         /// </summary>
         [JsonProperty(PropertyName = "hairStyle")]
         public string HairStyle { get; set; }
 
         /// <summary>
-        /// HairFullness
+        /// Hair fullness or coverage.
         /// </summary>
         [JsonProperty(PropertyName = "hairFullness")]
         public string HairFullness { get; set; }
 
         /// <summary>
-        /// FacialHair
+        /// Facial hair. Can be empty when no description is available.
         /// </summary>
         [JsonProperty(PropertyName = "facialHair")]
         public string FacialHair { get; set; }
 
         /// <summary>
-        /// PhysicalBuild
+        /// The character&#39;s physical build.
         /// </summary>
         [JsonProperty(PropertyName = "physicalBuild")]
         public string PhysicalBuild { get; set; }
 
         /// <summary>
-        /// DistinguishingFeatures
+        /// Distinctive visible features, such as glasses or markings.
         /// </summary>
         [JsonProperty(PropertyName = "distinguishingFeatures")]
         public string DistinguishingFeatures { get; set; }
 
         /// <summary>
-        /// Clothing
+        /// The character&#39;s clothing.
         /// </summary>
         [JsonProperty(PropertyName = "clothing")]
         public string Clothing { get; set; }

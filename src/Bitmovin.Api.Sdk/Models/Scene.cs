@@ -16,61 +16,61 @@ namespace Bitmovin.Api.Sdk.Models
     public class Scene
     {
         /// <summary>
-        /// Title
+        /// Short AI-generated title describing the scene.
         /// </summary>
         [JsonProperty(PropertyName = "title")]
         public string Title { get; set; }
 
         /// <summary>
-        /// StartInSeconds
+        /// Start time of the scene in seconds from the beginning of the video.
         /// </summary>
         [JsonProperty(PropertyName = "startInSeconds")]
         public double? StartInSeconds { get; set; }
 
         /// <summary>
-        /// EndInSeconds
+        /// End time of the scene in seconds from the beginning of the video.
         /// </summary>
         [JsonProperty(PropertyName = "endInSeconds")]
         public double? EndInSeconds { get; set; }
 
         /// <summary>
-        /// Id
+        /// Identifier assigned to this scene within the analysis result.
         /// </summary>
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
 
         /// <summary>
-        /// Content
+        /// Structured description of this scene.
         /// </summary>
         [JsonProperty(PropertyName = "content")]
         public Content Content { get; set; }
 
         /// <summary>
-        /// Summary
+        /// Concise summary of the scene.
         /// </summary>
         [JsonProperty(PropertyName = "summary")]
         public string Summary { get; set; }
 
         /// <summary>
-        /// VerboseSummary
+        /// Detailed description of the scene, providing more context than summary.
         /// </summary>
         [JsonProperty(PropertyName = "verboseSummary")]
         public string VerboseSummary { get; set; }
 
         /// <summary>
-        /// SensitiveTopics
+        /// Sensitive topics identified in this scene, expressed as free text rather than taxonomy identifiers. (required)
         /// </summary>
         [JsonProperty(PropertyName = "sensitiveTopics")]
         public List<string> SensitiveTopics { get; set; } = new List<string>();
 
         /// <summary>
-        /// Keywords
+        /// Free-text keywords describing this scene. Preserve the returned spelling and case. (required)
         /// </summary>
         [JsonProperty(PropertyName = "keywords")]
         public List<string> Keywords { get; set; } = new List<string>();
 
         /// <summary>
-        /// Iab
+        /// IAB classification of this scene.
         /// </summary>
         [JsonProperty(PropertyName = "iab")]
         public IABTaxonomy Iab { get; set; }
@@ -82,13 +82,13 @@ namespace Bitmovin.Api.Sdk.Models
         public SceneType? Type { get; set; }
 
         /// <summary>
-        /// A detailed breakdown of individual camera shots within this scene, providing granular analysis of visual content and subjects
+        /// Camera shots with available analysis associated with this scene. The list can be empty or omitted and need not include every shot.
         /// </summary>
         [JsonProperty(PropertyName = "shots")]
         public List<Shot> Shots { get; set; } = new List<Shot>();
 
         /// <summary>
-        /// AdOpportunityInformation
+        /// Suitability assessment for an ad break at the end of this scene. This does not confirm that an ad was placed.
         /// </summary>
         [JsonProperty(PropertyName = "adOpportunityInformation")]
         public AdOpportunity AdOpportunityInformation { get; set; }

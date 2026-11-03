@@ -62,7 +62,7 @@ namespace Bitmovin.Api.Sdk.Models
         MAIN_CONTENT,
 
         /// <summary>
-        /// Fallback when AI confidence is below minimum threshold
+        /// No scene type was determined, including when classification was unavailable or unsuccessful.
         /// </summary>
         [EnumMember(Value = "UNKNOWN")]
         UNKNOWN

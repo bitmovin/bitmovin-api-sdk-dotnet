@@ -8,13 +8,13 @@ namespace Bitmovin.Api.Sdk.Models
     public enum AdvisoryAnalysisStatus
     {
         /// <summary>
-        /// The shot was analysed for content advisories. An empty list of advisories means none were found
+        /// Advisory assessment completed. An empty or omitted advisory list means no advisories were reported.
         /// </summary>
         [EnumMember(Value = "ANALYZED")]
         ANALYZED,
 
         /// <summary>
-        /// The shot could not be analysed because the request was blocked by the model safety filter, so no verdict exists for it. Such a shot is reported conservatively rather than as clean: it carries a TOBACCO advisory with UNKNOWN confidence, which is an assumption made on the absence of a verdict and not an observation. Review these shots manually
+        /// The shot could not be assessed. It carries a conservative TOBACCO advisory with UNKNOWN confidence because no verdict is available. This advisory is an assumption, not an observed detection. Review the shot manually.
         /// </summary>
         [EnumMember(Value = "BLOCKED")]
         BLOCKED

@@ -16,13 +16,13 @@ namespace Bitmovin.Api.Sdk.Models
     public class AdPosition
     {
         /// <summary>
-        /// Position
+        /// Selected ad break position in seconds from the beginning of the video.
         /// </summary>
         [JsonProperty(PropertyName = "position")]
         public double? Position { get; set; }
 
         /// <summary>
-        /// Duration
+        /// Ad duration in seconds requested for this placement. Not set for breaks added at all scene boundaries, when the schedule entry has no duration, or when the encoder does not support ad durations.
         /// </summary>
         [JsonProperty(PropertyName = "duration")]
         public double? Duration { get; set; }

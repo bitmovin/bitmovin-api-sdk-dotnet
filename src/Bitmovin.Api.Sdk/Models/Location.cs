@@ -16,13 +16,13 @@ namespace Bitmovin.Api.Sdk.Models
     public class Location
     {
         /// <summary>
-        /// Name
+        /// Short descriptive name of the place, which need not identify a real geographic location.
         /// </summary>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
 
         /// <summary>
-        /// Description
+        /// Free-text description of the place.
         /// </summary>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }

@@ -8,19 +8,19 @@ namespace Bitmovin.Api.Sdk.Models
     public enum AdvisoryConfidence
     {
         /// <summary>
-        /// The model is certain of the detection, with the subject plainly visible
+        /// The analysis reported a visible product, packaging or signage associated with the advisory category.
         /// </summary>
         [EnumMember(Value = "HIGH")]
         HIGH,
 
         /// <summary>
-        /// The model is reasonably certain, but the subject is partly obscured, brief or otherwise not plainly visible
+        /// The analysis based the advisory mainly on smoke rising from a person.
         /// </summary>
         [EnumMember(Value = "MEDIUM")]
         MEDIUM,
 
         /// <summary>
-        /// The model flagged the shot on a cue it could not resolve, for example a small, dark or fleeting object, and another reading of it is possible. Detection is tuned to flag uncertain cases rather than miss them, so advisories below HIGH confidence are expected
+        /// The analysis reported an ambiguous shape that could indicate the advisory category. The cue is uncertain and should be reviewed.
         /// </summary>
         [EnumMember(Value = "LOW")]
         LOW,

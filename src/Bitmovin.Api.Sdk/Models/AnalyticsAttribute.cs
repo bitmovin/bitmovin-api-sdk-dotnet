@@ -656,12 +656,6 @@ namespace Bitmovin.Api.Sdk.Models
         HOUR,
 
         /// <summary>
-        /// INITIAL_TIME_TO_TARGET_LATENCY
-        /// </summary>
-        [EnumMember(Value = "INITIAL_TIME_TO_TARGET_LATENCY")]
-        INITIAL_TIME_TO_TARGET_LATENCY,
-
-        /// <summary>
         /// IP_ADDRESS
         /// </summary>
         [EnumMember(Value = "IP_ADDRESS")]
@@ -678,12 +672,6 @@ namespace Bitmovin.Api.Sdk.Models
         /// </summary>
         [EnumMember(Value = "IS_LIVE")]
         IS_LIVE,
-
-        /// <summary>
-        /// IS_LOW_LATENCY
-        /// </summary>
-        [EnumMember(Value = "IS_LOW_LATENCY")]
-        IS_LOW_LATENCY,
 
         /// <summary>
         /// IS_MUTED
@@ -926,22 +914,10 @@ namespace Bitmovin.Api.Sdk.Models
         TARGET_LATENCY,
 
         /// <summary>
-        /// TARGET_LATENCY_DELTA
-        /// </summary>
-        [EnumMember(Value = "TARGET_LATENCY_DELTA")]
-        TARGET_LATENCY_DELTA,
-
-        /// <summary>
         /// TIME
         /// </summary>
         [EnumMember(Value = "TIME")]
         TIME,
-
-        /// <summary>
-        /// TIME_TO_TARGET_LATENCY
-        /// </summary>
-        [EnumMember(Value = "TIME_TO_TARGET_LATENCY")]
-        TIME_TO_TARGET_LATENCY,
 
         /// <summary>
         /// USER_ID

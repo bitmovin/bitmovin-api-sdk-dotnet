@@ -16,13 +16,13 @@ namespace Bitmovin.Api.Sdk.Models
     public class SceneObject
     {
         /// <summary>
-        /// Description
+        /// Free-text description of the object in this scene.
         /// </summary>
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
 
         /// <summary>
-        /// Category
+        /// Kind of object in free text rather than a fixed category list.
         /// </summary>
         [JsonProperty(PropertyName = "category")]
         public string Category { get; set; }

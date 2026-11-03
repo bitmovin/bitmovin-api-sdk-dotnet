@@ -11,7 +11,7 @@ using Bitmovin.Api.Sdk.Models;
 namespace Bitmovin.Api.Sdk.Models
 {
     /// <summary>
-    /// Represents a continuous camera shot within a scene, containing detailed visual analysis including subjects, timing, and descriptive metadata
+    /// A detected shot associated with one scene. A shot can cross a scene boundary or lie entirely outside its associated scene. Use the shot&#39;s own timestamps to locate its content.
     /// </summary>
     public class Shot
     {
@@ -28,25 +28,25 @@ namespace Bitmovin.Api.Sdk.Models
         public double? EndInSeconds { get; set; }
 
         /// <summary>
-        /// A comprehensive textual description of the visual content, action, and context within this shot
+        /// Description of the shot&#39;s visual content, action and context.
         /// </summary>
         [JsonProperty(PropertyName = "detailedDescription")]
         public string DetailedDescription { get; set; }
 
         /// <summary>
-        /// A list of relevant keywords and tags that describe the content, themes, or notable elements in this shot
+        /// Keywords describing the shot&#39;s content, themes or notable elements.
         /// </summary>
         [JsonProperty(PropertyName = "keywords")]
         public List<string> Keywords { get; set; } = new List<string>();
 
         /// <summary>
-        /// A collection of the primary subjects or objects detected and tracked within this shot, including their positions and characteristics
+        /// Selected subjects or objects identified in this shot.
         /// </summary>
         [JsonProperty(PropertyName = "mainSubjects")]
         public List<MainSubject> MainSubjects { get; set; } = new List<MainSubject>();
 
         /// <summary>
-        /// Content advisory detection results for this shot, such as tobacco or vaping imagery
+        /// Content advisory results for this shot, or null when no assessment is available. Availability depends on whether advisory analysis was enabled and supported by the analysis version.
         /// </summary>
         [JsonProperty(PropertyName = "shotAdvisories")]
         public ShotAdvisories ShotAdvisories { get; set; }

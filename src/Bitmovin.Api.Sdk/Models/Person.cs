@@ -16,13 +16,13 @@ namespace Bitmovin.Api.Sdk.Models
     public class Person
     {
         /// <summary>
-        /// Name
+        /// Name of the credited person extracted from the credit text.
         /// </summary>
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
 
         /// <summary>
-        /// Role
+        /// Credited role, or the portrayed character for acting credits when available.
         /// </summary>
         [JsonProperty(PropertyName = "role")]
         public string Role { get; set; }

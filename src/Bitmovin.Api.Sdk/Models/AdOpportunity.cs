@@ -16,13 +16,13 @@ namespace Bitmovin.Api.Sdk.Models
     public class AdOpportunity
     {
         /// <summary>
-        /// The reason why the scene was rated with a certain score
+        /// Explanation of the scene boundary&#39;s suitability for an ad break, including low or zero suitability.
         /// </summary>
         [JsonProperty(PropertyName = "reason")]
         public string Reason { get; set; }
 
         /// <summary>
-        /// Score from 0.0 to 1.0 rating the ad placement suitability at the end of a scene based on content analysis
+        /// Suitability of placing an ad break at the end of the scene. Higher scores indicate greater suitability. A score of 0.5 can also mean that no assessment is available.
         /// </summary>
         [JsonProperty(PropertyName = "score")]
         public double? Score { get; set; }
