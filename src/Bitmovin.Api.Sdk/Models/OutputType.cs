@@ -83,6 +83,12 @@ namespace Bitmovin.Api.Sdk.Models
         /// CDN
         /// </summary>
         [EnumMember(Value = "CDN")]
-        CDN
+        CDN,
+
+        /// <summary>
+        /// MOQ
+        /// </summary>
+        [EnumMember(Value = "MOQ")]
+        MOQ
     }
 }

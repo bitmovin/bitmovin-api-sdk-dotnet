@@ -27,6 +27,7 @@ namespace Bitmovin.Api.Sdk.Models
     [JsonSubtypes.KnownSubType(typeof(AkamaiMslOutput), "AKAMAI_MSL")]
     [JsonSubtypes.KnownSubType(typeof(LiveMediaIngestOutput), "LIVE_MEDIA_INGEST")]
     [JsonSubtypes.KnownSubType(typeof(GcsServiceAccountOutput), "GCS_SERVICE_ACCOUNT")]
+    [JsonSubtypes.KnownSubType(typeof(MoqOutput), "MOQ")]
 
     public class Output : BitmovinResource
     {

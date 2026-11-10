@@ -16,7 +16,7 @@ namespace Bitmovin.Api.Sdk.Models
     public class AiSceneAnalysisAssetDescription
     {
         /// <summary>
-        /// Name of the output json file
+        /// Name of the output JSON file. The [asset-description JSON Schema](https://storage.googleapis.com/ai-scene-analysis-demo-content/schemas/asset-description.schema.json) describes the structure of newly written original and translated files.
         /// </summary>
         [JsonProperty(PropertyName = "filename")]
         public string Filename { get; set; }

@@ -17,6 +17,7 @@ using Bitmovin.Api.Sdk.Encoding.Outputs.Sftp;
 using Bitmovin.Api.Sdk.Encoding.Outputs.AkamaiMsl;
 using Bitmovin.Api.Sdk.Encoding.Outputs.AkamaiNetstorage;
 using Bitmovin.Api.Sdk.Encoding.Outputs.LiveMediaIngest;
+using Bitmovin.Api.Sdk.Encoding.Outputs.Moq;
 using Bitmovin.Api.Sdk.Encoding.Outputs.Cdn;
 
 namespace Bitmovin.Api.Sdk.Encoding.Outputs
@@ -48,6 +49,7 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs
             AkamaiMsl = new AkamaiMslApi(apiClientFactory);
             AkamaiNetstorage = new AkamaiNetstorageApi(apiClientFactory);
             LiveMediaIngest = new LiveMediaIngestApi(apiClientFactory);
+            Moq = new MoqApi(apiClientFactory);
             Cdn = new CdnApi(apiClientFactory);
         }
 
@@ -108,6 +110,10 @@ namespace Bitmovin.Api.Sdk.Encoding.Outputs
         /// Gets the LiveMediaIngest API
         /// </summary>
         public LiveMediaIngestApi LiveMediaIngest { get; }
+        /// <summary>
+        /// Gets the Moq API
+        /// </summary>
+        public MoqApi Moq { get; }
         /// <summary>
         /// Gets the Cdn API
         /// </summary>
